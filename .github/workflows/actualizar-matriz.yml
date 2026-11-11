@@ -11,7 +11,12 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ["matriz.config.json", "tools/**"]
+    paths: ["matriz.config.json", "inventario.json", "tools/**"]
+  # Lo que integra «Integrar tareas programadas» (la revisión semanal) no dispara «push»:
+  # se regenera al terminar esa integración.
+  workflow_run:
+    workflows: ["Integrar tareas programadas"]
+    types: [completed]
 
 permissions:
   contents: write
@@ -22,6 +27,7 @@ concurrency:
 
 jobs:
   generar:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:

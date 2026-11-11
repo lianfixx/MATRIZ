@@ -51,6 +51,29 @@ class Generar(unittest.TestCase):
         self.assertEqual(y, '---\na: "dice \\"hola\\""\nn: 0\nultimo_cambio: 2026-11-11\ntags:\n  - "x"\ngenerado: "' + g.GENERADO + '"\n---\n')
         self.assertEqual(g.pendiente_real("Ninguno."), "")
 
+    def test_inventario(self):
+        with tempfile.TemporaryDirectory() as t:
+            t = Path(t)
+            repo(t / "clones", "abierto")
+            cfg = {"propietario": "x", "privados": [],
+                   "cerebros": [{"id": "uno", "nombre": "Uno", "descripcion": "D.", "repos": ["abierto"]}]}
+            inv = {"revisado": "2026-11-11",
+                   "tareas": [{"nombre": "Cierre", "cerebro": "uno", "repo": "abierto", "horario": "Diario 18:43",
+                               "ultima_corrida": "2026-11-10", "resultado": "falló: límite de uso"},
+                              {"nombre": "Índice", "cerebro": "matriz", "horario": "Diario 06:17"}],
+                   "skills_instaladas": [{"nombre": "otra", "cerebro": "uno", "repo": ""}]}
+            g.generar(cfg, t / "out", t / "clones", False, "2026-11-11", inv)
+            portada = (t / "out" / "MATRIZ.md").read_text()
+            self.assertIn("2 tareas programadas activas", portada)
+            self.assertIn("Fallaron en su última corrida", portada)
+            self.assertIn("`otra`", portada)            # instalada sin repositorio
+            self.assertIn("`demo-skill`", portada)      # en repositorio, no instalada
+            nota = (t / "out" / "cerebros" / "Uno.md").read_text()
+            self.assertIn("Cierre · Diario 18:43", nota)
+            self.assertIn("Skills instaladas en Claude", (t / "out" / "contexto" / "uno.CONTEXTO.md").read_text())
+            mal = {"tareas": [{"nombre": "x", "cerebro": "nadie"}]}
+            self.assertTrue(g.validar(cfg, mal))
+
     def test_validar(self):
         cfg = {"cerebros": [{"id": "a", "repos": ["r"]}, {"id": "b", "repos": ["r"]}], "privados": ["z"]}
         self.assertEqual(len(g.validar(cfg)), 2)

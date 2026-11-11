@@ -14,13 +14,18 @@ El mapa de todo el trabajo de Emi: una **Matriz**, sus **Cerebros** y, debajo, l
 | [`contexto/`](contexto) | Un archivo por cerebro para pegar o adjuntar en cualquier IA | Generador |
 | [`bitacora/`](bitacora) | Qué IA hizo qué, por día, en todos los repositorios | Generador |
 | `matriz.json` | Los mismos datos, para el panel y el conector | Generador |
+| [`EMI.md`](EMI.md) | Quién es Emi, dónde trabaja y las reglas que valen siempre | A mano |
 | [`matriz.config.json`](matriz.config.json) | Qué cerebros existen y qué repositorio va en cuál | A mano |
+| [`inventario.json`](inventario.json) | Tareas programadas y skills instaladas en Claude | Revisión semanal |
+| [`revisiones/`](revisiones) | Informe de cada revisión semanal | Revisión semanal |
 | `tools/generar.py` | El generador | A mano |
 | `Repositorios.base`, `.obsidian/` | Tabla y configuración de Obsidian (grafo, estilo, complemento Git) | A mano |
 | `notas/` | Notas propias de Emi; no se suben a GitHub | Emi |
 | `AGENTS.md`, `ia/` | Protocolo común entre IA, igual que en los demás repositorios | A mano |
 
 ## Cómo se actualiza
+
+Cada semana, el domingo a las 20:13, una tarea programada de Claude hace la [revisión semanal](docs/REVISION_SEMANAL.md): agrega repositorios nuevos, actualiza tareas programadas y skills, revisa la salud y avisa de vencimientos.
 
 El workflow «Actualizar la Matriz» corre cada día a las 06:17 (hora del centro de México), cuando cambia la configuración, y a mano desde la pestaña Actions. Lee el `README.md`, el `CHANGELOG.md` y las skills de cada repositorio y reescribe el índice.
 

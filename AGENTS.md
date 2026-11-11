@@ -4,7 +4,7 @@ Este repositorio es el mapa de todo el trabajo de Emi: la **Matriz General**, su
 
 ## Cómo entrar
 
-1. Lee `MATRIZ.md`: qué cerebros hay y qué se movió.
+1. Lee `MATRIZ.md` (qué cerebros hay y qué se movió) y `EMI.md` (quién es Emi y las reglas que valen siempre).
 2. Lee `contexto/<cerebro>.CONTEXTO.md` del cerebro en el que vas a trabajar.
 3. Ve al repositorio que corresponda y lee **su** `AGENTS.md`, `ia/REGLAS.md` e `ia/PROTOCOLO.md`. El trabajo se hace y se registra allá, no aquí.
 
@@ -16,6 +16,7 @@ Este repositorio es el mapa de todo el trabajo de Emi: la **Matriz General**, su
 - `notas/` es privada de Emi y está fuera de git. No la leas ni la subas.
 - Este repositorio es público. De los repositorios privados solo se publica nombre, cerebro y fecha. No copies aquí datos de clientes, expedientes ni secretos.
 - Un repositorio nuevo de Emi se agrega a un cerebro en `matriz.config.json`. Un cerebro nuevo requiere confirmación de Emi.
+- Emi pidió (11/11/2026) que la Matriz se revise **todas las semanas** y tenga toda su información: el procedimiento está en `docs/REVISION_SEMANAL.md` y lo ejecuta una tarea programada cada domingo. `inventario.json` guarda tareas programadas y skills instaladas: solo nombres, horarios y resultados.
 
 ## Trabajo entre IA (obligatorio para cualquier IA o persona)
 

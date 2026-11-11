@@ -10,6 +10,9 @@ Lee `matriz.config.json` (cerebros y sus repositorios), abre cada repositorio y 
   contexto/<id>.CONTEXTO.md  un archivo por cerebro para pegar en cualquier IA
   bitacora/AAAA-MM.md        qué IA hizo qué, por día, en todos los repositorios
 
+También lee `inventario.json` (tareas programadas y skills instaladas en Claude), que mantiene la
+revisión semanal, y lo muestra en la portada, en cada cerebro y en los archivos de contexto.
+
 Uso:
   python3 tools/generar.py --repos-dir <carpeta con los clones>   # usa clones locales
   python3 tools/generar.py --clonar                               # clona lo que falte (GitHub Actions)
@@ -194,6 +197,42 @@ def pendiente_real(texto: str) -> str:
     return "" if t.lower().rstrip(".") in ("", "ninguno", "ninguna", "no", "sin pendientes") else t
 
 
+def tareas_de(inv: dict, cid: str) -> list[dict]:
+    return [t for t in inv.get("tareas", []) if t.get("cerebro") == cid]
+
+
+def skills_de(inv: dict, cid: str) -> list[dict]:
+    return [k for k in inv.get("skills_instaladas", []) if k.get("cerebro") == cid]
+
+
+def linea_tarea(t: dict) -> str:
+    s = f"{t['nombre']} · {t.get('horario', 'sin horario')}"
+    if t.get("estado", "activa") != "activa":
+        s += f" · {t['estado']}"
+    if t.get("ultima_corrida"):
+        s += f" · última: {fecha_corta(t['ultima_corrida'])}" + (f", {t['resultado']}" if t.get("resultado") else "")
+    return s
+
+
+def bloque_inventario(inv: dict, cid: str, enlazar: bool) -> list[str]:
+    L = []
+    ts, ks = tareas_de(inv, cid), skills_de(inv, cid)
+    if ts:
+        L.append("## Tareas programadas\n")
+        L += [f"- {linea_tarea(t)}" + (f" · repo `{t['repo']}`" if t.get("repo") else "") for t in ts]
+        L.append("")
+    if ks:
+        L.append("## Skills instaladas en Claude\n")
+        for k in ks:
+            if k.get("repo"):
+                destino = f"[[{slug(k['repo'])}|{k['repo']}]]" if enlazar else f"`{k['repo']}`"
+            else:
+                destino = "sin repositorio"
+            L.append(f"- `{k['nombre']}` · {destino}")
+        L.append("")
+    return L
+
+
 def slug(nombre: str) -> str:
     """Nombre de nota seguro para Obsidian: sin punto ni guion finales."""
     return nombre.rstrip(".-") or nombre
@@ -236,18 +275,20 @@ def nota_repo(r: dict, cerebro: dict) -> str:
     return "\n".join(L).rstrip() + "\n"
 
 
-def nota_cerebro(c: dict, repos: list[dict]) -> str:
+def nota_cerebro(c: dict, repos: list[dict], inv: dict | None = None) -> str:
     props = {"tipo": "cerebro", "repos": len(repos),
              "ultimo_cambio": max((r["ultimo_cambio"] for r in repos), default=""), "tags": ["cerebro"]}
     L = [yaml(props) , f"# {c['nombre']}\n", c["descripcion"] + "\n", "Parte de la [[MATRIZ]].\n", "## Repositorios\n"]
     for r in repos:
         extra = f" · {len(r['skills'])} skill(s)" if r["skills"] else ""
         L.append(f"- [[{slug(r['nombre'])}|{r['nombre']}]] · {r['visibilidad']} · {fecha_corta(r['ultimo_cambio'])}{extra}")
-    L.append(f"\nPara continuar con otra IA: [[{c['id']}.CONTEXTO|archivo de contexto]].")
+    L.append("")
+    L += bloque_inventario(inv or {}, c["id"], enlazar=True)
+    L.append(f"Para continuar con otra IA: [[{c['id']}.CONTEXTO|archivo de contexto]].")
     return "\n".join(L) + "\n"
 
 
-def contexto(c: dict, repos: list[dict], propietario: str) -> str:
+def contexto(c: dict, repos: list[dict], propietario: str, inv: dict | None = None) -> str:
     L = [yaml({"tipo": "contexto", "cerebro": c["nombre"]}), f"# Contexto para cualquier IA · {c['nombre']}\n",
          f"Soy Emi (Yohualli Emiliano García Milla). Este es el cerebro «{c['nombre']}» de mi Matriz General "
          f"(https://github.com/{propietario}/MATRIZ). {c['descripcion']}\n",
@@ -274,10 +315,12 @@ def contexto(c: dict, repos: list[dict], propietario: str) -> str:
             L.append("")
         if r["visibilidad"] == "privado" and not r["resumen"]:
             L.append("Privado: pide acceso a Emi o usa un conector con sesión iniciada.\n")
+    L += bloque_inventario(inv or {}, c["id"], enlazar=False)
     return "\n".join(L).rstrip() + "\n"
 
 
-def portada(cerebros: list[dict], por_cerebro: dict, hoy: str) -> str:
+def portada(cerebros: list[dict], por_cerebro: dict, hoy: str, inv: dict | None = None) -> str:
+    inv = inv or {}
     todos = [r for c in cerebros for r in por_cerebro[c["id"]]]
     recientes = sorted(
         ((e["fecha"], r["nombre"], e) for r in todos for e in r["registro"][:3]),
@@ -299,6 +342,31 @@ def portada(cerebros: list[dict], por_cerebro: dict, hoy: str) -> str:
     if sin:
         L.append("\n## Sin lectura en esta corrida\n")
         L.append(", ".join(f"`{n}`" for n in sin) + ". Falta acceso o el secreto `MATRIZ_TOKEN`.")
+    tareas, instaladas = inv.get("tareas", []), inv.get("skills_instaladas", [])
+    if tareas or instaladas:
+        activas = [t for t in tareas if t.get("estado", "activa") == "activa"]
+        L.append("\n## Automatizaciones y skills\n")
+        L.append(f"{len(activas)} tareas programadas activas y {len(instaladas)} skills instaladas en Claude"
+                 + (f" · inventario revisado el {fecha_corta(inv['revisado'])}" if inv.get("revisado") else "") + ".\n")
+        fallas = [t for t in tareas if str(t.get("resultado", "")).startswith("falló")]
+        if fallas:
+            L.append("Fallaron en su última corrida:\n")
+            L += [f"- {linea_tarea(t)}" for t in fallas]
+            L.append("")
+        propias = [t for t in tareas if t.get("cerebro") == "matriz"]
+        if propias:
+            L.append("De la Matriz misma:\n")
+            L += [f"- {linea_tarea(t)}" for t in propias]
+            L.append("")
+        nombres = {k["nombre"] for k in instaladas}
+        sin_repo = [k["nombre"] for k in instaladas if not k.get("repo")]
+        sin_instalar = sorted({s["nombre"] for r in todos for s in r["skills"]} - nombres)
+        if sin_repo:
+            L.append("Skills instaladas sin repositorio (sin respaldo ni historial en GitHub): "
+                     + ", ".join(f"`{n}`" for n in sin_repo) + ".\n")
+        if sin_instalar:
+            L.append("Skills que están en un repositorio pero no instaladas en Claude: "
+                     + ", ".join(f"`{n}`" for n in sin_instalar) + ".\n")
     pub = [r["nombre"] for r in todos if r["visibilidad"] == "público"]
     L.append(f"\n## Visibilidad\n\n{len(pub)} públicos y {len(todos) - len(pub)} privados. "
              "Cualquier persona puede leer los públicos.")
@@ -329,7 +397,7 @@ def escribir(ruta: Path, texto: str) -> None:
     ruta.write_text(texto, encoding="utf-8")
 
 
-def validar(cfg: dict) -> list[str]:
+def validar(cfg: dict, inv: dict | None = None) -> list[str]:
     errores, vistos = [], {}
     for c in cfg["cerebros"]:
         for r in c["repos"]:
@@ -337,11 +405,17 @@ def validar(cfg: dict) -> list[str]:
                 errores.append(f"«{r}» está en dos cerebros: {vistos[r]} y {c['id']}")
             vistos[r] = c["id"]
     errores += [f"«{p}» figura como privado pero no pertenece a ningún cerebro" for p in cfg.get("privados", []) if p not in vistos]
+    ids = {c["id"] for c in cfg["cerebros"]} | {"matriz"}
+    for clave in ("tareas", "skills_instaladas"):
+        for x in (inv or {}).get(clave, []):
+            if x.get("cerebro") not in ids:
+                errores.append(f"inventario: «{x.get('nombre')}» apunta al cerebro inexistente «{x.get('cerebro')}»")
     return errores
 
 
-def generar(cfg: dict, salida: Path, repos_dir: Path | None, clonar: bool, hoy: str) -> dict:
-    errores = validar(cfg)
+def generar(cfg: dict, salida: Path, repos_dir: Path | None, clonar: bool, hoy: str, inv: dict | None = None) -> dict:
+    inv = inv or {}
+    errores = validar(cfg, inv)
     if errores:
         raise SystemExit("Configuración inválida:\n- " + "\n- ".join(errores))
     prop, privados, detalle = cfg["propietario"], set(cfg.get("privados", [])), bool(cfg.get("detalle_privados"))
@@ -358,16 +432,17 @@ def generar(cfg: dict, salida: Path, repos_dir: Path | None, clonar: bool, hoy: 
     for c in cfg["cerebros"]:
         rs = por_cerebro[c["id"]]
         todos += rs
-        escribir(salida / "cerebros" / f"{c['nombre']}.md", nota_cerebro(c, rs))
-        escribir(salida / "contexto" / f"{c['id']}.CONTEXTO.md", contexto(c, rs, prop))
+        escribir(salida / "cerebros" / f"{c['nombre']}.md", nota_cerebro(c, rs, inv))
+        escribir(salida / "contexto" / f"{c['id']}.CONTEXTO.md", contexto(c, rs, prop, inv))
         for r in rs:
             escribir(salida / "repos" / f"{slug(r['nombre'])}.md", nota_repo(r, c))
     for mes, texto in bitacoras(todos).items():
         escribir(salida / "bitacora" / f"{mes}.md", texto)
-    escribir(salida / "MATRIZ.md", portada(cfg["cerebros"], por_cerebro, hoy))
+    escribir(salida / "MATRIZ.md", portada(cfg["cerebros"], por_cerebro, hoy, inv))
     datos = {"actualizada": hoy, "propietario": prop,
              "cerebros": [{"id": c["id"], "nombre": c["nombre"], "descripcion": c["descripcion"],
-                           "repos": por_cerebro[c["id"]]} for c in cfg["cerebros"]]}
+                           "repos": por_cerebro[c["id"]]} for c in cfg["cerebros"]],
+             "inventario": inv}
     escribir(salida / "matriz.json", json.dumps(datos, ensure_ascii=False, indent=2) + "\n")
     return datos
 
@@ -385,7 +460,9 @@ def main() -> int:
         print(f"MATRIZ_TOKEN: {forma}, {len(tk.strip())} caracteres" + (", traía espacios" if tk != tk.strip() else ""))
     hoy = a.hoy or subprocess.run(["date", "+%F"], capture_output=True, text=True).stdout.strip()
     cfg = json.loads((RAIZ / "matriz.config.json").read_text(encoding="utf-8"))
-    datos = generar(cfg, a.salida, a.repos_dir, a.clonar, hoy)
+    ruta_inv = RAIZ / "inventario.json"
+    inv = json.loads(ruta_inv.read_text(encoding="utf-8")) if ruta_inv.exists() else {}
+    datos = generar(cfg, a.salida, a.repos_dir, a.clonar, hoy, inv)
     todos = [r for c in datos["cerebros"] for r in c["repos"]]
     print(f"Matriz generada: {len(datos['cerebros'])} cerebros, {len(todos)} repositorios, "
           f"{sum(r['leido'] for r in todos)} leídos.")

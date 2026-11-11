@@ -1,14 +1,26 @@
 {
   "collapse-filter": true,
-  "search": "-path:contexto -path:bitacora -path:notas -path:docs -file:AGENTS -file:CLAUDE -file:GEMINI -file:README -file:CHANGELOG",
+  "search": "-path:contexto -path:bitacora -path:notas -path:docs -file:AGENTS -file:CLAUDE -file:GEMINI -file:README -file:CHANGELOG -path:revisiones -file:EMI",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": true,
   "showOrphans": false,
   "collapse-color-groups": true,
   "colorGroups": [
-    { "query": "file:MATRIZ", "color": { "a": 1, "rgb": 16734751 } },
-    { "query": "path:cerebros", "color": { "a": 1, "rgb": 7302029 } }
+    {
+      "query": "file:MATRIZ",
+      "color": {
+        "a": 1,
+        "rgb": 16734751
+      }
+    },
+    {
+      "query": "path:cerebros",
+      "color": {
+        "a": 1,
+        "rgb": 7302029
+      }
+    }
   ],
   "collapse-display": true,
   "showArrow": false,

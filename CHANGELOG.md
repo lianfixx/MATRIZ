@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-11-11 · Matriz 0.3.0: revisión semanal, tareas programadas, skills instaladas y perfil
+
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: Emi, 11/11/2026: «Recuerda todas TODAS las semanas actualizarlo y que tenga toda la información mía etc. Continúa».
+- Cambios: `inventario.json` registra las tareas programadas (nombre, cerebro, horario, última corrida; nunca su texto) y las skills instaladas en Claude con su repositorio. El generador las muestra en la portada (activas, las que fallaron, skills sin repositorio y skills sin instalar), en cada cerebro y en los archivos de contexto. `EMI.md` resume quién es Emi y las reglas que valen siempre. `docs/REVISION_SEMANAL.md` define la revisión de cada domingo 20:13 (repositorios nuevos, tareas, skills, salud y vencimiento del token) y la ejecuta una tarea programada de Claude creada hoy. El workflow `integrar-tareas.yml` (copiado de `Cerebro-Castorena-`) pasa a `main` las ramas `claude/…` de las ejecuciones programadas, y «Actualizar la Matriz» se regenera al terminar esa integración y cuando cambia `inventario.json`. Primer informe en `revisiones/2026-11-11.md`.
+- Archivos: `inventario.json`, `EMI.md`, `docs/REVISION_SEMANAL.md`, `revisiones/2026-11-11.md`, `.github/workflows/integrar-tareas.yml`, `.github/workflows/actualizar-matriz.yml`, `.obsidian/graph.json`, `tools/generar.py`, `tools/test_generar.py`, `README.md`, `AGENTS.md` y este registro.
+- Verificación: `python3 -m unittest discover -s tools -p 'test_*.py'` → aprobado; `python3 ia/test_guard.py` → aprobado; YAML de los workflows y de `Repositorios.base` → válido; corrida en GitHub → ver Actions.
+- Pendiente: primera revisión automática el domingo 15/11/2026; decidir si `video-vox`, `box-simular` y `rea-ingenieria-inversa` tendrán repositorio; panel en Cloudflare, conector MCP y respaldo a Drive.
+
 ## 2026-11-11 · Matriz 0.2.0: bóveda de Obsidian lista para la Mac y el iPhone
 
 - Agente: Claude Code (sesión en la nube)
