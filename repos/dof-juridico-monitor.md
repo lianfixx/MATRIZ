@@ -1,8 +1,19 @@
-<!-- Generado por tools/generar.py. No editar a mano: se reescribe solo. -->
+---
+tipo: "repo"
+cerebro: "Castorena"
+visibilidad: "público"
+ultimo_cambio: 2026-11-09
+skills: 1
+github: "https://github.com/lianfixx/dof-juridico-monitor"
+tags:
+  - "repo"
+  - "publico"
+generado: "tools/generar.py · no editar a mano: se reescribe cada día"
+---
 
 # dof-juridico-monitor
 
-Cerebro: [[castorena|Castorena]] · público · último cambio: 9 nov 2026
+Cerebro: [[Castorena]] · público · último cambio: 9 nov 2026
 
 [Abrir en GitHub](https://github.com/lianfixx/dof-juridico-monitor)
 

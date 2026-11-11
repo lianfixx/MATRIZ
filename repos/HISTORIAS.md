@@ -1,8 +1,19 @@
-<!-- Generado por tools/generar.py. No editar a mano: se reescribe solo. -->
+---
+tipo: "repo"
+cerebro: "Contenido y video"
+visibilidad: "público"
+ultimo_cambio: 2026-11-11
+skills: 1
+github: "https://github.com/lianfixx/HISTORIAS-"
+tags:
+  - "repo"
+  - "publico"
+generado: "tools/generar.py · no editar a mano: se reescribe cada día"
+---
 
 # HISTORIAS-
 
-Cerebro: [[contenido-y-video|Contenido y video]] · público · último cambio: 11 nov 2026
+Cerebro: [[Contenido y video]] · público · último cambio: 11 nov 2026
 
 [Abrir en GitHub](https://github.com/lianfixx/HISTORIAS-)
 

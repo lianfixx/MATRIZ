@@ -1,8 +1,21 @@
-<!-- Generado por tools/generar.py. No editar a mano: se reescribe solo. -->
+---
+tipo: "repo"
+cerebro: "Contenido y video"
+visibilidad: "público"
+ultimo_cambio: 2026-11-11
+skills: 4
+ultimo_agente: "Claude Code (sesión en la nube)"
+pendiente: "repetir la comparación con el primer crudo de Emi y fijar el motor por defecto con lo que se oiga en los cortes."
+github: "https://github.com/lianfixx/VIDEOS-IA-SKILL-MILLA"
+tags:
+  - "repo"
+  - "publico"
+generado: "tools/generar.py · no editar a mano: se reescribe cada día"
+---
 
 # VIDEOS-IA-SKILL-MILLA
 
-Cerebro: [[contenido-y-video|Contenido y video]] · público · último cambio: 11 nov 2026
+Cerebro: [[Contenido y video]] · público · último cambio: 11 nov 2026
 
 [Abrir en GitHub](https://github.com/lianfixx/VIDEOS-IA-SKILL-MILLA)
 

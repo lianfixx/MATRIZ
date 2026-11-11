@@ -1,8 +1,21 @@
-<!-- Generado por tools/generar.py. No editar a mano: se reescribe solo. -->
+---
+tipo: "repo"
+cerebro: "Contenido y video"
+visibilidad: "público"
+ultimo_cambio: 2026-11-11
+skills: 1
+ultimo_agente: "Claude Code (sesión en la nube)"
+pendiente: "(a) Emi: revisar sus 24 posts y quitar la protección desde su teléfono; pasar la fecha exacta de «Se unió» y el número de seguidores; decidir Premium. (b) Volver a instalar en Claude la versión 1.0.3 de la skill (la instalada es la 1.0.2 y aún habla de programar desde box). (c) Primera semana el 16/11/2026."
+github: "https://github.com/lianfixx/X"
+tags:
+  - "repo"
+  - "publico"
+generado: "tools/generar.py · no editar a mano: se reescribe cada día"
+---
 
 # X
 
-Cerebro: [[contenido-y-video|Contenido y video]] · público · último cambio: 11 nov 2026
+Cerebro: [[Contenido y video]] · público · último cambio: 11 nov 2026
 
 [Abrir en GitHub](https://github.com/lianfixx/X)
 

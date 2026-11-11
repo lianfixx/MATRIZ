@@ -1,4 +1,11 @@
-<!-- Generado por tools/generar.py. No editar a mano: se reescribe solo. -->
+---
+tipo: "cerebro"
+repos: 4
+ultimo_cambio: 2026-11-11
+tags:
+  - "cerebro"
+generado: "tools/generar.py · no editar a mano: se reescribe cada día"
+---
 
 # Castorena
 
@@ -13,4 +20,4 @@ Parte de la [[MATRIZ]].
 - [[Escritos-juridicos-CASTORENA|Escritos-juridicos-CASTORENA]] · público · 4 nov 2026 · 1 skill(s)
 - [[dof-juridico-monitor|dof-juridico-monitor]] · público · 9 nov 2026 · 1 skill(s)
 
-Para continuar con otra IA: [[castorena.CONTEXTO]].
+Para continuar con otra IA: [[castorena.CONTEXTO|archivo de contexto]].

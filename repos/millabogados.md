@@ -1,8 +1,20 @@
-<!-- Generado por tools/generar.py. No editar a mano: se reescribe solo. -->
+---
+tipo: "repo"
+cerebro: "MILLA ABOGADOS"
+visibilidad: "público"
+ultimo_cambio: 2026-11-04
+skills: 0
+ultimo_agente: "Claude Code (sesión en la nube)"
+github: "https://github.com/lianfixx/millabogados"
+tags:
+  - "repo"
+  - "publico"
+generado: "tools/generar.py · no editar a mano: se reescribe cada día"
+---
 
 # millabogados
 
-Cerebro: [[milla-abogados|MILLA ABOGADOS]] · público · último cambio: 4 nov 2026
+Cerebro: [[MILLA ABOGADOS]] · público · último cambio: 4 nov 2026
 
 [Abrir en GitHub](https://github.com/lianfixx/millabogados)
 

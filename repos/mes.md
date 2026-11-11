@@ -1,8 +1,19 @@
-<!-- Generado por tools/generar.py. No editar a mano: se reescribe solo. -->
+---
+tipo: "repo"
+cerebro: "Productos"
+visibilidad: "público"
+ultimo_cambio: 2026-10-24
+skills: 0
+github: "https://github.com/lianfixx/mes."
+tags:
+  - "repo"
+  - "publico"
+generado: "tools/generar.py · no editar a mano: se reescribe cada día"
+---
 
 # mes.
 
-Cerebro: [[productos|Productos]] · público · último cambio: 24 oct 2026
+Cerebro: [[Productos]] · público · último cambio: 24 oct 2026
 
 [Abrir en GitHub](https://github.com/lianfixx/mes.)
 

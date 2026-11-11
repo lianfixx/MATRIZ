@@ -1,4 +1,11 @@
-<!-- Generado por tools/generar.py. No editar a mano: se reescribe solo. -->
+---
+tipo: "cerebro"
+repos: 3
+ultimo_cambio: 2026-11-11
+tags:
+  - "cerebro"
+generado: "tools/generar.py · no editar a mano: se reescribe cada día"
+---
 
 # Herramientas
 
@@ -12,4 +19,4 @@ Parte de la [[MATRIZ]].
 - [[selector-modelos|selector-modelos]] · privado · 9 nov 2026
 - [[cloudfare|cloudfare]] · público · 11 nov 2026
 
-Para continuar con otra IA: [[herramientas.CONTEXTO]].
+Para continuar con otra IA: [[herramientas.CONTEXTO|archivo de contexto]].

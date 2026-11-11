@@ -1,8 +1,20 @@
-<!-- Generado por tools/generar.py. No editar a mano: se reescribe solo. -->
+---
+tipo: "repo"
+cerebro: "Castorena"
+visibilidad: "público"
+ultimo_cambio: 2026-11-04
+skills: 1
+ultimo_agente: "Claude Code (sesión en la nube)"
+github: "https://github.com/lianfixx/Escritos-juridicos-CASTORENA"
+tags:
+  - "repo"
+  - "publico"
+generado: "tools/generar.py · no editar a mano: se reescribe cada día"
+---
 
 # Escritos-juridicos-CASTORENA
 
-Cerebro: [[castorena|Castorena]] · público · último cambio: 4 nov 2026
+Cerebro: [[Castorena]] · público · último cambio: 4 nov 2026
 
 [Abrir en GitHub](https://github.com/lianfixx/Escritos-juridicos-CASTORENA)
 

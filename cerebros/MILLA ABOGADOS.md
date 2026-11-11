@@ -1,4 +1,11 @@
-<!-- Generado por tools/generar.py. No editar a mano: se reescribe solo. -->
+---
+tipo: "cerebro"
+repos: 5
+ultimo_cambio: 2026-11-04
+tags:
+  - "cerebro"
+generado: "tools/generar.py · no editar a mano: se reescribe cada día"
+---
 
 # MILLA ABOGADOS
 
@@ -14,4 +21,4 @@ Parte de la [[MATRIZ]].
 - [[impulso-libre|impulso-libre]] · privado · 4 nov 2026
 - [[meta-ads-client-onboarding|meta-ads-client-onboarding]] · privado · 4 nov 2026
 
-Para continuar con otra IA: [[milla-abogados.CONTEXTO]].
+Para continuar con otra IA: [[milla-abogados.CONTEXTO|archivo de contexto]].

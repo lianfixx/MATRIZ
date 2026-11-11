@@ -1,8 +1,21 @@
-<!-- Generado por tools/generar.py. No editar a mano: se reescribe solo. -->
+---
+tipo: "repo"
+cerebro: "Castorena"
+visibilidad: "público"
+ultimo_cambio: 2026-11-11
+skills: 1
+ultimo_agente: "Claude Code (ejecución programada)"
+pendiente: "subir v22 a Drive, Escritorio e iCloud (la ejecución programada no pudo escribir en Drive ni alcanza la Mac); ACTUAL.json de INDEP sigue en la entrega 18."
+github: "https://github.com/lianfixx/Cerebro-Castorena-"
+tags:
+  - "repo"
+  - "publico"
+generado: "tools/generar.py · no editar a mano: se reescribe cada día"
+---
 
 # Cerebro-Castorena-
 
-Cerebro: [[castorena|Castorena]] · público · último cambio: 11 nov 2026
+Cerebro: [[Castorena]] · público · último cambio: 11 nov 2026
 
 [Abrir en GitHub](https://github.com/lianfixx/Cerebro-Castorena-)
 

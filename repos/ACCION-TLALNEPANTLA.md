@@ -1,8 +1,20 @@
-<!-- Generado por tools/generar.py. No editar a mano: se reescribe solo. -->
+---
+tipo: "repo"
+cerebro: "Acción Tlalnepantla"
+visibilidad: "público"
+ultimo_cambio: 2026-11-04
+skills: 0
+ultimo_agente: "Claude Code (sesión en la nube)"
+github: "https://github.com/lianfixx/ACCION-TLALNEPANTLA-"
+tags:
+  - "repo"
+  - "publico"
+generado: "tools/generar.py · no editar a mano: se reescribe cada día"
+---
 
 # ACCION-TLALNEPANTLA-
 
-Cerebro: [[accion-tlalnepantla|Acción Tlalnepantla]] · público · último cambio: 4 nov 2026
+Cerebro: [[Acción Tlalnepantla]] · público · último cambio: 4 nov 2026
 
 [Abrir en GitHub](https://github.com/lianfixx/ACCION-TLALNEPANTLA-)
 

@@ -1,4 +1,8 @@
-<!-- Generado por tools/generar.py. No editar a mano: se reescribe solo. -->
+---
+tipo: "contexto"
+cerebro: "Acción Tlalnepantla"
+generado: "tools/generar.py · no editar a mano: se reescribe cada día"
+---
 
 # Contexto para cualquier IA · Acción Tlalnepantla
 
