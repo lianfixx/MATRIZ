@@ -27,7 +27,7 @@ Pendiente: subir v22 a Drive, Escritorio e iCloud (la ejecución programada no p
 
 ### INDEP (privado)
 
-https://github.com/lianfixx/INDEP · último cambio: sin dato
+https://github.com/lianfixx/INDEP · último cambio: 11 nov 2026
 
 Privado: pide acceso a Emi o usa un conector con sesión iniciada.
 

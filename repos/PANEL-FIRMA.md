@@ -2,8 +2,8 @@
 
 # PANEL-FIRMA-
 
-Cerebro: [[productos|Productos]] · privado · último cambio: sin dato
+Cerebro: [[productos|Productos]] · privado · último cambio: 4 nov 2026
 
 [Abrir en GitHub](https://github.com/lianfixx/PANEL-FIRMA-)
 
-Sin lectura en esta corrida (falta acceso o el token de la Matriz).
+Repositorio privado: aquí solo se publica su nombre y su fecha.

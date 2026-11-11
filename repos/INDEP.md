@@ -2,8 +2,8 @@
 
 # INDEP
 
-Cerebro: [[castorena|Castorena]] · privado · último cambio: sin dato
+Cerebro: [[castorena|Castorena]] · privado · último cambio: 11 nov 2026
 
 [Abrir en GitHub](https://github.com/lianfixx/INDEP)
 
-Sin lectura en esta corrida (falta acceso o el token de la Matriz).
+Repositorio privado: aquí solo se publica su nombre y su fecha.

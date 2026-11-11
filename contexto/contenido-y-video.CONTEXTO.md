@@ -20,10 +20,10 @@ https://github.com/lianfixx/VIDEOS-IA-SKILL-MILLA · último cambio: 11 nov 2026
 
 Un método portable para producir videos de MILLA ABOGADOS: investigación, guion, conexiones, voz, imágenes, música, montaje y revisión. Incluye una skill, instrucciones para otras IAs, utilidades y un compositor nuevo.
 
-Skills: `milla-video-studio`, `pizarra-studio`, `vox-studio`
+Skills: `editor-studio`, `milla-video-studio`, `pizarra-studio`, `vox-studio`
 
-Último registro: 11 nov 2026 · Vox Studio 0.12.0: Flow Music como complemento opcional de la música · Agente: Claude Code (sesión en la nube)
-Pendiente: fusionar a `main`; que Emi suba el paquete actualizado a la app.
+Último registro: 11 nov 2026 · AssemblyAI conectado y comparado con ElevenLabs · Agente: Claude Code (sesión en la nube)
+Pendiente: repetir la comparación con el primer crudo de Emi y fijar el motor por defecto con lo que se oiga en los cortes.
 
 ### X (público)
 

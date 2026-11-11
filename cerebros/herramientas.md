@@ -8,8 +8,8 @@ Parte de la [[MATRIZ]].
 
 ## Repositorios
 
-- [[estilo-emi|estilo-emi]] · privado · sin dato
-- [[selector-modelos|selector-modelos]] · privado · sin dato
+- [[estilo-emi|estilo-emi]] · privado · 9 nov 2026
+- [[selector-modelos|selector-modelos]] · privado · 9 nov 2026
 - [[cloudfare|cloudfare]] · público · 11 nov 2026
 
 Para continuar con otra IA: [[herramientas.CONTEXTO]].

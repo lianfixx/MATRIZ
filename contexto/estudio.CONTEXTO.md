@@ -16,7 +16,7 @@ Soy Emi (Yohualli Emiliano García Milla). Este es el cerebro «Estudio» de mi 
 
 ### maestria-alta-direccion (privado)
 
-https://github.com/lianfixx/maestria-alta-direccion · último cambio: sin dato
+https://github.com/lianfixx/maestria-alta-direccion · último cambio: 7 nov 2026
 
 Privado: pide acceso a Emi o usa un conector con sesión iniciada.
 

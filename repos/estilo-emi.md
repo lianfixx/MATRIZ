@@ -2,8 +2,8 @@
 
 # estilo-emi
 
-Cerebro: [[herramientas|Herramientas]] · privado · último cambio: sin dato
+Cerebro: [[herramientas|Herramientas]] · privado · último cambio: 9 nov 2026
 
 [Abrir en GitHub](https://github.com/lianfixx/estilo-emi)
 
-Sin lectura en esta corrida (falta acceso o el token de la Matriz).
+Repositorio privado: aquí solo se publica su nombre y su fecha.

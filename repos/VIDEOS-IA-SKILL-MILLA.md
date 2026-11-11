@@ -10,18 +10,19 @@ Un método portable para producir videos de MILLA ABOGADOS: investigación, guio
 
 ## Skills
 
+- `editor-studio` · `skills/editor-studio/SKILL.md`
 - `milla-video-studio` · `skills/milla-video-studio/SKILL.md`
 - `pizarra-studio` · `skills/pizarra-studio/SKILL.md`
 - `vox-studio` · `skills/vox-studio/SKILL.md`
 
 ## Últimos registros
 
-- 11 nov 2026 · Vox Studio 0.12.0: Flow Music como complemento opcional de la música · Agente: Claude Code (sesión en la nube)
-- 11 nov 2026 · Vox Studio 0.11.0: guía del momento exacto para 3D, tratamientos, Blender y ComfyUI · Agente: Claude Code (sesión en la nube)
-- 11 nov 2026 · Vox Studio 0.10.1: el resaltado cubre las tildes y verificación final del demo · Agente: Claude Code (sesión en la nube)
-- 11 nov 2026 · Vox Studio 0.10.1: revisión independiente del 3D, Blender y ComfyUI (14 fallas) corregida · Agente: Claude Code (sesión en la nube)
-- 11 nov 2026 · Vox Studio 0.10.0: 3D, sombreadores, Blender y ComfyUI, solo cuando hacen falta · Agente: Claude Code (sesión en la nube)
+- 11 nov 2026 · AssemblyAI conectado y comparado con ElevenLabs · Agente: Claude Code (sesión en la nube)
+- 11 nov 2026 · AssemblyAI: llave guardada, subida de audio rechazada · Agente: Claude Code (sesión en la nube)
+- 11 nov 2026 · Entorno, box y tarea programada de Editor Studio · Agente: Claude Code (sesión en la nube)
+- 11 nov 2026 · Editor Studio 0.1.0 (candidata): skill para editar los videos que Emi graba, cerebro de video y radar semanal · Agente: Claude Code (sesión en la nube)
+- 11 nov 2026 · Plan de la skill de edición (Editor Studio) y análisis de siete videos de referencia · Agente: Claude Code (sesión en la nube)
 
 ## Pendiente más reciente
 
-fusionar a `main`; que Emi suba el paquete actualizado a la app.
+repetir la comparación con el primer crudo de Emi y fijar el motor por defecto con lo que se oiga en los cortes.

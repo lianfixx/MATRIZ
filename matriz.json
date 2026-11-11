@@ -84,8 +84,8 @@
           "nombre": "INDEP",
           "url": "https://github.com/lianfixx/INDEP",
           "visibilidad": "privado",
-          "leido": false,
-          "ultimo_cambio": "",
+          "leido": true,
+          "ultimo_cambio": "2026-11-11",
           "resumen": "",
           "skills": [],
           "protocolo": "",
@@ -269,8 +269,8 @@
           "nombre": "buholegal-monitoreo",
           "url": "https://github.com/lianfixx/buholegal-monitoreo",
           "visibilidad": "privado",
-          "leido": false,
-          "ultimo_cambio": "",
+          "leido": true,
+          "ultimo_cambio": "2026-11-04",
           "resumen": "",
           "skills": [],
           "protocolo": "",
@@ -280,8 +280,8 @@
           "nombre": "impulso-libre",
           "url": "https://github.com/lianfixx/impulso-libre",
           "visibilidad": "privado",
-          "leido": false,
-          "ultimo_cambio": "",
+          "leido": true,
+          "ultimo_cambio": "2026-11-04",
           "resumen": "",
           "skills": [],
           "protocolo": "",
@@ -291,8 +291,8 @@
           "nombre": "meta-ads-client-onboarding",
           "url": "https://github.com/lianfixx/meta-ads-client-onboarding",
           "visibilidad": "privado",
-          "leido": false,
-          "ultimo_cambio": "",
+          "leido": true,
+          "ultimo_cambio": "2026-11-04",
           "resumen": "",
           "skills": [],
           "protocolo": "",
@@ -368,6 +368,10 @@
           "resumen": "Un método portable para producir videos de MILLA ABOGADOS: investigación, guion, conexiones, voz, imágenes, música, montaje y revisión. Incluye una skill, instrucciones para otras IAs, utilidades y un compositor nuevo.",
           "skills": [
             {
+              "nombre": "editor-studio",
+              "ruta": "skills/editor-studio/SKILL.md"
+            },
+            {
               "nombre": "milla-video-studio",
               "ruta": "skills/milla-video-studio/SKILL.md"
             },
@@ -382,6 +386,41 @@
           ],
           "protocolo": "1.1.0",
           "registro": [
+            {
+              "fecha": "2026-11-11",
+              "titulo": "AssemblyAI conectado y comparado con ElevenLabs",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "`TECNICA.md` registra que AssemblyAI ya funciona, el detalle de la cabecera y la primera comparación entre los dos motores.",
+              "pendiente": "repetir la comparación con el primer crudo de Emi y fijar el motor por defecto con lo que se oiga en los cortes."
+            },
+            {
+              "fecha": "2026-11-11",
+              "titulo": "AssemblyAI: llave guardada, subida de audio rechazada",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "`TECNICA.md` dice el estado real del motor `assemblyai`.",
+              "pendiente": "que Emi ajuste el secreto de red para que la cabecera `Authorization` lleve solo la llave, sin «Bearer» (causa probable, sin confirmar), y repetir la comparación con `comparar-motores`."
+            },
+            {
+              "fecha": "2026-11-11",
+              "titulo": "Entorno, box y tarea programada de Editor Studio",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "fuera del repositorio, con su aprobación en cada cambio de entorno. Entorno `videos-ia-skill-milla`: se permiten `drive.google.com` y `drive.usercontent.google.com` (para bajar los crudos) y su guion de arranque instala OpenCV 4.11 (el detector de rostros de Editor Studio). Drive: carpeta «Editor Studio» con una subcarpeta por espacio (`crudos` y `entregas`) y otra de referencias. Tarea programada «Radar semanal de tendencias de video»: domingos 21:23, hora de México, en una sesión nueva. Errata de la entrada anterior: el box sí terminó de actualizarse (de la imagen v13 a la v19).",
+              "pendiente": "llave de AssemblyAI de Emi; fusionar esta rama a `main` antes del domingo para que el radar encuentre su código."
+            },
+            {
+              "fecha": "2026-11-11",
+              "titulo": "Editor Studio 0.1.0 (candidata): skill para editar los videos que Emi graba, cerebro de video y radar semanal",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "skill nueva `skills/editor-studio/` con código propio (el método sale de las referencias anotadas en `docs/REFERENCIAS-EXTERNAS.md`; no se copió código ajeno) sobre el motor HyperFrames 0.9.34 (Apache 2.0): ingesta que no toca el crudo y convierte HDR, transcripción por palabra (ElevenLabs Scribe, AssemblyAI o archivo), propuesta de cortes por energía del audio con muletillas, tomas repetidas y groserías tapadas, compuertas de aprobación de Emi (cortes, muestra, gasto), mapa de rostro, tres niveles con 15 piezas, subtítulos razonados por espacio, efectos sintetizados, mezcla y master a −14 LUFS, hojas de revisión, auditorías, manifiesto, hoja de publicación aparte y cierre que comprueba que el archivo corresponde a lo aprobado. Guías: `SKILL.md`, `ENTREVISTA.md`, `NIVELES.md`, `OFICIO.md`, `ANIMACIONES.md`, `TECNICA.md`. Estilo de edición por espacio en `espacios/<espacio>/edicion.json` y memoria en `aprendizajes-edicion.md`; lo que Emi respondió quedó en `espacios/APRENDIZAJES-EDICION.md`. Cerebro: `cerebro/CEREBRO.md` (quién es dueña de qué y por dónde cruzan las ideas), puentes en `cerebro/puente/`, `cerebro/radar.py` (TikTok y Reels por etiquetas de `espacios/<espacio>/radar.json`, con tope) y primera semana en `cerebro/tendencias/2026-S46.md` (los datos completos quedan en `private/`, fuera del repositorio). Frenos: tres reglas nuevas en `ia/politica.json` (pruebas de Editor Studio, validez de su `SKILL.md` y pruebas del radar) y `ia/REGLAS.md` regenerado. Puentes `.claude/skills/editor-studio` y `.agents/skills/editor-studio`, empaquetador `tools/empaquetar_editor.py`, y menciones en `README.md`, `espacios/README.md`, `espacios/ESTILOS.md` y `docs/PLAN-EDITOR.md`.",
+              "pendiente": "ningún video de Emi se ha editado: falta su crudo de piloto y sus referencias. Sin probar: AssemblyAI (falta su llave), un Dolby Vision real de iPhone, video generado con Kling, macOS, y el sticker en un render completo (solo en cuadro de muestra). El estilo de cada espacio sigue como candidato hasta que Emi lo apruebe. Las etiquetas del radar son una semilla de Claude. La tarea programada del radar (domingos 21:23, hora de México) no ha corrido aún y necesita que esta rama esté fusionada. Que X viral e Historias lean los puentes nuevos se hace en sus repositorios. El box no terminó de actualizarse (la orden agotó el tiempo). Fusionar a `main`."
+            },
+            {
+              "fecha": "2026-11-11",
+              "titulo": "Plan de la skill de edición (Editor Studio) y análisis de siete videos de referencia",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "solo documentación; no se creó ninguna skill ni se cambió código. `docs/REFERENCIAS-EXTERNAS.md` suma el análisis de los siete videos, la skill de GitHub que corresponde a cada uno con el commit leído, el estado de sus licencias (la mayoría sin licencia: se toma el método y no el código), lo que se propone adoptar, los choques con decisiones anteriores de Emi (video generado, personaje) y lo comprobado en este entorno. `docs/PLAN-EDITOR.md` (nuevo) trae la propuesta completa: qué es, piezas, flujo con compuertas, los tres niveles y cómo se sugiere uno, conexión entre skills, aprendizaje semanal, configuración paso por paso, fases, riesgos y 45 preguntas para Emi.",
+              "pendiente": "respuestas de Emi a las 45 preguntas; un crudo de prueba; decidir transcripción y forma de recibir los crudos. La comparación Obsidian/Notion se abrió como sesión aparte, a pedido de Emi; no forma parte de este repositorio."
+            },
             {
               "fecha": "2026-11-11",
               "titulo": "Vox Studio 0.12.0: Flow Music como complemento opcional de la música",
@@ -402,41 +441,6 @@
               "agente": "Claude Code (sesión en la nube)",
               "cambios": "la caja del resaltado del titular sube cuando la palabra lleva mayúscula con tilde o Ñ, y cada línea se pinta encima de la siguiente (en la portada «CÓDIGO» perdía la tilde). Dos lecciones nuevas en los aprendizajes. La entrada anterior del registro se completó con el resultado del render final.",
               "pendiente": "que Emi vea y escuche el demo; probar ComfyUI con un servidor real; fusionar a `main`."
-            },
-            {
-              "fecha": "2026-11-11",
-              "titulo": "Vox Studio 0.10.1: revisión independiente del 3D, Blender y ComfyUI (14 fallas) corregida",
-              "agente": "Claude Code (sesión en la nube)",
-              "cambios": "(1) los colores horneados ya son los de la marca: sin mapeo de tonos, luces que dan el color exacto en la cara iluminada y sombreador que escribe papel, tinta y acento tal cual; (2) el horno arma y comprueba en `out/` y mueve de una vez, con marca `.listo`: un horneado vacío, incompleto o interrumpido ya no queda como bueno; (3) Blender centra y gira modelos con nodo padre; (4) el giro de Blender es constante (sin fotogramas clave); (5) un objeto 3D en la primera escena se hornea en el tramo que el compositor muestra y ya no se congela; (6) la firma de caché incluye el código que dibuja y se borra lo horneado que nadie pide; (7) repetir un giro en la misma carpeta limpia los cuadros anteriores; (8) `--out` de `blender` se valida antes de rendir (dentro de `public/`, `.png` o carpeta) y se comprueba que Blender escribió todo; (9) acabado real: una pieza sin material recibe el color de acento; (10) `validar` rechaza valores infinitos, `resaltar` fuera de rango y monedas fuera de 2 a 8; (11) una foto real tratada conserva su marco y la portada usa la imagen tratada; (12) `comfy` valida dirección (https, o http solo local) y flujo también en seco, y verifica que lo bajado sea una imagen; (13) una textura que no carga cancela el render en vez de dejar un PNG vacío; (14) las monedas aparecen sobre la pila sin salirse del lienzo ni dejar una pila fantasma; (15) documentos alineados con el código; (16) el resaltado del titular cubre las mayúsculas con tilde o Ñ.",
-              "pendiente": "que Emi vea y escuche el demo; la entrada desde abajo cruza 0.2 s la franja del subtítulo (menor); probar ComfyUI cuando Emi tenga servidor; fusionar a `main`."
-            },
-            {
-              "fecha": "2026-11-11",
-              "titulo": "Vox Studio 0.10.0: 3D, sombreadores, Blender y ComfyUI, solo cuando hacen falta",
-              "agente": "Claude Code (sesión en la nube)",
-              "cambios": "guía de decisión `TRES-D.md` (qué necesita la escena → qué recurso, señales de que no va). Escenas con `objeto3d` (moneda, monedas, barras, caja, globo; Three.js con colores del espacio y contorno de tinta) y `tratamiento` (semitono, duotono, por sombreador) que exigen un `porque` escrito; las barras exigen valores reales y `fuente`; `validar` avisa si más de una de cada tres escenas lleva 3D. Lo que necesita WebGL se hornea aparte (composición `Horno`) y el video principal solo pega imágenes. Campo `secuencia` para objetos que giran. Comandos `blender-instalar`, `blender` (texto, moneda, caja o modelo propio; acabado plano o real; imagen o giro) y `comfy` (servidor de Emi por `COMFY_URL`; sin servidor se detiene). La auditoría de imagen mira la última escena ya asentada. Las referencias externas pasan estos recursos de «descartado» a «adoptado con condiciones». Pizarra Studio 0.3.1 aclara que ahí no se usan.",
-              "pendiente": "corregir lo que encuentre la revisión independiente; confirmar el aviso de la última escena; que Emi vea el demo; fusionar a `main`."
-            },
-            {
-              "fecha": "2026-11-11",
-              "titulo": "Vox Studio 0.9.0 y Pizarra Studio 0.3.0: mejoras tomadas de cuatro referencias de X",
-              "agente": "Claude Code (sesión en la nube)",
-              "cambios": "análisis completo en `docs/REFERENCIAS-EXTERNAS.md` (qué se adoptó, qué ya estaba y qué se descartó con motivo). Vox Studio: `funcion` obligatoria por escena (primera gancho, última cierre, al menos una opinión); `ganchos_propuestos` y `gancho_elegido`; una cifra sin `fuente` en su escena es error; el tempo de la música se ajusta ±8 % a los cambios de escena; aviso de audio plano; resortes distintos para titular, recorte y rótulo; los recortes ya no cruzan el titular al entrar (`sube`, sello desde 1.25×); línea de fuente legible; comandos `revisar` (hojas de transiciones y de tamaño teléfono + `out/revision.json`) y `referencia`; `cierre` exige la revisión del render actual; `out/manifiesto.json`. Pizarra Studio: `revisar`, la misma exigencia en `cierre`, manifiesto, función por escena en el storyboard y tempo ajustado.",
-              "pendiente": "formatos 1:1 y 16:9 en Vox Studio (propuesto, sin hacer); que Emi vea y escuche; fusionar a `main`."
-            },
-            {
-              "fecha": "2026-11-11",
-              "titulo": "Vox Studio 0.8.3 y Pizarra Studio 0.2.1: qué hacer si se llaman donde no se puede producir",
-              "agente": "Claude Code (sesión en la nube)",
-              "cambios": "Vox Studio sustituye «Dónde funciona» por una tabla de situaciones (con todo, sin llaves, sin repositorio, app sin terminal, pedido de pizarra) con qué hacer y qué decirle a Emi, reglas de honestidad y un paquete de traspaso para continuar en Claude Code. Pizarra Studio añade la misma regla. El paquete para la app incluye ahora la guía de entrevista de pizarra (`pizarra/PIZARRA.md` y su ejemplo de brief).",
-              "pendiente": "que Emi sustituya la copia de la app; fusionar a `main`."
-            },
-            {
-              "fecha": "2026-11-11",
-              "titulo": "Pizarra Studio 0.2.0: revisión independiente (15 fallas) corregida",
-              "agente": "Claude Code (sesión en la nube)",
-              "cambios": "`pizarra.py` reescrito con las 15 correcciones de una revisión independiente: (1) `voz --execute` exige entrevista aprobada y que Emi haya pedido la voz del espacio antes de gastar; (2) medición, cuadros de prueba y render usan la misma línea de tiempo (modo B con voz); (3) una cama sin sonido ya no satura la mezcla y la respuesta «sin efectos» apaga los efectos; (4) formato y duración del brief se interpretan antes de rendir y aceptan «horizontal 16:9», «45 a 60», «1:00», «1 minuto»; (5) aviso si la voz se corta o el video sobra; (6) en estilos la marca lleva estilo, sin mascota ni persona y subtítulos con tiempos reales; (7) respuestas que no son texto no cuentan; (8) `proyecto` se arma aparte, se renombra al final y solo acepta `productions/<espacio>/`; (9) el motor vive en `~/.cache/pizarra-studio/motor`, se rechaza si tiene archivos modificados y cada producción anota su commit; (10) se borran entregables anteriores al empezar y los temporales siempre; (11) la medición no ensucia `stills/`; (12) el navegador se busca en más rutas y solo se devuelve si existe; (13) import con mensaje claro si falta Vox Studio; (14) ejemplo y textos alineados con «sin personaje», `musica` antes de `qa`; (15) límites y tiempo máximo en `qa`, primera escena en 0, ganancia final calculada desde una sola fuente.",
-              "pendiente": "primer video real; modo historia y render horizontal completo sin probar."
             }
           ]
         },
@@ -519,8 +523,8 @@
           "nombre": "maestria-alta-direccion",
           "url": "https://github.com/lianfixx/maestria-alta-direccion",
           "visibilidad": "privado",
-          "leido": false,
-          "ultimo_cambio": "",
+          "leido": true,
+          "ultimo_cambio": "2026-11-07",
           "resumen": "",
           "skills": [],
           "protocolo": "",
@@ -589,8 +593,8 @@
           "nombre": "PANEL-FIRMA-",
           "url": "https://github.com/lianfixx/PANEL-FIRMA-",
           "visibilidad": "privado",
-          "leido": false,
-          "ultimo_cambio": "",
+          "leido": true,
+          "ultimo_cambio": "2026-11-04",
           "resumen": "",
           "skills": [],
           "protocolo": "",
@@ -618,8 +622,8 @@
           "nombre": "estilo-emi",
           "url": "https://github.com/lianfixx/estilo-emi",
           "visibilidad": "privado",
-          "leido": false,
-          "ultimo_cambio": "",
+          "leido": true,
+          "ultimo_cambio": "2026-11-09",
           "resumen": "",
           "skills": [],
           "protocolo": "",
@@ -629,8 +633,8 @@
           "nombre": "selector-modelos",
           "url": "https://github.com/lianfixx/selector-modelos",
           "visibilidad": "privado",
-          "leido": false,
-          "ultimo_cambio": "",
+          "leido": true,
+          "ultimo_cambio": "2026-11-09",
           "resumen": "",
           "skills": [],
           "protocolo": "",

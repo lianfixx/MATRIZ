@@ -16,7 +16,7 @@ Soy Emi (Yohualli Emiliano García Milla). Este es el cerebro «Productos» de m
 
 ### PANEL-FIRMA- (privado)
 
-https://github.com/lianfixx/PANEL-FIRMA- · último cambio: sin dato
+https://github.com/lianfixx/PANEL-FIRMA- · último cambio: 4 nov 2026
 
 Privado: pide acceso a Emi o usa un conector con sesión iniciada.
 
