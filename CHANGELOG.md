@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-11-11 · Matriz 0.5.0: todo se actualiza y se retroalimenta solo
+
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: Emi, 11/11/2026: «RECUERDA QUE CONTIGO SE DEBE ACTUALIZAR Y RETROALIMENTAR ABSOLUTAMENTE TODO TODO!! SIN QUE HAGA NADA».
+- Cambios: la actualización diaria ahora descubre los repositorios de `lianfixx` que no están en ningún cerebro y los muestra en `MATRIZ.md`, en `matriz.json` (`por_clasificar`) y en los avisos del panel; la revisión semanal los clasifica. La revisión semanal suma dos pasos: detectar skills instaladas en Claude cuya copia quedó vieja frente a su repositorio (con encargo listo para Muse) y una retroalimentación de la semana (lo repetido, lo que falló, lo que Emi hizo a mano y cómo automatizarlo, aplicando de una vez lo que toque a la Matriz). `EMI.md` guarda la regla para cualquier IA: todo se registra y se automatiza; a Emi solo se le pide lo que nadie más puede hacer.
+- Archivos: `tools/generar.py`, `tools/test_generar.py`, `panel/index.html`, `docs/REVISION_SEMANAL.md`, `EMI.md` y este registro.
+- Verificación: `python3 -m unittest discover -s tools -p 'test_*.py'` → aprobado; descubrimiento de repositorios → no ejecutado en esta sesión (el proxy de la sesión no permite listar la cuenta); se comprueba en la corrida de GitHub.
+- Pendiente: que el token «MATRIZ lectura» tenga acceso a «All repositories» (solo lectura) para que un repositorio privado nuevo no requiera pasos de Emi; secretos de Cloudflare para publicar el panel.
+
 ## 2026-11-11 · registro de la Matriz 0.4.0 (panel web en Cloudflare y dos skills con repositorio)
 
 - Agente: Claude Code (sesión en la nube)

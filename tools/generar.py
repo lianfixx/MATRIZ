@@ -30,6 +30,7 @@ import re
 import subprocess
 import sys
 import tempfile
+import urllib.request
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
@@ -176,6 +177,33 @@ def localizar(nombre: str, repos_dir: Path | None, clonar: bool, propietario: st
 
 # ---------------------------------------------------------------- escritura
 
+def descubrir(propietario: str, conocidos: set[str]) -> list[dict]:
+    """Repositorios de la cuenta que todavía no están en ningún cerebro.
+
+    Sin token ve los públicos; con MATRIZ_TOKEN (si su acceso es «All repositories») también los
+    privados nuevos. La revisión semanal los clasifica; aquí solo se avisan. Si GitHub no responde,
+    devuelve una lista vacía y la Matriz se genera igual.
+    """
+    token = os.environ.get("MATRIZ_TOKEN", "").strip()
+    urls = [f"https://api.github.com/users/{propietario}/repos?per_page=100&type=owner"]
+    if token:
+        urls.append("https://api.github.com/user/repos?per_page=100&affiliation=owner")
+    vistos: dict[str, dict] = {}
+    for url in urls:
+        req = urllib.request.Request(url, headers={"Accept": "application/vnd.github+json", "User-Agent": "matriz"})
+        if token and "/user/" in url:
+            req.add_header("Authorization", f"Bearer {token}")
+        try:
+            with urllib.request.urlopen(req, timeout=20) as r:
+                for x in json.load(r):
+                    if x.get("owner", {}).get("login", "").lower() == propietario.lower() and not x.get("archived"):
+                        vistos[x["name"]] = {"nombre": x["name"], "visibilidad": "privado" if x.get("private") else "público",
+                                             "creado": (x.get("created_at") or "")[:10]}
+        except Exception as e:  # sin red o sin permiso: no bloquea la generación
+            print(f"No se pudo listar repositorios ({url.split('?')[0]}): {e}", file=sys.stderr)
+    return sorted((v for n, v in vistos.items() if n not in conocidos), key=lambda v: v["nombre"].lower())
+
+
 def yaml(campos: dict) -> str:
     """Propiedades de Obsidian (frontmatter YAML). Las cadenas van como JSON, que YAML acepta."""
     L = ["---"]
@@ -319,7 +347,8 @@ def contexto(c: dict, repos: list[dict], propietario: str, inv: dict | None = No
     return "\n".join(L).rstrip() + "\n"
 
 
-def portada(cerebros: list[dict], por_cerebro: dict, hoy: str, inv: dict | None = None) -> str:
+def portada(cerebros: list[dict], por_cerebro: dict, hoy: str, inv: dict | None = None,
+            nuevos: list[dict] | None = None) -> str:
     inv = inv or {}
     todos = [r for c in cerebros for r in por_cerebro[c["id"]]]
     recientes = sorted(
@@ -342,6 +371,11 @@ def portada(cerebros: list[dict], por_cerebro: dict, hoy: str, inv: dict | None 
     if sin:
         L.append("\n## Sin lectura en esta corrida\n")
         L.append(", ".join(f"`{n}`" for n in sin) + ". Falta acceso o el secreto `MATRIZ_TOKEN`.")
+    if nuevos:
+        L.append("\n## Repositorios nuevos por clasificar\n")
+        L += [f"- `{n['nombre']}` · {n['visibilidad']}" + (f" · creado el {fecha_corta(n['creado'])}" if n.get("creado") else "")
+              for n in nuevos]
+        L.append("\nLa revisión semanal los asigna a su cerebro; si alguno es dudoso, le pregunta a Emi.")
     tareas, instaladas = inv.get("tareas", []), inv.get("skills_instaladas", [])
     if tareas or instaladas:
         activas = [t for t in tareas if t.get("estado", "activa") == "activa"]
@@ -413,8 +447,10 @@ def validar(cfg: dict, inv: dict | None = None) -> list[str]:
     return errores
 
 
-def generar(cfg: dict, salida: Path, repos_dir: Path | None, clonar: bool, hoy: str, inv: dict | None = None) -> dict:
+def generar(cfg: dict, salida: Path, repos_dir: Path | None, clonar: bool, hoy: str, inv: dict | None = None,
+            nuevos: list[dict] | None = None) -> dict:
     inv = inv or {}
+    nuevos = nuevos or []
     errores = validar(cfg, inv)
     if errores:
         raise SystemExit("Configuración inválida:\n- " + "\n- ".join(errores))
@@ -438,11 +474,11 @@ def generar(cfg: dict, salida: Path, repos_dir: Path | None, clonar: bool, hoy: 
             escribir(salida / "repos" / f"{slug(r['nombre'])}.md", nota_repo(r, c))
     for mes, texto in bitacoras(todos).items():
         escribir(salida / "bitacora" / f"{mes}.md", texto)
-    escribir(salida / "MATRIZ.md", portada(cfg["cerebros"], por_cerebro, hoy, inv))
+    escribir(salida / "MATRIZ.md", portada(cfg["cerebros"], por_cerebro, hoy, inv, nuevos))
     datos = {"actualizada": hoy, "propietario": prop,
              "cerebros": [{"id": c["id"], "nombre": c["nombre"], "descripcion": c["descripcion"],
                            "repos": por_cerebro[c["id"]]} for c in cfg["cerebros"]],
-             "inventario": inv}
+             "inventario": inv, "por_clasificar": nuevos}
     escribir(salida / "matriz.json", json.dumps(datos, ensure_ascii=False, indent=2) + "\n")
     return datos
 
@@ -462,7 +498,9 @@ def main() -> int:
     cfg = json.loads((RAIZ / "matriz.config.json").read_text(encoding="utf-8"))
     ruta_inv = RAIZ / "inventario.json"
     inv = json.loads(ruta_inv.read_text(encoding="utf-8")) if ruta_inv.exists() else {}
-    datos = generar(cfg, a.salida, a.repos_dir, a.clonar, hoy, inv)
+    conocidos = {r for c in cfg["cerebros"] for r in c["repos"]} | {"MATRIZ"} | set(cfg.get("ignorar", []))
+    nuevos = descubrir(cfg["propietario"], conocidos) if a.clonar else []
+    datos = generar(cfg, a.salida, a.repos_dir, a.clonar, hoy, inv, nuevos)
     todos = [r for c in datos["cerebros"] for r in c["repos"]]
     print(f"Matriz generada: {len(datos['cerebros'])} cerebros, {len(todos)} repositorios, "
           f"{sum(r['leido'] for r in todos)} leídos.")

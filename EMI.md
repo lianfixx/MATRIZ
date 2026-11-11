@@ -27,3 +27,4 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 - Nada de datos de clientes en repositorios públicos ni en esta Matriz.
 - No enviar, publicar, contratar ni cambiar reglas sin su confirmación expresa.
 - Antes de construir, preguntar todo junto y con opciones; después, avanzar sin pedir permiso para cada paso.
+- **Todo se actualiza y se retroalimenta solo** (Emi, 11/11/2026: «se debe actualizar y retroalimentar absolutamente todo, sin que haga nada»). Cualquier IA que trabaje con Emi deja su trabajo registrado en el repositorio, y lo repetitivo se automatiza. A Emi solo se le pide lo que nadie más puede hacer: contraseñas, pagos, verificaciones en su teléfono y decisiones; cuando haga falta, con el encargo listo para Muse.

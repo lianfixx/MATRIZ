@@ -71,6 +71,10 @@ class Generar(unittest.TestCase):
             nota = (t / "out" / "cerebros" / "Uno.md").read_text()
             self.assertIn("Cierre · Diario 18:43", nota)
             self.assertIn("Skills instaladas en Claude", (t / "out" / "contexto" / "uno.CONTEXTO.md").read_text())
+            g.generar(cfg, t / "out2", t / "clones", False, "2026-11-11", inv,
+                      [{"nombre": "nuevo-repo", "visibilidad": "privado", "creado": "2026-11-12"}])
+            self.assertIn("`nuevo-repo` · privado", (t / "out2" / "MATRIZ.md").read_text())
+            self.assertEqual(json.loads((t / "out2" / "matriz.json").read_text())["por_clasificar"][0]["nombre"], "nuevo-repo")
             mal = {"tareas": [{"nombre": "x", "cerebro": "nadie"}]}
             self.assertTrue(g.validar(cfg, mal))
 

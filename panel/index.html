@@ -184,6 +184,7 @@ function inicio(){
   const conPend=rs.filter(pend).sort((a,b)=>(b.ultimo_cambio||"").localeCompare(a.ultimo_cambio||""));
   const alertas=[...fallas.map(t=>`<div><b>Falló</b> ${esc(t.nombre)} (${f(t.ultima_corrida)}): ${esc(t.resultado.replace(/^falló:?\s*/,""))}.</div>`),
     ...(sinLeer.length?[`<div><b>Sin lectura</b> ${sinLeer.map(r=>esc(r.nombre)).join(", ")}.</div>`]:[]),
+    ...((D.por_clasificar||[]).length?[`<div><b>Nuevos</b> ${D.por_clasificar.map(r=>esc(r.nombre)).join(", ")}: la revisión semanal los asigna a su cerebro.</div>`]:[]),
     ...(sinRepo.length?[`<div><b>Sin repositorio</b> ${sinRepo.map(k=>esc(k.nombre)).join(", ")}.</div>`]:[])];
   return`<div class="cab"><div><h1>Todo, en un lugar</h1><p class="sub">${rs.length} repositorios en ${D.cerebros.length} cerebros, ${(inv.tareas||[]).length} tareas programadas y ${(inv.skills_instaladas||[]).length} skills. Se actualiza solo cada día.</p></div>
   <input class="buscar" id="buscar" type="search" placeholder="Buscar repositorio o skill" value="${esc(filtro)}" aria-label="Buscar"></div>
