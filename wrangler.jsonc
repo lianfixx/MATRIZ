@@ -1,0 +1,9 @@
+// Panel de la Matriz en Cloudflare Workers (solo archivos estáticos, sin código de servidor).
+// Lo publica .github/workflows/publicar-panel.yml; también: `python3 tools/panel.py && npx wrangler deploy`.
+{
+  "name": "matriz",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./dist"
+  }
+}

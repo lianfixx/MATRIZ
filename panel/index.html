@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111111" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Matriz">
+<title>Matriz</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='9' fill='%23FF5A1F'/%3E%3C/svg%3E">
+<style>
+/* Matriz · panel. Monocromo; el naranja de Emi solo marca el centro y la acción principal. */
+:root{
+  --bg:#ffffff; --raised:#ffffff; --surface:#f4f4f3; --ink:#171717; --muted:#66655f; --faint:#9a9993;
+  --line:#e6e5e1; --control:#8a8984; --acento:#FF5A1F; --acento-tinta:#c2410c;
+  --bien:#1d6b45; --mal:#b3261e; --mal-fondo:#fdf1ef; --cerebro:#6f6aa3;
+  --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text","Inter","Segoe UI",system-ui,sans-serif;
+  --display:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter","Segoe UI",system-ui,sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#111111; --raised:#181818; --surface:#1f1f1e; --ink:#f4f4f2; --muted:#a8a7a1; --faint:#77766f;
+  --line:#2c2c2a; --control:#77766f; --acento-tinta:#ff8a5c; --bien:#7fd1a6; --mal:#ff8a80; --mal-fondo:#2a1614; --cerebro:#a6a1db;
+  color-scheme:dark;}}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration-color:var(--control);text-underline-offset:3px}
+a:hover{text-decoration-color:var(--ink)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--ink);outline-offset:2px;border-radius:6px}
+.app{min-height:100vh;display:grid;grid-template-columns:248px 1fr;padding-top:env(safe-area-inset-top)}
+.app>*{min-width:0}
+/* barra lateral */
+nav{border-right:1px solid var(--line);padding:22px 12px;position:sticky;top:0;height:100vh;overflow:auto;display:flex;flex-direction:column;gap:2px}
+.marca{display:flex;align-items:center;gap:10px;padding:0 10px 18px;font-family:var(--display);font-weight:650;font-size:19px;letter-spacing:-.01em}
+.punto{width:12px;height:12px;border-radius:50%;background:var(--acento);flex:none}
+.etq{font-size:12px;color:var(--faint);padding:14px 10px 6px}
+nav a{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 10px;border-radius:8px;text-decoration:none;font-size:14.5px}
+nav a:hover{background:var(--surface)}
+nav a[aria-current="page"]{background:var(--ink);color:var(--bg)}
+nav a span:last-child{font-size:12.5px;opacity:.6;font-variant-numeric:tabular-nums}
+.pie{margin-top:auto;padding:16px 10px 0;font-size:12px;color:var(--faint)}
+/* contenido */
+main{padding:28px max(20px,env(safe-area-inset-right)) 64px max(20px,env(safe-area-inset-left));max-width:1080px;width:100%;display:flex;flex-direction:column;gap:36px}
+.cab{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px}
+.cab>div{min-width:0}
+h1,h2,h3{font-family:var(--display);margin:0;letter-spacing:-.015em;text-wrap:balance}
+h1{font-size:clamp(28px,4.4vw,40px);font-weight:680;line-height:1.08}
+h2{font-size:13px;font-weight:600;color:var(--muted);letter-spacing:.01em;margin-bottom:10px}
+.sub{color:var(--muted);margin:6px 0 0;max-width:62ch}
+.meta{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.acciones{display:flex;flex-wrap:wrap;gap:8px}
+.btn{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--raised);border-radius:999px;padding:7px 14px;font-size:13.5px;cursor:pointer;text-decoration:none}
+.btn:hover{border-color:var(--control)}
+.btn.prim{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.buscar{width:min(320px,100%);border:1px solid var(--line);background:var(--raised);border-radius:999px;padding:8px 14px;font:inherit;font-size:14px;color:var(--ink)}
+.buscar::placeholder{color:var(--faint)}
+/* grafo */
+.grafo{border:1px solid var(--line);border-radius:16px;background:var(--raised);overflow:hidden}
+.grafo svg{display:block;width:100%;height:auto}
+.grafo line{stroke:var(--line);stroke-width:1.2}
+.grafo .nr{fill:var(--control)}
+.grafo .nc{fill:var(--cerebro)}
+.grafo .nm{fill:var(--acento)}
+.grafo text{font-family:var(--sans);font-size:12px;fill:var(--ink)}
+.grafo text.tr{font-size:10px;fill:var(--muted)}
+.grafo g.c{cursor:pointer}
+.grafo g.c:hover circle{stroke:var(--ink);stroke-width:2}
+/* filas */
+.filas{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.fila{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,2fr) 190px;gap:6px 18px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--line)}
+.fila>*{min-width:0}
+.nombre{font-family:var(--mono);font-size:13.5px;overflow-wrap:anywhere}
+.nombre a{text-decoration:none}
+.nombre a:hover{text-decoration:underline}
+.det{font-size:13.5px;color:var(--muted)}
+.det b{color:var(--ink);font-weight:500}
+.pend{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.der{display:flex;gap:6px;align-items:center;justify-content:flex-end;white-space:nowrap;font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+.pill{font-size:11.5px;border:1px solid var(--line);border-radius:999px;padding:1px 8px;color:var(--muted);white-space:nowrap}
+.pill.bien{border-color:var(--bien);color:var(--bien)}
+.pill.mal{border-color:var(--mal);color:var(--mal)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.chip{font-family:var(--mono);font-size:11.5px;background:var(--surface);border-radius:6px;padding:2px 7px}
+.atencion{border:1px solid var(--mal);background:var(--mal-fondo);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:6px;font-size:14px}
+.atencion b{color:var(--mal);font-weight:600}
+.dos{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+.dos>*{min-width:0}
+.vacio{color:var(--faint);font-size:14px;padding:12px 0}
+.aviso{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom));transform:translateX(-50%);background:var(--ink);color:var(--bg);border-radius:999px;padding:9px 16px;font-size:13.5px;opacity:0;transition:opacity .2s;pointer-events:none}
+.aviso.ver{opacity:1}
+textarea.copia{position:fixed;left:-9999px;top:0}
+@media (max-width:860px){.dos{grid-template-columns:1fr}}
+@media (max-width:720px){
+  .app{grid-template-columns:1fr}
+  nav{position:sticky;top:0;z-index:5;height:auto;flex-direction:row;overflow-x:auto;padding:10px max(12px,env(safe-area-inset-left));border-right:0;border-bottom:1px solid var(--line);background:var(--bg);gap:4px;scrollbar-width:none}
+  nav::-webkit-scrollbar{display:none}
+  .marca{padding:0 8px 0 4px}.etq,.pie{display:none}
+  nav a{white-space:nowrap;padding:7px 12px}
+  nav a span:last-child{display:none}
+  .fila{grid-template-columns:1fr auto}
+  .fila .det{grid-column:1/-1;grid-row:2}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="app">
+  <nav id="nav" aria-label="Cerebros"><div class="marca"><span class="punto"></span>Matriz</div></nav>
+  <main id="main"><p class="vacio">Cargando la Matriz…</p></main>
+</div>
+<div class="aviso" id="aviso" role="status" aria-live="polite"></div>
+<script>
+const MESES=["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"];
+const f=iso=>{if(!iso)return"sin dato";const[a,m,d]=iso.split("-");return`${+d} ${MESES[m-1]} ${a}`};
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const $=s=>document.querySelector(s);
+let D=null, contextos={}, filtro="";
+
+function avisar(t){const a=$("#aviso");a.textContent=t;a.classList.add("ver");clearTimeout(avisar.t);avisar.t=setTimeout(()=>a.classList.remove("ver"),2200)}
+function copiar(texto){
+  const ok=()=>avisar("Copiado. Pégalo en cualquier IA.");
+  if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(texto).then(ok,()=>respaldo(texto,ok))}else respaldo(texto,ok)}
+function respaldo(texto,ok){const t=document.createElement("textarea");t.className="copia";t.value=texto;document.body.appendChild(t);t.select();try{document.execCommand("copy");ok()}catch(e){avisar("No se pudo copiar")}t.remove()}
+function precargar(id){if(contextos[id])return;fetch(`contexto/${id}.CONTEXTO.md`).then(r=>r.ok?r.text():"").then(t=>{contextos[id]=t.replace(/^---[\s\S]*?---\n/,"")}).catch(()=>{})}
+
+const todos=()=>D.cerebros.flatMap(c=>c.repos.map(r=>({...r,cerebro:c})));
+const tareas=id=>(D.inventario?.tareas||[]).filter(t=>t.cerebro===id);
+const skills=id=>(D.inventario?.skills_instaladas||[]).filter(k=>k.cerebro===id);
+const pend=r=>{const p=(r.registro?.[0]?.pendiente||"").trim();return/^(ninguno|ninguna|no)\.?$/i.test(p)?"":p};
+
+function navegacion(actual){
+  const n=$("#nav");
+  n.innerHTML=`<div class="marca"><span class="punto"></span>Matriz</div>
+  <a href="#inicio" ${actual==="inicio"?'aria-current="page"':""}><span>Inicio</span><span>${todos().length}</span></a>
+  <div class="etq">Cerebros</div>`+
+  D.cerebros.map(c=>`<a href="#${c.id}" ${actual===c.id?'aria-current="page"':""}><span>${esc(c.nombre)}</span><span>${c.repos.length}</span></a>`).join("")+
+  `<div class="pie">Actualizada el ${f(D.actualizada)}<br><a href="https://github.com/${D.propietario}/MATRIZ">Ver en GitHub</a></div>`;
+}
+
+function grafo(){
+  const W=900,H=440,cx=W/2,cy=H/2,cs=D.cerebros;let l="",n="";
+  cs.forEach((c,i)=>{
+    const a=-Math.PI/2+i*2*Math.PI/cs.length,x=cx+Math.cos(a)*230,y=cy+Math.sin(a)*140;
+    l+=`<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}"/>`;
+    c.repos.forEach((r,j)=>{
+      const sp=c.repos.length>1?(j/(c.repos.length-1)-.5):0,ra=a+sp*1.6,rx=x+Math.cos(ra)*92,ry=y+Math.sin(ra)*56;
+      l+=`<line x1="${x}" y1="${y}" x2="${rx}" y2="${ry}"/>`;
+      n+=`<circle class="nr" cx="${rx}" cy="${ry}" r="4"><title>${esc(r.nombre)}</title></circle>`;
+    });
+    const ty=Math.sin(a)>.2?y+26:y-16;
+    n+=`<g class="c" data-ir="${c.id}" tabindex="0" role="link" aria-label="${esc(c.nombre)}"><circle class="nc" cx="${x}" cy="${y}" r="10"/><text x="${x}" y="${ty}" text-anchor="middle">${esc(c.nombre)}</text></g>`;
+  });
+  n+=`<circle class="nm" cx="${cx}" cy="${cy}" r="14"/><text x="${cx}" y="${cy+32}" text-anchor="middle" style="font-weight:650">Matriz</text>`;
+  return`<div class="grafo"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Grafo de la Matriz: cerebros y repositorios">${l}${n}</svg></div>`;
+}
+
+function filaRepo(r,conCerebro){
+  const e=r.registro?.[0], p=pend(r);
+  const det=[conCerebro?`<b>${esc(r.cerebro.nombre)}</b>`:"",
+    e?`${esc(e.titulo)}${e.agente?` · ${esc(e.agente)}`:""}`:(r.visibilidad==="privado"?"Privado: aquí solo se ve su fecha.":(r.leido?"Sin registro.":"Sin lectura en la última corrida.")),
+  ].filter(Boolean).join(" · ");
+  const sk=(r.skills||[]).map(s=>`<span class="chip">${esc(s.nombre)}</span>`).join("");
+  return`<div class="fila"><div class="nombre"><a href="${r.url}" target="_blank" rel="noopener">${esc(r.nombre)}</a>${sk?`<div class="chips">${sk}</div>`:""}</div>
+  <div class="det"><div>${det}</div>${p?`<div class="pend">Pendiente: ${esc(p)}</div>`:""}</div>
+  <div class="der"><span>${f(r.ultimo_cambio)}</span><span class="pill">${r.visibilidad}</span></div></div>`;
+}
+function filaTarea(t){
+  const mal=String(t.resultado||"").startsWith("falló"), bien=t.resultado==="bien";
+  return`<div class="fila"><div class="nombre" style="font-family:var(--sans);font-size:14px">${esc(t.nombre)}</div>
+  <div class="det">${esc(t.horario||"")}${t.repo?` · <span class="chip">${esc(t.repo)}</span>`:""}${mal?`<div class="pend" style="color:var(--mal)">${esc(t.resultado)}</div>`:""}</div>
+  <div class="der">${t.ultima_corrida?`<span>${f(t.ultima_corrida)}</span>`:""}${bien?'<span class="pill bien">bien</span>':mal?'<span class="pill mal">falló</span>':t.estado&&t.estado!=="activa"?`<span class="pill">${esc(t.estado)}</span>`:'<span class="pill">programada</span>'}</div></div>`;
+}
+const filtrar=rs=>!filtro?rs:rs.filter(r=>(r.nombre+" "+(r.resumen||"")+" "+(r.skills||[]).map(s=>s.nombre).join(" ")).toLowerCase().includes(filtro));
+
+function inicio(){
+  const rs=todos(), inv=D.inventario||{};
+  const fallas=(inv.tareas||[]).filter(t=>String(t.resultado||"").startsWith("falló"));
+  const sinLeer=rs.filter(r=>!r.leido), sinRepo=(inv.skills_instaladas||[]).filter(k=>!k.repo);
+  const feed=rs.flatMap(r=>(r.registro||[]).slice(0,3).map(e=>({...e,repo:r}))).sort((a,b)=>b.fecha.localeCompare(a.fecha)).slice(0,10);
+  const conPend=rs.filter(pend).sort((a,b)=>(b.ultimo_cambio||"").localeCompare(a.ultimo_cambio||""));
+  const alertas=[...fallas.map(t=>`<div><b>Falló</b> ${esc(t.nombre)} (${f(t.ultima_corrida)}): ${esc(t.resultado.replace(/^falló:?\s*/,""))}.</div>`),
+    ...(sinLeer.length?[`<div><b>Sin lectura</b> ${sinLeer.map(r=>esc(r.nombre)).join(", ")}.</div>`]:[]),
+    ...(sinRepo.length?[`<div><b>Sin repositorio</b> ${sinRepo.map(k=>esc(k.nombre)).join(", ")}.</div>`]:[])];
+  return`<div class="cab"><div><h1>Todo, en un lugar</h1><p class="sub">${rs.length} repositorios en ${D.cerebros.length} cerebros, ${(inv.tareas||[]).length} tareas programadas y ${(inv.skills_instaladas||[]).length} skills. Se actualiza solo cada día.</p></div>
+  <input class="buscar" id="buscar" type="search" placeholder="Buscar repositorio o skill" value="${esc(filtro)}" aria-label="Buscar"></div>
+  ${filtro?`<section><h2>Resultados</h2><div class="filas">${filtrar(rs).map(r=>filaRepo(r,true)).join("")||'<p class="vacio">Nada coincide.</p>'}</div></section>`:`
+  ${grafo()}
+  ${alertas.length?`<div class="atencion">${alertas.join("")}</div>`:""}
+  <div class="dos">
+    <section><h2>Lo último</h2><div class="filas">${feed.map(e=>`<div class="fila" style="grid-template-columns:1fr auto"><div class="det"><b>${esc(e.repo.nombre)}</b> · ${esc(e.titulo)}${e.agente?`<div>${esc(e.agente)}</div>`:""}</div><div class="der">${f(e.fecha)}</div></div>`).join("")}</div></section>
+    <section><h2>Pendientes</h2><div class="filas">${conPend.slice(0,8).map(r=>`<div class="fila" style="grid-template-columns:1fr"><div class="det"><a href="#${r.cerebro.id}"><b>${esc(r.nombre)}</b></a><div class="pend">${esc(pend(r))}</div></div></div>`).join("")||'<p class="vacio">Sin pendientes registrados.</p>'}</div></section>
+  </div>`}`;
+}
+
+function cerebro(c){
+  precargar(c.id);
+  const ts=tareas(c.id), ks=skills(c.id);
+  return`<div class="cab"><div><p class="meta">Cerebro · ${c.repos.length} repositorios</p><h1>${esc(c.nombre)}</h1><p class="sub">${esc(c.descripcion)}</p></div>
+  <div class="acciones"><button class="btn prim" data-copiar="${c.id}">Copiar contexto para una IA</button>
+  <a class="btn" href="https://github.com/${D.propietario}/MATRIZ/blob/main/contexto/${c.id}.CONTEXTO.md" target="_blank" rel="noopener">Abrir contexto</a></div></div>
+  <section><h2>Repositorios</h2><div class="filas">${c.repos.map(r=>filaRepo({...r,cerebro:c},false)).join("")}</div></section>
+  ${ts.length?`<section><h2>Tareas programadas</h2><div class="filas">${ts.map(filaTarea).join("")}</div></section>`:""}
+  ${ks.length?`<section><h2>Skills instaladas en Claude</h2><div class="filas">${ks.map(k=>`<div class="fila" style="grid-template-columns:1fr auto"><div class="nombre">${esc(k.nombre)}</div><div class="der">${k.repo?`<span class="chip">${esc(k.repo)}</span>`:'<span class="pill mal">sin repositorio</span>'}</div></div>`).join("")}</div></section>`:""}`;
+}
+
+function pintar(){
+  const id=(location.hash||"#inicio").slice(1), c=D.cerebros.find(x=>x.id===id);
+  navegacion(c?c.id:"inicio");
+  $("#main").innerHTML=c?cerebro(c):inicio();
+  document.title=c?`${c.nombre} · Matriz`:"Matriz";
+  const b=$("#buscar"); if(b){b.addEventListener("input",e=>{filtro=e.target.value.trim().toLowerCase();const pos=e.target.selectionStart;pintar();const nb=$("#buscar");nb.focus();nb.setSelectionRange(pos,pos)})}
+}
+document.addEventListener("click",e=>{
+  const g=e.target.closest("[data-ir]"); if(g){location.hash=g.dataset.ir;return}
+  const c=e.target.closest("[data-copiar]"); if(c){const t=contextos[c.dataset.copiar]; t?copiar(t):avisar("Un momento, sigue cargando…")}
+});
+document.addEventListener("keydown",e=>{const g=e.target.closest?.("[data-ir]");if(g&&(e.key==="Enter"||e.key===" ")){e.preventDefault();location.hash=g.dataset.ir}});
+window.addEventListener("hashchange",()=>{pintar();window.scrollTo(0,0)});
+fetch("matriz.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{D=d;pintar()}).catch(()=>{$("#main").innerHTML='<p class="vacio">No se pudo cargar la Matriz. Revisa tu conexión y recarga.</p>'});
+</script>
+</body>
+</html>

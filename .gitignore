@@ -13,3 +13,8 @@ __pycache__/
 # Notas propias de Emi: viven en su Mac y en Obsidian Sync (cifrado), nunca en este repositorio público.
 notas/*
 !notas/LEEME.md
+
+# Panel armado (se genera en cada publicación)
+dist/
+.wrangler/
+node_modules/
