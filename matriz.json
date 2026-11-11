@@ -461,6 +461,13 @@
           "registro": [
             {
               "fecha": "2026-11-11",
+              "titulo": "Skill 1.0.3 instalada en Claude",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "ninguno en la skill. Se registra que Muse reemplazó en claude.ai la versión 1.0.2 por la 1.0.3 (descargada de `main`), sin eliminar la anterior; queda una sola skill «x-viral», activada, con la descripción vigente. La app la muestra como «v2 · actual», su contador interno de reemplazos.",
+              "pendiente": "cierra el punto (b) de la entrada 1.0.3. Siguen (a) y (c)."
+            },
+            {
+              "fecha": "2026-11-11",
               "titulo": "x-viral 1.0.3: X bloquea el inicio de sesión; Emi publica, la IA entrega",
               "agente": "Claude Code (sesión en la nube)",
               "cambios": "el modo de trabajo pasa de «programar con aprobación» a «la IA entrega cada post aprobado listo para copiar y Emi lo publica o programa». Queda prohibido en `ia/REGLAS.md` intentar iniciar sesión en X. Ajustados la skill (regla 1, flujo, estado de la cuenta), `programacion.md` (modo vigente, formato de entrega, vía con navegador como no disponible), el plan (Emi revisa sus 24 posts y quita la protección desde su teléfono; métricas por captura), los encargos, `AGENTS.md`, `CLAUDE.md` y las instrucciones de proyecto. Puente con Vox Studio: ya está en `main` y atendió la petición (sección «Solo video» de su skill); se quitó `vox_ref` del perfil y se cerró `puente/PETICION-vox.md`. `docs/PROMPT-MUSE.md` queda cerrado con su resultado.",
@@ -883,5 +890,6 @@
         "repo": "rea-ingenieria-inversa"
       }
     ]
-  }
+  },
+  "por_clasificar": []
 }

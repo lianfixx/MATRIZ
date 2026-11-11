@@ -37,8 +37,8 @@ Skill para planear, redactar, revisar, entregar para publicar y medir las public
 
 Skills: `x-viral`
 
-Último registro: 11 nov 2026 · x-viral 1.0.3: X bloquea el inicio de sesión; Emi publica, la IA entrega · Agente: Claude Code (sesión en la nube)
-Pendiente: (a) Emi: revisar sus 24 posts y quitar la protección desde su teléfono; pasar la fecha exacta de «Se unió» y el número de seguidores; decidir Premium. (b) Volver a instalar en Claude la versión 1.0.3 de la skill (la instalada es la 1.0.2 y aún habla de programar desde box). (c) Primera semana el 16/11/2026.
+Último registro: 11 nov 2026 · Skill 1.0.3 instalada en Claude · Agente: Claude Code (sesión en la nube)
+Pendiente: cierra el punto (b) de la entrada 1.0.3. Siguen (a) y (c).
 
 ### HISTORIAS- (público)
 
