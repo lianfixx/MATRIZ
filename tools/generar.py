@@ -155,11 +155,20 @@ def localizar(nombre: str, repos_dir: Path | None, clonar: bool, propietario: st
     token = os.environ.get("MATRIZ_TOKEN", "")
     auth = f"x-access-token:{token}@" if token else ""
     destino = tmp / nombre
+    # cwd fuera de este repositorio: actions/checkout deja en su configuración local una cabecera
+    # con el token del workflow, que git aplicaría también a este clone y taparía MATRIZ_TOKEN.
     r = subprocess.run(
-        ["git", "clone", "--quiet", "--depth", "1", f"https://{auth}github.com/{propietario}/{nombre}", str(destino)],
-        capture_output=True, text=True,
+        ["git", "-c", "http.https://github.com/.extraheader=", "clone", "--quiet", "--depth", "1",
+         f"https://{auth}github.com/{propietario}/{nombre}", str(destino)],
+        capture_output=True, text=True, cwd=tmp,
     )
-    return destino if r.returncode == 0 else None
+    if r.returncode != 0:
+        motivo = (r.stderr.strip().splitlines() or ["sin mensaje"])[-1]
+        if token:
+            motivo = motivo.replace(token, "***")
+        print(f"No se pudo leer {nombre}: {motivo}", file=sys.stderr)
+        return None
+    return destino
 
 
 # ---------------------------------------------------------------- escritura

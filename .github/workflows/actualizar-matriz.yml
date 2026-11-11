@@ -26,6 +26,8 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: main # lo último de main, no el commit que disparó la corrida
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
         with:
           python-version: "3.12"
@@ -43,4 +45,5 @@ jobs:
           if git diff --cached --quiet; then echo "Sin cambios."; exit 0; fi
           git -c user.name="matriz-bot" -c user.email="matriz-bot@users.noreply.github.com" \
             commit -m "Matriz: actualización automática" -m "IA-Actor: GitHub Actions (tools/generar.py)"
-          git push
+          git pull --rebase --quiet origin main
+          git push origin HEAD:main
