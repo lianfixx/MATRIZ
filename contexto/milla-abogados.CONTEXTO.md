@@ -36,18 +36,18 @@ Pendiente: ninguno.
 
 ### buholegal-monitoreo (privado)
 
-https://github.com/lianfixx/buholegal-monitoreo · último cambio: 4 nov 2026
+https://github.com/lianfixx/buholegal-monitoreo · último cambio: sin dato
 
 Privado: pide acceso a Emi o usa un conector con sesión iniciada.
 
 ### impulso-libre (privado)
 
-https://github.com/lianfixx/impulso-libre · último cambio: 4 nov 2026
+https://github.com/lianfixx/impulso-libre · último cambio: sin dato
 
 Privado: pide acceso a Emi o usa un conector con sesión iniciada.
 
 ### meta-ads-client-onboarding (privado)
 
-https://github.com/lianfixx/meta-ads-client-onboarding · último cambio: 4 nov 2026
+https://github.com/lianfixx/meta-ads-client-onboarding · último cambio: sin dato
 
 Privado: pide acceso a Emi o usa un conector con sesión iniciada.

@@ -8,7 +8,7 @@ Parte de la [[MATRIZ]].
 
 ## Repositorios
 
-- [[PANEL-FIRMA|PANEL-FIRMA-]] · privado · 4 nov 2026
+- [[PANEL-FIRMA|PANEL-FIRMA-]] · privado · sin dato
 - [[mes|mes.]] · público · 24 oct 2026
 
 Para continuar con otra IA: [[productos.CONTEXTO]].

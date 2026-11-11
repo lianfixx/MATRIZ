@@ -10,8 +10,8 @@ Parte de la [[MATRIZ]].
 
 - [[millabogados|millabogados]] · público · 4 nov 2026
 - [[ASESORIAS-JURIDICAS|ASESORIAS-JURIDICAS-]] · público · 4 nov 2026 · 1 skill(s)
-- [[buholegal-monitoreo|buholegal-monitoreo]] · privado · 4 nov 2026
-- [[impulso-libre|impulso-libre]] · privado · 4 nov 2026
-- [[meta-ads-client-onboarding|meta-ads-client-onboarding]] · privado · 4 nov 2026
+- [[buholegal-monitoreo|buholegal-monitoreo]] · privado · sin dato
+- [[impulso-libre|impulso-libre]] · privado · sin dato
+- [[meta-ads-client-onboarding|meta-ads-client-onboarding]] · privado · sin dato
 
 Para continuar con otra IA: [[milla-abogados.CONTEXTO]].

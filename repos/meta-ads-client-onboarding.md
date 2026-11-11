@@ -2,8 +2,8 @@
 
 # meta-ads-client-onboarding
 
-Cerebro: [[milla-abogados|MILLA ABOGADOS]] · privado · último cambio: 4 nov 2026
+Cerebro: [[milla-abogados|MILLA ABOGADOS]] · privado · último cambio: sin dato
 
 [Abrir en GitHub](https://github.com/lianfixx/meta-ads-client-onboarding)
 
-Repositorio privado: aquí solo se publica su nombre y su fecha.
+Sin lectura en esta corrida (falta acceso o el token de la Matriz).
