@@ -60,4 +60,4 @@ Skills: `historias-studio`
 - `vox-studio` · `VIDEOS-IA-SKILL-MILLA`
 - `milla-video-studio` · `VIDEOS-IA-SKILL-MILLA`
 - `x-viral` · `X`
-- `video-vox` · sin repositorio
+- `video-vox` · `santmun/video-vox`

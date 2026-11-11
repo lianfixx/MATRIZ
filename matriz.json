@@ -616,7 +616,7 @@
     {
       "id": "herramientas",
       "nombre": "Herramientas",
-      "descripcion": "Piezas que sirven a todos los cerebros: estilo de Emi, selector de modelo y entorno de Cloudflare.",
+      "descripcion": "Piezas que sirven a todos los cerebros: estilo de Emi, selector de modelo, entorno de Cloudflare, computadora virtual (Simular Box) e ingeniería inversa.",
       "repos": [
         {
           "nombre": "estilo-emi",
@@ -650,6 +650,28 @@
           "skills": [],
           "protocolo": "",
           "registro": []
+        },
+        {
+          "nombre": "box-simular",
+          "url": "https://github.com/lianfixx/box-simular",
+          "visibilidad": "privado",
+          "leido": false,
+          "ultimo_cambio": "",
+          "resumen": "",
+          "skills": [],
+          "protocolo": "",
+          "registro": []
+        },
+        {
+          "nombre": "rea-ingenieria-inversa",
+          "url": "https://github.com/lianfixx/rea-ingenieria-inversa",
+          "visibilidad": "privado",
+          "leido": false,
+          "ultimo_cambio": "",
+          "resumen": "",
+          "skills": [],
+          "protocolo": "",
+          "registro": []
         }
       ]
     }
@@ -663,6 +685,13 @@
         "cerebro": "matriz",
         "repo": "MATRIZ",
         "horario": "Diario 06:17",
+        "estado": "activa"
+      },
+      {
+        "nombre": "Publicar panel (GitHub Actions → Cloudflare)",
+        "cerebro": "matriz",
+        "repo": "MATRIZ",
+        "horario": "Después de cada actualización",
         "estado": "activa"
       },
       {
@@ -816,7 +845,7 @@
       {
         "nombre": "video-vox",
         "cerebro": "contenido-y-video",
-        "repo": ""
+        "repo": "santmun/video-vox"
       },
       {
         "nombre": "pizarras-de-estudio",
@@ -846,12 +875,12 @@
       {
         "nombre": "box-simular",
         "cerebro": "herramientas",
-        "repo": ""
+        "repo": "box-simular"
       },
       {
         "nombre": "rea-ingenieria-inversa",
         "cerebro": "herramientas",
-        "repo": ""
+        "repo": "rea-ingenieria-inversa"
       }
     ]
   }

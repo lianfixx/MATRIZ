@@ -6,7 +6,7 @@ generado: "tools/generar.py · no editar a mano: se reescribe cada día"
 
 # Contexto para cualquier IA · Herramientas
 
-Soy Emi (Yohualli Emiliano García Milla). Este es el cerebro «Herramientas» de mi Matriz General (https://github.com/lianfixx/MATRIZ). Piezas que sirven a todos los cerebros: estilo de Emi, selector de modelo y entorno de Cloudflare.
+Soy Emi (Yohualli Emiliano García Milla). Este es el cerebro «Herramientas» de mi Matriz General (https://github.com/lianfixx/MATRIZ). Piezas que sirven a todos los cerebros: estilo de Emi, selector de modelo, entorno de Cloudflare, computadora virtual (Simular Box) e ingeniería inversa.
 
 ## Cómo trabajar
 
@@ -36,6 +36,18 @@ https://github.com/lianfixx/cloudfare · último cambio: 11 nov 2026
 
 Entorno para que Claude Code o Codex trabajen con Cloudflare a través del CLI oficial cf. Solo la conexión y las reglas; no incluye proyectos.
 
+### box-simular (privado)
+
+https://github.com/lianfixx/box-simular · último cambio: sin dato
+
+Privado: pide acceso a Emi o usa un conector con sesión iniciada.
+
+### rea-ingenieria-inversa (privado)
+
+https://github.com/lianfixx/rea-ingenieria-inversa · último cambio: sin dato
+
+Privado: pide acceso a Emi o usa un conector con sesión iniciada.
+
 ## Tareas programadas
 
 - Selector de modelos · aprendizaje semanal · Domingos 18:23 · repo `selector-modelos`
@@ -44,5 +56,5 @@ Entorno para que Claude Code o Codex trabajen con Cloudflare a través del CLI o
 
 - `estilo-emi` · `estilo-emi`
 - `selector-de-modelo` · `selector-modelos`
-- `box-simular` · sin repositorio
-- `rea-ingenieria-inversa` · sin repositorio
+- `box-simular` · `box-simular`
+- `rea-ingenieria-inversa` · `rea-ingenieria-inversa`
