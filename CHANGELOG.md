@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-11-11 · registro de la Matriz 0.4.0 (panel web en Cloudflare y dos skills con repositorio)
+
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: Emi, 11/11/2026: «1.- Sí» (crear repositorio para las skills sin respaldo) y «vamos con la fase 3» (panel en Cloudflare); dejar el iPhone para el final.
+- Cambios: el commit anterior («Matriz 0.4.0…») subió sin su entrada de registro porque un script de documentación falló antes de escribirla y los hooks de git no estaban activos en esta copia; `registro-ia.yml` lo marcó en rojo. Esta entrada lo registra y activa los hooks (`sh ia/instalar.sh`). Contenido de 0.4.0: `panel/index.html` es el panel (inicio con grafo, avisos, lo último y pendientes; una vista por cerebro con repositorios, tareas y skills; buscador; botón para copiar el contexto de un cerebro a cualquier IA; claro y oscuro; adaptado al iPhone). `tools/panel.py` arma `dist/` con el panel, `matriz.json`, `contexto/`, `llms.txt`, `robots.txt` y `_headers` (no indexar). `wrangler.jsonc` y el workflow `publicar-panel.yml` lo suben a Cloudflare Workers después de cada actualización; sin secretos termina en verde sin publicar. `box-simular` y `rea-ingenieria-inversa` se agregan al cerebro Herramientas como privados (sus repositorios están listos para subirse en cuanto existan en GitHub); `video-vox` apunta a su repositorio de origen, `santmun/video-vox`, sin cambios locales que respaldar. Guía en `docs/PANEL.md`; README y AGENTS lo mencionan.
+- Archivos: `panel/index.html`, `tools/panel.py`, `wrangler.jsonc`, `.github/workflows/publicar-panel.yml`, `docs/PANEL.md`, `matriz.config.json`, `inventario.json`, `.gitignore` (commit anterior); `README.md`, `AGENTS.md` y este registro (este commit).
+- Verificación: `python3 -m unittest discover -s tools -p 'test_*.py'` → aprobado; `python3 tools/panel.py` → 12 archivos; `wrangler deploy --dry-run` (4.154.0) → aprobado; panel en Chromium a 1280 px (claro y oscuro) y en iPhone 15 → sin desbordes ni errores de consola, búsqueda funciona; «Publicar panel» en GitHub → verde sin publicar (faltan los secretos); `registro-ia.yml` del commit anterior → falló por falta de registro, corregido aquí.
+- Pendiente: que Emi (o Muse) cree los repositorios `box-simular` y `rea-ingenieria-inversa`, los agregue al token «MATRIZ lectura» y guarde `CLOUDFLARE_API_TOKEN` y `CLOUDFLARE_ACCOUNT_ID`; luego, conector MCP, respaldo a Drive e iPhone.
+
 ## 2026-11-11 · Matriz 0.3.0: revisión semanal, tareas programadas, skills instaladas y perfil
 
 - Agente: Claude Code (sesión en la nube)

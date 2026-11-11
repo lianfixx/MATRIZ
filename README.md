@@ -20,6 +20,7 @@ El mapa de todo el trabajo de Emi: una **Matriz**, sus **Cerebros** y, debajo, l
 | [`revisiones/`](revisiones) | Informe de cada revisión semanal | Revisión semanal |
 | `tools/generar.py` | El generador | A mano |
 | `Repositorios.base`, `.obsidian/` | Tabla y configuración de Obsidian (grafo, estilo, complemento Git) | A mano |
+| `panel/`, `tools/panel.py`, `wrangler.jsonc` | Panel web en Cloudflare ([docs/PANEL.md](docs/PANEL.md)) | A mano |
 | `notas/` | Notas propias de Emi; no se suben a GitHub | Emi |
 | `AGENTS.md`, `ia/` | Protocolo común entre IA, igual que en los demás repositorios | A mano |
 
