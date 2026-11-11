@@ -1,0 +1,11 @@
+{
+  "autoPullOnBoot": true,
+  "autoPullInterval": 10,
+  "autoSaveInterval": 0,
+  "autoPushInterval": 0,
+  "disablePush": true,
+  "syncMethod": "merge",
+  "disablePopupsForNoChanges": true,
+  "showStatusBar": true,
+  "showBranchStatusBar": false
+}

@@ -1,0 +1,18 @@
+/* Matriz General · lectura sobria, monocroma, un solo acento (el naranja de Emi). */
+body {
+  --matriz-acento: #FF5A1F;
+  --file-line-width: 760px;
+  --h1-weight: 650;
+  --h2-weight: 600;
+  --link-decoration: underline;
+  --link-decoration-thickness: 1px;
+  --table-border-width: 0;
+  --table-header-weight: 600;
+}
+.theme-light { --link-color: #171717; --link-color-hover: var(--matriz-acento); }
+.theme-dark  { --link-color: #F5F5F4; --link-color-hover: var(--matriz-acento); }
+.markdown-rendered table { border-collapse: collapse; width: 100%; }
+.markdown-rendered th, .markdown-rendered td { border-bottom: 1px solid var(--background-modifier-border); padding: 8px 12px 8px 0; }
+.markdown-rendered th { color: var(--text-muted); font-size: 0.85em; }
+.markdown-rendered h1 { letter-spacing: -0.015em; }
+.metadata-container { --metadata-label-text-color: var(--text-faint); font-size: 0.9em; }

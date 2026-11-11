@@ -46,6 +46,11 @@ class Generar(unittest.TestCase):
     def test_readme(self):
         self.assertEqual(g.resumen_readme("# T\n\n| a |\n\nHola [mundo](http://x) y `más`.\n\nFin"), "Hola mundo y más.")
 
+    def test_yaml(self):
+        y = g.yaml({"a": 'dice "hola"', "n": 0, "vacio": "", "ultimo_cambio": "2026-11-11", "tags": ["x"]})
+        self.assertEqual(y, '---\na: "dice \\"hola\\""\nn: 0\nultimo_cambio: 2026-11-11\ntags:\n  - "x"\ngenerado: "' + g.GENERADO + '"\n---\n')
+        self.assertEqual(g.pendiente_real("Ninguno."), "")
+
     def test_validar(self):
         cfg = {"cerebros": [{"id": "a", "repos": ["r"]}, {"id": "b", "repos": ["r"]}], "privados": ["z"]}
         self.assertEqual(len(g.validar(cfg)), 2)
@@ -67,8 +72,19 @@ class Generar(unittest.TestCase):
             todo = "".join(p.read_text() for p in (t / "out").rglob("*") if p.is_file())
             self.assertNotIn("SECRETO-DEL-CLIENTE", todo)
             self.assertTrue((t / "out" / "repos" / "cerrado.md").exists())
-            self.assertIn("[[cerrado|cerrado.]]", (t / "out" / "cerebros" / "uno.md").read_text())
-            self.assertIn("`falta`", (t / "out" / "MATRIZ.md").read_text())
+            nota = (t / "out" / "cerebros" / "Uno.md").read_text()
+            self.assertIn("[[cerrado|cerrado.]]", nota)
+            self.assertTrue(nota.startswith("---\ntipo: \"cerebro\"\n"))
+            rabierto = (t / "out" / "repos" / "abierto.md").read_text()
+            self.assertIn('pendiente: "revisar con Emi."', rabierto)
+            self.assertIn('ultimo_agente: "Codex"', rabierto)
+            self.assertIn("[[Uno]]", rabierto)
+            rcerrado = (t / "out" / "repos" / "cerrado.md").read_text()
+            self.assertNotIn("skills:", rcerrado)
+            self.assertNotIn("pendiente:", rcerrado)
+            portada = (t / "out" / "MATRIZ.md").read_text()
+            self.assertIn("`falta`", portada)
+            self.assertNotIn("[[abierto", portada)  # la portada solo enlaza cerebros
             self.assertTrue((t / "out" / "bitacora" / "2026-11.md").exists())
             json.loads((t / "out" / "matriz.json").read_text())
 

@@ -1,0 +1,14 @@
+{
+  "userIgnoreFilters": [
+    "ia/",
+    "tools/"
+  ],
+  "newFileLocation": "folder",
+  "newFileFolderPath": "notas",
+  "attachmentFolderPath": "notas/adjuntos",
+  "alwaysUpdateLinks": false,
+  "showUnsupportedFiles": false,
+  "readableLineLength": true,
+  "propertiesInDocument": "hidden",
+  "showInlineTitle": false
+}

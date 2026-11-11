@@ -1,4 +1,15 @@
 __pycache__/
 *.pyc
 .DS_Store
+.trash/
+
+# Obsidian: se comparte la configuración (grafo, apariencia, ajustes del plugin Git);
+# no el estado de cada dispositivo ni el código de los complementos.
 .obsidian/workspace*.json
+.obsidian/community-plugins.json
+.obsidian/plugins/*/*
+!.obsidian/plugins/obsidian-git/data.json
+
+# Notas propias de Emi: viven en su Mac y en Obsidian Sync (cifrado), nunca en este repositorio público.
+notas/*
+!notas/LEEME.md

@@ -5,7 +5,7 @@ Lee `matriz.config.json` (cerebros y sus repositorios), abre cada repositorio y 
 
   MATRIZ.md                  portada
   matriz.json                los mismos datos, para el panel y el conector
-  cerebros/<id>.md           una nota por cerebro
+  cerebros/<Nombre>.md       una nota por cerebro
   repos/<nombre>.md          una nota por repositorio (nodos del grafo en Obsidian)
   contexto/<id>.CONTEXTO.md  un archivo por cerebro para pegar en cualquier IA
   bitacora/AAAA-MM.md        qué IA hizo qué, por día, en todos los repositorios
@@ -32,7 +32,7 @@ from pathlib import Path
 RAIZ = Path(__file__).resolve().parent.parent
 MESES = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"]
 ENTRADA = re.compile(r"^##\s+(\d{4}-\d{2}-\d{2})\s*[·\-–—:]?\s*(.*)$")
-AVISO = "<!-- Generado por tools/generar.py. No editar a mano: se reescribe solo. -->\n"
+GENERADO = "tools/generar.py · no editar a mano: se reescribe cada día"
 
 
 def fecha_corta(iso: str) -> str:
@@ -173,14 +173,47 @@ def localizar(nombre: str, repos_dir: Path | None, clonar: bool, propietario: st
 
 # ---------------------------------------------------------------- escritura
 
+def yaml(campos: dict) -> str:
+    """Propiedades de Obsidian (frontmatter YAML). Las cadenas van como JSON, que YAML acepta."""
+    L = ["---"]
+    for k, v in {**campos, "generado": GENERADO}.items():
+        if v in ("", None, []):
+            continue
+        if isinstance(v, list):
+            L.append(f"{k}:")
+            L += [f"  - {json.dumps(x, ensure_ascii=False)}" for x in v]
+        elif isinstance(v, (int, float)) or (k == "ultimo_cambio" or k == "actualizada"):
+            L.append(f"{k}: {v}")
+        else:
+            L.append(f"{k}: {json.dumps(v, ensure_ascii=False)}")
+    return "\n".join(L + ["---", ""])
+
+
+def pendiente_real(texto: str) -> str:
+    t = (texto or "").strip()
+    return "" if t.lower().rstrip(".") in ("", "ninguno", "ninguna", "no", "sin pendientes") else t
+
+
 def slug(nombre: str) -> str:
     """Nombre de nota seguro para Obsidian: sin punto ni guion finales."""
     return nombre.rstrip(".-") or nombre
 
 
 def nota_repo(r: dict, cerebro: dict) -> str:
-    L = [AVISO, f"# {r['nombre']}\n",
-         f"Cerebro: [[{cerebro['id']}|{cerebro['nombre']}]] · {r['visibilidad']} · último cambio: {fecha_corta(r['ultimo_cambio'])}\n",
+    ult = r["registro"][0] if r["registro"] else {}
+    props = {
+        "tipo": "repo",
+        "cerebro": cerebro["nombre"],
+        "visibilidad": r["visibilidad"],
+        "ultimo_cambio": r["ultimo_cambio"],
+        "skills": len(r["skills"]) if r["leido"] and not (r["visibilidad"] == "privado" and not r["resumen"]) else "",
+        "ultimo_agente": ult.get("agente", ""),
+        "pendiente": pendiente_real(ult.get("pendiente", "")),
+        "github": r["url"],
+        "tags": ["repo", "publico" if r["visibilidad"] == "público" else "privado"],
+    }
+    L = [yaml(props) , f"# {r['nombre']}\n",
+         f"Cerebro: [[{cerebro['nombre']}]] · {r['visibilidad']} · último cambio: {fecha_corta(r['ultimo_cambio'])}\n",
          f"[Abrir en GitHub]({r['url']})\n"]
     if not r["leido"]:
         L.append("Sin lectura en esta corrida (falta acceso o el token de la Matriz).\n")
@@ -196,24 +229,26 @@ def nota_repo(r: dict, cerebro: dict) -> str:
         L.append("## Últimos registros\n")
         for e in r["registro"][:5]:
             L.append(f"- {fecha_corta(e['fecha'])} · {e['titulo']} · Agente: {e['agente'] or 'no consta'}")
-        pend = r["registro"][0]["pendiente"]
-        if pend and pend.lower().rstrip(".") != "ninguno":
+        pend = pendiente_real(r["registro"][0]["pendiente"])
+        if pend:
             L.append(f"\n## Pendiente más reciente\n\n{pend}")
         L.append("")
     return "\n".join(L).rstrip() + "\n"
 
 
 def nota_cerebro(c: dict, repos: list[dict]) -> str:
-    L = [AVISO, f"# {c['nombre']}\n", c["descripcion"] + "\n", "Parte de la [[MATRIZ]].\n", "## Repositorios\n"]
+    props = {"tipo": "cerebro", "repos": len(repos),
+             "ultimo_cambio": max((r["ultimo_cambio"] for r in repos), default=""), "tags": ["cerebro"]}
+    L = [yaml(props) , f"# {c['nombre']}\n", c["descripcion"] + "\n", "Parte de la [[MATRIZ]].\n", "## Repositorios\n"]
     for r in repos:
         extra = f" · {len(r['skills'])} skill(s)" if r["skills"] else ""
         L.append(f"- [[{slug(r['nombre'])}|{r['nombre']}]] · {r['visibilidad']} · {fecha_corta(r['ultimo_cambio'])}{extra}")
-    L.append(f"\nPara continuar con otra IA: [[{c['id']}.CONTEXTO]].")
+    L.append(f"\nPara continuar con otra IA: [[{c['id']}.CONTEXTO|archivo de contexto]].")
     return "\n".join(L) + "\n"
 
 
 def contexto(c: dict, repos: list[dict], propietario: str) -> str:
-    L = [AVISO, f"# Contexto para cualquier IA · {c['nombre']}\n",
+    L = [yaml({"tipo": "contexto", "cerebro": c["nombre"]}), f"# Contexto para cualquier IA · {c['nombre']}\n",
          f"Soy Emi (Yohualli Emiliano García Milla). Este es el cerebro «{c['nombre']}» de mi Matriz General "
          f"(https://github.com/{propietario}/MATRIZ). {c['descripcion']}\n",
          "## Cómo trabajar\n",
@@ -247,17 +282,17 @@ def portada(cerebros: list[dict], por_cerebro: dict, hoy: str) -> str:
     recientes = sorted(
         ((e["fecha"], r["nombre"], e) for r in todos for e in r["registro"][:3]),
         key=lambda x: x[0], reverse=True)[:10]
-    L = [AVISO, "# Matriz General\n",
+    L = [yaml({"tipo": "matriz", "actualizada": hoy, "tags": ["matriz"]}) , "# Matriz General\n",
          f"{len(todos)} repositorios en {len(cerebros)} cerebros · actualizada el {fecha_corta(hoy)}.\n",
          "Si eres una IA: lee [AGENTS.md](AGENTS.md) y luego el archivo de `contexto/` del cerebro en el que vas a trabajar.\n",
          "## Cerebros\n", "| Cerebro | Repos | Último movimiento | Qué es |", "|---|---|---|---|"]
     for c in cerebros:
         rs = por_cerebro[c["id"]]
         ult = max((r["ultimo_cambio"] for r in rs), default="")
-        L.append(f"| [[{c['id']}\\|{c['nombre']}]] | {len(rs)} | {fecha_corta(ult)} | {c['descripcion']} |")
+        L.append(f"| [[{c['nombre']}]] | {len(rs)} | {fecha_corta(ult)} | {c['descripcion']} |")
     L.append("\n## Lo último que se hizo\n")
     for f, nombre, e in recientes:
-        L.append(f"- {fecha_corta(f)} · [[{slug(nombre)}|{nombre}]] · {e['titulo']} · Agente: {e['agente'] or 'no consta'}")
+        L.append(f"- {fecha_corta(f)} · **{nombre}** · {e['titulo']} · Agente: {e['agente'] or 'no consta'}")
     if not recientes:
         L.append("Sin registros leídos todavía.")
     sin = [r["nombre"] for r in todos if not r["leido"]]
@@ -277,7 +312,7 @@ def bitacoras(todos: list[dict]) -> dict[str, str]:
             por_mes.setdefault(e["fecha"][:7], []).append((e["fecha"], r["nombre"], e))
     salida = {}
     for mes, filas in por_mes.items():
-        L = [AVISO, f"# Bitácora {MESES[int(mes[5:]) - 1]} {mes[:4]}\n",
+        L = [yaml({"tipo": "bitacora"}), f"# Bitácora {MESES[int(mes[5:]) - 1]} {mes[:4]}\n",
              "Lo que registró cada IA en los `CHANGELOG.md` leídos (las entradas más recientes de cada repositorio).\n"]
         dia = ""
         for f, nombre, e in sorted(filas, key=lambda x: (x[0], x[1]), reverse=True):
@@ -323,7 +358,7 @@ def generar(cfg: dict, salida: Path, repos_dir: Path | None, clonar: bool, hoy: 
     for c in cfg["cerebros"]:
         rs = por_cerebro[c["id"]]
         todos += rs
-        escribir(salida / "cerebros" / f"{c['id']}.md", nota_cerebro(c, rs))
+        escribir(salida / "cerebros" / f"{c['nombre']}.md", nota_cerebro(c, rs))
         escribir(salida / "contexto" / f"{c['id']}.CONTEXTO.md", contexto(c, rs, prop))
         for r in rs:
             escribir(salida / "repos" / f"{slug(r['nombre'])}.md", nota_repo(r, c))

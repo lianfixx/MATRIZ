@@ -16,6 +16,8 @@ El mapa de todo el trabajo de Emi: una **Matriz**, sus **Cerebros** y, debajo, l
 | `matriz.json` | Los mismos datos, para el panel y el conector | Generador |
 | [`matriz.config.json`](matriz.config.json) | Qué cerebros existen y qué repositorio va en cuál | A mano |
 | `tools/generar.py` | El generador | A mano |
+| `Repositorios.base`, `.obsidian/` | Tabla y configuración de Obsidian (grafo, estilo, complemento Git) | A mano |
+| `notas/` | Notas propias de Emi; no se suben a GitHub | Emi |
 | `AGENTS.md`, `ia/` | Protocolo común entre IA, igual que en los demás repositorios | A mano |
 
 ## Cómo se actualiza
@@ -30,9 +32,11 @@ En una computadora, con los repositorios clonados en una misma carpeta:
 python3 tools/generar.py --repos-dir ..
 ```
 
-## Verla como grafo
+## Verla en Obsidian
 
-Las notas usan `[[enlaces]]`. Al abrir esta carpeta como bóveda en Obsidian, la vista de grafo muestra la Matriz en el centro, los cerebros alrededor y los repositorios colgando de cada uno.
+Esta carpeta ya es una bóveda de Obsidian configurada: grafo con la Matriz al centro, los cerebros alrededor y los repositorios colgando de cada uno; la tabla `Repositorios.base` con tres vistas; y un estilo sobrio en claro y oscuro. Pasos para la Mac y el iPhone: **[docs/OBSIDIAN.md](docs/OBSIDIAN.md)**.
+
+`notas/` es para notas propias y no se sube a GitHub.
 
 ## Privacidad
 

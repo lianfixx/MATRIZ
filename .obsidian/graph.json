@@ -1,0 +1,25 @@
+{
+  "collapse-filter": true,
+  "search": "-path:contexto -path:bitacora -path:notas -path:docs -file:AGENTS -file:CLAUDE -file:GEMINI -file:README -file:CHANGELOG",
+  "showTags": false,
+  "showAttachments": false,
+  "hideUnresolved": true,
+  "showOrphans": false,
+  "collapse-color-groups": true,
+  "colorGroups": [
+    { "query": "file:MATRIZ", "color": { "a": 1, "rgb": 16734751 } },
+    { "query": "path:cerebros", "color": { "a": 1, "rgb": 7302029 } }
+  ],
+  "collapse-display": true,
+  "showArrow": false,
+  "textFadeMultiplier": -0.4,
+  "nodeSizeMultiplier": 1.25,
+  "lineSizeMultiplier": 0.8,
+  "collapse-forces": true,
+  "centerStrength": 0.5,
+  "repelStrength": 12,
+  "linkStrength": 1,
+  "linkDistance": 140,
+  "scale": 1,
+  "close": false
+}

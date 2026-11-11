@@ -1,0 +1,53 @@
+filters:
+  and:
+    - 'tipo == "repo"'
+properties:
+  note.cerebro:
+    displayName: "Cerebro"
+  note.visibilidad:
+    displayName: "Visibilidad"
+  note.ultimo_cambio:
+    displayName: "Último cambio"
+  note.skills:
+    displayName: "Skills"
+  note.ultimo_agente:
+    displayName: "Última IA"
+  note.pendiente:
+    displayName: "Pendiente"
+  file.name:
+    displayName: "Repositorio"
+views:
+  - type: table
+    name: "Por cerebro"
+    groupBy:
+      property: cerebro
+      direction: ASC
+    sort:
+      - property: ultimo_cambio
+        direction: DESC
+    order:
+      - file.name
+      - visibilidad
+      - ultimo_cambio
+      - skills
+      - ultimo_agente
+  - type: table
+    name: "Lo más reciente"
+    sort:
+      - property: ultimo_cambio
+        direction: DESC
+    order:
+      - file.name
+      - cerebro
+      - ultimo_cambio
+      - ultimo_agente
+  - type: table
+    name: "Con pendiente"
+    filters: '!pendiente.isEmpty()'
+    sort:
+      - property: ultimo_cambio
+        direction: DESC
+    order:
+      - file.name
+      - cerebro
+      - pendiente

@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-11-11 · Matriz 0.2.0: bóveda de Obsidian lista para la Mac y el iPhone
+
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: Emi, 11/11/2026: «por favor», a la propuesta de preparar la Fase 2 (abrir la Matriz como grafo en Obsidian en la Mac). Antes confirmó Obsidian también en el iPhone.
+- Cambios: el repositorio queda como bóveda de Obsidian configurada. `.obsidian/` trae el grafo (filtrado a Matriz → cerebros → repositorios, Matriz en naranja y cerebros en morado), la apariencia con el fragmento `matriz.css`, las carpetas ocultas `ia/` y `tools/`, la carpeta de notas nuevas `notas/` y los ajustes del complemento Git (traer al abrir y cada 10 minutos, nunca subir). `Repositorios.base` muestra los 20 repositorios en tres vistas. El generador escribe propiedades de Obsidian en cada nota (tipo, cerebro, visibilidad, último cambio, skills, última IA, pendiente), nombra las notas de cerebro con su nombre visible, pone el aviso de «generado» como propiedad y deja de enlazar repositorios desde la portada para que el grafo conserve su jerarquía. `notas/` queda fuera de git. Guía paso a paso en `docs/OBSIDIAN.md`.
+- Archivos: `tools/generar.py`, `tools/test_generar.py`, `.obsidian/app.json`, `.obsidian/appearance.json`, `.obsidian/graph.json`, `.obsidian/snippets/matriz.css`, `.obsidian/plugins/obsidian-git/data.json`, `Repositorios.base`, `notas/LEEME.md`, `docs/OBSIDIAN.md`, `.gitignore`, `README.md`, `AGENTS.md` y este registro.
+- Verificación: `python3 -m unittest discover -s tools -p 'test_*.py'` → aprobado; `python3 ia/test_guard.py` → aprobado; la bóveda abierta en Obsidian 1.15.0 para Linux (sin cuenta, en la sesión) → 47 notas, sin enlaces rotos salvo los de carpetas en `README.md`, grafo con la jerarquía esperada, `Repositorios.base` sin errores con sus 20 filas, propiedades ocultas y fragmento CSS activo; Mac, iPhone y Obsidian Sync → no ejecutado (no hay acceso desde la sesión).
+- Pendiente: que Emi siga `docs/OBSIDIAN.md` en su Mac y contrate Obsidian Sync para el iPhone; fases siguientes: panel en Cloudflare, conector MCP, revisión semanal (con aviso de vencimiento del token el 9/02/2027) y respaldo a Drive.
+
 ## 2026-11-11 · diagnóstico del secreto MATRIZ_TOKEN
 
 - Agente: Claude Code (sesión en la nube)
