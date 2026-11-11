@@ -1,0 +1,53 @@
+{
+  "_doc": "Mapa de la Matriz General. Lo único que se edita a mano: qué cerebros existen y qué repositorio pertenece a cuál. Todo lo demás lo genera tools/generar.py.",
+  "propietario": "lianfixx",
+  "detalle_privados": false,
+  "cerebros": [
+    {
+      "id": "castorena",
+      "nombre": "Castorena",
+      "descripcion": "Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP, escritos y monitor del DOF.",
+      "repos": ["Cerebro-Castorena-", "INDEP", "Escritos-juridicos-CASTORENA", "dof-juridico-monitor"]
+    },
+    {
+      "id": "milla-abogados",
+      "nombre": "MILLA ABOGADOS",
+      "descripcion": "El despacho de Emi: sitio, asesorías, monitoreo de expedientes, captación e Impulso Libre.",
+      "repos": ["millabogados", "ASESORIAS-JURIDICAS-", "buholegal-monitoreo", "impulso-libre", "meta-ads-client-onboarding"]
+    },
+    {
+      "id": "accion-tlalnepantla",
+      "nombre": "Acción Tlalnepantla",
+      "descripcion": "Acción Política Juvenil Tlalnepantla (PAN): sitio, formatos, eventos y materiales.",
+      "repos": ["ACCION-TLALNEPANTLA-"]
+    },
+    {
+      "id": "contenido-y-video",
+      "nombre": "Contenido y video",
+      "descripcion": "Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio, X e historias de Instagram.",
+      "repos": ["VIDEOS-IA-SKILL-MILLA", "X", "HISTORIAS-"]
+    },
+    {
+      "id": "estudio",
+      "nombre": "Estudio",
+      "descripcion": "Maestría en Alta Dirección y pizarras de estudio.",
+      "repos": ["maestria-alta-direccion", "ESTUDIO-TEMAS"]
+    },
+    {
+      "id": "productos",
+      "nombre": "Productos",
+      "descripcion": "Productos propios de Emi: PANEL FIRMA (gestión jurídica) y Mes (finanzas personales).",
+      "repos": ["PANEL-FIRMA-", "mes."]
+    },
+    {
+      "id": "herramientas",
+      "nombre": "Herramientas",
+      "descripcion": "Piezas que sirven a todos los cerebros: estilo de Emi, selector de modelo y entorno de Cloudflare.",
+      "repos": ["estilo-emi", "selector-modelos", "cloudfare"]
+    }
+  ],
+  "privados": [
+    "INDEP", "estilo-emi", "selector-modelos", "maestria-alta-direccion",
+    "impulso-libre", "buholegal-monitoreo", "PANEL-FIRMA-", "meta-ads-client-onboarding"
+  ]
+}

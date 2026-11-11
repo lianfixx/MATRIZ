@@ -1,0 +1,6 @@
+# Cambios a las reglas comunes entre IA y a los workflows requieren revisión de Emi
+# (efectivo si la protección de rama exige revisión de propietarios del código).
+/ia/ @lianfixx
+/.github/ @lianfixx
+/.claude/settings.json @lianfixx
+/AGENTS.md @lianfixx

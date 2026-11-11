@@ -1,0 +1,5 @@
+#!/bin/sh
+# Reglas comunes para cualquier IA o persona (ver ia/PROTOCOLO.md).
+root=$(git rev-parse --show-toplevel) || exit 1
+command -v python3 >/dev/null 2>&1 || { echo "ia: falta python3; no se pudieron revisar las reglas" >&2; exit 1; }
+exec python3 "$root/ia/verificar.py" prepush

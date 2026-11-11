@@ -1,0 +1,646 @@
+{
+  "actualizada": "2026-11-11",
+  "propietario": "lianfixx",
+  "cerebros": [
+    {
+      "id": "castorena",
+      "nombre": "Castorena",
+      "descripcion": "Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP, escritos y monitor del DOF.",
+      "repos": [
+        {
+          "nombre": "Cerebro-Castorena-",
+          "url": "https://github.com/lianfixx/Cerebro-Castorena-",
+          "visibilidad": "público",
+          "leido": true,
+          "ultimo_cambio": "2026-11-11",
+          "resumen": "Matriz documental de Emi para Castorena Abogados. Aquí están las cinco tablas de referencia, las versiones recuperadas, las reglas de trabajo y los pendientes.",
+          "skills": [
+            {
+              "nombre": "matriz-castorena",
+              "ruta": "cerebro/skill/SKILL.md"
+            }
+          ],
+          "protocolo": "1.1.0",
+          "registro": [
+            {
+              "fecha": "2026-11-10",
+              "titulo": "Cierre diario programado: maestro INDEP v22 copiado",
+              "agente": "Claude Code (ejecución programada)",
+              "cambios": "entrega 45 de INDEP (boletín 195) verificada con manifiesto.py (11 archivos) y comparar_excel.py --base (45 folios, 44 turnos); respecto de v21 cambian 6 celdas permitidas de Junta Especial 2 (folios 80140 y 80921). Maestro v22 copiado byte a byte a `fuentes/indep/211251b0cfcc_…xlsx`; `HISTORIAL.json` (versión nueva y entregas 43 a 45), `MATRIZ.json` (INDEP apunta a v22), `SINCRONIZACION.json`, `ESTADO.json` y cierre `cerebro/cierres/2026-11-10_1858.json`. La v21 se conserva. Concentrado de Drive sin cambio en metadatos.",
+              "pendiente": "subir v22 a Drive, Escritorio e iCloud (la ejecución programada no pudo escribir en Drive ni alcanza la Mac); ACTUAL.json de INDEP sigue en la entrega 18."
+            },
+            {
+              "fecha": "2026-11-09",
+              "titulo": "Cierre diario programado (sin cambios de tablas)",
+              "agente": "Claude Code (ejecución programada)",
+              "cambios": "cierre cerebro/cierres/2026-11-09_1844.json; ESTADO.json. INDEP entrega 44 (cotejo boletín 194) verificada con manifiesto.py y comparar_excel.py --base: mismo maestro 6504026c7fa9, sin copia nueva. Concentrado de Drive sin cambio en metadatos.",
+              "pendiente": "ACTUAL.json de INDEP aún señala la entrega 18; carpeta «INDEP ASUNTO ESTUDIO LIC» sin incorporar."
+            },
+            {
+              "fecha": "2026-11-09",
+              "titulo": "Cotejo Grupo Liverpool reemplazado en Drive (anotación del 27969)",
+              "agente": "Muse (Muse Spark)",
+              "cambios": "anterior (1reRFm5xQEh2rkK66Rp2HjGOziaQRf2sk) movido a la subcarpeta «Anteriores» y renombrado «Cotejo Grupo Liverpool (antes de la nota del 27969, 09-11-2026).numbers»; nueva versión subida a la carpeta Drive con su nombre fijo, sin conversión; SINCRONIZACION.json (drive_file_id de cotejo_liverpool; Drive → sincronizado, sin motivo); cierre cerebro/cierres/2026-11-09_1632.json; ESTADO.json actualizado.",
+              "pendiente": "diferencia 50/51 del Cotejo Liverpool; nota del ID 12 del Concentrado; vigencia de los folios TFJA."
+            },
+            {
+              "fecha": "2026-11-09",
+              "titulo": "Cotejo Grupo Liverpool: anotación del 27969/22-17-02-5",
+              "agente": "Claude Code (claude-opus-5-5, sesión con Emi y Mac enlazada)",
+              "cambios": "comentario en Numbers en Cotejo 2!A45, VIVOS!A10 y PERDIDOS!A8: «Marcado como vivo y como perdido en el cotejo físico. Por instrucción de Emi (09/11/2026) se conserva en VIVOS y en PERDIDOS hasta confirmar su estado.». Valores sin cambio. Nueva versión `cotejo_liverpool-531091b888bb` (662 565 B); la anterior `cotejo_liverpool-55e9e955536e` queda como histórica. Escritorio (anterior en «2 · Anteriores») e iCloud (anterior en «Anteriores/») actualizados. LÉEME actualizado y verificado en Escritorio, iCloud y Drive (754423798bed).",
+              "pendiente": "reemplazo en Drive (Muse)."
+            },
+            {
+              "fecha": "2026-11-09",
+              "titulo": "séptima tabla en Drive y sincronización completa",
+              "agente": "Muse (Muse Spark)",
+              "cambios": "«Cotejo acuses INDEP.xlsx» subido a la carpeta Drive 1UE-tJN2QV1X3eRGokx1pB0PMOW9YKn_z con su nombre fijo, sin conversión; SINCRONIZACION.json (drive_file_id de cotejo_acuses_indep; Drive → sincronizado, sin motivo); cierre cerebro/cierres/2026-11-09_1618.json; ESTADO.json actualizado.",
+              "pendiente": "diferencia 50/51 del Cotejo Liverpool; nota del ID 12 del Concentrado; vigencia de los folios TFJA."
+            },
+            {
+              "fecha": "2026-11-09",
+              "titulo": "séptima familia (Cotejo acuses INDEP) y decisión de permisos de Drive",
+              "agente": "Claude Code (claude-opus-5-5, sesión con Emi y Mac enlazada)",
+              "cambios": "familia `cotejo_acuses_indep` (d1c7da599e51, 19 925 B) en `MATRIZ.json`, `HISTORIAL.json`, validador, skill 1.5.0, familias, AGENTS, README, CLAUDE, CONTINUIDAD y TAREA_PROGRAMADA; `SINCRONIZACION.json` con la séptima tabla, la decisión de permisos y el nuevo LÉEME; la diferencia de Liverpool queda identificada (27969/22-17-02-5 marcado vivo y perdido). Escritorio e iCloud con la tabla y el LÉEME nuevos; Drive con el LÉEME nuevo (el anterior en «Anteriores»).",
+              "pendiente": "subir «Cotejo acuses INDEP.xlsx» a Drive (Muse); respuesta de Emi sobre el 27969/22-17-02-5."
+            },
+            {
+              "fecha": "2026-11-09",
+              "titulo": "Drive sincronizado y verificado",
+              "agente": "Claude Code (claude-opus-5-5, sesión con Emi y Mac enlazada)",
+              "cambios": "revisión independiente de la subida de Muse (commit d69fbee): los seis archivos vigentes se descargaron de Drive y coinciden byte a byte con `cerebro/fuentes`; se añadieron el LÉEME (pendiente en el cierre de Muse) y la subcarpeta «Anteriores»; `SINCRONIZACION.json` registra los IDs de Drive y el destino Drive como sincronizado. Se observó que la carpeta hereda acceso «cualquier persona con el enlace puede ver»; no se cambiaron permisos.",
+              "pendiente": "decisión de Emi sobre el acceso por enlace; Cotejo acuses INDEP; diferencia 50/51 de Liverpool."
+            },
+            {
+              "fecha": "2026-11-09",
+              "titulo": "tablas vigentes subidas a Drive y verificadas",
+              "agente": "Muse (Muse Spark)",
+              "cambios": "las 6 tablas vigentes subidas a la carpeta Drive 1UE-tJN2QV1X3eRGokx1pB0PMOW9YKn_z con sus nombres fijos, sin conversión; SINCRONIZACION.json (Drive → sincronizado); cierre cerebro/cierres/2026-11-09_1509.json; ESTADO.json actualizado. El LÉEME no está en GitHub y queda pendiente.",
+              "pendiente": "subir el LÉEME a Drive; integrar «Cotejo acuses INDEP 2026-10-15» como séptima tabla (Emi aprobó el 09/11/2026; falta el archivo, no está en GitHub); diferencia 50/51 del Cotejo Liverpool."
+            }
+          ]
+        },
+        {
+          "nombre": "INDEP",
+          "url": "https://github.com/lianfixx/INDEP",
+          "visibilidad": "privado",
+          "leido": false,
+          "ultimo_cambio": "",
+          "resumen": "",
+          "skills": [],
+          "protocolo": "",
+          "registro": []
+        },
+        {
+          "nombre": "Escritos-juridicos-CASTORENA",
+          "url": "https://github.com/lianfixx/Escritos-juridicos-CASTORENA",
+          "visibilidad": "público",
+          "leido": true,
+          "ultimo_cambio": "2026-11-04",
+          "resumen": "",
+          "skills": [
+            {
+              "nombre": "escritos-juridicos-castorena",
+              "ruta": "SKILL.md"
+            }
+          ],
+          "protocolo": "1.1.0",
+          "registro": [
+            {
+              "fecha": "2026-11-04",
+              "titulo": "corrección: puentes de skill con YAML válido",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "los puentes `.claude/skills/` y `.agents/skills/` copiaban la descripción sin comillas; si contenía «: » el YAML quedaba inválido (afectaba a tareas-maestria y meta-ads-client-onboarding). Ahora va entre comillas, `ia/check_skill.py` rechaza valores que rompan el YAML y el control previo al commit revisa también los puentes.",
+              "pendiente": "ninguno."
+            },
+            {
+              "fecha": "2026-11-04",
+              "titulo": "corrección: flag de push mal formado",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "la regla que prohíbe forzar el push no atrapaba flags cortos mal formados que contienen `f` o `d` (por ejemplo `-f-never`); el patrón ahora es `-(?!-)\\S*[fd]\\S*`. Se añadió el caso a las pruebas. Ese push concreto (rama de mes.) fue de avance lineal y no borró historial.",
+              "pendiente": "ninguno."
+            },
+            {
+              "fecha": "2026-11-04",
+              "titulo": "frenos de git también para Codex, ChatGPT y Gemini",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "`python3 ia/verificar.py inicio`, que `AGENTS.md` pide ejecutar a cualquier IA al empezar, ahora también activa los hooks de git si faltan (antes solo lo hacía el hook de Claude Code). Así Codex, ChatGPT con terminal y Gemini CLI quedan con los mismos frenos de commit y push. `AGENTS.md` e `ia/INSTRUCCIONES_PROYECTO.md` lo indican.",
+              "pendiente": "ninguno."
+            },
+            {
+              "fecha": "2026-11-04",
+              "titulo": "arranque común entre IA (protocolo 1.1.0)",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "`python3 ia/verificar.py inicio` resume al empezar rama, último commit y su IA, reglas, registro vigente y hooks de git; en Claude Code corre solo con un hook `SessionStart` y activa los hooks de git si faltan. `ia/PROTOCOLO.md` pasa a 1.1.0; `AGENTS.md`, `GEMINI.md` e `ia/INSTRUCCIONES_PROYECTO.md` indican el comando a las demás IA.",
+              "pendiente": "ninguno."
+            },
+            {
+              "fecha": "2026-11-04",
+              "titulo": "1.1.1 · registro obligatorio y trabajo entre IA",
+              "agente": "Claude Code (sesión en la nube; modelo según la sesión)",
+              "cambios": "capa común `ia/` (protocolo común 1.0.0 basado en el de Mes, `REGLAS.md` generadas de `politica.json`, frenos para Claude Code, hooks de git para cualquier IA, workflow `registro-ia.yml`, `INSTRUCCIONES_PROYECTO.md` para ChatGPT y Gemini, plantillas de petición y entrega); `GEMINI.md`; sección «Trabajo entre IA» en `AGENTS.md`; `.claude/settings.json` apunta a `ia/guard.py` (se retira `.claude/hooks/`); auditoría en `ia/AUDITORIA_2026-11-04.md`. Skill 1.1.1: sección «Registro y continuidad entre IA» y nota de portabilidad en `references/claude-code.md`; el método no cambia.",
+              "pendiente": "activar los hooks de git en cada copia (`sh ia/instalar.sh`); opcionalmente exigir el check `registro-ia` con protección de rama en GitHub."
+            }
+          ]
+        },
+        {
+          "nombre": "dof-juridico-monitor",
+          "url": "https://github.com/lianfixx/dof-juridico-monitor",
+          "visibilidad": "público",
+          "leido": true,
+          "ultimo_cambio": "2026-11-09",
+          "resumen": "Sistema autónomo, auditable y agnóstico de proveedor para revisar el Diario Oficial de la Federación (DOF), verificar cobertura, detectar novedades jurídicas relevantes y producir entregables ejecutivos y de estudio.",
+          "skills": [
+            {
+              "nombre": "dof-castorena",
+              "ruta": "SKILL.md"
+            }
+          ],
+          "protocolo": "1.1.0",
+          "registro": []
+        }
+      ]
+    },
+    {
+      "id": "milla-abogados",
+      "nombre": "MILLA ABOGADOS",
+      "descripcion": "El despacho de Emi: sitio, asesorías, monitoreo de expedientes, captación e Impulso Libre.",
+      "repos": [
+        {
+          "nombre": "millabogados",
+          "url": "https://github.com/lianfixx/millabogados",
+          "visibilidad": "público",
+          "leido": true,
+          "ultimo_cambio": "2026-11-04",
+          "resumen": "Repositorio completo del sitio web. Preparado para que cualquier IA (Claude, Codex, Cursor, Copilot) pueda retomar el desarrollo. Lee CLAUDEGUIDE.md si vienes de Claude o Anthropic.",
+          "skills": [],
+          "protocolo": "1.1.0",
+          "registro": [
+            {
+              "fecha": "2026-11-04",
+              "titulo": "corrección: puentes de skill con YAML válido",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "los puentes `.claude/skills/` y `.agents/skills/` copiaban la descripción sin comillas; si contenía «: » el YAML quedaba inválido (afectaba a tareas-maestria y meta-ads-client-onboarding). Ahora va entre comillas, `ia/check_skill.py` rechaza valores que rompan el YAML y el control previo al commit revisa también los puentes.",
+              "pendiente": "ninguno."
+            },
+            {
+              "fecha": "2026-11-04",
+              "titulo": "corrección: flag de push mal formado",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "la regla que prohíbe forzar el push no atrapaba flags cortos mal formados que contienen `f` o `d` (por ejemplo `-f-never`); el patrón ahora es `-(?!-)\\S*[fd]\\S*`. Se añadió el caso a las pruebas. Ese push concreto (rama de mes.) fue de avance lineal y no borró historial.",
+              "pendiente": "ninguno."
+            },
+            {
+              "fecha": "2026-11-04",
+              "titulo": "frenos de git también para Codex, ChatGPT y Gemini",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "`python3 ia/verificar.py inicio`, que `AGENTS.md` pide ejecutar a cualquier IA al empezar, ahora también activa los hooks de git si faltan (antes solo lo hacía el hook de Claude Code). Así Codex, ChatGPT con terminal y Gemini CLI quedan con los mismos frenos de commit y push. `AGENTS.md` e `ia/INSTRUCCIONES_PROYECTO.md` lo indican.",
+              "pendiente": "ninguno."
+            },
+            {
+              "fecha": "2026-11-04",
+              "titulo": "arranque común entre IA (protocolo 1.1.0)",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "`python3 ia/verificar.py inicio` resume al empezar rama, último commit y su IA, reglas, registro vigente y hooks de git; en Claude Code corre solo con un hook `SessionStart` y activa los hooks de git si faltan. `ia/PROTOCOLO.md` pasa a 1.1.0; `AGENTS.md`, `GEMINI.md` e `ia/INSTRUCCIONES_PROYECTO.md` indican el comando a las demás IA.",
+              "pendiente": "ninguno."
+            },
+            {
+              "fecha": "2026-11-04",
+              "titulo": "registro obligatorio y trabajo entre IA",
+              "agente": "Claude Code (sesión en la nube; modelo según la sesión)",
+              "cambios": "capa común `ia/` (protocolo común 1.0.0 basado en el de Mes, `REGLAS.md` generadas de `politica.json`, frenos para Claude Code, hooks de git para cualquier IA, workflow `registro-ia.yml`, `INSTRUCCIONES_PROYECTO.md` para ChatGPT y Gemini, plantillas de petición y entrega); `GEMINI.md`; sección «Trabajo entre IA» en `AGENTS.md`; `.claude/settings.json` apunta a `ia/guard.py` (se retira `.claude/hooks/`); auditoría en `ia/AUDITORIA_2026-11-04.md`. Sin skill: solo la capa común; el producto no cambia.",
+              "pendiente": "activar los hooks de git en cada copia (`sh ia/instalar.sh`); opcionalmente exigir el check `registro-ia` con protección de rama en GitHub."
+            }
+          ]
+        },
+        {
+          "nombre": "ASESORIAS-JURIDICAS-",
+          "url": "https://github.com/lianfixx/ASESORIAS-JURIDICAS-",
+          "visibilidad": "público",
+          "leido": true,
+          "ultimo_cambio": "2026-11-04",
+          "resumen": "Edición 0.4.1 · licencia propietaria · piloto supervisado · México",
+          "skills": [
+            {
+              "nombre": "milla-asesoria-juridica",
+              "ruta": "skills/milla-asesoria-juridica/SKILL.md"
+            }
+          ],
+          "protocolo": "1.1.0",
+          "registro": [
+            {
+              "fecha": "2026-11-04",
+              "titulo": "corrección: puentes de skill con YAML válido",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "los puentes `.claude/skills/` y `.agents/skills/` copiaban la descripción sin comillas; si contenía «: » el YAML quedaba inválido (afectaba a tareas-maestria y meta-ads-client-onboarding). Ahora va entre comillas, `ia/check_skill.py` rechaza valores que rompan el YAML y el control previo al commit revisa también los puentes.",
+              "pendiente": "ninguno."
+            },
+            {
+              "fecha": "2026-11-04",
+              "titulo": "corrección: flag de push mal formado",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "la regla que prohíbe forzar el push no atrapaba flags cortos mal formados que contienen `f` o `d` (por ejemplo `-f-never`); el patrón ahora es `-(?!-)\\S*[fd]\\S*`. Se añadió el caso a las pruebas. Ese push concreto (rama de mes.) fue de avance lineal y no borró historial.",
+              "pendiente": "ninguno."
+            },
+            {
+              "fecha": "2026-11-04",
+              "titulo": "frenos de git también para Codex, ChatGPT y Gemini",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "`python3 ia/verificar.py inicio`, que `AGENTS.md` pide ejecutar a cualquier IA al empezar, ahora también activa los hooks de git si faltan (antes solo lo hacía el hook de Claude Code). Así Codex, ChatGPT con terminal y Gemini CLI quedan con los mismos frenos de commit y push. `AGENTS.md` e `ia/INSTRUCCIONES_PROYECTO.md` lo indican.",
+              "pendiente": "ninguno."
+            },
+            {
+              "fecha": "2026-11-04",
+              "titulo": "arranque común entre IA (protocolo 1.1.0)",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "`python3 ia/verificar.py inicio` resume al empezar rama, último commit y su IA, reglas, registro vigente y hooks de git; en Claude Code corre solo con un hook `SessionStart` y activa los hooks de git si faltan. `ia/PROTOCOLO.md` pasa a 1.1.0; `AGENTS.md`, `GEMINI.md` e `ia/INSTRUCCIONES_PROYECTO.md` indican el comando a las demás IA.",
+              "pendiente": "ninguno."
+            },
+            {
+              "fecha": "2026-11-04",
+              "titulo": "0.4.1 · registro obligatorio y trabajo entre IA",
+              "agente": "Claude Code (sesión en la nube; modelo según la sesión)",
+              "cambios": "capa común `ia/` (protocolo común 1.0.0 basado en el de Mes, `REGLAS.md` generadas de `politica.json`, frenos para Claude Code, hooks de git para cualquier IA, workflow `registro-ia.yml`, `INSTRUCCIONES_PROYECTO.md` para ChatGPT y Gemini, plantillas de petición y entrega); `GEMINI.md`; sección «Trabajo entre IA» en `AGENTS.md`; `.claude/settings.json` apunta a `ia/guard.py` (se retira `.claude/hooks/`); auditoría en `ia/AUDITORIA_2026-11-04.md`. Skill 0.4.1: sección «Registro y continuidad entre IA» y nota de portabilidad en `references/claude-code.md`; el método no cambia.",
+              "pendiente": "activar los hooks de git en cada copia (`sh ia/instalar.sh`); opcionalmente exigir el check `registro-ia` con protección de rama en GitHub."
+            }
+          ]
+        },
+        {
+          "nombre": "buholegal-monitoreo",
+          "url": "https://github.com/lianfixx/buholegal-monitoreo",
+          "visibilidad": "privado",
+          "leido": true,
+          "ultimo_cambio": "2026-11-04",
+          "resumen": "",
+          "skills": [],
+          "protocolo": "",
+          "registro": []
+        },
+        {
+          "nombre": "impulso-libre",
+          "url": "https://github.com/lianfixx/impulso-libre",
+          "visibilidad": "privado",
+          "leido": true,
+          "ultimo_cambio": "2026-11-04",
+          "resumen": "",
+          "skills": [],
+          "protocolo": "",
+          "registro": []
+        },
+        {
+          "nombre": "meta-ads-client-onboarding",
+          "url": "https://github.com/lianfixx/meta-ads-client-onboarding",
+          "visibilidad": "privado",
+          "leido": true,
+          "ultimo_cambio": "2026-11-04",
+          "resumen": "",
+          "skills": [],
+          "protocolo": "",
+          "registro": []
+        }
+      ]
+    },
+    {
+      "id": "accion-tlalnepantla",
+      "nombre": "Acción Tlalnepantla",
+      "descripcion": "Acción Política Juvenil Tlalnepantla (PAN): sitio, formatos, eventos y materiales.",
+      "repos": [
+        {
+          "nombre": "ACCION-TLALNEPANTLA-",
+          "url": "https://github.com/lianfixx/ACCION-TLALNEPANTLA-",
+          "visibilidad": "público",
+          "leido": true,
+          "ultimo_cambio": "2026-11-04",
+          "resumen": "Sitio público y administración editorial. Portada, agenda, publicaciones, imágenes, opiniones moderadas y seguimiento de solicitudes. Código React/Vinext con Worker, Cloudflare D1 y R2 a través de Sites.",
+          "skills": [],
+          "protocolo": "1.1.0",
+          "registro": [
+            {
+              "fecha": "2026-11-04",
+              "titulo": "corrección: puentes de skill con YAML válido",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "los puentes `.claude/skills/` y `.agents/skills/` copiaban la descripción sin comillas; si contenía «: » el YAML quedaba inválido (afectaba a tareas-maestria y meta-ads-client-onboarding). Ahora va entre comillas, `ia/check_skill.py` rechaza valores que rompan el YAML y el control previo al commit revisa también los puentes.",
+              "pendiente": "ninguno."
+            },
+            {
+              "fecha": "2026-11-04",
+              "titulo": "corrección: flag de push mal formado",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "la regla que prohíbe forzar el push no atrapaba flags cortos mal formados que contienen `f` o `d` (por ejemplo `-f-never`); el patrón ahora es `-(?!-)\\S*[fd]\\S*`. Se añadió el caso a las pruebas. Ese push concreto (rama de mes.) fue de avance lineal y no borró historial.",
+              "pendiente": "ninguno."
+            },
+            {
+              "fecha": "2026-11-04",
+              "titulo": "frenos de git también para Codex, ChatGPT y Gemini",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "`python3 ia/verificar.py inicio`, que `AGENTS.md` pide ejecutar a cualquier IA al empezar, ahora también activa los hooks de git si faltan (antes solo lo hacía el hook de Claude Code). Así Codex, ChatGPT con terminal y Gemini CLI quedan con los mismos frenos de commit y push. `AGENTS.md` e `ia/INSTRUCCIONES_PROYECTO.md` lo indican.",
+              "pendiente": "ninguno."
+            },
+            {
+              "fecha": "2026-11-04",
+              "titulo": "arranque común entre IA (protocolo 1.1.0)",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "`python3 ia/verificar.py inicio` resume al empezar rama, último commit y su IA, reglas, registro vigente y hooks de git; en Claude Code corre solo con un hook `SessionStart` y activa los hooks de git si faltan. `ia/PROTOCOLO.md` pasa a 1.1.0; `AGENTS.md`, `GEMINI.md` e `ia/INSTRUCCIONES_PROYECTO.md` indican el comando a las demás IA.",
+              "pendiente": "ninguno."
+            },
+            {
+              "fecha": "2026-11-04",
+              "titulo": "1.1.1 · registro obligatorio y trabajo entre IA",
+              "agente": "Claude Code (sesión en la nube; modelo según la sesión)",
+              "cambios": "capa común `ia/` (protocolo común 1.0.0 basado en el de Mes, `REGLAS.md` generadas de `politica.json`, frenos para Claude Code, hooks de git para cualquier IA, workflow `registro-ia.yml`, `INSTRUCCIONES_PROYECTO.md` para ChatGPT y Gemini, plantillas de petición y entrega); `GEMINI.md`; sección «Trabajo entre IA» en `AGENTS.md`; `.claude/settings.json` apunta a `ia/guard.py` (se retira `.claude/hooks/`); auditoría en `ia/AUDITORIA_2026-11-04.md`. Skill 1.1.1: sección «Registro y continuidad entre IA» y nota de portabilidad en `references/claude-code.md`; el método no cambia.",
+              "pendiente": "activar los hooks de git en cada copia (`sh ia/instalar.sh`); opcionalmente exigir el check `registro-ia` con protección de rama en GitHub."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contenido-y-video",
+      "nombre": "Contenido y video",
+      "descripcion": "Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio, X e historias de Instagram.",
+      "repos": [
+        {
+          "nombre": "VIDEOS-IA-SKILL-MILLA",
+          "url": "https://github.com/lianfixx/VIDEOS-IA-SKILL-MILLA",
+          "visibilidad": "público",
+          "leido": true,
+          "ultimo_cambio": "2026-11-11",
+          "resumen": "Un método portable para producir videos de MILLA ABOGADOS: investigación, guion, conexiones, voz, imágenes, música, montaje y revisión. Incluye una skill, instrucciones para otras IAs, utilidades y un compositor nuevo.",
+          "skills": [
+            {
+              "nombre": "milla-video-studio",
+              "ruta": "skills/milla-video-studio/SKILL.md"
+            },
+            {
+              "nombre": "pizarra-studio",
+              "ruta": "skills/pizarra-studio/SKILL.md"
+            },
+            {
+              "nombre": "vox-studio",
+              "ruta": "skills/vox-studio/SKILL.md"
+            }
+          ],
+          "protocolo": "1.1.0",
+          "registro": [
+            {
+              "fecha": "2026-11-11",
+              "titulo": "Vox Studio 0.12.0: Flow Music como complemento opcional de la música",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "`musica.archivo` y `musica.origen` en el guion para montar una pista externa: `recortar_pista` salta el silencio inicial, corta a la medida, desvanece el final y la deja al nivel de la de código; el origen es obligatorio y queda con su huella en `estados/musica.json`. La música de código sigue siendo la opción por defecto. Guía nueva `FLOW-MUSIC.md` (decisión de Emi, cuándo proponerla, cómo conseguir la pista con su sesión en el box y sus límites) y script `scripts/box/subir_drive.mjs` para subir del box a Drive.",
+              "pendiente": "fusionar a `main`; que Emi suba el paquete actualizado a la app."
+            },
+            {
+              "fecha": "2026-11-11",
+              "titulo": "Vox Studio 0.11.0: guía del momento exacto para 3D, tratamientos, Blender y ComfyUI",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "`TRES-D.md` reescrita como procedimiento de decisión: el estilo es el recorte ilustrado y la respuesta por defecto es no; cinco preguntas en orden (qué dice la voz, si el movimiento es la idea, qué se pierde, si es el mejor momento del video, si Emi lo eligió); tabla del momento de cada recurso con la escena donde va, cuándo no va y qué usar en su lugar; ejemplos razonados y reglas por espacio. El validador lo exige: como mucho una escena con 3D por video, cada objeto solo en las funciones que le corresponden, ninguno en `opinion` ni `cierre`, `porque` también en `secuencia`, un solo tratamiento por video; más de uno solo con el pedido de Emi escrito en `excepcion_3d`. Avisos nuevos: barras demasiado parecidas, tratamiento sobre algo que no es foto real, 3D sin `alternativa_plana`. Comando nuevo `comparar`: deja la escena con el recurso y en plano lado a lado para que Emi elija antes de rendir; queda como compuerta en `SKILL.md`. El demo 2 volvió a recortes ilustrados.",
+              "pendiente": "que Emi confirme qué fue lo que menos le gustó (la interpretación anotada en los aprendizajes es de Claude); que vea la comparación y el demo restaurado; fusionar a `main`."
+            },
+            {
+              "fecha": "2026-11-11",
+              "titulo": "Vox Studio 0.10.1: el resaltado cubre las tildes y verificación final del demo",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "la caja del resaltado del titular sube cuando la palabra lleva mayúscula con tilde o Ñ, y cada línea se pinta encima de la siguiente (en la portada «CÓDIGO» perdía la tilde). Dos lecciones nuevas en los aprendizajes. La entrada anterior del registro se completó con el resultado del render final.",
+              "pendiente": "que Emi vea y escuche el demo; probar ComfyUI con un servidor real; fusionar a `main`."
+            },
+            {
+              "fecha": "2026-11-11",
+              "titulo": "Vox Studio 0.10.1: revisión independiente del 3D, Blender y ComfyUI (14 fallas) corregida",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "(1) los colores horneados ya son los de la marca: sin mapeo de tonos, luces que dan el color exacto en la cara iluminada y sombreador que escribe papel, tinta y acento tal cual; (2) el horno arma y comprueba en `out/` y mueve de una vez, con marca `.listo`: un horneado vacío, incompleto o interrumpido ya no queda como bueno; (3) Blender centra y gira modelos con nodo padre; (4) el giro de Blender es constante (sin fotogramas clave); (5) un objeto 3D en la primera escena se hornea en el tramo que el compositor muestra y ya no se congela; (6) la firma de caché incluye el código que dibuja y se borra lo horneado que nadie pide; (7) repetir un giro en la misma carpeta limpia los cuadros anteriores; (8) `--out` de `blender` se valida antes de rendir (dentro de `public/`, `.png` o carpeta) y se comprueba que Blender escribió todo; (9) acabado real: una pieza sin material recibe el color de acento; (10) `validar` rechaza valores infinitos, `resaltar` fuera de rango y monedas fuera de 2 a 8; (11) una foto real tratada conserva su marco y la portada usa la imagen tratada; (12) `comfy` valida dirección (https, o http solo local) y flujo también en seco, y verifica que lo bajado sea una imagen; (13) una textura que no carga cancela el render en vez de dejar un PNG vacío; (14) las monedas aparecen sobre la pila sin salirse del lienzo ni dejar una pila fantasma; (15) documentos alineados con el código; (16) el resaltado del titular cubre las mayúsculas con tilde o Ñ.",
+              "pendiente": "que Emi vea y escuche el demo; la entrada desde abajo cruza 0.2 s la franja del subtítulo (menor); probar ComfyUI cuando Emi tenga servidor; fusionar a `main`."
+            },
+            {
+              "fecha": "2026-11-11",
+              "titulo": "Vox Studio 0.10.0: 3D, sombreadores, Blender y ComfyUI, solo cuando hacen falta",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "guía de decisión `TRES-D.md` (qué necesita la escena → qué recurso, señales de que no va). Escenas con `objeto3d` (moneda, monedas, barras, caja, globo; Three.js con colores del espacio y contorno de tinta) y `tratamiento` (semitono, duotono, por sombreador) que exigen un `porque` escrito; las barras exigen valores reales y `fuente`; `validar` avisa si más de una de cada tres escenas lleva 3D. Lo que necesita WebGL se hornea aparte (composición `Horno`) y el video principal solo pega imágenes. Campo `secuencia` para objetos que giran. Comandos `blender-instalar`, `blender` (texto, moneda, caja o modelo propio; acabado plano o real; imagen o giro) y `comfy` (servidor de Emi por `COMFY_URL`; sin servidor se detiene). La auditoría de imagen mira la última escena ya asentada. Las referencias externas pasan estos recursos de «descartado» a «adoptado con condiciones». Pizarra Studio 0.3.1 aclara que ahí no se usan.",
+              "pendiente": "corregir lo que encuentre la revisión independiente; confirmar el aviso de la última escena; que Emi vea el demo; fusionar a `main`."
+            },
+            {
+              "fecha": "2026-11-11",
+              "titulo": "Vox Studio 0.9.0 y Pizarra Studio 0.3.0: mejoras tomadas de cuatro referencias de X",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "análisis completo en `docs/REFERENCIAS-EXTERNAS.md` (qué se adoptó, qué ya estaba y qué se descartó con motivo). Vox Studio: `funcion` obligatoria por escena (primera gancho, última cierre, al menos una opinión); `ganchos_propuestos` y `gancho_elegido`; una cifra sin `fuente` en su escena es error; el tempo de la música se ajusta ±8 % a los cambios de escena; aviso de audio plano; resortes distintos para titular, recorte y rótulo; los recortes ya no cruzan el titular al entrar (`sube`, sello desde 1.25×); línea de fuente legible; comandos `revisar` (hojas de transiciones y de tamaño teléfono + `out/revision.json`) y `referencia`; `cierre` exige la revisión del render actual; `out/manifiesto.json`. Pizarra Studio: `revisar`, la misma exigencia en `cierre`, manifiesto, función por escena en el storyboard y tempo ajustado.",
+              "pendiente": "formatos 1:1 y 16:9 en Vox Studio (propuesto, sin hacer); que Emi vea y escuche; fusionar a `main`."
+            },
+            {
+              "fecha": "2026-11-11",
+              "titulo": "Vox Studio 0.8.3 y Pizarra Studio 0.2.1: qué hacer si se llaman donde no se puede producir",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "Vox Studio sustituye «Dónde funciona» por una tabla de situaciones (con todo, sin llaves, sin repositorio, app sin terminal, pedido de pizarra) con qué hacer y qué decirle a Emi, reglas de honestidad y un paquete de traspaso para continuar en Claude Code. Pizarra Studio añade la misma regla. El paquete para la app incluye ahora la guía de entrevista de pizarra (`pizarra/PIZARRA.md` y su ejemplo de brief).",
+              "pendiente": "que Emi sustituya la copia de la app; fusionar a `main`."
+            },
+            {
+              "fecha": "2026-11-11",
+              "titulo": "Pizarra Studio 0.2.0: revisión independiente (15 fallas) corregida",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "`pizarra.py` reescrito con las 15 correcciones de una revisión independiente: (1) `voz --execute` exige entrevista aprobada y que Emi haya pedido la voz del espacio antes de gastar; (2) medición, cuadros de prueba y render usan la misma línea de tiempo (modo B con voz); (3) una cama sin sonido ya no satura la mezcla y la respuesta «sin efectos» apaga los efectos; (4) formato y duración del brief se interpretan antes de rendir y aceptan «horizontal 16:9», «45 a 60», «1:00», «1 minuto»; (5) aviso si la voz se corta o el video sobra; (6) en estilos la marca lleva estilo, sin mascota ni persona y subtítulos con tiempos reales; (7) respuestas que no son texto no cuentan; (8) `proyecto` se arma aparte, se renombra al final y solo acepta `productions/<espacio>/`; (9) el motor vive en `~/.cache/pizarra-studio/motor`, se rechaza si tiene archivos modificados y cada producción anota su commit; (10) se borran entregables anteriores al empezar y los temporales siempre; (11) la medición no ensucia `stills/`; (12) el navegador se busca en más rutas y solo se devuelve si existe; (13) import con mensaje claro si falta Vox Studio; (14) ejemplo y textos alineados con «sin personaje», `musica` antes de `qa`; (15) límites y tiempo máximo en `qa`, primera escena en 0, ganancia final calculada desde una sola fuente.",
+              "pendiente": "primer video real; modo historia y render horizontal completo sin probar."
+            }
+          ]
+        },
+        {
+          "nombre": "X",
+          "url": "https://github.com/lianfixx/X",
+          "visibilidad": "público",
+          "leido": true,
+          "ultimo_cambio": "2026-11-10",
+          "resumen": "Skill para planear, redactar, revisar, programar con aprobación y medir las publicaciones de @emilianomilla en X, apoyada en el código público del algoritmo de X (xai-org/x-algorithm).",
+          "skills": [
+            {
+              "nombre": "x-viral",
+              "ruta": "skills/x-viral/SKILL.md"
+            }
+          ],
+          "protocolo": "1.1.0",
+          "registro": [
+            {
+              "fecha": "2026-11-10",
+              "titulo": "Candidatas de conversación, encargo para Muse y fecha de arranque",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "`cuenta/mutuals.md` con 24 cuentas candidatas en tres pilares, cada una abierta en X ese día para comprobar que existe (se descartaron siete que ya no existen o cambiaron de dueño); `docs/PROMPT-MUSE.md` con el encargo para Muse (rama por defecto, sesión de X en box, conector de GitHub para la tarea semanal, instalar la skill en claude.ai y traer datos); `cuenta/perfil.json` con el arranque el 16/11/2026, la intención de Premium y la nota sobre la fecha de creación (X muestra abril de 2026).",
+              "pendiente": "los de la entrada anterior; correr el encargo de Muse; con sesión de X en box, leer los 24 posts existentes y revisarlos con Emi antes de quitar la protección."
+            },
+            {
+              "fecha": "2026-11-10",
+              "titulo": "x-viral 1.0.2: estado real de la cuenta, ejemplo de semana y rama main",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "(1) Se vio el perfil público de `@emilianomilla_` desde box: creada en abril de 2026, 24 posts, 42 seguidos, 2 seguidores y posts protegidos. Queda en `cuenta/perfil.json`, en la skill y como paso 0 del plan (quitar la protección y revisar antes los 24 posts existentes); `revisar --para programado` avisa mientras `protegida` sea `true`. (2) Ejemplo de semana completo y válido en `skills/x-viral/assets/semana.ejemplo.json`, cubierto por una prueba. (3) El plan explica qué son las cuentas de `cuenta/mutuals.md` (de otras personas, para conversar) y por qué. (4) El control valida también que `cuenta/perfil.json` se pueda leer. (5) Pruebas corridas en Python 3.9, 3.11, 3.12 y 3.13. (6) Rama `main` creada con este contenido.",
+              "pendiente": "(a) Emi: revisar sus 24 posts, quitar la protección cuando decida y poner `\"protegida\": false`; elegir las primeras cuentas de `cuenta/mutuals.md`; decidir Premium; dar material y postura para la primera semana. (b) Poner `main` como rama por defecto en GitHub (Settings → General → Default branch): hasta entonces la vigilancia semanal de GitHub corre desde la rama `claude/zealous-brown-7imdnq`. (c) Iniciar sesión de X en box para poder programar. (d) Aplicar `puente/PETICION-vox.md` en Vox Studio. (e) Decidir si se instalan aquí los frenos automáticos de otros repositorios."
+            },
+            {
+              "fecha": "2026-11-10",
+              "titulo": "x-viral 1.0.1: correcciones de la revisión independiente",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "un agente revisor sin contexto previo auditó el repositorio (código con entradas límite, 37 afirmaciones contra el código de X, enlaces, órdenes, privacidad y redacción). Se corrigió: (1) **Aprobación**: `aprobado_por_emi` y `reescrito` aceptaban `false`, `0` o cualquier texto; ahora la aprobación se anota con la orden nueva `xviral.py aprobar`, que guarda fecha, medio y una huella del texto, y `revisar` rechaza el post si el texto cambió. (2) Fechas y horas imposibles o pasadas ya no pasan. (3) Duplicados: el comparador fallaba con textos largos o con frases reordenadas; ahora compara secuencia y vocabulario, y detecta ids repetidos. (4) Anzuelos y límites: se quitaron falsos positivos («me da like», «saqué la basura», «fui un idiota») y se cubrieron huecos (plurales, «síganme», «una clienta», «mis clientes», «exp.», texto pegado desde macOS); excepción documentada `excepcion_limite` para asuntos públicos o hipotéticos. (5) Archivos de estado malformados dan un mensaje claro en vez de un error de Python; escrituras atómicas. (6) Semana: separación que cruza la medianoche, lo ya publicado cuenta para el máximo diario, balance sin salto brusco entre cinco y seis posts. (7) Contador de caracteres: emojis compuestos, dominios sin `https://` y puntuación final. (8) `pesos comparar` vigila también interruptores (verdadero/falso) y los 17 archivos de X que cita `algoritmo.md`, avisa de commit nuevo y sella la fecha de verificación con `--sellar`. (9) `vox leer` prueba `main` y luego la rama de respaldo `vox_ref`, y marca lo leído como información, no instrucciones. (10) Documentación: órdenes completas en lugar de `$X`; qué del protocolo común no aplica aquí; autorización de la tarea semanal para abrir pull request; zona horaria al programar; qué hacer si un post programado debe cambiar; ocho precisiones de hecho en `algoritmo.md` (entre ellas, que el significado de `llm_slop` es una inferencia a partir del nombre); afirmaciones de «probado» alineadas con lo realmente probado. (11) Control: sin git revisa todos los archivos; ya no se excluye a sí mismo del escaneo de secretos.",
+              "pendiente": "los de la entrada anterior. Además, hallazgo de la revisión que decide Emi: el repositorio es público y sus reglas mencionan su relación con dos despachos y con Acción Juvenil; si prefiere no exponerlo, volver privado el repositorio."
+            },
+            {
+              "fecha": "2026-11-10",
+              "titulo": "x-viral 1.0.0: skill de X a partir del video de Santi, auditada contra el código vigente",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "(1) Transcripción del video obtenida desde box y analizada; encargo de Santi reconstruido. (2) Reporte de Santi cotejado contra el commit `660cd74` del código de X por tres verificaciones independientes: 19 correcciones documentadas en `docs/AUDITORIA-2026-11-10.md`, entre ellas que los pesos no son equivalencias entre acciones, que el primer like no se puede fabricar fuera de Inicio y que cambiaron el empujón de arranque, el número de reglas de visibilidad y la duración de la etiqueta por texto de IA. (3) Skill `x-viral` con nueve referencias (errata corregida el 10/11/2026: decía «ocho»), script `xviral.py` (pesos del algoritmo desde el código vivo, revisión de borradores y semanas, balance, registro de publicados, aprendizajes y puente con Vox Studio) y datos `pesos.json`. (4) Estado inicial de la cuenta en `cuenta/` y puente en `puente/`. (5) Puentes para Claude Code y agentes, `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, instrucciones de proyecto para ChatGPT y Gemini. (6) Protocolo común entre IA (copia de `lianfixx/VIDEOS-IA-SKILL-MILLA`), reglas propias, control `ia/verificar.py` y dos workflows: control en cada push y vigilancia semanal del algoritmo.",
+              "pendiente": "(a) Emi: primeras correcciones de voz, cuentas iniciales de `cuenta/mutuals.md`, fecha de creación de la cuenta y si contrata Premium. (b) Programar en X no se ha ejecutado contra la cuenta real. (c) Aplicar `puente/PETICION-vox.md` en el repositorio de Vox Studio. (d) Decidir si se instalan aquí los frenos automáticos de otros repositorios (`guard.py`, hooks). (e) El repositorio es público: decidir si se vuelve privado para sincronizar borradores."
+            }
+          ]
+        },
+        {
+          "nombre": "HISTORIAS-",
+          "url": "https://github.com/lianfixx/HISTORIAS-",
+          "visibilidad": "público",
+          "leido": true,
+          "ultimo_cambio": "2026-11-11",
+          "resumen": "Método, motor y memoria para hacer las historias de Instagram de Emi con cualquier IA: la IA pregunta, propone y dibuja; Emi decide.",
+          "skills": [
+            {
+              "nombre": "historias-studio",
+              "ruta": "skills/historias-studio/SKILL.md"
+            }
+          ],
+          "protocolo": "",
+          "registro": []
+        }
+      ]
+    },
+    {
+      "id": "estudio",
+      "nombre": "Estudio",
+      "descripcion": "Maestría en Alta Dirección y pizarras de estudio.",
+      "repos": [
+        {
+          "nombre": "maestria-alta-direccion",
+          "url": "https://github.com/lianfixx/maestria-alta-direccion",
+          "visibilidad": "privado",
+          "leido": false,
+          "ultimo_cambio": "",
+          "resumen": "",
+          "skills": [],
+          "protocolo": "",
+          "registro": []
+        },
+        {
+          "nombre": "ESTUDIO-TEMAS",
+          "url": "https://github.com/lianfixx/ESTUDIO-TEMAS",
+          "visibilidad": "público",
+          "leido": true,
+          "ultimo_cambio": "2026-11-04",
+          "resumen": "Apuntes de estudio claros, fundamentados y fáciles de continuar con otra IA.",
+          "skills": [
+            {
+              "nombre": "pizarras-de-estudio",
+              "ruta": "skills/pizarras-de-estudio/SKILL.md"
+            }
+          ],
+          "protocolo": "1.1.0",
+          "registro": [
+            {
+              "fecha": "2026-11-04",
+              "titulo": "corrección: puentes de skill con YAML válido",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "los puentes `.claude/skills/` y `.agents/skills/` copiaban la descripción sin comillas; si contenía «: » el YAML quedaba inválido (afectaba a tareas-maestria y meta-ads-client-onboarding). Ahora va entre comillas, `ia/check_skill.py` rechaza valores que rompan el YAML y el control previo al commit revisa también los puentes.",
+              "pendiente": "ninguno."
+            },
+            {
+              "fecha": "2026-11-04",
+              "titulo": "corrección: flag de push mal formado",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "la regla que prohíbe forzar el push no atrapaba flags cortos mal formados que contienen `f` o `d` (por ejemplo `-f-never`); el patrón ahora es `-(?!-)\\S*[fd]\\S*`. Se añadió el caso a las pruebas. Ese push concreto (rama de mes.) fue de avance lineal y no borró historial.",
+              "pendiente": "ninguno."
+            },
+            {
+              "fecha": "2026-11-04",
+              "titulo": "frenos de git también para Codex, ChatGPT y Gemini",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "`python3 ia/verificar.py inicio`, que `AGENTS.md` pide ejecutar a cualquier IA al empezar, ahora también activa los hooks de git si faltan (antes solo lo hacía el hook de Claude Code). Así Codex, ChatGPT con terminal y Gemini CLI quedan con los mismos frenos de commit y push. `AGENTS.md` e `ia/INSTRUCCIONES_PROYECTO.md` lo indican.",
+              "pendiente": "ninguno."
+            },
+            {
+              "fecha": "2026-11-04",
+              "titulo": "arranque común entre IA (protocolo 1.1.0)",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "`python3 ia/verificar.py inicio` resume al empezar rama, último commit y su IA, reglas, registro vigente y hooks de git; en Claude Code corre solo con un hook `SessionStart` y activa los hooks de git si faltan. `ia/PROTOCOLO.md` pasa a 1.1.0; `AGENTS.md`, `GEMINI.md` e `ia/INSTRUCCIONES_PROYECTO.md` indican el comando a las demás IA.",
+              "pendiente": "ninguno."
+            },
+            {
+              "fecha": "2026-11-04",
+              "titulo": "registro obligatorio y trabajo entre IA",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "capa común `ia/` y registro obligatorio entre IA. Los cambios del método se registran en `skills/pizarras-de-estudio/CHANGELOG.md` y los de cada tema en su `CAMBIOS.md`; este archivo registra los cambios del repositorio. Detalle en `ia/AUDITORIA_2026-11-04.md`.",
+              "pendiente": "ninguno."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "productos",
+      "nombre": "Productos",
+      "descripcion": "Productos propios de Emi: PANEL FIRMA (gestión jurídica) y Mes (finanzas personales).",
+      "repos": [
+        {
+          "nombre": "PANEL-FIRMA-",
+          "url": "https://github.com/lianfixx/PANEL-FIRMA-",
+          "visibilidad": "privado",
+          "leido": true,
+          "ultimo_cambio": "2026-11-04",
+          "resumen": "",
+          "skills": [],
+          "protocolo": "",
+          "registro": []
+        },
+        {
+          "nombre": "mes.",
+          "url": "https://github.com/lianfixx/mes.",
+          "visibilidad": "público",
+          "leido": true,
+          "ultimo_cambio": "2026-10-24",
+          "resumen": "Alfa de una aplicación de Sistemas Digitales. Mes es un nombre provisional. Interfaz original en blanco, negro y grises para próximos pagos, gastos cotidianos y metas. Código universal Expo / React Native / TypeScript, sin llamadas a modelos ni dependencia funcional de ChatGPT.",
+          "skills": [],
+          "protocolo": "",
+          "registro": []
+        }
+      ]
+    },
+    {
+      "id": "herramientas",
+      "nombre": "Herramientas",
+      "descripcion": "Piezas que sirven a todos los cerebros: estilo de Emi, selector de modelo y entorno de Cloudflare.",
+      "repos": [
+        {
+          "nombre": "estilo-emi",
+          "url": "https://github.com/lianfixx/estilo-emi",
+          "visibilidad": "privado",
+          "leido": false,
+          "ultimo_cambio": "",
+          "resumen": "",
+          "skills": [],
+          "protocolo": "",
+          "registro": []
+        },
+        {
+          "nombre": "selector-modelos",
+          "url": "https://github.com/lianfixx/selector-modelos",
+          "visibilidad": "privado",
+          "leido": false,
+          "ultimo_cambio": "",
+          "resumen": "",
+          "skills": [],
+          "protocolo": "",
+          "registro": []
+        },
+        {
+          "nombre": "cloudfare",
+          "url": "https://github.com/lianfixx/cloudfare",
+          "visibilidad": "público",
+          "leido": true,
+          "ultimo_cambio": "2026-11-11",
+          "resumen": "Entorno para que Claude Code o Codex trabajen con Cloudflare a través del CLI oficial cf. Solo la conexión y las reglas; no incluye proyectos.",
+          "skills": [],
+          "protocolo": "",
+          "registro": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,267 @@
+{
+  "_doc": "Política común (ver ia/guard.py y ia/PROTOCOLO.md). La aplican Claude Code (hooks), git (ia/githooks) y GitHub Actions (registro-ia.yml). 'tests' son casos que comprueba ia/test_guard.py.",
+  "repo": "lianfixx/MATRIZ",
+  "registro": {
+    "logs": [
+      {
+        "path": "^CHANGELOG\\.md$",
+        "require": "Agente:"
+      }
+    ],
+    "exentos": [
+      "^MATRIZ\\.md$",
+      "^matriz\\.json$",
+      "^cerebros/",
+      "^repos/",
+      "^contexto/",
+      "^bitacora/"
+    ]
+  },
+  "rules": [
+    {
+      "type": "pattern",
+      "tool": "mcp__.*__.*(send|reply|forward|post_message|publish).*",
+      "decision": "ask",
+      "reason": "Vas a enviar o publicar algo a través de un conector. Confirma destinatario, propósito y adjuntos."
+    },
+    {
+      "type": "git",
+      "git": "push",
+      "flags": [
+        "--force.*",
+        "--mirror",
+        "--delete",
+        "--prune",
+        "-(?!-)\\S*[fd]\\S*",
+        "\\+.+",
+        ":.*"
+      ],
+      "decision": "deny",
+      "reason": "No se permite forzar ni borrar en el remoto (`--force`, `+rama`, `--mirror`, `--delete`, `:rama`): puede borrar historial ajeno."
+    },
+    {
+      "type": "git",
+      "git": "commit",
+      "flags": [
+        "--no-verify",
+        "-[a-zA-Z]*n[a-zA-Z]*"
+      ],
+      "decision": "deny",
+      "reason": "No se permite saltar los controles (`--no-verify`). Corrige lo que señalan."
+    },
+    {
+      "type": "git",
+      "git": "push",
+      "flags": [
+        "--no-verify"
+      ],
+      "decision": "deny",
+      "reason": "No se permite saltar los controles (`--no-verify`). Corrige lo que señalan."
+    },
+    {
+      "type": "hookspath",
+      "decision": "deny",
+      "reason": "No se permite cambiar ni anular `core.hooksPath`; solo `sh ia/instalar.sh` lo configura."
+    },
+    {
+      "type": "git",
+      "git": "config",
+      "flags": [
+        "alias\\..*"
+      ],
+      "decision": "ask",
+      "reason": "Un alias de git puede ocultar acciones prohibidas. Confirma para qué es."
+    },
+    {
+      "type": "path",
+      "tool": "Edit|Write|MultiEdit|NotebookEdit",
+      "globs": [
+        "ia/*",
+        ".claude/settings*.json",
+        ".github/workflows/*",
+        ".github/CODEOWNERS"
+      ],
+      "decision": "ask",
+      "reason": "Vas a cambiar las reglas comunes, los frenos o los workflows. Confirma que Emi lo pidió y registra el cambio."
+    },
+    {
+      "type": "git",
+      "git": "push",
+      "decision": "ask",
+      "reason": "Vas a publicar en GitHub. Confirma que la tarea actual autoriza este push."
+    },
+    {
+      "type": "secrets",
+      "git": "commit",
+      "pii": true,
+      "reason": "El cambio contiene posibles secretos o datos personales."
+    },
+    {
+      "type": "before_git",
+      "git": "commit",
+      "staged_regex": "^ia/",
+      "run": "python3 ia/test_guard.py",
+      "reason": "Las pruebas de las reglas comunes fallaron."
+    },
+    {
+      "type": "before_git",
+      "git": "commit",
+      "staged_regex": "^(tools/|matriz\\.config\\.json$)",
+      "run": "python3 -m unittest discover -s tools -p 'test_*.py'",
+      "reason": "Las pruebas del generador de la Matriz no pasan."
+    },
+    {
+      "type": "registro",
+      "git": "commit",
+      "reason": "Registro obligatorio."
+    }
+  ],
+  "tests": [
+    {
+      "name": "push forzado",
+      "tool": "Bash",
+      "input": {
+        "command": "git push --force origin main"
+      },
+      "expect": "deny"
+    },
+    {
+      "name": "mensaje que menciona push",
+      "tool": "Bash",
+      "input": {
+        "command": "git commit -m 'no hacer git push --force'"
+      },
+      "expect": "none"
+    },
+    {
+      "name": "comando inocuo",
+      "tool": "Bash",
+      "input": {
+        "command": "ls -la"
+      },
+      "expect": "none"
+    },
+    {
+      "name": "push forzado tras salto de línea",
+      "tool": "Bash",
+      "input": {
+        "command": "echo listo\ngit push -f"
+      },
+      "expect": "deny"
+    },
+    {
+      "name": "flag corto mal formado con f",
+      "tool": "Bash",
+      "input": {
+        "command": "git push -q -f-never origin rama"
+      },
+      "expect": "deny"
+    },
+    {
+      "name": "push forzado dentro de bash -c",
+      "tool": "Bash",
+      "input": {
+        "command": "bash -c 'git push --force'"
+      },
+      "expect": "deny"
+    },
+    {
+      "name": "push con +rama y git-dir",
+      "tool": "Bash",
+      "input": {
+        "command": "env X=1 git --git-dir .git push origin +main"
+      },
+      "expect": "deny"
+    },
+    {
+      "name": "borrar rama remota",
+      "tool": "Bash",
+      "input": {
+        "command": "if true; then git push origin :main; fi"
+      },
+      "expect": "deny"
+    },
+    {
+      "name": "commit sin controles",
+      "tool": "Bash",
+      "input": {
+        "command": "git commit --no-verify -m x"
+      },
+      "expect": "deny"
+    },
+    {
+      "name": "anular hooks",
+      "tool": "Bash",
+      "input": {
+        "command": "git -c core.hooksPath=/dev/null commit -m x"
+      },
+      "expect": "deny"
+    },
+    {
+      "name": "instalar hooks permitido",
+      "tool": "Bash",
+      "input": {
+        "command": "git config core.hooksPath ia/githooks"
+      },
+      "expect": "none"
+    },
+    {
+      "name": "quitar hooks",
+      "tool": "Bash",
+      "input": {
+        "command": "git config --unset core.hooksPath"
+      },
+      "expect": "deny"
+    },
+    {
+      "name": "texto que menciona hooksPath",
+      "tool": "Bash",
+      "input": {
+        "command": "python3 -c 'print(\"core.hooksPath\")'"
+      },
+      "expect": "none"
+    },
+    {
+      "name": "add y commit juntos",
+      "tool": "Bash",
+      "input": {
+        "command": "git add -A && git commit -m x"
+      },
+      "expect": "deny"
+    },
+    {
+      "name": "commit con rutas",
+      "tool": "Bash",
+      "input": {
+        "command": "git commit -m x README.md"
+      },
+      "expect": "deny"
+    },
+    {
+      "name": "editar la política pide confirmación",
+      "tool": "Write",
+      "input": {
+        "file_path": "ia/politica.json"
+      },
+      "expect": "ask"
+    },
+    {
+      "name": "push pide confirmación",
+      "tool": "Bash",
+      "input": {
+        "command": "git push origin main"
+      },
+      "expect": "ask"
+    },
+    {
+      "name": "enviar por conector pide confirmación",
+      "tool": "mcp__Gmail__send_message",
+      "input": {
+        "to": [
+          "juzgado@ejemplo.mx"
+        ]
+      },
+      "expect": "ask"
+    }
+  ]
+}
