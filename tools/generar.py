@@ -152,7 +152,7 @@ def localizar(nombre: str, repos_dir: Path | None, clonar: bool, propietario: st
                 return cand
     if not clonar:
         return None
-    token = os.environ.get("MATRIZ_TOKEN", "")
+    token = os.environ.get("MATRIZ_TOKEN", "").strip()
     auth = f"x-access-token:{token}@" if token else ""
     destino = tmp / nombre
     # cwd fuera de este repositorio: actions/checkout deja en su configuración local una cabecera
@@ -344,6 +344,10 @@ def main() -> int:
     ap.add_argument("--salida", type=Path, default=RAIZ)
     ap.add_argument("--hoy", default=os.environ.get("MATRIZ_HOY", ""))
     a = ap.parse_args()
+    tk = os.environ.get("MATRIZ_TOKEN", "")
+    if a.clonar:
+        forma = "ausente" if not tk else ("grano fino" if tk.strip().startswith("github_pat_") else "formato no reconocido")
+        print(f"MATRIZ_TOKEN: {forma}, {len(tk.strip())} caracteres" + (", traía espacios" if tk != tk.strip() else ""))
     hoy = a.hoy or subprocess.run(["date", "+%F"], capture_output=True, text=True).stdout.strip()
     cfg = json.loads((RAIZ / "matriz.config.json").read_text(encoding="utf-8"))
     datos = generar(cfg, a.salida, a.repos_dir, a.clonar, hoy)

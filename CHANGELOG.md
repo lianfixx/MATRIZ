@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-11-11 · diagnóstico del secreto MATRIZ_TOKEN
+
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: Emi, 11/11/2026: publicar la Matriz. Corrección propia: tras la entrada anterior GitHub sigue respondiendo «Authentication failed» al leer los ocho privados.
+- Cambios: el generador quita espacios y saltos de línea del token y, al clonar, informa si el secreto existe, su forma y su longitud, sin mostrarlo.
+- Archivos: `tools/generar.py` y este registro.
+- Verificación: `python3 -m unittest discover -s tools -p 'test_*.py'` → aprobado; corrida en GitHub → ver Actions.
+- Pendiente: si el secreto no es válido, volver a generarlo y guardarlo.
+
 ## 2026-11-11 · corrección: lectura de privados y dos corridas seguidas
 
 - Agente: Claude Code (sesión en la nube)
