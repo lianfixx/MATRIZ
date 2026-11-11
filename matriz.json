@@ -653,5 +653,206 @@
         }
       ]
     }
-  ]
+  ],
+  "inventario": {
+    "_doc": "Inventario que no vive en los repositorios: tareas programadas y skills instaladas en Claude. Lo actualiza la revisión semanal (docs/REVISION_SEMANAL.md). Solo nombres, horarios y resultados: nunca el texto de las tareas, datos de clientes ni secretos. Horarios en hora del centro de México.",
+    "revisado": "2026-11-11",
+    "tareas": [
+      {
+        "nombre": "Actualizar la Matriz (GitHub Actions)",
+        "cerebro": "matriz",
+        "repo": "MATRIZ",
+        "horario": "Diario 06:17",
+        "estado": "activa"
+      },
+      {
+        "nombre": "Revisión semanal de la Matriz",
+        "cerebro": "matriz",
+        "repo": "MATRIZ",
+        "horario": "Domingos 20:13",
+        "estado": "activa"
+      },
+      {
+        "nombre": "Cierre diario matriz Castorena (Claude)",
+        "cerebro": "castorena",
+        "repo": "Cerebro-Castorena-",
+        "horario": "Diario 18:43",
+        "estado": "activa",
+        "ultima_corrida": "2026-11-10",
+        "resultado": "bien"
+      },
+      {
+        "nombre": "INDEP seguimiento diario (Claude)",
+        "cerebro": "castorena",
+        "repo": "INDEP",
+        "horario": "Lunes a viernes, cada hora de 09:04 a 17:04",
+        "estado": "activa",
+        "ultima_corrida": "2026-11-11",
+        "resultado": "bien"
+      },
+      {
+        "nombre": "Aviso boletines JFCA",
+        "cerebro": "castorena",
+        "repo": "INDEP",
+        "horario": "Lunes a viernes 10:41",
+        "estado": "activa",
+        "ultima_corrida": "2026-11-11",
+        "resultado": "bien"
+      },
+      {
+        "nombre": "DOF Castorena · cierre martes",
+        "cerebro": "castorena",
+        "repo": "dof-juridico-monitor",
+        "horario": "Martes 05:50",
+        "estado": "activa",
+        "ultima_corrida": "2026-11-10",
+        "resultado": "bien"
+      },
+      {
+        "nombre": "DOF Castorena · cierre jueves",
+        "cerebro": "castorena",
+        "repo": "dof-juridico-monitor",
+        "horario": "Jueves 06:05",
+        "estado": "activa"
+      },
+      {
+        "nombre": "DOF Castorena · lector nocturno",
+        "cerebro": "castorena",
+        "repo": "dof-juridico-monitor",
+        "horario": "Lunes y miércoles 21:41",
+        "estado": "activa",
+        "ultima_corrida": "2026-11-09",
+        "resultado": "falló: se alcanzó el límite de uso"
+      },
+      {
+        "nombre": "DOF Castorena · SJF viernes",
+        "cerebro": "castorena",
+        "repo": "dof-juridico-monitor",
+        "horario": "Viernes 15:37",
+        "estado": "activa"
+      },
+      {
+        "nombre": "Revisión semanal del algoritmo de X (x-viral)",
+        "cerebro": "contenido-y-video",
+        "repo": "X",
+        "horario": "Lunes 12:47",
+        "estado": "activa"
+      },
+      {
+        "nombre": "Arranque de la primera semana en X",
+        "cerebro": "contenido-y-video",
+        "repo": "X",
+        "horario": "Una vez: lunes 16 nov 2026, 08:00",
+        "estado": "activa"
+      },
+      {
+        "nombre": "Revisión semanal del nicho de historias",
+        "cerebro": "contenido-y-video",
+        "repo": "HISTORIAS-",
+        "horario": "Domingos 18:47",
+        "estado": "activa"
+      },
+      {
+        "nombre": "Radar semanal de tendencias de video",
+        "cerebro": "contenido-y-video",
+        "repo": "VIDEOS-IA-SKILL-MILLA",
+        "horario": "Domingos 21:23",
+        "estado": "activa"
+      },
+      {
+        "nombre": "Selector de modelos · aprendizaje semanal",
+        "cerebro": "herramientas",
+        "repo": "selector-modelos",
+        "horario": "Domingos 18:23",
+        "estado": "activa"
+      }
+    ],
+    "skills_instaladas": [
+      {
+        "nombre": "matriz-castorena",
+        "cerebro": "castorena",
+        "repo": "Cerebro-Castorena-"
+      },
+      {
+        "nombre": "indep",
+        "cerebro": "castorena",
+        "repo": "INDEP"
+      },
+      {
+        "nombre": "escritos-juridicos-castorena",
+        "cerebro": "castorena",
+        "repo": "Escritos-juridicos-CASTORENA"
+      },
+      {
+        "nombre": "dof-castorena",
+        "cerebro": "castorena",
+        "repo": "dof-juridico-monitor"
+      },
+      {
+        "nombre": "milla-asesoria-juridica",
+        "cerebro": "milla-abogados",
+        "repo": "ASESORIAS-JURIDICAS-"
+      },
+      {
+        "nombre": "accion-tlalnepantla",
+        "cerebro": "accion-tlalnepantla",
+        "repo": "ACCION-TLALNEPANTLA-"
+      },
+      {
+        "nombre": "vox-studio",
+        "cerebro": "contenido-y-video",
+        "repo": "VIDEOS-IA-SKILL-MILLA"
+      },
+      {
+        "nombre": "milla-video-studio",
+        "cerebro": "contenido-y-video",
+        "repo": "VIDEOS-IA-SKILL-MILLA"
+      },
+      {
+        "nombre": "x-viral",
+        "cerebro": "contenido-y-video",
+        "repo": "X"
+      },
+      {
+        "nombre": "video-vox",
+        "cerebro": "contenido-y-video",
+        "repo": ""
+      },
+      {
+        "nombre": "pizarras-de-estudio",
+        "cerebro": "estudio",
+        "repo": "ESTUDIO-TEMAS"
+      },
+      {
+        "nombre": "tareas-maestria",
+        "cerebro": "estudio",
+        "repo": "maestria-alta-direccion"
+      },
+      {
+        "nombre": "mes-continuidad",
+        "cerebro": "productos",
+        "repo": "mes."
+      },
+      {
+        "nombre": "estilo-emi",
+        "cerebro": "herramientas",
+        "repo": "estilo-emi"
+      },
+      {
+        "nombre": "selector-de-modelo",
+        "cerebro": "herramientas",
+        "repo": "selector-modelos"
+      },
+      {
+        "nombre": "box-simular",
+        "cerebro": "herramientas",
+        "repo": ""
+      },
+      {
+        "nombre": "rea-ingenieria-inversa",
+        "cerebro": "herramientas",
+        "repo": ""
+      }
+    ]
+  }
 }

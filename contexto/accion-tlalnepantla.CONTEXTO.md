@@ -26,3 +26,7 @@ Sitio público y administración editorial. Portada, agenda, publicaciones, imá
 
 Último registro: 4 nov 2026 · corrección: puentes de skill con YAML válido · Agente: Claude Code (sesión en la nube)
 Pendiente: ninguno.
+
+## Skills instaladas en Claude
+
+- `accion-tlalnepantla` · `ACCION-TLALNEPANTLA-`

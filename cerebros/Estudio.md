@@ -18,4 +18,9 @@ Parte de la [[MATRIZ]].
 - [[maestria-alta-direccion|maestria-alta-direccion]] · privado · 7 nov 2026
 - [[ESTUDIO-TEMAS|ESTUDIO-TEMAS]] · público · 4 nov 2026 · 1 skill(s)
 
+## Skills instaladas en Claude
+
+- `pizarras-de-estudio` · [[ESTUDIO-TEMAS|ESTUDIO-TEMAS]]
+- `tareas-maestria` · [[maestria-alta-direccion|maestria-alta-direccion]]
+
 Para continuar con otra IA: [[estudio.CONTEXTO|archivo de contexto]].

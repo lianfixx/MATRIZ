@@ -35,3 +35,14 @@ Privado: pide acceso a Emi o usa un conector con sesión iniciada.
 https://github.com/lianfixx/cloudfare · último cambio: 11 nov 2026
 
 Entorno para que Claude Code o Codex trabajen con Cloudflare a través del CLI oficial cf. Solo la conexión y las reglas; no incluye proyectos.
+
+## Tareas programadas
+
+- Selector de modelos · aprendizaje semanal · Domingos 18:23 · repo `selector-modelos`
+
+## Skills instaladas en Claude
+
+- `estilo-emi` · `estilo-emi`
+- `selector-de-modelo` · `selector-modelos`
+- `box-simular` · sin repositorio
+- `rea-ingenieria-inversa` · sin repositorio

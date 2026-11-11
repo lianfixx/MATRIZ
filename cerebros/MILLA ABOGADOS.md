@@ -21,4 +21,8 @@ Parte de la [[MATRIZ]].
 - [[impulso-libre|impulso-libre]] · privado · 4 nov 2026
 - [[meta-ads-client-onboarding|meta-ads-client-onboarding]] · privado · 4 nov 2026
 
+## Skills instaladas en Claude
+
+- `milla-asesoria-juridica` · [[ASESORIAS-JURIDICAS|ASESORIAS-JURIDICAS-]]
+
 Para continuar con otra IA: [[milla-abogados.CONTEXTO|archivo de contexto]].

@@ -34,3 +34,8 @@ Skills: `pizarras-de-estudio`
 
 Último registro: 4 nov 2026 · corrección: puentes de skill con YAML válido · Agente: Claude Code (sesión en la nube)
 Pendiente: ninguno.
+
+## Skills instaladas en Claude
+
+- `pizarras-de-estudio` · `ESTUDIO-TEMAS`
+- `tareas-maestria` · `maestria-alta-direccion`

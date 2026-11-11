@@ -19,4 +19,15 @@ Parte de la [[MATRIZ]].
 - [[selector-modelos|selector-modelos]] · privado · 9 nov 2026
 - [[cloudfare|cloudfare]] · público · 11 nov 2026
 
+## Tareas programadas
+
+- Selector de modelos · aprendizaje semanal · Domingos 18:23 · repo `selector-modelos`
+
+## Skills instaladas en Claude
+
+- `estilo-emi` · [[estilo-emi|estilo-emi]]
+- `selector-de-modelo` · [[selector-modelos|selector-modelos]]
+- `box-simular` · sin repositorio
+- `rea-ingenieria-inversa` · sin repositorio
+
 Para continuar con otra IA: [[herramientas.CONTEXTO|archivo de contexto]].

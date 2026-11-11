@@ -19,4 +19,18 @@ Parte de la [[MATRIZ]].
 - [[X|X]] · público · 11 nov 2026 · 1 skill(s)
 - [[HISTORIAS|HISTORIAS-]] · público · 11 nov 2026 · 1 skill(s)
 
+## Tareas programadas
+
+- Revisión semanal del algoritmo de X (x-viral) · Lunes 12:47 · repo `X`
+- Arranque de la primera semana en X · Una vez: lunes 16 nov 2026, 08:00 · repo `X`
+- Revisión semanal del nicho de historias · Domingos 18:47 · repo `HISTORIAS-`
+- Radar semanal de tendencias de video · Domingos 21:23 · repo `VIDEOS-IA-SKILL-MILLA`
+
+## Skills instaladas en Claude
+
+- `vox-studio` · [[VIDEOS-IA-SKILL-MILLA|VIDEOS-IA-SKILL-MILLA]]
+- `milla-video-studio` · [[VIDEOS-IA-SKILL-MILLA|VIDEOS-IA-SKILL-MILLA]]
+- `x-viral` · [[X|X]]
+- `video-vox` · sin repositorio
+
 Para continuar con otra IA: [[contenido-y-video.CONTEXTO|archivo de contexto]].

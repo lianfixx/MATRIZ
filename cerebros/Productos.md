@@ -18,4 +18,8 @@ Parte de la [[MATRIZ]].
 - [[PANEL-FIRMA|PANEL-FIRMA-]] · privado · 4 nov 2026
 - [[mes|mes.]] · público · 24 oct 2026
 
+## Skills instaladas en Claude
+
+- `mes-continuidad` · [[mes|mes.]]
+
 Para continuar con otra IA: [[productos.CONTEXTO|archivo de contexto]].

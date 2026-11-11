@@ -47,3 +47,17 @@ https://github.com/lianfixx/HISTORIAS- · último cambio: 11 nov 2026
 Método, motor y memoria para hacer las historias de Instagram de Emi con cualquier IA: la IA pregunta, propone y dibuja; Emi decide.
 
 Skills: `historias-studio`
+
+## Tareas programadas
+
+- Revisión semanal del algoritmo de X (x-viral) · Lunes 12:47 · repo `X`
+- Arranque de la primera semana en X · Una vez: lunes 16 nov 2026, 08:00 · repo `X`
+- Revisión semanal del nicho de historias · Domingos 18:47 · repo `HISTORIAS-`
+- Radar semanal de tendencias de video · Domingos 21:23 · repo `VIDEOS-IA-SKILL-MILLA`
+
+## Skills instaladas en Claude
+
+- `vox-studio` · `VIDEOS-IA-SKILL-MILLA`
+- `milla-video-studio` · `VIDEOS-IA-SKILL-MILLA`
+- `x-viral` · `X`
+- `video-vox` · sin repositorio

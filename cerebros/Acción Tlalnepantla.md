@@ -17,4 +17,8 @@ Parte de la [[MATRIZ]].
 
 - [[ACCION-TLALNEPANTLA|ACCION-TLALNEPANTLA-]] · público · 4 nov 2026
 
+## Skills instaladas en Claude
+
+- `accion-tlalnepantla` · [[ACCION-TLALNEPANTLA|ACCION-TLALNEPANTLA-]]
+
 Para continuar con otra IA: [[accion-tlalnepantla.CONTEXTO|archivo de contexto]].

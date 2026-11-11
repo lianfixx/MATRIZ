@@ -37,6 +37,24 @@ Si eres una IA: lee [AGENTS.md](AGENTS.md) y luego el archivo de `contexto/` del
 - 9 nov 2026 · **Cerebro-Castorena-** · Cotejo Grupo Liverpool reemplazado en Drive (anotación del 27969) · Agente: Muse (Muse Spark)
 - 4 nov 2026 · **Escritos-juridicos-CASTORENA** · corrección: puentes de skill con YAML válido · Agente: Claude Code (sesión en la nube)
 
+## Automatizaciones y skills
+
+14 tareas programadas activas y 17 skills instaladas en Claude · inventario revisado el 11 nov 2026.
+
+Fallaron en su última corrida:
+
+- DOF Castorena · lector nocturno · Lunes y miércoles 21:41 · última: 9 nov 2026, falló: se alcanzó el límite de uso
+
+De la Matriz misma:
+
+- Actualizar la Matriz (GitHub Actions) · Diario 06:17
+- Revisión semanal de la Matriz · Domingos 20:13
+
+Skills instaladas sin repositorio (sin respaldo ni historial en GitHub): `video-vox`, `box-simular`, `rea-ingenieria-inversa`.
+
+Skills que están en un repositorio pero no instaladas en Claude: `editor-studio`, `historias-studio`, `pizarra-studio`.
+
+
 ## Visibilidad
 
 12 públicos y 8 privados. Cualquier persona puede leer los públicos.

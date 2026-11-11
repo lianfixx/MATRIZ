@@ -55,3 +55,7 @@ Privado: pide acceso a Emi o usa un conector con sesión iniciada.
 https://github.com/lianfixx/meta-ads-client-onboarding · último cambio: 4 nov 2026
 
 Privado: pide acceso a Emi o usa un conector con sesión iniciada.
+
+## Skills instaladas en Claude
+
+- `milla-asesoria-juridica` · `ASESORIAS-JURIDICAS-`

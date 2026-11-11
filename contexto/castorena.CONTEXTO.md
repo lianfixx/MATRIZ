@@ -51,3 +51,20 @@ https://github.com/lianfixx/dof-juridico-monitor · último cambio: 9 nov 2026
 Sistema autónomo, auditable y agnóstico de proveedor para revisar el Diario Oficial de la Federación (DOF), verificar cobertura, detectar novedades jurídicas relevantes y producir entregables ejecutivos y de estudio.
 
 Skills: `dof-castorena`
+
+## Tareas programadas
+
+- Cierre diario matriz Castorena (Claude) · Diario 18:43 · última: 10 nov 2026, bien · repo `Cerebro-Castorena-`
+- INDEP seguimiento diario (Claude) · Lunes a viernes, cada hora de 09:04 a 17:04 · última: 11 nov 2026, bien · repo `INDEP`
+- Aviso boletines JFCA · Lunes a viernes 10:41 · última: 11 nov 2026, bien · repo `INDEP`
+- DOF Castorena · cierre martes · Martes 05:50 · última: 10 nov 2026, bien · repo `dof-juridico-monitor`
+- DOF Castorena · cierre jueves · Jueves 06:05 · repo `dof-juridico-monitor`
+- DOF Castorena · lector nocturno · Lunes y miércoles 21:41 · última: 9 nov 2026, falló: se alcanzó el límite de uso · repo `dof-juridico-monitor`
+- DOF Castorena · SJF viernes · Viernes 15:37 · repo `dof-juridico-monitor`
+
+## Skills instaladas en Claude
+
+- `matriz-castorena` · `Cerebro-Castorena-`
+- `indep` · `INDEP`
+- `escritos-juridicos-castorena` · `Escritos-juridicos-CASTORENA`
+- `dof-castorena` · `dof-juridico-monitor`
