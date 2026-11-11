@@ -38,13 +38,13 @@ Entorno para que Claude Code o Codex trabajen con Cloudflare a través del CLI o
 
 ### box-simular (privado)
 
-https://github.com/lianfixx/box-simular · último cambio: sin dato
+https://github.com/lianfixx/box-simular · último cambio: 11 nov 2026
 
 Privado: pide acceso a Emi o usa un conector con sesión iniciada.
 
 ### rea-ingenieria-inversa (privado)
 
-https://github.com/lianfixx/rea-ingenieria-inversa · último cambio: sin dato
+https://github.com/lianfixx/rea-ingenieria-inversa · último cambio: 11 nov 2026
 
 Privado: pide acceso a Emi o usa un conector con sesión iniciada.
 

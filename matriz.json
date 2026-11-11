@@ -388,6 +388,20 @@
           "registro": [
             {
               "fecha": "2026-11-11",
+              "titulo": "GitHub corre las pruebas de todas las skills en cada push",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "trabajo nuevo `pruebas` en `.github/workflows/registro-ia.yml`, junto al que ya revisaba registro, secretos y reglas: instala FFmpeg y numpy 2.5.4, Pillow 13.0.0 y SciPy 1.18.1 sobre Python 3.13, y corre las pruebas de milla-video-studio, vox-studio, pizarra-studio, editor-studio y del radar, `ia/test_guard.py`, `check_skill` de las cuatro skills con sus puentes y el empaquetado de Editor Studio (que falla si quedan enlaces rotos). Usa el código del propio commit; las reglas siguen aplicándose con la versión de la base, como antes.",
+              "pendiente": "mirar que el trabajo `pruebas` salga en verde en el pull request."
+            },
+            {
+              "fecha": "2026-11-11",
+              "titulo": "Editor Studio 0.2.0: segunda auditoría de fondo, con tres revisores independientes",
+              "agente": "Claude Code (sesión en la nube)",
+              "cambios": "tres revisores independientes, solo de lectura (flujo bajo estrés, imagen y sonido, guías y conexiones), encontraron unos 40 defectos reales; todos corregidos. **Flujo**: `cortar` ya no agota la memoria en clips largos (corta tramo por tramo y une); `render` y `validar` detectan cortes, mapa de rostro o recortes de otro corte; `ingerir` conserva el desfase inicial del audio y recorta cuando imagen y sonido duran distinto; los silencios se sostienen con ruido o música de fondo (umbral con piso de ruido más las pausas de la transcripción, con aviso); una repetición con frases en medio queda como dudosa; los cortes y la censura quedan atados a su transcripción y la censura entra en la aprobación; las transcripciones llegan ordenadas y sin palabras invertidas. **Reglas que solo cumplía la prosa**: tope de nivel y densidad de sonido por espacio, música preguntada, tipo de video, permiso de quien sale a cuadro, forma del plan, barrido solo sobre un corte, renglones de panel de hasta 32 letras, foto en tarjeta sin tapar la cara, tercer `detras` rechazado, visto bueno final de Emi con `aprobar … final`. **Imagen**: panel y títulos que siempre caben (medición de mayúsculas, dos líneas o rechazo), subtítulos de un solo tamaño, acento que se lee sobre oscuro (en PAN entra el dorado), zoom `push` sin salto, foto a pantalla por corte, renglones del panel sin parpadeo, transición del panel sin huecos, espacios sobrios sin sombras, giros ni flecha y con títulos en altas y bajas, palabra activa sin parpadeo. **Sonido**: efectos nivelados por sonoridad y no por pico; cuatro efectos de ruido que salían casi mudos; tonos con ataque y armónico; golpe audible en teléfono; tono de censura más bajo y con fundido. **Otras IA y guías**: tabla «Qué skill usar» en `AGENTS.md` y menciones en `CLAUDE.md`, `GEMINI.md`, `START_HERE.md`, `ia/INSTRUCCIONES_PROYECTO.md`, Vox y Pizarra; plantilla `plantilla/TRASPASO.md`; el paquete corrige enlaces y rutas, lleva `LEEME-PAQUETE.md` y falla si queda un enlace roto; glosario para quien no programa; `CEREBRO.md` dice el estado real de los puentes y cómo ver o pausar la tarea del radar; `docs/VALIDACION.md` con los comandos; `*.webm` ignorado; subtítulos de Castorena más cortos.",
+              "pendiente": "un video real de Emi (nada sustituye eso). Sin comprobar: Dolby Vision real de iPhone, macOS, sticker en video a cámara, video generado con Kling. Añadir las pruebas nuevas al flujo de GitHub (`registro-ia.yml`) requiere confirmación expresa de Emi. `ia/test_guard.py` no tiene casos propios para los tres frenos de commit nuevos (su formato prueba llamadas de herramienta, no frenos de commit)."
+            },
+            {
+              "fecha": "2026-11-11",
               "titulo": "AssemblyAI conectado y comparado con ElevenLabs",
               "agente": "Claude Code (sesión en la nube)",
               "cambios": "`TECNICA.md` registra que AssemblyAI ya funciona, el detalle de la cabecera y la primera comparación entre los dos motores.",
@@ -427,20 +441,6 @@
               "agente": "Claude Code (sesión en la nube)",
               "cambios": "`musica.archivo` y `musica.origen` en el guion para montar una pista externa: `recortar_pista` salta el silencio inicial, corta a la medida, desvanece el final y la deja al nivel de la de código; el origen es obligatorio y queda con su huella en `estados/musica.json`. La música de código sigue siendo la opción por defecto. Guía nueva `FLOW-MUSIC.md` (decisión de Emi, cuándo proponerla, cómo conseguir la pista con su sesión en el box y sus límites) y script `scripts/box/subir_drive.mjs` para subir del box a Drive.",
               "pendiente": "fusionar a `main`; que Emi suba el paquete actualizado a la app."
-            },
-            {
-              "fecha": "2026-11-11",
-              "titulo": "Vox Studio 0.11.0: guía del momento exacto para 3D, tratamientos, Blender y ComfyUI",
-              "agente": "Claude Code (sesión en la nube)",
-              "cambios": "`TRES-D.md` reescrita como procedimiento de decisión: el estilo es el recorte ilustrado y la respuesta por defecto es no; cinco preguntas en orden (qué dice la voz, si el movimiento es la idea, qué se pierde, si es el mejor momento del video, si Emi lo eligió); tabla del momento de cada recurso con la escena donde va, cuándo no va y qué usar en su lugar; ejemplos razonados y reglas por espacio. El validador lo exige: como mucho una escena con 3D por video, cada objeto solo en las funciones que le corresponden, ninguno en `opinion` ni `cierre`, `porque` también en `secuencia`, un solo tratamiento por video; más de uno solo con el pedido de Emi escrito en `excepcion_3d`. Avisos nuevos: barras demasiado parecidas, tratamiento sobre algo que no es foto real, 3D sin `alternativa_plana`. Comando nuevo `comparar`: deja la escena con el recurso y en plano lado a lado para que Emi elija antes de rendir; queda como compuerta en `SKILL.md`. El demo 2 volvió a recortes ilustrados.",
-              "pendiente": "que Emi confirme qué fue lo que menos le gustó (la interpretación anotada en los aprendizajes es de Claude); que vea la comparación y el demo restaurado; fusionar a `main`."
-            },
-            {
-              "fecha": "2026-11-11",
-              "titulo": "Vox Studio 0.10.1: el resaltado cubre las tildes y verificación final del demo",
-              "agente": "Claude Code (sesión en la nube)",
-              "cambios": "la caja del resaltado del titular sube cuando la palabra lleva mayúscula con tilde o Ñ, y cada línea se pinta encima de la siguiente (en la portada «CÓDIGO» perdía la tilde). Dos lecciones nuevas en los aprendizajes. La entrada anterior del registro se completó con el resultado del render final.",
-              "pendiente": "que Emi vea y escuche el demo; probar ComfyUI con un servidor real; fusionar a `main`."
             }
           ]
         },
@@ -655,8 +655,8 @@
           "nombre": "box-simular",
           "url": "https://github.com/lianfixx/box-simular",
           "visibilidad": "privado",
-          "leido": false,
-          "ultimo_cambio": "",
+          "leido": true,
+          "ultimo_cambio": "2026-11-11",
           "resumen": "",
           "skills": [],
           "protocolo": "",
@@ -666,8 +666,8 @@
           "nombre": "rea-ingenieria-inversa",
           "url": "https://github.com/lianfixx/rea-ingenieria-inversa",
           "visibilidad": "privado",
-          "leido": false,
-          "ultimo_cambio": "",
+          "leido": true,
+          "ultimo_cambio": "2026-11-11",
           "resumen": "",
           "skills": [],
           "protocolo": "",

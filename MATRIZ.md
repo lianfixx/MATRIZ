@@ -26,9 +26,9 @@ Si eres una IA: lee [AGENTS.md](AGENTS.md) y luego el archivo de `contexto/` del
 
 ## Lo último que se hizo
 
+- 11 nov 2026 · **VIDEOS-IA-SKILL-MILLA** · GitHub corre las pruebas de todas las skills en cada push · Agente: Claude Code (sesión en la nube)
+- 11 nov 2026 · **VIDEOS-IA-SKILL-MILLA** · Editor Studio 0.2.0: segunda auditoría de fondo, con tres revisores independientes · Agente: Claude Code (sesión en la nube)
 - 11 nov 2026 · **VIDEOS-IA-SKILL-MILLA** · AssemblyAI conectado y comparado con ElevenLabs · Agente: Claude Code (sesión en la nube)
-- 11 nov 2026 · **VIDEOS-IA-SKILL-MILLA** · AssemblyAI: llave guardada, subida de audio rechazada · Agente: Claude Code (sesión en la nube)
-- 11 nov 2026 · **VIDEOS-IA-SKILL-MILLA** · Entorno, box y tarea programada de Editor Studio · Agente: Claude Code (sesión en la nube)
 - 11 nov 2026 · **X** · x-viral 1.0.3: X bloquea el inicio de sesión; Emi publica, la IA entrega · Agente: Claude Code (sesión en la nube)
 - 10 nov 2026 · **Cerebro-Castorena-** · Cierre diario programado: maestro INDEP v22 copiado · Agente: Claude Code (ejecución programada)
 - 10 nov 2026 · **X** · Candidatas de conversación, encargo para Muse y fecha de arranque · Agente: Claude Code (sesión en la nube)
@@ -36,10 +36,6 @@ Si eres una IA: lee [AGENTS.md](AGENTS.md) y luego el archivo de `contexto/` del
 - 9 nov 2026 · **Cerebro-Castorena-** · Cierre diario programado (sin cambios de tablas) · Agente: Claude Code (ejecución programada)
 - 9 nov 2026 · **Cerebro-Castorena-** · Cotejo Grupo Liverpool reemplazado en Drive (anotación del 27969) · Agente: Muse (Muse Spark)
 - 4 nov 2026 · **Escritos-juridicos-CASTORENA** · corrección: puentes de skill con YAML válido · Agente: Claude Code (sesión en la nube)
-
-## Sin lectura en esta corrida
-
-`box-simular`, `rea-ingenieria-inversa`. Falta acceso o el secreto `MATRIZ_TOKEN`.
 
 ## Automatizaciones y skills
 

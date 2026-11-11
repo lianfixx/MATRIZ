@@ -26,8 +26,8 @@ Un método portable para producir videos de MILLA ABOGADOS: investigación, guio
 
 Skills: `editor-studio`, `milla-video-studio`, `pizarra-studio`, `vox-studio`
 
-Último registro: 11 nov 2026 · AssemblyAI conectado y comparado con ElevenLabs · Agente: Claude Code (sesión en la nube)
-Pendiente: repetir la comparación con el primer crudo de Emi y fijar el motor por defecto con lo que se oiga en los cortes.
+Último registro: 11 nov 2026 · GitHub corre las pruebas de todas las skills en cada push · Agente: Claude Code (sesión en la nube)
+Pendiente: mirar que el trabajo `pruebas` salga en verde en el pull request.
 
 ### X (público)
 

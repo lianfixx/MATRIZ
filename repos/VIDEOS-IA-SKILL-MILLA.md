@@ -5,7 +5,7 @@ visibilidad: "público"
 ultimo_cambio: 2026-11-11
 skills: 4
 ultimo_agente: "Claude Code (sesión en la nube)"
-pendiente: "repetir la comparación con el primer crudo de Emi y fijar el motor por defecto con lo que se oiga en los cortes."
+pendiente: "mirar que el trabajo `pruebas` salga en verde en el pull request."
 github: "https://github.com/lianfixx/VIDEOS-IA-SKILL-MILLA"
 tags:
   - "repo"
@@ -30,12 +30,12 @@ Un método portable para producir videos de MILLA ABOGADOS: investigación, guio
 
 ## Últimos registros
 
+- 11 nov 2026 · GitHub corre las pruebas de todas las skills en cada push · Agente: Claude Code (sesión en la nube)
+- 11 nov 2026 · Editor Studio 0.2.0: segunda auditoría de fondo, con tres revisores independientes · Agente: Claude Code (sesión en la nube)
 - 11 nov 2026 · AssemblyAI conectado y comparado con ElevenLabs · Agente: Claude Code (sesión en la nube)
 - 11 nov 2026 · AssemblyAI: llave guardada, subida de audio rechazada · Agente: Claude Code (sesión en la nube)
 - 11 nov 2026 · Entorno, box y tarea programada de Editor Studio · Agente: Claude Code (sesión en la nube)
-- 11 nov 2026 · Editor Studio 0.1.0 (candidata): skill para editar los videos que Emi graba, cerebro de video y radar semanal · Agente: Claude Code (sesión en la nube)
-- 11 nov 2026 · Plan de la skill de edición (Editor Studio) y análisis de siete videos de referencia · Agente: Claude Code (sesión en la nube)
 
 ## Pendiente más reciente
 
-repetir la comparación con el primer crudo de Emi y fijar el motor por defecto con lo que se oiga en los cortes.
+mirar que el trabajo `pruebas` salga en verde en el pull request.

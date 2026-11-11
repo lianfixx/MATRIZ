@@ -18,8 +18,8 @@ Parte de la [[MATRIZ]].
 - [[estilo-emi|estilo-emi]] · privado · 9 nov 2026
 - [[selector-modelos|selector-modelos]] · privado · 9 nov 2026
 - [[cloudfare|cloudfare]] · público · 11 nov 2026
-- [[box-simular|box-simular]] · privado · sin dato
-- [[rea-ingenieria-inversa|rea-ingenieria-inversa]] · privado · sin dato
+- [[box-simular|box-simular]] · privado · 11 nov 2026
+- [[rea-ingenieria-inversa|rea-ingenieria-inversa]] · privado · 11 nov 2026
 
 ## Tareas programadas
 

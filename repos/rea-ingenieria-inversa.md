@@ -2,6 +2,7 @@
 tipo: "repo"
 cerebro: "Herramientas"
 visibilidad: "privado"
+ultimo_cambio: 2026-11-11
 github: "https://github.com/lianfixx/rea-ingenieria-inversa"
 tags:
   - "repo"
@@ -11,8 +12,8 @@ generado: "tools/generar.py · no editar a mano: se reescribe cada día"
 
 # rea-ingenieria-inversa
 
-Cerebro: [[Herramientas]] · privado · último cambio: sin dato
+Cerebro: [[Herramientas]] · privado · último cambio: 11 nov 2026
 
 [Abrir en GitHub](https://github.com/lianfixx/rea-ingenieria-inversa)
 
-Sin lectura en esta corrida (falta acceso o el token de la Matriz).
+Repositorio privado: aquí solo se publica su nombre y su fecha.
