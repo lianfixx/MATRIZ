@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-11-12 · Matriz 1.1.2: decisiones de Emi sobre verificaciones
+
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: Emi, 12/11/2026: «no limites nada y respecto Google, no quiero que quites la verificación de 2 pasos de Google, solo de Cloudflare y GitHub si era posible».
+- Cambios: en `EMI.md` se corrige la regla «sin códigos». La verificación en 2 pasos de Google se queda activa y no se instaló ningún autenticador. GitHub y Cloudflare no tenían verificación en 2 pasos (comprobado en sus páginas de seguridad): los códigos venían de sus páginas, que ya no se usan. El token «CLAUDE» de Cloudflare conserva todos sus permisos por decisión de Emi (cierra el pendiente de 1.1.1). La página de Google que quedó abierta en la computadora virtual se cerró sin cambios.
+- Archivos: `EMI.md` y este registro.
+- Verificación: ninguna prueba de código afectada (solo texto).
+- Pendiente: ninguno nuevo.
+
 ## 2026-11-12 · Matriz 1.1.1: límite exacto de intentos y regla «sin códigos» para toda IA
 
 - Agente: Claude Code (sesión en la nube)
