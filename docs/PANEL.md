@@ -57,3 +57,20 @@ Los secretos solo existen en el paso de publicar; los tres últimos se copian co
 ## Para otras IA
 
 `/llms.txt` (mapa), `/MATRIZ_GENERAL.md` (todo en un archivo), `/matriz.json` (datos), `/contexto/<cerebro>.CONTEXTO.md` y el conector MCP en `/mcp` ([CONECTAR_IA.md](CONECTAR_IA.md)).
+
+## Mantenimiento sin códigos
+
+Emi pidió (12/11/2026) que GitHub y Cloudflare no le pidan códigos ni verificaciones. Por eso el mantenimiento no usa sus páginas (que piden confirmar identidad) sino sus API, con dos llaves limitadas guardadas en la computadora virtual de Emi (box «main»), en `~/.config/matriz/`, legibles solo por su usuario:
+
+| Llave | Puede | No puede | Vence |
+|---|---|---|---|
+| GitHub «Matriz administración (Claude)» (`github-admin`) | Secretos, variables y workflows de los repositorios de Emi | Leer ni cambiar código | 12/11/2027 |
+| Cloudflare «Matriz administración (Claude)» (`cloudflare-admin`) | Crear y renovar llaves de API («Tokens de API: Editar») | Nada más | 12/11/2027 |
+
+En la computadora virtual:
+
+- `node ~/.config/matriz/renovar-cloudflare.mjs`: renueva «MATRIZ panel (GitHub Actions)» en Cloudflare, la comprueba y la guarda en el secreto `CLOUDFLARE_API_TOKEN`.
+- `printf '%s' "$VALOR" | node ~/.config/matriz/secreto.mjs <repositorio> <NOMBRE>`: crea o cambia cualquier secreto de Actions.
+- `~/bin/matriz-gh <ruta de la API> [método] [json]`: llamadas a la API de GitHub; por ejemplo, volver a publicar el panel: `~/bin/matriz-gh repos/lianfixx/MATRIZ/actions/workflows/publicar-panel.yml/dispatches POST '{"ref":"main"}'`.
+
+Ningún valor se imprime ni pasa por una conversación. Los vencimientos están en `inventario.json` y la revisión del domingo avisa 21 días antes. Para revocarlas: GitHub → Settings → Developer settings → Fine-grained tokens, y Cloudflare → Mi perfil → Tokens de API.

@@ -220,6 +220,16 @@
       "nombre": "Token de GitHub «MATRIZ escritura» (edición desde el panel)",
       "fecha": "2027-11-12",
       "nota": "Solo lianfixx/MATRIZ, Contents lectura y escritura. Regenerarlo y guardarlo en el secreto MATRIZ_ESCRITURA; si vence, el panel se ve pero no edita."
+    },
+    {
+      "nombre": "Llave de GitHub «Matriz administración (Claude)»",
+      "fecha": "2027-11-12",
+      "nota": "En la computadora virtual (~/.config/matriz/github-admin). Secretos, variables y workflows de los repositorios de Emi; no lee código. Regenerarla en GitHub con los mismos permisos."
+    },
+    {
+      "nombre": "Llave de Cloudflare «Matriz administración (Claude)»",
+      "fecha": "2027-11-12",
+      "nota": "En la computadora virtual (~/.config/matriz/cloudflare-admin). Solo «Tokens de API: Editar». Regenerarla con la plantilla «Crear tokens adicionales»."
     }
   ]
 }

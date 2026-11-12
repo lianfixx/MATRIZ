@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-11-12 · Matriz 1.0.2: mantenimiento sin códigos ni verificaciones
+
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: Emi, 12/11/2026: «haz algo para que no me ande pidiendo códigos ni verificaciones ni en GitHub ni en Cloudflare».
+- Cambios: dos llaves limitadas en la computadora virtual de Emi (`~/.config/matriz/`, permiso 600): GitHub «Matriz administración (Claude)» (secretos, variables y workflows de sus repositorios; sin acceso a código) y Cloudflare «Matriz administración (Claude)» (solo «Tokens de API: Editar»), ambas hasta el 12/11/2027. Con ellas, renovar llaves, cambiar secretos y volver a publicar se hace por API, sin las páginas que piden confirmar identidad. Scripts `renovar-cloudflare.mjs`, `secreto.mjs` y `~/bin/matriz-gh`. Documentado en `docs/PANEL.md` («Mantenimiento sin códigos»); vencimientos en `inventario.json`.
+- Archivos: `docs/PANEL.md`, `inventario.json` y este registro.
+- Verificación: la llave de GitHub lista los secretos de MATRIZ (200) y no lee código de un repositorio privado (403); la de Cloudflare se verifica activa; `renovar-cloudflare.mjs` renovó la llave del panel y la guardó en GitHub sin abrir páginas; «Publicar panel» con esa llave → aprobado; `/api/sesion` → `configurado: true` (contraseña y token de escritura activos).
+- Pendiente: agregar el conector en Claude y ChatGPT (Emi).
+
 ## 2026-11-12 · Matriz 1.0.1: llave de Cloudflare renovada y panel publicado
 
 - Agente: Claude Code (sesión en la nube)
