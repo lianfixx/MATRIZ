@@ -31,8 +31,8 @@ Matriz documental de Emi para Castorena Abogados. Aquí están las cinco tablas 
 - 11 nov 2026 · Cierre diario programado (sin cambios de tablas) · Agente: Claude Code (ejecución programada)
 - 10 nov 2026 · Cierre diario programado: maestro INDEP v22 copiado · Agente: Claude Code (ejecución programada)
 - 9 nov 2026 · Cierre diario programado (sin cambios de tablas) · Agente: Claude Code (ejecución programada)
-- 9 nov 2026 · Cotejo Grupo Liverpool reemplazado en Drive (anotación del [número]) · Agente: Muse (Muse Spark)
-- 9 nov 2026 · Cotejo Grupo Liverpool: anotación del [expediente] · Agente: Claude Code (claude-opus-5-5, sesión con Emi y Mac enlazada)
+- 9 nov 2026 · Cotejo [cliente] reemplazado en Drive (anotación del [número]) · Agente: Muse (Muse Spark)
+- 9 nov 2026 · Cotejo [cliente]: anotación del [expediente] · Agente: Claude Code (claude-opus-5-5, sesión con Emi y Mac enlazada)
 
 ## Pendiente más reciente
 

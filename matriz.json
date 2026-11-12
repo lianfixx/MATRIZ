@@ -43,13 +43,13 @@
             },
             {
               "fecha": "2026-11-09",
-              "titulo": "Cotejo Grupo Liverpool reemplazado en Drive (anotación del [número])",
+              "titulo": "Cotejo [cliente] reemplazado en Drive (anotación del [número])",
               "agente": "Muse (Muse Spark)",
-              "pendiente": "diferencia 50/51 del Cotejo Liverpool; nota del ID 12 del Concentrado; vigencia de los folios TFJA."
+              "pendiente": "diferencia 50/51 del Cotejo [cliente]; nota del ID 12 del Concentrado; vigencia de los folios TFJA."
             },
             {
               "fecha": "2026-11-09",
-              "titulo": "Cotejo Grupo Liverpool: anotación del [expediente]",
+              "titulo": "Cotejo [cliente]: anotación del [expediente]",
               "agente": "Claude Code (claude-opus-5-5, sesión con Emi y Mac enlazada)",
               "pendiente": "reemplazo en Drive (Muse)."
             },
@@ -57,7 +57,7 @@
               "fecha": "2026-11-09",
               "titulo": "séptima tabla en Drive y sincronización completa",
               "agente": "Muse (Muse Spark)",
-              "pendiente": "diferencia 50/51 del Cotejo Liverpool; nota del ID 12 del Concentrado; vigencia de los folios TFJA."
+              "pendiente": "diferencia 50/51 del Cotejo [cliente]; nota del ID 12 del Concentrado; vigencia de los folios TFJA."
             },
             {
               "fecha": "2026-11-09",
@@ -69,7 +69,7 @@
               "fecha": "2026-11-09",
               "titulo": "Drive sincronizado y verificado",
               "agente": "Claude Code (claude-opus-5-5, sesión con Emi y Mac enlazada)",
-              "pendiente": "decisión de Emi sobre el acceso por enlace; Cotejo acuses INDEP; diferencia 50/51 de Liverpool."
+              "pendiente": "decisión de Emi sobre el acceso por enlace; Cotejo acuses INDEP; diferencia 50/51 de [cliente]."
             }
           ],
           "actividad": {
@@ -1236,11 +1236,11 @@
               0,
               0,
               0,
-              10
+              12
             ],
             "actores_60d": {
-              "Claude": 9,
-              "Emi": 1
+              "Emi": 3,
+              "Claude": 9
             }
           }
         },
@@ -1686,9 +1686,9 @@
           0,
           0,
           5,
-          22
+          24
         ],
-        "esta_semana": 22,
+        "esta_semana": 24,
         "semana_pasada": 5,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -1715,10 +1715,10 @@
       153,
       154,
       196,
-      89
+      91
     ],
     "actores_60d": {
-      "Emi": 519,
+      "Emi": 521,
       "Claude": 201,
       "ChatGPT · Codex": 39
     },
@@ -1736,5 +1736,8 @@
         "dias": 89
       }
     ]
-  }
+  },
+  "reservas_huella": [
+    "9e861941ad8bf5bcb649e5fde92d712528200a216018c2437371498e6ab7683d"
+  ]
 }
