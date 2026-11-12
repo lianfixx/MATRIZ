@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-11-12 · Matriz 0.8.0: generador auditado, métricas, tablero y archivo único
+
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: Emi, 12/11/2026: «AUDITA A PROFUNDIDAD Y MEJORA, ARREGLA» y «que la Matriz General sea la única que deba adjuntar a cualquier IA para que entienda todo; todo nace y sale de ahí».
+- Cambios: correcciones de la revisión independiente del código. Lectura de CHANGELOG con fecha en cualquier posición, encabezados `##` y `###`, orden por fecha y campos en negritas. Bitácora acumulativa (nunca borra líneas). Si un repositorio no se puede leer se conservan sus datos anteriores en vez de vaciarlos. Fechas inválidas ya no detienen la actualización y se validan. La visibilidad se confirma con la API de GitHub: lo que no esté confirmado como público se trata como privado. No se siguen enlaces simbólicos. Se detectan notas con el mismo nombre. No se enlazan repositorios externos. El filtro de privacidad tapa más formatos (expedientes cortos, amparos, montos en pesos y MXN, IDs de Drive) y también los textos del inventario; los nombres de clientes ya no se escriben en el repositorio: vienen del secreto `MATRIZ_RESERVADOS`. Las pruebas usan datos ficticios. Nuevo: actividad por semana e IA a partir de los commits (solo conteos), métricas por cerebro (movimiento, días sin movimiento, pendientes, vencidos, tareas fallidas), vencimientos en `inventario.json`, tablero editable por cerebro (`tablero/<id>.md`) y proyectos nuevos (`proyectos/`), y el archivo único `MATRIZ_GENERAL.md`. EMI.md: Herramientas incluye Simular Box y REA.
+- Archivos: `tools/generar.py`, `tools/test_generar.py`, `matriz.config.json`, `inventario.json`, `EMI.md` y este registro.
+- Verificación: `python3 -m unittest discover -s tools -p 'test_*.py'` → aprobado (14 casos); generación con los repositorios locales → sin nombres de cliente, números de expediente ni IDs de Drive en ningún archivo generado.
+- Pendiente: Worker con edición, panel 3D, workflows y respaldo en Drive (siguientes entradas).
+
 ## 2026-11-12 · Matriz 0.7.0: filtro de privacidad para todo lo que se publica
 
 - Agente: Claude Code (sesión en la nube)

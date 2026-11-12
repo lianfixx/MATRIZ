@@ -87,8 +87,6 @@
     "box-simular",
     "rea-ingenieria-inversa"
   ],
-  "terminos_reservados": [
-    "Liverpool"
-  ],
-  "_doc_reservas": "terminos_reservados: nombres de clientes o contrapartes que nunca deben aparecer en la Matriz, el panel ni el conector (se sustituyen por [cliente]). Los números de expediente, correos, teléfonos, CURP, RFC y montos se tapan solos."
+  "terminos_reservados": [],
+  "_doc_reservas": "Los nombres de clientes que nunca deben aparecer se guardan en el secreto de GitHub MATRIZ_RESERVADOS (separados por coma), no aquí: escribirlos en este archivo público sería publicarlos. terminos_reservados queda para términos que no sean secretos."
 }

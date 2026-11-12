@@ -12,7 +12,7 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 | Contenido y video | Videos estilo documental (Vox Studio), Pizarra Studio, MILLA Video Studio, X (@emilianomilla_) e historias de Instagram. |
 | Estudio | Maestría en Alta Dirección y pizarras de estudio. |
 | Productos | PANEL FIRMA (gestión jurídica) y Mes (finanzas personales). |
-| Herramientas | Su estilo de escritura, el selector de modelo y el entorno de Cloudflare. |
+| Herramientas | Su estilo de escritura, el selector de modelo, el entorno de Cloudflare, su computadora virtual (Simular Box) e ingeniería inversa (REA). |
 
 ## Con qué trabaja
 

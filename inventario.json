@@ -204,5 +204,17 @@
       "cerebro": "herramientas",
       "repo": "rea-ingenieria-inversa"
     }
+  ],
+  "vencimientos": [
+    {
+      "nombre": "Token de GitHub «MATRIZ lectura»",
+      "fecha": "2027-02-09",
+      "nota": "Regenerarlo y guardarlo en el secreto MATRIZ_TOKEN."
+    },
+    {
+      "nombre": "Renovación de la conexión Claude–box",
+      "fecha": "2026-12-07",
+      "nota": "Intento automático mensual; si Google pide verificación, Emi la aprueba en el iPhone."
+    }
   ]
 }
