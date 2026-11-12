@@ -124,6 +124,38 @@ def skills(repo: Path) -> list[dict]:
     return list(encontrados.values())
 
 
+# ---------------------------------------------------------------- privacidad
+# Todo texto que viene de un repositorio (resumen, títulos y pendientes del CHANGELOG) pasa por aquí
+# antes de publicarse: la Matriz, el panel y el conector son públicos.
+PATRONES_RESERVADOS = [
+    (re.compile(r"(?<![\d/])\d{2,6}/\d{2,4}(?:-[0-9A-Z]{1,6})+\b"), "[expediente]"),   # 27969/22-17-02-5
+    (re.compile(r"(?<![\d/])\d{2,6}/(?:19|20)\d{2}(?![\d/])"), "[expediente]"),       # 1234/2023, no 11/11/2026
+    (re.compile(r"\b(?:exp(?:ediente)?|juicio|amparo|toca|folio)\.?\s*(?:n[oú]m(?:ero)?\.?\s*)?\d[\d/.-]{2,}", re.I), "[expediente]"),
+    (re.compile(r"[\w.%+-]+@[\w-]+(?:\.[\w-]+)+"), "[correo]"),
+    (re.compile(r"(?<![\w./-])\d{5,}(?![\w./-])"), "[número]"),            # 27969 suelto (folios, asuntos)
+    (re.compile(r"(?<![\w/])(?:\+?52[\s-]?)?(?:\d{2}[\s-]?\d{4}[\s-]?\d{4})(?![\w/])"), "[teléfono]"),
+    (re.compile(r"\b[A-Z][AEIOUX][A-Z]{2}\d{6}[HM][A-Z]{5}[A-Z\d]\d\b"), "[CURP]"),
+    (re.compile(r"\b[A-ZÑ&]{3,4}\d{6}[A-Z\d]{3}\b"), "[RFC]"),
+    (re.compile(r"\$\s?\d[\d,]*(?:\.\d+)?"), "[monto]"),
+]
+TERMINOS_RESERVADOS: list[re.Pattern] = []
+
+
+def configurar_reservas(terminos: list[str]) -> None:
+    TERMINOS_RESERVADOS[:] = [re.compile(r"(?:grupo\s+)?" + re.escape(t), re.I) for t in terminos if t.strip()]
+
+
+def reservar(texto: str) -> str:
+    """Tapa números de expediente, nombres de clientes, correos, teléfonos, CURP, RFC y montos."""
+    if not texto:
+        return texto
+    for patron, sustituto in PATRONES_RESERVADOS:
+        texto = patron.sub(sustituto, texto)
+    for patron in TERMINOS_RESERVADOS:
+        texto = patron.sub("[cliente]", texto)
+    return texto
+
+
 def leer_repo(nombre: str, carpeta: Path | None, privado: bool, detalle: bool, propietario: str) -> dict:
     d: dict = {
         "nombre": nombre,
@@ -141,11 +173,13 @@ def leer_repo(nombre: str, carpeta: Path | None, privado: bool, detalle: bool, p
     d["ultimo_cambio"] = git(["log", "-1", "--format=%cs"], carpeta)
     if privado and not detalle:
         return d
-    d["resumen"] = resumen_readme(leer(carpeta / "README.md"))
+    d["resumen"] = reservar(resumen_readme(leer(carpeta / "README.md")))
     d["skills"] = skills(carpeta)
     m = re.search(r"(\d+\.\d+\.\d+)", leer(carpeta / "ia" / "PROTOCOLO.md")[:200])
     d["protocolo"] = m.group(1) if m else ""
-    d["registro"] = entradas_changelog(leer(carpeta / "CHANGELOG.md"))
+    d["registro"] = [{"fecha": e["fecha"], "titulo": reservar(e["titulo"]), "agente": reservar(e["agente"]),
+                      "pendiente": reservar(e["pendiente"])}
+                     for e in entradas_changelog(leer(carpeta / "CHANGELOG.md"))]
     return d
 
 
@@ -451,6 +485,7 @@ def generar(cfg: dict, salida: Path, repos_dir: Path | None, clonar: bool, hoy: 
             nuevos: list[dict] | None = None) -> dict:
     inv = inv or {}
     nuevos = nuevos or []
+    configurar_reservas(cfg.get("terminos_reservados", []))
     errores = validar(cfg, inv)
     if errores:
         raise SystemExit("Configuración inválida:\n- " + "\n- ".join(errores))

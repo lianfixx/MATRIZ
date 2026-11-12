@@ -31,7 +31,7 @@ Cada semana, el domingo a las 20:13, una tarea programada de Claude hace la [rev
 
 El workflow «Actualizar la Matriz» corre cada día a las 06:17 (hora del centro de México), cuando cambia la configuración, y a mano desde la pestaña Actions. Lee el `README.md`, el `CHANGELOG.md` y las skills de cada repositorio y reescribe el índice.
 
-Para que también lea los repositorios privados hay que guardar un secreto `MATRIZ_TOKEN` (Settings → Secrets and variables → Actions): un token de GitHub de grano fino con permiso **Contents: Read-only**. Sin él la Matriz funciona, pero marca los privados como «sin lectura».
+Para leer los repositorios privados usa el secreto `MATRIZ_TOKEN`: el token de GitHub de grano fino «MATRIZ lectura», con acceso a **todos** los repositorios de `lianfixx` y solo **Contents: Read-only** (vence el 9 de febrero de 2027; la revisión semanal avisa antes). Con ese acceso, un repositorio nuevo aparece solo en «Repositorios nuevos por clasificar». Después de cada actualización, «Publicar panel» sube el panel y el conector a Cloudflare con `CLOUDFLARE_API_TOKEN` y `CLOUDFLARE_ACCOUNT_ID`.
 
 En una computadora, con los repositorios clonados en una misma carpeta:
 
@@ -47,7 +47,11 @@ Esta carpeta ya es una bóveda de Obsidian configurada: grafo con la Matriz al c
 
 ## Privacidad
 
-Este repositorio es público. De los repositorios privados solo publica nombre, cerebro y fecha de último cambio (`"detalle_privados": false`). No guarda datos de clientes ni expedientes.
+Este repositorio, el panel y el conector son públicos. Por eso:
+
+- De los repositorios privados solo se publica nombre, cerebro y fecha de último cambio (`"detalle_privados": false`).
+- Todo texto que viene de un repositorio (resumen, títulos y pendientes de su `CHANGELOG.md`) pasa por un filtro antes de publicarse: los números de expediente, correos, teléfonos, CURP, RFC y montos se tapan solos, y los nombres de `terminos_reservados` en `matriz.config.json` salen como «[cliente]». Para proteger otro nombre, agrégalo ahí.
+- El panel y el conector piden a los buscadores no indexarlos y no escriben en ningún lado.
 
 ## Agregar un repositorio o un cerebro
 

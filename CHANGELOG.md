@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-11-12 · Matriz 0.7.0: filtro de privacidad para todo lo que se publica
+
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: Emi, 12/11/2026: «AUDITA A PROFUNDIDAD Y MEJORA, ARREGLA Y DAME VERSIÓN FINAL».
+- Cambios: la auditoría encontró que la Matriz copiaba de los `CHANGELOG.md` de repositorios públicos un número de expediente y el nombre de un cliente, y que así llegaban al panel y al conector. `tools/generar.py` ahora pasa todo texto de un repositorio (resumen, títulos, agente y pendientes) por un filtro que tapa números de expediente, números de folio sueltos, correos, teléfonos, CURP, RFC y montos, y sustituye por «[cliente]» los nombres de `terminos_reservados` en `matriz.config.json` (hoy: Liverpool). `matriz.json` deja de publicar el campo «cambios». README explica la privacidad y el acceso del token; la guía de Obsidian ya no fija el número de repositorios. El historial de git conserva las versiones anteriores; esos datos ya eran públicos en `Cerebro-Castorena-`.
+- Archivos: `tools/generar.py`, `tools/test_generar.py`, `matriz.config.json`, `README.md`, `docs/OBSIDIAN.md` y este registro.
+- Verificación: `python3 -m unittest discover -s tools -p 'test_*.py'` → aprobado (incluye una prueba de reservas); generación local con los 22 repositorios → sin «Liverpool» ni «27969» en MATRIZ.md, matriz.json, cerebros/, repos/, contexto/ ni bitacora/.
+- Pendiente: integrar los hallazgos de la revisión independiente del código (en curso).
+
 ## 2026-11-12 · Matriz 0.6.0: panel publicado y conector MCP para cualquier IA
 
 - Agente: Claude Code (sesión en la nube)

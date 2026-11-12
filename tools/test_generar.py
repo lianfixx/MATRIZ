@@ -26,7 +26,7 @@ def repo(base: Path, nombre: str, privado_txt: str = "") -> Path:
     (d / "skills" / "demo").mkdir(parents=True)
     (d / ".claude" / "skills" / "demo").mkdir(parents=True)
     (d / "README.md").write_text(f"# {nombre}\n\n![x](y)\n\nTexto **claro** del proyecto. {privado_txt}\n\nOtro.\n")
-    (d / "CHANGELOG.md").write_text(CHANGELOG)
+    (d / "CHANGELOG.md").write_text(CHANGELOG.replace("segunda entrega", "segunda entrega del 27969/22-17-02-5"))
     (d / "skills" / "demo" / "SKILL.md").write_text("---\nname: demo-skill\n---\n")
     (d / ".claude" / "skills" / "demo" / "SKILL.md").write_text("---\nname: puente\n---\n")
     for c in (["init", "-q"], ["add", "-A"],
@@ -78,6 +78,18 @@ class Generar(unittest.TestCase):
             mal = {"tareas": [{"nombre": "x", "cerebro": "nadie"}]}
             self.assertTrue(g.validar(cfg, mal))
 
+    def test_reservar(self):
+        g.configurar_reservas(["Liverpool"])
+        txt = ("Cotejo Grupo Liverpool: el 27969/22-17-02-5 y el 1234/2023 vivos; exp. 45/2022; "
+               "escribe a juan.perez@correo.mx o al 55 1234 5678; GODE561331HDFRRN09; pago $12,500.00; "
+               "anotación del 27969; corte 09/11 y 50/51 filas; versión 1.2.3; 11/11/2026")
+        r = g.reservar(txt)
+        for fuera in ("Liverpool", "27969", "1234/2023", "45/2022", "juan.perez", "5678", "GODE56", "12,500"):
+            self.assertNotIn(fuera, r)
+        for queda in ("09/11", "50/51", "1.2.3", "11/11/2026", "[cliente]", "[expediente]"):
+            self.assertIn(queda, r)
+        g.configurar_reservas([])
+
     def test_validar(self):
         cfg = {"cerebros": [{"id": "a", "repos": ["r"]}, {"id": "b", "repos": ["r"]}], "privados": ["z"]}
         self.assertEqual(len(g.validar(cfg)), 2)
@@ -98,6 +110,7 @@ class Generar(unittest.TestCase):
             self.assertFalse(f["leido"])
             todo = "".join(p.read_text() for p in (t / "out").rglob("*") if p.is_file())
             self.assertNotIn("SECRETO-DEL-CLIENTE", todo)
+            self.assertNotIn("27969", todo)  # los números de expediente nunca se publican
             self.assertTrue((t / "out" / "repos" / "cerrado.md").exists())
             nota = (t / "out" / "cerebros" / "Uno.md").read_text()
             self.assertIn("[[cerrado|cerrado.]]", nota)

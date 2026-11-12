@@ -4,7 +4,7 @@ Lo que vas a tener:
 
 - **El grafo:** la Matriz al centro (en naranja), los siete cerebros alrededor y cada repositorio colgando de su cerebro. Un clic en un punto abre su nota.
 - **La portada** (`MATRIZ`): cerebros, último movimiento y lo último que hizo cada IA.
-- **La tabla** (`Repositorios`): los 20 repositorios con tres vistas: *Por cerebro*, *Lo más reciente* y *Con pendiente*.
+- **La tabla** (`Repositorios`): todos tus repositorios con tres vistas: *Por cerebro*, *Lo más reciente* y *Con pendiente*.
 
 Tiempo: unos 15 minutos en la Mac y 5 en el iPhone. Todo viene ya configurado; solo hay que abrirlo.
 

@@ -86,5 +86,9 @@
     "meta-ads-client-onboarding",
     "box-simular",
     "rea-ingenieria-inversa"
-  ]
+  ],
+  "terminos_reservados": [
+    "Liverpool"
+  ],
+  "_doc_reservas": "terminos_reservados: nombres de clientes o contrapartes que nunca deben aparecer en la Matriz, el panel ni el conector (se sustituyen por [cliente]). Los números de expediente, correos, teléfonos, CURP, RFC y montos se tapan solos."
 }
