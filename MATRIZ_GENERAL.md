@@ -46,6 +46,7 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 - No enviar, publicar, contratar ni cambiar reglas sin su confirmación expresa.
 - Antes de construir, preguntar todo junto y con opciones; después, avanzar sin pedir permiso para cada paso.
 - **Todo se actualiza y se retroalimenta solo** (Emi, 11/11/2026: «se debe actualizar y retroalimentar absolutamente todo, sin que haga nada»). Cualquier IA que trabaje con Emi deja su trabajo registrado en el repositorio, y lo repetitivo se automatiza. A Emi solo se le pide lo que nadie más puede hacer: contraseñas, pagos, verificaciones en su teléfono y decisiones; cuando haga falta, con el encargo listo para Muse.
+- **Nunca le pidas a Emi códigos ni verificaciones** (Emi, 12/11/2026: «para nada quiero que me pidan códigos»). GitHub y Cloudflare se manejan por API con las llaves de su computadora virtual (box «main», `~/.config/matriz/`; ver `docs/PANEL.md`, «Mantenimiento sin códigos»), no por sus páginas. Si un sitio pide un código, elige recibirlo por correo y léelo tú en su Gmail; nunca elijas aviso al teléfono, GitHub Mobile ni llave de acceso. La verificación de Google la contesta el «Autenticador» guardado en la computadora virtual. Solo en un equipo nuevo de Emi (su Mac o su iPhone) puede aparecerle una verificación, y es protección de su cuenta.
 
 ## Pulso
 
@@ -57,9 +58,9 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 | Contenido y video | 3 | 43 | 9 | 1 | 0 | 0 |
 | Estudio | 2 | 0 | 24 | 5 | 0 | 0 |
 | Productos | 2 | 0 | 5 | 8 | 0 | 0 |
-| Herramientas | 5 | 25 | 5 | 0 | 0 | 0 |
+| Herramientas | 5 | 27 | 5 | 0 | 0 | 0 |
 
-Quién trabajó en los últimos 60 días (commits): Emi 521, Claude 202, ChatGPT · Codex 39.
+Quién trabajó en los últimos 60 días (commits): Emi 521, Claude 204, ChatGPT · Codex 39.
 
 Vencimientos: Renovación de la conexión Claude–box el 7 dic 2026; Token de GitHub «MATRIZ lectura» el 9 feb 2027; Token de GitHub «MATRIZ escritura» (edición desde el panel) el 12 nov 2027; Llave de GitHub «Matriz administración (Claude)» el 12 nov 2027; Llave de Cloudflare «Matriz administración (Claude)» el 12 nov 2027.
 
