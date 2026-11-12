@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-11-12 · Matriz 1.0.1: llave de Cloudflare renovada y panel publicado
+
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: Emi, 12/11/2026: «Hazlo tú ya… Puedes hacer todo?».
+- Cambios: desde la computadora virtual de Emi, sin que ningún valor pasara por la conversación ni por la pantalla: se renovó la llave «MATRIZ panel (GitHub Actions)» en Cloudflare, se comprobó con la API de Cloudflare (activa) y se guardó cifrada en `CLOUDFLARE_API_TOKEN` (GitHub pidió confirmar acceso con el código que envió al correo de Emi). Se creó el token de grano fino «MATRIZ escritura» (solo `lianfixx/MATRIZ`, Contents lectura y escritura, vence el 12/11/2027), se comprobó (escribe en MATRIZ; otro repositorio responde 404) y se guardó en `MATRIZ_ESCRITURA`. Se creó `MATRIZ_RESERVADOS`. `inventario.json` suma el vencimiento del token nuevo. Causa de las fallas anteriores: el formulario de secretos de GitHub exige confirmar acceso y cifrar en el navegador; un envío sin eso no guardaba nada aunque la página no mostraba error.
+- Archivos: `inventario.json` y este registro.
+- Verificación: «Publicar panel» → aprobado; https://matriz.milla-abogados.workers.dev publicado (versión f75cbd6b, 17 archivos).
+- Pendiente: Emi guarda su contraseña en el secreto `PANEL_CLAVE` (es la única que no debe pasar por una IA); agregar el conector en Claude y ChatGPT.
+
 ## 2026-11-12 · Matriz 1.0.0: archivo único respaldado en GitHub, Obsidian y Drive
 
 - Agente: Claude Code (sesión en la nube)
