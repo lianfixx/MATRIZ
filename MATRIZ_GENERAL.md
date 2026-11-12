@@ -57,9 +57,9 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 | Contenido y video | 3 | 43 | 9 | 1 | 0 | 0 |
 | Estudio | 2 | 0 | 24 | 5 | 0 | 0 |
 | Productos | 2 | 0 | 5 | 8 | 0 | 0 |
-| Herramientas | 5 | 24 | 5 | 0 | 0 | 0 |
+| Herramientas | 5 | 25 | 5 | 0 | 0 | 0 |
 
-Quién trabajó en los últimos 60 días (commits): Emi 521, Claude 201, ChatGPT · Codex 39.
+Quién trabajó en los últimos 60 días (commits): Emi 521, Claude 202, ChatGPT · Codex 39.
 
 Vencimientos: Renovación de la conexión Claude–box el 7 dic 2026; Token de GitHub «MATRIZ lectura» el 9 feb 2027.
 

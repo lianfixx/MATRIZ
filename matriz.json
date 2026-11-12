@@ -1236,11 +1236,11 @@
               0,
               0,
               0,
-              12
+              13
             ],
             "actores_60d": {
-              "Emi": 3,
-              "Claude": 9
+              "Claude": 10,
+              "Emi": 3
             }
           }
         },
@@ -1686,9 +1686,9 @@
           0,
           0,
           5,
-          24
+          25
         ],
-        "esta_semana": 24,
+        "esta_semana": 25,
         "semana_pasada": 5,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -1715,11 +1715,11 @@
       153,
       154,
       196,
-      91
+      92
     ],
     "actores_60d": {
       "Emi": 521,
-      "Claude": 201,
+      "Claude": 202,
       "ChatGPT · Codex": 39
     },
     "vencimientos": [
