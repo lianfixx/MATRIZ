@@ -32,9 +32,9 @@ Privado: pide acceso a Emi o usa un conector con sesión iniciada.
 
 ### cloudfare (público)
 
-https://github.com/lianfixx/cloudfare · último cambio: 11 nov 2026
+https://github.com/lianfixx/cloudfare · último cambio: 12 nov 2026
 
-Entorno para que Claude Code o Codex trabajen con Cloudflare a través del CLI oficial cf. Solo la conexión y las reglas; no incluye proyectos.
+Entorno para que Claude Code, Codex y Muse trabajen con Cloudflare a través del CLI oficial cf. Solo la conexión, las reglas y el registro; no incluye proyectos.
 
 ### box-simular (privado)
 
