@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-11-12 · Matriz 1.1.1: límite exacto de intentos y regla «sin códigos» para toda IA
+
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: Emi, 12/11/2026: «para nada quiero que me pidan códigos… audita a fondo todo».
+- Cambios: la prueba en producción mostró que el limitador de Cloudflare (1.1.0) no frenaba: su propia documentación dice que es aproximado y deja pasar ráfagas. Se reemplazó por un Durable Object «Intentos» (plan gratis) que cuenta exacto los intentos fallidos por IP: 5 por minuto o 20 por hora bloquean esa IP hasta que se enfríe. `EMI.md` suma la regla para cualquier IA: nunca pedirle a Emi códigos ni verificaciones; usar las API con las llaves de la computadora virtual, códigos por correo leídos en Gmail y nunca avisos al teléfono. Inventario de los 26 repositorios: solo MATRIZ guarda secretos; los otros 25 corren sin llaves propias. En Cloudflare, sin usar el panel: token «Proyectos de Emi (cf y wrangler)» en la computadora virtual (sin dominios, DNS ni facturación) y vencimiento al token «CLAUDE» del entorno APJ (registrado en lianfixx/cloudfare).
+- Archivos: `worker/index.js`, `worker/prueba.mjs`, `wrangler.jsonc`, `EMI.md` y este registro.
+- Verificación: `node worker/prueba.mjs` → aprobado (81, incluida la clase real del contador con almacenamiento simulado: el sexto intento fallido da 429); `wrangler deploy --dry-run` → reconoce `INTENTOS`. En producción, antes de este cambio: 14 intentos seguidos con clave falsa dieron 401 sin bloqueo; el conector rechaza otro origen (403) y versiones desconocidas (400); `matriz.json` ya no publica huellas ni el nombre del cliente.
+- Pendiente: el token «CLAUDE» de Cloudflare tiene casi todos los permisos de la cuenta; reemplazarlo por uno limitado lo decide Emi.
+
 ## 2026-11-12 · Matriz 1.1.0: correcciones de la auditoría independiente
 
 - Agente: Claude Code (sesión en la nube)

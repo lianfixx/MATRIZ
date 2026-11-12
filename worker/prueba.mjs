@@ -130,7 +130,17 @@ archivos.set("tablero/herramientas.md", { texto: "## Notas\n" + Array.from({ len
 // Límite de intentos de contraseña
 let bloqueado = false;
 for (let i = 0; i < 7; i++) { const [s2] = await pedir("/api/entrar", "POST", { clave: "mala" }); if (s2 === 429) bloqueado = true; }
-ok(bloqueado, "límite de intentos de contraseña");
+ok(bloqueado, "límite de intentos de contraseña (contador local)");
+// Con el Durable Object: se prueba la clase real con un almacenamiento simulado
+{
+  const mem = new Map(); const obj = new mod.Intentos({ storage: { get: async (k) => mem.get(k), put: async (k, v) => mem.set(k, v) } });
+  const stub = { fetch: (u) => obj.fetch(new Request(u, { method: "POST" })) };
+  const envDO = { ...env, INTENTOS: { idFromName: (x) => x, get: () => stub } };
+  const pedirDO = async (clave) => (await mod.default.fetch(new Request("https://matriz.test/api/entrar", { method: "POST", headers: { "Content-Type": "application/json", Origin: "https://matriz.test", "CF-Connecting-IP": "203.0.113.9" }, body: JSON.stringify({ clave }) }), envDO)).status;
+  const r = []; for (let i = 0; i < 6; i++) r.push(await pedirDO("mala"));
+  ok(r.slice(0, 5).every((x) => x === 401) && r[5] === 429, "Durable Object bloquea al sexto intento fallido");
+  ok((await pedirDO("clave-de-prueba")) === 429, "bloqueada la IP, ni la contraseña buena entra hasta que se enfríe");
+}
 // MCP: lotes, origen y versión
 { const [s3] = await mcp(Array.from({ length: 11 }, (_, i) => ({ jsonrpc: "2.0", id: i, method: "ping" }))); ok(s3 === 400, "lote de más de 10 rechazado"); }
 { const r = await mod.default.fetch(new Request("https://matriz.test/mcp", { method: "POST", headers: { "Content-Type": "application/json", Origin: "https://malo.example" }, body: JSON.stringify({ jsonrpc: "2.0", id: 1, method: "ping" }) }), envLectura); ok(r.status === 403, "MCP rechaza otro origen"); }

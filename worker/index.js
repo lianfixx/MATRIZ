@@ -345,18 +345,34 @@ async function sesionValida(request, env) {
 }
 const cookie = (valor, edad) => `${SESION}=${valor}; Path=/api; HttpOnly; Secure; SameSite=Strict; Max-Age=${edad}`;
 
-// Límite de intentos de contraseña por dirección IP: el binding de Cloudflare (5 por minuto, en todos los
-// servidores) y, además, un contador en memoria por si el binding no está.
-const intentos = new Map();
-async function permitirIntento(request, env) {
-  const ip = request.headers.get("CF-Connecting-IP") || "local";
-  if (env.LIMITE_ENTRAR) {
-    try { const { success } = await env.LIMITE_ENTRAR.limit({ key: ip }); if (!success) return false; } catch { /* sigue con el contador local */ }
+// Límite de intentos de contraseña por dirección IP. Cuenta solo los intentos FALLIDOS en un Durable Object
+// (contador exacto y global; el limitador de Cloudflare es aproximado y deja pasar ráfagas):
+// 5 por minuto o 20 por hora bloquean esa IP hasta que se enfríe. Sin el binding (pruebas), un contador local.
+const LIMITE_MIN = 5, LIMITE_HORA = 20;
+const fallosLocales = new Map();
+export class Intentos {
+  constructor(state) { this.state = state; }
+  async fetch(request) {
+    const ahora = Date.now();
+    let v = ((await this.state.storage.get("v")) || []).filter((t) => ahora - t < 3600e3);
+    if (new URL(request.url).pathname === "/fallo") { v.push(ahora); await this.state.storage.put("v", v); }
+    const minuto = v.filter((t) => ahora - t < 60e3).length;
+    return Response.json({ permitido: minuto < LIMITE_MIN && v.length < LIMITE_HORA });
   }
-  const ahora = Date.now(), v = (intentos.get(ip) || []).filter((t) => ahora - t < 60000);
-  v.push(ahora); intentos.set(ip, v);
-  if (intentos.size > 5000) intentos.clear();
-  return v.length <= 5;
+}
+const ipDe = (request) => request.headers.get("CF-Connecting-IP") || "local";
+async function intentos(request, env, accion) {
+  const ip = ipDe(request);
+  if (env.INTENTOS) {
+    const r = await env.INTENTOS.get(env.INTENTOS.idFromName(ip)).fetch(`https://intentos/${accion}`, { method: "POST" });
+    return (await r.json()).permitido;
+  }
+  const ahora = Date.now();
+  let v = (fallosLocales.get(ip) || []).filter((t) => ahora - t < 3600e3);
+  if (accion === "fallo") v.push(ahora);
+  fallosLocales.set(ip, v);
+  if (fallosLocales.size > 5000) fallosLocales.clear();
+  return v.filter((t) => ahora - t < 60e3).length < LIMITE_MIN && v.length < LIMITE_HORA;
 }
 
 // ---------------------------------------------------------------- GitHub (escritura del tablero)
@@ -506,8 +522,9 @@ async function api(request, env, url) {
   if (ruta === "/api/sesion" && request.method === "GET") return json({ editor: await sesionValida(request, env), configurado });
   if (ruta === "/api/entrar" && request.method === "POST") {
     if (!configurado) return json({ error: "La edición todavía no está activada: faltan la contraseña o el token de escritura." }, 503);
-    if (!(await permitirIntento(request, env))) return json({ error: "Demasiados intentos. Espera un minuto." }, 429, { "Retry-After": "60" });
+    if (!(await intentos(request, env, "estado"))) return json({ error: "Demasiados intentos fallidos. Espera un rato." }, 429, { "Retry-After": "60" });
     if (!(await iguales(String(cuerpo.clave ?? ""), env.PANEL_CLAVE))) {
+      await intentos(request, env, "fallo");
       await new Promise((r) => setTimeout(r, 800)); // frena a quien intente adivinar
       return json({ error: "Contraseña incorrecta." }, 401);
     }

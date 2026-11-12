@@ -4,8 +4,9 @@
   "name": "matriz",
   "main": "worker/index.js",
   "compatibility_date": "2026-11-01",
-  // Límite de intentos de contraseña del panel: 5 por minuto por dirección IP, en todos los servidores.
-  "ratelimits": [{ "name": "LIMITE_ENTRAR", "namespace_id": "4501", "simple": { "limit": 5, "period": 60 } }],
+  // Límite exacto de intentos fallidos de contraseña del panel (Durable Object «Intentos», plan gratis).
+  "durable_objects": { "bindings": [{ "name": "INTENTOS", "class_name": "Intentos" }] },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["Intentos"] }],
   "assets": {
     "directory": "./dist",
     "binding": "ASSETS",
