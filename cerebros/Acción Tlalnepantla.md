@@ -21,4 +21,4 @@ Parte de la [[MATRIZ]].
 
 - `accion-tlalnepantla` · [[ACCION-TLALNEPANTLA|ACCION-TLALNEPANTLA-]]
 
-Para continuar con otra IA: [[accion-tlalnepantla.CONTEXTO|archivo de contexto]].
+Tablero editable: `tablero/accion-tlalnepantla.md` (o desde el panel). Para otra IA: [[accion-tlalnepantla.CONTEXTO|archivo de contexto]].

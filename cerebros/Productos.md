@@ -22,4 +22,4 @@ Parte de la [[MATRIZ]].
 
 - `mes-continuidad` · [[mes|mes.]]
 
-Para continuar con otra IA: [[productos.CONTEXTO|archivo de contexto]].
+Tablero editable: `tablero/productos.md` (o desde el panel). Para otra IA: [[productos.CONTEXTO|archivo de contexto]].

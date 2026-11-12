@@ -10,19 +10,19 @@ generado: "tools/generar.py · no editar a mano: se reescribe cada día"
 
 22 repositorios en 7 cerebros · actualizada el 12 nov 2026.
 
-Si eres una IA: lee [AGENTS.md](AGENTS.md) y luego el archivo de `contexto/` del cerebro en el que vas a trabajar.
+Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel: https://matriz.milla-abogados.workers.dev
 
 ## Cerebros
 
-| Cerebro | Repos | Último movimiento | Qué es |
-|---|---|---|---|
-| [[Castorena]] | 4 | 12 nov 2026 | Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP, escritos y monitor del DOF. |
-| [[MILLA ABOGADOS]] | 5 | 4 nov 2026 | El despacho de Emi: sitio, asesorías, monitoreo de expedientes, captación e Impulso Libre. |
-| [[Acción Tlalnepantla]] | 1 | 4 nov 2026 | Acción Política Juvenil Tlalnepantla (PAN): sitio, formatos, eventos y materiales. |
-| [[Contenido y video]] | 3 | 11 nov 2026 | Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio, X e historias de Instagram. |
-| [[Estudio]] | 2 | 7 nov 2026 | Maestría en Alta Dirección y pizarras de estudio. |
-| [[Productos]] | 2 | 4 nov 2026 | Productos propios de Emi: PANEL FIRMA (gestión jurídica) y Mes (finanzas personales). |
-| [[Herramientas]] | 5 | 12 nov 2026 | Piezas que sirven a todos los cerebros: estilo de Emi, selector de modelo, entorno de Cloudflare, computadora virtual (Simular Box) e ingeniería inversa. |
+| Cerebro | Repos | Esta semana | Sin movimiento | Pendientes | Qué es |
+|---|---|---|---|---|---|
+| [[Castorena]] | 4 | 24 commits | 0 días | 0 | Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP, escritos y monitor del DOF. |
+| [[MILLA ABOGADOS]] | 5 | 0 commits | 8 días | 0 | El despacho de Emi: sitio, asesorías, monitoreo de expedientes, captación e Impulso Libre. |
+| [[Acción Tlalnepantla]] | 1 | 0 commits | 8 días | 0 | Acción Política Juvenil Tlalnepantla (PAN): sitio, formatos, eventos y materiales. |
+| [[Contenido y video]] | 3 | 43 commits | 1 días | 0 | Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio, X e historias de Instagram. |
+| [[Estudio]] | 2 | 0 commits | 5 días | 0 | Maestría en Alta Dirección y pizarras de estudio. |
+| [[Productos]] | 2 | 0 commits | 8 días | 0 | Productos propios de Emi: PANEL FIRMA (gestión jurídica) y Mes (finanzas personales). |
+| [[Herramientas]] | 5 | 22 commits | 0 días | 0 | Piezas que sirven a todos los cerebros: estilo de Emi, selector de modelo, entorno de Cloudflare, computadora virtual (Simular Box) e ingeniería inversa. |
 
 ## Lo último que se hizo
 
@@ -32,10 +32,23 @@ Si eres una IA: lee [AGENTS.md](AGENTS.md) y luego el archivo de `contexto/` del
 - 11 nov 2026 · **VIDEOS-IA-SKILL-MILLA** · AssemblyAI conectado y comparado con ElevenLabs · Agente: Claude Code (sesión en la nube)
 - 11 nov 2026 · **X** · Skill 1.0.3 instalada en Claude · Agente: Claude Code (sesión en la nube)
 - 11 nov 2026 · **X** · x-viral 1.0.3: X bloquea el inicio de sesión; Emi publica, la IA entrega · Agente: Claude Code (sesión en la nube)
+- 11 nov 2026 · **HISTORIAS-** · 0.3.0 · candidato · Agente: no consta
 - 10 nov 2026 · **Cerebro-Castorena-** · Cierre diario programado: maestro INDEP v22 copiado · Agente: Claude Code (ejecución programada)
 - 10 nov 2026 · **X** · Candidatas de conversación, encargo para Muse y fecha de arranque · Agente: Claude Code (sesión en la nube)
-- 9 nov 2026 · **Cerebro-Castorena-** · Cierre diario programado (sin cambios de tablas) · Agente: Claude Code (ejecución programada)
-- 4 nov 2026 · **Escritos-juridicos-CASTORENA** · corrección: puentes de skill con YAML válido · Agente: Claude Code (sesión en la nube)
+- 10 nov 2026 · **HISTORIAS-** · 0.2.1 · candidato · Agente: no consta
+
+## Repositorios nuevos por clasificar
+
+- `emilianomilla-site` · público · creado el 12 nov 2026
+- `sistemas-digitales` · público · creado el 12 nov 2026
+- `vicente-diablo` · público · creado el 12 nov 2026
+
+La revisión semanal los asigna a su cerebro; si alguno es dudoso, le pregunta a Emi.
+
+## Vencimientos
+
+- Renovación de la conexión Claude–box · 7 dic 2026 (en 25 días)
+- Token de GitHub «MATRIZ lectura» · 9 feb 2027 (en 89 días)
 
 ## Automatizaciones y skills
 
@@ -45,13 +58,7 @@ Fallaron en su última corrida:
 
 - DOF Castorena · lector nocturno · Lunes y miércoles 21:41 · última: 9 nov 2026, falló: se alcanzó el límite de uso
 
-De la Matriz misma:
-
-- Actualizar la Matriz (GitHub Actions) · Diario 06:17
-- Publicar panel y conector MCP (GitHub Actions → Cloudflare) · Después de cada actualización
-- Revisión semanal de la Matriz · Domingos 20:13
-
-Skills que están en un repositorio pero no instaladas en Claude: `editor-studio`, `historias-studio`, `pizarra-studio`.
+Skills en un repositorio pero no instaladas en Claude: `editor-studio`, `historias-studio`, `pizarra-studio`.
 
 
 ## Visibilidad

@@ -4,6 +4,7 @@ cerebro: "MILLA ABOGADOS"
 visibilidad: "público"
 ultimo_cambio: 2026-11-04
 skills: 0
+commits_8_semanas: 5
 ultimo_agente: "Claude Code (sesión en la nube)"
 github: "https://github.com/lianfixx/millabogados"
 tags:

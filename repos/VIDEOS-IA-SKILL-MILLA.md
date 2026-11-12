@@ -4,6 +4,7 @@ cerebro: "Contenido y video"
 visibilidad: "público"
 ultimo_cambio: 2026-11-11
 skills: 4
+commits_8_semanas: 42
 ultimo_agente: "Claude Code (sesión en la nube)"
 pendiente: "mirar que el trabajo `pruebas` salga en verde en el pull request."
 github: "https://github.com/lianfixx/VIDEOS-IA-SKILL-MILLA"

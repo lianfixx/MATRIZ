@@ -1,6 +1,7 @@
 {
   "actualizada": "2026-11-12",
   "propietario": "lianfixx",
+  "panel": "https://matriz.milla-abogados.workers.dev",
   "cerebros": [
     {
       "id": "castorena",
@@ -42,13 +43,13 @@
             },
             {
               "fecha": "2026-11-09",
-              "titulo": "Cotejo [cliente] reemplazado en Drive (anotación del [número])",
+              "titulo": "Cotejo Grupo Liverpool reemplazado en Drive (anotación del [número])",
               "agente": "Muse (Muse Spark)",
-              "pendiente": "diferencia 50/51 del Cotejo [cliente]; nota del ID 12 del Concentrado; vigencia de los folios TFJA."
+              "pendiente": "diferencia 50/51 del Cotejo Liverpool; nota del ID 12 del Concentrado; vigencia de los folios TFJA."
             },
             {
               "fecha": "2026-11-09",
-              "titulo": "Cotejo [cliente]: anotación del [expediente]",
+              "titulo": "Cotejo Grupo Liverpool: anotación del [expediente]",
               "agente": "Claude Code (claude-opus-5-5, sesión con Emi y Mac enlazada)",
               "pendiente": "reemplazo en Drive (Muse)."
             },
@@ -56,7 +57,7 @@
               "fecha": "2026-11-09",
               "titulo": "séptima tabla en Drive y sincronización completa",
               "agente": "Muse (Muse Spark)",
-              "pendiente": "diferencia 50/51 del Cotejo [cliente]; nota del ID 12 del Concentrado; vigencia de los folios TFJA."
+              "pendiente": "diferencia 50/51 del Cotejo Liverpool; nota del ID 12 del Concentrado; vigencia de los folios TFJA."
             },
             {
               "fecha": "2026-11-09",
@@ -68,9 +69,36 @@
               "fecha": "2026-11-09",
               "titulo": "Drive sincronizado y verificado",
               "agente": "Claude Code (claude-opus-5-5, sesión con Emi y Mac enlazada)",
-              "pendiente": "decisión de Emi sobre el acceso por enlace; Cotejo acuses INDEP; diferencia 50/51 de [cliente]."
+              "pendiente": "decisión de Emi sobre el acceso por enlace; Cotejo acuses INDEP; diferencia 50/51 de Liverpool."
             }
-          ]
+          ],
+          "actividad": {
+            "semanas": [
+              "2026-09-21",
+              "2026-09-28",
+              "2026-10-05",
+              "2026-10-12",
+              "2026-10-19",
+              "2026-10-26",
+              "2026-11-02",
+              "2026-11-09"
+            ],
+            "commits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              15,
+              11
+            ],
+            "actores_60d": {
+              "Claude": 19,
+              "Emi": 6,
+              "ChatGPT · Codex": 1
+            }
+          }
         },
         {
           "nombre": "INDEP",
@@ -81,7 +109,34 @@
           "resumen": "",
           "skills": [],
           "protocolo": "",
-          "registro": []
+          "registro": [],
+          "actividad": {
+            "semanas": [
+              "2026-09-21",
+              "2026-09-28",
+              "2026-10-05",
+              "2026-10-12",
+              "2026-10-19",
+              "2026-10-26",
+              "2026-11-02",
+              "2026-11-09"
+            ],
+            "commits": [
+              0,
+              0,
+              30,
+              85,
+              87,
+              154,
+              72,
+              10
+            ],
+            "actores_60d": {
+              "Claude": 32,
+              "Emi": 376,
+              "ChatGPT · Codex": 30
+            }
+          }
         },
         {
           "nombre": "Escritos-juridicos-CASTORENA",
@@ -102,33 +157,72 @@
               "fecha": "2026-11-04",
               "titulo": "corrección: puentes de skill con YAML válido",
               "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "ninguno."
+              "pendiente": ""
             },
             {
               "fecha": "2026-11-04",
               "titulo": "corrección: flag de push mal formado",
               "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "ninguno."
+              "pendiente": ""
             },
             {
               "fecha": "2026-11-04",
               "titulo": "frenos de git también para Codex, ChatGPT y Gemini",
               "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "ninguno."
+              "pendiente": ""
             },
             {
               "fecha": "2026-11-04",
               "titulo": "arranque común entre IA (protocolo 1.1.0)",
               "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "ninguno."
+              "pendiente": ""
             },
             {
               "fecha": "2026-11-04",
               "titulo": "1.1.1 · registro obligatorio y trabajo entre IA",
               "agente": "Claude Code (sesión en la nube; modelo según la sesión)",
               "pendiente": "activar los hooks de git en cada copia (`sh ia/instalar.sh`); opcionalmente exigir el check `registro-ia` con protección de rama en GitHub."
+            },
+            {
+              "fecha": "2026-11-04",
+              "titulo": "1.1.0",
+              "agente": "",
+              "pendiente": ""
+            },
+            {
+              "fecha": "2026-11-03",
+              "titulo": "1.0.0",
+              "agente": "",
+              "pendiente": ""
             }
-          ]
+          ],
+          "actividad": {
+            "semanas": [
+              "2026-09-21",
+              "2026-09-28",
+              "2026-10-05",
+              "2026-10-12",
+              "2026-10-19",
+              "2026-10-26",
+              "2026-11-02",
+              "2026-11-09"
+            ],
+            "commits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              16,
+              0
+            ],
+            "actores_60d": {
+              "Claude": 7,
+              "Emi": 8,
+              "ChatGPT · Codex": 1
+            }
+          }
         },
         {
           "nombre": "dof-juridico-monitor",
@@ -144,9 +238,89 @@
             }
           ],
           "protocolo": "1.1.0",
-          "registro": []
+          "registro": [
+            {
+              "fecha": "2026-11-09",
+              "titulo": "[expediente] y [expediente] también al paquete del martes 10/11",
+              "agente": "Claude Code (sesión en la nube, claude-opus-5-5), a petición de Muse con instrucción de Emi (11:16): tampoco consta la entrega de la matutina [expediente] y la vespertina [expediente] del miércoles 4/11; darlas por no entregadas e incluirlas con la [expediente]; una sola nota en el correo al Licenciado para las tres; no enviar nada.",
+              "pendiente": "ninguno para este punto."
+            },
+            {
+              "fecha": "2026-11-09",
+              "titulo": "ediciones no entregadas ([expediente] al paquete del martes 10/11)",
+              "agente": "Claude Code (sesión en la nube, claude-opus-5-5), a petición de Muse con instrucción de Emi (11:06): no consta la entrega del cierre del jueves 5/11 (ni en el box ni en Gmail); darlo por no entregado e incluir la matutina [expediente] en el paquete del martes 10/11; no enviar nada.",
+              "pendiente": "resuelto en la entrada siguiente (301 y 302 incluidas)."
+            },
+            {
+              "fecha": "2026-11-09",
+              "titulo": "Skill 1.2.1 · auditoría del sistema automático (box, tareas, vigía)",
+              "agente": "Claude Code (sesión en la nube, modelo claude-opus-5-5), a petición de Muse (asistente de Emi) con instrucción de Emi: «audita, mejora y deja todo perfecto»; condición: no actualizar la imagen del box a v14 antes del SJF del viernes.",
+              "pendiente": "(1) subir el ZIP 1.2.1 a claude.ai (`sh scripts/empaquetar_skill.sh`) para que la skill instalada coincida; las tareas programadas ya leen el repositorio; (2) actualizar la imagen del box a v14 después del SJF del viernes 13/11 y correr `bash bin/arranque.sh`; (3) confirmar con Emi si el cierre del jueves 05/11 se entregó: no está en el box ni en Gmail; el martes 10/11 toma su matutina ([expediente]) como ya reportada; (4) primera semana en modo vigilado."
+            },
+            {
+              "fecha": "2026-11-09",
+              "titulo": "instalación de la skill 1.2.0 en claude.ai",
+              "agente": "Muse (asistente de Emi). Registro preparado por Claude (chat) como «registro pendiente para el repositorio» y aplicado en este commit.",
+              "pendiente": "actualizar la imagen del box a v14 después del SJF del viernes."
+            },
+            {
+              "fecha": "2026-11-08",
+              "titulo": "paquete de entrega reutilizable",
+              "agente": "Claude (sesión en la nube, claude-fable-5-1).",
+              "pendiente": ""
+            },
+            {
+              "fecha": "2026-11-08",
+              "titulo": "Skill 1.2.0 · fuentes con el box y ejecución automática",
+              "agente": "Claude (sesión en la nube, modelo claude-fable-5-1) — ejecución programada no; solicitud directa de Emi.",
+              "pendiente": "crear las cuatro tareas programadas y el monitor; primera semana en modo vigilado; medir créditos del box por corrida."
+            },
+            {
+              "fecha": "2026-11-04",
+              "titulo": "corrección: puentes de skill con YAML válido",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": ""
+            },
+            {
+              "fecha": "2026-11-04",
+              "titulo": "corrección: flag de push mal formado",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": ""
+            }
+          ],
+          "actividad": {
+            "semanas": [
+              "2026-09-21",
+              "2026-09-28",
+              "2026-10-05",
+              "2026-10-12",
+              "2026-10-19",
+              "2026-10-26",
+              "2026-11-02",
+              "2026-11-09"
+            ],
+            "commits": [
+              0,
+              29,
+              4,
+              2,
+              47,
+              0,
+              10,
+              3
+            ],
+            "actores_60d": {
+              "Claude": 12,
+              "ChatGPT · Codex": 1,
+              "Emi": 82
+            }
+          }
         }
-      ]
+      ],
+      "tablero": {
+        "pendientes": [],
+        "notas": []
+      }
     },
     {
       "id": "milla-abogados",
@@ -167,25 +341,25 @@
               "fecha": "2026-11-04",
               "titulo": "corrección: puentes de skill con YAML válido",
               "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "ninguno."
+              "pendiente": ""
             },
             {
               "fecha": "2026-11-04",
               "titulo": "corrección: flag de push mal formado",
               "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "ninguno."
+              "pendiente": ""
             },
             {
               "fecha": "2026-11-04",
               "titulo": "frenos de git también para Codex, ChatGPT y Gemini",
               "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "ninguno."
+              "pendiente": ""
             },
             {
               "fecha": "2026-11-04",
               "titulo": "arranque común entre IA (protocolo 1.1.0)",
               "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "ninguno."
+              "pendiente": ""
             },
             {
               "fecha": "2026-11-04",
@@ -193,7 +367,32 @@
               "agente": "Claude Code (sesión en la nube; modelo según la sesión)",
               "pendiente": "activar los hooks de git en cada copia (`sh ia/instalar.sh`); opcionalmente exigir el check `registro-ia` con protección de rama en GitHub."
             }
-          ]
+          ],
+          "actividad": {
+            "semanas": [
+              "2026-09-21",
+              "2026-09-28",
+              "2026-10-05",
+              "2026-10-12",
+              "2026-10-19",
+              "2026-10-26",
+              "2026-11-02",
+              "2026-11-09"
+            ],
+            "commits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            "actores_60d": {
+              "Claude": 5
+            }
+          }
         },
         {
           "nombre": "ASESORIAS-JURIDICAS-",
@@ -214,25 +413,25 @@
               "fecha": "2026-11-04",
               "titulo": "corrección: puentes de skill con YAML válido",
               "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "ninguno."
+              "pendiente": ""
             },
             {
               "fecha": "2026-11-04",
               "titulo": "corrección: flag de push mal formado",
               "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "ninguno."
+              "pendiente": ""
             },
             {
               "fecha": "2026-11-04",
               "titulo": "frenos de git también para Codex, ChatGPT y Gemini",
               "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "ninguno."
+              "pendiente": ""
             },
             {
               "fecha": "2026-11-04",
               "titulo": "arranque común entre IA (protocolo 1.1.0)",
               "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "ninguno."
+              "pendiente": ""
             },
             {
               "fecha": "2026-11-04",
@@ -240,7 +439,33 @@
               "agente": "Claude Code (sesión en la nube; modelo según la sesión)",
               "pendiente": "activar los hooks de git en cada copia (`sh ia/instalar.sh`); opcionalmente exigir el check `registro-ia` con protección de rama en GitHub."
             }
-          ]
+          ],
+          "actividad": {
+            "semanas": [
+              "2026-09-21",
+              "2026-09-28",
+              "2026-10-05",
+              "2026-10-12",
+              "2026-10-19",
+              "2026-10-26",
+              "2026-11-02",
+              "2026-11-09"
+            ],
+            "commits": [
+              0,
+              7,
+              3,
+              0,
+              0,
+              0,
+              8,
+              0
+            ],
+            "actores_60d": {
+              "Claude": 7,
+              "Emi": 11
+            }
+          }
         },
         {
           "nombre": "buholegal-monitoreo",
@@ -251,7 +476,32 @@
           "resumen": "",
           "skills": [],
           "protocolo": "",
-          "registro": []
+          "registro": [],
+          "actividad": {
+            "semanas": [
+              "2026-09-21",
+              "2026-09-28",
+              "2026-10-05",
+              "2026-10-12",
+              "2026-10-19",
+              "2026-10-26",
+              "2026-11-02",
+              "2026-11-09"
+            ],
+            "commits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            "actores_60d": {
+              "Claude": 5
+            }
+          }
         },
         {
           "nombre": "impulso-libre",
@@ -262,7 +512,32 @@
           "resumen": "",
           "skills": [],
           "protocolo": "",
-          "registro": []
+          "registro": [],
+          "actividad": {
+            "semanas": [
+              "2026-09-21",
+              "2026-09-28",
+              "2026-10-05",
+              "2026-10-12",
+              "2026-10-19",
+              "2026-10-26",
+              "2026-11-02",
+              "2026-11-09"
+            ],
+            "commits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            "actores_60d": {
+              "Claude": 5
+            }
+          }
         },
         {
           "nombre": "meta-ads-client-onboarding",
@@ -273,9 +548,39 @@
           "resumen": "",
           "skills": [],
           "protocolo": "",
-          "registro": []
+          "registro": [],
+          "actividad": {
+            "semanas": [
+              "2026-09-21",
+              "2026-09-28",
+              "2026-10-05",
+              "2026-10-12",
+              "2026-10-19",
+              "2026-10-26",
+              "2026-11-02",
+              "2026-11-09"
+            ],
+            "commits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              8,
+              0
+            ],
+            "actores_60d": {
+              "Claude": 7,
+              "Emi": 1
+            }
+          }
         }
-      ]
+      ],
+      "tablero": {
+        "pendientes": [],
+        "notas": []
+      }
     },
     {
       "id": "accion-tlalnepantla",
@@ -296,25 +601,25 @@
               "fecha": "2026-11-04",
               "titulo": "corrección: puentes de skill con YAML válido",
               "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "ninguno."
+              "pendiente": ""
             },
             {
               "fecha": "2026-11-04",
               "titulo": "corrección: flag de push mal formado",
               "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "ninguno."
+              "pendiente": ""
             },
             {
               "fecha": "2026-11-04",
               "titulo": "frenos de git también para Codex, ChatGPT y Gemini",
               "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "ninguno."
+              "pendiente": ""
             },
             {
               "fecha": "2026-11-04",
               "titulo": "arranque común entre IA (protocolo 1.1.0)",
               "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "ninguno."
+              "pendiente": ""
             },
             {
               "fecha": "2026-11-04",
@@ -322,9 +627,40 @@
               "agente": "Claude Code (sesión en la nube; modelo según la sesión)",
               "pendiente": "activar los hooks de git en cada copia (`sh ia/instalar.sh`); opcionalmente exigir el check `registro-ia` con protección de rama en GitHub."
             }
-          ]
+          ],
+          "actividad": {
+            "semanas": [
+              "2026-09-21",
+              "2026-09-28",
+              "2026-10-05",
+              "2026-10-12",
+              "2026-10-19",
+              "2026-10-26",
+              "2026-11-02",
+              "2026-11-09"
+            ],
+            "commits": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              9,
+              0
+            ],
+            "actores_60d": {
+              "Claude": 7,
+              "ChatGPT · Codex": 1,
+              "Emi": 2
+            }
+          }
         }
-      ]
+      ],
+      "tablero": {
+        "pendientes": [],
+        "notas": []
+      }
     },
     {
       "id": "contenido-y-video",
@@ -406,7 +742,33 @@
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "fusionar a `main`; que Emi suba el paquete actualizado a la app."
             }
-          ]
+          ],
+          "actividad": {
+            "semanas": [
+              "2026-09-21",
+              "2026-09-28",
+              "2026-10-05",
+              "2026-10-12",
+              "2026-10-19",
+              "2026-10-26",
+              "2026-11-02",
+              "2026-11-09"
+            ],
+            "commits": [
+              0,
+              3,
+              0,
+              0,
+              0,
+              0,
+              9,
+              30
+            ],
+            "actores_60d": {
+              "Claude": 37,
+              "Emi": 5
+            }
+          }
         },
         {
           "nombre": "X",
@@ -459,7 +821,32 @@
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "(a) Emi: primeras correcciones de voz, cuentas iniciales de `cuenta/mutuals.md`, fecha de creación de la cuenta y si contrata Premium. (b) Programar en X no se ha ejecutado contra la cuenta real. (c) Aplicar `puente/PETICION-vox.md` en el repositorio de Vox Studio. (d) Decidir si se instalan aquí los frenos automáticos de otros repositorios (`guard.py`, hooks). (e) El repositorio es público: decidir si se vuelve privado para sincronizar borradores."
             }
-          ]
+          ],
+          "actividad": {
+            "semanas": [
+              "2026-09-21",
+              "2026-09-28",
+              "2026-10-05",
+              "2026-10-12",
+              "2026-10-19",
+              "2026-10-26",
+              "2026-11-02",
+              "2026-11-09"
+            ],
+            "commits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              6
+            ],
+            "actores_60d": {
+              "Claude": 6
+            }
+          }
         },
         {
           "nombre": "HISTORIAS-",
@@ -475,9 +862,63 @@
             }
           ],
           "protocolo": "",
-          "registro": []
+          "registro": [
+            {
+              "fecha": "2026-11-11",
+              "titulo": "0.3.0 · candidato",
+              "agente": "",
+              "pendiente": ""
+            },
+            {
+              "fecha": "2026-11-10",
+              "titulo": "0.2.1 · candidato",
+              "agente": "",
+              "pendiente": ""
+            },
+            {
+              "fecha": "2026-11-10",
+              "titulo": "0.2.0 · candidato",
+              "agente": "",
+              "pendiente": ""
+            },
+            {
+              "fecha": "2026-11-10",
+              "titulo": "0.1.0 · candidato",
+              "agente": "",
+              "pendiente": ""
+            }
+          ],
+          "actividad": {
+            "semanas": [
+              "2026-09-21",
+              "2026-09-28",
+              "2026-10-05",
+              "2026-10-12",
+              "2026-10-19",
+              "2026-10-26",
+              "2026-11-02",
+              "2026-11-09"
+            ],
+            "commits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              7
+            ],
+            "actores_60d": {
+              "Claude": 7
+            }
+          }
         }
-      ]
+      ],
+      "tablero": {
+        "pendientes": [],
+        "notas": []
+      }
     },
     {
       "id": "estudio",
@@ -493,7 +934,34 @@
           "resumen": "",
           "skills": [],
           "protocolo": "",
-          "registro": []
+          "registro": [],
+          "actividad": {
+            "semanas": [
+              "2026-09-21",
+              "2026-09-28",
+              "2026-10-05",
+              "2026-10-12",
+              "2026-10-19",
+              "2026-10-26",
+              "2026-11-02",
+              "2026-11-09"
+            ],
+            "commits": [
+              0,
+              0,
+              0,
+              0,
+              2,
+              0,
+              16,
+              0
+            ],
+            "actores_60d": {
+              "Claude": 9,
+              "Emi": 8,
+              "ChatGPT · Codex": 1
+            }
+          }
         },
         {
           "nombre": "ESTUDIO-TEMAS",
@@ -514,35 +982,65 @@
               "fecha": "2026-11-04",
               "titulo": "corrección: puentes de skill con YAML válido",
               "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "ninguno."
+              "pendiente": ""
             },
             {
               "fecha": "2026-11-04",
               "titulo": "corrección: flag de push mal formado",
               "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "ninguno."
+              "pendiente": ""
             },
             {
               "fecha": "2026-11-04",
               "titulo": "frenos de git también para Codex, ChatGPT y Gemini",
               "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "ninguno."
+              "pendiente": ""
             },
             {
               "fecha": "2026-11-04",
               "titulo": "arranque común entre IA (protocolo 1.1.0)",
               "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "ninguno."
+              "pendiente": ""
             },
             {
               "fecha": "2026-11-04",
               "titulo": "registro obligatorio y trabajo entre IA",
               "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "ninguno."
+              "pendiente": ""
             }
-          ]
+          ],
+          "actividad": {
+            "semanas": [
+              "2026-09-21",
+              "2026-09-28",
+              "2026-10-05",
+              "2026-10-12",
+              "2026-10-19",
+              "2026-10-26",
+              "2026-11-02",
+              "2026-11-09"
+            ],
+            "commits": [
+              0,
+              0,
+              0,
+              0,
+              5,
+              0,
+              8,
+              0
+            ],
+            "actores_60d": {
+              "Claude": 7,
+              "Emi": 6
+            }
+          }
         }
-      ]
+      ],
+      "tablero": {
+        "pendientes": [],
+        "notas": []
+      }
     },
     {
       "id": "productos",
@@ -558,7 +1056,34 @@
           "resumen": "",
           "skills": [],
           "protocolo": "",
-          "registro": []
+          "registro": [],
+          "actividad": {
+            "semanas": [
+              "2026-09-21",
+              "2026-09-28",
+              "2026-10-05",
+              "2026-10-12",
+              "2026-10-19",
+              "2026-10-26",
+              "2026-11-02",
+              "2026-11-09"
+            ],
+            "commits": [
+              0,
+              2,
+              0,
+              0,
+              3,
+              0,
+              5,
+              0
+            ],
+            "actores_60d": {
+              "Claude": 5,
+              "ChatGPT · Codex": 3,
+              "Emi": 2
+            }
+          }
         },
         {
           "nombre": "mes.",
@@ -569,9 +1094,38 @@
           "resumen": "Alfa de una aplicación de Sistemas Digitales. Mes es un nombre provisional. Interfaz original en blanco, negro y grises para próximos pagos, gastos cotidianos y metas. Código universal Expo / React Native / TypeScript, sin llamadas a modelos ni dependencia funcional de ChatGPT.",
           "skills": [],
           "protocolo": "",
-          "registro": []
+          "registro": [],
+          "actividad": {
+            "semanas": [
+              "2026-09-21",
+              "2026-09-28",
+              "2026-10-05",
+              "2026-10-12",
+              "2026-10-19",
+              "2026-10-26",
+              "2026-11-02",
+              "2026-11-09"
+            ],
+            "commits": [
+              0,
+              0,
+              0,
+              2,
+              8,
+              0,
+              0,
+              0
+            ],
+            "actores_60d": {
+              "Claude": 10
+            }
+          }
         }
-      ]
+      ],
+      "tablero": {
+        "pendientes": [],
+        "notas": []
+      }
     },
     {
       "id": "herramientas",
@@ -587,7 +1141,33 @@
           "resumen": "",
           "skills": [],
           "protocolo": "",
-          "registro": []
+          "registro": [],
+          "actividad": {
+            "semanas": [
+              "2026-09-21",
+              "2026-09-28",
+              "2026-10-05",
+              "2026-10-12",
+              "2026-10-19",
+              "2026-10-26",
+              "2026-11-02",
+              "2026-11-09"
+            ],
+            "commits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              5,
+              2
+            ],
+            "actores_60d": {
+              "Claude": 2,
+              "Emi": 5
+            }
+          }
         },
         {
           "nombre": "selector-modelos",
@@ -598,7 +1178,34 @@
           "resumen": "",
           "skills": [],
           "protocolo": "",
-          "registro": []
+          "registro": [],
+          "actividad": {
+            "semanas": [
+              "2026-09-21",
+              "2026-09-28",
+              "2026-10-05",
+              "2026-10-12",
+              "2026-10-19",
+              "2026-10-26",
+              "2026-11-02",
+              "2026-11-09"
+            ],
+            "commits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              8
+            ],
+            "actores_60d": {
+              "Emi": 6,
+              "ChatGPT · Codex": 1,
+              "Claude": 1
+            }
+          }
         },
         {
           "nombre": "cloudfare",
@@ -609,7 +1216,33 @@
           "resumen": "Entorno para que Claude Code, Codex y Muse trabajen con Cloudflare a través del CLI oficial cf. Solo la conexión, las reglas y el registro; no incluye proyectos.",
           "skills": [],
           "protocolo": "",
-          "registro": []
+          "registro": [],
+          "actividad": {
+            "semanas": [
+              "2026-09-21",
+              "2026-09-28",
+              "2026-10-05",
+              "2026-10-12",
+              "2026-10-19",
+              "2026-10-26",
+              "2026-11-02",
+              "2026-11-09"
+            ],
+            "commits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              10
+            ],
+            "actores_60d": {
+              "Claude": 9,
+              "Emi": 1
+            }
+          }
         },
         {
           "nombre": "box-simular",
@@ -620,7 +1253,32 @@
           "resumen": "",
           "skills": [],
           "protocolo": "",
-          "registro": []
+          "registro": [],
+          "actividad": {
+            "semanas": [
+              "2026-09-21",
+              "2026-09-28",
+              "2026-10-05",
+              "2026-10-12",
+              "2026-10-19",
+              "2026-10-26",
+              "2026-11-02",
+              "2026-11-09"
+            ],
+            "commits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "actores_60d": {
+              "Claude": 1
+            }
+          }
         },
         {
           "nombre": "rea-ingenieria-inversa",
@@ -631,9 +1289,38 @@
           "resumen": "",
           "skills": [],
           "protocolo": "",
-          "registro": []
+          "registro": [],
+          "actividad": {
+            "semanas": [
+              "2026-09-21",
+              "2026-09-28",
+              "2026-10-05",
+              "2026-10-12",
+              "2026-10-19",
+              "2026-10-26",
+              "2026-11-02",
+              "2026-11-09"
+            ],
+            "commits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "actores_60d": {
+              "Claude": 1
+            }
+          }
         }
-      ]
+      ],
+      "tablero": {
+        "pendientes": [],
+        "notas": []
+      }
     }
   ],
   "inventario": {
@@ -842,7 +1529,212 @@
         "cerebro": "herramientas",
         "repo": "rea-ingenieria-inversa"
       }
+    ],
+    "vencimientos": [
+      {
+        "nombre": "Token de GitHub «MATRIZ lectura»",
+        "fecha": "2027-02-09",
+        "nota": "Regenerarlo y guardarlo en el secreto MATRIZ_TOKEN."
+      },
+      {
+        "nombre": "Renovación de la conexión Claude–box",
+        "fecha": "2026-12-07",
+        "nota": "Intento automático mensual; si Google pide verificación, Emi la aprueba en el iPhone."
+      }
     ]
   },
-  "por_clasificar": []
+  "por_clasificar": [
+    {
+      "nombre": "emilianomilla-site",
+      "visibilidad": "público",
+      "creado": "2026-11-12"
+    },
+    {
+      "nombre": "sistemas-digitales",
+      "visibilidad": "público",
+      "creado": "2026-11-12"
+    },
+    {
+      "nombre": "vicente-diablo",
+      "visibilidad": "público",
+      "creado": "2026-11-12"
+    }
+  ],
+  "proyectos": [],
+  "metricas": {
+    "cerebros": {
+      "castorena": {
+        "semanas": [
+          0,
+          29,
+          34,
+          87,
+          134,
+          154,
+          113,
+          24
+        ],
+        "esta_semana": 24,
+        "semana_pasada": 113,
+        "dias_sin_movimiento": 0,
+        "pendientes_abiertos": 0,
+        "pendientes_vencidos": 0,
+        "pendientes_de_repos": 2,
+        "tareas_falladas": 1
+      },
+      "milla-abogados": {
+        "semanas": [
+          0,
+          7,
+          3,
+          0,
+          0,
+          0,
+          31,
+          0
+        ],
+        "esta_semana": 0,
+        "semana_pasada": 31,
+        "dias_sin_movimiento": 8,
+        "pendientes_abiertos": 0,
+        "pendientes_vencidos": 0,
+        "pendientes_de_repos": 0,
+        "tareas_falladas": 0
+      },
+      "accion-tlalnepantla": {
+        "semanas": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          9,
+          0
+        ],
+        "esta_semana": 0,
+        "semana_pasada": 9,
+        "dias_sin_movimiento": 8,
+        "pendientes_abiertos": 0,
+        "pendientes_vencidos": 0,
+        "pendientes_de_repos": 0,
+        "tareas_falladas": 0
+      },
+      "contenido-y-video": {
+        "semanas": [
+          0,
+          3,
+          0,
+          0,
+          0,
+          0,
+          9,
+          43
+        ],
+        "esta_semana": 43,
+        "semana_pasada": 9,
+        "dias_sin_movimiento": 1,
+        "pendientes_abiertos": 0,
+        "pendientes_vencidos": 0,
+        "pendientes_de_repos": 2,
+        "tareas_falladas": 0
+      },
+      "estudio": {
+        "semanas": [
+          0,
+          0,
+          0,
+          0,
+          7,
+          0,
+          24,
+          0
+        ],
+        "esta_semana": 0,
+        "semana_pasada": 24,
+        "dias_sin_movimiento": 5,
+        "pendientes_abiertos": 0,
+        "pendientes_vencidos": 0,
+        "pendientes_de_repos": 0,
+        "tareas_falladas": 0
+      },
+      "productos": {
+        "semanas": [
+          0,
+          2,
+          0,
+          2,
+          11,
+          0,
+          5,
+          0
+        ],
+        "esta_semana": 0,
+        "semana_pasada": 5,
+        "dias_sin_movimiento": 8,
+        "pendientes_abiertos": 0,
+        "pendientes_vencidos": 0,
+        "pendientes_de_repos": 0,
+        "tareas_falladas": 0
+      },
+      "herramientas": {
+        "semanas": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          5,
+          22
+        ],
+        "esta_semana": 22,
+        "semana_pasada": 5,
+        "dias_sin_movimiento": 0,
+        "pendientes_abiertos": 0,
+        "pendientes_vencidos": 0,
+        "pendientes_de_repos": 0,
+        "tareas_falladas": 0
+      }
+    },
+    "semanas": [
+      "2026-09-21",
+      "2026-09-28",
+      "2026-10-05",
+      "2026-10-12",
+      "2026-10-19",
+      "2026-10-26",
+      "2026-11-02",
+      "2026-11-09"
+    ],
+    "commits_por_semana": [
+      0,
+      41,
+      37,
+      89,
+      153,
+      154,
+      196,
+      89
+    ],
+    "actores_60d": {
+      "Emi": 519,
+      "Claude": 201,
+      "ChatGPT · Codex": 39
+    },
+    "vencimientos": [
+      {
+        "nombre": "Renovación de la conexión Claude–box",
+        "fecha": "2026-12-07",
+        "nota": "Intento automático mensual; si Google pide verificación, Emi la aprueba en el iPhone.",
+        "dias": 25
+      },
+      {
+        "nombre": "Token de GitHub «MATRIZ lectura»",
+        "fecha": "2027-02-09",
+        "nota": "Regenerarlo y guardarlo en el secreto MATRIZ_TOKEN.",
+        "dias": 89
+      }
+    ]
+  }
 }

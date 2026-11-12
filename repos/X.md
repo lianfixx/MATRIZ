@@ -4,6 +4,7 @@ cerebro: "Contenido y video"
 visibilidad: "público"
 ultimo_cambio: 2026-11-11
 skills: 1
+commits_8_semanas: 6
 ultimo_agente: "Claude Code (sesión en la nube)"
 pendiente: "cierra el punto (b) de la entrada 1.0.3. Siguen (a) y (c)."
 github: "https://github.com/lianfixx/X"

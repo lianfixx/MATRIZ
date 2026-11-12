@@ -3,6 +3,7 @@ tipo: "repo"
 cerebro: "MILLA ABOGADOS"
 visibilidad: "privado"
 ultimo_cambio: 2026-11-04
+commits_8_semanas: 8
 github: "https://github.com/lianfixx/meta-ads-client-onboarding"
 tags:
   - "repo"
@@ -16,4 +17,4 @@ Cerebro: [[MILLA ABOGADOS]] · privado · último cambio: 4 nov 2026
 
 [Abrir en GitHub](https://github.com/lianfixx/meta-ads-client-onboarding)
 
-Repositorio privado: aquí solo se publica su nombre y su fecha.
+Repositorio privado: aquí solo se publica su nombre, su fecha y su actividad.

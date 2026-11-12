@@ -37,4 +37,4 @@ Parte de la [[MATRIZ]].
 - `escritos-juridicos-castorena` · [[Escritos-juridicos-CASTORENA|Escritos-juridicos-CASTORENA]]
 - `dof-castorena` · [[dof-juridico-monitor|dof-juridico-monitor]]
 
-Para continuar con otra IA: [[castorena.CONTEXTO|archivo de contexto]].
+Tablero editable: `tablero/castorena.md` (o desde el panel). Para otra IA: [[castorena.CONTEXTO|archivo de contexto]].

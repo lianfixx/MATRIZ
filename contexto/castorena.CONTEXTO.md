@@ -6,15 +6,16 @@ generado: "tools/generar.py · no editar a mano: se reescribe cada día"
 
 # Contexto para cualquier IA · Castorena
 
-Soy Emi (Yohualli Emiliano García Milla). Este es el cerebro «Castorena» de mi Matriz General (https://github.com/lianfixx/MATRIZ). Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP, escritos y monitor del DOF.
+Soy Emi (Yohualli Emiliano García Milla). Este es el cerebro «Castorena» de mi Matriz General (https://github.com/lianfixx/MATRIZ · https://matriz.milla-abogados.workers.dev). Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP, escritos y monitor del DOF.
 
 ## Cómo trabajar
 
-1. La fuente de verdad es el repositorio en GitHub, no esta conversación ni lo que recuerdes.
-2. Antes de cambiar algo en un repositorio, lee su `AGENTS.md`, `ia/REGLAS.md` e `ia/PROTOCOLO.md`.
+1. La fuente de verdad es GitHub (`lianfixx`), no esta conversación ni lo que recuerdes.
+2. Antes de cambiar un repositorio, lee su `AGENTS.md`, `ia/REGLAS.md` e `ia/PROTOCOLO.md`.
 3. Todo cambio se registra en el mismo commit, en `CHANGELOG.md`, con la línea `Agente:`.
 4. Si no puedes escribir en el repositorio, termina con un bloque «Registro pendiente para el repositorio» con la entrada completa y los cambios exactos. No digas «guardado» si no escribiste.
-5. No envíes correos, no publiques ni cambies reglas sin mi confirmación expresa.
+5. No envíes correos, no publiques, no contrates ni cambies reglas sin confirmación expresa de Emi.
+6. Nada de datos de clientes (nombres, expedientes, montos) en repositorios públicos ni en la Matriz.
 
 ## Repositorios de este cerebro
 
@@ -33,7 +34,7 @@ Pendiente: subir v22 a Drive, Escritorio e iCloud; ACTUAL.json de INDEP sigue en
 
 https://github.com/lianfixx/INDEP · último cambio: 12 nov 2026
 
-Privado: pide acceso a Emi o usa un conector con sesión iniciada.
+Privado: pide acceso a Emi o usa un conector de GitHub con su sesión.
 
 ### Escritos-juridicos-CASTORENA (público)
 
@@ -42,7 +43,6 @@ https://github.com/lianfixx/Escritos-juridicos-CASTORENA · último cambio: 4 no
 Skills: `escritos-juridicos-castorena`
 
 Último registro: 4 nov 2026 · corrección: puentes de skill con YAML válido · Agente: Claude Code (sesión en la nube)
-Pendiente: ninguno.
 
 ### dof-juridico-monitor (público)
 
@@ -51,6 +51,9 @@ https://github.com/lianfixx/dof-juridico-monitor · último cambio: 9 nov 2026
 Sistema autónomo, auditable y agnóstico de proveedor para revisar el Diario Oficial de la Federación (DOF), verificar cobertura, detectar novedades jurídicas relevantes y producir entregables ejecutivos y de estudio.
 
 Skills: `dof-castorena`
+
+Último registro: 9 nov 2026 · [expediente] y [expediente] también al paquete del martes 10/11 · Agente: Claude Code (sesión en la nube, claude-opus-5-5), a petición de Muse con instrucción de Emi (11:16): tampoco consta la entrega de la matutina [expediente] y la vespertina [expediente] del miércoles 4/11; darlas por no entregadas e incluirlas con la [expediente]; una sola nota en el correo al Licenciado para las tres; no enviar nada.
+Pendiente: ninguno para este punto.
 
 ## Tareas programadas
 

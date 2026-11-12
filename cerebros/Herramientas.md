@@ -32,4 +32,4 @@ Parte de la [[MATRIZ]].
 - `box-simular` · [[box-simular|box-simular]]
 - `rea-ingenieria-inversa` · [[rea-ingenieria-inversa|rea-ingenieria-inversa]]
 
-Para continuar con otra IA: [[herramientas.CONTEXTO|archivo de contexto]].
+Tablero editable: `tablero/herramientas.md` (o desde el panel). Para otra IA: [[herramientas.CONTEXTO|archivo de contexto]].

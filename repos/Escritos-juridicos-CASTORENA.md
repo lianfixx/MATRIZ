@@ -4,6 +4,7 @@ cerebro: "Castorena"
 visibilidad: "público"
 ultimo_cambio: 2026-11-04
 skills: 1
+commits_8_semanas: 16
 ultimo_agente: "Claude Code (sesión en la nube)"
 github: "https://github.com/lianfixx/Escritos-juridicos-CASTORENA"
 tags:

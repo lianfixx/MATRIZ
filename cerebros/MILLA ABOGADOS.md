@@ -25,4 +25,4 @@ Parte de la [[MATRIZ]].
 
 - `milla-asesoria-juridica` · [[ASESORIAS-JURIDICAS|ASESORIAS-JURIDICAS-]]
 
-Para continuar con otra IA: [[milla-abogados.CONTEXTO|archivo de contexto]].
+Tablero editable: `tablero/milla-abogados.md` (o desde el panel). Para otra IA: [[milla-abogados.CONTEXTO|archivo de contexto]].

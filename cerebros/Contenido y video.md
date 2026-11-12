@@ -31,6 +31,6 @@ Parte de la [[MATRIZ]].
 - `vox-studio` · [[VIDEOS-IA-SKILL-MILLA|VIDEOS-IA-SKILL-MILLA]]
 - `milla-video-studio` · [[VIDEOS-IA-SKILL-MILLA|VIDEOS-IA-SKILL-MILLA]]
 - `x-viral` · [[X|X]]
-- `video-vox` · [[santmun/video-vox|santmun/video-vox]]
+- `video-vox` · `santmun/video-vox`
 
-Para continuar con otra IA: [[contenido-y-video.CONTEXTO|archivo de contexto]].
+Tablero editable: `tablero/contenido-y-video.md` (o desde el panel). Para otra IA: [[contenido-y-video.CONTEXTO|archivo de contexto]].

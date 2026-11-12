@@ -3,6 +3,7 @@ tipo: "repo"
 cerebro: "Estudio"
 visibilidad: "privado"
 ultimo_cambio: 2026-11-07
+commits_8_semanas: 18
 github: "https://github.com/lianfixx/maestria-alta-direccion"
 tags:
   - "repo"
@@ -16,4 +17,4 @@ Cerebro: [[Estudio]] · privado · último cambio: 7 nov 2026
 
 [Abrir en GitHub](https://github.com/lianfixx/maestria-alta-direccion)
 
-Repositorio privado: aquí solo se publica su nombre y su fecha.
+Repositorio privado: aquí solo se publica su nombre, su fecha y su actividad.

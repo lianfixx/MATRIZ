@@ -23,4 +23,4 @@ Parte de la [[MATRIZ]].
 - `pizarras-de-estudio` · [[ESTUDIO-TEMAS|ESTUDIO-TEMAS]]
 - `tareas-maestria` · [[maestria-alta-direccion|maestria-alta-direccion]]
 
-Para continuar con otra IA: [[estudio.CONTEXTO|archivo de contexto]].
+Tablero editable: `tablero/estudio.md` (o desde el panel). Para otra IA: [[estudio.CONTEXTO|archivo de contexto]].

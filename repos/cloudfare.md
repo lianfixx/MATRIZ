@@ -4,6 +4,7 @@ cerebro: "Herramientas"
 visibilidad: "público"
 ultimo_cambio: 2026-11-12
 skills: 0
+commits_8_semanas: 10
 github: "https://github.com/lianfixx/cloudfare"
 tags:
   - "repo"
