@@ -50,6 +50,8 @@ La revisión semanal los asigna a su cerebro; si alguno es dudoso, le pregunta a
 - Renovación de la conexión Claude–box · 7 dic 2026 (en 25 días)
 - Token de GitHub «MATRIZ lectura» · 9 feb 2027 (en 89 días)
 - Token de GitHub «MATRIZ escritura» (edición desde el panel) · 12 nov 2027 (en 365 días)
+- Llave de GitHub «Matriz administración (Claude)» · 12 nov 2027 (en 365 días)
+- Llave de Cloudflare «Matriz administración (Claude)» · 12 nov 2027 (en 365 días)
 
 ## Automatizaciones y skills
 
