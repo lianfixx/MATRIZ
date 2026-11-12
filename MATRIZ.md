@@ -22,7 +22,7 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 | [[Contenido y video]] | 3 | 43 commits | 1 días | 0 | Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio, X e historias de Instagram. |
 | [[Estudio]] | 2 | 0 commits | 5 días | 0 | Maestría en Alta Dirección y pizarras de estudio. |
 | [[Productos]] | 2 | 0 commits | 8 días | 0 | Productos propios de Emi: PANEL FIRMA (gestión jurídica) y Mes (finanzas personales). |
-| [[Herramientas]] | 5 | 27 commits | 0 días | 0 | Piezas que sirven a todos los cerebros: estilo de Emi, selector de modelo, entorno de Cloudflare, computadora virtual (Simular Box) e ingeniería inversa. |
+| [[Herramientas]] | 5 | 28 commits | 0 días | 0 | Piezas que sirven a todos los cerebros: estilo de Emi, selector de modelo, entorno de Cloudflare, computadora virtual (Simular Box) e ingeniería inversa. |
 
 ## Lo último que se hizo
 
