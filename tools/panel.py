@@ -4,6 +4,7 @@
   dist/index.html        el panel (panel/index.html)
   dist/matriz.json       los datos que genera tools/generar.py
   dist/contexto/*.md     los archivos de contexto, para copiarlos o pegarlos en cualquier IA
+  dist/EMI.md            quién es Emi y sus reglas
   dist/llms.txt          mapa breve para IA que leen una URL
   dist/robots.txt        pide a los buscadores no indexar
   dist/_headers          lo mismo como cabecera, más caché corta
@@ -15,6 +16,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import shutil
 import sys
 from pathlib import Path
@@ -32,11 +34,15 @@ def llms(d: dict, base: str) -> str:
     for c in d["cerebros"]:
         L.append(f"- [{c['nombre']}]({base}contexto/{c['id']}.CONTEXTO.md): {c['descripcion']}")
     L += ["", "## Datos", "", f"- [matriz.json]({base}matriz.json): todo en JSON",
-          "- [EMI.md](https://github.com/lianfixx/MATRIZ/blob/main/EMI.md): quién es Emi y sus reglas", ""]
+          f"- [EMI.md]({base}EMI.md): quién es Emi y sus reglas",
+          f"- Conector MCP de solo lectura (Streamable HTTP): {base}mcp", ""]
     return "\n".join(L)
 
 
-def armar(salida: Path, base: str = "/") -> None:
+PANEL_URL = os.environ.get("PANEL_URL", "https://matriz.milla-abogados.workers.dev/")
+
+
+def armar(salida: Path, base: str = PANEL_URL) -> None:
     datos = RAIZ / "matriz.json"
     if not datos.exists():
         raise SystemExit("Falta matriz.json: corre antes tools/generar.py")
@@ -46,13 +52,14 @@ def armar(salida: Path, base: str = "/") -> None:
     (salida / "contexto").mkdir(parents=True)
     shutil.copy(RAIZ / "panel" / "index.html", salida / "index.html")
     shutil.copy(datos, salida / "matriz.json")
+    shutil.copy(RAIZ / "EMI.md", salida / "EMI.md")
     for p in sorted((RAIZ / "contexto").glob("*.md")):
         shutil.copy(p, salida / "contexto" / p.name)
     (salida / "llms.txt").write_text(llms(d, base), encoding="utf-8")
     (salida / "robots.txt").write_text("User-agent: *\nDisallow: /\n", encoding="utf-8")
     (salida / "_headers").write_text(
         "/*\n  X-Robots-Tag: noindex, nofollow\n  Referrer-Policy: no-referrer\n  X-Content-Type-Options: nosniff\n"
-        "/matriz.json\n  Cache-Control: no-cache\n/contexto/*\n  Content-Type: text/markdown; charset=utf-8\n  Cache-Control: no-cache\n",
+        "/matriz.json\n  Cache-Control: no-cache\n/EMI.md\n  Content-Type: text/markdown; charset=utf-8\n/contexto/*\n  Content-Type: text/markdown; charset=utf-8\n  Cache-Control: no-cache\n",
         encoding="utf-8")
 
 

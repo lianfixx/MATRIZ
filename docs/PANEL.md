@@ -12,7 +12,7 @@ Para IA que leen una dirección web: `/llms.txt` (mapa breve), `/matriz.json` (t
 
 `tools/panel.py` arma la carpeta `dist/` con `panel/index.html`, `matriz.json` y `contexto/`. El workflow «Publicar panel» la sube a Cloudflare Workers (plan gratis, solo archivos estáticos) cada vez que «Actualizar la Matriz» termina bien. Necesita dos secretos en este repositorio: `CLOUDFLARE_API_TOKEN` (plantilla «Edit Cloudflare Workers») y `CLOUDFLARE_ACCOUNT_ID`. Sin ellos el workflow termina en verde y avisa que no publicó.
 
-La dirección queda como `https://matriz.<tu-subdominio>.workers.dev`.
+La dirección es **https://matriz.milla-abogados.workers.dev** (cuenta de Cloudflare de Emi, plan gratis, subdominio `milla-abogados`). La llave `CLOUDFLARE_API_TOKEN` se llama «MATRIZ panel (GitHub Actions)» en Cloudflare → Mi perfil → Tokens de API, sin caducidad y limitada a Workers de esa cuenta. El mismo Worker sirve el conector MCP en `/mcp` ([CONECTAR_IA.md](CONECTAR_IA.md)).
 
 ## Privacidad
 

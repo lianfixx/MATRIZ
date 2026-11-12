@@ -13,6 +13,7 @@ Este repositorio es el mapa de todo el trabajo de Emi: la **Matriz General**, su
 - A mano solo se edita `matriz.config.json` (qué cerebros existen y qué repositorio pertenece a cuál), `tools/`, la documentación y `ia/`.
 - `MATRIZ.md`, `matriz.json`, `cerebros/`, `repos/`, `contexto/` y `bitacora/` los genera `python3 tools/generar.py`. No los edites: se reescriben solos cada día.
 - `.obsidian/` y `Repositorios.base` son la configuración de Obsidian ([docs/OBSIDIAN.md](docs/OBSIDIAN.md)). Cambiarlos puede chocar con la copia de la Mac de Emi, que solo trae cambios: hazlo solo si Emi lo pide y avísale.
+- Para conectar otra IA (Claude, ChatGPT, Gemini, Muse, DeepSeek): [docs/CONECTAR_IA.md](docs/CONECTAR_IA.md). Conector MCP de solo lectura: `https://matriz.milla-abogados.workers.dev/mcp`.
 - `panel/` es el panel web que se publica en Cloudflare después de cada actualización ([docs/PANEL.md](docs/PANEL.md)). Publica solo lo que ya es público aquí.
 - `notas/` es privada de Emi y está fuera de git. No la leas ni la subas.
 - Este repositorio es público. De los repositorios privados solo se publica nombre, cerebro y fecha. No copies aquí datos de clientes, expedientes ni secretos.

@@ -1,9 +1,12 @@
-// Panel de la Matriz en Cloudflare Workers (solo archivos estáticos, sin código de servidor).
+// Matriz en Cloudflare Workers: el panel (archivos de dist/) y el conector MCP de solo lectura en /mcp.
 // Lo publica .github/workflows/publicar-panel.yml; también: `python3 tools/panel.py && npx wrangler deploy`.
 {
   "name": "matriz",
+  "main": "worker/index.js",
   "compatibility_date": "2026-11-01",
   "assets": {
-    "directory": "./dist"
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "run_worker_first": ["/mcp", "/mcp/"]
   }
 }

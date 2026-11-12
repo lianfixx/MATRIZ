@@ -9,7 +9,7 @@ on:
     types: [completed]
   push:
     branches: [main]
-    paths: ["panel/**", "tools/panel.py", "wrangler.jsonc"]
+    paths: ["panel/**", "worker/**", "tools/panel.py", "wrangler.jsonc", "EMI.md"]
   workflow_dispatch:
 
 permissions:
@@ -37,6 +37,8 @@ jobs:
           python-version: "3.12"
       - name: Armar el panel
         run: python3 tools/panel.py
+      - name: Probar el conector MCP
+        run: node worker/prueba.mjs
       - name: Publicar en Cloudflare
         shell: bash
         run: |

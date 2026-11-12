@@ -1,0 +1,25 @@
+import { readFile } from "node:fs/promises";
+// Pruebas del conector MCP contra dist/ (arma antes: python3 tools/panel.py). Uso: node worker/prueba.mjs
+const RAIZ = new URL("..", import.meta.url).pathname;
+const mod = await import(new URL("./index.js", import.meta.url));
+const env = { ASSETS: { fetch: async (req) => { const p = new URL(req.url).pathname; try { return new Response(await readFile(RAIZ + "dist" + (p === "/" ? "/index.html" : p))); } catch { return new Response("no", { status: 404 }); } } } };
+const llamar = async (cuerpo, metodo = "POST") => { const r = await mod.default.fetch(new Request("https://x.dev/mcp", { method: metodo, headers: { "Content-Type": "application/json" }, body: metodo === "POST" ? JSON.stringify(cuerpo) : undefined }), env); return [r.status, r.status === 202 ? null : await r.json()]; };
+let fallos = 0; const ok = (c, m) => { if (!c) { fallos++; console.log("FALLA:", m); } };
+let [s, j] = await llamar({ jsonrpc: "2.0", id: 1, method: "initialize", params: { protocolVersion: "2025-06-18", capabilities: {}, clientInfo: { name: "t", version: "1" } } });
+ok(s === 200 && j.result.protocolVersion === "2025-06-18" && j.result.capabilities.tools, "initialize");
+[s] = await llamar({ jsonrpc: "2.0", method: "notifications/initialized" }); ok(s === 202, "notificación 202");
+[s, j] = await llamar({ jsonrpc: "2.0", id: 2, method: "tools/list" }); ok(j.result.tools.length === 7, "7 herramientas");
+const call = async (name, args) => (await llamar({ jsonrpc: "2.0", id: 3, method: "tools/call", params: { name, arguments: args } }))[1].result;
+let r = await call("matriz_resumen", {}); ok(r.content[0].text.includes("Castorena") && !r.isError, "resumen"); 
+r = await call("cerebro", { cerebro: "milla" }); ok(r.content[0].text.startsWith("# MILLA ABOGADOS"), "cerebro parcial");
+r = await call("contexto", { cerebro: "Contenido y video" }); ok(r.content[0].text.includes("Contexto para cualquier IA"), "contexto");
+r = await call("ultimos_cambios", { limite: 3 }); ok(r.content[0].text.split("\n").length === 3, "últimos 3");
+r = await call("reglas_de_emi", {}); ok(r.content[0].text.includes("Reglas que valen siempre"), "EMI");
+r = await call("search", { query: "x-viral" }); const res = JSON.parse(r.content[0].text).results; ok(res.length > 0, "search"); 
+r = await call("fetch", { id: res[0].id }); ok(JSON.parse(r.content[0].text).text.length > 20, "fetch");
+r = await call("cerebro", { cerebro: "nada" }); ok(r.isError, "error controlado");
+[s, j] = await llamar({ jsonrpc: "2.0", id: 9, method: "foo" }); ok(j.error.code === -32601, "método desconocido");
+[s] = await llamar(null, "GET"); ok(s === 405, "GET 405");
+const t = JSON.stringify(await mod.default.fetch(new Request("https://x.dev/mcp", { method: "POST", body: "{" }), env).then((x) => x.json())); ok(t.includes("-32700"), "JSON inválido");
+console.log(fallos ? `${fallos} fallos` : "MCP: todas las pruebas pasan");
+process.exit(fallos ? 1 : 0);

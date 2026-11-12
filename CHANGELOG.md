@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-11-12 · Matriz 0.6.0: panel publicado y conector MCP para cualquier IA
+
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: Emi, 12/11/2026: «haz tú lo de Cloudflare» y «configura de manera perfecta y completa todo el entorno Cloudflare con las skills, GitHub, en el entorno de Claude y que se pueda usar con Muse, ChatGPT etc. Todo auditado».
+- Cambios: desde la computadora virtual de Emi (box «main», con su sesión de Google y sus verificaciones en el iPhone) se creó en Cloudflare la llave «MATRIZ panel (GitHub Actions)» (plantilla de Workers, solo su cuenta, sin caducidad, sin permisos de dominios) y se guardaron en este repositorio los secretos `CLOUDFLARE_API_TOKEN` y `CLOUDFLARE_ACCOUNT_ID`; el portapapeles de la computadora virtual se vació y se guardó su estado para conservar las sesiones. El panel quedó en https://matriz.milla-abogados.workers.dev. `worker/index.js` añade al mismo Worker un conector MCP de solo lectura en `/mcp` (Streamable HTTP, respuestas JSON) con siete herramientas: `matriz_resumen`, `cerebro`, `contexto`, `ultimos_cambios`, `reglas_de_emi`, `search` y `fetch`; lee solo lo público del panel. `tools/panel.py` publica también `EMI.md` y usa direcciones completas en `llms.txt`. `worker/prueba.mjs` prueba el conector y corre antes de cada publicación. Guía por IA en `docs/CONECTAR_IA.md`.
+- Archivos: `worker/index.js`, `worker/prueba.mjs`, `wrangler.jsonc`, `tools/panel.py`, `.github/workflows/publicar-panel.yml`, `docs/CONECTAR_IA.md`, `docs/PANEL.md`, `README.md`, `AGENTS.md`, `inventario.json` y este registro.
+- Verificación: `node worker/prueba.mjs` → aprobado (13 casos); `wrangler deploy --dry-run` → aprobado con el enlace ASSETS; publicación del panel en Cloudflare → aprobada (11 archivos, https://matriz.milla-abogados.workers.dev); conector en producción → ver la entrada siguiente o Actions.
+- Pendiente: agregar el conector en claude.ai y en ChatGPT; Obsidian en el iPhone.
+
 ## 2026-11-11 · Matriz 0.5.0: todo se actualiza y se retroalimenta solo
 
 - Agente: Claude Code (sesión en la nube)

@@ -10,7 +10,7 @@
       "estado": "activa"
     },
     {
-      "nombre": "Publicar panel (GitHub Actions → Cloudflare)",
+      "nombre": "Publicar panel y conector MCP (GitHub Actions → Cloudflare)",
       "cerebro": "matriz",
       "repo": "MATRIZ",
       "horario": "Después de cada actualización",
