@@ -1,7 +1,9 @@
 name: Actualizar la Matriz
 
-# Regenera el índice (MATRIZ.md, matriz.json, cerebros/, repos/, contexto/, bitacora/) leyendo
-# cada repositorio. Corre cada día y a mano. No escribe en ningún otro repositorio.
+# Regenera el índice (MATRIZ_GENERAL.md, MATRIZ.md, matriz.json, cerebros/, repos/, contexto/,
+# bitacora/) leyendo cada repositorio. Corre cada día, a mano y después de cada edición desde el
+# panel (tablero/, proyectos/). No escribe en ningún otro repositorio.
+# MATRIZ_RESERVADOS (opcional): nombres de clientes que nunca se publican, separados por coma.
 # Para leer los privados necesita el secreto MATRIZ_TOKEN: un token de GitHub de grano fino,
 # de solo lectura («Contents: Read-only») sobre los repositorios de lianfixx. Sin él, la Matriz
 # se genera igual y marca los privados como «sin lectura».
@@ -11,7 +13,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ["matriz.config.json", "inventario.json", "tools/**"]
+    paths: ["matriz.config.json", "inventario.json", "EMI.md", "tools/**", "tablero/**", "proyectos/**"]
   # Lo que integra «Integrar tareas programadas» (la revisión semanal) no dispara «push»:
   # se regenera al terminar esa integración.
   workflow_run:
@@ -42,14 +44,19 @@ jobs:
       - name: Generar
         env:
           MATRIZ_TOKEN: ${{ secrets.MATRIZ_TOKEN }}
+          MATRIZ_RESERVADOS: ${{ secrets.MATRIZ_RESERVADOS }}
           TZ: America/Mexico_City
         run: python3 tools/generar.py --clonar
       - name: Guardar si hubo cambios
         run: |
           set -euo pipefail
-          git add MATRIZ.md matriz.json cerebros repos contexto bitacora
+          git add MATRIZ_GENERAL.md MATRIZ.md matriz.json cerebros repos contexto bitacora
           if git diff --cached --quiet; then echo "Sin cambios."; exit 0; fi
           git -c user.name="matriz-bot" -c user.email="matriz-bot@users.noreply.github.com" \
             commit -m "Matriz: actualización automática" -m "IA-Actor: GitHub Actions (tools/generar.py)"
-          git pull --rebase --quiet origin main
-          git push origin HEAD:main
+          # El panel o la integración semanal pueden escribir en main al mismo tiempo: reintentar.
+          for i in 1 2 3 4; do
+            if git pull --rebase --quiet origin main && git push origin HEAD:main; then exit 0; fi
+            echo "::warning::Intento $i de subir falló; se reintenta."; sleep $((i * 5))
+          done
+          exit 1

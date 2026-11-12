@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-11-12 · Matriz 0.9.1: actualización tras cada edición, reintentos y grafo corregido
+
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: Emi, 12/11/2026: «QUE CONECTE A CAMBIOS DIRECTOS CON OBSIDIAN» y «AUDITA A PROFUNDIDAD Y MEJORA, ARREGLA».
+- Cambios: «Actualizar la Matriz» corre también al cambiar `tablero/`, `proyectos/` o `EMI.md` (lo que se edita en el panel llega a la Matriz, al panel y a Obsidian en minutos), guarda `MATRIZ_GENERAL.md` (antes se generaba y no se subía), lee los nombres reservados del secreto `MATRIZ_RESERVADOS` y reintenta la subida si `main` cambió. «Integrar tareas programadas» también reintenta. `ia/politica.json`: `MATRIZ_GENERAL.md`, `tablero/` y `proyectos/` quedan exentos del registro en CHANGELOG como los demás archivos que no se editan a mano; su registro es el commit (con `IA-Actor`) y la bitácora. Grafo de Obsidian: `-file:EMI` también ocultaba `estilo-emi` y un `-path:ia` habría ocultado cinco repositorios; ahora usa expresiones exactas y deja fuera `tablero/`, `proyectos/`, `ia/` y `MATRIZ_GENERAL.md` (el tablero ya se ve dentro de cada nota de cerebro).
+- Archivos: `.github/workflows/actualizar-matriz.yml`, `.github/workflows/integrar-tareas.yml`, `ia/politica.json`, `.obsidian/graph.json` y este registro.
+- Verificación: `python3 ia/test_guard.py` → aprobado (33); `python3 ia/verificar.py reglas` → aprobado; YAML de los cuatro workflows válido; Obsidian real (Linux, bóveda de prueba con un tablero y un proyecto de ejemplo) → el grafo muestra 30 nodos: MATRIZ, 7 cerebros y los 22 repositorios, sin `EMI.md`, tablero ni proyectos.
+- Pendiente: si Emi movió o cambió el grafo en su Mac, Obsidian Git puede pedir resolver `graph.json` al traer este cambio (conservar la versión del repositorio).
+
 ## 2026-11-12 · Matriz 0.9.0: panel 3D que edita y conector con diez herramientas
 
 - Agente: Claude Code (sesión en la nube)

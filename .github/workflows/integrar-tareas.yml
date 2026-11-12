@@ -49,12 +49,19 @@ jobs:
           git checkout -q --detach "origin/$RAMA"
           python3 "$RUNNER_TEMP/ia-main/verificar.py" ci --root "$PWD" \
             --politica "$RUNNER_TEMP/ia-main/politica.json" --base "$base" --head HEAD
-          git checkout -q -B main origin/main
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if ! git merge -q --ff-only "origin/$RAMA"; then
-            git merge -q --no-ff --no-edit -m "Integrar $RAMA en main" \
-              -m "IA-Actor: GitHub Actions (integración de tarea programada)" "origin/$RAMA"
-          fi
-          git push origin HEAD:main
-          echo "Integrada $RAMA ($n commits) en main: $(git rev-parse --short HEAD)"
+          # main puede moverse mientras tanto (actualización diaria o edición desde el panel): reintentar.
+          for i in 1 2 3 4; do
+            git fetch -q origin main
+            git checkout -q -B main origin/main
+            if ! git merge -q --ff-only "origin/$RAMA"; then
+              git merge -q --no-ff --no-edit -m "Integrar $RAMA en main" \
+                -m "IA-Actor: GitHub Actions (integración de tarea programada)" "origin/$RAMA"
+            fi
+            if git push origin HEAD:main; then
+              echo "Integrada $RAMA ($n commits) en main: $(git rev-parse --short HEAD)"; exit 0
+            fi
+            echo "::warning::Intento $i de subir falló; se reintenta."; sleep $((i * 5))
+          done
+          exit 1

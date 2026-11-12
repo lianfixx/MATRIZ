@@ -14,7 +14,10 @@
       "^cerebros/",
       "^repos/",
       "^contexto/",
-      "^bitacora/"
+      "^bitacora/",
+      "^MATRIZ_GENERAL\\.md$",
+      "^tablero/",
+      "^proyectos/"
     ]
   },
   "rules": [
