@@ -1,0 +1,9 @@
+{
+  "name": "matriz-three",
+  "private": true,
+  "description": "three.js para el panel de la Matriz; se arma con esbuild en tools/panel.py",
+  "devDependencies": {
+    "esbuild": "0.25.11",
+    "three": "0.186.1"
+  }
+}

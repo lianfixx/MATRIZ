@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Arma el panel web de la Matriz en `dist/` para publicarlo en Cloudflare.
 
-  dist/index.html        el panel (panel/index.html)
+  dist/index.html        el panel (panel/index.html, app.js, espacio.js, estilo.css)
+  dist/vendor/           three.js minificado, armado aquí con esbuild desde tools/three (versiones fijas)
   dist/matriz.json       los datos que genera tools/generar.py
   dist/contexto/*.md     los archivos de contexto, para copiarlos o pegarlos en cualquier IA
   dist/EMI.md            quién es Emi y sus reglas
@@ -18,6 +19,7 @@ import argparse
 import json
 import os
 import shutil
+import subprocess
 import sys
 from pathlib import Path
 
@@ -33,13 +35,29 @@ def llms(d: dict, base: str) -> str:
          "para el repositorio».", "", "## Cerebros", ""]
     for c in d["cerebros"]:
         L.append(f"- [{c['nombre']}]({base}contexto/{c['id']}.CONTEXTO.md): {c['descripcion']}")
-    L += ["", "## Datos", "", f"- [matriz.json]({base}matriz.json): todo en JSON",
+    L += ["", "## Datos", "", f"- [MATRIZ_GENERAL.md]({base}MATRIZ_GENERAL.md): el archivo único con todo (empieza aquí)",
+          f"- [matriz.json]({base}matriz.json): todo en JSON",
           f"- [EMI.md]({base}EMI.md): quién es Emi y sus reglas",
           f"- Conector MCP de solo lectura (Streamable HTTP): {base}mcp", ""]
     return "\n".join(L)
 
 
 PANEL_URL = os.environ.get("PANEL_URL", "https://matriz.milla-abogados.workers.dev/")
+
+
+def armar_three(destino: Path) -> None:
+    """three.js no se guarda minificado en el repositorio: se arma en cada publicación con las
+    versiones fijas de tools/three/package-lock.json (npm ci) y solo con las piezas que usa el panel."""
+    carpeta = RAIZ / "tools" / "three"
+    if not shutil.which("npm"):
+        raise SystemExit("Falta Node.js (npm) para armar three.js del panel.")
+    if not (carpeta / "node_modules" / "three").exists():
+        subprocess.run(["npm", "ci", "--no-audit", "--no-fund"], cwd=carpeta, check=True)
+    destino.mkdir(parents=True, exist_ok=True)
+    subprocess.run([str(carpeta / "node_modules" / ".bin" / "esbuild"), "entrada.mjs", "--bundle", "--format=esm",
+                    "--minify", "--legal-comments=none", f"--outfile={destino / 'three.matriz.min.js'}"],
+                   cwd=carpeta, check=True, capture_output=True)
+    shutil.copy(carpeta / "node_modules" / "three" / "LICENSE", destino / "THREE-LICENSE")
 
 
 def armar(salida: Path, base: str = PANEL_URL) -> None:
@@ -50,16 +68,24 @@ def armar(salida: Path, base: str = PANEL_URL) -> None:
     if salida.exists():
         shutil.rmtree(salida)
     (salida / "contexto").mkdir(parents=True)
-    shutil.copy(RAIZ / "panel" / "index.html", salida / "index.html")
+    for nombre in ("index.html", "app.js", "espacio.js", "estilo.css"):
+        shutil.copy(RAIZ / "panel" / nombre, salida / nombre)
     shutil.copy(datos, salida / "matriz.json")
     shutil.copy(RAIZ / "EMI.md", salida / "EMI.md")
+    if (RAIZ / "MATRIZ_GENERAL.md").exists():
+        shutil.copy(RAIZ / "MATRIZ_GENERAL.md", salida / "MATRIZ_GENERAL.md")
+    armar_three(salida / "vendor")
     for p in sorted((RAIZ / "contexto").glob("*.md")):
         shutil.copy(p, salida / "contexto" / p.name)
     (salida / "llms.txt").write_text(llms(d, base), encoding="utf-8")
     (salida / "robots.txt").write_text("User-agent: *\nDisallow: /\n", encoding="utf-8")
     (salida / "_headers").write_text(
         "/*\n  X-Robots-Tag: noindex, nofollow\n  Referrer-Policy: no-referrer\n  X-Content-Type-Options: nosniff\n"
-        "/matriz.json\n  Cache-Control: no-cache\n/EMI.md\n  Content-Type: text/markdown; charset=utf-8\n/contexto/*\n  Content-Type: text/markdown; charset=utf-8\n  Cache-Control: no-cache\n",
+        "  X-Frame-Options: DENY\n  Permissions-Policy: camera=(), microphone=(), geolocation=()\n"
+        "  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; "
+        "connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'\n"
+        "/vendor/*\n  Cache-Control: public, max-age=604800\n"
+        "/matriz.json\n  Cache-Control: no-cache\n/MATRIZ_GENERAL.md\n  Content-Type: text/markdown; charset=utf-8\n  Cache-Control: no-cache\n/EMI.md\n  Content-Type: text/markdown; charset=utf-8\n/contexto/*\n  Content-Type: text/markdown; charset=utf-8\n  Cache-Control: no-cache\n",
         encoding="utf-8")
 
 
