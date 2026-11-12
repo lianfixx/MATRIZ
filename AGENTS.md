@@ -4,17 +4,18 @@ Este repositorio es el mapa de todo el trabajo de Emi: la **Matriz General**, su
 
 ## Cómo entrar
 
-1. Lee `MATRIZ.md` (qué cerebros hay y qué se movió) y `EMI.md` (quién es Emi y las reglas que valen siempre).
+1. Lee `MATRIZ_GENERAL.md`: el archivo único con todo (quién es Emi, reglas, pulso, cerebros, repositorios, pendientes, tareas y skills). `MATRIZ.md` y `EMI.md` son sus partes.
 2. Lee `contexto/<cerebro>.CONTEXTO.md` del cerebro en el que vas a trabajar.
 3. Ve al repositorio que corresponda y lee **su** `AGENTS.md`, `ia/REGLAS.md` e `ia/PROTOCOLO.md`. El trabajo se hace y se registra allá, no aquí.
 
 ## Qué se edita aquí y qué no
 
 - A mano solo se edita `matriz.config.json` (qué cerebros existen y qué repositorio pertenece a cuál), `tools/`, la documentación y `ia/`.
-- `MATRIZ.md`, `matriz.json`, `cerebros/`, `repos/`, `contexto/` y `bitacora/` los genera `python3 tools/generar.py`. No los edites: se reescriben solos cada día.
+- `MATRIZ_GENERAL.md`, `MATRIZ.md`, `matriz.json`, `cerebros/`, `repos/`, `contexto/` y `bitacora/` los genera `python3 tools/generar.py`. No los edites: se reescriben solos cada día.
+- `tablero/` (pendientes y notas de Emi) y `proyectos/` los escribe Emi desde el panel. Una IA no los cambia salvo que Emi lo pida.
 - `.obsidian/` y `Repositorios.base` son la configuración de Obsidian ([docs/OBSIDIAN.md](docs/OBSIDIAN.md)). Cambiarlos puede chocar con la copia de la Mac de Emi, que solo trae cambios: hazlo solo si Emi lo pide y avísale.
 - Para conectar otra IA (Claude, ChatGPT, Gemini, Muse, DeepSeek): [docs/CONECTAR_IA.md](docs/CONECTAR_IA.md). Conector MCP de solo lectura: `https://matriz.milla-abogados.workers.dev/mcp`.
-- `panel/` es el panel web que se publica en Cloudflare después de cada actualización ([docs/PANEL.md](docs/PANEL.md)). Publica solo lo que ya es público aquí.
+- `panel/` es el panel web que se publica en Cloudflare después de cada actualización ([docs/PANEL.md](docs/PANEL.md)). Publica solo lo que ya es público aquí. `worker/` sirve el conector MCP y la edición con contraseña; sus pruebas: `node worker/prueba.mjs` (después de `python3 tools/panel.py`).
 - `notas/` es privada de Emi y está fuera de git. No la leas ni la subas.
 - Este repositorio es público. De los repositorios privados solo se publica nombre, cerebro y fecha. No copies aquí datos de clientes, expedientes ni secretos.
 - Un repositorio nuevo de Emi se agrega a un cerebro en `matriz.config.json`. Un cerebro nuevo requiere confirmación de Emi.

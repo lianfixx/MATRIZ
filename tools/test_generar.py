@@ -95,6 +95,20 @@ class Privacidad(unittest.TestCase):
         for queda in ("09/11", "50/51", "1.2.3", "11/11/2026", "[cliente]", "[expediente]"):
             self.assertIn(queda, r)
 
+    def test_huellas(self):
+        # Protege sin el secreto y sin escribir el nombre en claro; mayúsculas, acentos y «Grupo» no lo esquivan.
+        g.HUELLAS_RESERVADAS.clear()
+        g.HUELLAS_RESERVADAS.add(g.huella("Acmé  Industrial"))
+        try:
+            r = g.reservar("Cotejo de ACME industrial y de Grupo Acme Industrial; Acme solo e Industrial solo quedan.")
+            self.assertEqual(r.count("[cliente]"), 2)
+            self.assertNotIn("ACME industrial", r)
+            self.assertNotIn("Grupo", r)
+            self.assertIn("Acme solo", r)
+            self.assertEqual(g.huella("ACMÉ industrial"), g.huella("acme   Industrial"))
+        finally:
+            g.HUELLAS_RESERVADAS.clear()
+
     def test_terminos_del_entorno(self):
         os.environ["MATRIZ_RESERVADOS"] = "Acme, Beta\nGamma"
         try:
@@ -151,6 +165,11 @@ class Generacion(unittest.TestCase):
             a = datos["cerebros"][0]["repos"][0]
             self.assertEqual(a["lectura"], "anterior")
             self.assertEqual(a["registro"][0]["agente"], "Codex")
+            # Regresión: lo reutilizado también se filtra con las reservas vigentes.
+            previo["cerebros"][0]["repos"][0]["resumen"] = "Cotejo de Acme Industrial"
+            cfg = {**CFG, "terminos_reservados_huella": [g.huella("acme industrial")]}
+            datos = g.generar(cfg, t / "out", t / "clones", False, "2026-11-13", {}, None, previo, t)
+            self.assertEqual(datos["cerebros"][0]["repos"][0]["resumen"], "Cotejo de [cliente]")
 
     def test_visibilidad_por_api(self):
         with tempfile.TemporaryDirectory() as t:

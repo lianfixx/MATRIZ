@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-11-12 · Matriz 1.0.0: archivo único respaldado en GitHub, Obsidian y Drive
+
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: Emi, 12/11/2026: «QUE CON ESTA MATRIZ GENERAL SEA LA ÚNICA QUE DEBA ADJUNTAR A CUALQUIER IA PARA QUE ENTIENDA TODO… DEBE ESTAR RESPALDADA, DOCUMENTADA (Y TODO LO QUE NACE DE ELLA) EN GITHUB, OBSIDIAN Y DRIVE»; respaldo en Drive: «archivo único + copia».
+- Cambios: `MATRIZ_GENERAL.md` queda como la puerta única (README, AGENTS, guía de conexión, panel y conector la ponen primero). Google Drive: carpeta privada «Matriz General» (solo Emi) con el documento de Google «Matriz General», `MATRIZ_GENERAL.md` y `MATRIZ-2026-11-12.zip` del repositorio; la revisión del domingo los renueva cuando su sesión tiene Google Drive (las tareas programadas de esta organización no pueden guardar conectores: si no lo tiene, lo dice en su resumen). Revisión semanal: vencimientos desde `inventario.json`, proyectos nuevos (encargo para Muse) y respaldo en Drive. Privacidad: al pasar los nombres de clientes al secreto `MATRIZ_RESERVADOS` (0.8.0), mientras el secreto no exista, un nombre volvió a publicarse en `matriz.json`, una nota de repositorio y la bitácora. Ahora `matriz.config.json` guarda los nombres como huella SHA-256 (`terminos_reservados_huella`, sin el nombre en claro); el generador las aplica a todo lo publicado, también a lo reutilizado de una lectura anterior y a la bitácora acumulada, y el panel rechaza esos nombres al escribir aunque falte el secreto. El historial de git conserva las versiones anteriores (Emi eligió no reescribirlo). Prueba del conector: el archivo único se verifica con y sin `MATRIZ_GENERAL.md` y `fetch` de la Matriz siempre devuelve texto. Documentación al día: README, AGENTS, PANEL, CONECTAR_IA, OBSIDIAN y REVISION_SEMANAL.
+- Archivos: `tools/generar.py`, `tools/test_generar.py`, `matriz.config.json`, `worker/index.js`, `worker/prueba.mjs`, `README.md`, `AGENTS.md`, `docs/PANEL.md`, `docs/CONECTAR_IA.md`, `docs/OBSIDIAN.md`, `docs/REVISION_SEMANAL.md` y este registro.
+- Verificación: `python3 -m unittest discover -s tools -p 'test_*.py'` → aprobado (15, con regresiones de huellas y de lectura anterior); `node worker/prueba.mjs` → aprobado (48); las 9 líneas publicadas que tenían el nombre quedan tapadas con el filtro nuevo; Drive → los tres archivos subidos, el documento convertido completo y la carpeta solo con permiso de Emi.
+- Pendiente: Emi renueva la llave de Cloudflare y guarda `CLOUDFLARE_API_TOKEN`, `PANEL_CLAVE`, `MATRIZ_ESCRITURA` y `MATRIZ_RESERVADOS`; agregar el conector en Claude y ChatGPT; Obsidian en el iPhone.
+
 ## 2026-11-12 · Matriz 0.9.1: actualización tras cada edición, reintentos y grafo corregido
 
 - Agente: Claude Code (sesión en la nube)

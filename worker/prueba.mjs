@@ -1,6 +1,7 @@
 // Pruebas del Worker (conector MCP y API de edición) contra dist/. Arma antes: python3 tools/panel.py
 // Uso: node worker/prueba.mjs
 import { readFile } from "node:fs/promises";
+import { existsSync } from "node:fs";
 const RAIZ = new URL("..", import.meta.url).pathname;
 const mod = await import(new URL("./index.js", import.meta.url));
 let fallos = 0, casos = 0;
@@ -25,7 +26,11 @@ ok(s === 200 && j.result.protocolVersion === "2025-06-18" && j.result.capabiliti
 [s, j] = await mcp({ jsonrpc: "2.0", id: 3, method: "tools/list" }); ok(j.result.tools.length === 10, "10 herramientas");
 const call = async (name, args) => (await mcp({ jsonrpc: "2.0", id: 4, method: "tools/call", params: { name, arguments: args } }))[1].result;
 let r = await call("matriz_resumen", {}); ok(r.content[0].text.includes("Castorena") && !r.isError, "resumen");
-r = await call("matriz_general", {}); ok(r.content[0].text.includes("Matriz General de Emi"), "archivo único");
+// El archivo único lo genera «Actualizar la Matriz»; sin él, el conector lo dice en vez de fallar.
+const hayGeneral = existsSync(RAIZ + "dist/MATRIZ_GENERAL.md");
+r = await call("matriz_general", {}); ok(r.content[0].text.includes(hayGeneral ? "Matriz General de Emi" : "todavía no está publicado"), "archivo único");
+r = await mcp({ jsonrpc: "2.0", id: 9, method: "tools/call", params: { name: "fetch", arguments: { id: "matriz" } } });
+ok(typeof r[1].result.content[0].text === "string" && r[1].result.content[0].text.length > 0, "fetch matriz siempre trae texto");
 r = await call("cerebro", { cerebro: "milla" }); ok(r.content[0].text.startsWith("# MILLA ABOGADOS"), "cerebro parcial");
 r = await call("cerebro", { cerebro: "" }); ok(r.isError, "cerebro vacío es error, no Castorena");
 r = await call("contexto", { cerebro: "Contenido y video" }); ok(r.content[0].text.includes("Contexto para cualquier IA"), "contexto");
@@ -42,9 +47,13 @@ r = await call("fetch", { id: "contexto:" }); ok(r.isError, "fetch contexto vac�
 s = (await mod.default.fetch(new Request("https://matriz.test/mcp"), envLectura)).status; ok(s === 405, "GET 405");
 
 // ---------- privacidad
-ok(mod.pareceDatoDeCliente("revisar el 99999/21-11-01-1", {}), "bloquea expediente");
-ok(mod.pareceDatoDeCliente("llamar a Acme", { MATRIZ_RESERVADOS: "Acme" }), "bloquea nombre reservado");
-ok(!mod.pareceDatoDeCliente("grabar el video del jueves 11/11", {}), "deja pasar texto normal");
+ok(await mod.pareceDatoDeCliente("revisar el 99999/21-11-01-1", {}), "bloquea expediente");
+ok(await mod.pareceDatoDeCliente("llamar a Acme", { MATRIZ_RESERVADOS: "Acme" }), "bloquea nombre reservado");
+ok(!(await mod.pareceDatoDeCliente("grabar el video del jueves 11/11", {})), "deja pasar texto normal");
+// Huella de «acme industrial» (la misma que calcula tools/generar.py): protege sin el secreto.
+const huellaAcme = "8885aeba78e84e1c5c43b4dc04db677a48f859091332ca092d2fff4945de800e";
+ok(await mod.pareceDatoDeCliente("Llamar a ACMÉ  Industrial mañana", {}, [huellaAcme]), "bloquea nombre por huella");
+ok(!(await mod.pareceDatoDeCliente("Llamar a Acme mañana", {}, [huellaAcme])), "una palabra suelta no basta");
 
 // ---------- tablero: ida y vuelta del Markdown
 const md = "---\ntipo: tablero\n---\n# T\n\n## Pendientes\n\n- [ ] Uno 🔺 📅 2026-11-20 ➕ 2026-11-12 ^aaaaaa\n- [x] Dos ✅ 2026-11-11 ^bbbbbb\n\n## Notas\n\n- 2026-11-12 · Nota ^cccccc\n";

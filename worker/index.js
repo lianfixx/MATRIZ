@@ -64,11 +64,25 @@ const PATRONES = [
   /\b[A-Z][AEIOUX][A-Z]{2}\d{6}[HM][A-Z]{5}[A-Z\d]\d\b/,
   /\b[A-ZÑ&]{3,4}\d{6}[A-Z\d]{3}\b/,
 ];
-function pareceDatoDeCliente(texto, env) {
+// Igual que tools/generar.py: minúsculas, sin acentos, palabras separadas por un espacio.
+const normalizar = (t) => (t.toLowerCase().normalize("NFKD").replace(/\p{M}/gu, "").match(/[0-9A-Za-zÀ-ÖØ-öø-ÿ]+/g) || []);
+async function sha256(t) {
+  const b = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(t));
+  return [...new Uint8Array(b)].map((x) => x.toString(16).padStart(2, "0")).join("");
+}
+// Formatos (expedientes, correos…), nombres del secreto MATRIZ_RESERVADOS y huellas de matriz.config.json
+// (llegan en matriz.json como «reservas_huella»), en grupos de hasta cuatro palabras.
+async function pareceDatoDeCliente(texto, env, huellas = []) {
   if (PATRONES.some((p) => p.test(texto))) return true;
-  const reservados = String(env.MATRIZ_RESERVADOS || "").split(/[,\n]/).map((t) => t.trim().toLowerCase()).filter(Boolean);
-  const t = texto.toLowerCase();
-  return reservados.some((r) => t.includes(r));
+  const reservados = String(env.MATRIZ_RESERVADOS || "").split(/[,\n]/).map((t) => normalizar(t).join(" ")).filter(Boolean);
+  const palabras = normalizar(texto), unido = ` ${palabras.join(" ")} `;
+  if (reservados.some((r) => unido.includes(` ${r} `))) return true;
+  if (!huellas.length) return false;
+  const conjunto = new Set(huellas);
+  for (let i = 0; i < palabras.length; i++)
+    for (let n = 1; n <= 4 && i + n <= palabras.length; n++)
+      if (conjunto.has(await sha256(palabras.slice(i, i + n).join(" ")))) return true;
+  return false;
 }
 
 // ---------------------------------------------------------------- herramientas MCP
@@ -224,7 +238,7 @@ async function abrir(D, id, env, base, panel) {
     }
   }
   if (tipo === "emi") return { id, title: "Emi", text: quitarFrontmatter(await archivo(env, base, "/EMI.md")), url: panel };
-  if (tipo === "matriz") return { id, title: "Matriz General", text: await archivo(env, base, "/MATRIZ_GENERAL.md"), url: panel };
+  if (tipo === "matriz") return { id, title: "Matriz General", text: (await archivo(env, base, "/MATRIZ_GENERAL.md")) || "MATRIZ_GENERAL.md todavía no está publicado; usa matriz_resumen.", url: panel };
   throw new Error(`No encontré «${id}».`);
 }
 
@@ -476,7 +490,7 @@ async function api(request, env, url) {
     if (request.method === "POST") {
       const accion = String(cuerpo.accion || "");
       for (const t of textosDe(accion, cuerpo)) {
-        if (pareceDatoDeCliente(t, env)) return json({ error: "Parece un dato de cliente (nombre, expediente, correo, teléfono o monto). La Matriz es pública: escríbelo sin ese dato." }, 422);
+        if (await pareceDatoDeCliente(t, env, D.reservas_huella)) return json({ error: "Parece un dato de cliente (nombre, expediente, correo, teléfono o monto). La Matriz es pública: escríbelo sin ese dato." }, 422);
       }
       for (let intento = 0; intento < 3; intento++) {
         const { texto, sha } = await leerGH(env, archivoMd);
@@ -495,7 +509,7 @@ async function api(request, env, url) {
     const nombre = limpiar(cuerpo.nombre, 80), descripcion = limpiar(cuerpo.descripcion, 400);
     const c = D.cerebros.find((x) => x.id === cuerpo.cerebro);
     if (!nombre || !c) return json({ error: "Escribe el nombre y elige el cerebro." }, 400);
-    if (pareceDatoDeCliente(nombre + " " + descripcion, env)) return json({ error: "Parece un dato de cliente. La Matriz es pública: descríbelo sin ese dato." }, 422);
+    if (await pareceDatoDeCliente(nombre + " " + descripcion, env, D.reservas_huella)) return json({ error: "Parece un dato de cliente. La Matriz es pública: descríbelo sin ese dato." }, 422);
     const slug = nombre.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 60) || nuevoId();
     const ruta2 = `proyectos/${slug}.md`;
     const { sha } = await leerGH(env, ruta2);

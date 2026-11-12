@@ -27,7 +27,9 @@ import argparse
 import datetime as dt
 import json
 import os
+import hashlib
 import re
+import unicodedata
 import subprocess
 import sys
 import tempfile
@@ -187,6 +189,44 @@ def reservar(texto: str) -> str:
         texto = patron.sub(sustituto, texto)
     for patron in TERMINOS_RESERVADOS:
         texto = patron.sub("[cliente]", texto)
+    return tapar_huellas(texto)
+
+
+# Nombres de clientes guardados como huella SHA-256 en matriz.config.json («terminos_reservados_huella»):
+# protegen aunque falte el secreto MATRIZ_RESERVADOS y no exponen el nombre a quien lee el repositorio.
+# La huella es de la forma normalizada: minúsculas, sin acentos y con un solo espacio entre palabras.
+HUELLAS_RESERVADAS: set[str] = set()
+PALABRA = re.compile(r"[0-9A-Za-zÀ-ÖØ-öø-ÿ]+")
+
+
+def normalizar_termino(t: str) -> str:
+    t = unicodedata.normalize("NFKD", t.lower())
+    t = "".join(c for c in t if not unicodedata.combining(c))
+    return " ".join(PALABRA.findall(t))
+
+
+def huella(t: str) -> str:
+    return hashlib.sha256(normalizar_termino(t).encode("utf-8")).hexdigest()
+
+
+def tapar_huellas(texto: str) -> str:
+    if not HUELLAS_RESERVADAS or not texto:
+        return texto
+    palabras = list(PALABRA.finditer(texto))
+    tramos, i = [], 0
+    while i < len(palabras):
+        for n in (4, 3, 2, 1):
+            if i + n <= len(palabras) and huella(" ".join(m.group() for m in palabras[i:i + n])) in HUELLAS_RESERVADAS:
+                inicio = palabras[i].start()
+                if texto[max(0, inicio - 6):inicio].lower() == "grupo ":
+                    inicio -= 6
+                tramos.append((inicio, palabras[i + n - 1].end()))
+                i += n
+                break
+        else:
+            i += 1
+    for a, b in reversed(tramos):
+        texto = texto[:a] + "[cliente]" + texto[b:]
     return texto
 
 
@@ -793,6 +833,8 @@ def generar(cfg: dict, salida: Path, repos_dir: Path | None, clonar: bool, hoy: 
     """Genera todo. `api`: repositorios según GitHub (None si no respondió). `previo`: matriz.json anterior."""
     base = base or salida
     configurar_reservas(cfg.get("terminos_reservados", []) + terminos_del_entorno())
+    HUELLAS_RESERVADAS.clear()
+    HUELLAS_RESERVADAS.update(h.lower() for h in cfg.get("terminos_reservados_huella", []) if re.fullmatch(r"[0-9a-fA-F]{64}", h))
     errores = validar(cfg, inv)
     if errores:
         raise SystemExit("Configuración inválida:\n- " + "\n- ".join(errores))
@@ -821,6 +863,10 @@ def generar(cfg: dict, salida: Path, repos_dir: Path | None, clonar: bool, hoy: 
                     r = {**ant, "visibilidad": r["visibilidad"], "leido": False, "lectura": "anterior"}
                     if r["visibilidad"] == "privado" and not detalle:
                         r.update(resumen="", skills=[], registro=[], protocolo="")
+                    # Lo anterior también pasa por el filtro: las reservas pudieron cambiar desde entonces.
+                    r["resumen"] = reservar(r.get("resumen", ""))
+                    r["registro"] = [{k: reservar(v) if isinstance(v, str) and k != "fecha" else v for k, v in e.items()}
+                                     for e in r.get("registro", [])]
                 lista.append(r)
             por_cerebro[c["id"]] = lista
     nuevos = sorted((v for n, v in (api or {}).items() if n not in conocidos and n not in {"MATRIZ", *cfg.get("ignorar", [])}),
@@ -848,7 +894,9 @@ def generar(cfg: dict, salida: Path, repos_dir: Path | None, clonar: bool, hoy: 
     datos = {"actualizada": hoy, "propietario": prop, "panel": PANEL,
              "cerebros": [{"id": c["id"], "nombre": c["nombre"], "descripcion": c["descripcion"],
                            "repos": por_cerebro[c["id"]], "tablero": tableros[c["id"]]} for c in cfg["cerebros"]],
-             "inventario": inv, "por_clasificar": nuevos, "proyectos": proyectos, "metricas": met}
+             "inventario": inv, "por_clasificar": nuevos, "proyectos": proyectos, "metricas": met,
+             # Solo huellas (ya públicas en matriz.config.json): el panel las usa para no aceptar nombres reservados.
+             "reservas_huella": sorted(HUELLAS_RESERVADAS)}
     escribir(salida / "matriz.json", json.dumps(datos, ensure_ascii=False, indent=2) + "\n")
     return datos
 

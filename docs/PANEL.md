@@ -1,19 +1,59 @@
-# Panel web de la Matriz
+# Panel de la Matriz
 
-Una página limpia para ver la Matriz desde el iPhone o cualquier navegador, sin instalar nada. Muestra:
+**https://matriz.milla-abogados.workers.dev**: la Matriz como herramienta, en la Mac o el iPhone, sin instalar nada. Verla no pide nada; para cambiar algo se entra con contraseña.
 
-- **Inicio:** el grafo (Matriz → cerebros → repositorios), los avisos (tareas que fallaron, repositorios sin lectura, skills sin repositorio), lo último que hizo cada IA, los pendientes y un buscador.
-- **Cada cerebro:** sus repositorios con su último registro, su última IA y su pendiente; sus tareas programadas con su resultado; sus skills instaladas.
-- **«Copiar contexto para una IA»:** copia el archivo de contexto del cerebro para pegarlo en ChatGPT, Gemini, Muse, DeepSeek o cualquier otra.
+## Qué se ve
 
-Para IA que leen una dirección web: `/llms.txt` (mapa breve), `/matriz.json` (todos los datos) y `/contexto/<cerebro>.CONTEXTO.md`.
+- **Al centro, la Matriz en 3D.** El punto naranja es la Matriz; cada esfera blanca es un cerebro. Su tamaño es lo que se movió esta semana; si lleva más de 21 días quieto se apaga; si tiene algo vencido o una tarea que falló, late con un anillo. Sus repositorios giran alrededor. Se gira arrastrando, se acerca con la rueda o pellizcando; al tocar un cerebro la cámara va hacia él y se abre su hoja.
+- **«Hoy» (a la izquierda; en el iPhone, debajo):**
+  - Esta semana: commits en todos los repositorios, comparado con la semana pasada, y la curva de 8 semanas.
+  - Atención: pendientes vencidos, tareas programadas que fallaron, llaves por vencer, repositorios sin clasificar.
+  - Pendientes de todos los cerebros, del más urgente al menos.
+  - Pulso por cerebro y quién trabajó (cada IA) en los últimos 60 días.
+  - «Llevar la Matriz a otra IA»: copiar o descargar `MATRIZ_GENERAL.md` y la dirección del conector.
+- **Hoja de cada cerebro:** commits de la semana, días sin movimiento, pendientes, notas, repositorios con su actividad, tareas programadas y skills, y «Copiar contexto».
+- **Buscar** (⌘K): repositorios, skills, pendientes y cerebros.
+- **«Copiar para una IA»:** copia la Matriz General completa para pegarla en cualquier chat.
+
+## Qué se edita (con contraseña)
+
+| Dónde | Qué | Archivo que cambia |
+|---|---|---|
+| Hoja del cerebro | Agregar pendiente (con prioridad alta y fecha), completarlo, cambiar prioridad o fecha, editarlo, borrarlo | `tablero/<cerebro>.md` |
+| Hoja del cerebro | Escribir o borrar una nota | `tablero/<cerebro>.md` |
+| «Hoy» → Proyecto nuevo | Nombre, cerebro y de qué se trata | `proyectos/<nombre>.md` |
+
+Cada cambio es un commit en GitHub firmado «IA-Actor: Panel de la Matriz (Emi)». Después, solo:
+
+1. «Actualizar la Matriz» regenera todo (incluida `MATRIZ_GENERAL.md`) y «Publicar panel» lo sube (2 a 4 minutos).
+2. Obsidian lo trae en su siguiente sincronización (cada 10 minutos): el tablero aparece dentro de la nota de cada cerebro. Los tableros usan el formato de tareas de Obsidian (`- [ ] … 🔺 📅 AAAA-MM-DD`).
+3. La revisión del domingo crea el repositorio de cada proyecto nuevo (encargo para Muse, con el protocolo).
+
+La Matriz es pública: el panel rechaza textos que parecen datos de cliente (nombres reservados, expedientes, correos, teléfonos, CURP, RFC, montos) y lo dice en pantalla.
+
+## Seguridad
+
+- Contraseña propia (`PANEL_CLAVE`). La sesión dura 30 días en ese equipo: cookie `HttpOnly`, `Secure`, `SameSite=Strict`, firmada. Un intento fallido espera 800 ms. «Salir» la cierra.
+- El Worker escribe con un token de GitHub que solo puede tocar `lianfixx/MATRIZ` (`MATRIZ_ESCRITURA`) y solo los archivos `tablero/` y `proyectos/`. Revisa el origen de cada petición.
+- Encabezados: CSP estricta (solo código del propio panel), sin marcos, sin cámara, micrófono ni ubicación, no indexar.
+- three.js se sirve desde el propio panel; no se carga nada de terceros.
 
 ## Cómo se publica
 
-`tools/panel.py` arma la carpeta `dist/` con `panel/index.html`, `matriz.json` y `contexto/`. El workflow «Publicar panel» la sube a Cloudflare Workers (plan gratis, solo archivos estáticos) cada vez que «Actualizar la Matriz» termina bien. Necesita dos secretos en este repositorio: `CLOUDFLARE_API_TOKEN` (plantilla «Edit Cloudflare Workers») y `CLOUDFLARE_ACCOUNT_ID`. Sin ellos el workflow termina en verde y avisa que no publicó.
+`tools/panel.py` arma `dist/` (panel, `matriz.json`, `contexto/`, `EMI.md`, `MATRIZ_GENERAL.md`, `llms.txt`, encabezados) y three.js con esbuild y las versiones fijas de `tools/three/`. El workflow «Publicar panel» prueba el Worker (`node worker/prueba.mjs`) y publica en Cloudflare Workers (plan gratis) cada vez que «Actualizar la Matriz» termina bien o cambia `panel/`, `worker/` o `tools/three/`.
 
-La dirección es **https://matriz.milla-abogados.workers.dev** (cuenta de Cloudflare de Emi, plan gratis, subdominio `milla-abogados`). La llave `CLOUDFLARE_API_TOKEN` se llama «MATRIZ panel (GitHub Actions)» en Cloudflare → Mi perfil → Tokens de API, sin caducidad y limitada a Workers de esa cuenta. El mismo Worker sirve el conector MCP en `/mcp` ([CONECTAR_IA.md](CONECTAR_IA.md)).
+Secretos del repositorio (GitHub → Settings → Secrets and variables → Actions):
 
-## Privacidad
+| Secreto | Para qué | Si falta |
+|---|---|---|
+| `CLOUDFLARE_API_TOKEN` | Publicar. Llave «MATRIZ panel (GitHub Actions)» en Cloudflare → Mi perfil → Tokens de API (plantilla «Edit Cloudflare Workers») | No publica |
+| `CLOUDFLARE_ACCOUNT_ID` | Cuenta de Cloudflare de Emi | No publica |
+| `PANEL_CLAVE` | La contraseña de Emi para editar | El panel se ve, no edita |
+| `MATRIZ_ESCRITURA` | Token de grano fino «MATRIZ escritura»: solo `lianfixx/MATRIZ`, Contents lectura y escritura | El panel se ve, no edita |
+| `MATRIZ_RESERVADOS` | Nombres de clientes que nunca se publican ni se aceptan, separados por coma | Solo se filtran los formatos (expedientes, correos…) |
 
-El panel solo publica lo que ya es público en este repositorio: de los repositorios privados, nombre, cerebro y fecha. Pide a los buscadores no indexarlo (`robots.txt` y cabecera `X-Robots-Tag`). Si más adelante quieres que solo entres tú, se protege con Cloudflare Access (gratis hasta 50 personas) sin cambiar nada del panel.
+Los secretos solo existen en el paso de publicar; los tres últimos se copian como secretos del Worker en cada publicación.
+
+## Para otras IA
+
+`/llms.txt` (mapa), `/MATRIZ_GENERAL.md` (todo en un archivo), `/matriz.json` (datos), `/contexto/<cerebro>.CONTEXTO.md` y el conector MCP en `/mcp` ([CONECTAR_IA.md](CONECTAR_IA.md)).

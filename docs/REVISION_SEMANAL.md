@@ -6,7 +6,9 @@ Emi pidió el 11/11/2026 que la Matriz se actualice **todas las semanas** y teng
 2. **Tareas programadas** de Claude: cuáles hay, su horario y si su última corrida salió bien.
 3. **Skills instaladas** en Claude y si cada una tiene repositorio.
 4. **Salud:** que la actualización diaria haya corrido bien y que la Matriz lea todos los repositorios.
-5. **Vencimientos:** el token «MATRIZ lectura» vence el **9 de febrero de 2027**.
+5. **Vencimientos:** los de `inventario.json → vencimientos` (el token «MATRIZ lectura» vence el **9 de febrero de 2027**).
+6. **Proyectos nuevos** que Emi creó desde el panel (`proyectos/`).
+7. **Respaldo en Google Drive** de la Matriz General.
 
 La ejecuta una tarea programada de Claude («Revisión semanal de la Matriz»). Cualquier otra IA con acceso a GitHub puede hacerla siguiendo estos mismos pasos.
 
@@ -23,11 +25,13 @@ La ejecuta una tarea programada de Claude («Revisión semanal de la Matriz»). 
 5. **Skills instaladas al día.** Para cada skill instalada que tenga repositorio, compara el `SKILL.md` instalado (en esta sesión, bajo `~/.claude/skills/`) con el del repositorio. Si difieren, la copia de Claude está vieja: anótala en el informe como «reinstalar» y deja en el resumen el encargo para Muse (descargar el repositorio, comprimir la carpeta de la skill y subirla en claude.ai → Ajustes → Capacidades → Skills, reemplazando la anterior).
 6. **Retroalimentación.** Lee las entradas de la semana de los `CHANGELOG.md` de todos los repositorios (están en `bitacora/`). Anota en el informe: lo que se repitió, lo que falló dos veces, lo que Emi tuvo que hacer a mano y cómo dejarlo automático la próxima vez. Si la mejora es de la Matriz, hazla tú en esta misma revisión; si es de otro repositorio, déjala como propuesta concreta para Emi.
 7. **Salud.** Revisa las corridas de los últimos 7 días del workflow «Actualizar la Matriz» y que `MATRIZ.md` no tenga «Sin lectura». Si falta leer un repositorio, di cuál y por qué.
-8. **Vencimiento.** Si faltan 21 días o menos para el 9 de febrero de 2027, avísale a Emi y dale el encargo para Muse de regenerar el token (los pasos están en el `CHANGELOG.md` del 11/11/2026).
+8. **Vencimientos.** Para cada entrada de `inventario.json → vencimientos` con 21 días o menos, avísale a Emi con el encargo listo (para el token «MATRIZ lectura», los pasos están en el `CHANGELOG.md` del 11/11/2026).
+8b. **Proyectos nuevos.** Para cada `proyectos/*.md` con `estado: idea`, deja en el resumen un encargo para Muse: crear el repositorio privado `lianfixx/<nombre>` con `README.md`, `AGENTS.md`, `CLAUDE.md` e `ia/` copiados de un repositorio del mismo cerebro. Cuando el repositorio exista, agrégalo a su cerebro en `matriz.config.json` y cambia el proyecto a `estado: con repositorio`. No crees repositorios tú.
+8c. **Respaldo en Google Drive** (solo si esta sesión tiene el conector de Google Drive). En la carpeta «Matriz General» de Emi (no la crees si no existe: avísale): actualiza el documento «Matriz General» con el texto de `MATRIZ_GENERAL.md`, reemplaza `MATRIZ_GENERAL.md` y sube `MATRIZ-AAAA-MM-DD.zip` con el repositorio (`git archive --format=zip HEAD`). Conserva los últimos 8 zip y manda los más viejos a la papelera. Nunca compartas la carpeta ni cambies sus permisos. Sin conector: anótalo en el informe como «respaldo en Drive no hecho».
 9. **Informe.** Escribe `revisiones/AAAA-MM-DD.md`: qué cambió, qué falló, qué necesita decidir Emi. Cambia `inventario.json → revisado` a la fecha de hoy.
 10. **Guardar.** Corre `python3 -m unittest discover -s tools -p 'test_*.py'`. Añade la entrada en `CHANGELOG.md` con la línea `Agente:`. Un solo commit cuyo mensaje termine en `IA-Actor: Claude Code (ejecución programada)`. Sube a `main`; si la sesión solo puede subir a ramas `claude/…`, sube a esa rama: el workflow «Integrar tareas programadas» la pasa a `main` y la Matriz se regenera sola. Comprueba en 5 minutos que el commit llegó a `main`.
 11. **Resumen para Emi** (cinco líneas como máximo): repositorios nuevos y dónde quedaron, tareas que fallaron, skills sin repositorio, lo que debe decidir y cualquier vencimiento cercano.
 
 ## Lo que esta revisión nunca hace
 
-Escribir en otros repositorios, enviar correos, publicar, crear o cambiar tareas programadas, cambiar `ia/` o los workflows, ni copiar a esta Matriz información de clientes o el contenido de los repositorios privados.
+Escribir en otros repositorios, crear repositorios, enviar correos, publicar, compartir archivos de Drive, crear o cambiar tareas programadas, cambiar `ia/` o los workflows, ni copiar a esta Matriz información de clientes o el contenido de los repositorios privados.

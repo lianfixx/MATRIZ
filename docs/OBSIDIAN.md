@@ -5,6 +5,7 @@ Lo que vas a tener:
 - **El grafo:** la Matriz al centro (en naranja), los siete cerebros alrededor y cada repositorio colgando de su cerebro. Un clic en un punto abre su nota.
 - **La portada** (`MATRIZ`): cerebros, último movimiento y lo último que hizo cada IA.
 - **La tabla** (`Repositorios`): todos tus repositorios con tres vistas: *Por cerebro*, *Lo más reciente* y *Con pendiente*.
+- **Tus pendientes y notas** dentro de la nota de cada cerebro. Se escriben en el panel (https://matriz.milla-abogados.workers.dev, con tu contraseña) y llegan aquí solos en unos minutos. El archivo de cada tablero está en `tablero/` y usa el formato de tareas de Obsidian.
 
 Tiempo: unos 15 minutos en la Mac y 5 en el iPhone. Todo viene ya configurado; solo hay que abrirlo.
 
@@ -18,7 +19,7 @@ Tu Mac (carpeta ~/Matriz)
 Tu iPhone
 ```
 
-La Mac es el puente: el iPhone recibe lo nuevo mientras Obsidian esté abierto en la Mac. Nada viaja en sentido contrario hacia GitHub.
+La Mac es el puente: el iPhone recibe lo nuevo mientras Obsidian esté abierto en la Mac. Obsidian no sube nada a GitHub: los cambios entran por el panel (pendientes, notas, proyectos nuevos), que los guarda en GitHub, y de ahí bajan a Obsidian. Así ninguna edición choca con la actualización diaria.
 
 ## En la Mac
 
@@ -60,7 +61,7 @@ Los nombres de los menús pueden variar un poco según la versión de Obsidian.
 ## Tres reglas para que nunca se rompa
 
 - **Tus notas van en `notas/`.** Obsidian guarda ahí toda nota nueva. Esa carpeta **no se sube a GitHub** (el repositorio es público); vive en tu Mac y, con Sync, en tu iPhone, cifrada y con historial de versiones.
-- **No edites lo generado:** `MATRIZ`, `cerebros/`, `repos/`, `contexto/` y `bitacora/` se reescriben cada día y tus cambios se perderían o bloquearían la actualización.
+- **No edites lo generado:** `MATRIZ_GENERAL`, `MATRIZ`, `cerebros/`, `repos/`, `contexto/` y `bitacora/` se reescriben cada día. Tampoco `tablero/` desde Obsidian: cámbialo en el panel y tus cambios se perderían o bloquearían la actualización.
 - **Si el complemento Git avisa de un conflicto,** no borres nada: pídele a Claude que lo revise.
 
 ## Más adelante
