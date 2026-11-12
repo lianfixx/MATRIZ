@@ -17,7 +17,7 @@ Este repositorio es el mapa de todo el trabajo de Emi: la **Matriz General**, su
 - Para conectar otra IA (Claude, ChatGPT, Gemini, Muse, DeepSeek): [docs/CONECTAR_IA.md](docs/CONECTAR_IA.md). Conector MCP de solo lectura: `https://matriz.milla-abogados.workers.dev/mcp`.
 - `panel/` es el panel web que se publica en Cloudflare después de cada actualización ([docs/PANEL.md](docs/PANEL.md)). Publica solo lo que ya es público aquí. `worker/` sirve el conector MCP y la edición con contraseña; sus pruebas: `node worker/prueba.mjs` (después de `python3 tools/panel.py`).
 - `notas/` es privada de Emi y está fuera de git. No la leas ni la subas.
-- Este repositorio es público. De los repositorios privados solo se publica nombre, cerebro y fecha. No copies aquí datos de clientes, expedientes ni secretos.
+- Este repositorio es público. De los repositorios privados solo se publica nombre, cerebro, fecha y conteos de actividad (commits por semana y qué IA trabajó); de un privado nuevo sin cerebro, ni el nombre. Si GitHub no confirma que un repositorio es público, se trata como privado. No copies aquí datos de clientes, expedientes ni secretos.
 - Un repositorio nuevo de Emi se agrega a un cerebro en `matriz.config.json`. Un cerebro nuevo requiere confirmación de Emi.
 - Emi pidió (11/11/2026) que la Matriz se revise **todas las semanas** y tenga toda su información: el procedimiento está en `docs/REVISION_SEMANAL.md` y lo ejecuta una tarea programada cada domingo. `inventario.json` guarda tareas programadas y skills instaladas: solo nombres, horarios y resultados.
 

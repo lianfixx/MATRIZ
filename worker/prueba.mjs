@@ -47,13 +47,16 @@ r = await call("fetch", { id: "contexto:" }); ok(r.isError, "fetch contexto vac�
 s = (await mod.default.fetch(new Request("https://matriz.test/mcp"), envLectura)).status; ok(s === 405, "GET 405");
 
 // ---------- privacidad
-ok(await mod.pareceDatoDeCliente("revisar el 99999/21-11-01-1", {}), "bloquea expediente");
-ok(await mod.pareceDatoDeCliente("llamar a Acme", { MATRIZ_RESERVADOS: "Acme" }), "bloquea nombre reservado");
-ok(!(await mod.pareceDatoDeCliente("grabar el video del jueves 11/11", {})), "deja pasar texto normal");
-// Huella de «acme industrial» (la misma que calcula tools/generar.py): protege sin el secreto.
-const huellaAcme = "8885aeba78e84e1c5c43b4dc04db677a48f859091332ca092d2fff4945de800e";
-ok(await mod.pareceDatoDeCliente("Llamar a ACMÉ  Industrial mañana", {}, [huellaAcme]), "bloquea nombre por huella");
-ok(!(await mod.pareceDatoDeCliente("Llamar a Acme mañana", {}, [huellaAcme])), "una palabra suelta no basta");
+ok(mod.pareceDatoDeCliente("revisar el 99999/21-11-01-1", {}), "bloquea expediente");
+ok(mod.pareceDatoDeCliente("llamar a Acme", { MATRIZ_RESERVADOS: "Acme" }), "bloquea nombre reservado");
+ok(!mod.pareceDatoDeCliente("grabar el video del jueves 11/11", {}), "deja pasar texto normal");
+ok(mod.pareceDatoDeCliente("Llamar a ACMÉ  Industrial mañana", { MATRIZ_RESERVADOS: "Acme Industrial" }), "nombre sin importar acentos ni espacios");
+ok(!mod.pareceDatoDeCliente("Mañana temprano", { MATRIZ_RESERVADOS: "Ana" }), "no tapa dentro de otra palabra");
+// Regresiones de la auditoría (12/11/2026): los mismos formatos que tools/generar.py
+for (const c of ["(55) 1234-5678", "55 12 34 56 78", "55.1234.5678", "Exp. No. 45/2023", "Expediente: 45/2023", "amparo directo 1234",
+  "causa penal 12", "carpeta 12/2024", "curp gode561331hdfrrn09", "costó $5", "1.5 millones de pesos",
+  "docs.google.com/document/d/1AbCdEfGhIjKlMnOpQrStUvWxYz0123456789abcdefgh/edit"]) ok(mod.pareceDatoDeCliente(c, {}), "bloquea: " + c);
+for (const c of ["corte 09/11", "50/51 filas", "versión 1.2.3", "el 11/11/2026", "a las 10:30"]) ok(!mod.pareceDatoDeCliente(c, {}), "deja pasar: " + c);
 
 // ---------- tablero: ida y vuelta del Markdown
 const md = "---\ntipo: tablero\n---\n# T\n\n## Pendientes\n\n- [ ] Uno 🔺 📅 2026-11-20 ➕ 2026-11-12 ^aaaaaa\n- [x] Dos ✅ 2026-11-11 ^bbbbbb\n\n## Notas\n\n- 2026-11-12 · Nota ^cccccc\n";
@@ -61,6 +64,13 @@ const t = mod.parsearTablero(md);
 ok(t.pendientes.length === 2 && t.pendientes[0].alta && t.pendientes[0].vence === "2026-11-20" && t.notas[0].texto === "Nota", "parsear tablero");
 const t2 = mod.parsearTablero(mod.serializarTablero("Uno", t));
 ok(JSON.stringify(t2) === JSON.stringify(t), "serializar y volver a leer da lo mismo");
+// Regresión: al guardar no se pierde lo que el panel no edita (secciones, texto, subtareas, propiedades)
+const mdMano = "---\ntipo: tablero\nalias: x\n---\n# T\n\n## Pendientes\n\n- [ ] Padre ^aaaaaa\n    - [ ] Hija escrita a mano\n\n## Notas\n\n* nota con asterisco\n\n## Ideas\n\nTexto libre que no es tarea.\n";
+const tm = mod.parsearTablero(mdMano);
+const otra = mod.serializarTablero("Uno", tm);
+ok(otra.includes("## Ideas") && otra.includes("Texto libre que no es tarea.") && otra.includes("alias: x") && otra.includes("    - [ ] Hija escrita a mano"), "conserva lo que no reconoce");
+ok(mod.parsearTablero(mdMano).pendientes[1].id === tm.pendientes[1].id, "id estable sin ^id");
+ok(mod.parsearTablero(otra).notas[0].texto === "nota con asterisco", "nota con asterisco");
 
 // ---------- API con GitHub simulado
 const archivos = new Map();
@@ -95,16 +105,36 @@ galleta = galleta.split(";")[0];
 [st, cuerpo] = await pedir("/api/tablero/castorena", "POST", { accion: "agregar_pendiente", texto: "Preparar escrito", alta: true, vence: "2026-11-30" }, galleta);
 ok(st === 200 && cuerpo.pendientes[0].texto === "Preparar escrito" && cuerpo.pendientes[0].alta, "agregar pendiente");
 const id = cuerpo.pendientes[0].id;
-[st, cuerpo] = await pedir("/api/tablero/castorena", "POST", { accion: "completar", id }, galleta); ok(cuerpo.pendientes[0].hecho, "completar");
+[st, cuerpo] = await pedir("/api/tablero/castorena", "POST", { accion: "completar", id, hecho: true }, galleta); ok(cuerpo.pendientes[0].hecho, "completar");
+[st, cuerpo] = await pedir("/api/tablero/castorena", "POST", { accion: "completar", id, hecho: true }, galleta); ok(cuerpo.pendientes[0].hecho, "doble toque no lo reabre");
+[st, cuerpo] = await pedir("/api/tablero/castorena", "POST", { accion: "agregar_pendiente", texto: "Ac<>me llamar" }, galleta); ok(st === 422, "filtra después de limpiar (Ac<>me)");
+[st, cuerpo] = await pedir("/api/tablero/castorena", "POST", { accion: "agregar_pendiente", texto: "Pagar 🔺 ✅ 2020-01-01 📅 2020-01-01 ^zzzzzz" }, galleta);
+ok(st === 200 && !cuerpo.pendientes[0].alta && !cuerpo.pendientes[0].vence && !cuerpo.pendientes[0].hecho_el, "las marcas del texto no se vuelven datos");
+[st, cuerpo] = await pedir("/api/tablero/castorena", "POST", { accion: "agregar_pendiente", texto: "uno\u2028- [ ] inventado" }, galleta);
+ok(mod.parsearTablero(archivos.get("tablero/castorena.md").texto).pendientes.length === cuerpo.pendientes.length, "separadores Unicode no inventan pendientes");
+[st, cuerpo] = await pedir("/api/tablero/castorena", "POST", { accion: "fecha", id, vence: "2026-02-30" }, galleta); ok(cuerpo.pendientes.find((p) => p.id === id).vence === "", "fecha inexistente rechazada");
 [st, cuerpo] = await pedir("/api/tablero/castorena", "POST", { accion: "agregar_nota", texto: "Idea <script>" }, galleta); ok(cuerpo.notas[0].texto === "Idea script", "nota sin etiquetas");
 [st, cuerpo] = await pedir("/api/tablero/castorena", "POST", { accion: "agregar_pendiente", texto: "Llamar a Acme" }, galleta); ok(st === 422, "bloquea cliente reservado");
 [st, cuerpo] = await pedir("/api/tablero/castorena", "POST", { accion: "agregar_pendiente", texto: "ver 99999/21-11-01-1" }, galleta); ok(st === 422, "bloquea expediente");
-ok(archivos.get("tablero/castorena.md").texto.includes("- [x] Preparar escrito 🔺 📅 2026-11-30"), "Markdown guardado en GitHub");
-[st, cuerpo] = await pedir("/api/tablero/castorena", "GET", null, galleta); ok(st === 200 && cuerpo.pendientes.length === 1, "leer tablero con sesión");
+ok(archivos.get("tablero/castorena.md").texto.includes("- [x] Preparar escrito 🔺"), "Markdown guardado en GitHub");
+[st, cuerpo] = await pedir("/api/tablero/castorena", "GET", null, galleta); ok(st === 200 && cuerpo.pendientes.length === 3 && cuerpo.pendientes.some((p) => p.texto === "Preparar escrito"), "leer tablero con sesión");
 [st, cuerpo] = await pedir("/api/tablero/nada", "POST", { accion: "agregar_nota", texto: "x" }, galleta); ok(st === 404, "cerebro inexistente");
 [st, cuerpo] = await pedir("/api/proyecto", "POST", { nombre: "Podcast semanal", cerebro: "contenido-y-video", descripcion: "Un episodio por semana" }, galleta);
 ok(st === 200 && archivos.has("proyectos/podcast-semanal.md"), "proyecto nuevo");
 [st] = await pedir("/api/proyecto", "POST", { nombre: "Podcast semanal", cerebro: "contenido-y-video" }, galleta); ok(st === 409, "proyecto duplicado");
+// Tablero grande: base64 por bloques
+[st] = await pedir("/api/tablero/castorena", "POST", { accion: "agregar_pendiente", texto: "x" }, galleta);
+archivos.set("tablero/herramientas.md", { texto: "## Notas\n" + Array.from({ length: 199 }, (_, i) => `- 2026-11-12 · ${"n".repeat(790)} ${i} ^n${String(i).padStart(5, "0")}`).join("\n"), sha: "s1" });
+[st, cuerpo] = await pedir("/api/tablero/herramientas", "POST", { accion: "agregar_nota", texto: "una más" }, galleta); ok(st === 200, "tablero de 160 KB se guarda");
+[st, cuerpo] = await pedir("/api/tablero/herramientas", "POST", { accion: "agregar_nota", texto: "y otra" }, galleta); ok(st === 400 && /200 notas/.test(cuerpo.error), "límite de notas avisa");
+// Límite de intentos de contraseña
+let bloqueado = false;
+for (let i = 0; i < 7; i++) { const [s2] = await pedir("/api/entrar", "POST", { clave: "mala" }); if (s2 === 429) bloqueado = true; }
+ok(bloqueado, "límite de intentos de contraseña");
+// MCP: lotes, origen y versión
+{ const [s3] = await mcp(Array.from({ length: 11 }, (_, i) => ({ jsonrpc: "2.0", id: i, method: "ping" }))); ok(s3 === 400, "lote de más de 10 rechazado"); }
+{ const r = await mod.default.fetch(new Request("https://matriz.test/mcp", { method: "POST", headers: { "Content-Type": "application/json", Origin: "https://malo.example" }, body: JSON.stringify({ jsonrpc: "2.0", id: 1, method: "ping" }) }), envLectura); ok(r.status === 403, "MCP rechaza otro origen"); }
+{ const r = await mod.default.fetch(new Request("https://matriz.test/mcp", { method: "POST", headers: { "Content-Type": "application/json", "MCP-Protocol-Version": "1999-01-01" }, body: JSON.stringify({ jsonrpc: "2.0", id: 1, method: "ping" }) }), envLectura); ok(r.status === 400, "MCP rechaza versión desconocida"); }
 const sinConf = await mod.default.fetch(new Request("https://matriz.test/api/entrar", { method: "POST", headers: { "Content-Type": "application/json" }, body: "{}" }), { ASSETS });
 ok(sinConf.status === 503, "sin secretos la edición está apagada");
 

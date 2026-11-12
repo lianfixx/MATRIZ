@@ -8,13 +8,14 @@ name: Publicar panel
 #   MATRIZ_ESCRITURA    token de GitHub solo para lianfixx/MATRIZ (Contents: lectura y escritura)
 #   MATRIZ_RESERVADOS   nombres de clientes que el Worker no acepta (separados por coma)
 # Los tres últimos se copian como secretos del Worker; si falta alguno, el panel se ve pero no edita.
+# Quitar uno de GitHub no lo borra del Worker (usa `wrangler secret delete`).
 on:
   workflow_run:
     workflows: ["Actualizar la Matriz"]
     types: [completed]
   push:
     branches: [main]
-    paths: ["panel/**", "worker/**", "tools/panel.py", "tools/three/**", "wrangler.jsonc", "EMI.md"]
+    paths: ["panel/**", "worker/**", "tools/panel.py", "tools/three/**", "tools/despliegue/**", "tools/privacidad.json", "wrangler.jsonc", "EMI.md"]
   workflow_dispatch:
 
 permissions:
@@ -44,9 +45,26 @@ jobs:
         run: python3 tools/panel.py
       - name: Probar el conector MCP
         run: node worker/prueba.mjs
+      - name: Instalar wrangler (versión fija, sin scripts de instalación)
+        run: npm ci --prefix tools/despliegue --ignore-scripts --no-audit --no-fund
       - name: Publicar en Cloudflare
         shell: bash
-        # Los secretos solo existen en este paso: armar y probar corren sin ellos.
+        # Solo la llave de Cloudflare existe en este paso; las del panel van en el siguiente, al comando que las sube.
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          set -euo pipefail
+          if [ -z "${CLOUDFLARE_API_TOKEN}" ] || [ -z "${CLOUDFLARE_ACCOUNT_ID}" ]; then
+            echo "::notice::Faltan CLOUDFLARE_API_TOKEN o CLOUDFLARE_ACCOUNT_ID: el panel se armó pero no se publicó."
+            exit 0
+          fi
+          tools/despliegue/node_modules/.bin/wrangler deploy 2>&1 | tee salida.txt
+          grep -Eo 'https://[a-zA-Z0-9.-]+\.workers\.dev' salida.txt | head -1 | sed 's/^/Panel: /' >> "$GITHUB_STEP_SUMMARY" || true
+          rm -f salida.txt
+      - name: Secretos del Worker (contraseña, token de escritura y nombres reservados)
+        shell: bash
+        # Quitar un secreto aquí NO lo borra del Worker: para eso, `wrangler secret delete <NOMBRE>`.
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -55,18 +73,12 @@ jobs:
           MATRIZ_RESERVADOS: ${{ secrets.MATRIZ_RESERVADOS }}
         run: |
           set -euo pipefail
-          if [ -z "${CLOUDFLARE_API_TOKEN}" ] || [ -z "${CLOUDFLARE_ACCOUNT_ID}" ]; then
-            echo "::notice::Faltan CLOUDFLARE_API_TOKEN o CLOUDFLARE_ACCOUNT_ID: el panel se armó pero no se publicó."
-            exit 0
-          fi
-          npx --yes wrangler@4.154.0 deploy 2>&1 | tee salida.txt
-          grep -Eo 'https://[a-zA-Z0-9.-]+\.workers\.dev' salida.txt | head -1 | sed 's/^/Panel: /' >> "$GITHUB_STEP_SUMMARY" || true
-          # Secretos del Worker para editar: solo los que existen, en un archivo temporal que se borra.
-          secretos="$(mktemp)"; trap 'rm -f "$secretos" salida.txt' EXIT
+          if [ -z "${CLOUDFLARE_API_TOKEN}" ] || [ -z "${CLOUDFLARE_ACCOUNT_ID}" ]; then exit 0; fi
+          secretos="$(mktemp)"; trap 'rm -f "$secretos"' EXIT
           python3 - "$secretos" <<'PY'
           import json, os, sys
           d = {k: os.environ[k] for k in ("PANEL_CLAVE", "MATRIZ_ESCRITURA", "MATRIZ_RESERVADOS") if os.environ.get(k)}
           json.dump(d, open(sys.argv[1], "w"))
           print("Secretos del Worker:", ", ".join(d) or "ninguno (el panel se ve pero no edita)")
           PY
-          if [ "$(cat "$secretos")" != "{}" ]; then npx --yes wrangler@4.154.0 secret bulk "$secretos"; fi
+          if [ "$(cat "$secretos")" != "{}" ]; then tools/despliegue/node_modules/.bin/wrangler secret bulk "$secretos"; fi

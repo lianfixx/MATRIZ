@@ -1,5 +1,22 @@
 # Cambios
 
+## 2026-11-12 · Matriz 1.1.0: correcciones de la auditoría independiente
+
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: Emi, 12/11/2026: «audita a fondo por favor todo, absolutamente TODO».
+- Cambios (auditoría hecha por un agente aparte que revisó el código sin ver las conclusiones previas):
+  - Alto: la visibilidad falla cerrada. Si GitHub no responde, un repositorio solo se publica como público si una corrida anterior lo confirmó; si no, se trata como privado (antes se publicaba completo).
+  - Privacidad: los formatos que nunca se publican viven en un solo archivo, `tools/privacidad.json`, que usan igual la Matriz y el panel. Nuevos: teléfonos «(55) 1234-5678», «55 12 34 56 78» y «55.1234.5678»; «Exp. No. 45/2023» y «Expediente: 45/2023»; amparo directo, causa penal, carpeta y averiguación; IDs de Google Docs y Sheets; CURP y RFC en minúsculas; montos como «$5» y «1.5 millones de pesos». Los cuantificadores están acotados, así que el filtro ya no se vuelve lento con textos largos.
+  - Privacidad: los nombres de clientes ya no se publican como huella (se podían revertir con un diccionario). Vienen solo del secreto `MATRIZ_RESERVADOS`, se comparan por palabras completas sin importar acentos ni espacios, y sin ese secreto la actualización diaria se detiene en vez de publicar.
+  - Privacidad: de un repositorio privado nuevo ya no se publica el nombre, solo cuántos hay. La bitácora deja de publicar lo de repositorios que pasaron a privados. Los nombres de skills pasan por el filtro.
+  - Panel: el filtro revisa el texto ya limpio (antes «Ac<>me» pasaba). Al guardar se conserva lo que el panel no edita: otras secciones, texto suelto, propiedades y subtareas. Los pendientes escritos a mano tienen un id estable. Completar y prioridad mandan el estado deseado, así que un doble toque ya no deshace el cambio. Las marcas 📅 ✅ ➕ 🔺 ^ y los saltos de línea Unicode del texto ya no se vuelven datos. Tablero grande: base64 por bloques. El tope de 200 notas avisa en vez de borrar. Las fechas inexistentes se rechazan. Un 422 de GitHub ya no se reporta como «otro cambio al mismo tiempo». «Salir» avisa si falla.
+  - Sesión: hay un límite de 5 intentos de contraseña por minuto por IP (Rate Limiting de Cloudflare, además de un contador local). La firma de la cookie usa la contraseña y el token de escritura, así que una cookie filtrada ya no sirve para adivinar la contraseña.
+  - Conector MCP: valida `Origin` (lo pide la especificación), rechaza versiones de protocolo desconocidas, limita los lotes a 10 y lee `matriz.json` una vez por minuto.
+  - Workflows: wrangler queda fijado con lockfile (`tools/despliegue/`) y se instala sin scripts. La llave de Cloudflare y los secretos del panel van en pasos separados. Una rama `claude/…` que se integra sola solo puede tocar `inventario.json`, `matriz.config.json`, `CHANGELOG.md` y `revisiones/`, revisando el diff completo con los merges. La búsqueda de repositorios pagina (más de 100). Los proyectos se leen bien aunque su nombre lleve «---» o comillas. Las fechas ISO de semana ya no tumban la generación.
+- Archivos: `tools/privacidad.json` (nuevo), `tools/generar.py`, `tools/test_generar.py`, `worker/index.js`, `worker/prueba.mjs`, `panel/app.js`, `wrangler.jsonc`, `tools/despliegue/` (nuevo), `.github/workflows/publicar-panel.yml`, `.github/workflows/integrar-tareas.yml`, `matriz.config.json`, `AGENTS.md` y este registro.
+- Verificación: `python3 -m unittest discover -s tools -p 'test_*.py'` → aprobado (20, con regresiones de cada hallazgo); `node worker/prueba.mjs` → aprobado (79); `python3 ia/test_guard.py` → aprobado (33); `wrangler deploy --dry-run` con la versión fijada → aprobado, con el límite de intentos.
+- Pendiente: el tablero vive en el repositorio público y `MATRIZ_ESCRITURA` puede escribir en todo MATRIZ (GitHub no limita un token por carpeta). Moverlos a un repositorio privado aparte es un cambio mayor que se propondrá a Emi. `registro-ia.yml` usa las reglas del propio commit al crear una rama nueva; es parte del protocolo común de todos los repositorios y se corregirá allí, no solo aquí. El historial de git conserva la huella publicada antes (Emi eligió no reescribir el historial).
+
 ## 2026-11-12 · Matriz 1.0.2: mantenimiento sin códigos ni verificaciones
 
 - Agente: Claude Code (sesión en la nube)

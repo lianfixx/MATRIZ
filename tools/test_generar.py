@@ -41,6 +41,9 @@ def repo(base: Path, nombre: str, extra: str = "", changelog: str = CHANGELOG) -
 
 CFG = {"propietario": "x", "detalle_privados": False, "privados": ["cerrado."],
        "cerebros": [{"id": "uno", "nombre": "Uno", "descripcion": "D.", "repos": ["abierto", "cerrado.", "falta"]}]}
+# Lo que GitHub confirma: «abierto» es público. Sin esta confirmación todo se trata como privado.
+API = {"abierto": {"nombre": "abierto", "visibilidad": "público"}, "cerrado.": {"nombre": "cerrado.", "visibilidad": "privado"},
+       "falta": {"nombre": "falta", "visibilidad": "público"}}
 
 
 class Parser(unittest.TestCase):
@@ -95,19 +98,35 @@ class Privacidad(unittest.TestCase):
         for queda in ("09/11", "50/51", "1.2.3", "11/11/2026", "[cliente]", "[expediente]"):
             self.assertIn(queda, r)
 
-    def test_huellas(self):
-        # Protege sin el secreto y sin escribir el nombre en claro; mayúsculas, acentos y «Grupo» no lo esquivan.
-        g.HUELLAS_RESERVADAS.clear()
-        g.HUELLAS_RESERVADAS.add(g.huella("Acmé  Industrial"))
-        try:
-            r = g.reservar("Cotejo de ACME industrial y de Grupo Acme Industrial; Acme solo e Industrial solo quedan.")
-            self.assertEqual(r.count("[cliente]"), 2)
-            self.assertNotIn("ACME industrial", r)
-            self.assertNotIn("Grupo", r)
-            self.assertIn("Acme solo", r)
-            self.assertEqual(g.huella("ACMÉ industrial"), g.huella("acme   Industrial"))
-        finally:
-            g.HUELLAS_RESERVADAS.clear()
+    def test_terminos_normalizados(self):
+        # Mayúsculas, acentos, espacios dobles y «Grupo» no esquivan el filtro; no tapa dentro de otras palabras.
+        g.configurar_reservas(["Acmé  Industrial", "Ana"])
+        r = g.reservar("Cotejo de ACME industrial y de Grupo Acme   Industrial; Acme solo queda. Mañana con Ana.")
+        self.assertEqual(r.count("[cliente]"), 3)
+        self.assertNotIn("ACME industrial", r)
+        self.assertNotIn("Grupo", r)
+        self.assertIn("Acme solo", r)
+        self.assertIn("Mañana", r)
+
+    def test_formatos_nuevos(self):
+        # Regresiones de la auditoría del 12/11/2026 (datos ficticios).
+        casos = ["llamar al (55) 1234-5678", "o al 55 12 34 56 78", "o al 55.1234.5678", "Exp. No. 45/2023",
+                 "Expediente: 45/2023", "https://docs.google.com/document/d/1AbCdEfGhIjKlMnOpQrStUvWxYz0123456789abcdefgh/edit",
+                 "id 1AbCdEfGhIjKlMnOpQrStUvWxYz0123456789abcdefgh", "curp gode561331hdfrrn09", "rfc abcd800101xyz",
+                 "costó $5", "1.5 millones de pesos", "amparo directo 1234", "causa penal 12", "carpeta 12/2024"]
+        for c in casos:
+            r = g.reservar(c)
+            self.assertRegex(r, r"\[(teléfono|expediente|archivo de Drive|CURP|RFC|monto)\]", c)
+        self.assertNotIn("1234-5678", g.reservar(casos[0]))
+        # Lo normal no se toca
+        for queda in ("corte 09/11", "50/51 filas", "versión 1.2.3", "el 11/11/2026", "2026-11-12", "a las 10:30"):
+            self.assertEqual(g.reservar(queda), queda)
+
+    def test_filtro_acotado(self):
+        import time
+        t0 = time.time()
+        g.reservar("1 " * 20000 + "pesos")
+        self.assertLess(time.time() - t0, 1.0)
 
     def test_terminos_del_entorno(self):
         os.environ["MATRIZ_RESERVADOS"] = "Acme, Beta\nGamma"
@@ -129,7 +148,7 @@ class Generacion(unittest.TestCase):
             t = Path(t)
             repo(t / "clones", "abierto")
             repo(t / "clones", "cerrado.", "SECRETO-DEL-CLIENTE")
-            datos = g.generar(CFG, t / "out", t / "clones", False, "2026-11-11", {}, None, None, t)
+            datos = g.generar(CFG, t / "out", t / "clones", False, "2026-11-11", {}, API, None, t)
             a, c, f = datos["cerebros"][0]["repos"]
             self.assertEqual([s["nombre"] for s in a["skills"]], ["demo-skill"])
             self.assertEqual(a["registro"][0]["agente"], "Codex")
@@ -150,26 +169,55 @@ class Generacion(unittest.TestCase):
             self.assertIn("Cómo trabajar con Emi", general)
             # bitácora acumulativa: una línea que ya estaba no se borra
             b = t / "out" / "bitacora" / "2026-11.md"
-            b.write_text(b.read_text() + "\n## 1 nov 2026\n\n- [[viejo|viejo]] · algo de antes · Agente: Gemini\n")
-            g.generar(CFG, t / "out", t / "clones", False, "2026-11-12", {}, None, None, t)
+            b.write_text(b.read_text() + "\n## 1 nov 2026\n\n- [[abierto|abierto]] · algo de antes · Agente: Gemini\n"
+                         "- [[viejo|viejo]] · de un repositorio que ya no está · Agente: Gemini\n")
+            g.generar(CFG, t / "out", t / "clones", False, "2026-11-12", {}, API, None, t)
             self.assertIn("algo de antes", b.read_text())
+            # Regresión: lo de un repositorio que ya no es público (o ya no está) deja de publicarse
+            self.assertNotIn("ya no está", b.read_text())
+            g.generar(CFG, t / "out", t / "clones", False, "2026-11-13", {}, {**API, "abierto": {"nombre": "abierto", "visibilidad": "privado"}}, None, t)
+            self.assertNotIn("algo de antes", b.read_text())
 
     def test_lectura_anterior(self):
         with tempfile.TemporaryDirectory() as t:
             t = Path(t)
             repo(t / "clones", "abierto")
-            previo = g.generar(CFG, t / "out", t / "clones", False, "2026-11-11", {}, None, None, t)
+            previo = g.generar(CFG, t / "out", t / "clones", False, "2026-11-11", {}, API, None, t)
             import shutil
             shutil.rmtree(t / "clones" / "abierto")
+            # GitHub no responde (api=None): se usa la visibilidad confirmada en la corrida anterior
             datos = g.generar(CFG, t / "out", t / "clones", False, "2026-11-12", {}, None, previo, t)
             a = datos["cerebros"][0]["repos"][0]
-            self.assertEqual(a["lectura"], "anterior")
+            self.assertEqual((a["lectura"], a["visibilidad"]), ("anterior", "público"))
             self.assertEqual(a["registro"][0]["agente"], "Codex")
             # Regresión: lo reutilizado también se filtra con las reservas vigentes.
             previo["cerebros"][0]["repos"][0]["resumen"] = "Cotejo de Acme Industrial"
-            cfg = {**CFG, "terminos_reservados_huella": [g.huella("acme industrial")]}
-            datos = g.generar(cfg, t / "out", t / "clones", False, "2026-11-13", {}, None, previo, t)
+            os.environ["MATRIZ_RESERVADOS"] = "acme industrial"
+            try:
+                datos = g.generar(CFG, t / "out", t / "clones", False, "2026-11-13", {}, API, previo, t)
+            finally:
+                del os.environ["MATRIZ_RESERVADOS"]
             self.assertEqual(datos["cerebros"][0]["repos"][0]["resumen"], "Cotejo de [cliente]")
+
+    def test_falla_cerrada_sin_github(self):
+        # Regresión (auditoría 12/11/2026): sin respuesta de GitHub ni corrida anterior, un repositorio que no
+        # está en «privados» NO se publica como público.
+        with tempfile.TemporaryDirectory() as t:
+            t = Path(t)
+            repo(t / "clones", "abierto", "TEXTO-QUIZA-PRIVADO")
+            datos = g.generar(CFG, t / "out", t / "clones", False, "2026-11-12", {}, None, None, t)
+            self.assertEqual(datos["cerebros"][0]["repos"][0]["visibilidad"], "privado")
+            self.assertNotIn("TEXTO-QUIZA-PRIVADO", "".join(p.read_text() for p in (t / "out").rglob("*") if p.is_file()))
+
+    def test_nuevos_privados_sin_nombre(self):
+        with tempfile.TemporaryDirectory() as t:
+            t = Path(t)
+            repo(t / "clones", "abierto")
+            api = {**API, "demanda-acme-vs-perez": {"nombre": "demanda-acme-vs-perez", "visibilidad": "privado", "creado": "2026-11-12"}}
+            g.generar(CFG, t / "out", t / "clones", False, "2026-11-12", {}, api, None, t)
+            todo = "".join(p.read_text() for p in (t / "out").rglob("*") if p.is_file())
+            self.assertNotIn("demanda-acme", todo)
+            self.assertIn("1 repositorio privado (nombre reservado)", todo)
 
     def test_visibilidad_por_api(self):
         with tempfile.TemporaryDirectory() as t:
@@ -196,7 +244,7 @@ class Generacion(unittest.TestCase):
                 "- [ ] Revisar video\n- [x] Hecho ✅ 2026-11-10 ^d4e5f6\n\n## Notas\n\n- 2026-11-12 · idea suelta ^n1n2n3\n")
             inv = {"vencimientos": [{"nombre": "Token", "fecha": "2026-11-20"}],
                    "tareas": [{"nombre": "Cierre", "cerebro": "uno", "horario": "Diario", "ultima_corrida": "2026-11-10", "resultado": "falló: límite"}]}
-            datos = g.generar(CFG, t / "out", t / "clones", False, "2026-11-12", inv, None, None, t)
+            datos = g.generar(CFG, t / "out", t / "clones", False, "2026-11-12", inv, API, None, t)
             tab = datos["cerebros"][0]["tablero"]
             self.assertEqual(len(tab["pendientes"]), 3)
             p = tab["pendientes"][0]

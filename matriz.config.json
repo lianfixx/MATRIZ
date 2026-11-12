@@ -88,8 +88,5 @@
     "rea-ingenieria-inversa"
   ],
   "terminos_reservados": [],
-  "_doc_reservas": "Nombres de clientes que nunca se publican. Van como huella SHA-256 (minúsculas, sin acentos, un espacio entre palabras) en «terminos_reservados_huella» y, en claro, en el secreto MATRIZ_RESERVADOS de GitHub (también lo usa el panel). Para calcular una huella: python3 -c \"import sys; sys.path.insert(0,'tools'); import generar; print(generar.huella('Nombre'))\". Nunca escribas el nombre en claro en este archivo.",
-  "terminos_reservados_huella": [
-    "9e861941ad8bf5bcb649e5fde92d712528200a216018c2437371498e6ab7683d"
-  ]
+  "_doc_reservas": "Nombres de clientes que nunca se publican: van solo en el secreto MATRIZ_RESERVADOS de GitHub (separados por coma), que usan la actualización diaria y el panel. Nunca los escribas en este archivo, ni en claro ni como huella: es público. Sin ese secreto, la actualización diaria se detiene en vez de publicar."
 }

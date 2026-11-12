@@ -27,7 +27,6 @@ import argparse
 import datetime as dt
 import json
 import os
-import hashlib
 import re
 import unicodedata
 import subprocess
@@ -48,9 +47,11 @@ PANEL = "https://matriz.milla-abogados.workers.dev"
 # ---------------------------------------------------------------- utilidades
 
 def fecha_valida(iso: str) -> bool:
+    if not re.match(r"^\d{4}-\d{2}-\d{2}", str(iso)):
+        return False  # solo AAAA-MM-DD (no semanas ISO como 2026-W45-1)
     try:
         dt.date.fromisoformat(str(iso)[:10])
-        return len(str(iso)) >= 10
+        return True
     except ValueError:
         return False
 
@@ -145,58 +146,25 @@ def skills(repo: Path) -> list[dict]:
         cab = leer(p)[:3000]
         m = re.search(r"^name:\s*(.+)$", cab, re.M)
         nombre = (m.group(1).strip().strip("\"'") if m else p.parent.name)
-        encontrados.setdefault(nombre, {"nombre": nombre, "ruta": "/".join(partes)})
+        encontrados.setdefault(nombre, {"nombre": reservar(nombre), "ruta": reservar("/".join(partes))})
     return list(encontrados.values())
 
 
 # ---------------------------------------------------------------- privacidad
 # Todo texto que viene de un repositorio o que escribe Emi en el tablero pasa por aquí antes de
 # publicarse: la Matriz, el panel y el conector son públicos.
-PATRONES_RESERVADOS = [
-    (re.compile(r"(?<![\d/])\d{2,6}/\d{2,4}(?:-[0-9A-Z]{1,6})+\b"), "[expediente]"),   # 27969/22-17-02-5
-    (re.compile(r"(?<![\d/])\d{3,6}/(?:19|20)?\d{2}(?![\d/])"), "[expediente]"),        # 1234/2023, 27969/22, 456/24
-    (re.compile(r"\b(?:exp(?:ediente)?s?|juicio|amparo(?:\s+(?:directo|indirecto|en revisión))?|toca|folio|causa(?:\s+penal)?|carpeta(?:\s+de\s+investigación)?)"
-                r"\.?\s*(?:n[oú]m(?:ero)?\.?\s*)?\d[\d/.,-]{1,}", re.I), "[expediente]"),
-    (re.compile(r"[\w.%+-]+@[\w-]+(?:\.[\w-]+)+"), "[correo]"),
-    (re.compile(r"\b1[A-Za-z0-9_-]{32}\b"), "[archivo de Drive]"),                         # IDs de Drive
-    (re.compile(r"(?:\$|\bMXN|\bUSD)\s?\d[\d,. ]*\d|\b\d[\d,. ]*\d\s?(?:pesos|MXN|USD|dólares)\b", re.I), "[monto]"),
-    (re.compile(r"(?<![\w./-])\d{5,}(?![\w./-])"), "[número]"),                            # 27969 suelto
-    (re.compile(r"(?<![\w/])(?:\+?52[\s-]?)?(?:\d{2}[\s-]?\d{4}[\s-]?\d{4})(?![\w/])"), "[teléfono]"),
-    (re.compile(r"\b[A-Z][AEIOUX][A-Z]{2}\d{6}[HM][A-Z]{5}[A-Z\d]\d\b"), "[CURP]"),
-    (re.compile(r"\b[A-ZÑ&]{3,4}\d{6}[A-Z\d]{3}\b"), "[RFC]"),
-]
-TERMINOS_RESERVADOS: list[re.Pattern] = []
+# Los formatos están en tools/privacidad.json, el mismo archivo que usa el Worker del panel.
+def _cargar_patrones() -> list[tuple[re.Pattern, str]]:
+    datos = json.loads((Path(__file__).resolve().parent / "privacidad.json").read_text(encoding="utf-8"))
+    return [(re.compile(x["re"], re.I if x.get("i") else 0), x["por"]) for x in datos["patrones"]]
 
 
-def configurar_reservas(terminos: list[str]) -> None:
-    TERMINOS_RESERVADOS[:] = [re.compile(r"(?:grupo\s+)?" + re.escape(t.strip()), re.I) for t in terminos if t.strip()]
-
-
-def terminos_del_entorno() -> list[str]:
-    """Nombres de clientes reservados: vienen del secreto MATRIZ_RESERVADOS (separados por coma o renglón).
-
-    No se guardan en el repositorio: escribirlos ahí sería publicarlos.
-    """
-    crudo = os.environ.get("MATRIZ_RESERVADOS", "")
-    return [t.strip() for t in re.split(r"[,\n]", crudo) if t.strip()]
-
-
-def reservar(texto: str) -> str:
-    """Tapa números de expediente, nombres de clientes, correos, teléfonos, CURP, RFC, montos e IDs de Drive."""
-    if not texto:
-        return texto
-    for patron, sustituto in PATRONES_RESERVADOS:
-        texto = patron.sub(sustituto, texto)
-    for patron in TERMINOS_RESERVADOS:
-        texto = patron.sub("[cliente]", texto)
-    return tapar_huellas(texto)
-
-
-# Nombres de clientes guardados como huella SHA-256 en matriz.config.json («terminos_reservados_huella»):
-# protegen aunque falte el secreto MATRIZ_RESERVADOS y no exponen el nombre a quien lee el repositorio.
-# La huella es de la forma normalizada: minúsculas, sin acentos y con un solo espacio entre palabras.
-HUELLAS_RESERVADAS: set[str] = set()
+PATRONES_RESERVADOS = _cargar_patrones()
+# Nombres de clientes (secreto MATRIZ_RESERVADOS), ya normalizados: minúsculas, sin acentos, un espacio.
+TERMINOS_RESERVADOS: set[str] = set()
+MAX_PALABRAS_TERMINO = 6
 PALABRA = re.compile(r"[0-9A-Za-zÀ-ÖØ-öø-ÿ]+")
+MAX_TEXTO = 20000  # nada que publique la Matriz necesita más; acota el costo del filtro
 
 
 def normalizar_termino(t: str) -> str:
@@ -205,29 +173,51 @@ def normalizar_termino(t: str) -> str:
     return " ".join(PALABRA.findall(t))
 
 
-def huella(t: str) -> str:
-    return hashlib.sha256(normalizar_termino(t).encode("utf-8")).hexdigest()
+def configurar_reservas(terminos: list[str]) -> None:
+    TERMINOS_RESERVADOS.clear()
+    TERMINOS_RESERVADOS.update(n for n in (normalizar_termino(t) for t in terminos) if n)
 
 
-def tapar_huellas(texto: str) -> str:
-    if not HUELLAS_RESERVADAS or not texto:
+def terminos_del_entorno() -> list[str]:
+    """Nombres de clientes reservados: vienen del secreto MATRIZ_RESERVADOS (separados por coma o renglón).
+
+    No se guardan en el repositorio, ni en claro ni como huella: escribirlos ahí sería publicarlos.
+    """
+    crudo = os.environ.get("MATRIZ_RESERVADOS", "")
+    return [t.strip() for t in re.split(r"[,\n]", crudo) if t.strip()]
+
+
+def tapar_terminos(texto: str) -> str:
+    """Tapa los nombres reservados por palabras completas, sin importar mayúsculas, acentos ni espacios."""
+    if not TERMINOS_RESERVADOS or not texto:
         return texto
     palabras = list(PALABRA.finditer(texto))
+    norm = [normalizar_termino(m.group()) for m in palabras]
     tramos, i = [], 0
     while i < len(palabras):
-        for n in (4, 3, 2, 1):
-            if i + n <= len(palabras) and huella(" ".join(m.group() for m in palabras[i:i + n])) in HUELLAS_RESERVADAS:
+        for n in range(min(MAX_PALABRAS_TERMINO, len(palabras) - i), 0, -1):
+            if " ".join(norm[i:i + n]) in TERMINOS_RESERVADOS:
                 inicio = palabras[i].start()
-                if texto[max(0, inicio - 6):inicio].lower() == "grupo ":
-                    inicio -= 6
+                if i > 0 and norm[i - 1] == "grupo":
+                    inicio = palabras[i - 1].start()
                 tramos.append((inicio, palabras[i + n - 1].end()))
                 i += n
                 break
         else:
             i += 1
-    for a, b in reversed(tramos):
-        texto = texto[:a] + "[cliente]" + texto[b:]
+    for x, y in reversed(tramos):
+        texto = texto[:x] + "[cliente]" + texto[y:]
     return texto
+
+
+def reservar(texto: str) -> str:
+    """Tapa números de expediente, nombres de clientes, correos, teléfonos, CURP, RFC, montos e IDs de Drive."""
+    if not texto:
+        return texto
+    texto = texto[:MAX_TEXTO]
+    for patron, sustituto in PATRONES_RESERVADOS:
+        texto = patron.sub(sustituto, texto)
+    return tapar_terminos(texto)
 
 
 # ---------------------------------------------------------------- actividad
@@ -349,19 +339,25 @@ def descubrir(propietario: str) -> dict[str, dict] | None:
         urls.append("https://api.github.com/user/repos?per_page=100&affiliation=owner")
     vistos: dict[str, dict] = {}
     respondio = False
-    for url in urls:
-        req = urllib.request.Request(url, headers={"Accept": "application/vnd.github+json", "User-Agent": "matriz"})
-        if token and "/user/" in url:
-            req.add_header("Authorization", f"Bearer {token}")
-        try:
-            with urllib.request.urlopen(req, timeout=20) as r:
-                respondio = True
-                for x in json.load(r):
-                    if x.get("owner", {}).get("login", "").lower() == propietario.lower() and not x.get("archived"):
-                        vistos[x["name"]] = {"nombre": x["name"], "visibilidad": "privado" if x.get("private") else "público",
-                                             "creado": (x.get("created_at") or "")[:10]}
-        except Exception as e:  # sin red o sin permiso: no bloquea la generación
-            print(f"No se pudo listar repositorios ({url.split('?')[0]}): {e}", file=sys.stderr)
+    for base_url in urls:
+        for pagina in range(1, 11):  # hasta 1000 repositorios
+            url = f"{base_url}&page={pagina}"
+            req = urllib.request.Request(url, headers={"Accept": "application/vnd.github+json", "User-Agent": "matriz"})
+            if token and "/user/" in url:
+                req.add_header("Authorization", f"Bearer {token}")
+            try:
+                with urllib.request.urlopen(req, timeout=20) as r:
+                    lote = json.load(r)
+            except Exception as e:  # sin red o sin permiso: no bloquea la generación
+                print(f"No se pudo listar repositorios ({url.split('?')[0]}): {e}", file=sys.stderr)
+                break
+            respondio = True
+            for x in lote:
+                if x.get("owner", {}).get("login", "").lower() == propietario.lower() and not x.get("archived"):
+                    vistos[x["name"]] = {"nombre": x["name"], "visibilidad": "privado" if x.get("private") else "público",
+                                         "creado": (x.get("created_at") or "")[:10]}
+            if len(lote) < 100:
+                break
     return vistos if respondio else None
 
 
@@ -401,7 +397,15 @@ def leer_proyectos(carpeta: Path) -> list[dict]:
     salida = []
     for p in sorted(carpeta.glob("*.md")):
         texto = leer(p)
-        props = dict(re.findall(r'^(\w+):\s*"?(.*?)"?\s*$', texto.split("---")[1] if texto.startswith("---") else "", re.M))
+        fm = re.match(r"^---\n(.*?)\n---", texto, re.S)
+        props = {}
+        for k, v in re.findall(r"^(\w+):[ \t]*(.*?)[ \t]*$", fm.group(1) if fm else "", re.M):
+            if v.startswith('"'):
+                try:
+                    v = json.loads(v)  # el panel escribe los valores como JSON
+                except ValueError:
+                    v = v.strip('"')
+            props[k] = str(v)
         if props.get("tipo") != "proyecto":
             continue
         salida.append({"archivo": p.name, "nombre": reservar(props.get("nombre", p.stem)), "cerebro": props.get("cerebro", ""),
@@ -753,15 +757,23 @@ LINEA_BITACORA = re.compile(r"^- \[\[.+?\]\] · .+")
 
 
 def bitacoras(todos: list[dict], salida: Path) -> dict[str, str]:
-    """Bitácora acumulativa: junta lo leído hoy con lo que ya estaba escrito; nunca borra líneas."""
+    """Bitácora acumulativa: junta lo leído hoy con lo que ya estaba escrito.
+
+    Solo borra las líneas de repositorios que hoy son privados o ya no están en la Matriz: lo que dejó de
+    ser público no se sigue publicando."""
+    publicos = {slug(r["nombre"]) for r in todos if r.get("visibilidad") == "público"}
     por_mes: dict[str, dict[str, set]] = {}
     for p in (salida / "bitacora").glob("*.md"):
         mes, dia = p.stem, ""
+        por_mes.setdefault(mes, {})  # el mes se reescribe aunque se queden sin líneas
         for linea in leer(p).splitlines():
             m = re.match(r"^## (\d{1,2}) (\w{3}) (\d{4})$", linea)
             if m and m.group(2) in MESES:
                 dia = f"{m.group(3)}-{MESES.index(m.group(2)) + 1:02d}-{int(m.group(1)):02d}"
             elif dia and LINEA_BITACORA.match(linea):
+                destino = re.match(r"^- \[\[([^|\]]+)", linea)
+                if destino and destino.group(1) not in publicos:
+                    continue
                 por_mes.setdefault(mes, {}).setdefault(dia, set()).add(reservar(linea))
     for r in todos:
         for e in r["registro"]:
@@ -833,8 +845,6 @@ def generar(cfg: dict, salida: Path, repos_dir: Path | None, clonar: bool, hoy: 
     """Genera todo. `api`: repositorios según GitHub (None si no respondió). `previo`: matriz.json anterior."""
     base = base or salida
     configurar_reservas(cfg.get("terminos_reservados", []) + terminos_del_entorno())
-    HUELLAS_RESERVADAS.clear()
-    HUELLAS_RESERVADAS.update(h.lower() for h in cfg.get("terminos_reservados_huella", []) if re.fullmatch(r"[0-9a-fA-F]{64}", h))
     errores = validar(cfg, inv)
     if errores:
         raise SystemExit("Configuración inválida:\n- " + "\n- ".join(errores))
@@ -843,6 +853,7 @@ def generar(cfg: dict, salida: Path, repos_dir: Path | None, clonar: bool, hoy: 
     hoy_d = dt.date.fromisoformat(hoy)
     anteriores = {r["nombre"]: r for c in (previo or {}).get("cerebros", []) for r in c.get("repos", [])}
     conocidos = {r for c in cfg["cerebros"] for r in c["repos"]}
+    visibilidad_previa = {n: r.get("visibilidad") for n, r in anteriores.items()}
 
     def es_privado(nombre: str) -> bool:
         # Ante la duda, privado: un repositorio que GitHub no confirma como público no publica su contenido.
@@ -850,7 +861,8 @@ def generar(cfg: dict, salida: Path, repos_dir: Path | None, clonar: bool, hoy: 
             return True
         if api is not None:
             return api.get(nombre, {}).get("visibilidad") != "público"
-        return False
+        # GitHub no respondió (o corrida local): solo es público lo que una corrida anterior confirmó como público.
+        return visibilidad_previa.get(nombre) != "público"
 
     por_cerebro: dict[str, list[dict]] = {}
     with tempfile.TemporaryDirectory() as tmp:
@@ -869,8 +881,14 @@ def generar(cfg: dict, salida: Path, repos_dir: Path | None, clonar: bool, hoy: 
                                      for e in r.get("registro", [])]
                 lista.append(r)
             por_cerebro[c["id"]] = lista
-    nuevos = sorted((v for n, v in (api or {}).items() if n not in conocidos and n not in {"MATRIZ", *cfg.get("ignorar", [])}),
+    sin_cerebro = [v for n, v in (api or {}).items() if n not in conocidos and n not in {"MATRIZ", *cfg.get("ignorar", [])}]
+    # De los privados no se publica el nombre (puede decir de qué cliente es): solo cuántos hay.
+    nuevos = sorted(({**v, "nombre": reservar(v["nombre"])} for v in sin_cerebro if v.get("visibilidad") == "público"),
                     key=lambda v: v["nombre"].lower())
+    n_priv = sum(1 for v in sin_cerebro if v.get("visibilidad") != "público")
+    if n_priv:
+        nuevos.append({"nombre": f"{n_priv} repositorio{'s' if n_priv > 1 else ''} privado{'s' if n_priv > 1 else ''} (nombre reservado)",
+                       "visibilidad": "privado", "creado": ""})
     tableros = {c["id"]: leer_tablero(base / "tablero" / f"{c['id']}.md") for c in cfg["cerebros"]}
     proyectos = leer_proyectos(base / "proyectos")
     met = metricas(cfg["cerebros"], por_cerebro, tableros, inv, hoy_d)
@@ -894,9 +912,7 @@ def generar(cfg: dict, salida: Path, repos_dir: Path | None, clonar: bool, hoy: 
     datos = {"actualizada": hoy, "propietario": prop, "panel": PANEL,
              "cerebros": [{"id": c["id"], "nombre": c["nombre"], "descripcion": c["descripcion"],
                            "repos": por_cerebro[c["id"]], "tablero": tableros[c["id"]]} for c in cfg["cerebros"]],
-             "inventario": inv, "por_clasificar": nuevos, "proyectos": proyectos, "metricas": met,
-             # Solo huellas (ya públicas en matriz.config.json): el panel las usa para no aceptar nombres reservados.
-             "reservas_huella": sorted(HUELLAS_RESERVADAS)}
+             "inventario": inv, "por_clasificar": nuevos, "proyectos": proyectos, "metricas": met}
     escribir(salida / "matriz.json", json.dumps(datos, ensure_ascii=False, indent=2) + "\n")
     return datos
 
@@ -913,6 +929,10 @@ def main() -> int:
         forma = "ausente" if not tk else ("grano fino" if tk.strip().startswith("github_pat_") else "formato no reconocido")
         print(f"MATRIZ_TOKEN: {forma}, {len(tk.strip())} caracteres" + (", traía espacios" if tk != tk.strip() else ""))
         print(f"Nombres reservados en el secreto MATRIZ_RESERVADOS: {len(terminos_del_entorno())}")
+        if os.environ.get("GITHUB_ACTIONS") and not terminos_del_entorno():
+            # Falla cerrada: sin la lista de clientes no se publica nada nuevo.
+            print("Falta el secreto MATRIZ_RESERVADOS: no se genera para no publicar nombres de clientes.", file=sys.stderr)
+            return 1
     hoy = a.hoy or dt.date.today().isoformat()
     cfg = json.loads((RAIZ / "matriz.config.json").read_text(encoding="utf-8"))
     ruta_inv = RAIZ / "inventario.json"

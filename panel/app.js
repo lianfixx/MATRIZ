@@ -273,9 +273,14 @@ document.addEventListener("click", async (e) => {
   if (t.closest("[data-cerrar]")) return t.closest("dialog").close();
   if (t.closest("[data-entrar]")) return abrirEntrar();
   const comp = t.closest("[data-completar]");
-  if (comp && S.editor) { const [cid, id] = comp.dataset.completar.split(":"); comp.setAttribute("aria-checked", comp.getAttribute("aria-checked") === "true" ? "false" : "true"); return editar(cid, { accion: "completar", id }, "Listo."); }
+  if (comp && S.editor) {
+    const [cid, id] = comp.dataset.completar.split(":");
+    const hecho = comp.getAttribute("aria-checked") !== "true"; // se manda el estado deseado, no «alternar»
+    comp.setAttribute("aria-checked", String(hecho));
+    return editar(cid, { accion: "completar", id, hecho }, hecho ? "Listo." : "Reabierto.");
+  }
   const pr = t.closest("[data-prioridad]");
-  if (pr && S.cerebro) return editar(S.cerebro.id, { accion: "prioridad", id: pr.dataset.prioridad }, "Prioridad cambiada.");
+  if (pr && S.cerebro) return editar(S.cerebro.id, { accion: "prioridad", id: pr.dataset.prioridad, alta: !pr.classList.contains("activa") }, "Prioridad cambiada.");
   const bo = t.closest("[data-borrar]");
   if (bo && S.cerebro) return editar(S.cerebro.id, { accion: "borrar_pendiente", id: bo.dataset.borrar }, "Pendiente borrado.");
   const bn = t.closest("[data-borrar-nota]");
@@ -308,8 +313,10 @@ function abrirEntrar() {
 }
 $("#b-sesion").addEventListener("click", async () => {
   if (!S.editor) return abrirEntrar();
-  await api("/api/salir", {}).catch(() => {});
-  S.editor = false; pintarSesion(); avisar("Sesión cerrada en este equipo.");
+  try {
+    await api("/api/salir", {});
+    S.editor = false; pintarSesion(); avisar("Sesión cerrada en este equipo.");
+  } catch { avisar("No se pudo cerrar la sesión; revisa tu conexión e intenta de nuevo."); }
 });
 $("#f-entrar").addEventListener("submit", async (e) => {
   e.preventDefault();

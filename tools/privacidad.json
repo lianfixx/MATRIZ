@@ -1,0 +1,77 @@
+{
+  "_doc": "Formatos que nunca se publican. Lo usan tools/generar.py (todo lo que genera la Matriz) y worker/index.js (lo que se escribe desde el panel), para que el filtro sea idéntico en los dos. Los nombres de clientes no van aquí: van en el secreto MATRIZ_RESERVADOS. Cada patrón tiene su prueba en tools/test_generar.py y worker/prueba.mjs.",
+  "patrones": [
+    {
+      "re": "(?<![\\d/])\\d{2,6}/\\d{2,4}(?:-[0-9A-Z]{1,6}){1,6}\\b",
+      "i": false,
+      "por": "[expediente]",
+      "ej": "27969/22-17-02-5"
+    },
+    {
+      "re": "(?<![\\d/])(?:\\d{3,6}/(?:19|20)?\\d{2}|\\d{1,2}/(?:19|20)\\d{2})(?![\\d/])",
+      "i": false,
+      "por": "[expediente]",
+      "ej": "45/2023, 1234/2023, 27969/22, 456/24 (no tapa 09/11 ni 50/51)"
+    },
+    {
+      "re": "\\b(?:exp(?:ediente)?s?|juicio|amparo(?:\\s+(?:directo|indirecto|en\\s+revisi[oó]n))?|toca|folio|causa(?:\\s+penal)?|carpeta(?:\\s+de\\s+investigaci[oó]n)?|averiguaci[oó]n(?:\\s+previa)?|proceso)\\.?\\s{0,3}(?:n[oú]m(?:ero)?\\.?|no\\.?)?\\s{0,3}[:#]?\\s{0,3}\\d[\\d/.,-]{0,30}",
+      "i": true,
+      "por": "[expediente]",
+      "ej": "Exp. No. 45/2023, Expediente: 45/2023, causa penal 12"
+    },
+    {
+      "re": "[\\w.%+-]{1,64}@[\\w-]{1,63}(?:\\.[\\w-]{1,63}){1,6}",
+      "i": false,
+      "por": "[correo]",
+      "ej": "fulano@correo.mx"
+    },
+    {
+      "re": "/d/[A-Za-z0-9_-]{20,80}",
+      "i": false,
+      "por": "/d/[archivo de Drive]",
+      "ej": "docs.google.com/document/d/<id>/edit"
+    },
+    {
+      "re": "\\b1[A-Za-z0-9_-]{24,60}\\b",
+      "i": false,
+      "por": "[archivo de Drive]",
+      "ej": "IDs de Drive, Docs y Sheets"
+    },
+    {
+      "re": "(?:\\$|\\bMXN\\b|\\bUSD\\b)\\s?\\d[\\d,.]{0,20}(?:\\s?(?:mil(?:lones)?|millón))?",
+      "i": true,
+      "por": "[monto]",
+      "ej": "$5, $12,500.00, MXN 9,000"
+    },
+    {
+      "re": "\\b\\d[\\d,. ]{0,20}\\s?(?:mil(?:lones)?\\s+(?:de\\s+)?|millón\\s+de\\s+)?(?:pesos|MXN|USD|dólares)\\b",
+      "i": true,
+      "por": "[monto]",
+      "ej": "1 200 pesos, 1.5 millones de pesos"
+    },
+    {
+      "re": "(?<![\\w/.-])(?:\\+?52[\\s.-]?)?(?:\\(\\d{2,3}\\)|\\d{2,3})[\\s.-]?(?:\\d{4}[\\s.-]?\\d{4}|\\d{3}[\\s.-]?\\d{4}|\\d{2}[\\s.-]?\\d{2}[\\s.-]?\\d{2}[\\s.-]?\\d{2})(?![\\w/])",
+      "i": false,
+      "por": "[teléfono]",
+      "ej": "55 1111 2222, (55) 1234-5678, 55 12 34 56 78, 55.1234.5678"
+    },
+    {
+      "re": "(?<![\\w./-])\\d{5,}(?![\\w./-])",
+      "i": false,
+      "por": "[número]",
+      "ej": "27969 suelto"
+    },
+    {
+      "re": "\\b[A-Z][AEIOUX][A-Z]{2}\\d{6}[HM][A-Z]{5}[A-Z\\d]\\d\\b",
+      "i": true,
+      "por": "[CURP]",
+      "ej": "CURP en mayúsculas o minúsculas"
+    },
+    {
+      "re": "\\b[A-ZÑ&]{3,4}\\d{6}[A-Z\\d]{3}\\b",
+      "i": true,
+      "por": "[RFC]",
+      "ej": "RFC en mayúsculas o minúsculas"
+    }
+  ]
+}

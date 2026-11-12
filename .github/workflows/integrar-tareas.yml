@@ -36,12 +36,19 @@ jobs:
           git fetch -q origin main "$RAMA"
           n=$(git rev-list --count "origin/main..origin/$RAMA")
           if [ "$n" -eq 0 ]; then echo "Nada que integrar."; exit 0; fi
-          for c in $(git rev-list --no-merges "origin/main..origin/$RAMA"); do
+          for c in $(git rev-list "origin/main..origin/$RAMA"); do
             if ! git log -1 --format=%B "$c" | grep -Eq 'IA-Actor:.*ejecuci.{1,2}n programada'; then
               echo "::error::$c no viene de una ejecución programada; no se integra."; exit 1
             fi
           done
           base=$(git merge-base origin/main "origin/$RAMA")
+          # El trailer «IA-Actor» es solo texto: lo que de verdad limita es QUÉ archivos puede tocar la rama.
+          # La revisión semanal solo edita estos; cualquier otro (código, workflows, ia/, panel) exige revisión de Emi.
+          # Se mira el diff completo (incluye lo que entre por merges).
+          fuera=$(git diff --name-only "$base" "origin/$RAMA" | grep -vE '^(inventario\.json|matriz\.config\.json|CHANGELOG\.md|revisiones/[^/]+\.md)$' || true)
+          if [ -n "$fuera" ]; then
+            echo "::error::La rama toca archivos que una tarea programada no puede cambiar sola:"; echo "$fuera"; exit 1
+          fi
           mkdir -p "$RUNNER_TEMP/ia-main"
           for f in guard.py verificar.py check_skill.py politica.json; do
             git show "origin/main:ia/$f" > "$RUNNER_TEMP/ia-main/$f"

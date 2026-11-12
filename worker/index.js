@@ -6,7 +6,9 @@
 // Secretos del Worker: PANEL_CLAVE (contraseña), MATRIZ_ESCRITURA (token de GitHub con escritura solo
 // en MATRIZ) y MATRIZ_RESERVADOS (nombres de clientes que nunca se publican). Sin ellos, todo es solo lectura.
 
-const VERSION = "2.0.0";
+import PRIVACIDAD from "../tools/privacidad.json" with { type: "json" };
+
+const VERSION = "2.1.0";
 const REPO = "lianfixx/MATRIZ";
 const PROTOCOLOS = ["2025-11-25", "2025-06-18", "2025-03-26", "2024-11-05"];
 const CORS = {
@@ -15,6 +17,7 @@ const CORS = {
   "Access-Control-Allow-Headers": "Content-Type, Accept, Mcp-Session-Id, Mcp-Protocol-Version, Authorization",
   "Access-Control-Expose-Headers": "Mcp-Session-Id",
 };
+const ORIGENES_MCP = ["https://claude.ai", "https://chatgpt.com", "https://chat.openai.com", /^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/];
 const SEGURIDAD = {
   "X-Content-Type-Options": "nosniff",
   "Referrer-Policy": "no-referrer",
@@ -22,7 +25,7 @@ const SEGURIDAD = {
 };
 
 const MESES = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
-const esFecha = (s) => /^\d{4}-\d{2}-\d{2}$/.test(String(s || "")) && !isNaN(Date.parse(s));
+const esFecha = (s) => { const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(s || "")); if (!m) return false; const d = new Date(Date.UTC(+m[1], +m[2] - 1, +m[3])); return d.getUTCFullYear() === +m[1] && d.getUTCMonth() === +m[2] - 1 && d.getUTCDate() === +m[3]; };
 const fecha = (iso) => {
   if (!iso) return "sin dato";
   if (!esFecha(String(iso).slice(0, 10))) return String(iso);
@@ -37,8 +40,13 @@ async function archivo(env, base, ruta) {
   const r = await env.ASSETS.fetch(new Request(new URL(ruta, base)));
   return r.ok ? r.text() : null;
 }
+// matriz.json solo cambia al publicar (y cada publicación arranca un Worker nuevo): se lee una vez por minuto.
+let cacheDatos = null;
 async function datos(env, base) {
-  return JSON.parse(await archivo(env, base, "/matriz.json"));
+  if (cacheDatos && Date.now() - cacheDatos.t < 60000) return cacheDatos.d;
+  const d = JSON.parse(await archivo(env, base, "/matriz.json"));
+  cacheDatos = { t: Date.now(), d };
+  return d;
 }
 const quitarFrontmatter = (t) => (t || "").replace(/^---\n[\s\S]*?\n---\n/, "");
 const todos = (D) => D.cerebros.flatMap((c) => c.repos.map((r) => ({ ...r, cerebro: c })));
@@ -52,37 +60,17 @@ const listaCerebros = (D) => D.cerebros.map((c) => c.id).join(", ");
 
 // ---------------------------------------------------------------- privacidad (igual que tools/generar.py)
 
-const PATRONES = [
-  /(?<![\d/])\d{2,6}\/\d{2,4}(?:-[0-9A-Z]{1,6})+\b/,
-  /(?<![\d/])\d{3,6}\/(?:19|20)?\d{2}(?![\d/])/,
-  /\b(?:exp(?:ediente)?s?|juicio|amparo|toca|folio|causa|carpeta de investigación)\.?\s*(?:n[oú]m(?:ero)?\.?\s*)?\d[\d/.,-]{1,}/i,
-  /[\w.%+-]+@[\w-]+(?:\.[\w-]+)+/,
-  /\b1[A-Za-z0-9_-]{32}\b/,
-  /(?:\$|\bMXN|\bUSD)\s?\d[\d,. ]*\d|\b\d[\d,. ]*\d\s?(?:pesos|MXN|USD|dólares)\b/i,
-  /(?<![\w./-])\d{5,}(?![\w./-])/,
-  /(?<![\w/])(?:\+?52[\s-]?)?\d{2}[\s-]?\d{4}[\s-]?\d{4}(?![\w/])/,
-  /\b[A-Z][AEIOUX][A-Z]{2}\d{6}[HM][A-Z]{5}[A-Z\d]\d\b/,
-  /\b[A-ZÑ&]{3,4}\d{6}[A-Z\d]{3}\b/,
-];
+// Los formatos están en tools/privacidad.json: el mismo archivo que usa tools/generar.py.
+const PATRONES = PRIVACIDAD.patrones.map((x) => new RegExp(x.re, x.i ? "i" : ""));
 // Igual que tools/generar.py: minúsculas, sin acentos, palabras separadas por un espacio.
-const normalizar = (t) => (t.toLowerCase().normalize("NFKD").replace(/\p{M}/gu, "").match(/[0-9A-Za-zÀ-ÖØ-öø-ÿ]+/g) || []);
-async function sha256(t) {
-  const b = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(t));
-  return [...new Uint8Array(b)].map((x) => x.toString(16).padStart(2, "0")).join("");
-}
-// Formatos (expedientes, correos…), nombres del secreto MATRIZ_RESERVADOS y huellas de matriz.config.json
-// (llegan en matriz.json como «reservas_huella»), en grupos de hasta cuatro palabras.
-async function pareceDatoDeCliente(texto, env, huellas = []) {
-  if (PATRONES.some((p) => p.test(texto))) return true;
-  const reservados = String(env.MATRIZ_RESERVADOS || "").split(/[,\n]/).map((t) => normalizar(t).join(" ")).filter(Boolean);
-  const palabras = normalizar(texto), unido = ` ${palabras.join(" ")} `;
-  if (reservados.some((r) => unido.includes(` ${r} `))) return true;
-  if (!huellas.length) return false;
-  const conjunto = new Set(huellas);
-  for (let i = 0; i < palabras.length; i++)
-    for (let n = 1; n <= 4 && i + n <= palabras.length; n++)
-      if (conjunto.has(await sha256(palabras.slice(i, i + n).join(" ")))) return true;
-  return false;
+const normalizar = (t) => (String(t).toLowerCase().normalize("NFKD").replace(/\p{M}/gu, "").match(/[0-9A-Za-zÀ-ÖØ-öø-ÿ]+/g) || []);
+// Formatos (expedientes, correos, teléfonos…) y nombres del secreto MATRIZ_RESERVADOS por palabras completas.
+function pareceDatoDeCliente(texto, env) {
+  const t = String(texto).slice(0, 20000);
+  if (PATRONES.some((p) => p.test(t))) return true;
+  const reservados = String(env.MATRIZ_RESERVADOS || "").split(/[,\n]/).map((x) => normalizar(x).join(" ")).filter(Boolean);
+  const unido = ` ${normalizar(t).join(" ")} `;
+  return reservados.some((r) => unido.includes(` ${r} `));
 }
 
 // ---------------------------------------------------------------- herramientas MCP
@@ -303,11 +291,20 @@ async function mcp(request, env) {
   }
   if (request.method !== "POST") return new Response("Método no permitido", { status: 405, headers: H });
   const json = (cuerpo, status = 200) => new Response(JSON.stringify(cuerpo), { status, headers: { ...H, "Content-Type": "application/json; charset=utf-8" } });
+  // La especificación MCP pide validar Origin (contra ataques de DNS rebinding). Los conectores de Claude y
+  // ChatGPT llaman desde sus servidores, sin Origin; un navegador solo puede desde estos orígenes.
+  const origen = request.headers.get("Origin");
+  if (origen && !ORIGENES_MCP.some((o) => (typeof o === "string" ? o === origen : o.test(origen))) && origen !== new URL(request.url).origin) {
+    return json(error(null, -32600, "Origen no permitido"), 403);
+  }
+  const version = request.headers.get("MCP-Protocol-Version");
+  if (version && !PROTOCOLOS.includes(version)) return json(error(null, -32600, `Versión de protocolo no soportada: ${version}`), 400);
   let cuerpo;
   try { cuerpo = await request.json(); } catch { return json(error(null, -32700, "JSON inválido"), 400); }
   const base = request.url;
   if (Array.isArray(cuerpo)) {
     if (!cuerpo.length) return json(error(null, -32600, "Lote vacío"));
+    if (cuerpo.length > 10) return json(error(null, -32600, "Lote demasiado grande (máximo 10)"), 400);
     const salidas = (await Promise.all(cuerpo.map((m) => atender(m, env, base)))).filter(Boolean);
     return salidas.length ? json(salidas) : new Response(null, { status: 202, headers: H });
   }
@@ -333,17 +330,34 @@ async function iguales(a, b) {
 }
 const SESION = "matriz_sesion";
 const DIAS = 30;
+// La firma usa la contraseña y el token de escritura: una cookie filtrada no sirve para adivinar la contraseña,
+// y cambiar cualquiera de los dos cierra todas las sesiones.
+const llaveSesion = (env) => `${env.PANEL_CLAVE}·${env.MATRIZ_ESCRITURA || ""}·sesión`;
 async function crearSesion(env) {
   const vence = Date.now() + DIAS * 864e5;
-  return `${vence}.${await hmac(env.PANEL_CLAVE + "·sesión", String(vence))}`;
+  return `${vence}.${await hmac(llaveSesion(env), String(vence))}`;
 }
 async function sesionValida(request, env) {
   if (!env.PANEL_CLAVE) return false;
   const m = (request.headers.get("Cookie") || "").match(new RegExp(`(?:^|;\\s*)${SESION}=([0-9]+)\\.([0-9a-f]{64})`));
   if (!m || +m[1] < Date.now()) return false;
-  return iguales(m[2], await hmac(env.PANEL_CLAVE + "·sesión", m[1]));
+  return iguales(m[2], await hmac(llaveSesion(env), m[1]));
 }
 const cookie = (valor, edad) => `${SESION}=${valor}; Path=/api; HttpOnly; Secure; SameSite=Strict; Max-Age=${edad}`;
+
+// Límite de intentos de contraseña por dirección IP: el binding de Cloudflare (5 por minuto, en todos los
+// servidores) y, además, un contador en memoria por si el binding no está.
+const intentos = new Map();
+async function permitirIntento(request, env) {
+  const ip = request.headers.get("CF-Connecting-IP") || "local";
+  if (env.LIMITE_ENTRAR) {
+    try { const { success } = await env.LIMITE_ENTRAR.limit({ key: ip }); if (!success) return false; } catch { /* sigue con el contador local */ }
+  }
+  const ahora = Date.now(), v = (intentos.get(ip) || []).filter((t) => ahora - t < 60000);
+  v.push(ahora); intentos.set(ip, v);
+  if (intentos.size > 5000) intentos.clear();
+  return v.length <= 5;
+}
 
 // ---------------------------------------------------------------- GitHub (escritura del tablero)
 
@@ -354,7 +368,11 @@ async function gh(env, ruta, opciones = {}) {
   });
   return r;
 }
-const b64 = (texto) => btoa(String.fromCharCode(...enc.encode(texto)));
+const b64 = (texto) => {
+  const bytes = enc.encode(texto); let bin = "";
+  for (let i = 0; i < bytes.length; i += 0x8000) bin += String.fromCharCode(...bytes.subarray(i, i + 0x8000));
+  return btoa(bin);
+};
 const deb64 = (b) => new TextDecoder().decode(Uint8Array.from(atob(b.replace(/\n/g, "")), (c) => c.charCodeAt(0)));
 async function leerGH(env, ruta) {
   const r = await gh(env, `${ruta}?ref=main`);
@@ -365,52 +383,72 @@ async function leerGH(env, ruta) {
 }
 async function escribirGH(env, ruta, texto, sha, mensaje) {
   const r = await gh(env, ruta, { method: "PUT", body: JSON.stringify({ message: mensaje, content: b64(texto), sha: sha || undefined, branch: "main" }) });
-  if (r.status === 409 || r.status === 422) return { conflicto: true };
+  if (r.status === 409) return { conflicto: true };
+  if (r.status === 422 && !sha) return { conflicto: true }; // alguien lo creó al mismo tiempo
+  if (r.status === 422) throw new Error("GitHub rechazó el cambio (422)");
   if (!r.ok) throw new Error(`GitHub respondió ${r.status} al guardar ${ruta}`);
   return { conflicto: false };
 }
 
 // ---------------------------------------------------------------- tablero: leer y escribir el Markdown
 
-const TAREA = /^\s*-\s*\[( |x|X)\]\s+(.*)$/;
+const TAREA = /^(\s*)-\s*\[( |x|X)\]\s+(.*)$/;
+// Id estable para líneas escritas a mano sin «^id»: el mismo texto da el mismo id en cada lectura.
+const idEstable = (t) => { let h = 2166136261; for (const ch of t) { h ^= ch.codePointAt(0); h = Math.imul(h, 16777619) >>> 0; } return h.toString(36).padStart(6, "0").slice(-6); };
+const PROPIAS = /^(?:---|tipo:|cerebro:|# Tablero|Pendientes y notas de Emi|## Pendientes|## Notas)/;
 function parsearTablero(md) {
-  const pendientes = [], notas = [];
-  let seccion = "";
-  for (const linea of (md || "").split("\n")) {
-    if (linea.startsWith("## ")) { seccion = linea.slice(3).trim().toLowerCase(); continue; }
+  const pendientes = [], notas = [], resto = [];
+  let seccion = "", enFm = false;
+  const lineas = (md || "").split("\n");
+  lineas.forEach((linea, i) => {
+    if (i === 0 && linea === "---") { enFm = true; return; }
+    if (enFm) { if (linea === "---") enFm = false; else if (!/^(tipo|cerebro):/.test(linea)) resto.push({ fm: true, linea }); return; }
+    if (linea.startsWith("## ")) {
+      seccion = linea.slice(3).trim().toLowerCase();
+      if (!seccion.startsWith("pendiente") && !seccion.startsWith("nota")) resto.push({ linea });
+      return;
+    }
     const m = linea.match(TAREA);
     if (m && seccion.startsWith("pendiente")) {
-      const t = m[2];
-      const id = (t.match(/\^([a-z0-9]{4,12})\s*$/) || [])[1] || nuevoId();
+      const t = m[3];
+      const id = (t.match(/\^([a-z0-9]{4,12})\s*$/) || [])[1] || idEstable(t);
       pendientes.push({
-        id, hecho: m[1] !== " ", alta: t.includes("🔺"),
+        id, sangria: m[1].length ? m[1] : "", hecho: m[2] !== " ", alta: t.includes("🔺"),
         vence: (t.match(/📅\s*(\d{4}-\d{2}-\d{2})/) || [])[1] || "",
         hecho_el: (t.match(/✅\s*(\d{4}-\d{2}-\d{2})/) || [])[1] || "",
         creado: (t.match(/➕\s*(\d{4}-\d{2}-\d{2})/) || [])[1] || "",
         texto: t.replace(/\s*(?:📅|✅|➕)\s*\d{4}-\d{2}-\d{2}|\s*🔺|\s*\^[a-z0-9]{4,12}\s*$/g, "").trim(),
       });
-    } else if (seccion.startsWith("nota") && linea.trim().startsWith("- ")) {
+    } else if (seccion.startsWith("nota") && /^\s*[-*] /.test(linea)) {
       const t = linea.trim().slice(2);
       const f = t.match(/^(\d{4}-\d{2}-\d{2})\s*·\s*(.*)$/);
-      const id = (t.match(/\^([a-z0-9]{4,12})\s*$/) || [])[1] || nuevoId();
+      const id = (t.match(/\^([a-z0-9]{4,12})\s*$/) || [])[1] || idEstable(t);
       notas.push({ id, fecha: f ? f[1] : "", texto: (f ? f[2] : t).replace(/\s*\^[a-z0-9]{4,12}\s*$/, "").trim() });
+    } else if (linea.trim() && !PROPIAS.test(linea)) {
+      resto.push({ linea }); // texto que el panel no edita: se conserva tal cual
     }
-  }
-  return { pendientes, notas };
+  });
+  return { pendientes, notas, resto };
 }
 function serializarTablero(nombre, t) {
-  const L = ["---", "tipo: tablero", `cerebro: ${JSON.stringify(nombre)}`, "---", `# Tablero · ${nombre}`, "",
-    "Pendientes y notas de Emi para este cerebro. Se editan desde el panel de la Matriz; también puedes editarlos aquí con el mismo formato.",
+  const fm = (t.resto || []).filter((x) => x.fm).map((x) => x.linea);
+  const L = ["---", "tipo: tablero", `cerebro: ${JSON.stringify(nombre)}`, ...fm, "---", `# Tablero · ${nombre}`, "",
+    "Pendientes y notas de Emi para este cerebro. Se editan desde el panel de la Matriz; Obsidian los muestra. Lo que no tenga este formato se conserva al final.",
     "", "## Pendientes", ""];
   for (const p of t.pendientes) {
-    L.push(`- [${p.hecho ? "x" : " "}] ${p.texto}${p.alta ? " 🔺" : ""}${p.vence ? ` 📅 ${p.vence}` : ""}${p.creado ? ` ➕ ${p.creado}` : ""}${p.hecho && p.hecho_el ? ` ✅ ${p.hecho_el}` : ""} ^${p.id}`);
+    L.push(`${p.sangria || ""}- [${p.hecho ? "x" : " "}] ${p.texto}${p.alta ? " 🔺" : ""}${p.vence ? ` 📅 ${p.vence}` : ""}${p.creado ? ` ➕ ${p.creado}` : ""}${p.hecho && p.hecho_el ? ` ✅ ${p.hecho_el}` : ""} ^${p.id}`);
   }
   L.push("", "## Notas", "");
   for (const n of t.notas) L.push(`- ${n.fecha ? `${n.fecha} · ` : ""}${n.texto} ^${n.id}`);
+  const otros = (t.resto || []).filter((x) => !x.fm).map((x) => x.linea);
+  if (otros.length) L.push("", ...otros);
   return L.join("\n") + "\n";
 }
 const nuevoId = () => hex(crypto.getRandomValues(new Uint8Array(4))).slice(0, 6);
-const limpiar = (s, max = 400) => String(s ?? "").replace(/[\r\n\t]+/g, " ").replace(/[<>]/g, "").trim().slice(0, max);
+// Una línea de texto: sin saltos (incluidos los Unicode), sin < >, sin las marcas del formato de tareas.
+const limpiar = (s, max = 400) => String(s ?? "").slice(0, max * 4)
+  .replace(/[\r\n\t\v\f\u0085\u2028\u2029]+/g, " ").replace(/[<>]/g, "").replace(/[📅✅➕🔺⏫🔼🔽⏬]|\^(?=[a-z0-9]{4,12}\b)/gu, "")
+  .replace(/\s{2,}/g, " ").trim().slice(0, max);
 
 function aplicar(t, accion, a) {
   const buscarP = () => {
@@ -426,23 +464,24 @@ function aplicar(t, accion, a) {
       t.pendientes.unshift({ id: nuevoId(), texto, hecho: false, alta: !!a.alta, vence: esFecha(a.vence) ? a.vence : "", creado: hoy(), hecho_el: "" });
       return `nuevo pendiente`;
     }
-    case "completar": { const p = buscarP(); p.hecho = !p.hecho; p.hecho_el = p.hecho ? hoy() : ""; return p.hecho ? "pendiente hecho" : "pendiente reabierto"; }
-    case "prioridad": { const p = buscarP(); p.alta = !p.alta; return p.alta ? "prioridad alta" : "prioridad normal"; }
+    // El panel manda el estado que quiere (hecho/alta): tocar dos veces no lo deshace por accidente.
+    case "completar": { const p = buscarP(); p.hecho = typeof a.hecho === "boolean" ? a.hecho : !p.hecho; p.hecho_el = p.hecho ? (p.hecho_el || hoy()) : ""; return p.hecho ? "pendiente hecho" : "pendiente reabierto"; }
+    case "prioridad": { const p = buscarP(); p.alta = typeof a.alta === "boolean" ? a.alta : !p.alta; return p.alta ? "prioridad alta" : "prioridad normal"; }
     case "fecha": { const p = buscarP(); p.vence = esFecha(a.vence) ? a.vence : ""; return "fecha de vencimiento"; }
     case "editar_pendiente": { const p = buscarP(); const texto = limpiar(a.texto); if (!texto) throw new Error("El pendiente no puede quedar vacío."); p.texto = texto; return "pendiente editado"; }
     case "borrar_pendiente": { buscarP(); t.pendientes = t.pendientes.filter((x) => x.id !== a.id); return "pendiente borrado"; }
     case "agregar_nota": {
       const texto = limpiar(a.texto, 800);
       if (!texto) throw new Error("Escribe la nota.");
+      if (t.notas.length >= 200) throw new Error("Hay 200 notas en este cerebro; borra algunas antes de agregar otra.");
       t.notas.push({ id: nuevoId(), fecha: hoy(), texto });
-      if (t.notas.length > 200) t.notas = t.notas.slice(-200);
       return "nota nueva";
     }
     case "borrar_nota": { t.notas = t.notas.filter((x) => x.id !== a.id); return "nota borrada"; }
     default: throw new Error("Acción desconocida.");
   }
 }
-const textosDe = (accion, a) => (["agregar_pendiente", "editar_pendiente", "agregar_nota"].includes(accion) ? [String(a.texto ?? "")] : []);
+const textosDe = (accion, a) => (["agregar_pendiente", "editar_pendiente"].includes(accion) ? [limpiar(a.texto)] : accion === "agregar_nota" ? [limpiar(a.texto, 800)] : []);
 
 // ---------------------------------------------------------------- API
 
@@ -467,6 +506,7 @@ async function api(request, env, url) {
   if (ruta === "/api/sesion" && request.method === "GET") return json({ editor: await sesionValida(request, env), configurado });
   if (ruta === "/api/entrar" && request.method === "POST") {
     if (!configurado) return json({ error: "La edición todavía no está activada: faltan la contraseña o el token de escritura." }, 503);
+    if (!(await permitirIntento(request, env))) return json({ error: "Demasiados intentos. Espera un minuto." }, 429, { "Retry-After": "60" });
     if (!(await iguales(String(cuerpo.clave ?? ""), env.PANEL_CLAVE))) {
       await new Promise((r) => setTimeout(r, 800)); // frena a quien intente adivinar
       return json({ error: "Contraseña incorrecta." }, 401);
@@ -490,7 +530,7 @@ async function api(request, env, url) {
     if (request.method === "POST") {
       const accion = String(cuerpo.accion || "");
       for (const t of textosDe(accion, cuerpo)) {
-        if (await pareceDatoDeCliente(t, env, D.reservas_huella)) return json({ error: "Parece un dato de cliente (nombre, expediente, correo, teléfono o monto). La Matriz es pública: escríbelo sin ese dato." }, 422);
+        if (pareceDatoDeCliente(t, env)) return json({ error: "Parece un dato de cliente (nombre, expediente, correo, teléfono o monto). La Matriz es pública: escríbelo sin ese dato." }, 422);
       }
       for (let intento = 0; intento < 3; intento++) {
         const { texto, sha } = await leerGH(env, archivoMd);
@@ -509,7 +549,7 @@ async function api(request, env, url) {
     const nombre = limpiar(cuerpo.nombre, 80), descripcion = limpiar(cuerpo.descripcion, 400);
     const c = D.cerebros.find((x) => x.id === cuerpo.cerebro);
     if (!nombre || !c) return json({ error: "Escribe el nombre y elige el cerebro." }, 400);
-    if (await pareceDatoDeCliente(nombre + " " + descripcion, env, D.reservas_huella)) return json({ error: "Parece un dato de cliente. La Matriz es pública: descríbelo sin ese dato." }, 422);
+    if (pareceDatoDeCliente(nombre + " " + descripcion, env)) return json({ error: "Parece un dato de cliente. La Matriz es pública: descríbelo sin ese dato." }, 422);
     const slug = nombre.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 60) || nuevoId();
     const ruta2 = `proyectos/${slug}.md`;
     const { sha } = await leerGH(env, ruta2);
