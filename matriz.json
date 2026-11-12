@@ -12,7 +12,7 @@
           "url": "https://github.com/lianfixx/Cerebro-Castorena-",
           "visibilidad": "público",
           "leido": true,
-          "ultimo_cambio": "2026-11-11",
+          "ultimo_cambio": "2026-11-12",
           "resumen": "Matriz documental de Emi para Castorena Abogados. Aquí están las cinco tablas de referencia, las versiones recuperadas, las reglas de trabajo y los pendientes.",
           "skills": [
             {
@@ -22,6 +22,13 @@
           ],
           "protocolo": "1.1.0",
           "registro": [
+            {
+              "fecha": "2026-11-11",
+              "titulo": "Cierre diario programado (sin cambios de tablas)",
+              "agente": "Claude Code (ejecución programada)",
+              "cambios": "entrega 46 de INDEP (boletín 196, sin coincidencias) verificada con manifiesto.py (9 archivos) y comparar_excel.py --base sobre el maestro v22 (45 folios, 44 turnos); sin Excel nuevo. `HISTORIAL.json` (entrega 46), `ESTADO.json` y cierre `cerebro/cierres/2026-11-11_1845.json`. Concentrado y carpeta de vigentes de Drive sin cambio en metadatos.",
+              "pendiente": "subir v22 a Drive, Escritorio e iCloud; ACTUAL.json de INDEP sigue en la entrega 18."
+            },
             {
               "fecha": "2026-11-10",
               "titulo": "Cierre diario programado: maestro INDEP v22 copiado",
@@ -70,13 +77,6 @@
               "agente": "Claude Code (claude-opus-5-5, sesión con Emi y Mac enlazada)",
               "cambios": "revisión independiente de la subida de Muse (commit d69fbee): los seis archivos vigentes se descargaron de Drive y coinciden byte a byte con `cerebro/fuentes`; se añadieron el LÉEME (pendiente en el cierre de Muse) y la subcarpeta «Anteriores»; `SINCRONIZACION.json` registra los IDs de Drive y el destino Drive como sincronizado. Se observó que la carpeta hereda acceso «cualquier persona con el enlace puede ver»; no se cambiaron permisos.",
               "pendiente": "decisión de Emi sobre el acceso por enlace; Cotejo acuses INDEP; diferencia 50/51 de Liverpool."
-            },
-            {
-              "fecha": "2026-11-09",
-              "titulo": "tablas vigentes subidas a Drive y verificadas",
-              "agente": "Muse (Muse Spark)",
-              "cambios": "las 6 tablas vigentes subidas a la carpeta Drive 1UE-tJN2QV1X3eRGokx1pB0PMOW9YKn_z con sus nombres fijos, sin conversión; SINCRONIZACION.json (Drive → sincronizado); cierre cerebro/cierres/2026-11-09_1509.json; ESTADO.json actualizado. El LÉEME no está en GitHub y queda pendiente.",
-              "pendiente": "subir el LÉEME a Drive; integrar «Cotejo acuses INDEP 2026-10-15» como séptima tabla (Emi aprobó el 09/11/2026; falta el archivo, no está en GitHub); diferencia 50/51 del Cotejo Liverpool."
             }
           ]
         },
