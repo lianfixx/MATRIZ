@@ -87,8 +87,8 @@ Skill para planear, redactar, revisar, entregar para publicar y medir lo que Emi
 
 Skills: `linkedin-pro`
 
-Último registro: 13 nov 2026 · Claude publica con el sí final de Emi; petición a Vox enviada · Agente: Claude Code (sesión en la nube)
-Pendiente: archivo MP4 del video del DOF para publicarlo; que Vox Studio aplique la petición.
+Último registro: 13 nov 2026 · Petición a Vox aplicada; muestra de láminas de la campaña · Agente: Claude Code (sesión en la nube)
+Pendiente: correcciones de Emi a la muestra; MP4 del video del DOF.
 
 ## Tareas programadas
 
