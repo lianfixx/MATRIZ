@@ -4,9 +4,9 @@ cerebro: "Contenido y video"
 visibilidad: "público"
 ultimo_cambio: 2026-11-13
 skills: 1
-commits_8_semanas: 26
+commits_8_semanas: 27
 ultimo_agente: "Claude Code (sesión en la nube)"
-pendiente: "que la tarea semanal analice la inspiración y proponga espacios (se actualiza su encargo); subir imágenes y video por API."
+pendiente: "respuestas de Emi a las preguntas de Editor Studio."
 github: "https://github.com/lianfixx/REDES"
 tags:
   - "repo"
@@ -28,12 +28,12 @@ La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, 
 
 ## Últimos registros
 
+- 13 nov 2026 · Recursos: cómo grabar (de Editor Studio) · Agente: Claude Code (sesión en la nube)
 - 13 nov 2026 · Panel 0.2: Hoy tipo CRM, piezas en vivo con notas y pausa, hora sugerida, ideas por espacio e inspiración · Agente: Claude Code (sesión en la nube)
 - 13 nov 2026 · X conectado al panel · Agente: Claude Code (sesión en la nube)
 - 13 nov 2026 · Corrige la prueba de X como app pública · Agente: Claude Code (sesión en la nube)
 - 13 nov 2026 · X: token como app confidencial o pública · Agente: Claude Code (sesión en la nube)
-- 13 nov 2026 · Bitácora de conexiones con X y LinkedIn · Agente: Claude Code (sesión en la nube)
 
 ## Pendiente más reciente
 
-que la tarea semanal analice la inspiración y proponga espacios (se actualiza su encargo); subir imágenes y video por API.
+respuestas de Emi a las preguntas de Editor Studio.

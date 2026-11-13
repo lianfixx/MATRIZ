@@ -59,8 +59,8 @@ La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, 
 
 Skills: `matriz-redes`
 
-Último registro: 13 nov 2026 · Panel 0.2: Hoy tipo CRM, piezas en vivo con notas y pausa, hora sugerida, ideas por espacio e inspiración · Agente: Claude Code (sesión en la nube)
-Pendiente: que la tarea semanal analice la inspiración y proponga espacios (se actualiza su encargo); subir imágenes y video por API.
+Último registro: 13 nov 2026 · Recursos: cómo grabar (de Editor Studio) · Agente: Claude Code (sesión en la nube)
+Pendiente: respuestas de Emi a las preguntas de Editor Studio.
 
 ### Instagram (público)
 
