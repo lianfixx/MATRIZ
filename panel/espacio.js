@@ -129,7 +129,9 @@ export async function crearEspacio(lienzo, capaEtiquetas, D, { alElegir, reducid
     desp = Math.abs(meta - nuevo) < 0.25 ? meta : nuevo;
     camara.setViewOffset(w, h, desp, 0, w, h);
   }
-  addEventListener("resize", tamano);
+  const corte = new AbortController(), sig = { signal: corte.signal };
+  let vivo = true;
+  addEventListener("resize", tamano, sig);
   // Cuando cargan las fuentes cambian los anchos de las etiquetas: se vuelven a medir.
   document.fonts?.ready.then(() => capaEtiquetas.querySelectorAll(".etq").forEach((e) => { e._a = 0; }));
   tamano();
@@ -141,7 +143,7 @@ export async function crearEspacio(lienzo, capaEtiquetas, D, { alElegir, reducid
     const hit = ray.intersectObjects(nodos.map((n) => n.malla))[0];
     return hit ? hit.object.userData.cerebro : null;
   }
-  lienzo.addEventListener("pointerdown", (e) => { arrastre = { x: e.clientX, y: e.clientY, yaw: vista.yawO, pitch: vista.pitchO, movio: false }; lienzo.setPointerCapture(e.pointerId); });
+  lienzo.addEventListener("pointerdown", (e) => { arrastre = { x: e.clientX, y: e.clientY, yaw: vista.yawO, pitch: vista.pitchO, movio: false }; lienzo.setPointerCapture(e.pointerId); }, sig);
   lienzo.addEventListener("pointermove", (e) => {
     if (arrastre) {
       const dx = e.clientX - arrastre.x, dy = e.clientY - arrastre.y;
@@ -152,15 +154,15 @@ export async function crearEspacio(lienzo, capaEtiquetas, D, { alElegir, reducid
     } else if (e.pointerType === "mouse") {
       lienzo.style.cursor = elegir(e) ? "pointer" : "grab";
     }
-  });
+  }, sig);
   lienzo.addEventListener("pointerup", (e) => {
     if (arrastre && !arrastre.movio) {
       const id = elegir(e);
       if (id) { enfocar(id); alElegir(id); } else if (foco) { enfocar(null); alElegir(null); }
     }
     arrastre = null;
-  });
-  lienzo.addEventListener("wheel", (e) => { e.preventDefault(); vista.distO = Math.max(9, Math.min(40, vista.distO * (1 + e.deltaY * 0.001))); inactivo = 0; }, { passive: false });
+  }, sig);
+  lienzo.addEventListener("wheel", (e) => { e.preventDefault(); vista.distO = Math.max(9, Math.min(40, vista.distO * (1 + e.deltaY * 0.001))); inactivo = 0; }, { passive: false, ...sig });
 
   function enfocar(id) {
     foco = nodos.find((n) => n.c.id === id) || null;
@@ -178,10 +180,11 @@ export async function crearEspacio(lienzo, capaEtiquetas, D, { alElegir, reducid
   const reloj = new THREE.Clock();
   const v = new THREE.Vector3(), m3 = new THREE.Vector3();
   let visible = true;
-  document.addEventListener("visibilitychange", () => { visible = !document.hidden; if (visible) reloj.getDelta(); });
+  document.addEventListener("visibilitychange", () => { visible = !document.hidden; if (visible) reloj.getDelta(); }, sig);
   const suave = (a, b, k) => a + (b - a) * k;
 
   function cuadro() {
+    if (!vivo) return;
     requestAnimationFrame(cuadro);
     if (!visible) return;
     const dt = Math.min(reloj.getDelta(), 0.05), t = reloj.elapsedTime;
@@ -256,5 +259,12 @@ export async function crearEspacio(lienzo, capaEtiquetas, D, { alElegir, reducid
     });
   }
   cuadro();
-  return { enfocar };
+  // Para datos nuevos con otra estructura: suelta todo y deja el lienzo listo para crear otro espacio.
+  function destruir() {
+    vivo = false; corte.abort();
+    capaEtiquetas.replaceChildren();
+    escena.traverse((o) => { o.geometry?.dispose?.(); (Array.isArray(o.material) ? o.material : [o.material]).forEach((m) => { m?.map?.dispose?.(); m?.dispose?.(); }); });
+    renderer.dispose();
+  }
+  return { enfocar, destruir };
 }

@@ -145,6 +145,23 @@ ok(bloqueado, "límite de intentos de contraseña (contador local)");
 { const [s3] = await mcp(Array.from({ length: 11 }, (_, i) => ({ jsonrpc: "2.0", id: i, method: "ping" }))); ok(s3 === 400, "lote de más de 10 rechazado"); }
 { const r = await mod.default.fetch(new Request("https://matriz.test/mcp", { method: "POST", headers: { "Content-Type": "application/json", Origin: "https://malo.example" }, body: JSON.stringify({ jsonrpc: "2.0", id: 1, method: "ping" }) }), envLectura); ok(r.status === 403, "MCP rechaza otro origen"); }
 { const r = await mod.default.fetch(new Request("https://matriz.test/mcp", { method: "POST", headers: { "Content-Type": "application/json", "MCP-Protocol-Version": "1999-01-01" }, body: JSON.stringify({ jsonrpc: "2.0", id: 1, method: "ping" }) }), envLectura); ok(r.status === 400, "MCP rechaza versión desconocida"); }
+// Avisos de GitHub (/gancho): firma, eventos y disparo
+{
+  const enc = new TextEncoder();
+  const firmar = async (secreto, txt) => { const k = await crypto.subtle.importKey("raw", enc.encode(secreto), { name: "HMAC", hash: "SHA-256" }, false, ["sign"]); return "sha256=" + [...new Uint8Array(await crypto.subtle.sign("HMAC", k, enc.encode(txt)))].map((b) => b.toString(16).padStart(2, "0")).join(""); };
+  const envG = { ...env, GANCHO_SECRETO: "secreto-de-prueba" };
+  let disparos = 0; const fetchViejo = globalThis.fetch;
+  globalThis.fetch = async (u, o) => (String(u).endsWith("/dispatches") ? (disparos++, new Response(null, { status: 204 })) : fetchViejo(u, o));
+  const avisar = async (evento, carga, secreto = "secreto-de-prueba") => { const txt = JSON.stringify(carga); return (await mod.default.fetch(new Request("https://matriz.test/gancho", { method: "POST", headers: { "Content-Type": "application/json", "X-GitHub-Event": evento, "X-Hub-Signature-256": await firmar(secreto, txt) }, body: txt }), envG)).status; };
+  const push = { ref: "refs/heads/main", repository: { full_name: "lianfixx/INDEP", default_branch: "main" } };
+  ok((await avisar("push", push)) === 202 && disparos === 1, "aviso firmado dispara la actualización");
+  ok((await avisar("push", push, "otra-clave")) === 401 && disparos === 1, "firma falsa no dispara nada");
+  ok((await avisar("ping", {})) === 200, "ping de GitHub");
+  ok((await avisar("push", { ...push, ref: "refs/heads/rama" })) === 200 && disparos === 1, "otra rama no dispara");
+  ok((await avisar("push", { ...push, repository: { full_name: "lianfixx/MATRIZ", default_branch: "main" } })) === 200 && disparos === 1, "MATRIZ no se dispara a sí misma");
+  ok((await mod.default.fetch(new Request("https://matriz.test/gancho", { method: "POST", body: "{}" }), env)).status === 503, "sin secreto, avisos apagados");
+  globalThis.fetch = fetchViejo;
+}
 const sinConf = await mod.default.fetch(new Request("https://matriz.test/api/entrar", { method: "POST", headers: { "Content-Type": "application/json" }, body: "{}" }), { ASSETS });
 ok(sinConf.status === 503, "sin secretos la edición está apagada");
 

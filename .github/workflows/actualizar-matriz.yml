@@ -1,15 +1,16 @@
 name: Actualizar la Matriz
 
 # Regenera el índice (MATRIZ_GENERAL.md, MATRIZ.md, matriz.json, cerebros/, repos/, contexto/,
-# bitacora/) leyendo cada repositorio. Corre cada día, a mano y después de cada edición desde el
-# panel (tablero/, proyectos/). No escribe en ningún otro repositorio.
+# bitacora/) leyendo cada repositorio. Corre en cuanto un repositorio de Emi cambia (aviso de GitHub),
+# cada 15 minutos por si un aviso se pierde, a mano y después de cada edición desde el panel.
+# Solo guarda (y el panel solo se publica) si algo cambió. No escribe en ningún otro repositorio.
 # MATRIZ_RESERVADOS (opcional): nombres de clientes que nunca se publican, separados por coma.
 # Para leer los privados necesita el secreto MATRIZ_TOKEN: un token de GitHub de grano fino,
 # de solo lectura («Contents: Read-only») sobre los repositorios de lianfixx. Sin él, la Matriz
 # se genera igual y marca los privados como «sin lectura».
 on:
   schedule:
-    - cron: "17 12 * * *" # 06:17, hora del centro de México
+    - cron: "7,22,37,52 * * * *" # cada 15 minutos (GitHub puede retrasarlo unos minutos)
   workflow_dispatch:
   push:
     branches: [main]
@@ -19,6 +20,10 @@ on:
   workflow_run:
     workflows: ["Integrar tareas programadas"]
     types: [completed]
+  # Aviso inmediato: cuando cualquier repositorio de Emi recibe un cambio, GitHub avisa al panel
+  # (/gancho) y el panel dispara esta actualización (repository_dispatch).
+  repository_dispatch:
+    types: [repo-actualizado]
 
 permissions:
   contents: write

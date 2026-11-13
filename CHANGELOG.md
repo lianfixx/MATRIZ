@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-11-13 · Matriz 1.2.0: casi en tiempo real
+
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: Emi, 13/11/2026: «¿Ya está actualizado de manera automática? ¿Igual la página y todo? ¿Y cada cuándo? ¿La página que se actualice en tiempo real, es posible?».
+- Cambios: (1) El panel revisa cada minuto, y al volver a la pestaña, si hay datos nuevos y los pinta sin recargar: tarjetas, hoja abierta y, si cambian los repositorios, el espacio 3D, que ahora se puede destruir y volver a crear sin fugas. Un punto «en vivo» late al llegar datos y no interrumpe si estás escribiendo. (2) «Actualizar la Matriz» corre cada 15 minutos en vez de una vez al día, y «Publicar panel» solo publica si la actualización guardó algo. (3) Nuevo `/gancho` en el Worker: recibe el aviso «push» de GitHub firmado con `GANCHO_SECRETO`, comprueba la firma en tiempo constante y dispara la actualización con `repository_dispatch` usando el token de escritura (que solo toca MATRIZ). Ignora otras ramas, los avisos de MATRIZ y los de firma falsa. El secreto se creó en la computadora virtual y se guardó por API, sin páginas ni códigos.
+- Archivos: `panel/app.js`, `panel/espacio.js`, `panel/index.html`, `panel/estilo.css`, `worker/index.js`, `worker/prueba.mjs`, `wrangler.jsonc`, `.github/workflows/actualizar-matriz.yml`, `.github/workflows/publicar-panel.yml`, `docs/PANEL.md` y este registro.
+- Verificación: `node worker/prueba.mjs` → aprobado (87; incluye firma válida y falsa, ping, otra rama y que MATRIZ no se dispara a sí misma). Navegador real (Chromium): con la hoja de Castorena abierta se cambió `matriz.json` en el servidor; en 64 s aparecieron el pendiente nuevo en «Hoy» y en la hoja, el repositorio nuevo en el 3D y el aviso «La Matriz se actualizó», sin errores.
+- Pendiente: dar de alta el aviso de GitHub en cada repositorio (siguiente paso, por API).
+
 ## 2026-11-12 · Matriz 1.1.2: decisiones de Emi sobre verificaciones
 
 - Agente: Claude Code (sesión en la nube)

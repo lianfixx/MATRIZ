@@ -15,6 +15,16 @@
 - **Buscar** (⌘K): repositorios, skills, pendientes y cerebros.
 - **«Copiar para una IA»:** copia la Matriz General completa para pegarla en cualquier chat.
 
+## En vivo
+
+La página se actualiza sola: cada minuto (y al volver a la pestaña) revisa si hay datos nuevos y los pinta sin recargar; el punto verde junto a la fecha late cuando llegan. Si estás escribiendo, espera a que termines. La Matriz se regenera:
+
+- **En cuanto cambia cualquiera de tus repositorios**: GitHub avisa al panel (`/gancho`, aviso firmado con `GANCHO_SECRETO`) y el panel pide la actualización. De un cambio a verlo en la página pasan unos 2 a 4 minutos.
+- **Cada 15 minutos**, por si un aviso se pierde (GitHub puede retrasar este horario unos minutos).
+- **Después de cada edición desde el panel.**
+
+Solo se guarda y se publica si algo cambió.
+
 ## Qué se edita (con contraseña)
 
 | Dónde | Qué | Archivo que cambia |

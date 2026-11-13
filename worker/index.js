@@ -4,7 +4,8 @@
 // 3. /api: edición del tablero (pendientes, notas, proyectos) protegida con la contraseña de Emi.
 //    Escribe en GitHub (lianfixx/MATRIZ); de ahí lo toman Obsidian, la Matriz y el conector.
 // Secretos del Worker: PANEL_CLAVE (contraseña), MATRIZ_ESCRITURA (token de GitHub con escritura solo
-// en MATRIZ) y MATRIZ_RESERVADOS (nombres de clientes que nunca se publican). Sin ellos, todo es solo lectura.
+// en MATRIZ), MATRIZ_RESERVADOS (nombres de clientes que nunca se publican) y GANCHO_SECRETO (firma de los
+// avisos de GitHub en /gancho). Sin ellos, todo es solo lectura.
 
 import PRIVACIDAD from "../tools/privacidad.json" with { type: "json" };
 
@@ -581,9 +582,39 @@ async function api(request, env, url) {
   return json({ error: "No encontrado." }, 404);
 }
 
+// ---------------------------------------------------------------- avisos de GitHub (tiempo real)
+// Cada repositorio de Emi avisa aquí cuando recibe un cambio (webhook «push», firmado con GANCHO_SECRETO).
+// El Worker comprueba la firma y pide a GitHub que regenere la Matriz (repository_dispatch con el token
+// de escritura, que solo puede tocar MATRIZ). No lee ni guarda el contenido del aviso.
+async function gancho(request, env) {
+  const H = { ...SEGURIDAD, "Content-Type": "application/json; charset=utf-8" };
+  const res = (obj, status = 200) => new Response(JSON.stringify(obj), { status, headers: H });
+  if (request.method !== "POST") return res({ error: "Solo POST." }, 405);
+  if (!env.GANCHO_SECRETO || !env.MATRIZ_ESCRITURA) return res({ error: "Avisos no configurados." }, 503);
+  const cuerpo = await request.text();
+  if (cuerpo.length > 5e6) return res({ error: "Demasiado grande." }, 413);
+  const firma = request.headers.get("X-Hub-Signature-256") || "";
+  if (!(await iguales(firma, "sha256=" + (await hmac(env.GANCHO_SECRETO, cuerpo))))) return res({ error: "Firma inválida." }, 401);
+  const evento = request.headers.get("X-GitHub-Event") || "";
+  if (evento === "ping") return res({ ok: true, evento: "ping" });
+  if (evento !== "push") return res({ ok: true, ignorado: evento });
+  let repo = "";
+  try { const j = JSON.parse(cuerpo); repo = j.repository?.full_name || ""; if (j.ref && j.repository?.default_branch && j.ref !== `refs/heads/${j.repository.default_branch}`) return res({ ok: true, ignorado: "otra rama" }); } catch { return res({ error: "JSON inválido." }, 400); }
+  if (repo === REPO) return res({ ok: true, ignorado: "MATRIZ se actualiza sola" });
+  const r = await fetch(`https://api.github.com/repos/${REPO}/dispatches`, {
+    method: "POST",
+    headers: { Authorization: `Bearer ${env.MATRIZ_ESCRITURA}`, Accept: "application/vnd.github+json", "User-Agent": "matriz-panel", "X-GitHub-Api-Version": "2022-11-28" },
+    body: JSON.stringify({ event_type: "repo-actualizado" }),
+  });
+  return res({ ok: r.status === 204, disparado: r.status === 204 }, r.status === 204 ? 202 : 502);
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    if (url.pathname === "/gancho") {
+      try { return await gancho(request, env); } catch (e) { return new Response(JSON.stringify({ error: "Error del servidor." }), { status: 500, headers: SEGURIDAD }); }
+    }
     if (url.pathname === "/mcp" || url.pathname === "/mcp/") return mcp(request, env);
     if (url.pathname.startsWith("/api/")) {
       try { return await api(request, env, url); } catch (e) {

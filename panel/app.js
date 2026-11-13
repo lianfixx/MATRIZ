@@ -358,9 +358,54 @@ window.addEventListener("hashchange", () => {
 
 // ---------------------------------------------------------------- arranque
 
+// ---------------------------------------------------------------- en vivo
+// Cada minuto (y al volver a la pestaña) revisa si hay datos nuevos y los pinta sin recargar la página.
+// No interrumpe: si estás escribiendo en un formulario, espera a que termines.
+const CADA = 60e3;
+async function revisar() {
+  if (document.hidden) return;
+  let texto;
+  try { texto = await (await fetch("matriz.json", { cache: "no-store" })).text(); } catch { pintarVivo(false); return; }
+  S.revisado = Date.now();
+  if (texto === S.texto) { pintarVivo(true); return; }
+  const activo = document.activeElement;
+  if (activo && activo.closest && activo.closest("form, dialog[open]") && /INPUT|TEXTAREA|SELECT/.test(activo.tagName)) { S.pendiente = true; return; }
+  let D;
+  try { D = JSON.parse(texto); } catch { return; }
+  const estructura = (x) => x.cerebros.map((c) => c.id + ":" + c.repos.map((r) => r.nombre).join(",")).join("|");
+  const cambioEstructura = estructura(D) !== estructura(S.D);
+  S.D = D; S.texto = texto; S.pendiente = false;
+  $("#fecha").textContent = `actualizada el ${f(S.D.actualizada).replace(/&amp;/g, "&")}`;
+  vistaHoy();
+  if (S.cerebro) { const c = S.D.cerebros.find((x) => x.id === S.cerebro.id); if (c) { S.cerebro = c; vistaCerebro(c); } }
+  if (cambioEstructura && S.espacio && S.espacio.destruir) { S.espacio.destruir(); S.espacio = null; await montarEspacio(); }
+  pintarVivo(true, true);
+}
+function pintarVivo(ok, nuevo = false) {
+  const e = $("#vivo");
+  if (!e) return;
+  e.classList.toggle("caido", !ok);
+  e.title = ok ? "En vivo: revisa cada minuto si hay cambios" : "Sin conexión: se reintenta cada minuto";
+  if (nuevo) { e.classList.remove("latido"); void e.offsetWidth; e.classList.add("latido"); avisar("La Matriz se actualizó."); }
+}
+document.addEventListener("visibilitychange", () => { if (!document.hidden && Date.now() - (S.revisado || 0) > 15e3) revisar(); });
+document.addEventListener("focusout", () => { if (S.pendiente) setTimeout(revisar, 500); });
+
+async function montarEspacio() {
+  try {
+    const { crearEspacio } = await import("./espacio.js");
+    S.espacio = await crearEspacio($("#espacio"), $("#etiquetas"), S.D, { alElegir: (cid) => (cid ? abrirCerebro(cid, true) : cerrarCerebro()), reducido });
+    if (S.cerebro) S.espacio.enfocar(S.cerebro.id);
+  } catch (err) {
+    console.warn("Sin espacio 3D:", err);
+  }
+}
+
 async function arrancar() {
   try {
-    S.D = await (await fetch("matriz.json", { cache: "no-store" })).json();
+    S.texto = await (await fetch("matriz.json", { cache: "no-store" })).text();
+    S.D = JSON.parse(S.texto);
+    S.revisado = Date.now();
   } catch {
     $("#hoy").innerHTML = `<section class="tarjeta"><h2>Sin conexión</h2><p class="vacio">No se pudo cargar la Matriz. Revisa tu conexión y recarga.</p></section>`;
     return;
@@ -371,12 +416,8 @@ async function arrancar() {
   const id = location.hash.slice(1);
   if (id && id !== "inicio") abrirCerebro(id);
   // El espacio 3D se carga después: lo esencial ya está en pantalla.
-  try {
-    const { crearEspacio } = await import("./espacio.js");
-    S.espacio = await crearEspacio($("#espacio"), $("#etiquetas"), S.D, { alElegir: (cid) => (cid ? abrirCerebro(cid, true) : cerrarCerebro()), reducido });
-    if (S.cerebro) S.espacio.enfocar(S.cerebro.id);
-  } catch (err) {
-    console.warn("Sin espacio 3D:", err);
-  }
+  await montarEspacio();
+  pintarVivo(true);
+  setInterval(revisar, CADA);
 }
 arrancar();

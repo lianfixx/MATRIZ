@@ -171,3 +171,9 @@ button.fila:hover .nombre { text-decoration: underline; text-decoration-color: v
   @keyframes subirHoja { from { transform: translateY(40px); opacity: 0; } to { transform: none; opacity: 1; } }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+
+/* En vivo: punto verde tenue que late cuando llegan datos nuevos; gris si no hay conexión */
+.vivo { width: 7px; height: 7px; border-radius: 50%; background: #3ecf8e; box-shadow: 0 0 0 0 rgba(62,207,142,.5); margin-left: 4px; flex: none; }
+.vivo.caido { background: var(--apagado, #666); }
+.vivo.latido { animation: latido 1.6s var(--curva, ease-out) 2; }
+@keyframes latido { 0% { box-shadow: 0 0 0 0 rgba(62,207,142,.55); } 100% { box-shadow: 0 0 0 10px rgba(62,207,142,0); } }
