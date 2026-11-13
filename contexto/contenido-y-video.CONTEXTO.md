@@ -87,8 +87,8 @@ Skill para planear, redactar, revisar, entregar para publicar y medir lo que Emi
 
 Skills: `linkedin-pro`
 
-Último registro: 13 nov 2026 · Primer post publicado: video del DOF (pagos digitales); Panel leído · Agente: Claude Code (sesión en la nube)
-Pendiente: métricas del post el 20/11/2026; enlaces del SJF sin verificar desde aquí (Incapsula), conviene que Emi los abra.
+Último registro: 13 nov 2026 · Estilo de láminas y tono aprobados por Emi · Agente: Claude Code (sesión en la nube)
+Pendiente: texto del post de las láminas, aprobación de Emi y fecha (semana 47).
 
 ## Tareas programadas
 
