@@ -59,7 +59,8 @@ La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, 
 
 Skills: `matriz-redes`
 
-Último registro: 13 nov 2026 · Corrige la prueba de X como app pública · Agente: Claude Code (sesión en la nube)
+Último registro: 13 nov 2026 · X conectado al panel · Agente: Claude Code (sesión en la nube)
+Pendiente: primera publicación real cuando Emi apruebe.
 
 ### Instagram (público)
 
