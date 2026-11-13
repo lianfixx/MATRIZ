@@ -105,7 +105,7 @@
           "url": "https://github.com/lianfixx/INDEP",
           "visibilidad": "privado",
           "leido": true,
-          "ultimo_cambio": "2026-11-12",
+          "ultimo_cambio": "2026-11-13",
           "resumen": "",
           "skills": [],
           "protocolo": "",
@@ -129,10 +129,10 @@
               87,
               154,
               72,
-              10
+              12
             ],
             "actores_60d": {
-              "Claude": 32,
+              "Claude": 34,
               "Emi": 376,
               "ChatGPT · Codex": 30
             }
@@ -1619,9 +1619,9 @@
           134,
           154,
           113,
-          25
+          27
         ],
-        "esta_semana": 25,
+        "esta_semana": 27,
         "semana_pasada": 113,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -1762,11 +1762,11 @@
       153,
       154,
       196,
-      102
+      104
     ],
     "actores_60d": {
       "Emi": 521,
-      "Claude": 212,
+      "Claude": 214,
       "ChatGPT · Codex": 39
     },
     "vencimientos": [
