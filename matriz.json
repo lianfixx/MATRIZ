@@ -1126,6 +1126,12 @@
           "registro": [
             {
               "fecha": "2026-11-13",
+              "titulo": "Primer post publicado: video del DOF (pagos digitales); Panel leído",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "métricas del post el 20/11/2026; enlaces del SJF sin verificar desde aquí (Incapsula), conviene que Emi los abra."
+            },
+            {
+              "fecha": "2026-11-13",
               "titulo": "Petición a Vox aplicada; muestra de láminas de la campaña",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "correcciones de Emi a la muestra; MP4 del video del DOF."
@@ -1165,12 +1171,6 @@
               "titulo": "Segunda pasada de la auditoría",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "los de la entrada «correcciones de la auditoría»."
-            },
-            {
-              "fecha": "2026-11-13",
-              "titulo": "Regla de Emi sobre la IA y post del video del DOF",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "que Emi elija el texto, lo publique y mande el enlace; láminas de la campaña."
             }
           ],
           "actividad": {
@@ -1192,10 +1192,10 @@
               0,
               0,
               0,
-              14
+              15
             ],
             "actores_60d": {
-              "Claude": 13,
+              "Claude": 14,
               "Emi": 1
             }
           }
@@ -2164,9 +2164,9 @@
           0,
           0,
           9,
-          103
+          104
         ],
-        "esta_semana": 103,
+        "esta_semana": 104,
         "semana_pasada": 9,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2269,11 +2269,11 @@
       153,
       154,
       196,
-      225
+      226
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 260,
+      "Claude": 261,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 6
     },

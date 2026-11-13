@@ -87,8 +87,8 @@ Skill para planear, redactar, revisar, entregar para publicar y medir lo que Emi
 
 Skills: `linkedin-pro`
 
-Último registro: 13 nov 2026 · Petición a Vox aplicada; muestra de láminas de la campaña · Agente: Claude Code (sesión en la nube)
-Pendiente: correcciones de Emi a la muestra; MP4 del video del DOF.
+Último registro: 13 nov 2026 · Primer post publicado: video del DOF (pagos digitales); Panel leído · Agente: Claude Code (sesión en la nube)
+Pendiente: métricas del post el 20/11/2026; enlaces del SJF sin verificar desde aquí (Incapsula), conviene que Emi los abra.
 
 ## Tareas programadas
 
