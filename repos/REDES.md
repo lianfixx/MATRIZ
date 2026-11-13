@@ -4,7 +4,7 @@ cerebro: "Contenido y video"
 visibilidad: "público"
 ultimo_cambio: 2026-11-13
 skills: 1
-commits_8_semanas: 28
+commits_8_semanas: 29
 ultimo_agente: "Claude Code (sesión en la nube)"
 pendiente: "Emi reconecta X (permiso de archivos), crea la llave de Claude automático y la pega en el formulario seguro; conectar LinkedIn."
 github: "https://github.com/lianfixx/REDES"
