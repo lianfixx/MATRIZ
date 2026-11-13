@@ -1,4 +1,4 @@
-# Matriz General de Emi · 12 nov 2026
+# Matriz General de Emi · 13 nov 2026
 
 Este es el archivo único de la Matriz General: el mapa de todo el trabajo de Emi. Si te lo adjuntaron, con esto basta para entender quién es, dónde trabaja, qué hay en cada cerebro, qué se hizo último, qué está pendiente y cómo continuar. Todo nace y se registra desde aquí.
 
@@ -52,19 +52,19 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 
 | Cerebro | Repos | Commits esta semana | Semana pasada | Días sin movimiento | Pendientes | Vencidos |
 |---|---|---|---|---|---|---|
-| Castorena | 4 | 24 | 113 | 0 | 0 | 0 |
-| MILLA ABOGADOS | 5 | 0 | 31 | 8 | 0 | 0 |
-| Acción Tlalnepantla | 1 | 0 | 9 | 8 | 0 | 0 |
-| Contenido y video | 3 | 43 | 9 | 1 | 0 | 0 |
-| Estudio | 2 | 0 | 24 | 5 | 0 | 0 |
-| Productos | 2 | 0 | 5 | 8 | 0 | 0 |
-| Herramientas | 5 | 28 | 5 | 0 | 0 | 0 |
+| Castorena | 4 | 25 | 113 | 0 | 0 | 0 |
+| MILLA ABOGADOS | 5 | 0 | 31 | 9 | 0 | 0 |
+| Acción Tlalnepantla | 1 | 0 | 9 | 9 | 0 | 0 |
+| Contenido y video | 3 | 48 | 9 | 0 | 0 | 0 |
+| Estudio | 2 | 0 | 24 | 6 | 0 | 0 |
+| Productos | 2 | 0 | 5 | 9 | 0 | 0 |
+| Herramientas | 5 | 29 | 5 | 1 | 0 | 0 |
 
-Quién trabajó en los últimos 60 días (commits): Emi 521, Claude 205, ChatGPT · Codex 39.
+Quién trabajó en los últimos 60 días (commits): Emi 521, Claude 212, ChatGPT · Codex 39.
 
 Vencimientos: Renovación de la conexión Claude–box el 7 dic 2026; Token de GitHub «MATRIZ lectura» el 9 feb 2027; Token de GitHub «MATRIZ escritura» (edición desde el panel) el 12 nov 2027; Llave de GitHub «Matriz administración (Claude)» el 12 nov 2027; Llave de Cloudflare «Matriz administración (Claude)» el 12 nov 2027.
 
-Avisos: falló «DOF Castorena · lector nocturno» (falló: se alcanzó el límite de uso); repositorio nuevo sin cerebro: emilianomilla-site; repositorio nuevo sin cerebro: sistemas-digitales; repositorio nuevo sin cerebro: vicente-diablo.
+Avisos: falló «DOF Castorena · lector nocturno» (falló: se alcanzó el límite de uso); repositorio nuevo sin cerebro: emilianomilla-site; repositorio nuevo sin cerebro: Instagram; repositorio nuevo sin cerebro: LinkedIn; repositorio nuevo sin cerebro: REDES; repositorio nuevo sin cerebro: sistemas-digitales; repositorio nuevo sin cerebro: TikTok; repositorio nuevo sin cerebro: vicente-diablo.
 
 ## Cerebro: Castorena
 
@@ -72,9 +72,9 @@ Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP,
 
 ### Repositorios
 
-- **Cerebro-Castorena-** (público) · https://github.com/lianfixx/Cerebro-Castorena- · último cambio 12 nov 2026 · skills: matriz-castorena
+- **Cerebro-Castorena-** (público) · https://github.com/lianfixx/Cerebro-Castorena- · último cambio 13 nov 2026 · skills: matriz-castorena
   - Matriz documental de Emi para Castorena Abogados. Aquí están las cinco tablas de referencia, las versiones recuperadas, las reglas de trabajo y los pendientes.
-  - Último: 11 nov 2026 · Cierre diario programado (sin cambios de tablas) · Claude Code (ejecución programada)
+  - Último: 12 nov 2026 · Cierre diario programado (sin cambios de tablas) · Claude Code (ejecución programada)
   - Pendiente: subir v22 a Drive, Escritorio e iCloud; ACTUAL.json de INDEP sigue en la entrega 18.
 - **INDEP** (privado) · https://github.com/lianfixx/INDEP · último cambio 12 nov 2026
 - **Escritos-juridicos-CASTORENA** (público) · https://github.com/lianfixx/Escritos-juridicos-CASTORENA · último cambio 4 nov 2026 · skills: escritos-juridicos-castorena
@@ -145,10 +145,10 @@ Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio,
   - Un método portable para producir videos de MILLA ABOGADOS: investigación, guion, conexiones, voz, imágenes, música, montaje y revisión. Incluye una skill, instrucciones para otras IAs, utilidades y un compositor nuevo.
   - Último: 11 nov 2026 · GitHub corre las pruebas de todas las skills en cada push · Claude Code (sesión en la nube)
   - Pendiente: mirar que el trabajo `pruebas` salga en verde en el pull request.
-- **X** (público) · https://github.com/lianfixx/X · último cambio 11 nov 2026 · skills: x-viral
-  - Skill para planear, redactar, revisar, entregar para publicar y medir las publicaciones de @emilianomilla en X, apoyada en el código público del algoritmo de X (xai-org/x-algorithm).
-  - Último: 11 nov 2026 · Skill 1.0.3 instalada en Claude · Claude Code (sesión en la nube)
-  - Pendiente: cierra el punto (b) de la entrada 1.0.3. Siguen (a) y (c).
+- **X** (público) · https://github.com/lianfixx/X · último cambio 13 nov 2026 · skills: x-viral
+  - Skill para planear, redactar, revisar, publicar con aprobación (API oficial de X) y medir las publicaciones de @emilianomilla en X, apoyada en el código público del algoritmo de X (xai-org/x-algorithm).
+  - Último: 13 nov 2026 · Regla: nunca decir que lo hizo una IA · Claude Code (sesión en la nube)
+  - Pendiente: ninguno nuevo.
 - **HISTORIAS-** (público) · https://github.com/lianfixx/HISTORIAS- · último cambio 11 nov 2026 · skills: historias-studio
   - Método, motor y memoria para hacer las historias de Instagram de Emi con cualquier IA: la IA pregunta, propone y dibuja; Emi decide.
   - Último: 11 nov 2026 · 0.3.0 · candidato · agente no consta
@@ -203,7 +203,7 @@ Piezas que sirven a todos los cerebros: estilo de Emi, selector de modelo, entor
 
 ### Repositorios
 
-- **estilo-emi** (privado) · https://github.com/lianfixx/estilo-emi · último cambio 9 nov 2026
+- **estilo-emi** (privado) · https://github.com/lianfixx/estilo-emi · último cambio 12 nov 2026
 - **selector-modelos** (privado) · https://github.com/lianfixx/selector-modelos · último cambio 9 nov 2026
 - **cloudfare** (público) · https://github.com/lianfixx/cloudfare · último cambio 12 nov 2026
   - Entorno para que Claude Code, Codex y Muse trabajen con Cloudflare a través del CLI oficial cf. Solo la conexión, las reglas y el registro; no incluye proyectos.

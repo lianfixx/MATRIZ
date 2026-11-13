@@ -15,7 +15,7 @@ Parte de la [[MATRIZ]].
 
 ## Repositorios
 
-- [[estilo-emi|estilo-emi]] · privado · 9 nov 2026
+- [[estilo-emi|estilo-emi]] · privado · 12 nov 2026
 - [[selector-modelos|selector-modelos]] · privado · 9 nov 2026
 - [[cloudfare|cloudfare]] · público · 12 nov 2026
 - [[box-simular|box-simular]] · privado · 11 nov 2026

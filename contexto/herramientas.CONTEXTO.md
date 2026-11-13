@@ -21,7 +21,7 @@ Soy Emi (Yohualli Emiliano García Milla). Este es el cerebro «Herramientas» d
 
 ### estilo-emi (privado)
 
-https://github.com/lianfixx/estilo-emi · último cambio: 9 nov 2026
+https://github.com/lianfixx/estilo-emi · último cambio: 12 nov 2026
 
 Privado: pide acceso a Emi o usa un conector de GitHub con su sesión.
 

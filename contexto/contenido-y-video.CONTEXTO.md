@@ -32,14 +32,14 @@ Pendiente: mirar que el trabajo `pruebas` salga en verde en el pull request.
 
 ### X (público)
 
-https://github.com/lianfixx/X · último cambio: 11 nov 2026
+https://github.com/lianfixx/X · último cambio: 13 nov 2026
 
-Skill para planear, redactar, revisar, entregar para publicar y medir las publicaciones de @emilianomilla en X, apoyada en el código público del algoritmo de X (xai-org/x-algorithm).
+Skill para planear, redactar, revisar, publicar con aprobación (API oficial de X) y medir las publicaciones de @emilianomilla en X, apoyada en el código público del algoritmo de X (xai-org/x-algorithm).
 
 Skills: `x-viral`
 
-Último registro: 11 nov 2026 · Skill 1.0.3 instalada en Claude · Agente: Claude Code (sesión en la nube)
-Pendiente: cierra el punto (b) de la entrada 1.0.3. Siguen (a) y (c).
+Último registro: 13 nov 2026 · Regla: nunca decir que lo hizo una IA · Agente: Claude Code (sesión en la nube)
+Pendiente: ninguno nuevo.
 
 ### HISTORIAS- (público)
 

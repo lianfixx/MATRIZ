@@ -1,5 +1,5 @@
 {
-  "actualizada": "2026-11-12",
+  "actualizada": "2026-11-13",
   "propietario": "lianfixx",
   "panel": "https://matriz.milla-abogados.workers.dev",
   "cerebros": [
@@ -13,7 +13,7 @@
           "url": "https://github.com/lianfixx/Cerebro-Castorena-",
           "visibilidad": "público",
           "leido": true,
-          "ultimo_cambio": "2026-11-12",
+          "ultimo_cambio": "2026-11-13",
           "resumen": "Matriz documental de Emi para Castorena Abogados. Aquí están las cinco tablas de referencia, las versiones recuperadas, las reglas de trabajo y los pendientes.",
           "skills": [
             {
@@ -23,6 +23,12 @@
           ],
           "protocolo": "1.1.0",
           "registro": [
+            {
+              "fecha": "2026-11-12",
+              "titulo": "Cierre diario programado (sin cambios de tablas)",
+              "agente": "Claude Code (ejecución programada)",
+              "pendiente": "subir v22 a Drive, Escritorio e iCloud; ACTUAL.json de INDEP sigue en la entrega 18."
+            },
             {
               "fecha": "2026-11-11",
               "titulo": "Cierre diario programado (sin cambios de tablas)",
@@ -64,12 +70,6 @@
               "titulo": "séptima familia (Cotejo acuses INDEP) y decisión de permisos de Drive",
               "agente": "Claude Code (claude-opus-5-5, sesión con Emi y Mac enlazada)",
               "pendiente": "subir «Cotejo acuses INDEP.xlsx» a Drive (Muse); respuesta de Emi sobre el [expediente]."
-            },
-            {
-              "fecha": "2026-11-09",
-              "titulo": "Drive sincronizado y verificado",
-              "agente": "Claude Code (claude-opus-5-5, sesión con Emi y Mac enlazada)",
-              "pendiente": "decisión de Emi sobre el acceso por enlace; Cotejo acuses INDEP; diferencia 50/51 de [cliente]."
             }
           ],
           "actividad": {
@@ -91,10 +91,10 @@
               0,
               0,
               15,
-              11
+              12
             ],
             "actores_60d": {
-              "Claude": 19,
+              "Claude": 20,
               "Emi": 6,
               "ChatGPT · Codex": 1
             }
@@ -775,8 +775,8 @@
           "url": "https://github.com/lianfixx/X",
           "visibilidad": "público",
           "leido": true,
-          "ultimo_cambio": "2026-11-11",
-          "resumen": "Skill para planear, redactar, revisar, entregar para publicar y medir las publicaciones de @emilianomilla en X, apoyada en el código público del algoritmo de X (xai-org/x-algorithm).",
+          "ultimo_cambio": "2026-11-13",
+          "resumen": "Skill para planear, redactar, revisar, publicar con aprobación (API oficial de X) y medir las publicaciones de @emilianomilla en X, apoyada en el código público del algoritmo de X (xai-org/x-algorithm).",
           "skills": [
             {
               "nombre": "x-viral",
@@ -785,6 +785,36 @@
           ],
           "protocolo": "1.1.0",
           "registro": [
+            {
+              "fecha": "2026-11-13",
+              "titulo": "Regla: nunca decir que lo hizo una IA",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "ninguno nuevo."
+            },
+            {
+              "fecha": "2026-11-13",
+              "titulo": "x-viral 1.1.0: publicación por la API oficial, perfil y administración",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "Emi crea la app y fija el tope de gasto; la Matriz de Redes construye el panel con la publicación; primera publicación de prueba con Emi mirando; reinstalar la skill 1.1.0 en Claude."
+            },
+            {
+              "fecha": "2026-11-13",
+              "titulo": "Coordinación con la Matriz de Redes y campaña de lanzamiento",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "respuestas de Emi por medio de la Matriz; borrador del lanzamiento."
+            },
+            {
+              "fecha": "2026-11-13",
+              "titulo": "Perfil público propuesto y Matriz de Redes",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "Emi elige biografía y la cambia; crear `lianfixx/REDES` junto con los otros tres repositorios."
+            },
+            {
+              "fecha": "2026-11-13",
+              "titulo": "Skills hermanas para LinkedIn, TikTok e Instagram",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "crear los tres repositorios vacíos."
+            },
             {
               "fecha": "2026-11-11",
               "titulo": "Skill 1.0.3 instalada en Claude",
@@ -802,24 +832,6 @@
               "titulo": "Candidatas de conversación, encargo para Muse y fecha de arranque",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "los de la entrada anterior; correr el encargo de Muse; con sesión de X en box, leer los 24 posts existentes y revisarlos con Emi antes de quitar la protección."
-            },
-            {
-              "fecha": "2026-11-10",
-              "titulo": "x-viral 1.0.2: estado real de la cuenta, ejemplo de semana y rama main",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "(a) Emi: revisar sus 24 posts, quitar la protección cuando decida y poner `\"protegida\": false`; elegir las primeras cuentas de `cuenta/mutuals.md`; decidir Premium; dar material y postura para la primera semana. (b) Poner `main` como rama por defecto en GitHub (Settings → General → Default branch): hasta entonces la vigilancia semanal de GitHub corre desde la rama `claude/zealous-brown-7imdnq`. (c) Iniciar sesión de X en box para poder programar. (d) Aplicar `puente/PETICION-vox.md` en Vox Studio. (e) Decidir si se instalan aquí los frenos automáticos de otros repositorios."
-            },
-            {
-              "fecha": "2026-11-10",
-              "titulo": "x-viral 1.0.1: correcciones de la revisión independiente",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "los de la entrada anterior. Además, hallazgo de la revisión que decide Emi: el repositorio es público y sus reglas mencionan su relación con dos despachos y con Acción Juvenil; si prefiere no exponerlo, volver privado el repositorio."
-            },
-            {
-              "fecha": "2026-11-10",
-              "titulo": "x-viral 1.0.0: skill de X a partir del video de Santi, auditada contra el código vigente",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "(a) Emi: primeras correcciones de voz, cuentas iniciales de `cuenta/mutuals.md`, fecha de creación de la cuenta y si contrata Premium. (b) Programar en X no se ha ejecutado contra la cuenta real. (c) Aplicar `puente/PETICION-vox.md` en el repositorio de Vox Studio. (d) Decidir si se instalan aquí los frenos automáticos de otros repositorios (`guard.py`, hooks). (e) El repositorio es público: decidir si se vuelve privado para sincronizar borradores."
             }
           ],
           "actividad": {
@@ -841,10 +853,10 @@
               0,
               0,
               0,
-              6
+              11
             ],
             "actores_60d": {
-              "Claude": 6
+              "Claude": 11
             }
           }
         },
@@ -1137,7 +1149,7 @@
           "url": "https://github.com/lianfixx/estilo-emi",
           "visibilidad": "privado",
           "leido": true,
-          "ultimo_cambio": "2026-11-09",
+          "ultimo_cambio": "2026-11-12",
           "resumen": "",
           "skills": [],
           "protocolo": "",
@@ -1161,10 +1173,10 @@
               0,
               0,
               5,
-              2
+              3
             ],
             "actores_60d": {
-              "Claude": 2,
+              "Claude": 3,
               "Emi": 5
             }
           }
@@ -1565,9 +1577,29 @@
       "creado": "2026-11-12"
     },
     {
+      "nombre": "Instagram",
+      "visibilidad": "público",
+      "creado": "2026-11-13"
+    },
+    {
+      "nombre": "LinkedIn",
+      "visibilidad": "público",
+      "creado": "2026-11-13"
+    },
+    {
+      "nombre": "REDES",
+      "visibilidad": "público",
+      "creado": "2026-11-13"
+    },
+    {
       "nombre": "sistemas-digitales",
       "visibilidad": "público",
       "creado": "2026-11-12"
+    },
+    {
+      "nombre": "TikTok",
+      "visibilidad": "público",
+      "creado": "2026-11-13"
     },
     {
       "nombre": "vicente-diablo",
@@ -1587,9 +1619,9 @@
           134,
           154,
           113,
-          24
+          25
         ],
-        "esta_semana": 24,
+        "esta_semana": 25,
         "semana_pasada": 113,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -1610,7 +1642,7 @@
         ],
         "esta_semana": 0,
         "semana_pasada": 31,
-        "dias_sin_movimiento": 8,
+        "dias_sin_movimiento": 9,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
         "pendientes_de_repos": 0,
@@ -1629,7 +1661,7 @@
         ],
         "esta_semana": 0,
         "semana_pasada": 9,
-        "dias_sin_movimiento": 8,
+        "dias_sin_movimiento": 9,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
         "pendientes_de_repos": 0,
@@ -1644,11 +1676,11 @@
           0,
           0,
           9,
-          43
+          48
         ],
-        "esta_semana": 43,
+        "esta_semana": 48,
         "semana_pasada": 9,
-        "dias_sin_movimiento": 1,
+        "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
         "pendientes_de_repos": 2,
@@ -1667,7 +1699,7 @@
         ],
         "esta_semana": 0,
         "semana_pasada": 24,
-        "dias_sin_movimiento": 5,
+        "dias_sin_movimiento": 6,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
         "pendientes_de_repos": 0,
@@ -1686,7 +1718,7 @@
         ],
         "esta_semana": 0,
         "semana_pasada": 5,
-        "dias_sin_movimiento": 8,
+        "dias_sin_movimiento": 9,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
         "pendientes_de_repos": 0,
@@ -1701,11 +1733,11 @@
           0,
           0,
           5,
-          28
+          29
         ],
-        "esta_semana": 28,
+        "esta_semana": 29,
         "semana_pasada": 5,
-        "dias_sin_movimiento": 0,
+        "dias_sin_movimiento": 1,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
         "pendientes_de_repos": 0,
@@ -1730,11 +1762,11 @@
       153,
       154,
       196,
-      95
+      102
     ],
     "actores_60d": {
       "Emi": 521,
-      "Claude": 205,
+      "Claude": 212,
       "ChatGPT · Codex": 39
     },
     "vencimientos": [
@@ -1742,31 +1774,31 @@
         "nombre": "Renovación de la conexión Claude–box",
         "fecha": "2026-12-07",
         "nota": "Intento automático mensual; si Google pide verificación, Emi la aprueba en el iPhone.",
-        "dias": 25
+        "dias": 24
       },
       {
         "nombre": "Token de GitHub «MATRIZ lectura»",
         "fecha": "2027-02-09",
         "nota": "Regenerarlo y guardarlo en el secreto MATRIZ_TOKEN.",
-        "dias": 89
+        "dias": 88
       },
       {
         "nombre": "Token de GitHub «MATRIZ escritura» (edición desde el panel)",
         "fecha": "2027-11-12",
         "nota": "Solo lianfixx/MATRIZ, Contents lectura y escritura. Regenerarlo y guardarlo en el secreto MATRIZ_ESCRITURA; si vence, el panel se ve pero no edita.",
-        "dias": 365
+        "dias": 364
       },
       {
         "nombre": "Llave de GitHub «Matriz administración (Claude)»",
         "fecha": "2027-11-12",
         "nota": "En la computadora virtual (~/.config/matriz/github-admin). Secretos, variables y workflows de los repositorios de Emi; no lee código. Regenerarla en GitHub con los mismos permisos.",
-        "dias": 365
+        "dias": 364
       },
       {
         "nombre": "Llave de Cloudflare «Matriz administración (Claude)»",
         "fecha": "2027-11-12",
         "nota": "En la computadora virtual (~/.config/matriz/cloudflare-admin). Solo «Tokens de API: Editar». Regenerarla con la plantilla «Crear tokens adicionales».",
-        "dias": 365
+        "dias": 364
       }
     ]
   }
