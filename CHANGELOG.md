@@ -1,5 +1,15 @@
 # Cambios
 
+## 2026-11-13 · Matriz 1.4.1: el DOF ya no aparece como falla
+
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: Emi, 13/11/2026: «lo del DOF ya se arregló, confirma y arregla porque aparecía aún».
+- Confirmación: en las tareas de Claude, la última corrida programada de «DOF Castorena · lector nocturno» (miércoles 11/11) y la de «cierre jueves» (12/11) fallaron por límite de uso; el paquete se recuperó a mano y el correo «Actualización DOF | 11 y 12 de noviembre de 2026» llegó a Emi el 12/11. El aviso seguía porque `inventario.json` solo se actualizaba en la revisión del domingo.
+- Cambios: las dos tareas quedan como «recuperada a mano» con su fecha real. Nuevo estado «recuperada»: no cuenta como falla, no aparece en «Necesita tu atención» ni pone el cerebro en «Revisar»; en la hoja del cerebro se ve con su motivo. La revisión semanal lo usa cuando el trabajo de una corrida fallida ya se hizo.
+- Archivos: `inventario.json`, `panel/app.js`, `docs/PANEL.md`, `docs/REVISION_SEMANAL.md` y este registro.
+- Verificación: `python3 -m unittest discover -s tools -p 'test_*.py'` → aprobado; `node --check panel/app.js` → aprobado; al generar, Castorena queda con `tareas_falladas: 0`.
+- Pendiente: la próxima corrida del lector nocturno es el lunes 17/11 a las 21:41; si el límite de uso se repite, conviene revisar el modelo o el horario de las tareas DOF (decisión de Emi).
+
 ## 2026-11-13 · Matriz 1.4.0: panel más claro y reloj de respaldo
 
 - Agente: Claude Code (sesión en la nube)

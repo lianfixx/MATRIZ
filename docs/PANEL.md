@@ -9,7 +9,7 @@
   - Así funciona: guía breve la primera vez; se cierra con «Entendido» y vuelve con el botón «?».
   - Necesita tu atención: pendientes vencidos, tareas que fallaron, llaves por vencer y proyectos sin cerebro.
   - Tus pendientes, del más urgente al menos.
-  - Tus cerebros: cada uno con su estado en palabras (Activo: cambios en los últimos 7 días; Tranquilo: 8 a 21; Quieto: más de 21; Revisar: algo vencido o falló), cuándo fue su último cambio, cuántos cambios lleva la semana y sus pendientes. Al tocarlo se abre.
+  - Tus cerebros: cada uno con su estado en palabras (Activo: cambios en los últimos 7 días; Tranquilo: 8 a 21; Quieto: más de 21; Revisar: algo vencido o una tarea que falló y nadie ha recuperado; una corrida que falló pero se hizo a mano queda como «recuperada» y no alarma), cuándo fue su último cambio, cuántos cambios lleva la semana y sus pendientes. Al tocarlo se abre.
   - Esta semana: cuántos cambios se guardaron en todos tus proyectos y la curva de 8 semanas. Un «cambio» es cada vez que tú o una IA guarda trabajo en un proyecto.
   - Quién hizo los cambios en los últimos 60 días, y «Llevar la Matriz a otra IA».
 - **Hoja de cada cerebro:** commits de la semana, días sin movimiento, pendientes, notas, repositorios con su actividad, tareas programadas y skills, y «Copiar contexto».

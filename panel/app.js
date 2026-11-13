@@ -202,7 +202,7 @@ function vistaCerebro(c) {
     </div>`; }).join("")}</div>
   </section>
 
-  ${ts.length ? `<section><h3>Tareas programadas</h3><div class="filas">${ts.map((t) => { const mal = String(t.resultado || "").startsWith("falló"); return `<div class="fila"><span>${esc(t.nombre)}</span>${mal ? `<span class="pastilla alerta">falló</span>` : t.resultado === "bien" ? `<span class="pastilla bien">bien</span>` : `<span class="pastilla">programada</span>`}<span class="sub">${esc(t.horario || "")}${t.ultima_corrida ? ` · última ${f(t.ultima_corrida)}` : ""}${mal ? ` · ${esc(t.resultado)}` : ""}</span></div>`; }).join("")}</div></section>` : ""}
+  ${ts.length ? `<section><h3>Tareas programadas</h3><div class="filas">${ts.map((t) => { const mal = String(t.resultado || "").startsWith("falló"); const rec = String(t.resultado || "").startsWith("recuperada"); return `<div class="fila"><span>${esc(t.nombre)}</span>${mal ? `<span class="pastilla alerta">falló</span>` : t.resultado === "bien" ? `<span class="pastilla bien">bien</span>` : rec ? `<span class="pastilla bien">recuperada</span>` : `<span class="pastilla">programada</span>`}<span class="sub">${esc(t.horario || "")}${t.ultima_corrida ? ` · última ${f(t.ultima_corrida)}` : ""}${mal || rec ? ` · ${esc(t.resultado)}` : ""}</span></div>`; }).join("")}</div></section>` : ""}
   ${ks.length ? `<section><h3>Skills instaladas en Claude</h3><div class="chips">${ks.map((k) => `<span class="chip">${esc(k.nombre)}${k.repo ? "" : " · sin repo"}</span>`).join("")}</div></section>` : ""}
 
   <section style="display:flex;gap:8px;flex-wrap:wrap">
