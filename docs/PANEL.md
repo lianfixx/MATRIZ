@@ -25,6 +25,8 @@ La página se actualiza sola: cada minuto (y al volver a la pestaña) revisa si 
 
 Solo se guarda y se publica si algo cambió.
 
+Los avisos están dados de alta en todos los repositorios de Emi (menos MATRIZ, que se actualiza sola) y firmados con `GANCHO_SECRETO`. Para un repositorio nuevo, en la computadora virtual: `python3 ~/.config/matriz/ganchos.py` (no duplica los que ya existen); mientras tanto lo cubre la revisión de cada 15 minutos.
+
 ## Qué se edita (con contraseña)
 
 | Dónde | Qué | Archivo que cambia |

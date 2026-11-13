@@ -37,11 +37,15 @@
     {
       "id": "contenido-y-video",
       "nombre": "Contenido y video",
-      "descripcion": "Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio, X e historias de Instagram.",
+      "descripcion": "Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio, X, Instagram, TikTok, LinkedIn, la matriz de redes (REDES) e historias de Instagram.",
       "repos": [
         "VIDEOS-IA-SKILL-MILLA",
         "X",
-        "HISTORIAS-"
+        "HISTORIAS-",
+        "REDES",
+        "Instagram",
+        "TikTok",
+        "LinkedIn"
       ]
     },
     {
