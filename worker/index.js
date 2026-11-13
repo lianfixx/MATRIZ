@@ -609,7 +609,20 @@ async function gancho(request, env) {
   return res({ ok: r.status === 204, disparado: r.status === 204 }, r.status === 204 ? 202 : 502);
 }
 
+// Reloj de respaldo: Cloudflare llama a esto cada 10 minutos (wrangler.jsonc → triggers.crons) y pide a GitHub
+// que regenere la Matriz. Es más puntual que el horario de GitHub, que puede saltarse horas. Si nada cambió,
+// la actualización no guarda ni publica nada.
+async function relojDeRespaldo(env) {
+  if (!env.MATRIZ_ESCRITURA) return;
+  await fetch(`https://api.github.com/repos/${REPO}/dispatches`, {
+    method: "POST",
+    headers: { Authorization: `Bearer ${env.MATRIZ_ESCRITURA}`, Accept: "application/vnd.github+json", "User-Agent": "matriz-panel", "X-GitHub-Api-Version": "2022-11-28" },
+    body: JSON.stringify({ event_type: "repo-actualizado", client_payload: { origen: "reloj" } }),
+  });
+}
+
 export default {
+  async scheduled(evento, env, ctx) { ctx.waitUntil(relojDeRespaldo(env)); },
   async fetch(request, env) {
     const url = new URL(request.url);
     if (url.pathname === "/gancho") {

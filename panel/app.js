@@ -11,6 +11,8 @@ const reducido = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const angosto = () => matchMedia("(max-width: 860px)").matches;
 
 const S = { D: null, editor: false, configurado: false, cerebro: null, espacio: null };
+// La guía «Así funciona» se muestra hasta que Emi la cierra en este equipo; el botón «?» la vuelve a abrir.
+try { S.guiaVista = localStorage.getItem("matriz.guia") === "vista"; } catch { S.guiaVista = false; }
 
 // ---------------------------------------------------------------- utilidades de interfaz
 
@@ -66,8 +68,8 @@ function vistaHoy() {
   for (const { c } of cerebros) for (const p of (c.tablero?.pendientes || [])) if (!p.hecho && p.vence && p.vence < hoyISO()) atencion.push({ t: `Vencido: ${esc(p.texto)}`, sub: `${esc(c.nombre)} · venció el ${f(p.vence)}`, ir: c.id, nivel: "alerta" });
   for (const t of (inv.tareas || [])) if (String(t.resultado || "").startsWith("falló")) atencion.push({ t: `Falló «${esc(t.nombre)}»`, sub: `${f(t.ultima_corrida)} · ${esc(t.resultado.replace(/^falló:?\s*/, ""))}`, ir: t.cerebro !== "matriz" ? t.cerebro : "", nivel: "alerta" });
   for (const v of (M.vencimientos || [])) if (v.dias <= 30) atencion.push({ t: esc(v.nombre), sub: v.dias < 0 ? "vencido" : `vence en ${v.dias} días · ${f(v.fecha)}`, nivel: v.dias <= 7 ? "alerta" : "" });
-  for (const r of (D.por_clasificar || [])) atencion.push({ t: `Repositorio nuevo: ${esc(r.nombre)}`, sub: "la revisión del domingo lo acomoda en su cerebro", nivel: "" });
-  for (const { c, m } of cerebros) if ((m.dias_sin_movimiento ?? 0) > 21) atencion.push({ t: `${esc(c.nombre)} lleva ${m.dias_sin_movimiento} días quieto`, sub: "sin commits en sus repositorios", ir: c.id, nivel: "" });
+  for (const r of (D.por_clasificar || [])) atencion.push({ t: `Repositorio nuevo: ${esc(r.nombre)}`, sub: "se acomodará en su cerebro", nivel: "" });
+  for (const { c, m } of cerebros) if ((m.dias_sin_movimiento ?? 0) > 21) atencion.push({ t: `${esc(c.nombre)} lleva ${m.dias_sin_movimiento} días quieto`, sub: "ningún cambio en sus proyectos", ir: c.id, nivel: "" });
 
   // Pendientes más urgentes de todos los cerebros
   const urgentes = cerebros.flatMap(({ c }) => (c.tablero?.pendientes || []).filter((p) => !p.hecho).map((p) => ({ ...p, c })))
@@ -76,23 +78,34 @@ function vistaHoy() {
   const actores = Object.entries(M.actores_60d || {});
   const totalAct = actores.reduce((s, [, n]) => s + n, 0) || 1;
 
+  // Estado de cada cerebro en palabras: primero lo que necesita atención, luego lo más activo.
+  const estado = (m) => (m.pendientes_vencidos || m.tareas_falladas) ? { k: "revisar", t: "Revisar" }
+    : m.dias_sin_movimiento == null ? { k: "quieto", t: "Sin datos" }
+    : m.dias_sin_movimiento <= 7 ? { k: "activo", t: "Activo" }
+    : m.dias_sin_movimiento <= 21 ? { k: "tranquilo", t: "Tranquilo" } : { k: "quieto", t: "Quieto" };
+  const peso = { revisar: 0, activo: 1, tranquilo: 2, quieto: 3 };
+  const lista = cerebros.map((x) => ({ ...x, e: estado(x.m) }))
+    .sort((a, b) => (peso[a.e.k] - peso[b.e.k]) || ((b.m.esta_semana || 0) - (a.m.esta_semana || 0)));
+  const hace = (d) => d == null ? "sin datos" : d === 0 ? "hoy" : d === 1 ? "ayer" : `hace ${d} días`;
+  const plural = (n, uno, varios) => `${n} ${n === 1 ? uno : varios}`;
+  const totalRepos = D.cerebros.reduce((s, c) => s + c.repos.length, 0);
+
   $("#hoy").innerHTML = `
-  <section class="tarjeta" style="animation-delay:.05s">
-    <h2>Esta semana</h2>
-    <div class="cifra num">${esta}<small>commits en ${D.cerebros.reduce((s, c) => s + c.repos.length, 0)} repositorios</small></div>
-    <div class="delta ${dif > 0 ? "sube" : dif < 0 ? "baja" : ""} num">${dif === 0 ? "igual que la semana pasada" : `${dif > 0 ? "+" : "−"}${Math.abs(dif)} frente a la semana pasada`}</div>
-    ${chispa(semanas)}
-  </section>
+  ${S.guiaVista ? "" : `<section class="tarjeta guia" style="animation-delay:.02s">
+    <h2>Así funciona</h2>
+    <p>Cada esfera es un <b>cerebro</b>: un área de tu trabajo con sus proyectos. Entre más grande, más se movió esta semana. Toca una (o un nombre en «Tus cerebros») para ver todo lo que tiene.</p>
+    <p>Para marcar pendientes o escribir notas, toca <b>Entrar</b>. La página se actualiza sola.</p>
+    <button class="mini" type="button" data-cerrar-guia>Entendido</button>
+  </section>`}
+
+  ${atencion.length ? `<section class="tarjeta" style="animation-delay:.05s">
+    <h2>Necesita tu atención</h2>
+    <div class="filas">${atencion.slice(0, 7).map((a) => `${a.ir ? `<button class="fila" data-ir="${esc(a.ir)}">` : `<div class="fila">`}
+      <span class="nombre">${a.t}</span>${a.nivel ? `<span class="pastilla alerta">revisar</span>` : `<span></span>`}<span class="sub">${a.sub}</span>${a.ir ? "</button>" : "</div>"}`).join("")}</div>
+  </section>` : `<section class="tarjeta" style="animation-delay:.05s"><h2>Necesita tu atención</h2><p class="vacio">Nada. Todo en orden.</p></section>`}
 
   <section class="tarjeta" style="animation-delay:.1s">
-    <h2>Atención</h2>
-    <div class="filas">${atencion.length ? atencion.slice(0, 7).map((a) => `${a.ir ? `<button class="fila" data-ir="${esc(a.ir)}">` : `<div class="fila">`}
-      <span class="nombre">${a.t}</span>${a.nivel ? `<span class="pastilla alerta">revisar</span>` : `<span></span>`}<span class="sub">${a.sub}</span>${a.ir ? "</button>" : "</div>"}`).join("")
-      : `<p class="vacio">Todo en orden.</p>`}</div>
-  </section>
-
-  <section class="tarjeta" style="animation-delay:.15s">
-    <h2>Pendientes${S.editor ? "" : " · entra para marcarlos"}</h2>
+    <h2>Tus pendientes${S.editor ? "" : " · toca Entrar para marcarlos"}</h2>
     <div class="filas">${urgentes.length ? urgentes.map((p) => `<div class="pend">
       <button class="caja" role="checkbox" aria-checked="false" aria-label="Marcar como hecho" data-completar="${esc(p.c.id)}:${esc(p.id)}" ${S.editor ? "" : "disabled"}></button>
       <span class="texto">${esc(p.texto)}<span class="meta ${p.vence && p.vence < hoyISO() ? "vencido" : ""}">${esc(p.c.nombre)}${p.vence ? ` · ${p.vence < hoyISO() ? "venció" : "vence"} ${f(p.vence)}` : ""}</span></span>
@@ -101,29 +114,39 @@ function vistaHoy() {
     ${S.editor ? `<div style="margin-top:12px"><button class="boton suave" id="b-proyecto" type="button">Proyecto nuevo</button></div>` : ""}
   </section>
 
-  <section class="tarjeta" style="animation-delay:.2s">
-    <h2>Pulso por cerebro</h2>
-    <div class="filas">${cerebros.map(({ c, m }) => `<button class="fila" data-ir="${esc(c.id)}">
-      <span class="nombre">${esc(c.nombre)}</span>
-      <span class="num tenue" style="font-size:12.5px"><span class="barrita" style="width:${Math.round(((m.esta_semana || 0) / maxSem) * 48) + 2}px"></span> ${m.esta_semana || 0}</span>
-      <span class="sub">${c.repos.length} repos · ${m.dias_sin_movimiento == null ? "sin dato" : m.dias_sin_movimiento === 0 ? "movimiento hoy" : `último movimiento hace ${m.dias_sin_movimiento} d`}${m.pendientes_abiertos ? ` · ${m.pendientes_abiertos} pendientes` : ""}</span>
+  <section class="tarjeta" style="animation-delay:.15s">
+    <h2>Tus cerebros <span class="tenue" style="font-weight:500">· toca uno para abrirlo</span></h2>
+    <div class="filas">${lista.map(({ c, m, e }) => `<button class="fila cerebro-fila" data-ir="${esc(c.id)}">
+      <span class="nombre"><i class="punto ${e.k}" aria-hidden="true"></i>${esc(c.nombre)}</span>
+      <span class="estado ${e.k}">${e.t}</span>
+      <span class="sub">Último cambio ${hace(m.dias_sin_movimiento)} · ${plural(m.esta_semana || 0, "cambio", "cambios")} esta semana${m.pendientes_abiertos ? ` · ${plural(m.pendientes_abiertos, "pendiente", "pendientes")}` : ""}${m.pendientes_vencidos ? ` (${m.pendientes_vencidos} vencido${m.pendientes_vencidos > 1 ? "s" : ""})` : ""}${m.tareas_falladas ? ` · ${plural(m.tareas_falladas, "tarea falló", "tareas fallaron")}` : ""}</span>
     </button>`).join("")}</div>
+    <p class="tenue leyenda-estados"><span><i class="punto activo"></i>Activo: cambios en los últimos 7 días</span><span><i class="punto tranquilo"></i>Tranquilo: 8 a 21 días</span><span><i class="punto quieto"></i>Quieto: más de 21</span><span><i class="punto revisar"></i>Revisar: algo vencido o falló</span></p>
+  </section>
+
+  <section class="tarjeta" style="animation-delay:.2s">
+    <h2>Esta semana</h2>
+    <div class="cifra num">${esta}</div>
+    <div class="cifra-texto">${esta === 1 ? "cambio guardado" : "cambios guardados"} en tus ${totalRepos} proyectos</div>
+    <div class="delta ${dif > 0 ? "sube" : dif < 0 ? "baja" : ""} num">${dif === 0 ? "igual que la semana pasada" : `${Math.abs(dif)} ${dif > 0 ? "más" : "menos"} que la semana pasada`}</div>
+    ${chispa(semanas)}
+    <p class="tenue" style="margin:4px 0 0;font-size:12px">Últimas 8 semanas. Un «cambio» es cada vez que tú o una IA guarda trabajo en un proyecto.</p>
   </section>
 
   ${actores.length ? `<section class="tarjeta" style="animation-delay:.25s">
-    <h2>Quién trabajó · 60 días</h2>
+    <h2>Quién hizo los cambios · últimos 60 días</h2>
     <div class="reparto">${actores.map(([a, n]) => `<span style="width:${(n / totalAct) * 100}%;background:${COLORES[a] || "#55534e"}" title="${esc(a)}: ${n}"></span>`).join("")}</div>
     <div class="leyenda">${actores.map(([a, n]) => `<span><i style="background:${COLORES[a] || "#55534e"}"></i>${esc(a)} <span class="num">${n}</span></span>`).join("")}</div>
   </section>` : ""}
 
   <section class="tarjeta" style="animation-delay:.3s">
     <h2>Llevar la Matriz a otra IA</h2>
-    <p class="tenue" style="margin:0 0 10px;font-size:13.5px">Un solo archivo con todo: quién eres, tus reglas, cada cerebro, lo último y lo pendiente.</p>
+    <p class="tenue" style="margin:0 0 10px;font-size:13.5px">Un solo archivo con todo: quién eres, tus reglas, cada cerebro, lo último y lo pendiente. Pégalo o adjúntalo en cualquier chat.</p>
     <div style="display:flex;gap:8px;flex-wrap:wrap"><button class="boton fuerte" type="button" data-copiar-general>Copiar Matriz General</button>
     <a class="boton suave" href="MATRIZ_GENERAL.md" download="MATRIZ_GENERAL.md">Descargar</a></div>
     <p class="tenue" style="margin:10px 0 0;font-size:12.5px">Conector para Claude o ChatGPT: <span class="num" style="font-family:var(--mono)">${esc(location.origin)}/mcp</span></p>
   </section>
-  <p class="tenue" style="font-size:12px;margin:2px 4px">Actualizada el ${f(D.actualizada)} · <a href="https://github.com/${esc(D.propietario)}/MATRIZ" target="_blank" rel="noopener">GitHub</a></p>`;
+  <p class="tenue" style="font-size:12px;margin:2px 4px">Datos del ${f(D.actualizada)} · se actualiza sola · <a href="https://github.com/${esc(D.propietario)}/MATRIZ" target="_blank" rel="noopener">GitHub</a></p>`;
 }
 
 // ---------------------------------------------------------------- hoja del cerebro
@@ -146,8 +169,8 @@ function vistaCerebro(c) {
   <h1>${esc(c.nombre)}</h1>
   <p class="desc">${esc(c.descripcion)}</p>
   <div class="trio">
-    <div><b class="num">${m.esta_semana ?? 0}</b><span>commits esta semana</span></div>
-    <div><b class="num">${m.dias_sin_movimiento ?? "—"}</b><span>días sin movimiento</span></div>
+    <div><b class="num">${m.esta_semana ?? 0}</b><span>cambios esta semana</span></div>
+    <div><b class="num">${m.dias_sin_movimiento ?? "—"}</b><span>días desde el último cambio</span></div>
     <div><b class="num">${abiertos.length}</b><span>pendientes${m.pendientes_vencidos ? ` · ${m.pendientes_vencidos} vencidos` : ""}</span></div>
   </div>
 
@@ -169,7 +192,7 @@ function vistaCerebro(c) {
   </section>
 
   <section>
-    <h3>Repositorios</h3>
+    <h3>Proyectos (repositorios) <span class="tenue" style="font-weight:500">· barras: cambios por semana</span></h3>
     <div class="filas">${c.repos.map((r) => { const e = r.registro?.[0]; const sem = r.actividad?.commits || []; return `<div class="repo">
       <a class="nombre" href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.nombre)}</a>
       <span style="display:flex;gap:8px;align-items:center">${sem.length ? miniBarras(sem) : ""}<span class="pastilla">${esc(r.visibilidad)}</span></span>
@@ -266,6 +289,8 @@ function buscar(q) {
 // ---------------------------------------------------------------- eventos
 
 document.addEventListener("click", async (e) => {
+  if (e.target.closest("[data-cerrar-guia]")) { S.guiaVista = true; try { localStorage.setItem("matriz.guia", "vista"); } catch {} vistaHoy(); return; }
+  if (e.target.closest("#b-ayuda")) { S.guiaVista = false; try { localStorage.removeItem("matriz.guia"); } catch {} if (S.cerebro) cerrarCerebro(); vistaHoy(); $("#hoy").scrollTo?.({ top: 0, behavior: "smooth" }); window.scrollTo({ top: 0, behavior: "smooth" }); return; }
   const t = e.target;
   const ir = t.closest("[data-ir]");
   if (ir && ir.dataset.ir) { $("#d-buscar").open && $("#d-buscar").close(); abrirCerebro(ir.dataset.ir); return; }

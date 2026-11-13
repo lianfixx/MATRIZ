@@ -162,6 +162,16 @@ ok(bloqueado, "límite de intentos de contraseña (contador local)");
   ok((await mod.default.fetch(new Request("https://matriz.test/gancho", { method: "POST", body: "{}" }), env)).status === 503, "sin secreto, avisos apagados");
   globalThis.fetch = fetchViejo;
 }
+// Reloj de respaldo (cron de Cloudflare)
+{
+  let pedidos = 0; const fv = globalThis.fetch;
+  globalThis.fetch = async (u, o) => (String(u).endsWith("/dispatches") ? (pedidos++, new Response(null, { status: 204 })) : fv(u, o));
+  const esperas = []; await mod.default.scheduled({}, env, { waitUntil: (p) => esperas.push(p) }); await Promise.all(esperas);
+  ok(pedidos === 1, "el reloj de respaldo pide la actualización");
+  await mod.default.scheduled({}, { ASSETS }, { waitUntil: (p) => esperas.push(p) }); await Promise.all(esperas);
+  ok(pedidos === 1, "sin token, el reloj no hace nada");
+  globalThis.fetch = fv;
+}
 const sinConf = await mod.default.fetch(new Request("https://matriz.test/api/entrar", { method: "POST", headers: { "Content-Type": "application/json" }, body: "{}" }), { ASSETS });
 ok(sinConf.status === 503, "sin secretos la edición está apagada");
 

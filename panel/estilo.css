@@ -177,3 +177,16 @@ button.fila:hover .nombre { text-decoration: underline; text-decoration-color: v
 .vivo.caido { background: var(--apagado, #666); }
 .vivo.latido { animation: latido 1.6s var(--curva, ease-out) 2; }
 @keyframes latido { 0% { box-shadow: 0 0 0 0 rgba(62,207,142,.55); } 100% { box-shadow: 0 0 0 10px rgba(62,207,142,0); } }
+
+/* Tus cerebros: estado en palabras */
+.punto { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 8px; vertical-align: 1px; background: var(--apagado, #666); }
+.punto.activo { background: #3ecf8e; } .punto.tranquilo { background: #d9b45a; } .punto.quieto { background: #5d5b56; } .punto.revisar { background: var(--alerta, #ef8a6a); }
+.estado { font-size: 12px; color: var(--tenue); white-space: nowrap; }
+.estado.activo { color: #3ecf8e; } .estado.tranquilo { color: #d9b45a; } .estado.revisar { color: var(--alerta, #ef8a6a); }
+.leyenda-estados { display: flex; flex-wrap: wrap; gap: 4px 12px; margin: 10px 0 0; font-size: 11.5px; }
+.leyenda-estados .punto { width: 6px; height: 6px; margin-right: 5px; }
+/* Guía de primera vez */
+.guia p { margin: 0 0 8px; font-size: 13.5px; line-height: 1.5; color: var(--tinta); }
+.guia b { font-weight: 620; }
+.boton.redondo { width: 34px; padding: 0; justify-content: center; font-weight: 600; }
+.cifra-texto { font-size: 13.5px; color: var(--tenue); margin: 4px 0 2px; }

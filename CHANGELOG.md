@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-11-13 · Matriz 1.4.0: panel más claro y reloj de respaldo
+
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: Emi, 13/11/2026: «Recuerda tenerlo SIEMPRE actualizado en todo momento. Pulso por cerebro no es nada entendible… no sé ni cómo funciona ni qué hace la página; hazlo más utilizable, minimalista, claro, sencillo».
+- Cambios: columna de la izquierda reordenada por utilidad: «Necesita tu atención», «Tus pendientes», «Tus cerebros», «Esta semana», «Quién hizo los cambios» y «Llevar la Matriz a otra IA». «Pulso por cerebro» (barra sin etiqueta y «commits») se reemplazó por «Tus cerebros»: cada uno con su estado en palabras (Activo, Tranquilo, Quieto o Revisar), su último cambio («hoy», «ayer», «hace 9 días»), los cambios de la semana y sus pendientes, ordenados primero por lo que necesita atención, con leyenda. «Commits» pasa a «cambios» en todo el panel y se explica qué es un cambio. Hay una guía «Así funciona» la primera vez (se cierra con «Entendido» y vuelve con el botón «?»). Siempre al día: un reloj de Cloudflare (cron del Worker, cada 10 minutos, plan gratis) pide la actualización por si un aviso de GitHub se pierde, porque el horario de GitHub se saltó horas.
+- Archivos: `panel/app.js`, `panel/index.html`, `panel/estilo.css`, `worker/index.js`, `worker/prueba.mjs`, `wrangler.jsonc`, `docs/PANEL.md` y este registro.
+- Verificación: `node worker/prueba.mjs` → aprobado (89; incluye el reloj con y sin token). Navegador real con los datos actuales, en escritorio 1440×900 e iPhone 15: guía, estados y leyenda legibles; la guía se cierra y vuelve con «?»; sin desborde horizontal ni errores de consola.
+- Pendiente: ninguno.
+
 ## 2026-11-13 · Matriz 1.3.0: cerebro «Sitios web»
 
 - Agente: Claude Code (sesión en la nube)

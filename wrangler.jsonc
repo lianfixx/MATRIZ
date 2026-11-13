@@ -5,6 +5,8 @@
   "main": "worker/index.js",
   "compatibility_date": "2026-11-01",
   // Límite exacto de intentos fallidos de contraseña del panel (Durable Object «Intentos», plan gratis).
+  // Reloj de respaldo: cada 10 minutos pide la actualización de la Matriz (además de los avisos de GitHub).
+  "triggers": { "crons": ["*/10 * * * *"] },
   "durable_objects": { "bindings": [{ "name": "INTENTOS", "class_name": "Intentos" }] },
   "migrations": [{ "tag": "v1", "new_sqlite_classes": ["Intentos"] }],
   "assets": {

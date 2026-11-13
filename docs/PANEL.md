@@ -5,12 +5,13 @@
 ## Qué se ve
 
 - **Al centro, la Matriz en 3D.** El punto naranja es la Matriz; cada esfera blanca es un cerebro. Su tamaño es lo que se movió esta semana; si lleva más de 21 días quieto se apaga; si tiene algo vencido o una tarea que falló, late con un anillo. Sus repositorios giran alrededor. Se gira arrastrando, se acerca con la rueda o pellizcando; al tocar un cerebro la cámara va hacia él y se abre su hoja.
-- **«Hoy» (a la izquierda; en el iPhone, debajo):**
-  - Esta semana: commits en todos los repositorios, comparado con la semana pasada, y la curva de 8 semanas.
-  - Atención: pendientes vencidos, tareas programadas que fallaron, llaves por vencer, repositorios sin clasificar.
-  - Pendientes de todos los cerebros, del más urgente al menos.
-  - Pulso por cerebro y quién trabajó (cada IA) en los últimos 60 días.
-  - «Llevar la Matriz a otra IA»: copiar o descargar `MATRIZ_GENERAL.md` y la dirección del conector.
+- **A la izquierda (en el iPhone, debajo), en este orden:**
+  - Así funciona: guía breve la primera vez; se cierra con «Entendido» y vuelve con el botón «?».
+  - Necesita tu atención: pendientes vencidos, tareas que fallaron, llaves por vencer y proyectos sin cerebro.
+  - Tus pendientes, del más urgente al menos.
+  - Tus cerebros: cada uno con su estado en palabras (Activo: cambios en los últimos 7 días; Tranquilo: 8 a 21; Quieto: más de 21; Revisar: algo vencido o falló), cuándo fue su último cambio, cuántos cambios lleva la semana y sus pendientes. Al tocarlo se abre.
+  - Esta semana: cuántos cambios se guardaron en todos tus proyectos y la curva de 8 semanas. Un «cambio» es cada vez que tú o una IA guarda trabajo en un proyecto.
+  - Quién hizo los cambios en los últimos 60 días, y «Llevar la Matriz a otra IA».
 - **Hoja de cada cerebro:** commits de la semana, días sin movimiento, pendientes, notas, repositorios con su actividad, tareas programadas y skills, y «Copiar contexto».
 - **Buscar** (⌘K): repositorios, skills, pendientes y cerebros.
 - **«Copiar para una IA»:** copia la Matriz General completa para pegarla en cualquier chat.
@@ -20,7 +21,7 @@
 La página se actualiza sola: cada minuto (y al volver a la pestaña) revisa si hay datos nuevos y los pinta sin recargar; el punto verde junto a la fecha late cuando llegan. Si estás escribiendo, espera a que termines. La Matriz se regenera:
 
 - **En cuanto cambia cualquiera de tus repositorios**: GitHub avisa al panel (`/gancho`, aviso firmado con `GANCHO_SECRETO`) y el panel pide la actualización. De un cambio a verlo en la página pasan unos 2 a 4 minutos.
-- **Cada 15 minutos**, por si un aviso se pierde (GitHub puede retrasar este horario unos minutos).
+- **Cada 10 minutos**, con un reloj de Cloudflare, por si un aviso se pierde (más puntual que el horario de GitHub, que también sigue cada 15 minutos).
 - **Después de cada edición desde el panel.**
 
 Solo se guarda y se publica si algo cambió.
