@@ -4,7 +4,7 @@ cerebro: "Contenido y video"
 visibilidad: "público"
 ultimo_cambio: 2026-11-13
 skills: 1
-commits_8_semanas: 30
+commits_8_semanas: 31
 ultimo_agente: "Claude Code (sesión en la nube)"
 pendiente: "guiones y ganchos de Editor Studio; Emi fusiona su PR #9 (lianfixx/VIDEOS-IA-SKILL-MILLA) y reconecta X."
 github: "https://github.com/lianfixx/REDES"
