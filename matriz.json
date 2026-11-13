@@ -943,6 +943,12 @@
           "registro": [
             {
               "fecha": "2026-11-13",
+              "titulo": "Panel 0.3: imágenes, videos y PDF por API; análisis automático de inspiración; respuestas a Editor Studio",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "Emi reconecta X (permiso de archivos), crea la llave de Claude automático y la pega en el formulario seguro; conectar LinkedIn."
+            },
+            {
+              "fecha": "2026-11-13",
               "titulo": "Recursos: cómo grabar (de Editor Studio)",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "respuestas de Emi a las preguntas de Editor Studio."
@@ -982,12 +988,6 @@
               "titulo": "Conectar X con OAuth 2.0 + PKCE",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "que Emi conecte X desde Ajustes."
-            },
-            {
-              "fecha": "2026-11-13",
-              "titulo": "X sin candado",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "ninguno nuevo."
             }
           ],
           "actividad": {
@@ -1009,10 +1009,10 @@
               0,
               0,
               0,
-              27
+              28
             ],
             "actores_60d": {
-              "Claude": 20,
+              "Claude": 21,
               "GitHub Actions": 6,
               "Emi": 1
             }
@@ -2164,9 +2164,9 @@
           0,
           0,
           9,
-          100
+          101
         ],
-        "esta_semana": 100,
+        "esta_semana": 101,
         "semana_pasada": 9,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2269,11 +2269,11 @@
       153,
       154,
       196,
-      222
+      223
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 257,
+      "Claude": 258,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 6
     },

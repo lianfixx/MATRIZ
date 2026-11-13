@@ -59,8 +59,8 @@ La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, 
 
 Skills: `matriz-redes`
 
-Último registro: 13 nov 2026 · Recursos: cómo grabar (de Editor Studio) · Agente: Claude Code (sesión en la nube)
-Pendiente: respuestas de Emi a las preguntas de Editor Studio.
+Último registro: 13 nov 2026 · Panel 0.3: imágenes, videos y PDF por API; análisis automático de inspiración; respuestas a Editor Studio · Agente: Claude Code (sesión en la nube)
+Pendiente: Emi reconecta X (permiso de archivos), crea la llave de Claude automático y la pega en el formulario seguro; conectar LinkedIn.
 
 ### Instagram (público)
 
