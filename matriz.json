@@ -943,6 +943,12 @@
           "registro": [
             {
               "fecha": "2026-11-13",
+              "titulo": "Panel 0.2: Hoy tipo CRM, piezas en vivo con notas y pausa, hora sugerida, ideas por espacio e inspiración",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "que la tarea semanal analice la inspiración y proponga espacios (se actualiza su encargo); subir imágenes y video por API."
+            },
+            {
+              "fecha": "2026-11-13",
               "titulo": "X conectado al panel",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "primera publicación real cuando Emi apruebe."
@@ -982,12 +988,6 @@
               "titulo": "LinkedIn e Instagram ya exponen su estado",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "estado de TikTok."
-            },
-            {
-              "fecha": "2026-11-13",
-              "titulo": "Piezas que se publican desde la app y texto de LinkedIn de Emi",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "cargar en el panel las piezas de LinkedIn (DOF) y de X (lanzamiento A y B, DOF)."
             }
           ],
           "actividad": {
@@ -1009,11 +1009,11 @@
               0,
               0,
               0,
-              24
+              26
             ],
             "actores_60d": {
-              "GitHub Actions": 5,
-              "Claude": 18,
+              "GitHub Actions": 6,
+              "Claude": 19,
               "Emi": 1
             }
           }
@@ -2162,9 +2162,9 @@
           0,
           0,
           9,
-          97
+          99
         ],
-        "esta_semana": 97,
+        "esta_semana": 99,
         "semana_pasada": 9,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2267,13 +2267,13 @@
       153,
       154,
       196,
-      218
+      220
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 254,
+      "Claude": 255,
       "ChatGPT · Codex": 39,
-      "GitHub Actions": 5
+      "GitHub Actions": 6
     },
     "vencimientos": [
       {

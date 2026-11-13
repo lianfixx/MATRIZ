@@ -19,7 +19,7 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 | [[Castorena]] | 4 | 27 commits | 0 días | 0 | Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP, escritos y monitor del DOF. |
 | [[MILLA ABOGADOS]] | 5 | 0 commits | 9 días | 0 | El despacho de Emi: sitio, asesorías, monitoreo de expedientes, captación e Impulso Libre. |
 | [[Acción Tlalnepantla]] | 1 | 0 commits | 9 días | 0 | Acción Política Juvenil Tlalnepantla (PAN): sitio, formatos, eventos y materiales. |
-| [[Contenido y video]] | 7 | 97 commits | 0 días | 0 | Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio, X, Instagram, TikTok, LinkedIn, la matriz de redes (REDES) e historias de Instagram. |
+| [[Contenido y video]] | 7 | 99 commits | 0 días | 0 | Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio, X, Instagram, TikTok, LinkedIn, la matriz de redes (REDES) e historias de Instagram. |
 | [[Estudio]] | 2 | 0 commits | 6 días | 0 | Maestría en Alta Dirección y pizarras de estudio. |
 | [[Productos]] | 2 | 0 commits | 9 días | 0 | Productos propios de Emi: PANEL FIRMA (gestión jurídica) y Mes (finanzas personales). |
 | [[Herramientas]] | 5 | 29 commits | 1 días | 0 | Piezas que sirven a todos los cerebros: estilo de Emi, selector de modelo, entorno de Cloudflare, computadora virtual (Simular Box) e ingeniería inversa. |
@@ -32,9 +32,9 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 - 13 nov 2026 · **X** · API de X conectada al panel · Agente: Claude Code (sesión en la nube)
 - 13 nov 2026 · **X** · Cuenta de X abierta · Agente: Claude Code (sesión en la nube)
 - 13 nov 2026 · **X** · Perfil de X revisado: bio y categoría puestas, candado aún visible · Agente: Claude Code (sesión en la nube)
+- 13 nov 2026 · **REDES** · Panel 0.2: Hoy tipo CRM, piezas en vivo con notas y pausa, hora sugerida, ideas por espacio e inspiración · Agente: Claude Code (sesión en la nube)
 - 13 nov 2026 · **REDES** · X conectado al panel · Agente: Claude Code (sesión en la nube)
 - 13 nov 2026 · **REDES** · Corrige la prueba de X como app pública · Agente: Claude Code (sesión en la nube)
-- 13 nov 2026 · **REDES** · X: token como app confidencial o pública · Agente: Claude Code (sesión en la nube)
 - 13 nov 2026 · **Instagram** · instagram-studio 1.0.1: correcciones de la auditoría independiente · Agente: Claude Code (sesión en la nube)
 - 13 nov 2026 · **Instagram** · instagram-studio 1.0.0: primera versión · Agente: Claude Code (sesión en la nube)
 

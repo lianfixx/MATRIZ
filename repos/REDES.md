@@ -4,9 +4,9 @@ cerebro: "Contenido y video"
 visibilidad: "público"
 ultimo_cambio: 2026-11-13
 skills: 1
-commits_8_semanas: 24
+commits_8_semanas: 26
 ultimo_agente: "Claude Code (sesión en la nube)"
-pendiente: "primera publicación real cuando Emi apruebe."
+pendiente: "que la tarea semanal analice la inspiración y proponga espacios (se actualiza su encargo); subir imágenes y video por API."
 github: "https://github.com/lianfixx/REDES"
 tags:
   - "repo"
@@ -28,12 +28,12 @@ La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, 
 
 ## Últimos registros
 
+- 13 nov 2026 · Panel 0.2: Hoy tipo CRM, piezas en vivo con notas y pausa, hora sugerida, ideas por espacio e inspiración · Agente: Claude Code (sesión en la nube)
 - 13 nov 2026 · X conectado al panel · Agente: Claude Code (sesión en la nube)
 - 13 nov 2026 · Corrige la prueba de X como app pública · Agente: Claude Code (sesión en la nube)
 - 13 nov 2026 · X: token como app confidencial o pública · Agente: Claude Code (sesión en la nube)
 - 13 nov 2026 · Bitácora de conexiones con X y LinkedIn · Agente: Claude Code (sesión en la nube)
-- 13 nov 2026 · Conectar X con OAuth 2.0 + PKCE · Agente: Claude Code (sesión en la nube)
 
 ## Pendiente más reciente
 
-primera publicación real cuando Emi apruebe.
+que la tarea semanal analice la inspiración y proponga espacios (se actualiza su encargo); subir imágenes y video por API.
