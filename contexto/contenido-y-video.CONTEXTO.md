@@ -59,8 +59,8 @@ La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, 
 
 Skills: `matriz-redes`
 
-Último registro: 13 nov 2026 · Bitácora de conexiones con X y LinkedIn · Agente: Claude Code (sesión en la nube)
-Pendiente: que Emi reintente «Conectar X» para leer el motivo.
+Último registro: 13 nov 2026 · X: token como app confidencial o pública · Agente: Claude Code (sesión en la nube)
+Pendiente: si vuelve a fallar con 401 en ambos modos, el Client Secret pegado no es el de OAuth 2.0 o la app no tiene activada la autenticación de usuario.
 
 ### Instagram (público)
 

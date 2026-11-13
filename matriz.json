@@ -943,6 +943,12 @@
           "registro": [
             {
               "fecha": "2026-11-13",
+              "titulo": "X: token como app confidencial o pública",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "si vuelve a fallar con 401 en ambos modos, el Client Secret pegado no es el de OAuth 2.0 o la app no tiene activada la autenticación de usuario."
+            },
+            {
+              "fecha": "2026-11-13",
               "titulo": "Bitácora de conexiones con X y LinkedIn",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "que Emi reintente «Conectar X» para leer el motivo."
@@ -982,12 +988,6 @@
               "titulo": "Auditoría independiente: 16 hallazgos y 8 menores corregidos",
               "agente": "Claude Code (sesión en la nube); revisor: agente independiente sin el contexto de quien construyó.",
               "pendiente": "probar con llaves reales de X y LinkedIn (las pone Emi)."
-            },
-            {
-              "fecha": "2026-11-13",
-              "titulo": "Crecer: correcciones de Instagram con fuente oficial",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": ""
             }
           ],
           "actividad": {
@@ -1009,10 +1009,10 @@
               0,
               0,
               0,
-              20
+              21
             ],
             "actores_60d": {
-              "Claude": 15,
+              "Claude": 16,
               "GitHub Actions": 4,
               "Emi": 1
             }
@@ -2162,9 +2162,9 @@
           0,
           0,
           9,
-          92
+          93
         ],
-        "esta_semana": 92,
+        "esta_semana": 93,
         "semana_pasada": 9,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2267,11 +2267,11 @@
       153,
       154,
       196,
-      213
+      214
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 250,
+      "Claude": 251,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 4
     },
