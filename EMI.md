@@ -13,6 +13,7 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 | Estudio | Maestría en Alta Dirección y pizarras de estudio. |
 | Productos | PANEL FIRMA (gestión jurídica) y Mes (finanzas personales). |
 | Herramientas | Su estilo de escritura, el selector de modelo, el entorno de Cloudflare, su computadora virtual (Simular Box) e ingeniería inversa (REA). |
+| Sitios web | Sus sitios ya publicados: página personal, Sistemas Digitales y Vicente Diablo (música en vivo). |
 
 ## Con qué trabaja
 

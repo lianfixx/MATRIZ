@@ -2,7 +2,7 @@
 
 Lo que vas a tener:
 
-- **El grafo:** la Matriz al centro (en naranja), los siete cerebros alrededor y cada repositorio colgando de su cerebro. Un clic en un punto abre su nota.
+- **El grafo:** la Matriz al centro (en naranja), los ocho cerebros alrededor y cada repositorio colgando de su cerebro. Un clic en un punto abre su nota.
 - **La portada** (`MATRIZ`): cerebros, último movimiento y lo último que hizo cada IA.
 - **La tabla** (`Repositorios`): todos tus repositorios con tres vistas: *Por cerebro*, *Lo más reciente* y *Con pendiente*.
 - **Tus pendientes y notas** dentro de la nota de cada cerebro. Se escriben en el panel (https://matriz.milla-abogados.workers.dev, con tu contraseña) y llegan aquí solos en unos minutos. El archivo de cada tablero está en `tablero/` y usa el formato de tareas de Obsidian.

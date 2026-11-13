@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-11-13 · Matriz 1.3.0: cerebro «Sitios web»
+
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: Emi, 13/11/2026: «esos van en un cerebro aparte, esos 3 son proyectos nuevos que ya tenía».
+- Cambios: nuevo cerebro «Sitios web» (confirmado por Emi) con emilianomilla-site, sistemas-digitales y vicente-diablo; su descripción sale de los README de cada uno. `EMI.md` lo suma a «Dónde trabaja». Ya no quedan repositorios sin cerebro.
+- Archivos: `matriz.config.json`, `EMI.md` y este registro.
+- Verificación: `python3 -m unittest discover -s tools -p 'test_*.py'` → aprobado; la configuración se valida al generar.
+- Pendiente: ninguno.
+
 ## 2026-11-13 · Matriz 1.2.1: avisos en tiempo real en todos los repositorios
 
 - Agente: Claude Code (sesión en la nube)

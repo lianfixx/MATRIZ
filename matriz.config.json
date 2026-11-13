@@ -77,6 +77,16 @@
         "box-simular",
         "rea-ingenieria-inversa"
       ]
+    },
+    {
+      "id": "sitios-web",
+      "nombre": "Sitios web",
+      "descripcion": "Sitios web de Emi ya publicados que se recuperan y mantienen: su página personal (emilianomilla.site), Sistemas Digitales y Vicente Diablo (música en vivo).",
+      "repos": [
+        "emilianomilla-site",
+        "sistemas-digitales",
+        "vicente-diablo"
+      ]
     }
   ],
   "privados": [
