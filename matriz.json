@@ -1498,7 +1498,7 @@
           "url": "https://github.com/lianfixx/cloudfare",
           "visibilidad": "público",
           "leido": true,
-          "ultimo_cambio": "2026-11-12",
+          "ultimo_cambio": "2026-11-13",
           "resumen": "Entorno para que Claude Code, Codex y Muse trabajen con Cloudflare a través del CLI oficial cf. Solo la conexión, las reglas y el registro; no incluye proyectos.",
           "skills": [],
           "protocolo": "",
@@ -1522,10 +1522,10 @@
               0,
               0,
               0,
-              16
+              17
             ],
             "actores_60d": {
-              "Claude": 13,
+              "Claude": 14,
               "Emi": 3
             }
           }
@@ -2221,11 +2221,11 @@
           0,
           0,
           5,
-          29
+          30
         ],
-        "esta_semana": 29,
+        "esta_semana": 30,
         "semana_pasada": 5,
-        "dias_sin_movimiento": 1,
+        "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
         "pendientes_de_repos": 0,
@@ -2269,11 +2269,11 @@
       153,
       154,
       196,
-      221
+      222
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 256,
+      "Claude": 257,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 6
     },
