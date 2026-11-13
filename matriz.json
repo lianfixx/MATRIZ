@@ -943,6 +943,12 @@
           "registro": [
             {
               "fecha": "2026-11-13",
+              "titulo": "Conectar X con OAuth 2.0 + PKCE",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "que Emi conecte X desde Ajustes."
+            },
+            {
+              "fecha": "2026-11-13",
               "titulo": "X sin candado",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "ninguno nuevo."
@@ -982,12 +988,6 @@
               "titulo": "Contraseña del panel: PBKDF2 a 100 000 vueltas",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "repetir la auditoría completa."
-            },
-            {
-              "fecha": "2026-11-13",
-              "titulo": "Tablero más limpio y petición a la Matriz General",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "auditoría independiente en curso."
             }
           ],
           "actividad": {
@@ -1009,11 +1009,11 @@
               0,
               0,
               0,
-              18
+              19
             ],
             "actores_60d": {
+              "Claude": 14,
               "GitHub Actions": 4,
-              "Claude": 13,
               "Emi": 1
             }
           }
@@ -2162,9 +2162,9 @@
           0,
           0,
           9,
-          89
+          90
         ],
-        "esta_semana": 89,
+        "esta_semana": 90,
         "semana_pasada": 9,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2267,11 +2267,11 @@
       153,
       154,
       196,
-      210
+      211
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 247,
+      "Claude": 248,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 4
     },
