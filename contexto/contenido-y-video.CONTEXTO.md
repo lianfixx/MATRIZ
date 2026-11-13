@@ -87,8 +87,8 @@ Skill para planear, redactar, revisar, entregar para publicar y medir lo que Emi
 
 Skills: `linkedin-pro`
 
-Último registro: 13 nov 2026 · Estilo de láminas y tono aprobados por Emi · Agente: Claude Code (sesión en la nube)
-Pendiente: texto del post de las láminas, aprobación de Emi y fecha (semana 47).
+Último registro: 13 nov 2026 · Límite del título de documento (58 caracteres) · Agente: Claude Code (sesión en la nube)
+Pendiente: que Emi apruebe el título corto antes de programar la pieza.
 
 ## Tareas programadas
 

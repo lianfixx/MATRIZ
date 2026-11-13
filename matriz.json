@@ -1126,6 +1126,12 @@
           "registro": [
             {
               "fecha": "2026-11-13",
+              "titulo": "Límite del título de documento (58 caracteres)",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "que Emi apruebe el título corto antes de programar la pieza."
+            },
+            {
+              "fecha": "2026-11-13",
               "titulo": "Estilo de láminas y tono aprobados por Emi",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "texto del post de las láminas, aprobación de Emi y fecha (semana 47)."
@@ -1165,12 +1171,6 @@
               "titulo": "Sesión de LinkedIn en box (solo lectura) y línea base del perfil",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "aclarar «Licenciado en Derecho» frente a «Pasante» antes del titular; decisión de Emi sobre sus destacados."
-            },
-            {
-              "fecha": "2026-11-13",
-              "titulo": "Decisiones de Emi, nombres vetados por huella y propuesta de titular",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "repositorio (Muse); título y cédula para el titular; copia de datos de LinkedIn (Profile.csv y Shares.csv); nombres por vetar."
             }
           ],
           "actividad": {
@@ -1192,10 +1192,10 @@
               0,
               0,
               0,
-              17
+              18
             ],
             "actores_60d": {
-              "Claude": 16,
+              "Claude": 17,
               "Emi": 1
             }
           }
@@ -2164,9 +2164,9 @@
           0,
           0,
           9,
-          107
+          108
         ],
-        "esta_semana": 107,
+        "esta_semana": 108,
         "semana_pasada": 9,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2269,11 +2269,11 @@
       153,
       154,
       196,
-      231
+      232
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 265,
+      "Claude": 266,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 7
     },
