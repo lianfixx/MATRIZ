@@ -943,6 +943,12 @@
           "registro": [
             {
               "fecha": "2026-11-13",
+              "titulo": "Ángulos de los cuatro videos, aprobados por Emi",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "guiones y ganchos de Editor Studio; Emi fusiona su PR #9 (lianfixx/VIDEOS-IA-SKILL-MILLA) y reconecta X."
+            },
+            {
+              "fecha": "2026-11-13",
               "titulo": "Panel 0.3: imágenes, videos y PDF por API; análisis automático de inspiración; respuestas a Editor Studio",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "Emi reconecta X (permiso de archivos), crea la llave de Claude automático y la pega en el formulario seguro; conectar LinkedIn."
@@ -982,12 +988,6 @@
               "titulo": "Bitácora de conexiones con X y LinkedIn",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "que Emi reintente «Conectar X» para leer el motivo."
-            },
-            {
-              "fecha": "2026-11-13",
-              "titulo": "Conectar X con OAuth 2.0 + PKCE",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "que Emi conecte X desde Ajustes."
             }
           ],
           "actividad": {
@@ -1009,10 +1009,10 @@
               0,
               0,
               0,
-              29
+              30
             ],
             "actores_60d": {
-              "Claude": 22,
+              "Claude": 23,
               "GitHub Actions": 6,
               "Emi": 1
             }
@@ -2164,9 +2164,9 @@
           0,
           0,
           9,
-          102
+          103
         ],
-        "esta_semana": 102,
+        "esta_semana": 103,
         "semana_pasada": 9,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2269,11 +2269,11 @@
       153,
       154,
       196,
-      224
+      225
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 259,
+      "Claude": 260,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 6
     },
