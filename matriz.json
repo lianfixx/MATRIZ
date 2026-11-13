@@ -672,7 +672,7 @@
           "url": "https://github.com/lianfixx/VIDEOS-IA-SKILL-MILLA",
           "visibilidad": "público",
           "leido": true,
-          "ultimo_cambio": "2026-11-11",
+          "ultimo_cambio": "2026-11-13",
           "resumen": "Un método portable para producir videos de MILLA ABOGADOS: investigación, guion, conexiones, voz, imágenes, música, montaje y revisión. Incluye una skill, instrucciones para otras IAs, utilidades y un compositor nuevo.",
           "skills": [
             {
@@ -694,6 +694,18 @@
           ],
           "protocolo": "1.1.0",
           "registro": [
+            {
+              "fecha": "2026-11-13",
+              "titulo": "Vox Studio 0.13.1: ideas de temas desde la skill de LinkedIn",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "avisar a `linkedin-pro` con fecha y commit; fusionar a `main`."
+            },
+            {
+              "fecha": "2026-11-13",
+              "titulo": "Regla de Emi en las cuatro skills de video: nunca decir que el video lo hizo una IA",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "que Emi suba los paquetes nuevos a la app; fusionar a `main`. Las etiquetas de contenido con IA que piden las plataformas al publicar son decisión aparte de Emi."
+            },
             {
               "fecha": "2026-11-11",
               "titulo": "GitHub corre las pruebas de todas las skills en cada push",
@@ -729,18 +741,6 @@
               "titulo": "Editor Studio 0.1.0 (candidata): skill para editar los videos que Emi graba, cerebro de video y radar semanal",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "ningún video de Emi se ha editado: falta su crudo de piloto y sus referencias. Sin probar: AssemblyAI (falta su llave), un Dolby Vision real de iPhone, video generado con Kling, macOS, y el sticker en un render completo (solo en cuadro de muestra). El estilo de cada espacio sigue como candidato hasta que Emi lo apruebe. Las etiquetas del radar son una semilla de Claude. La tarea programada del radar (domingos 21:23, hora de México) no ha corrido aún y necesita que esta rama esté fusionada. Que X viral e Historias lean los puentes nuevos se hace en sus repositorios. El box no terminó de actualizarse (la orden agotó el tiempo). Fusionar a `main`."
-            },
-            {
-              "fecha": "2026-11-11",
-              "titulo": "Plan de la skill de edición (Editor Studio) y análisis de siete videos de referencia",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "respuestas de Emi a las 45 preguntas; un crudo de prueba; decidir transcripción y forma de recibir los crudos. La comparación Obsidian/Notion se abrió como sesión aparte, a pedido de Emi; no forma parte de este repositorio."
-            },
-            {
-              "fecha": "2026-11-11",
-              "titulo": "Vox Studio 0.12.0: Flow Music como complemento opcional de la música",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "fusionar a `main`; que Emi suba el paquete actualizado a la app."
             }
           ],
           "actividad": {
@@ -762,10 +762,10 @@
               0,
               0,
               9,
-              30
+              33
             ],
             "actores_60d": {
-              "Claude": 37,
+              "Claude": 40,
               "Emi": 5
             }
           }
@@ -943,6 +943,12 @@
           "registro": [
             {
               "fecha": "2026-11-13",
+              "titulo": "X sin candado",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "ninguno nuevo."
+            },
+            {
+              "fecha": "2026-11-13",
               "titulo": "LinkedIn e Instagram ya exponen su estado",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "estado de TikTok."
@@ -982,12 +988,6 @@
               "titulo": "Tablero más limpio y petición a la Matriz General",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "auditoría independiente en curso."
-            },
-            {
-              "fecha": "2026-11-13",
-              "titulo": "Panel conectado a Cloudflare",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "comprobar el despliegue; enlace de alta para Emi."
             }
           ],
           "actividad": {
@@ -1009,11 +1009,11 @@
               0,
               0,
               0,
-              16
+              18
             ],
             "actores_60d": {
-              "GitHub Actions": 3,
-              "Claude": 12,
+              "GitHub Actions": 4,
+              "Claude": 13,
               "Emi": 1
             }
           }
@@ -1930,9 +1930,9 @@
           0,
           0,
           9,
-          83
+          88
         ],
-        "esta_semana": 83,
+        "esta_semana": 88,
         "semana_pasada": 9,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2016,13 +2016,13 @@
       153,
       154,
       196,
-      139
+      144
     ],
     "actores_60d": {
       "Emi": 525,
-      "Claude": 242,
+      "Claude": 246,
       "ChatGPT · Codex": 39,
-      "GitHub Actions": 3
+      "GitHub Actions": 4
     },
     "vencimientos": [
       {

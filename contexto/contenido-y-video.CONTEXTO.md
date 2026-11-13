@@ -21,14 +21,14 @@ Soy Emi (Yohualli Emiliano García Milla). Este es el cerebro «Contenido y vide
 
 ### VIDEOS-IA-SKILL-MILLA (público)
 
-https://github.com/lianfixx/VIDEOS-IA-SKILL-MILLA · último cambio: 11 nov 2026
+https://github.com/lianfixx/VIDEOS-IA-SKILL-MILLA · último cambio: 13 nov 2026
 
 Un método portable para producir videos de MILLA ABOGADOS: investigación, guion, conexiones, voz, imágenes, música, montaje y revisión. Incluye una skill, instrucciones para otras IAs, utilidades y un compositor nuevo.
 
 Skills: `editor-studio`, `milla-video-studio`, `pizarra-studio`, `vox-studio`
 
-Último registro: 11 nov 2026 · GitHub corre las pruebas de todas las skills en cada push · Agente: Claude Code (sesión en la nube)
-Pendiente: mirar que el trabajo `pruebas` salga en verde en el pull request.
+Último registro: 13 nov 2026 · Vox Studio 0.13.1: ideas de temas desde la skill de LinkedIn · Agente: Claude Code (sesión en la nube)
+Pendiente: avisar a `linkedin-pro` con fecha y commit; fusionar a `main`.
 
 ### X (público)
 
@@ -59,8 +59,8 @@ La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, 
 
 Skills: `matriz-redes`
 
-Último registro: 13 nov 2026 · LinkedIn e Instagram ya exponen su estado · Agente: Claude Code (sesión en la nube)
-Pendiente: estado de TikTok.
+Último registro: 13 nov 2026 · X sin candado · Agente: Claude Code (sesión en la nube)
+Pendiente: ninguno nuevo.
 
 ### Instagram (público)
 
