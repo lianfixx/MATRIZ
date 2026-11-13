@@ -4,7 +4,7 @@ Este es el archivo único de la Matriz General: el mapa de todo el trabajo de Em
 
 - Fuente de verdad: https://github.com/lianfixx/MATRIZ (se regenera solo cada día).
 - Panel: https://matriz.milla-abogados.workers.dev · Conector MCP de solo lectura: https://matriz.milla-abogados.workers.dev/mcp
-- 22 repositorios en 7 cerebros, 15 tareas programadas, 17 skills instaladas.
+- 26 repositorios en 7 cerebros, 15 tareas programadas, 17 skills instaladas.
 
 ## Cómo trabajar con Emi (cualquier IA)
 
@@ -55,16 +55,16 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 | Castorena | 4 | 27 | 113 | 0 | 0 | 0 |
 | MILLA ABOGADOS | 5 | 0 | 31 | 9 | 0 | 0 |
 | Acción Tlalnepantla | 1 | 0 | 9 | 9 | 0 | 0 |
-| Contenido y video | 3 | 49 | 9 | 0 | 0 | 0 |
+| Contenido y video | 7 | 83 | 9 | 0 | 0 | 0 |
 | Estudio | 2 | 0 | 24 | 6 | 0 | 0 |
 | Productos | 2 | 0 | 5 | 9 | 0 | 0 |
 | Herramientas | 5 | 29 | 5 | 1 | 0 | 0 |
 
-Quién trabajó en los últimos 60 días (commits): Emi 521, Claude 215, ChatGPT · Codex 39.
+Quién trabajó en los últimos 60 días (commits): Emi 525, Claude 242, ChatGPT · Codex 39, GitHub Actions 3.
 
 Vencimientos: Renovación de la conexión Claude–box el 7 dic 2026; Token de GitHub «MATRIZ lectura» el 9 feb 2027; Token de GitHub «MATRIZ escritura» (edición desde el panel) el 12 nov 2027; Llave de GitHub «Matriz administración (Claude)» el 12 nov 2027; Llave de Cloudflare «Matriz administración (Claude)» el 12 nov 2027.
 
-Avisos: falló «DOF Castorena · lector nocturno» (falló: se alcanzó el límite de uso); repositorio nuevo sin cerebro: emilianomilla-site; repositorio nuevo sin cerebro: Instagram; repositorio nuevo sin cerebro: LinkedIn; repositorio nuevo sin cerebro: REDES; repositorio nuevo sin cerebro: sistemas-digitales; repositorio nuevo sin cerebro: TikTok; repositorio nuevo sin cerebro: vicente-diablo.
+Avisos: falló «DOF Castorena · lector nocturno» (falló: se alcanzó el límite de uso); repositorio nuevo sin cerebro: emilianomilla-site; repositorio nuevo sin cerebro: sistemas-digitales; repositorio nuevo sin cerebro: vicente-diablo.
 
 ## Cerebro: Castorena
 
@@ -137,7 +137,7 @@ Acción Política Juvenil Tlalnepantla (PAN): sitio, formatos, eventos y materia
 
 ## Cerebro: Contenido y video
 
-Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio, X e historias de Instagram.
+Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio, X, Instagram, TikTok, LinkedIn, la matriz de redes (REDES) e historias de Instagram.
 
 ### Repositorios
 
@@ -152,6 +152,20 @@ Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio,
 - **HISTORIAS-** (público) · https://github.com/lianfixx/HISTORIAS- · último cambio 11 nov 2026 · skills: historias-studio
   - Método, motor y memoria para hacer las historias de Instagram de Emi con cualquier IA: la IA pregunta, propone y dibuja; Emi decide.
   - Último: 11 nov 2026 · 0.3.0 · candidato · agente no consta
+- **REDES** (público) · https://github.com/lianfixx/REDES · último cambio 13 nov 2026 · skills: matriz-redes
+  - La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, Instagram) y de video (Vox Studio, Pizarra Studio, Editor Studio, MILLA Video Studio, Historias Studio). Registra las ideas, decide en qué red y formato sale cada una, arma el calendario de todas…
+  - Último: 13 nov 2026 · LinkedIn e Instagram ya exponen su estado · Claude Code (sesión en la nube)
+  - Pendiente: estado de TikTok.
+- **Instagram** (público) · https://github.com/lianfixx/Instagram · último cambio 13 nov 2026 · skills: instagram-studio
+  - Skill para planear, redactar, revisar, entregar para publicar y medir los Reels, publicaciones del feed y carruseles de la cuenta personal de Emi en Instagram. Pilares: IA + Derecho en México, estilo de vida y gym y opinión política. Sirve en cualquier IA.
+  - Último: 13 nov 2026 · instagram-studio 1.0.1: correcciones de la auditoría independiente · Claude Code (sesión en la nube)
+  - Pendiente: - Avisar a Emi y a Matriz de Redes que el Reel de Vox necesita la voz de Emi o la etiqueta.
+- **TikTok** (público) · https://github.com/lianfixx/TikTok · último cambio 12 nov 2026
+  - Skill de TikTok de Emi: estrategia, publicación y medición
+- **LinkedIn** (público) · https://github.com/lianfixx/LinkedIn · último cambio 13 nov 2026 · skills: linkedin-pro
+  - Skill para planear, redactar, revisar, entregar para publicar y medir lo que Emi publica en su perfil personal de LinkedIn (linkedin.com/in/emiliano-milla). Sirve en cualquier IA.
+  - Último: 13 nov 2026 · Claude publica con el sí final de Emi; petición a Vox enviada · Claude Code (sesión en la nube)
+  - Pendiente: archivo MP4 del video del DOF para publicarlo; que Vox Studio aplique la petición.
 
 ### Tareas programadas
 

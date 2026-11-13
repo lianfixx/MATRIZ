@@ -665,7 +665,7 @@
     {
       "id": "contenido-y-video",
       "nombre": "Contenido y video",
-      "descripcion": "Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio, X e historias de Instagram.",
+      "descripcion": "Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio, X, Instagram, TikTok, LinkedIn, la matriz de redes (REDES) e historias de Instagram.",
       "repos": [
         {
           "nombre": "VIDEOS-IA-SKILL-MILLA",
@@ -923,6 +923,280 @@
             ],
             "actores_60d": {
               "Claude": 7
+            }
+          }
+        },
+        {
+          "nombre": "REDES",
+          "url": "https://github.com/lianfixx/REDES",
+          "visibilidad": "público",
+          "leido": true,
+          "ultimo_cambio": "2026-11-13",
+          "resumen": "La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, Instagram) y de video (Vox Studio, Pizarra Studio, Editor Studio, MILLA Video Studio, Historias Studio). Registra las ideas, decide en qué red y formato sale cada una, arma el calendario de todas…",
+          "skills": [
+            {
+              "nombre": "matriz-redes",
+              "ruta": "skills/matriz-redes/SKILL.md"
+            }
+          ],
+          "protocolo": "1.1.0",
+          "registro": [
+            {
+              "fecha": "2026-11-13",
+              "titulo": "LinkedIn e Instagram ya exponen su estado",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "estado de TikTok."
+            },
+            {
+              "fecha": "2026-11-13",
+              "titulo": "Piezas que se publican desde la app y texto de LinkedIn de Emi",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "cargar en el panel las piezas de LinkedIn (DOF) y de X (lanzamiento A y B, DOF)."
+            },
+            {
+              "fecha": "2026-11-13",
+              "titulo": "Instagram: etiqueta de IA y Reel de Vox con la voz de Emi",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "que Emi confirme la voz del Reel 4."
+            },
+            {
+              "fecha": "2026-11-13",
+              "titulo": "Auditoría independiente: 16 hallazgos y 8 menores corregidos",
+              "agente": "Claude Code (sesión en la nube); revisor: agente independiente sin el contexto de quien construyó.",
+              "pendiente": "probar con llaves reales de X y LinkedIn (las pone Emi)."
+            },
+            {
+              "fecha": "2026-11-13",
+              "titulo": "Crecer: correcciones de Instagram con fuente oficial",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": ""
+            },
+            {
+              "fecha": "2026-11-13",
+              "titulo": "Contraseña del panel: PBKDF2 a 100 000 vueltas",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "repetir la auditoría completa."
+            },
+            {
+              "fecha": "2026-11-13",
+              "titulo": "Tablero más limpio y petición a la Matriz General",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "auditoría independiente en curso."
+            },
+            {
+              "fecha": "2026-11-13",
+              "titulo": "Panel conectado a Cloudflare",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "comprobar el despliegue; enlace de alta para Emi."
+            }
+          ],
+          "actividad": {
+            "semanas": [
+              "2026-09-21",
+              "2026-09-28",
+              "2026-10-05",
+              "2026-10-12",
+              "2026-10-19",
+              "2026-10-26",
+              "2026-11-02",
+              "2026-11-09"
+            ],
+            "commits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              16
+            ],
+            "actores_60d": {
+              "GitHub Actions": 3,
+              "Claude": 12,
+              "Emi": 1
+            }
+          }
+        },
+        {
+          "nombre": "Instagram",
+          "url": "https://github.com/lianfixx/Instagram",
+          "visibilidad": "público",
+          "leido": true,
+          "ultimo_cambio": "2026-11-13",
+          "resumen": "Skill para planear, redactar, revisar, entregar para publicar y medir los Reels, publicaciones del feed y carruseles de la cuenta personal de Emi en Instagram. Pilares: IA + Derecho en México, estilo de vida y gym y opinión política. Sirve en cualquier IA.",
+          "skills": [
+            {
+              "nombre": "instagram-studio",
+              "ruta": "skills/instagram-studio/SKILL.md"
+            }
+          ],
+          "protocolo": "1.1.0",
+          "registro": [
+            {
+              "fecha": "2026-11-13",
+              "titulo": "instagram-studio 1.0.1: correcciones de la auditoría independiente",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "- Avisar a Emi y a Matriz de Redes que el Reel de Vox necesita la voz de Emi o la etiqueta."
+            },
+            {
+              "fecha": "2026-11-13",
+              "titulo": "instagram-studio 1.0.0: primera versión",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "- Emi: crear la cuenta de creador y pasar el usuario."
+            }
+          ],
+          "actividad": {
+            "semanas": [
+              "2026-09-21",
+              "2026-09-28",
+              "2026-10-05",
+              "2026-10-12",
+              "2026-10-19",
+              "2026-10-26",
+              "2026-11-02",
+              "2026-11-09"
+            ],
+            "commits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              4
+            ],
+            "actores_60d": {
+              "Claude": 3,
+              "Emi": 1
+            }
+          }
+        },
+        {
+          "nombre": "TikTok",
+          "url": "https://github.com/lianfixx/TikTok",
+          "visibilidad": "público",
+          "leido": true,
+          "ultimo_cambio": "2026-11-12",
+          "resumen": "Skill de TikTok de Emi: estrategia, publicación y medición",
+          "skills": [],
+          "protocolo": "",
+          "registro": [],
+          "actividad": {
+            "semanas": [
+              "2026-09-21",
+              "2026-09-28",
+              "2026-10-05",
+              "2026-10-12",
+              "2026-10-19",
+              "2026-10-26",
+              "2026-11-02",
+              "2026-11-09"
+            ],
+            "commits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "actores_60d": {
+              "Emi": 1
+            }
+          }
+        },
+        {
+          "nombre": "LinkedIn",
+          "url": "https://github.com/lianfixx/LinkedIn",
+          "visibilidad": "público",
+          "leido": true,
+          "ultimo_cambio": "2026-11-13",
+          "resumen": "Skill para planear, redactar, revisar, entregar para publicar y medir lo que Emi publica en su perfil personal de LinkedIn (linkedin.com/in/emiliano-milla). Sirve en cualquier IA.",
+          "skills": [
+            {
+              "nombre": "linkedin-pro",
+              "ruta": "skills/linkedin-pro/SKILL.md"
+            }
+          ],
+          "protocolo": "1.1.0",
+          "registro": [
+            {
+              "fecha": "2026-11-13",
+              "titulo": "Claude publica con el sí final de Emi; petición a Vox enviada",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "archivo MP4 del video del DOF para publicarlo; que Vox Studio aplique la petición."
+            },
+            {
+              "fecha": "2026-11-13",
+              "titulo": "Tarea semanal de revisión de fuentes",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "ver si la primera ejecución puede subir a `main`; si no, añadir `lianfixx/linkedin` al entorno de la tarea."
+            },
+            {
+              "fecha": "2026-11-13",
+              "titulo": "Publicación en GitHub",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "ver la entrada de arriba."
+            },
+            {
+              "fecha": "2026-11-13",
+              "titulo": "Sesión de LinkedIn en box (solo lectura) y línea base del perfil",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "aclarar «Licenciado en Derecho» frente a «Pasante» antes del titular; decisión de Emi sobre sus destacados."
+            },
+            {
+              "fecha": "2026-11-13",
+              "titulo": "Decisiones de Emi, nombres vetados por huella y propuesta de titular",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "repositorio (Muse); título y cédula para el titular; copia de datos de LinkedIn (Profile.csv y Shares.csv); nombres por vetar."
+            },
+            {
+              "fecha": "2026-11-13",
+              "titulo": "Segunda pasada de la auditoría",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "los de la entrada «correcciones de la auditoría»."
+            },
+            {
+              "fecha": "2026-11-13",
+              "titulo": "Regla de Emi sobre la IA y post del video del DOF",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "que Emi elija el texto, lo publique y mande el enlace; láminas de la campaña."
+            },
+            {
+              "fecha": "2026-11-13",
+              "titulo": "linkedin-pro 1.0.0: correcciones de la auditoría independiente",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "(a) Emi: crear `lianfixx/LinkedIn` y autorizar a la sesión a conectarlo. (b) Emi: confirmar la lectura semanal de páginas públicas de LinkedIn por la tarea de fuentes, el sello automático en `main` y que sus métricas vayan en el repositorio público. (c) Emi: capturas del perfil completo, nombres vetados en `cuenta/privado/nombres-vetados.txt` (archivo local, no se sube) y respuestas de la campaña de lanzamiento. (d) Crear la tarea semanal de fuentes cuando exista el repositorio. (e) Enviar a Vox Studio `puente/PETICION-vox.md` si Emi lo autoriza."
+            }
+          ],
+          "actividad": {
+            "semanas": [
+              "2026-09-21",
+              "2026-09-28",
+              "2026-10-05",
+              "2026-10-12",
+              "2026-10-19",
+              "2026-10-26",
+              "2026-11-02",
+              "2026-11-09"
+            ],
+            "commits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              13
+            ],
+            "actores_60d": {
+              "Claude": 12,
+              "Emi": 1
             }
           }
         }
@@ -1577,29 +1851,9 @@
       "creado": "2026-11-12"
     },
     {
-      "nombre": "Instagram",
-      "visibilidad": "público",
-      "creado": "2026-11-13"
-    },
-    {
-      "nombre": "LinkedIn",
-      "visibilidad": "público",
-      "creado": "2026-11-13"
-    },
-    {
-      "nombre": "REDES",
-      "visibilidad": "público",
-      "creado": "2026-11-13"
-    },
-    {
       "nombre": "sistemas-digitales",
       "visibilidad": "público",
       "creado": "2026-11-12"
-    },
-    {
-      "nombre": "TikTok",
-      "visibilidad": "público",
-      "creado": "2026-11-13"
     },
     {
       "nombre": "vicente-diablo",
@@ -1676,14 +1930,14 @@
           0,
           0,
           9,
-          49
+          83
         ],
-        "esta_semana": 49,
+        "esta_semana": 83,
         "semana_pasada": 9,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
-        "pendientes_de_repos": 2,
+        "pendientes_de_repos": 5,
         "tareas_falladas": 0
       },
       "estudio": {
@@ -1762,12 +2016,13 @@
       153,
       154,
       196,
-      105
+      139
     ],
     "actores_60d": {
-      "Emi": 521,
-      "Claude": 215,
-      "ChatGPT · Codex": 39
+      "Emi": 525,
+      "Claude": 242,
+      "ChatGPT · Codex": 39,
+      "GitHub Actions": 3
     },
     "vencimientos": [
       {

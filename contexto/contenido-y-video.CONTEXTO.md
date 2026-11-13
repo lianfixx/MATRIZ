@@ -6,7 +6,7 @@ generado: "tools/generar.py · no editar a mano: se reescribe cada día"
 
 # Contexto para cualquier IA · Contenido y video
 
-Soy Emi (Yohualli Emiliano García Milla). Este es el cerebro «Contenido y video» de mi Matriz General (https://github.com/lianfixx/MATRIZ · https://matriz.milla-abogados.workers.dev). Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio, X e historias de Instagram.
+Soy Emi (Yohualli Emiliano García Milla). Este es el cerebro «Contenido y video» de mi Matriz General (https://github.com/lianfixx/MATRIZ · https://matriz.milla-abogados.workers.dev). Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio, X, Instagram, TikTok, LinkedIn, la matriz de redes (REDES) e historias de Instagram.
 
 ## Cómo trabajar
 
@@ -50,6 +50,45 @@ Método, motor y memoria para hacer las historias de Instagram de Emi con cualqu
 Skills: `historias-studio`
 
 Último registro: 11 nov 2026 · 0.3.0 · candidato · Agente: no consta
+
+### REDES (público)
+
+https://github.com/lianfixx/REDES · último cambio: 13 nov 2026
+
+La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, Instagram) y de video (Vox Studio, Pizarra Studio, Editor Studio, MILLA Video Studio, Historias Studio). Registra las ideas, decide en qué red y formato sale cada una, arma el calendario de todas…
+
+Skills: `matriz-redes`
+
+Último registro: 13 nov 2026 · LinkedIn e Instagram ya exponen su estado · Agente: Claude Code (sesión en la nube)
+Pendiente: estado de TikTok.
+
+### Instagram (público)
+
+https://github.com/lianfixx/Instagram · último cambio: 13 nov 2026
+
+Skill para planear, redactar, revisar, entregar para publicar y medir los Reels, publicaciones del feed y carruseles de la cuenta personal de Emi en Instagram. Pilares: IA + Derecho en México, estilo de vida y gym y opinión política. Sirve en cualquier IA.
+
+Skills: `instagram-studio`
+
+Último registro: 13 nov 2026 · instagram-studio 1.0.1: correcciones de la auditoría independiente · Agente: Claude Code (sesión en la nube)
+Pendiente: - Avisar a Emi y a Matriz de Redes que el Reel de Vox necesita la voz de Emi o la etiqueta.
+
+### TikTok (público)
+
+https://github.com/lianfixx/TikTok · último cambio: 12 nov 2026
+
+Skill de TikTok de Emi: estrategia, publicación y medición
+
+### LinkedIn (público)
+
+https://github.com/lianfixx/LinkedIn · último cambio: 13 nov 2026
+
+Skill para planear, redactar, revisar, entregar para publicar y medir lo que Emi publica en su perfil personal de LinkedIn (linkedin.com/in/emiliano-milla). Sirve en cualquier IA.
+
+Skills: `linkedin-pro`
+
+Último registro: 13 nov 2026 · Claude publica con el sí final de Emi; petición a Vox enviada · Agente: Claude Code (sesión en la nube)
+Pendiente: archivo MP4 del video del DOF para publicarlo; que Vox Studio aplique la petición.
 
 ## Tareas programadas
 
