@@ -787,6 +787,12 @@
           "registro": [
             {
               "fecha": "2026-11-13",
+              "titulo": "API de X conectada al panel",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "créditos y tope de gasto en la consola; aprobar el lanzamiento en el panel y hacer la primera publicación con Emi mirando."
+            },
+            {
+              "fecha": "2026-11-13",
               "titulo": "Cuenta de X abierta",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "nombre con acento y sitio web en el perfil; aprobación del lanzamiento en el panel."
@@ -826,12 +832,6 @@
               "titulo": "Skills hermanas para LinkedIn, TikTok e Instagram",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "crear los tres repositorios vacíos."
-            },
-            {
-              "fecha": "2026-11-11",
-              "titulo": "Skill 1.0.3 instalada en Claude",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "cierra el punto (b) de la entrada 1.0.3. Siguen (a) y (c)."
             }
           ],
           "actividad": {
@@ -853,10 +853,10 @@
               0,
               0,
               0,
-              13
+              14
             ],
             "actores_60d": {
-              "Claude": 13
+              "Claude": 14
             }
           }
         },
@@ -2162,9 +2162,9 @@
           0,
           0,
           9,
-          96
+          97
         ],
-        "esta_semana": 96,
+        "esta_semana": 97,
         "semana_pasada": 9,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2267,11 +2267,11 @@
       153,
       154,
       196,
-      217
+      218
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 253,
+      "Claude": 254,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 5
     },
