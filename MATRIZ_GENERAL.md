@@ -4,7 +4,7 @@ Este es el archivo único de la Matriz General: el mapa de todo el trabajo de Em
 
 - Fuente de verdad: https://github.com/lianfixx/MATRIZ (se regenera solo cada día).
 - Panel: https://matriz.milla-abogados.workers.dev · Conector MCP de solo lectura: https://matriz.milla-abogados.workers.dev/mcp
-- 26 repositorios en 7 cerebros, 15 tareas programadas, 17 skills instaladas.
+- 29 repositorios en 8 cerebros, 15 tareas programadas, 17 skills instaladas.
 
 ## Cómo trabajar con Emi (cualquier IA)
 
@@ -31,6 +31,7 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 | Estudio | Maestría en Alta Dirección y pizarras de estudio. |
 | Productos | PANEL FIRMA (gestión jurídica) y Mes (finanzas personales). |
 | Herramientas | Su estilo de escritura, el selector de modelo, el entorno de Cloudflare, su computadora virtual (Simular Box) e ingeniería inversa (REA). |
+| Sitios web | Sus sitios ya publicados: página personal, Sistemas Digitales y Vicente Diablo (música en vivo). |
 
 ### Con qué trabaja
 
@@ -59,12 +60,13 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 | Estudio | 2 | 0 | 24 | 6 | 0 | 0 |
 | Productos | 2 | 0 | 5 | 9 | 0 | 0 |
 | Herramientas | 5 | 29 | 5 | 1 | 0 | 0 |
+| Sitios web | 3 | 65 | 0 | 1 | 0 | 0 |
 
-Quién trabajó en los últimos 60 días (commits): Emi 525, Claude 247, ChatGPT · Codex 39, GitHub Actions 4.
+Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 247, ChatGPT · Codex 39, GitHub Actions 4.
 
 Vencimientos: Renovación de la conexión Claude–box el 7 dic 2026; Token de GitHub «MATRIZ lectura» el 9 feb 2027; Token de GitHub «MATRIZ escritura» (edición desde el panel) el 12 nov 2027; Llave de GitHub «Matriz administración (Claude)» el 12 nov 2027; Llave de Cloudflare «Matriz administración (Claude)» el 12 nov 2027.
 
-Avisos: falló «DOF Castorena · lector nocturno» (falló: se alcanzó el límite de uso); repositorio nuevo sin cerebro: emilianomilla-site; repositorio nuevo sin cerebro: sistemas-digitales; repositorio nuevo sin cerebro: vicente-diablo.
+Avisos: falló «DOF Castorena · lector nocturno» (falló: se alcanzó el límite de uso).
 
 ## Cerebro: Castorena
 
@@ -234,6 +236,25 @@ Piezas que sirven a todos los cerebros: estilo de Emi, selector de modelo, entor
 - `selector-de-modelo` · `selector-modelos`
 - `box-simular` · `box-simular`
 - `rea-ingenieria-inversa` · `rea-ingenieria-inversa`
+
+## Cerebro: Sitios web
+
+Sitios web de Emi ya publicados que se recuperan y mantienen: su página personal (emilianomilla.site), Sistemas Digitales y Vicente Diablo (música en vivo).
+
+### Repositorios
+
+- **emilianomilla-site** (público) · https://github.com/lianfixx/emilianomilla-site · último cambio 12 nov 2026
+  - Sitio público: https://emilianomilla.site
+  - Último: 12 nov 2026 · Inicialización documental del repositorio · ChatGPT (GPT-6)
+  - Pendiente: inventariar fuentes y recursos originales; recuperar o reconstruir implementación con evidencia; añadir pruebas.
+- **sistemas-digitales** (público) · https://github.com/lianfixx/sistemas-digitales · último cambio 12 nov 2026
+  - Sitio público: https://emiliano-milla.emilianomilla.chatgpt.site
+  - Último: 12 nov 2026 · Inicialización documental del repositorio · ChatGPT (GPT-6)
+  - Pendiente: inventariar fuentes y recursos originales; recuperar o reconstruir implementación con evidencia; añadir pruebas.
+- **vicente-diablo** (público) · https://github.com/lianfixx/vicente-diablo · último cambio 12 nov 2026
+  - Sitio público: https://vicente-diablo.emilianomilla.chatgpt.site
+  - Último: 12 nov 2026 · Inicialización documental del repositorio · ChatGPT (GPT-6)
+  - Pendiente: inventariar fuentes y recursos originales; recuperar o reconstruir implementación con evidencia; añadir pruebas.
 
 ## Cómo se mantiene sola
 

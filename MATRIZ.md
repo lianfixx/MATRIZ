@@ -8,7 +8,7 @@ generado: "tools/generar.py · no editar a mano: se reescribe cada día"
 
 # Matriz General
 
-26 repositorios en 7 cerebros · actualizada el 13 nov 2026.
+29 repositorios en 8 cerebros · actualizada el 13 nov 2026.
 
 Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel: https://matriz.milla-abogados.workers.dev
 
@@ -23,6 +23,7 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 | [[Estudio]] | 2 | 0 commits | 6 días | 0 | Maestría en Alta Dirección y pizarras de estudio. |
 | [[Productos]] | 2 | 0 commits | 9 días | 0 | Productos propios de Emi: PANEL FIRMA (gestión jurídica) y Mes (finanzas personales). |
 | [[Herramientas]] | 5 | 29 commits | 1 días | 0 | Piezas que sirven a todos los cerebros: estilo de Emi, selector de modelo, entorno de Cloudflare, computadora virtual (Simular Box) e ingeniería inversa. |
+| [[Sitios web]] | 3 | 65 commits | 1 días | 0 | Sitios web de Emi ya publicados que se recuperan y mantienen: su página personal (emilianomilla.site), Sistemas Digitales y Vicente Diablo (música en vivo). |
 
 ## Lo último que se hizo
 
@@ -36,14 +37,6 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 - 13 nov 2026 · **REDES** · Piezas que se publican desde la app y texto de LinkedIn de Emi · Agente: Claude Code (sesión en la nube)
 - 13 nov 2026 · **Instagram** · instagram-studio 1.0.1: correcciones de la auditoría independiente · Agente: Claude Code (sesión en la nube)
 - 13 nov 2026 · **Instagram** · instagram-studio 1.0.0: primera versión · Agente: Claude Code (sesión en la nube)
-
-## Repositorios nuevos por clasificar
-
-- `emilianomilla-site` · público · creado el 12 nov 2026
-- `sistemas-digitales` · público · creado el 12 nov 2026
-- `vicente-diablo` · público · creado el 12 nov 2026
-
-La revisión semanal los asigna a su cerebro; si alguno es dudoso, le pregunta a Emi.
 
 ## Vencimientos
 
@@ -66,4 +59,4 @@ Skills en un repositorio pero no instaladas en Claude: `editor-studio`, `histori
 
 ## Visibilidad
 
-16 públicos y 10 privados. Cualquier persona puede leer los públicos.
+19 públicos y 10 privados. Cualquier persona puede leer los públicos.

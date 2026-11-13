@@ -1607,6 +1607,254 @@
         "pendientes": [],
         "notas": []
       }
+    },
+    {
+      "id": "sitios-web",
+      "nombre": "Sitios web",
+      "descripcion": "Sitios web de Emi ya publicados que se recuperan y mantienen: su página personal (emilianomilla.site), Sistemas Digitales y Vicente Diablo (música en vivo).",
+      "repos": [
+        {
+          "nombre": "emilianomilla-site",
+          "url": "https://github.com/lianfixx/emilianomilla-site",
+          "visibilidad": "público",
+          "leido": true,
+          "ultimo_cambio": "2026-11-12",
+          "resumen": "Sitio público: https://emilianomilla.site",
+          "skills": [],
+          "protocolo": "1.1.0",
+          "registro": [
+            {
+              "fecha": "2026-11-12",
+              "titulo": "Inicialización documental del repositorio",
+              "agente": "ChatGPT (GPT-6)",
+              "pendiente": "inventariar fuentes y recursos originales; recuperar o reconstruir implementación con evidencia; añadir pruebas."
+            },
+            {
+              "fecha": "2026-11-12",
+              "titulo": "Primera reconstrucción del portafolio público",
+              "agente": "ChatGPT (GPT-6)",
+              "pendiente": "recuperar imágenes y documentos a almacenamiento local, contrastar todas las secciones con la versión pública y completar traducción EN."
+            },
+            {
+              "fecha": "2026-11-12",
+              "titulo": "Documentación de inspección pública",
+              "agente": "ChatGPT (GPT-6)",
+              "pendiente": "resolver las fuentes originales, assets y pruebas indicadas en el informe."
+            },
+            {
+              "fecha": "2026-11-12",
+              "titulo": "Protección de archivos privados",
+              "agente": "ChatGPT (GPT-6)",
+              "pendiente": "ejecutar escáner de secretos y configurar variables protegidas si se incorporan integraciones reales."
+            },
+            {
+              "fecha": "2026-11-12",
+              "titulo": "README actualizado",
+              "agente": "ChatGPT (GPT-6)",
+              "pendiente": "validar en navegador y completar recuperación de activos originales."
+            }
+          ],
+          "actividad": {
+            "semanas": [
+              "2026-09-21",
+              "2026-09-28",
+              "2026-10-05",
+              "2026-10-12",
+              "2026-10-19",
+              "2026-10-26",
+              "2026-11-02",
+              "2026-11-09"
+            ],
+            "commits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              14
+            ],
+            "actores_60d": {
+              "Emi": 14
+            }
+          }
+        },
+        {
+          "nombre": "sistemas-digitales",
+          "url": "https://github.com/lianfixx/sistemas-digitales",
+          "visibilidad": "público",
+          "leido": true,
+          "ultimo_cambio": "2026-11-12",
+          "resumen": "Sitio público: https://emiliano-milla.emilianomilla.chatgpt.site",
+          "skills": [],
+          "protocolo": "1.1.0",
+          "registro": [
+            {
+              "fecha": "2026-11-12",
+              "titulo": "Inicialización documental del repositorio",
+              "agente": "ChatGPT (GPT-6)",
+              "pendiente": "inventariar fuentes y recursos originales; recuperar o reconstruir implementación con evidencia; añadir pruebas."
+            },
+            {
+              "fecha": "2026-11-12",
+              "titulo": "Reconstrucción inicial de la landing comercial",
+              "agente": "ChatGPT (GPT-6)",
+              "pendiente": "recuperar el texto legal íntegro, rutas originales de contratación/privacidad, assets y confirmar precios vigentes antes de producción."
+            },
+            {
+              "fecha": "2026-11-12",
+              "titulo": "Asistente y condiciones del servicio",
+              "agente": "ChatGPT (GPT-6)",
+              "pendiente": "recuperar el aviso de privacidad completo y el flujo de contratación; confirmar si la versión pública sigue vigente."
+            },
+            {
+              "fecha": "2026-11-12",
+              "titulo": "Documentación de inspección pública",
+              "agente": "ChatGPT (GPT-6)",
+              "pendiente": "resolver las fuentes originales, assets y pruebas indicadas en el informe."
+            },
+            {
+              "fecha": "2026-11-12",
+              "titulo": "Aviso de privacidad y solicitud de plan",
+              "agente": "ChatGPT (GPT-6)",
+              "pendiente": "validar vigencia del aviso y condiciones, verificar links y comparar visualmente."
+            },
+            {
+              "fecha": "2026-11-12",
+              "titulo": "Enlaces internos de contratación y asistente",
+              "agente": "ChatGPT (GPT-6)",
+              "pendiente": "probar rutas y parámetros de plan."
+            },
+            {
+              "fecha": "2026-11-12",
+              "titulo": "Protección de archivos privados",
+              "agente": "ChatGPT (GPT-6)",
+              "pendiente": "ejecutar escáner de secretos y configurar variables protegidas si se incorporan integraciones reales."
+            },
+            {
+              "fecha": "2026-11-12",
+              "titulo": "README actualizado",
+              "agente": "ChatGPT (GPT-6)",
+              "pendiente": "validar en navegador y completar recuperación de activos originales."
+            }
+          ],
+          "actividad": {
+            "semanas": [
+              "2026-09-21",
+              "2026-09-28",
+              "2026-10-05",
+              "2026-10-12",
+              "2026-10-19",
+              "2026-10-26",
+              "2026-11-02",
+              "2026-11-09"
+            ],
+            "commits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              24
+            ],
+            "actores_60d": {
+              "Emi": 24
+            }
+          }
+        },
+        {
+          "nombre": "vicente-diablo",
+          "url": "https://github.com/lianfixx/vicente-diablo",
+          "visibilidad": "público",
+          "leido": true,
+          "ultimo_cambio": "2026-11-12",
+          "resumen": "Sitio público: https://vicente-diablo.emilianomilla.chatgpt.site",
+          "skills": [],
+          "protocolo": "1.1.0",
+          "registro": [
+            {
+              "fecha": "2026-11-12",
+              "titulo": "Inicialización documental del repositorio",
+              "agente": "ChatGPT (GPT-6)",
+              "pendiente": "inventariar fuentes y recursos originales; recuperar o reconstruir implementación con evidencia; añadir pruebas."
+            },
+            {
+              "fecha": "2026-11-12",
+              "titulo": "Reconstrucción inicial de la portada pública",
+              "agente": "ChatGPT (GPT-6)",
+              "pendiente": "construir rutas de contratación, apoyo, EPK y páginas legales a partir de textos originales completos; recuperar activos originales y validar con el responsable."
+            },
+            {
+              "fecha": "2026-11-12",
+              "titulo": "Rutas de contratación, apoyo y EPK",
+              "agente": "ChatGPT (GPT-6)",
+              "pendiente": "incorporar textos legales originales íntegros, confirmar biografía con artista/equipo, validar formularios y revisar rutas antes de despliegue."
+            },
+            {
+              "fecha": "2026-11-12",
+              "titulo": "Corrección de enlaces legales",
+              "agente": "ChatGPT (GPT-6)",
+              "pendiente": "recuperar versiones legales completas y alojarlas localmente solo después de validarlas."
+            },
+            {
+              "fecha": "2026-11-12",
+              "titulo": "Documentación de inspección pública",
+              "agente": "ChatGPT (GPT-6)",
+              "pendiente": "resolver las fuentes originales, assets y pruebas indicadas en el informe."
+            },
+            {
+              "fecha": "2026-11-12",
+              "titulo": "Protección de archivos privados",
+              "agente": "ChatGPT (GPT-6)",
+              "pendiente": "ejecutar escáner de secretos y configurar variables protegidas si se incorporan integraciones reales."
+            },
+            {
+              "fecha": "2026-11-12",
+              "titulo": "Documentos legales públicos y navegación local",
+              "agente": "ChatGPT (GPT-6)",
+              "pendiente": "confirmar identidad/domicilio/contacto del prestador antes de habilitar solicitudes o cobros; mantener pagos deshabilitados."
+            },
+            {
+              "fecha": "2026-11-12",
+              "titulo": "README actualizado",
+              "agente": "ChatGPT (GPT-6)",
+              "pendiente": "validar en navegador y completar recuperación de activos originales."
+            }
+          ],
+          "actividad": {
+            "semanas": [
+              "2026-09-21",
+              "2026-09-28",
+              "2026-10-05",
+              "2026-10-12",
+              "2026-10-19",
+              "2026-10-26",
+              "2026-11-02",
+              "2026-11-09"
+            ],
+            "commits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              27
+            ],
+            "actores_60d": {
+              "Emi": 27
+            }
+          }
+        }
+      ],
+      "tablero": {
+        "pendientes": [],
+        "notas": []
+      }
     }
   ],
   "inventario": {
@@ -1844,23 +2092,7 @@
       }
     ]
   },
-  "por_clasificar": [
-    {
-      "nombre": "emilianomilla-site",
-      "visibilidad": "público",
-      "creado": "2026-11-12"
-    },
-    {
-      "nombre": "sistemas-digitales",
-      "visibilidad": "público",
-      "creado": "2026-11-12"
-    },
-    {
-      "nombre": "vicente-diablo",
-      "visibilidad": "público",
-      "creado": "2026-11-12"
-    }
-  ],
+  "por_clasificar": [],
   "proyectos": [],
   "metricas": {
     "cerebros": {
@@ -1996,6 +2228,25 @@
         "pendientes_vencidos": 0,
         "pendientes_de_repos": 0,
         "tareas_falladas": 0
+      },
+      "sitios-web": {
+        "semanas": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          65
+        ],
+        "esta_semana": 65,
+        "semana_pasada": 0,
+        "dias_sin_movimiento": 1,
+        "pendientes_abiertos": 0,
+        "pendientes_vencidos": 0,
+        "pendientes_de_repos": 3,
+        "tareas_falladas": 0
       }
     },
     "semanas": [
@@ -2016,10 +2267,10 @@
       153,
       154,
       196,
-      145
+      210
     ],
     "actores_60d": {
-      "Emi": 525,
+      "Emi": 590,
       "Claude": 247,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 4
