@@ -4,9 +4,9 @@ cerebro: "Contenido y video"
 visibilidad: "público"
 ultimo_cambio: 2026-11-13
 skills: 1
-commits_8_semanas: 12
+commits_8_semanas: 13
 ultimo_agente: "Claude Code (sesión en la nube)"
-pendiente: "que Emi confirme el ajuste «Proteger tus posts» en su teléfono; nombre con acento y sitio web."
+pendiente: "nombre con acento y sitio web en el perfil; aprobación del lanzamiento en el panel."
 github: "https://github.com/lianfixx/X"
 tags:
   - "repo"
@@ -28,12 +28,12 @@ Skill para planear, redactar, revisar, publicar con aprobación (API oficial de 
 
 ## Últimos registros
 
+- 13 nov 2026 · Cuenta de X abierta · Agente: Claude Code (sesión en la nube)
 - 13 nov 2026 · Perfil de X revisado: bio y categoría puestas, candado aún visible · Agente: Claude Code (sesión en la nube)
 - 13 nov 2026 · Regla: nunca decir que lo hizo una IA · Agente: Claude Code (sesión en la nube)
 - 13 nov 2026 · x-viral 1.1.0: publicación por la API oficial, perfil y administración · Agente: Claude Code (sesión en la nube)
 - 13 nov 2026 · Coordinación con la Matriz de Redes y campaña de lanzamiento · Agente: Claude Code (sesión en la nube)
-- 13 nov 2026 · Perfil público propuesto y Matriz de Redes · Agente: Claude Code (sesión en la nube)
 
 ## Pendiente más reciente
 
-que Emi confirme el ajuste «Proteger tus posts» en su teléfono; nombre con acento y sitio web.
+nombre con acento y sitio web en el perfil; aprobación del lanzamiento en el panel.

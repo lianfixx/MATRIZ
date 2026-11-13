@@ -787,6 +787,12 @@
           "registro": [
             {
               "fecha": "2026-11-13",
+              "titulo": "Cuenta de X abierta",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "nombre con acento y sitio web en el perfil; aprobación del lanzamiento en el panel."
+            },
+            {
+              "fecha": "2026-11-13",
               "titulo": "Perfil de X revisado: bio y categoría puestas, candado aún visible",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "que Emi confirme el ajuste «Proteger tus posts» en su teléfono; nombre con acento y sitio web."
@@ -826,12 +832,6 @@
               "titulo": "Skill 1.0.3 instalada en Claude",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "cierra el punto (b) de la entrada 1.0.3. Siguen (a) y (c)."
-            },
-            {
-              "fecha": "2026-11-11",
-              "titulo": "x-viral 1.0.3: X bloquea el inicio de sesión; Emi publica, la IA entrega",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "(a) Emi: revisar sus 24 posts y quitar la protección desde su teléfono; pasar la fecha exacta de «Se unió» y el número de seguidores; decidir Premium. (b) Volver a instalar en Claude la versión 1.0.3 de la skill (la instalada es la 1.0.2 y aún habla de programar desde box). (c) Primera semana el 16/11/2026."
             }
           ],
           "actividad": {
@@ -853,10 +853,10 @@
               0,
               0,
               0,
-              12
+              13
             ],
             "actores_60d": {
-              "Claude": 12
+              "Claude": 13
             }
           }
         },
@@ -1930,9 +1930,9 @@
           0,
           0,
           9,
-          88
+          89
         ],
-        "esta_semana": 88,
+        "esta_semana": 89,
         "semana_pasada": 9,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2016,11 +2016,11 @@
       153,
       154,
       196,
-      144
+      145
     ],
     "actores_60d": {
       "Emi": 525,
-      "Claude": 246,
+      "Claude": 247,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 4
     },
