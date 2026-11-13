@@ -4,7 +4,7 @@ cerebro: "Contenido y video"
 visibilidad: "público"
 ultimo_cambio: 2026-11-13
 skills: 1
-commits_8_semanas: 16
+commits_8_semanas: 17
 ultimo_agente: "Claude Code (sesión en la nube)"
 pendiente: "texto del post de las láminas, aprobación de Emi y fecha (semana 47)."
 github: "https://github.com/lianfixx/LinkedIn"

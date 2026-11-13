@@ -19,7 +19,7 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 | [[Castorena]] | 4 | 27 commits | 0 días | 0 | Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP, escritos y monitor del DOF. |
 | [[MILLA ABOGADOS]] | 5 | 0 commits | 9 días | 0 | El despacho de Emi: sitio, asesorías, monitoreo de expedientes, captación e Impulso Libre. |
 | [[Acción Tlalnepantla]] | 1 | 0 commits | 9 días | 0 | Acción Política Juvenil Tlalnepantla (PAN): sitio, formatos, eventos y materiales. |
-| [[Contenido y video]] | 7 | 106 commits | 0 días | 0 | Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio, X, Instagram, TikTok, LinkedIn, la matriz de redes (REDES) e historias de Instagram. |
+| [[Contenido y video]] | 7 | 107 commits | 0 días | 0 | Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio, X, Instagram, TikTok, LinkedIn, la matriz de redes (REDES) e historias de Instagram. |
 | [[Estudio]] | 2 | 0 commits | 6 días | 0 | Maestría en Alta Dirección y pizarras de estudio. |
 | [[Productos]] | 2 | 0 commits | 9 días | 0 | Productos propios de Emi: PANEL FIRMA (gestión jurídica) y Mes (finanzas personales). |
 | [[Herramientas]] | 5 | 32 commits | 0 días | 0 | Piezas que sirven a todos los cerebros: estilo de Emi, selector de modelo, entorno de Cloudflare, computadora virtual (Simular Box) e ingeniería inversa. |
