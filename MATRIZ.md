@@ -50,10 +50,6 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 
 15 tareas programadas activas y 17 skills instaladas en Claude · inventario revisado el 11 nov 2026.
 
-Fallaron en su última corrida:
-
-- DOF Castorena · lector nocturno · Lunes y miércoles 21:41 · última: 9 nov 2026, falló: se alcanzó el límite de uso
-
 Skills en un repositorio pero no instaladas en Claude: `editor-studio`, `historias-studio`, `instagram-studio`, `linkedin-pro`, `matriz-redes`, `pizarra-studio`.
 
 

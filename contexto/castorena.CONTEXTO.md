@@ -61,8 +61,8 @@ Pendiente: ninguno para este punto.
 - INDEP seguimiento diario (Claude) · Lunes a viernes, cada hora de 09:04 a 17:04 · última: 11 nov 2026, bien · repo `INDEP`
 - Aviso boletines JFCA · Lunes a viernes 10:41 · última: 11 nov 2026, bien · repo `INDEP`
 - DOF Castorena · cierre martes · Martes 05:50 · última: 10 nov 2026, bien · repo `dof-juridico-monitor`
-- DOF Castorena · cierre jueves · Jueves 06:05 · repo `dof-juridico-monitor`
-- DOF Castorena · lector nocturno · Lunes y miércoles 21:41 · última: 9 nov 2026, falló: se alcanzó el límite de uso · repo `dof-juridico-monitor`
+- DOF Castorena · cierre jueves · Jueves 06:05 · última: 12 nov 2026, recuperada a mano: falló por límite de uso; el paquete se entregó el mismo día · repo `dof-juridico-monitor`
+- DOF Castorena · lector nocturno · Lunes y miércoles 21:41 · última: 11 nov 2026, recuperada a mano: falló por límite de uso; el cierre del jueves cubrió lo pendiente · repo `dof-juridico-monitor`
 - DOF Castorena · SJF viernes · Viernes 15:37 · repo `dof-juridico-monitor`
 
 ## Skills instaladas en Claude

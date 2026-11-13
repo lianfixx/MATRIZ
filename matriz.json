@@ -1923,7 +1923,9 @@
         "cerebro": "castorena",
         "repo": "dof-juridico-monitor",
         "horario": "Jueves 06:05",
-        "estado": "activa"
+        "estado": "activa",
+        "ultima_corrida": "2026-11-12",
+        "resultado": "recuperada a mano: falló por límite de uso; el paquete se entregó el mismo día"
       },
       {
         "nombre": "DOF Castorena · lector nocturno",
@@ -1931,8 +1933,8 @@
         "repo": "dof-juridico-monitor",
         "horario": "Lunes y miércoles 21:41",
         "estado": "activa",
-        "ultima_corrida": "2026-11-09",
-        "resultado": "falló: se alcanzó el límite de uso"
+        "ultima_corrida": "2026-11-11",
+        "resultado": "recuperada a mano: falló por límite de uso; el cierre del jueves cubrió lo pendiente"
       },
       {
         "nombre": "DOF Castorena · SJF viernes",
@@ -2113,7 +2115,7 @@
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
         "pendientes_de_repos": 2,
-        "tareas_falladas": 1
+        "tareas_falladas": 0
       },
       "milla-abogados": {
         "semanas": [

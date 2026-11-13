@@ -66,8 +66,6 @@ Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 256, ChatGPT
 
 Vencimientos: Renovación de la conexión Claude–box el 7 dic 2026; Token de GitHub «MATRIZ lectura» el 9 feb 2027; Token de GitHub «MATRIZ escritura» (edición desde el panel) el 12 nov 2027; Llave de GitHub «Matriz administración (Claude)» el 12 nov 2027; Llave de Cloudflare «Matriz administración (Claude)» el 12 nov 2027.
 
-Avisos: falló «DOF Castorena · lector nocturno» (falló: se alcanzó el límite de uso).
-
 ## Cerebro: Castorena
 
 Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP, escritos y monitor del DOF.
@@ -92,8 +90,8 @@ Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP,
 - INDEP seguimiento diario (Claude) · Lunes a viernes, cada hora de 09:04 a 17:04 · última: 11 nov 2026, bien · repo `INDEP`
 - Aviso boletines JFCA · Lunes a viernes 10:41 · última: 11 nov 2026, bien · repo `INDEP`
 - DOF Castorena · cierre martes · Martes 05:50 · última: 10 nov 2026, bien · repo `dof-juridico-monitor`
-- DOF Castorena · cierre jueves · Jueves 06:05 · repo `dof-juridico-monitor`
-- DOF Castorena · lector nocturno · Lunes y miércoles 21:41 · última: 9 nov 2026, falló: se alcanzó el límite de uso · repo `dof-juridico-monitor`
+- DOF Castorena · cierre jueves · Jueves 06:05 · última: 12 nov 2026, recuperada a mano: falló por límite de uso; el paquete se entregó el mismo día · repo `dof-juridico-monitor`
+- DOF Castorena · lector nocturno · Lunes y miércoles 21:41 · última: 11 nov 2026, recuperada a mano: falló por límite de uso; el cierre del jueves cubrió lo pendiente · repo `dof-juridico-monitor`
 - DOF Castorena · SJF viernes · Viernes 15:37 · repo `dof-juridico-monitor`
 
 ### Skills instaladas en Claude
