@@ -38,8 +38,8 @@ Skill para planear, redactar, revisar, publicar con aprobación (API oficial de 
 
 Skills: `x-viral`
 
-Último registro: 13 nov 2026 · Regla: nunca decir que lo hizo una IA · Agente: Claude Code (sesión en la nube)
-Pendiente: ninguno nuevo.
+Último registro: 13 nov 2026 · Perfil de X revisado: bio y categoría puestas, candado aún visible · Agente: Claude Code (sesión en la nube)
+Pendiente: que Emi confirme el ajuste «Proteger tus posts» en su teléfono; nombre con acento y sitio web.
 
 ### HISTORIAS- (público)
 

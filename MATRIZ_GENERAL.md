@@ -55,12 +55,12 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 | Castorena | 4 | 27 | 113 | 0 | 0 | 0 |
 | MILLA ABOGADOS | 5 | 0 | 31 | 9 | 0 | 0 |
 | Acción Tlalnepantla | 1 | 0 | 9 | 9 | 0 | 0 |
-| Contenido y video | 3 | 48 | 9 | 0 | 0 | 0 |
+| Contenido y video | 3 | 49 | 9 | 0 | 0 | 0 |
 | Estudio | 2 | 0 | 24 | 6 | 0 | 0 |
 | Productos | 2 | 0 | 5 | 9 | 0 | 0 |
 | Herramientas | 5 | 29 | 5 | 1 | 0 | 0 |
 
-Quién trabajó en los últimos 60 días (commits): Emi 521, Claude 214, ChatGPT · Codex 39.
+Quién trabajó en los últimos 60 días (commits): Emi 521, Claude 215, ChatGPT · Codex 39.
 
 Vencimientos: Renovación de la conexión Claude–box el 7 dic 2026; Token de GitHub «MATRIZ lectura» el 9 feb 2027; Token de GitHub «MATRIZ escritura» (edición desde el panel) el 12 nov 2027; Llave de GitHub «Matriz administración (Claude)» el 12 nov 2027; Llave de Cloudflare «Matriz administración (Claude)» el 12 nov 2027.
 
@@ -147,8 +147,8 @@ Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio,
   - Pendiente: mirar que el trabajo `pruebas` salga en verde en el pull request.
 - **X** (público) · https://github.com/lianfixx/X · último cambio 13 nov 2026 · skills: x-viral
   - Skill para planear, redactar, revisar, publicar con aprobación (API oficial de X) y medir las publicaciones de @emilianomilla en X, apoyada en el código público del algoritmo de X (xai-org/x-algorithm).
-  - Último: 13 nov 2026 · Regla: nunca decir que lo hizo una IA · Claude Code (sesión en la nube)
-  - Pendiente: ninguno nuevo.
+  - Último: 13 nov 2026 · Perfil de X revisado: bio y categoría puestas, candado aún visible · Claude Code (sesión en la nube)
+  - Pendiente: que Emi confirme el ajuste «Proteger tus posts» en su teléfono; nombre con acento y sitio web.
 - **HISTORIAS-** (público) · https://github.com/lianfixx/HISTORIAS- · último cambio 11 nov 2026 · skills: historias-studio
   - Método, motor y memoria para hacer las historias de Instagram de Emi con cualquier IA: la IA pregunta, propone y dibuja; Emi decide.
   - Último: 11 nov 2026 · 0.3.0 · candidato · agente no consta

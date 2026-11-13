@@ -787,6 +787,12 @@
           "registro": [
             {
               "fecha": "2026-11-13",
+              "titulo": "Perfil de X revisado: bio y categoría puestas, candado aún visible",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "que Emi confirme el ajuste «Proteger tus posts» en su teléfono; nombre con acento y sitio web."
+            },
+            {
+              "fecha": "2026-11-13",
               "titulo": "Regla: nunca decir que lo hizo una IA",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "ninguno nuevo."
@@ -826,12 +832,6 @@
               "titulo": "x-viral 1.0.3: X bloquea el inicio de sesión; Emi publica, la IA entrega",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "(a) Emi: revisar sus 24 posts y quitar la protección desde su teléfono; pasar la fecha exacta de «Se unió» y el número de seguidores; decidir Premium. (b) Volver a instalar en Claude la versión 1.0.3 de la skill (la instalada es la 1.0.2 y aún habla de programar desde box). (c) Primera semana el 16/11/2026."
-            },
-            {
-              "fecha": "2026-11-10",
-              "titulo": "Candidatas de conversación, encargo para Muse y fecha de arranque",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "los de la entrada anterior; correr el encargo de Muse; con sesión de X en box, leer los 24 posts existentes y revisarlos con Emi antes de quitar la protección."
             }
           ],
           "actividad": {
@@ -853,10 +853,10 @@
               0,
               0,
               0,
-              11
+              12
             ],
             "actores_60d": {
-              "Claude": 11
+              "Claude": 12
             }
           }
         },
@@ -1676,9 +1676,9 @@
           0,
           0,
           9,
-          48
+          49
         ],
-        "esta_semana": 48,
+        "esta_semana": 49,
         "semana_pasada": 9,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -1762,11 +1762,11 @@
       153,
       154,
       196,
-      104
+      105
     ],
     "actores_60d": {
       "Emi": 521,
-      "Claude": 214,
+      "Claude": 215,
       "ChatGPT · Codex": 39
     },
     "vencimientos": [
