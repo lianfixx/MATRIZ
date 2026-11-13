@@ -4,9 +4,9 @@ cerebro: "Contenido y video"
 visibilidad: "público"
 ultimo_cambio: 2026-11-13
 skills: 1
-commits_8_semanas: 19
+commits_8_semanas: 20
 ultimo_agente: "Claude Code (sesión en la nube)"
-pendiente: "que Emi conecte X desde Ajustes."
+pendiente: "que Emi reintente «Conectar X» para leer el motivo."
 github: "https://github.com/lianfixx/REDES"
 tags:
   - "repo"
@@ -28,12 +28,12 @@ La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, 
 
 ## Últimos registros
 
+- 13 nov 2026 · Bitácora de conexiones con X y LinkedIn · Agente: Claude Code (sesión en la nube)
 - 13 nov 2026 · Conectar X con OAuth 2.0 + PKCE · Agente: Claude Code (sesión en la nube)
 - 13 nov 2026 · X sin candado · Agente: Claude Code (sesión en la nube)
 - 13 nov 2026 · LinkedIn e Instagram ya exponen su estado · Agente: Claude Code (sesión en la nube)
 - 13 nov 2026 · Piezas que se publican desde la app y texto de LinkedIn de Emi · Agente: Claude Code (sesión en la nube)
-- 13 nov 2026 · Instagram: etiqueta de IA y Reel de Vox con la voz de Emi · Agente: Claude Code (sesión en la nube)
 
 ## Pendiente más reciente
 
-que Emi conecte X desde Ajustes.
+que Emi reintente «Conectar X» para leer el motivo.

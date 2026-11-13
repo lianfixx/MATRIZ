@@ -943,6 +943,12 @@
           "registro": [
             {
               "fecha": "2026-11-13",
+              "titulo": "Bitácora de conexiones con X y LinkedIn",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "que Emi reintente «Conectar X» para leer el motivo."
+            },
+            {
+              "fecha": "2026-11-13",
               "titulo": "Conectar X con OAuth 2.0 + PKCE",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "que Emi conecte X desde Ajustes."
@@ -982,12 +988,6 @@
               "titulo": "Crecer: correcciones de Instagram con fuente oficial",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": ""
-            },
-            {
-              "fecha": "2026-11-13",
-              "titulo": "Contraseña del panel: PBKDF2 a 100 000 vueltas",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "repetir la auditoría completa."
             }
           ],
           "actividad": {
@@ -1009,10 +1009,10 @@
               0,
               0,
               0,
-              19
+              20
             ],
             "actores_60d": {
-              "Claude": 14,
+              "Claude": 15,
               "GitHub Actions": 4,
               "Emi": 1
             }
@@ -2162,9 +2162,9 @@
           0,
           0,
           9,
-          91
+          92
         ],
-        "esta_semana": 91,
+        "esta_semana": 92,
         "semana_pasada": 9,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2267,11 +2267,11 @@
       153,
       154,
       196,
-      212
+      213
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 249,
+      "Claude": 250,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 4
     },

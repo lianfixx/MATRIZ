@@ -59,8 +59,8 @@ La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, 
 
 Skills: `matriz-redes`
 
-Último registro: 13 nov 2026 · Conectar X con OAuth 2.0 + PKCE · Agente: Claude Code (sesión en la nube)
-Pendiente: que Emi conecte X desde Ajustes.
+Último registro: 13 nov 2026 · Bitácora de conexiones con X y LinkedIn · Agente: Claude Code (sesión en la nube)
+Pendiente: que Emi reintente «Conectar X» para leer el motivo.
 
 ### Instagram (público)
 
