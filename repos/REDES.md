@@ -4,9 +4,9 @@ cerebro: "Contenido y video"
 visibilidad: "público"
 ultimo_cambio: 2026-11-14
 skills: 1
-commits_8_semanas: 32
-ultimo_agente: "Claude Code (sesión en la nube)"
-pendiente: "Emi sube el video del DOF al panel o lo publica desde la app el domingo."
+commits_8_semanas: 33
+ultimo_agente: "Claude Code (sesión de x-viral, en la nube)"
+pendiente: "primera publicación real con video (DOF, domingo 15/11 a las 10:00); vigilar la subida previa en la bitácora."
 github: "https://github.com/lianfixx/REDES"
 tags:
   - "repo"
@@ -28,12 +28,12 @@ La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, 
 
 ## Últimos registros
 
+- 14 nov 2026 · Adjuntar a una pieza aprobada el archivo que le faltaba · Agente: Claude Code (sesión de x-viral, en la nube)
 - 14 nov 2026 · La Matriz puede mover la hora de piezas ya aprobadas · Agente: Claude Code (sesión en la nube)
 - 13 nov 2026 · Ángulos de los cuatro videos, aprobados por Emi · Agente: Claude Code (sesión en la nube)
 - 13 nov 2026 · Panel 0.3: imágenes, videos y PDF por API; análisis automático de inspiración; respuestas a Editor Studio · Agente: Claude Code (sesión en la nube)
 - 13 nov 2026 · Recursos: cómo grabar (de Editor Studio) · Agente: Claude Code (sesión en la nube)
-- 13 nov 2026 · Panel 0.2: Hoy tipo CRM, piezas en vivo con notas y pausa, hora sugerida, ideas por espacio e inspiración · Agente: Claude Code (sesión en la nube)
 
 ## Pendiente más reciente
 
-Emi sube el video del DOF al panel o lo publica desde la app el domingo.
+primera publicación real con video (DOF, domingo 15/11 a las 10:00); vigilar la subida previa en la bitácora.

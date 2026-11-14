@@ -943,6 +943,12 @@
           "registro": [
             {
               "fecha": "2026-11-14",
+              "titulo": "Adjuntar a una pieza aprobada el archivo que le faltaba",
+              "agente": "Claude Code (sesión de x-viral, en la nube)",
+              "pendiente": "primera publicación real con video (DOF, domingo 15/11 a las 10:00); vigilar la subida previa en la bitácora."
+            },
+            {
+              "fecha": "2026-11-14",
               "titulo": "La Matriz puede mover la hora de piezas ya aprobadas",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "Emi sube el video del DOF al panel o lo publica desde la app el domingo."
@@ -982,12 +988,6 @@
               "titulo": "Corrige la prueba de X como app pública",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": ""
-            },
-            {
-              "fecha": "2026-11-13",
-              "titulo": "X: token como app confidencial o pública",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "si vuelve a fallar con 401 en ambos modos, el Client Secret pegado no es el de OAuth 2.0 o la app no tiene activada la autenticación de usuario."
             }
           ],
           "actividad": {
@@ -1009,10 +1009,10 @@
               0,
               0,
               0,
-              32
+              33
             ],
             "actores_60d": {
-              "Claude": 24,
+              "Claude": 25,
               "GitHub Actions": 7,
               "Emi": 1
             }
@@ -2164,9 +2164,9 @@
           0,
           0,
           9,
-          110
+          111
         ],
-        "esta_semana": 110,
+        "esta_semana": 111,
         "semana_pasada": 9,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2269,11 +2269,11 @@
       153,
       154,
       196,
-      236
+      237
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 270,
+      "Claude": 271,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 7
     },
