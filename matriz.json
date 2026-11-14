@@ -1009,11 +1009,11 @@
               0,
               0,
               0,
-              34
+              35
             ],
             "actores_60d": {
+              "GitHub Actions": 8,
               "Claude": 26,
-              "GitHub Actions": 7,
               "Emi": 1
             }
           }
@@ -2164,9 +2164,9 @@
           0,
           0,
           9,
-          112
+          113
         ],
-        "esta_semana": 112,
+        "esta_semana": 113,
         "semana_pasada": 9,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2269,13 +2269,13 @@
       153,
       154,
       196,
-      238
+      239
     ],
     "actores_60d": {
       "Emi": 590,
       "Claude": 272,
       "ChatGPT · Codex": 39,
-      "GitHub Actions": 7
+      "GitHub Actions": 8
     },
     "vencimientos": [
       {

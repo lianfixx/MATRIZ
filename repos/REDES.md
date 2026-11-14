@@ -4,7 +4,7 @@ cerebro: "Contenido y video"
 visibilidad: "público"
 ultimo_cambio: 2026-11-14
 skills: 1
-commits_8_semanas: 34
+commits_8_semanas: 35
 ultimo_agente: "Claude Code (sesión en la nube)"
 pendiente: "Emi agrega el video a la pieza y la aprueba."
 github: "https://github.com/lianfixx/REDES"
