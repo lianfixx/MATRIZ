@@ -16,7 +16,7 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 
 | Cerebro | Repos | Esta semana | Sin movimiento | Pendientes | Qué es |
 |---|---|---|---|---|---|
-| [[Castorena]] | 4 | 27 commits | 0 días | 0 | Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP, escritos y monitor del DOF. |
+| [[Castorena]] | 4 | 28 commits | -1 días | 0 | Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP, escritos y monitor del DOF. |
 | [[MILLA ABOGADOS]] | 5 | 0 commits | 9 días | 0 | El despacho de Emi: sitio, asesorías, monitoreo de expedientes, captación e Impulso Libre. |
 | [[Acción Tlalnepantla]] | 1 | 0 commits | 9 días | 0 | Acción Política Juvenil Tlalnepantla (PAN): sitio, formatos, eventos y materiales. |
 | [[Contenido y video]] | 7 | 108 commits | 0 días | 0 | Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio, X, Instagram, TikTok, LinkedIn, la matriz de redes (REDES) e historias de Instagram. |
@@ -27,6 +27,7 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 
 ## Lo último que se hizo
 
+- 13 nov 2026 · **Cerebro-Castorena-** · Cierre diario programado: maestro INDEP v23 copiado · Agente: Claude Code (ejecución programada)
 - 13 nov 2026 · **VIDEOS-IA-SKILL-MILLA** · Vox Studio 0.13.1: ideas de temas desde la skill de LinkedIn · Agente: Claude Code (sesión en la nube)
 - 13 nov 2026 · **VIDEOS-IA-SKILL-MILLA** · Regla de Emi en las cuatro skills de video: nunca decir que el video lo hizo una IA · Agente: Claude Code (sesión en la nube)
 - 13 nov 2026 · **X** · API de X conectada al panel · Agente: Claude Code (sesión en la nube)
@@ -36,7 +37,6 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 - 13 nov 2026 · **REDES** · Panel 0.3: imágenes, videos y PDF por API; análisis automático de inspiración; respuestas a Editor Studio · Agente: Claude Code (sesión en la nube)
 - 13 nov 2026 · **REDES** · Recursos: cómo grabar (de Editor Studio) · Agente: Claude Code (sesión en la nube)
 - 13 nov 2026 · **Instagram** · instagram-studio 1.0.1: correcciones de la auditoría independiente · Agente: Claude Code (sesión en la nube)
-- 13 nov 2026 · **Instagram** · instagram-studio 1.0.0: primera versión · Agente: Claude Code (sesión en la nube)
 
 ## Vencimientos
 
