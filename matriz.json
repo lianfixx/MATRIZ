@@ -943,6 +943,12 @@
           "registro": [
             {
               "fecha": "2026-11-14",
+              "titulo": "Quitar «solo app» pide aprobar otra vez",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "Emi agrega el video a la pieza y la aprueba."
+            },
+            {
+              "fecha": "2026-11-14",
               "titulo": "Adjuntar a una pieza aprobada el archivo que le faltaba",
               "agente": "Claude Code (sesión de x-viral, en la nube)",
               "pendiente": "primera publicación real con video (DOF, domingo 15/11 a las 10:00); vigilar la subida previa en la bitácora."
@@ -982,12 +988,6 @@
               "titulo": "X conectado al panel",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "primera publicación real cuando Emi apruebe."
-            },
-            {
-              "fecha": "2026-11-13",
-              "titulo": "Corrige la prueba de X como app pública",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": ""
             }
           ],
           "actividad": {
@@ -1009,10 +1009,10 @@
               0,
               0,
               0,
-              33
+              34
             ],
             "actores_60d": {
-              "Claude": 25,
+              "Claude": 26,
               "GitHub Actions": 7,
               "Emi": 1
             }
@@ -2164,9 +2164,9 @@
           0,
           0,
           9,
-          111
+          112
         ],
-        "esta_semana": 111,
+        "esta_semana": 112,
         "semana_pasada": 9,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2269,11 +2269,11 @@
       153,
       154,
       196,
-      237
+      238
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 271,
+      "Claude": 272,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 7
     },

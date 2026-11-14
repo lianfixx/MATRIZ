@@ -59,8 +59,8 @@ La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, 
 
 Skills: `matriz-redes`
 
-Último registro: 14 nov 2026 · Adjuntar a una pieza aprobada el archivo que le faltaba · Agente: Claude Code (sesión de x-viral, en la nube)
-Pendiente: primera publicación real con video (DOF, domingo 15/11 a las 10:00); vigilar la subida previa en la bitácora.
+Último registro: 14 nov 2026 · Quitar «solo app» pide aprobar otra vez · Agente: Claude Code (sesión en la nube)
+Pendiente: Emi agrega el video a la pieza y la aprueba.
 
 ### Instagram (público)
 
