@@ -56,13 +56,13 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 | Castorena | 4 | 28 | 113 | 0 | 0 | 0 |
 | MILLA ABOGADOS | 5 | 0 | 31 | 10 | 0 | 0 |
 | Acción Tlalnepantla | 1 | 0 | 9 | 10 | 0 | 0 |
-| Contenido y video | 7 | 108 | 9 | 1 | 0 | 0 |
+| Contenido y video | 7 | 110 | 9 | 0 | 0 | 0 |
 | Estudio | 2 | 0 | 24 | 7 | 0 | 0 |
 | Productos | 2 | 0 | 5 | 10 | 0 | 0 |
 | Herramientas | 5 | 33 | 5 | 1 | 0 | 0 |
 | Sitios web | 3 | 65 | 0 | 2 | 0 | 0 |
 
-Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 268, ChatGPT · Codex 39, GitHub Actions 7.
+Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 270, ChatGPT · Codex 39, GitHub Actions 7.
 
 Vencimientos: Renovación de la conexión Claude–box el 7 dic 2026; Token de GitHub «MATRIZ lectura» el 9 feb 2027; Token de GitHub «MATRIZ escritura» (edición desde el panel) el 12 nov 2027; Llave de GitHub «Matriz administración (Claude)» el 12 nov 2027; Llave de Cloudflare «Matriz administración (Claude)» el 12 nov 2027.
 
@@ -152,20 +152,20 @@ Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio,
 - **HISTORIAS-** (público) · https://github.com/lianfixx/HISTORIAS- · último cambio 11 nov 2026 · skills: historias-studio
   - Método, motor y memoria para hacer las historias de Instagram de Emi con cualquier IA: la IA pregunta, propone y dibuja; Emi decide.
   - Último: 11 nov 2026 · 0.3.0 · candidato · agente no consta
-- **REDES** (público) · https://github.com/lianfixx/REDES · último cambio 13 nov 2026 · skills: matriz-redes
+- **REDES** (público) · https://github.com/lianfixx/REDES · último cambio 14 nov 2026 · skills: matriz-redes
   - La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, Instagram) y de video (Vox Studio, Pizarra Studio, Editor Studio, MILLA Video Studio, Historias Studio). Registra las ideas, decide en qué red y formato sale cada una, arma el calendario de todas…
-  - Último: 13 nov 2026 · Ángulos de los cuatro videos, aprobados por Emi · Claude Code (sesión en la nube)
-  - Pendiente: guiones y ganchos de Editor Studio; Emi fusiona su PR #9 (lianfixx/VIDEOS-IA-SKILL-MILLA) y reconecta X.
+  - Último: 14 nov 2026 · La Matriz puede mover la hora de piezas ya aprobadas · Claude Code (sesión en la nube)
+  - Pendiente: Emi sube el video del DOF al panel o lo publica desde la app el domingo.
 - **Instagram** (público) · https://github.com/lianfixx/Instagram · último cambio 13 nov 2026 · skills: instagram-studio
   - Skill para planear, redactar, revisar, entregar para publicar y medir los Reels, publicaciones del feed y carruseles de la cuenta personal de Emi en Instagram. Pilares: IA + Derecho en México, estilo de vida y gym y opinión política. Sirve en cualquier IA.
   - Último: 13 nov 2026 · instagram-studio 1.0.1: correcciones de la auditoría independiente · Claude Code (sesión en la nube)
   - Pendiente: - Avisar a Emi y a Matriz de Redes que el Reel de Vox necesita la voz de Emi o la etiqueta.
 - **TikTok** (público) · https://github.com/lianfixx/TikTok · último cambio 12 nov 2026
   - Skill de TikTok de Emi: estrategia, publicación y medición
-- **LinkedIn** (público) · https://github.com/lianfixx/LinkedIn · último cambio 13 nov 2026 · skills: linkedin-pro
+- **LinkedIn** (público) · https://github.com/lianfixx/LinkedIn · último cambio 14 nov 2026 · skills: linkedin-pro
   - Skill para planear, redactar, revisar, entregar para publicar y medir lo que Emi publica en su perfil personal de LinkedIn (linkedin.com/in/emiliano-milla). Sirve en cualquier IA.
-  - Último: 13 nov 2026 · Límite del título de documento (58 caracteres) · Claude Code (sesión en la nube)
-  - Pendiente: que Emi apruebe el título corto antes de programar la pieza.
+  - Último: 14 nov 2026 · Documento de pagos digitales programado · Claude Code (sesión en la nube)
+  - Pendiente: el 16/11, anotar el enlace con `linkedin.py publicado` y poner las fuentes oficiales en el primer comentario si Emi lo pide.
 
 ### Tareas programadas
 

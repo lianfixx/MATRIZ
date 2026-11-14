@@ -53,14 +53,14 @@ Skills: `historias-studio`
 
 ### REDES (público)
 
-https://github.com/lianfixx/REDES · último cambio: 13 nov 2026
+https://github.com/lianfixx/REDES · último cambio: 14 nov 2026
 
 La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, Instagram) y de video (Vox Studio, Pizarra Studio, Editor Studio, MILLA Video Studio, Historias Studio). Registra las ideas, decide en qué red y formato sale cada una, arma el calendario de todas…
 
 Skills: `matriz-redes`
 
-Último registro: 13 nov 2026 · Ángulos de los cuatro videos, aprobados por Emi · Agente: Claude Code (sesión en la nube)
-Pendiente: guiones y ganchos de Editor Studio; Emi fusiona su PR #9 (lianfixx/VIDEOS-IA-SKILL-MILLA) y reconecta X.
+Último registro: 14 nov 2026 · La Matriz puede mover la hora de piezas ya aprobadas · Agente: Claude Code (sesión en la nube)
+Pendiente: Emi sube el video del DOF al panel o lo publica desde la app el domingo.
 
 ### Instagram (público)
 
@@ -81,14 +81,14 @@ Skill de TikTok de Emi: estrategia, publicación y medición
 
 ### LinkedIn (público)
 
-https://github.com/lianfixx/LinkedIn · último cambio: 13 nov 2026
+https://github.com/lianfixx/LinkedIn · último cambio: 14 nov 2026
 
 Skill para planear, redactar, revisar, entregar para publicar y medir lo que Emi publica en su perfil personal de LinkedIn (linkedin.com/in/emiliano-milla). Sirve en cualquier IA.
 
 Skills: `linkedin-pro`
 
-Último registro: 13 nov 2026 · Límite del título de documento (58 caracteres) · Agente: Claude Code (sesión en la nube)
-Pendiente: que Emi apruebe el título corto antes de programar la pieza.
+Último registro: 14 nov 2026 · Documento de pagos digitales programado · Agente: Claude Code (sesión en la nube)
+Pendiente: el 16/11, anotar el enlace con `linkedin.py publicado` y poner las fuentes oficiales en el primer comentario si Emi lo pide.
 
 ## Tareas programadas
 

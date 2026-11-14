@@ -931,7 +931,7 @@
           "url": "https://github.com/lianfixx/REDES",
           "visibilidad": "público",
           "leido": true,
-          "ultimo_cambio": "2026-11-13",
+          "ultimo_cambio": "2026-11-14",
           "resumen": "La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, Instagram) y de video (Vox Studio, Pizarra Studio, Editor Studio, MILLA Video Studio, Historias Studio). Registra las ideas, decide en qué red y formato sale cada una, arma el calendario de todas…",
           "skills": [
             {
@@ -941,6 +941,12 @@
           ],
           "protocolo": "1.1.0",
           "registro": [
+            {
+              "fecha": "2026-11-14",
+              "titulo": "La Matriz puede mover la hora de piezas ya aprobadas",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "Emi sube el video del DOF al panel o lo publica desde la app el domingo."
+            },
             {
               "fecha": "2026-11-13",
               "titulo": "Ángulos de los cuatro videos, aprobados por Emi",
@@ -982,12 +988,6 @@
               "titulo": "X: token como app confidencial o pública",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "si vuelve a fallar con 401 en ambos modos, el Client Secret pegado no es el de OAuth 2.0 o la app no tiene activada la autenticación de usuario."
-            },
-            {
-              "fecha": "2026-11-13",
-              "titulo": "Bitácora de conexiones con X y LinkedIn",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "que Emi reintente «Conectar X» para leer el motivo."
             }
           ],
           "actividad": {
@@ -1009,11 +1009,11 @@
               0,
               0,
               0,
-              31
+              32
             ],
             "actores_60d": {
+              "Claude": 24,
               "GitHub Actions": 7,
-              "Claude": 23,
               "Emi": 1
             }
           }
@@ -1114,7 +1114,7 @@
           "url": "https://github.com/lianfixx/LinkedIn",
           "visibilidad": "público",
           "leido": true,
-          "ultimo_cambio": "2026-11-13",
+          "ultimo_cambio": "2026-11-14",
           "resumen": "Skill para planear, redactar, revisar, entregar para publicar y medir lo que Emi publica en su perfil personal de LinkedIn (linkedin.com/in/emiliano-milla). Sirve en cualquier IA.",
           "skills": [
             {
@@ -1124,6 +1124,12 @@
           ],
           "protocolo": "1.1.0",
           "registro": [
+            {
+              "fecha": "2026-11-14",
+              "titulo": "Documento de pagos digitales programado",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "el 16/11, anotar el enlace con `linkedin.py publicado` y poner las fuentes oficiales en el primer comentario si Emi lo pide."
+            },
             {
               "fecha": "2026-11-13",
               "titulo": "Límite del título de documento (58 caracteres)",
@@ -1165,12 +1171,6 @@
               "titulo": "Publicación en GitHub",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "ver la entrada de arriba."
-            },
-            {
-              "fecha": "2026-11-13",
-              "titulo": "Sesión de LinkedIn en box (solo lectura) y línea base del perfil",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "aclarar «Licenciado en Derecho» frente a «Pasante» antes del titular; decisión de Emi sobre sus destacados."
             }
           ],
           "actividad": {
@@ -1192,10 +1192,10 @@
               0,
               0,
               0,
-              18
+              19
             ],
             "actores_60d": {
-              "Claude": 17,
+              "Claude": 18,
               "Emi": 1
             }
           }
@@ -2164,11 +2164,11 @@
           0,
           0,
           9,
-          108
+          110
         ],
-        "esta_semana": 108,
+        "esta_semana": 110,
         "semana_pasada": 9,
-        "dias_sin_movimiento": 1,
+        "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
         "pendientes_de_repos": 5,
@@ -2269,11 +2269,11 @@
       153,
       154,
       196,
-      234
+      236
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 268,
+      "Claude": 270,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 7
     },
