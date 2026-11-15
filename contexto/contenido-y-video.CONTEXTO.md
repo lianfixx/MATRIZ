@@ -59,8 +59,8 @@ La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, 
 
 Skills: `matriz-redes`
 
-Último registro: 15 nov 2026 · Registro externo: corregir la clave sin duplicar · Agente: Claude Code (sesión en la nube)
-Pendiente: aplicar la clave correcta en el panel tras el despliegue.
+Último registro: 15 nov 2026 · Documento de 8 láminas: tentativo · Agente: Claude Code (sesión en la nube)
+Pendiente: material de Emi.
 
 ### Instagram (público)
 

@@ -943,6 +943,12 @@
           "registro": [
             {
               "fecha": "2026-11-15",
+              "titulo": "Documento de 8 láminas: tentativo",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "material de Emi."
+            },
+            {
+              "fecha": "2026-11-15",
               "titulo": "Registro externo: corregir la clave sin duplicar",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "aplicar la clave correcta en el panel tras el despliegue."
@@ -982,12 +988,6 @@
               "titulo": "La Matriz puede mover la hora de piezas ya aprobadas",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "Emi sube el video del DOF al panel o lo publica desde la app el domingo."
-            },
-            {
-              "fecha": "2026-11-13",
-              "titulo": "Ángulos de los cuatro videos, aprobados por Emi",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "guiones y ganchos de Editor Studio; Emi fusiona su PR #9 (lianfixx/VIDEOS-IA-SKILL-MILLA) y reconecta X."
             }
           ],
           "actividad": {
@@ -1009,11 +1009,11 @@
               0,
               0,
               0,
-              40
+              42
             ],
             "actores_60d": {
-              "Claude": 30,
-              "GitHub Actions": 9,
+              "GitHub Actions": 10,
+              "Claude": 31,
               "Emi": 1
             }
           }
@@ -2164,9 +2164,9 @@
           0,
           0,
           9,
-          119
+          121
         ],
-        "esta_semana": 119,
+        "esta_semana": 121,
         "semana_pasada": 9,
         "dias_sin_movimiento": -1,
         "pendientes_abiertos": 0,
@@ -2269,13 +2269,13 @@
       153,
       154,
       196,
-      246
+      248
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 278,
+      "Claude": 279,
       "ChatGPT · Codex": 39,
-      "GitHub Actions": 9
+      "GitHub Actions": 10
     },
     "vencimientos": [
       {
