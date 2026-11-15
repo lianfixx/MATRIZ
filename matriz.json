@@ -943,6 +943,12 @@
           "registro": [
             {
               "fecha": "2026-11-15",
+              "titulo": "Auditoría 3: arreglos del camino de archivos y de X",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "candado de subida con dueño; decisión de Emi sobre `adjuntar`."
+            },
+            {
+              "fecha": "2026-11-15",
               "titulo": "Documento de 8 láminas: tentativo",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "material de Emi."
@@ -982,12 +988,6 @@
               "titulo": "Adjuntar a una pieza aprobada el archivo que le faltaba",
               "agente": "Claude Code (sesión de x-viral, en la nube)",
               "pendiente": "primera publicación real con video (DOF, domingo 15/11 a las 10:00); vigilar la subida previa en la bitácora."
-            },
-            {
-              "fecha": "2026-11-14",
-              "titulo": "La Matriz puede mover la hora de piezas ya aprobadas",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "Emi sube el video del DOF al panel o lo publica desde la app el domingo."
             }
           ],
           "actividad": {
@@ -1009,11 +1009,11 @@
               0,
               0,
               0,
-              42
+              43
             ],
             "actores_60d": {
+              "Claude": 32,
               "GitHub Actions": 10,
-              "Claude": 31,
               "Emi": 1
             }
           }
@@ -2164,9 +2164,9 @@
           0,
           0,
           9,
-          121
+          122
         ],
-        "esta_semana": 121,
+        "esta_semana": 122,
         "semana_pasada": 9,
         "dias_sin_movimiento": -1,
         "pendientes_abiertos": 0,
@@ -2269,11 +2269,11 @@
       153,
       154,
       196,
-      248
+      249
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 279,
+      "Claude": 280,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 10
     },

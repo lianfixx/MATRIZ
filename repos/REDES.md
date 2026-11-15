@@ -4,9 +4,9 @@ cerebro: "Contenido y video"
 visibilidad: "público"
 ultimo_cambio: 2026-11-15
 skills: 1
-commits_8_semanas: 42
+commits_8_semanas: 43
 ultimo_agente: "Claude Code (sesión en la nube)"
-pendiente: "material de Emi."
+pendiente: "candado de subida con dueño; decisión de Emi sobre `adjuntar`."
 github: "https://github.com/lianfixx/REDES"
 tags:
   - "repo"
@@ -28,12 +28,12 @@ La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, 
 
 ## Últimos registros
 
+- 15 nov 2026 · Auditoría 3: arreglos del camino de archivos y de X · Agente: Claude Code (sesión en la nube)
 - 15 nov 2026 · Documento de 8 láminas: tentativo · Agente: Claude Code (sesión en la nube)
 - 15 nov 2026 · Registro externo: corregir la clave sin duplicar · Agente: Claude Code (sesión en la nube)
 - 15 nov 2026 · Auditoría: calendario al día con la realidad y video del DOF ya subido a X · Agente: Claude Code (sesión en la nube)
 - 15 nov 2026 · El panel se sincroniza con lo que hacen las skills de cada red · Agente: Claude Code (sesión en la nube)
-- 15 nov 2026 · Auditoría del camino de video en X: prueba de conexión, subida adelantada y permiso que no se pierde por una caída · Agente: Claude Code (sesión de x-viral, en la nube)
 
 ## Pendiente más reciente
 
-material de Emi.
+candado de subida con dueño; decisión de Emi sobre `adjuntar`.

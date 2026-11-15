@@ -59,8 +59,8 @@ La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, 
 
 Skills: `matriz-redes`
 
-Último registro: 15 nov 2026 · Documento de 8 láminas: tentativo · Agente: Claude Code (sesión en la nube)
-Pendiente: material de Emi.
+Último registro: 15 nov 2026 · Auditoría 3: arreglos del camino de archivos y de X · Agente: Claude Code (sesión en la nube)
+Pendiente: candado de subida con dueño; decisión de Emi sobre `adjuntar`.
 
 ### Instagram (público)
 
