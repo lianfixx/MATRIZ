@@ -787,6 +787,12 @@
           "registro": [
             {
               "fecha": "2026-11-15",
+              "titulo": "Emi: «que siempre pida mi aprobación»",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": ""
+            },
+            {
+              "fecha": "2026-11-15",
               "titulo": "Primer post por la API: DOF con video, y auditoría del camino de video",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "métricas a las 48 horas (el panel las lee solo); lanzamiento A el martes 17/11 a las 9:00; que Emi responda a quien comente."
@@ -826,12 +832,6 @@
               "titulo": "Coordinación con la Matriz de Redes y campaña de lanzamiento",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "respuestas de Emi por medio de la Matriz; borrador del lanzamiento."
-            },
-            {
-              "fecha": "2026-11-13",
-              "titulo": "Perfil público propuesto y Matriz de Redes",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "Emi elige biografía y la cambia; crear `lianfixx/REDES` junto con los otros tres repositorios."
             }
           ],
           "actividad": {
@@ -853,10 +853,10 @@
               0,
               0,
               0,
-              15
+              16
             ],
             "actores_60d": {
-              "Claude": 15
+              "Claude": 16
             }
           }
         },
@@ -2164,14 +2164,14 @@
           0,
           0,
           9,
-          127
+          128
         ],
-        "esta_semana": 127,
+        "esta_semana": 128,
         "semana_pasada": 9,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
-        "pendientes_de_repos": 5,
+        "pendientes_de_repos": 4,
         "tareas_falladas": 0
       },
       "estudio": {
@@ -2269,11 +2269,11 @@
       153,
       154,
       196,
-      254
+      255
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 284,
+      "Claude": 285,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 11
     },

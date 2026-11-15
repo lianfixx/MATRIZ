@@ -38,8 +38,7 @@ Skill para planear, redactar, revisar, publicar con aprobación (API oficial de 
 
 Skills: `x-viral`
 
-Último registro: 15 nov 2026 · Primer post por la API: DOF con video, y auditoría del camino de video · Agente: Claude Code (sesión en la nube)
-Pendiente: métricas a las 48 horas (el panel las lee solo); lanzamiento A el martes 17/11 a las 9:00; que Emi responda a quien comente.
+Último registro: 15 nov 2026 · Emi: «que siempre pida mi aprobación» · Agente: Claude Code (sesión en la nube)
 
 ### HISTORIAS- (público)
 
