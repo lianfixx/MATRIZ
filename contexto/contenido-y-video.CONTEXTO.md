@@ -59,8 +59,8 @@ La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, 
 
 Skills: `matriz-redes`
 
-Último registro: 15 nov 2026 · El panel se sincroniza con lo que hacen las skills de cada red · Agente: Claude Code (sesión en la nube)
-Pendiente: que la skill de LinkedIn agregue a su `red/estado.json` lo que programa (hoy solo trae lo publicado).
+Último registro: 15 nov 2026 · Auditoría: calendario al día con la realidad y video del DOF ya subido a X · Agente: Claude Code (sesión en la nube)
+Pendiente: hallazgos del revisor independiente del código.
 
 ### Instagram (público)
 

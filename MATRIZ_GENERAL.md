@@ -56,13 +56,13 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 | Castorena | 4 | 29 | 113 | -1 | 0 | 0 |
 | MILLA ABOGADOS | 5 | 0 | 31 | 10 | 0 | 0 |
 | Acción Tlalnepantla | 1 | 0 | 9 | 10 | 0 | 0 |
-| Contenido y video | 7 | 116 | 9 | -1 | 0 | 0 |
+| Contenido y video | 7 | 118 | 9 | -1 | 0 | 0 |
 | Estudio | 2 | 0 | 24 | 7 | 0 | 0 |
 | Productos | 2 | 0 | 5 | 10 | 0 | 0 |
 | Herramientas | 5 | 33 | 5 | 1 | 0 | 0 |
 | Sitios web | 3 | 65 | 0 | 2 | 0 | 0 |
 
-Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 276, ChatGPT · Codex 39, GitHub Actions 8.
+Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 277, ChatGPT · Codex 39, GitHub Actions 9.
 
 Vencimientos: Renovación de la conexión Claude–box el 7 dic 2026; Token de GitHub «MATRIZ lectura» el 9 feb 2027; Token de GitHub «MATRIZ escritura» (edición desde el panel) el 12 nov 2027; Llave de GitHub «Matriz administración (Claude)» el 12 nov 2027; Llave de Cloudflare «Matriz administración (Claude)» el 12 nov 2027.
 
@@ -154,8 +154,8 @@ Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio,
   - Último: 11 nov 2026 · 0.3.0 · candidato · agente no consta
 - **REDES** (público) · https://github.com/lianfixx/REDES · último cambio 15 nov 2026 · skills: matriz-redes
   - La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, Instagram) y de video (Vox Studio, Pizarra Studio, Editor Studio, MILLA Video Studio, Historias Studio). Registra las ideas, decide en qué red y formato sale cada una, arma el calendario de todas…
-  - Último: 15 nov 2026 · El panel se sincroniza con lo que hacen las skills de cada red · Claude Code (sesión en la nube)
-  - Pendiente: que la skill de LinkedIn agregue a su `red/estado.json` lo que programa (hoy solo trae lo publicado).
+  - Último: 15 nov 2026 · Auditoría: calendario al día con la realidad y video del DOF ya subido a X · Claude Code (sesión en la nube)
+  - Pendiente: hallazgos del revisor independiente del código.
 - **Instagram** (público) · https://github.com/lianfixx/Instagram · último cambio 13 nov 2026 · skills: instagram-studio
   - Skill para planear, redactar, revisar, entregar para publicar y medir los Reels, publicaciones del feed y carruseles de la cuenta personal de Emi en Instagram. Pilares: IA + Derecho en México, estilo de vida y gym y opinión política. Sirve en cualquier IA.
   - Último: 13 nov 2026 · instagram-studio 1.0.1: correcciones de la auditoría independiente · Claude Code (sesión en la nube)

@@ -4,9 +4,9 @@ cerebro: "Contenido y video"
 visibilidad: "público"
 ultimo_cambio: 2026-11-15
 skills: 1
-commits_8_semanas: 37
+commits_8_semanas: 39
 ultimo_agente: "Claude Code (sesión en la nube)"
-pendiente: "que la skill de LinkedIn agregue a su `red/estado.json` lo que programa (hoy solo trae lo publicado)."
+pendiente: "hallazgos del revisor independiente del código."
 github: "https://github.com/lianfixx/REDES"
 tags:
   - "repo"
@@ -28,12 +28,12 @@ La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, 
 
 ## Últimos registros
 
+- 15 nov 2026 · Auditoría: calendario al día con la realidad y video del DOF ya subido a X · Agente: Claude Code (sesión en la nube)
 - 15 nov 2026 · El panel se sincroniza con lo que hacen las skills de cada red · Agente: Claude Code (sesión en la nube)
 - 15 nov 2026 · Auditoría del camino de video en X: prueba de conexión, subida adelantada y permiso que no se pierde por una caída · Agente: Claude Code (sesión de x-viral, en la nube)
 - 14 nov 2026 · Quitar «solo app» pide aprobar otra vez · Agente: Claude Code (sesión en la nube)
 - 14 nov 2026 · Adjuntar a una pieza aprobada el archivo que le faltaba · Agente: Claude Code (sesión de x-viral, en la nube)
-- 14 nov 2026 · La Matriz puede mover la hora de piezas ya aprobadas · Agente: Claude Code (sesión en la nube)
 
 ## Pendiente más reciente
 
-que la skill de LinkedIn agregue a su `red/estado.json` lo que programa (hoy solo trae lo publicado).
+hallazgos del revisor independiente del código.
