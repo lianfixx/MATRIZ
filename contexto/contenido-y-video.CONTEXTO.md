@@ -59,8 +59,8 @@ La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, 
 
 Skills: `matriz-redes`
 
-Último registro: 15 nov 2026 · Auditoría del camino de video en X: prueba de conexión, subida adelantada y permiso que no se pierde por una caída · Agente: Claude Code (sesión de x-viral, en la nube)
-Pendiente: publicación real del DOF a las 10:30 (hora de México).
+Último registro: 15 nov 2026 · El panel se sincroniza con lo que hacen las skills de cada red · Agente: Claude Code (sesión en la nube)
+Pendiente: que la skill de LinkedIn agregue a su `red/estado.json` lo que programa (hoy solo trae lo publicado).
 
 ### Instagram (público)
 

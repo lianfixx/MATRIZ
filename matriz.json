@@ -943,6 +943,12 @@
           "registro": [
             {
               "fecha": "2026-11-15",
+              "titulo": "El panel se sincroniza con lo que hacen las skills de cada red",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "que la skill de LinkedIn agregue a su `red/estado.json` lo que programa (hoy solo trae lo publicado)."
+            },
+            {
+              "fecha": "2026-11-15",
               "titulo": "Auditoría del camino de video en X: prueba de conexión, subida adelantada y permiso que no se pierde por una caída",
               "agente": "Claude Code (sesión de x-viral, en la nube)",
               "pendiente": "publicación real del DOF a las 10:30 (hora de México)."
@@ -982,12 +988,6 @@
               "titulo": "Recursos: cómo grabar (de Editor Studio)",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "respuestas de Emi a las preguntas de Editor Studio."
-            },
-            {
-              "fecha": "2026-11-13",
-              "titulo": "Panel 0.2: Hoy tipo CRM, piezas en vivo con notas y pausa, hora sugerida, ideas por espacio e inspiración",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "que la tarea semanal analice la inspiración y proponga espacios (se actualiza su encargo); subir imágenes y video por API."
             }
           ],
           "actividad": {
@@ -1009,10 +1009,10 @@
               0,
               0,
               0,
-              36
+              37
             ],
             "actores_60d": {
-              "Claude": 27,
+              "Claude": 28,
               "GitHub Actions": 8,
               "Emi": 1
             }
@@ -2164,9 +2164,9 @@
           0,
           0,
           9,
-          114
+          115
         ],
-        "esta_semana": 114,
+        "esta_semana": 115,
         "semana_pasada": 9,
         "dias_sin_movimiento": -1,
         "pendientes_abiertos": 0,
@@ -2269,11 +2269,11 @@
       153,
       154,
       196,
-      241
+      242
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 274,
+      "Claude": 275,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 8
     },
