@@ -59,8 +59,8 @@ La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, 
 
 Skills: `matriz-redes`
 
-Último registro: 15 nov 2026 · Auditoría 3: arreglos del camino de archivos y de X · Agente: Claude Code (sesión en la nube)
-Pendiente: candado de subida con dueño; decisión de Emi sobre `adjuntar`.
+Último registro: 15 nov 2026 · Archivos siempre con aprobación de Emi; propuesta de la Matriz · Agente: Claude Code (sesión en la nube)
+Pendiente: Emi acepta o descarta la imagen del lanzamiento antes del martes 17 a las 9:00.
 
 ### Instagram (público)
 
@@ -87,8 +87,8 @@ Skill para planear, redactar, revisar, entregar para publicar y medir lo que Emi
 
 Skills: `linkedin-pro`
 
-Último registro: 15 nov 2026 · «programados» en red/estado.json · Agente: Claude Code (sesión en la nube)
-Pendiente: el registro directo en el panel (POST a la API del panel) espera la confirmación de Emi.
+Último registro: 15 nov 2026 · Registro en el panel de redes · Agente: Claude Code (sesión en la nube)
+Pendiente: registrar el documento como publicado, con su enlace, el 16/11.
 
 ## Tareas programadas
 

@@ -943,6 +943,12 @@
           "registro": [
             {
               "fecha": "2026-11-15",
+              "titulo": "Archivos siempre con aprobación de Emi; propuesta de la Matriz",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "Emi acepta o descarta la imagen del lanzamiento antes del martes 17 a las 9:00."
+            },
+            {
+              "fecha": "2026-11-15",
               "titulo": "Auditoría 3: arreglos del camino de archivos y de X",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "candado de subida con dueño; decisión de Emi sobre `adjuntar`."
@@ -982,12 +988,6 @@
               "titulo": "Quitar «solo app» pide aprobar otra vez",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "Emi agrega el video a la pieza y la aprueba."
-            },
-            {
-              "fecha": "2026-11-14",
-              "titulo": "Adjuntar a una pieza aprobada el archivo que le faltaba",
-              "agente": "Claude Code (sesión de x-viral, en la nube)",
-              "pendiente": "primera publicación real con video (DOF, domingo 15/11 a las 10:00); vigilar la subida previa en la bitácora."
             }
           ],
           "actividad": {
@@ -1009,10 +1009,10 @@
               0,
               0,
               0,
-              43
+              44
             ],
             "actores_60d": {
-              "Claude": 32,
+              "Claude": 33,
               "GitHub Actions": 10,
               "Emi": 1
             }
@@ -1126,6 +1126,12 @@
           "registro": [
             {
               "fecha": "2026-11-15",
+              "titulo": "Registro en el panel de redes",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "registrar el documento como publicado, con su enlace, el 16/11."
+            },
+            {
+              "fecha": "2026-11-15",
               "titulo": "«programados» en red/estado.json",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "el registro directo en el panel (POST a la API del panel) espera la confirmación de Emi."
@@ -1165,12 +1171,6 @@
               "titulo": "Claude publica con el sí final de Emi; petición a Vox enviada",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "archivo MP4 del video del DOF para publicarlo; que Vox Studio aplique la petición."
-            },
-            {
-              "fecha": "2026-11-13",
-              "titulo": "Tarea semanal de revisión de fuentes",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "ver si la primera ejecución puede subir a `main`; si no, añadir `lianfixx/linkedin` al entorno de la tarea."
             }
           ],
           "actividad": {
@@ -1192,10 +1192,10 @@
               0,
               0,
               0,
-              20
+              21
             ],
             "actores_60d": {
-              "Claude": 19,
+              "Claude": 20,
               "Emi": 1
             }
           }
@@ -2164,9 +2164,9 @@
           0,
           0,
           9,
-          122
+          124
         ],
-        "esta_semana": 122,
+        "esta_semana": 124,
         "semana_pasada": 9,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2269,11 +2269,11 @@
       153,
       154,
       196,
-      249
+      251
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 280,
+      "Claude": 282,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 10
     },

@@ -19,7 +19,7 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 | [[Castorena]] | 4 | 29 commits | 0 días | 0 | Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP, escritos y monitor del DOF. |
 | [[MILLA ABOGADOS]] | 5 | 0 commits | 11 días | 0 | El despacho de Emi: sitio, asesorías, monitoreo de expedientes, captación e Impulso Libre. |
 | [[Acción Tlalnepantla]] | 1 | 0 commits | 11 días | 0 | Acción Política Juvenil Tlalnepantla (PAN): sitio, formatos, eventos y materiales. |
-| [[Contenido y video]] | 7 | 122 commits | 0 días | 0 | Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio, X, Instagram, TikTok, LinkedIn, la matriz de redes (REDES) e historias de Instagram. |
+| [[Contenido y video]] | 7 | 124 commits | 0 días | 0 | Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio, X, Instagram, TikTok, LinkedIn, la matriz de redes (REDES) e historias de Instagram. |
 | [[Estudio]] | 2 | 0 commits | 8 días | 0 | Maestría en Alta Dirección y pizarras de estudio. |
 | [[Productos]] | 2 | 0 commits | 11 días | 0 | Productos propios de Emi: PANEL FIRMA (gestión jurídica) y Mes (finanzas personales). |
 | [[Herramientas]] | 5 | 33 commits | 2 días | 0 | Piezas que sirven a todos los cerebros: estilo de Emi, selector de modelo, entorno de Cloudflare, computadora virtual (Simular Box) e ingeniería inversa. |
@@ -27,16 +27,16 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 
 ## Lo último que se hizo
 
+- 15 nov 2026 · **REDES** · Archivos siempre con aprobación de Emi; propuesta de la Matriz · Agente: Claude Code (sesión en la nube)
 - 15 nov 2026 · **REDES** · Auditoría 3: arreglos del camino de archivos y de X · Agente: Claude Code (sesión en la nube)
 - 15 nov 2026 · **REDES** · Documento de 8 láminas: tentativo · Agente: Claude Code (sesión en la nube)
-- 15 nov 2026 · **REDES** · Registro externo: corregir la clave sin duplicar · Agente: Claude Code (sesión en la nube)
+- 15 nov 2026 · **LinkedIn** · Registro en el panel de redes · Agente: Claude Code (sesión en la nube)
 - 15 nov 2026 · **LinkedIn** · «programados» en red/estado.json · Agente: Claude Code (sesión en la nube)
 - 14 nov 2026 · **Cerebro-Castorena-** · Cierre diario programado (sin cambios de tablas) · Agente: Claude Code (ejecución programada)
 - 14 nov 2026 · **LinkedIn** · Documento de pagos digitales programado · Agente: Claude Code (sesión en la nube)
 - 13 nov 2026 · **Cerebro-Castorena-** · Cierre diario programado: maestro INDEP v23 copiado · Agente: Claude Code (ejecución programada)
 - 13 nov 2026 · **VIDEOS-IA-SKILL-MILLA** · Vox Studio 0.13.1: ideas de temas desde la skill de LinkedIn · Agente: Claude Code (sesión en la nube)
 - 13 nov 2026 · **VIDEOS-IA-SKILL-MILLA** · Regla de Emi en las cuatro skills de video: nunca decir que el video lo hizo una IA · Agente: Claude Code (sesión en la nube)
-- 13 nov 2026 · **X** · API de X conectada al panel · Agente: Claude Code (sesión en la nube)
 
 ## Vencimientos
 

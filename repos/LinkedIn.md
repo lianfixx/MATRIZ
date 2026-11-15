@@ -4,9 +4,9 @@ cerebro: "Contenido y video"
 visibilidad: "público"
 ultimo_cambio: 2026-11-15
 skills: 1
-commits_8_semanas: 20
+commits_8_semanas: 21
 ultimo_agente: "Claude Code (sesión en la nube)"
-pendiente: "el registro directo en el panel (POST a la API del panel) espera la confirmación de Emi."
+pendiente: "registrar el documento como publicado, con su enlace, el 16/11."
 github: "https://github.com/lianfixx/LinkedIn"
 tags:
   - "repo"
@@ -28,12 +28,12 @@ Skill para planear, redactar, revisar, entregar para publicar y medir lo que Emi
 
 ## Últimos registros
 
+- 15 nov 2026 · Registro en el panel de redes · Agente: Claude Code (sesión en la nube)
 - 15 nov 2026 · «programados» en red/estado.json · Agente: Claude Code (sesión en la nube)
 - 14 nov 2026 · Documento de pagos digitales programado · Agente: Claude Code (sesión en la nube)
 - 13 nov 2026 · Límite del título de documento (58 caracteres) · Agente: Claude Code (sesión en la nube)
 - 13 nov 2026 · Estilo de láminas y tono aprobados por Emi · Agente: Claude Code (sesión en la nube)
-- 13 nov 2026 · Primer post publicado: video del DOF (pagos digitales); Panel leído · Agente: Claude Code (sesión en la nube)
 
 ## Pendiente más reciente
 
-el registro directo en el panel (POST a la API del panel) espera la confirmación de Emi.
+registrar el documento como publicado, con su enlace, el 16/11.
