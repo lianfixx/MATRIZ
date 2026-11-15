@@ -4,7 +4,7 @@ cerebro: "Contenido y video"
 visibilidad: "público"
 ultimo_cambio: 2026-11-15
 skills: 1
-commits_8_semanas: 44
+commits_8_semanas: 45
 ultimo_agente: "Claude Code (sesión en la nube)"
 pendiente: "Emi acepta o descarta la imagen del lanzamiento antes del martes 17 a las 9:00."
 github: "https://github.com/lianfixx/REDES"
