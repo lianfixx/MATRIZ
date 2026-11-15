@@ -81,14 +81,14 @@ Skill de TikTok de Emi: estrategia, publicación y medición
 
 ### LinkedIn (público)
 
-https://github.com/lianfixx/LinkedIn · último cambio: 14 nov 2026
+https://github.com/lianfixx/LinkedIn · último cambio: 15 nov 2026
 
 Skill para planear, redactar, revisar, entregar para publicar y medir lo que Emi publica en su perfil personal de LinkedIn (linkedin.com/in/emiliano-milla). Sirve en cualquier IA.
 
 Skills: `linkedin-pro`
 
-Último registro: 14 nov 2026 · Documento de pagos digitales programado · Agente: Claude Code (sesión en la nube)
-Pendiente: el 16/11, anotar el enlace con `linkedin.py publicado` y poner las fuentes oficiales en el primer comentario si Emi lo pide.
+Último registro: 15 nov 2026 · «programados» en red/estado.json · Agente: Claude Code (sesión en la nube)
+Pendiente: el registro directo en el panel (POST a la API del panel) espera la confirmación de Emi.
 
 ## Tareas programadas
 
