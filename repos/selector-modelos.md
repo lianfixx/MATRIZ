@@ -3,7 +3,7 @@ tipo: "repo"
 cerebro: "Herramientas"
 visibilidad: "privado"
 ultimo_cambio: 2026-11-16
-commits_8_semanas: 10
+commits_8_semanas: 11
 github: "https://github.com/lianfixx/selector-modelos"
 tags:
   - "repo"
