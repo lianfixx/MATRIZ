@@ -19,7 +19,7 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 | [[Castorena]] | 4 | 1 commits | 0 días | 0 | Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP, escritos y monitor del DOF. |
 | [[MILLA ABOGADOS]] | 5 | 0 commits | 12 días | 0 | El despacho de Emi: sitio, asesorías, monitoreo de expedientes, captación e Impulso Libre. |
 | [[Acción Tlalnepantla]] | 1 | 0 commits | 12 días | 0 | Acción Política Juvenil Tlalnepantla (PAN): sitio, formatos, eventos y materiales. |
-| [[Contenido y video]] | 7 | 7 commits | 0 días | 0 | Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio, X, Instagram, TikTok, LinkedIn, la matriz de redes (REDES) e historias de Instagram. |
+| [[Contenido y video]] | 7 | 8 commits | 0 días | 0 | Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio, X, Instagram, TikTok, LinkedIn, la matriz de redes (REDES) e historias de Instagram. |
 | [[Estudio]] | 2 | 0 commits | 9 días | 0 | Maestría en Alta Dirección y pizarras de estudio. |
 | [[Productos]] | 2 | 0 commits | 12 días | 0 | Productos propios de Emi: PANEL FIRMA (gestión jurídica) y Mes (finanzas personales). |
 | [[Herramientas]] | 5 | 4 commits | 0 días | 0 | Piezas que sirven a todos los cerebros: estilo de Emi, selector de modelo, entorno de Cloudflare, computadora virtual (Simular Box) e ingeniería inversa. |
@@ -27,6 +27,7 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 
 ## Lo último que se hizo
 
+- 16 nov 2026 · **X** · Borradores sin dos puntos (preferencia de Emi) · Agente: Claude Code (sesión en la nube)
 - 16 nov 2026 · **X** · Arranque de la primera semana en X · Agente: Claude Code (sesión en la nube)
 - 16 nov 2026 · **HISTORIAS-** · 0.3.1 · candidato · Agente: no consta
 - 16 nov 2026 · **REDES** · Semana de X en el calendario y pendientes de Emi · Agente: Claude Code (sesión en la nube)
@@ -34,7 +35,6 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 - 16 nov 2026 · **LinkedIn** · Documento de pagos digitales publicado · Agente: Claude Code (sesión en la nube)
 - 15 nov 2026 · **Cerebro-Castorena-** · Cierre diario programado (sin cambios de tablas) · Agente: Claude Code (ejecución programada)
 - 15 nov 2026 · **X** · Emi: «que siempre pida mi aprobación» · Agente: Claude Code (sesión en la nube)
-- 15 nov 2026 · **X** · Primer post por la API: DOF con video, y auditoría del camino de video · Agente: Claude Code (sesión en la nube)
 - 15 nov 2026 · **REDES** · Archivos siempre con aprobación de Emi; propuesta de la Matriz · Agente: Claude Code (sesión en la nube)
 - 15 nov 2026 · **LinkedIn** · Registro en el panel de redes · Agente: Claude Code (sesión en la nube)
 

@@ -38,8 +38,8 @@ Skill para planear, redactar, revisar, publicar con aprobación (API oficial de 
 
 Skills: `x-viral`
 
-Último registro: 16 nov 2026 · Arranque de la primera semana en X · Agente: Claude Code (sesión en la nube)
-Pendiente: que Emi reescriba y apruebe los dos borradores; material de Emi para estilo de vida y política; comprobar el martes 9:10 que salió el lanzamiento; métricas del DOF a las 48 horas; antes del jueves, revisar si Hacienda ya publicó los sectores del artículo 13.
+Último registro: 16 nov 2026 · Borradores sin dos puntos (preferencia de Emi) · Agente: Claude Code (sesión en la nube)
+Pendiente: los de la entrada de abajo.
 
 ### HISTORIAS- (público)
 
