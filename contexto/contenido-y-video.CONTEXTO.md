@@ -42,13 +42,13 @@ Skills: `x-viral`
 
 ### HISTORIAS- (público)
 
-https://github.com/lianfixx/HISTORIAS- · último cambio: 11 nov 2026
+https://github.com/lianfixx/HISTORIAS- · último cambio: 16 nov 2026
 
 Método, motor y memoria para hacer las historias de Instagram de Emi con cualquier IA: la IA pregunta, propone y dibuja; Emi decide.
 
 Skills: `historias-studio`
 
-Último registro: 11 nov 2026 · 0.3.0 · candidato · Agente: no consta
+Último registro: 16 nov 2026 · 0.3.1 · candidato · Agente: no consta
 
 ### REDES (público)
 

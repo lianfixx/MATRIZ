@@ -865,7 +865,7 @@
           "url": "https://github.com/lianfixx/HISTORIAS-",
           "visibilidad": "público",
           "leido": true,
-          "ultimo_cambio": "2026-11-11",
+          "ultimo_cambio": "2026-11-16",
           "resumen": "Método, motor y memoria para hacer las historias de Instagram de Emi con cualquier IA: la IA pregunta, propone y dibuja; Emi decide.",
           "skills": [
             {
@@ -875,6 +875,12 @@
           ],
           "protocolo": "",
           "registro": [
+            {
+              "fecha": "2026-11-16",
+              "titulo": "0.3.1 · candidato",
+              "agente": "",
+              "pendiente": ""
+            },
             {
               "fecha": "2026-11-11",
               "titulo": "0.3.0 · candidato",
@@ -922,7 +928,7 @@
               7
             ],
             "actores_60d": {
-              "Claude": 7
+              "Claude": 8
             }
           }
         },
@@ -2168,7 +2174,7 @@
         ],
         "esta_semana": 128,
         "semana_pasada": 9,
-        "dias_sin_movimiento": 0,
+        "dias_sin_movimiento": -1,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
         "pendientes_de_repos": 4,
@@ -2273,7 +2279,7 @@
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 287,
+      "Claude": 288,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 11
     },
