@@ -56,13 +56,13 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 | Castorena | 4 | 1 | 29 | 0 | 0 | 0 |
 | MILLA ABOGADOS | 5 | 0 | 0 | 12 | 0 | 0 |
 | Acción Tlalnepantla | 1 | 0 | 0 | 12 | 0 | 0 |
-| Contenido y video | 7 | 1 | 128 | 0 | 0 | 0 |
+| Contenido y video | 7 | 2 | 128 | 0 | 0 | 0 |
 | Estudio | 2 | 0 | 0 | 9 | 0 | 0 |
 | Productos | 2 | 0 | 0 | 12 | 0 | 0 |
 | Herramientas | 5 | 3 | 33 | 0 | 0 | 0 |
 | Sitios web | 3 | 0 | 65 | 4 | 0 | 0 |
 
-Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 290, ChatGPT · Codex 39, GitHub Actions 11.
+Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 291, ChatGPT · Codex 39, GitHub Actions 11.
 
 Vencimientos: Renovación de la conexión Claude–box el 7 dic 2026; Token de GitHub «MATRIZ lectura» el 9 feb 2027; Token de GitHub «MATRIZ escritura» (edición desde el panel) el 12 nov 2027; Llave de GitHub «Matriz administración (Claude)» el 12 nov 2027; Llave de Cloudflare «Matriz administración (Claude)» el 12 nov 2027.
 
@@ -161,10 +161,10 @@ Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio,
   - Pendiente: - Avisar a Emi y a Matriz de Redes que el Reel de Vox necesita la voz de Emi o la etiqueta.
 - **TikTok** (público) · https://github.com/lianfixx/TikTok · último cambio 12 nov 2026
   - Skill de TikTok de Emi: estrategia, publicación y medición
-- **LinkedIn** (público) · https://github.com/lianfixx/LinkedIn · último cambio 15 nov 2026 · skills: linkedin-pro
+- **LinkedIn** (público) · https://github.com/lianfixx/LinkedIn · último cambio 16 nov 2026 · skills: linkedin-pro
   - Skill para planear, redactar, revisar, entregar para publicar y medir lo que Emi publica en su perfil personal de LinkedIn (linkedin.com/in/emiliano-milla). Sirve en cualquier IA.
-  - Último: 15 nov 2026 · Registro en el panel de redes · Claude Code (sesión en la nube)
-  - Pendiente: registrar el documento como publicado, con su enlace, el 16/11.
+  - Último: 16 nov 2026 · Documento de pagos digitales publicado · Claude Code (sesión en la nube)
+  - Pendiente: métricas el 23/11/2026; las del video, el 20/11/2026.
 
 ### Tareas programadas
 
