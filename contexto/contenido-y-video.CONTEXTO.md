@@ -52,14 +52,14 @@ Skills: `historias-studio`
 
 ### REDES (público)
 
-https://github.com/lianfixx/REDES · último cambio: 15 nov 2026
+https://github.com/lianfixx/REDES · último cambio: 16 nov 2026
 
 La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, Instagram) y de video (Vox Studio, Pizarra Studio, Editor Studio, MILLA Video Studio, Historias Studio). Registra las ideas, decide en qué red y formato sale cada una, arma el calendario de todas…
 
 Skills: `matriz-redes`
 
-Último registro: 15 nov 2026 · Archivos siempre con aprobación de Emi; propuesta de la Matriz · Agente: Claude Code (sesión en la nube)
-Pendiente: Emi acepta o descarta la imagen del lanzamiento antes del martes 17 a las 9:00.
+Último registro: 16 nov 2026 · Calendario: DOF en X y documento en LinkedIn, publicados; lanzamiento con imagen · Agente: Claude Code (sesión en la nube)
+Pendiente: lanzamiento el martes 17 a las 9:00.
 
 ### Instagram (público)
 

@@ -2,11 +2,11 @@
 tipo: "repo"
 cerebro: "Contenido y video"
 visibilidad: "público"
-ultimo_cambio: 2026-11-15
+ultimo_cambio: 2026-11-16
 skills: 1
-commits_8_semanas: 46
+commits_8_semanas: 48
 ultimo_agente: "Claude Code (sesión en la nube)"
-pendiente: "Emi acepta o descarta la imagen del lanzamiento antes del martes 17 a las 9:00."
+pendiente: "lanzamiento el martes 17 a las 9:00."
 github: "https://github.com/lianfixx/REDES"
 tags:
   - "repo"
@@ -16,7 +16,7 @@ generado: "tools/generar.py · no editar a mano: se reescribe cada día"
 
 # REDES
 
-Cerebro: [[Contenido y video]] · público · último cambio: 15 nov 2026
+Cerebro: [[Contenido y video]] · público · último cambio: 16 nov 2026
 
 [Abrir en GitHub](https://github.com/lianfixx/REDES)
 
@@ -28,12 +28,12 @@ La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, 
 
 ## Últimos registros
 
+- 16 nov 2026 · Calendario: DOF en X y documento en LinkedIn, publicados; lanzamiento con imagen · Agente: Claude Code (sesión en la nube)
 - 15 nov 2026 · Archivos siempre con aprobación de Emi; propuesta de la Matriz · Agente: Claude Code (sesión en la nube)
 - 15 nov 2026 · Auditoría 3: arreglos del camino de archivos y de X · Agente: Claude Code (sesión en la nube)
 - 15 nov 2026 · Documento de 8 láminas: tentativo · Agente: Claude Code (sesión en la nube)
 - 15 nov 2026 · Registro externo: corregir la clave sin duplicar · Agente: Claude Code (sesión en la nube)
-- 15 nov 2026 · Auditoría: calendario al día con la realidad y video del DOF ya subido a X · Agente: Claude Code (sesión en la nube)
 
 ## Pendiente más reciente
 
-Emi acepta o descarta la imagen del lanzamiento antes del martes 17 a las 9:00.
+lanzamiento el martes 17 a las 9:00.

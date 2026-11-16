@@ -937,7 +937,7 @@
           "url": "https://github.com/lianfixx/REDES",
           "visibilidad": "público",
           "leido": true,
-          "ultimo_cambio": "2026-11-15",
+          "ultimo_cambio": "2026-11-16",
           "resumen": "La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, Instagram) y de video (Vox Studio, Pizarra Studio, Editor Studio, MILLA Video Studio, Historias Studio). Registra las ideas, decide en qué red y formato sale cada una, arma el calendario de todas…",
           "skills": [
             {
@@ -947,6 +947,12 @@
           ],
           "protocolo": "1.1.0",
           "registro": [
+            {
+              "fecha": "2026-11-16",
+              "titulo": "Calendario: DOF en X y documento en LinkedIn, publicados; lanzamiento con imagen",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "lanzamiento el martes 17 a las 9:00."
+            },
             {
               "fecha": "2026-11-15",
               "titulo": "Archivos siempre con aprobación de Emi; propuesta de la Matriz",
@@ -988,12 +994,6 @@
               "titulo": "Auditoría del camino de video en X: prueba de conexión, subida adelantada y permiso que no se pierde por una caída",
               "agente": "Claude Code (sesión de x-viral, en la nube)",
               "pendiente": "publicación real del DOF a las 10:30 (hora de México)."
-            },
-            {
-              "fecha": "2026-11-14",
-              "titulo": "Quitar «solo app» pide aprobar otra vez",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "Emi agrega el video a la pieza y la aprueba."
             }
           ],
           "actividad": {
@@ -1015,11 +1015,11 @@
               0,
               0,
               46,
-              0
+              2
             ],
             "actores_60d": {
-              "Claude": 34,
-              "GitHub Actions": 11,
+              "GitHub Actions": 12,
+              "Claude": 35,
               "Emi": 1
             }
           }
@@ -2170,9 +2170,9 @@
           0,
           9,
           128,
-          2
+          4
         ],
-        "esta_semana": 2,
+        "esta_semana": 4,
         "semana_pasada": 128,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2275,13 +2275,13 @@
       154,
       196,
       255,
-      6
+      8
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 291,
+      "Claude": 292,
       "ChatGPT · Codex": 39,
-      "GitHub Actions": 11
+      "GitHub Actions": 12
     },
     "vencimientos": [
       {
