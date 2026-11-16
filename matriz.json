@@ -1460,7 +1460,7 @@
           "url": "https://github.com/lianfixx/selector-modelos",
           "visibilidad": "privado",
           "leido": true,
-          "ultimo_cambio": "2026-11-09",
+          "ultimo_cambio": "2026-11-16",
           "resumen": "",
           "skills": [],
           "protocolo": "",
@@ -1487,9 +1487,9 @@
               8
             ],
             "actores_60d": {
+              "Claude": 2,
               "Emi": 6,
-              "ChatGPT · Codex": 1,
-              "Claude": 1
+              "ChatGPT · Codex": 1
             }
           }
         },
@@ -2225,7 +2225,7 @@
         ],
         "esta_semana": 33,
         "semana_pasada": 5,
-        "dias_sin_movimiento": 2,
+        "dias_sin_movimiento": -1,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
         "pendientes_de_repos": 0,
@@ -2273,7 +2273,7 @@
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 285,
+      "Claude": 286,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 11
     },

@@ -27,7 +27,7 @@ Privado: pide acceso a Emi o usa un conector de GitHub con su sesión.
 
 ### selector-modelos (privado)
 
-https://github.com/lianfixx/selector-modelos · último cambio: 9 nov 2026
+https://github.com/lianfixx/selector-modelos · último cambio: 16 nov 2026
 
 Privado: pide acceso a Emi o usa un conector de GitHub con su sesión.
 
