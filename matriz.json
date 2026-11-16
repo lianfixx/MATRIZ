@@ -775,7 +775,7 @@
           "url": "https://github.com/lianfixx/X",
           "visibilidad": "público",
           "leido": true,
-          "ultimo_cambio": "2026-11-15",
+          "ultimo_cambio": "2026-11-16",
           "resumen": "Skill para planear, redactar, revisar, publicar con aprobación (API oficial de X) y medir las publicaciones de @emilianomilla en X, apoyada en el código público del algoritmo de X (xai-org/x-algorithm).",
           "skills": [
             {
@@ -785,6 +785,12 @@
           ],
           "protocolo": "1.1.0",
           "registro": [
+            {
+              "fecha": "2026-11-16",
+              "titulo": "Arranque de la primera semana en X",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "que Emi reescriba y apruebe los dos borradores; material de Emi para estilo de vida y política; comprobar el martes 9:10 que salió el lanzamiento; métricas del DOF a las 48 horas; antes del jueves, revisar si Hacienda ya publicó los sectores del artículo 13."
+            },
             {
               "fecha": "2026-11-15",
               "titulo": "Emi: «que siempre pida mi aprobación»",
@@ -826,12 +832,6 @@
               "titulo": "x-viral 1.1.0: publicación por la API oficial, perfil y administración",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "Emi crea la app y fija el tope de gasto; la Matriz de Redes construye el panel con la publicación; primera publicación de prueba con Emi mirando; reinstalar la skill 1.1.0 en Claude."
-            },
-            {
-              "fecha": "2026-11-13",
-              "titulo": "Coordinación con la Matriz de Redes y campaña de lanzamiento",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "respuestas de Emi por medio de la Matriz; borrador del lanzamiento."
             }
           ],
           "actividad": {
@@ -853,10 +853,10 @@
               0,
               0,
               16,
-              0
+              1
             ],
             "actores_60d": {
-              "Claude": 16
+              "Claude": 17
             }
           }
         },
@@ -2170,14 +2170,14 @@
           0,
           9,
           128,
-          4
+          5
         ],
-        "esta_semana": 4,
+        "esta_semana": 5,
         "semana_pasada": 128,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
-        "pendientes_de_repos": 4,
+        "pendientes_de_repos": 5,
         "tareas_falladas": 0
       },
       "estudio": {
@@ -2275,11 +2275,11 @@
       154,
       196,
       255,
-      9
+      10
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 293,
+      "Claude": 294,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 12
     },

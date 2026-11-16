@@ -19,7 +19,7 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 | [[Castorena]] | 4 | 1 commits | 0 días | 0 | Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP, escritos y monitor del DOF. |
 | [[MILLA ABOGADOS]] | 5 | 0 commits | 12 días | 0 | El despacho de Emi: sitio, asesorías, monitoreo de expedientes, captación e Impulso Libre. |
 | [[Acción Tlalnepantla]] | 1 | 0 commits | 12 días | 0 | Acción Política Juvenil Tlalnepantla (PAN): sitio, formatos, eventos y materiales. |
-| [[Contenido y video]] | 7 | 4 commits | 0 días | 0 | Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio, X, Instagram, TikTok, LinkedIn, la matriz de redes (REDES) e historias de Instagram. |
+| [[Contenido y video]] | 7 | 5 commits | 0 días | 0 | Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio, X, Instagram, TikTok, LinkedIn, la matriz de redes (REDES) e historias de Instagram. |
 | [[Estudio]] | 2 | 0 commits | 9 días | 0 | Maestría en Alta Dirección y pizarras de estudio. |
 | [[Productos]] | 2 | 0 commits | 12 días | 0 | Productos propios de Emi: PANEL FIRMA (gestión jurídica) y Mes (finanzas personales). |
 | [[Herramientas]] | 5 | 4 commits | 0 días | 0 | Piezas que sirven a todos los cerebros: estilo de Emi, selector de modelo, entorno de Cloudflare, computadora virtual (Simular Box) e ingeniería inversa. |
@@ -27,6 +27,7 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 
 ## Lo último que se hizo
 
+- 16 nov 2026 · **X** · Arranque de la primera semana en X · Agente: Claude Code (sesión en la nube)
 - 16 nov 2026 · **HISTORIAS-** · 0.3.1 · candidato · Agente: no consta
 - 16 nov 2026 · **REDES** · Calendario: DOF en X y documento en LinkedIn, publicados; lanzamiento con imagen · Agente: Claude Code (sesión en la nube)
 - 16 nov 2026 · **LinkedIn** · Documento de pagos digitales publicado · Agente: Claude Code (sesión en la nube)
@@ -36,7 +37,6 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 - 15 nov 2026 · **REDES** · Archivos siempre con aprobación de Emi; propuesta de la Matriz · Agente: Claude Code (sesión en la nube)
 - 15 nov 2026 · **REDES** · Auditoría 3: arreglos del camino de archivos y de X · Agente: Claude Code (sesión en la nube)
 - 15 nov 2026 · **LinkedIn** · Registro en el panel de redes · Agente: Claude Code (sesión en la nube)
-- 15 nov 2026 · **LinkedIn** · «programados» en red/estado.json · Agente: Claude Code (sesión en la nube)
 
 ## Vencimientos
 
