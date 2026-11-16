@@ -949,6 +949,12 @@
           "registro": [
             {
               "fecha": "2026-11-16",
+              "titulo": "Semana de X en el calendario y pendientes de Emi",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "material y aprobaciones de Emi."
+            },
+            {
+              "fecha": "2026-11-16",
               "titulo": "Calendario: DOF en X y documento en LinkedIn, publicados; lanzamiento con imagen",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "lanzamiento el martes 17 a las 9:00."
@@ -988,12 +994,6 @@
               "titulo": "El panel se sincroniza con lo que hacen las skills de cada red",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "que la skill de LinkedIn agregue a su `red/estado.json` lo que programa (hoy solo trae lo publicado)."
-            },
-            {
-              "fecha": "2026-11-15",
-              "titulo": "Auditoría del camino de video en X: prueba de conexión, subida adelantada y permiso que no se pierde por una caída",
-              "agente": "Claude Code (sesión de x-viral, en la nube)",
-              "pendiente": "publicación real del DOF a las 10:30 (hora de México)."
             }
           ],
           "actividad": {
@@ -1015,11 +1015,11 @@
               0,
               0,
               46,
-              2
+              4
             ],
             "actores_60d": {
-              "GitHub Actions": 12,
-              "Claude": 35,
+              "GitHub Actions": 13,
+              "Claude": 36,
               "Emi": 1
             }
           }
@@ -2170,9 +2170,9 @@
           0,
           9,
           128,
-          5
+          7
         ],
-        "esta_semana": 5,
+        "esta_semana": 7,
         "semana_pasada": 128,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2275,13 +2275,13 @@
       154,
       196,
       255,
-      10
+      12
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 294,
+      "Claude": 295,
       "ChatGPT · Codex": 39,
-      "GitHub Actions": 12
+      "GitHub Actions": 13
     },
     "vencimientos": [
       {

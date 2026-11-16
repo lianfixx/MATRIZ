@@ -4,9 +4,9 @@ cerebro: "Contenido y video"
 visibilidad: "público"
 ultimo_cambio: 2026-11-16
 skills: 1
-commits_8_semanas: 48
+commits_8_semanas: 50
 ultimo_agente: "Claude Code (sesión en la nube)"
-pendiente: "lanzamiento el martes 17 a las 9:00."
+pendiente: "material y aprobaciones de Emi."
 github: "https://github.com/lianfixx/REDES"
 tags:
   - "repo"
@@ -28,12 +28,12 @@ La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, 
 
 ## Últimos registros
 
+- 16 nov 2026 · Semana de X en el calendario y pendientes de Emi · Agente: Claude Code (sesión en la nube)
 - 16 nov 2026 · Calendario: DOF en X y documento en LinkedIn, publicados; lanzamiento con imagen · Agente: Claude Code (sesión en la nube)
 - 15 nov 2026 · Archivos siempre con aprobación de Emi; propuesta de la Matriz · Agente: Claude Code (sesión en la nube)
 - 15 nov 2026 · Auditoría 3: arreglos del camino de archivos y de X · Agente: Claude Code (sesión en la nube)
 - 15 nov 2026 · Documento de 8 láminas: tentativo · Agente: Claude Code (sesión en la nube)
-- 15 nov 2026 · Registro externo: corregir la clave sin duplicar · Agente: Claude Code (sesión en la nube)
 
 ## Pendiente más reciente
 
-lanzamiento el martes 17 a las 9:00.
+material y aprobaciones de Emi.
