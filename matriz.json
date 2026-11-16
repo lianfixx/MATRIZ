@@ -1493,7 +1493,7 @@
               8
             ],
             "actores_60d": {
-              "Claude": 2,
+              "Claude": 3,
               "Emi": 6,
               "ChatGPT · Codex": 1
             }
@@ -2279,7 +2279,7 @@
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 288,
+      "Claude": 289,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 11
     },
