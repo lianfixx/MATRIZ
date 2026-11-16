@@ -4,7 +4,7 @@ cerebro: "Contenido y video"
 visibilidad: "público"
 ultimo_cambio: 2026-11-16
 skills: 1
-commits_8_semanas: 7
+commits_8_semanas: 8
 github: "https://github.com/lianfixx/HISTORIAS-"
 tags:
   - "repo"
