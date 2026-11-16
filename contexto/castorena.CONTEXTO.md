@@ -32,7 +32,7 @@ Pendiente: subir v23 a Drive, Escritorio e iCloud; ACTUAL.json de INDEP sigue en
 
 ### INDEP (privado)
 
-https://github.com/lianfixx/INDEP · último cambio: 13 nov 2026
+https://github.com/lianfixx/INDEP · último cambio: 16 nov 2026
 
 Privado: pide acceso a Emi o usa un conector de GitHub con su sesión.
 
