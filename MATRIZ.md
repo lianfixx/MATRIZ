@@ -16,7 +16,7 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 
 | Cerebro | Repos | Esta semana | Sin movimiento | Pendientes | Qué es |
 |---|---|---|---|---|---|
-| [[Castorena]] | 4 | 2 commits | 0 días | 0 | Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP, escritos y monitor del DOF. |
+| [[Castorena]] | 4 | 3 commits | -1 días | 0 | Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP, escritos y monitor del DOF. |
 | [[MILLA ABOGADOS]] | 5 | 0 commits | 12 días | 0 | El despacho de Emi: sitio, asesorías, monitoreo de expedientes, captación e Impulso Libre. |
 | [[Acción Tlalnepantla]] | 1 | 0 commits | 12 días | 0 | Acción Política Juvenil Tlalnepantla (PAN): sitio, formatos, eventos y materiales. |
 | [[Contenido y video]] | 7 | 8 commits | 0 días | 0 | Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio, X, Instagram, TikTok, LinkedIn, la matriz de redes (REDES) e historias de Instagram. |
@@ -27,6 +27,7 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 
 ## Lo último que se hizo
 
+- 16 nov 2026 · **Cerebro-Castorena-** · Cierre diario programado (sin cambios de tablas) · Agente: Claude Code (ejecución programada)
 - 16 nov 2026 · **X** · Borradores sin dos puntos (preferencia de Emi) · Agente: Claude Code (sesión en la nube)
 - 16 nov 2026 · **X** · Arranque de la primera semana en X · Agente: Claude Code (sesión en la nube)
 - 16 nov 2026 · **HISTORIAS-** · 0.3.1 · candidato · Agente: no consta
@@ -36,7 +37,6 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 - 15 nov 2026 · **Cerebro-Castorena-** · Cierre diario programado (sin cambios de tablas) · Agente: Claude Code (ejecución programada)
 - 15 nov 2026 · **X** · Emi: «que siempre pida mi aprobación» · Agente: Claude Code (sesión en la nube)
 - 15 nov 2026 · **REDES** · Archivos siempre con aprobación de Emi; propuesta de la Matriz · Agente: Claude Code (sesión en la nube)
-- 15 nov 2026 · **LinkedIn** · Registro en el panel de redes · Agente: Claude Code (sesión en la nube)
 
 ## Vencimientos
 
