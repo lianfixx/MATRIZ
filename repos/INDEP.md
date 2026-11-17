@@ -2,8 +2,8 @@
 tipo: "repo"
 cerebro: "Castorena"
 visibilidad: "privado"
-ultimo_cambio: 2026-11-16
-commits_8_semanas: 441
+ultimo_cambio: 2026-11-17
+commits_8_semanas: 442
 github: "https://github.com/lianfixx/INDEP"
 tags:
   - "repo"
@@ -13,7 +13,7 @@ generado: "tools/generar.py · no editar a mano: se reescribe cada día"
 
 # INDEP
 
-Cerebro: [[Castorena]] · privado · último cambio: 16 nov 2026
+Cerebro: [[Castorena]] · privado · último cambio: 17 nov 2026
 
 [Abrir en GitHub](https://github.com/lianfixx/INDEP)
 
