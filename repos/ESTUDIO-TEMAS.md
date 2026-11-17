@@ -2,9 +2,9 @@
 tipo: "repo"
 cerebro: "Estudio"
 visibilidad: "público"
-ultimo_cambio: 2026-11-04
+ultimo_cambio: 2026-11-17
 skills: 1
-commits_8_semanas: 13
+commits_8_semanas: 14
 ultimo_agente: "Claude Code (sesión en la nube)"
 github: "https://github.com/lianfixx/ESTUDIO-TEMAS"
 tags:
@@ -15,7 +15,7 @@ generado: "tools/generar.py · no editar a mano: se reescribe cada día"
 
 # ESTUDIO-TEMAS
 
-Cerebro: [[Estudio]] · público · último cambio: 4 nov 2026
+Cerebro: [[Estudio]] · público · último cambio: 17 nov 2026
 
 [Abrir en GitHub](https://github.com/lianfixx/ESTUDIO-TEMAS)
 

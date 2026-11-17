@@ -1,7 +1,7 @@
 ---
 tipo: "cerebro"
 repos: 2
-ultimo_cambio: 2026-11-07
+ultimo_cambio: 2026-11-17
 tags:
   - "cerebro"
 generado: "tools/generar.py · no editar a mano: se reescribe cada día"
@@ -16,7 +16,7 @@ Parte de la [[MATRIZ]].
 ## Repositorios
 
 - [[maestria-alta-direccion|maestria-alta-direccion]] · privado · 7 nov 2026
-- [[ESTUDIO-TEMAS|ESTUDIO-TEMAS]] · público · 4 nov 2026 · 1 skill(s)
+- [[ESTUDIO-TEMAS|ESTUDIO-TEMAS]] · público · 17 nov 2026 · 1 skill(s)
 
 ## Skills instaladas en Claude
 

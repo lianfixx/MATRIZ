@@ -57,12 +57,12 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 | MILLA ABOGADOS | 5 | 0 | 0 | 13 | 0 | 0 |
 | Acción Tlalnepantla | 1 | 0 | 0 | 13 | 0 | 0 |
 | Contenido y video | 7 | 10 | 128 | 0 | 0 | 0 |
-| Estudio | 2 | 0 | 0 | 10 | 0 | 0 |
+| Estudio | 2 | 1 | 0 | 0 | 0 | 0 |
 | Productos | 2 | 0 | 0 | 13 | 0 | 0 |
 | Herramientas | 5 | 5 | 33 | 0 | 0 | 0 |
 | Sitios web | 3 | 0 | 65 | 5 | 0 | 0 |
 
-Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 302, ChatGPT · Codex 39, GitHub Actions 14.
+Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 303, ChatGPT · Codex 39, GitHub Actions 14.
 
 Vencimientos: Renovación de la conexión Claude–box el 7 dic 2026; Token de GitHub «MATRIZ lectura» el 9 feb 2027; Token de GitHub «MATRIZ escritura» (edición desde el panel) el 12 nov 2027; Llave de GitHub «Matriz administración (Claude)» el 12 nov 2027; Llave de Cloudflare «Matriz administración (Claude)» el 12 nov 2027.
 
@@ -188,7 +188,7 @@ Maestría en Alta Dirección y pizarras de estudio.
 ### Repositorios
 
 - **maestria-alta-direccion** (privado) · https://github.com/lianfixx/maestria-alta-direccion · último cambio 7 nov 2026
-- **ESTUDIO-TEMAS** (público) · https://github.com/lianfixx/ESTUDIO-TEMAS · último cambio 4 nov 2026 · skills: pizarras-de-estudio
+- **ESTUDIO-TEMAS** (público) · https://github.com/lianfixx/ESTUDIO-TEMAS · último cambio 17 nov 2026 · skills: pizarras-de-estudio
   - Apuntes de estudio claros, fundamentados y fáciles de continuar con otra IA.
   - Último: 4 nov 2026 · corrección: puentes de skill con YAML válido · Claude Code (sesión en la nube)
 

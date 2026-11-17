@@ -27,7 +27,7 @@ Privado: pide acceso a Emi o usa un conector de GitHub con su sesión.
 
 ### ESTUDIO-TEMAS (público)
 
-https://github.com/lianfixx/ESTUDIO-TEMAS · último cambio: 4 nov 2026
+https://github.com/lianfixx/ESTUDIO-TEMAS · último cambio: 17 nov 2026
 
 Apuntes de estudio claros, fundamentados y fáciles de continuar con otra IA.
 
