@@ -4,9 +4,9 @@ cerebro: "Castorena"
 visibilidad: "público"
 ultimo_cambio: 2026-11-17
 skills: 1
-commits_8_semanas: 31
-ultimo_agente: "Claude Code (ejecución programada)"
-pendiente: "subir v23 a Drive, Escritorio e iCloud; ACTUAL.json de INDEP sigue en la entrega 18."
+commits_8_semanas: 32
+ultimo_agente: "Claude (claude.ai, Opus 5.5), sesión con Emi"
+pendiente: "Escritorio e iCloud (Mac no enlazada); INDEP v23 en Drive, Escritorio e iCloud; reconciliación de la nota ID 12."
 github: "https://github.com/lianfixx/Cerebro-Castorena-"
 tags:
   - "repo"
@@ -28,12 +28,12 @@ Matriz documental de Emi para Castorena Abogados. Aquí están las cinco tablas 
 
 ## Últimos registros
 
+- 17 nov 2026 · Concentrado: indicaciones de Emi para los ID 2 a 20 · Agente: Claude (claude.ai, Opus 5.5), sesión con Emi
 - 16 nov 2026 · Cierre diario programado (sin cambios de tablas) · Agente: Claude Code (ejecución programada)
 - 15 nov 2026 · Cierre diario programado (sin cambios de tablas) · Agente: Claude Code (ejecución programada)
 - 14 nov 2026 · Cierre diario programado (sin cambios de tablas) · Agente: Claude Code (ejecución programada)
 - 13 nov 2026 · Cierre diario programado: maestro INDEP v23 copiado · Agente: Claude Code (ejecución programada)
-- 12 nov 2026 · Cierre diario programado (sin cambios de tablas) · Agente: Claude Code (ejecución programada)
 
 ## Pendiente más reciente
 
-subir v23 a Drive, Escritorio e iCloud; ACTUAL.json de INDEP sigue en la entrega 18.
+Escritorio e iCloud (Mac no enlazada); INDEP v23 en Drive, Escritorio e iCloud; reconciliación de la nota ID 12.
