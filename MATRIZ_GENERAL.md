@@ -59,10 +59,10 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 | Contenido y video | 7 | 9 | 128 | 0 | 0 | 0 |
 | Estudio | 2 | 0 | 0 | 10 | 0 | 0 |
 | Productos | 2 | 0 | 0 | 13 | 0 | 0 |
-| Herramientas | 5 | 4 | 33 | 1 | 0 | 0 |
+| Herramientas | 5 | 5 | 33 | 0 | 0 | 0 |
 | Sitios web | 3 | 0 | 65 | 5 | 0 | 0 |
 
-Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 301, ChatGPT · Codex 39, GitHub Actions 13.
+Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 302, ChatGPT · Codex 39, GitHub Actions 13.
 
 Vencimientos: Renovación de la conexión Claude–box el 7 dic 2026; Token de GitHub «MATRIZ lectura» el 9 feb 2027; Token de GitHub «MATRIZ escritura» (edición desde el panel) el 12 nov 2027; Llave de GitHub «Matriz administración (Claude)» el 12 nov 2027; Llave de Cloudflare «Matriz administración (Claude)» el 12 nov 2027.
 
@@ -219,7 +219,7 @@ Piezas que sirven a todos los cerebros: estilo de Emi, selector de modelo, entor
 
 - **estilo-emi** (privado) · https://github.com/lianfixx/estilo-emi · último cambio 12 nov 2026
 - **selector-modelos** (privado) · https://github.com/lianfixx/selector-modelos · último cambio 16 nov 2026
-- **cloudfare** (público) · https://github.com/lianfixx/cloudfare · último cambio 16 nov 2026
+- **cloudfare** (público) · https://github.com/lianfixx/cloudfare · último cambio 17 nov 2026
   - Entorno para que Claude Code, Codex y Muse trabajen con Cloudflare a través del CLI oficial cf. Solo la conexión, las reglas y el registro; no incluye proyectos.
 - **box-simular** (privado) · https://github.com/lianfixx/box-simular · último cambio 11 nov 2026
 - **rea-ingenieria-inversa** (privado) · https://github.com/lianfixx/rea-ingenieria-inversa · último cambio 11 nov 2026
