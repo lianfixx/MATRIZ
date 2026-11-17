@@ -25,6 +25,12 @@
           "registro": [
             {
               "fecha": "2026-11-17",
+              "titulo": "Concentrado: auditoría por sede (ID 9, 11, 12 y 33)",
+              "agente": "Claude Code (sesión de claude.ai con Emi, Fable 5.2)",
+              "pendiente": "Escritorio e iCloud (Mac no enlazada); dudas de Emi en el cierre (ID 8, 11, 12, 15, 18, 33 y 34); INDEP v23 en Drive, Escritorio e iCloud."
+            },
+            {
+              "fecha": "2026-11-17",
               "titulo": "Concentrado: indicaciones de Emi para los ID 2 a 20",
               "agente": "Claude (claude.ai, Opus 5.5), sesión con Emi",
               "pendiente": "Escritorio e iCloud (Mac no enlazada); INDEP v23 en Drive, Escritorio e iCloud; reconciliación de la nota ID 12."
@@ -64,12 +70,6 @@
               "titulo": "Cierre diario programado (sin cambios de tablas)",
               "agente": "Claude Code (ejecución programada)",
               "pendiente": "subir v22 a Drive, Escritorio e iCloud; ACTUAL.json de INDEP sigue en la entrega 18."
-            },
-            {
-              "fecha": "2026-11-10",
-              "titulo": "Cierre diario programado: maestro INDEP v22 copiado",
-              "agente": "Claude Code (ejecución programada)",
-              "pendiente": "subir v22 a Drive, Escritorio e iCloud (la ejecución programada no pudo escribir en Drive ni alcanza la Mac); ACTUAL.json de INDEP sigue en la entrega 18."
             }
           ],
           "actividad": {
@@ -91,10 +91,10 @@
               0,
               15,
               14,
-              3
+              4
             ],
             "actores_60d": {
-              "Claude": 25,
+              "Claude": 26,
               "Emi": 6,
               "ChatGPT · Codex": 1
             }
@@ -2113,9 +2113,9 @@
           154,
           113,
           29,
-          6
+          7
         ],
-        "esta_semana": 6,
+        "esta_semana": 7,
         "semana_pasada": 29,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2275,11 +2275,11 @@
       154,
       196,
       255,
-      22
+      23
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 304,
+      "Claude": 305,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 14
     },
