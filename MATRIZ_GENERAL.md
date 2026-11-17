@@ -1,4 +1,4 @@
-# Matriz General de Emi · 16 nov 2026
+# Matriz General de Emi · 17 nov 2026
 
 Este es el archivo único de la Matriz General: el mapa de todo el trabajo de Emi. Si te lo adjuntaron, con esto basta para entender quién es, dónde trabaja, qué hay en cada cerebro, qué se hizo último, qué está pendiente y cómo continuar. Todo nace y se registra desde aquí.
 
@@ -53,14 +53,14 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 
 | Cerebro | Repos | Commits esta semana | Semana pasada | Días sin movimiento | Pendientes | Vencidos |
 |---|---|---|---|---|---|---|
-| Castorena | 4 | 3 | 29 | -1 | 0 | 0 |
-| MILLA ABOGADOS | 5 | 0 | 0 | 12 | 0 | 0 |
-| Acción Tlalnepantla | 1 | 0 | 0 | 12 | 0 | 0 |
-| Contenido y video | 7 | 8 | 128 | 0 | 0 | 0 |
-| Estudio | 2 | 0 | 0 | 9 | 0 | 0 |
-| Productos | 2 | 0 | 0 | 12 | 0 | 0 |
-| Herramientas | 5 | 4 | 33 | 0 | 0 | 0 |
-| Sitios web | 3 | 0 | 65 | 4 | 0 | 0 |
+| Castorena | 4 | 3 | 29 | 0 | 0 | 0 |
+| MILLA ABOGADOS | 5 | 0 | 0 | 13 | 0 | 0 |
+| Acción Tlalnepantla | 1 | 0 | 0 | 13 | 0 | 0 |
+| Contenido y video | 7 | 8 | 128 | 1 | 0 | 0 |
+| Estudio | 2 | 0 | 0 | 10 | 0 | 0 |
+| Productos | 2 | 0 | 0 | 13 | 0 | 0 |
+| Herramientas | 5 | 4 | 33 | 1 | 0 | 0 |
+| Sitios web | 3 | 0 | 65 | 5 | 0 | 0 |
 
 Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 298, ChatGPT · Codex 39, GitHub Actions 13.
 
