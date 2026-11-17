@@ -32,14 +32,14 @@ Pendiente: avisar a `linkedin-pro` con fecha y commit; fusionar a `main`.
 
 ### X (público)
 
-https://github.com/lianfixx/X · último cambio: 16 nov 2026
+https://github.com/lianfixx/X · último cambio: 17 nov 2026
 
 Skill para planear, redactar, revisar, publicar con aprobación (API oficial de X) y medir las publicaciones de @emilianomilla en X, apoyada en el código público del algoritmo de X (xai-org/x-algorithm).
 
 Skills: `x-viral`
 
-Último registro: 16 nov 2026 · Borradores sin dos puntos (preferencia de Emi) · Agente: Claude Code (sesión en la nube)
-Pendiente: los de la entrada de abajo.
+Último registro: 17 nov 2026 · Lanzamiento publicado por la API · Agente: Claude Code (sesión en la nube)
+Pendiente: que Emi responda a quien comente en las dos primeras horas; métricas a las 48 horas; aprobar los borradores del jueves y del viernes; material para estilo de vida.
 
 ### HISTORIAS- (público)
 

@@ -56,13 +56,13 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 | Castorena | 4 | 5 | 29 | 0 | 0 | 0 |
 | MILLA ABOGADOS | 5 | 0 | 0 | 13 | 0 | 0 |
 | Acción Tlalnepantla | 1 | 0 | 0 | 13 | 0 | 0 |
-| Contenido y video | 7 | 8 | 128 | 1 | 0 | 0 |
+| Contenido y video | 7 | 9 | 128 | 0 | 0 | 0 |
 | Estudio | 2 | 0 | 0 | 10 | 0 | 0 |
 | Productos | 2 | 0 | 0 | 13 | 0 | 0 |
 | Herramientas | 5 | 4 | 33 | 1 | 0 | 0 |
 | Sitios web | 3 | 0 | 65 | 5 | 0 | 0 |
 
-Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 300, ChatGPT · Codex 39, GitHub Actions 13.
+Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 301, ChatGPT · Codex 39, GitHub Actions 13.
 
 Vencimientos: Renovación de la conexión Claude–box el 7 dic 2026; Token de GitHub «MATRIZ lectura» el 9 feb 2027; Token de GitHub «MATRIZ escritura» (edición desde el panel) el 12 nov 2027; Llave de GitHub «Matriz administración (Claude)» el 12 nov 2027; Llave de Cloudflare «Matriz administración (Claude)» el 12 nov 2027.
 
@@ -145,10 +145,10 @@ Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio,
   - Un método portable para producir videos de MILLA ABOGADOS: investigación, guion, conexiones, voz, imágenes, música, montaje y revisión. Incluye una skill, instrucciones para otras IAs, utilidades y un compositor nuevo.
   - Último: 13 nov 2026 · Vox Studio 0.13.1: ideas de temas desde la skill de LinkedIn · Claude Code (sesión en la nube)
   - Pendiente: avisar a `linkedin-pro` con fecha y commit; fusionar a `main`.
-- **X** (público) · https://github.com/lianfixx/X · último cambio 16 nov 2026 · skills: x-viral
+- **X** (público) · https://github.com/lianfixx/X · último cambio 17 nov 2026 · skills: x-viral
   - Skill para planear, redactar, revisar, publicar con aprobación (API oficial de X) y medir las publicaciones de @emilianomilla en X, apoyada en el código público del algoritmo de X (xai-org/x-algorithm).
-  - Último: 16 nov 2026 · Borradores sin dos puntos (preferencia de Emi) · Claude Code (sesión en la nube)
-  - Pendiente: los de la entrada de abajo.
+  - Último: 17 nov 2026 · Lanzamiento publicado por la API · Claude Code (sesión en la nube)
+  - Pendiente: que Emi responda a quien comente en las dos primeras horas; métricas a las 48 horas; aprobar los borradores del jueves y del viernes; material para estilo de vida.
 - **HISTORIAS-** (público) · https://github.com/lianfixx/HISTORIAS- · último cambio 16 nov 2026 · skills: historias-studio
   - Método, motor y memoria para hacer las historias de Instagram de Emi con cualquier IA: la IA pregunta, propone y dibuja; Emi decide.
   - Último: 16 nov 2026 · 0.3.1 · candidato · agente no consta
