@@ -21,7 +21,7 @@ Parte de la [[MATRIZ]].
 - [[REDES|REDES]] · público · 18 nov 2026 · 1 skill(s)
 - [[Instagram|Instagram]] · público · 13 nov 2026 · 1 skill(s)
 - [[TikTok|TikTok]] · público · 12 nov 2026
-- [[LinkedIn|LinkedIn]] · público · 16 nov 2026 · 1 skill(s)
+- [[LinkedIn|LinkedIn]] · público · 18 nov 2026 · 1 skill(s)
 
 ## Tareas programadas
 

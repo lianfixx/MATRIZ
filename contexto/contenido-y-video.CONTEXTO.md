@@ -59,8 +59,8 @@ La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, 
 
 Skills: `matriz-redes`
 
-Último registro: 18 nov 2026 · Idea de coyuntura: portada «The World Ahead 2027» de The Economist · Agente: Claude Code (sesión en la nube)
-Pendiente: borradores de las skills en el panel y aprobación de Emi; opinión de Emi para el guion del video.
+Último registro: 18 nov 2026 · LinkedIn: The Economist pasa al lunes 23; post del mapa el miércoles 18 · Agente: Claude Code (sesión en la nube)
+Pendiente: que Emi elija la opción A o B en la sesión de LinkedIn.
 
 ### Instagram (público)
 
@@ -81,14 +81,14 @@ Skill de TikTok de Emi: estrategia, publicación y medición
 
 ### LinkedIn (público)
 
-https://github.com/lianfixx/LinkedIn · último cambio: 16 nov 2026
+https://github.com/lianfixx/LinkedIn · último cambio: 18 nov 2026
 
 Skill para planear, redactar, revisar, entregar para publicar y medir lo que Emi publica en su perfil personal de LinkedIn (linkedin.com/in/emiliano-milla). Sirve en cualquier IA.
 
 Skills: `linkedin-pro`
 
-Último registro: 16 nov 2026 · Documento de pagos digitales publicado · Agente: Claude Code (sesión en la nube)
-Pendiente: métricas el 23/11/2026; las del video, el 20/11/2026.
+Último registro: 17 nov 2026 · Post del mapa aprobado; Emi lo publica él · Agente: Claude Code (sesión en la nube)
+Pendiente: el enlace del post cuando salga; la pieza de The Economist (lunes 23) espera que Emi elija A o B.
 
 ## Tareas programadas
 
