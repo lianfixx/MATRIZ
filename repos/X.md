@@ -4,9 +4,9 @@ cerebro: "Contenido y video"
 visibilidad: "público"
 ultimo_cambio: 2026-11-18
 skills: 1
-commits_8_semanas: 24
+commits_8_semanas: 25
 ultimo_agente: "Claude Code (sesión en la nube)"
-pendiente: "aprobaciones de Emi; material de estilo de vida; métricas del lanzamiento a las 48 horas."
+pendiente: "ids de los videos, propuesta de archivos y aprobación de Emi."
 github: "https://github.com/lianfixx/X"
 tags:
   - "repo"
@@ -28,12 +28,12 @@ Skill para planear, redactar, revisar, publicar con aprobación (API oficial de 
 
 ## Últimos registros
 
+- 18 nov 2026 · Textos para los dos videos de The Economist · Agente: Claude Code (sesión en la nube)
 - 18 nov 2026 · Seguimiento del miércoles: métricas del DOF a las 48 horas · Agente: Claude Code (sesión en la nube)
 - 18 nov 2026 · Premium en prueba y texto largo sobre The Economist · Agente: Claude Code (sesión en la nube)
 - 18 nov 2026 · The Economist, segunda ronda: Emi rechazó las primeras opciones · Agente: Claude Code (sesión en la nube)
 - 18 nov 2026 · Post sobre la portada 2027 de The Economist (dos opciones) · Agente: Claude Code (sesión en la nube)
-- 17 nov 2026 · Lanzamiento publicado por la API · Agente: Claude Code (sesión en la nube)
 
 ## Pendiente más reciente
 
-aprobaciones de Emi; material de estilo de vida; métricas del lanzamiento a las 48 horas.
+ids de los videos, propuesta de archivos y aprobación de Emi.

@@ -38,8 +38,8 @@ Skill para planear, redactar, revisar, publicar con aprobación (API oficial de 
 
 Skills: `x-viral`
 
-Último registro: 18 nov 2026 · Seguimiento del miércoles: métricas del DOF a las 48 horas · Agente: Claude Code (sesión en la nube)
-Pendiente: aprobaciones de Emi; material de estilo de vida; métricas del lanzamiento a las 48 horas.
+Último registro: 18 nov 2026 · Textos para los dos videos de The Economist · Agente: Claude Code (sesión en la nube)
+Pendiente: ids de los videos, propuesta de archivos y aprobación de Emi.
 
 ### HISTORIAS- (público)
 
