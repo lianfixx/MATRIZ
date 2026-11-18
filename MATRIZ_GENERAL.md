@@ -56,13 +56,13 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 | Castorena | 4 | 9 | 29 | -1 | 0 | 0 |
 | MILLA ABOGADOS | 5 | 0 | 0 | 13 | 0 | 0 |
 | Acción Tlalnepantla | 1 | 0 | 0 | 13 | 0 | 0 |
-| Contenido y video | 7 | 30 | 128 | -1 | 0 | 0 |
+| Contenido y video | 7 | 31 | 128 | -1 | 0 | 0 |
 | Estudio | 2 | 1 | 0 | 0 | 0 | 0 |
 | Productos | 2 | 0 | 0 | 13 | 0 | 0 |
 | Herramientas | 5 | 5 | 33 | 0 | 0 | 0 |
 | Sitios web | 3 | 0 | 65 | 5 | 0 | 0 |
 
-Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 322, ChatGPT · Codex 39, GitHub Actions 19.
+Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 323, ChatGPT · Codex 39, GitHub Actions 19.
 
 Vencimientos: Renovación de la conexión Claude–box el 7 dic 2026; Token de GitHub «MATRIZ lectura» el 9 feb 2027; Token de GitHub «MATRIZ escritura» (edición desde el panel) el 12 nov 2027; Llave de GitHub «Matriz administración (Claude)» el 12 nov 2027; Llave de Cloudflare «Matriz administración (Claude)» el 12 nov 2027.
 
@@ -167,7 +167,7 @@ Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio,
 - **LinkedIn** (público) · https://github.com/lianfixx/LinkedIn · último cambio 18 nov 2026 · skills: linkedin-pro
   - Skill para planear, redactar, revisar, entregar para publicar y medir lo que Emi publica en su perfil personal de LinkedIn (linkedin.com/in/emiliano-milla). Sirve en cualquier IA.
   - Último: 18 nov 2026 · Post de The Economist aprobado para el jueves 19 · Claude Code (sesión en la nube)
-  - Pendiente: confirmar que la imagen del post de The Economist es la portada; publicarlo el 19 a las 8:30.
+  - Pendiente: el enlace cuando salga el 19 a las 8:30.
 
 ### Tareas programadas
 

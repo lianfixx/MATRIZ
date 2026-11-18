@@ -4,9 +4,9 @@ cerebro: "Contenido y video"
 visibilidad: "público"
 ultimo_cambio: 2026-11-18
 skills: 1
-commits_8_semanas: 24
+commits_8_semanas: 25
 ultimo_agente: "Claude Code (sesión en la nube)"
-pendiente: "confirmar que la imagen del post de The Economist es la portada; publicarlo el 19 a las 8:30."
+pendiente: "el enlace cuando salga el 19 a las 8:30."
 github: "https://github.com/lianfixx/LinkedIn"
 tags:
   - "repo"
@@ -36,4 +36,4 @@ Skill para planear, redactar, revisar, entregar para publicar y medir lo que Emi
 
 ## Pendiente más reciente
 
-confirmar que la imagen del post de The Economist es la portada; publicarlo el 19 a las 8:30.
+el enlace cuando salga el 19 a las 8:30.

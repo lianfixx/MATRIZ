@@ -1153,7 +1153,7 @@
               "fecha": "2026-11-18",
               "titulo": "Post de The Economist aprobado para el jueves 19",
               "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "confirmar que la imagen del post de The Economist es la portada; publicarlo el 19 a las 8:30."
+              "pendiente": "el enlace cuando salga el 19 a las 8:30."
             },
             {
               "fecha": "2026-11-17",
@@ -1217,10 +1217,10 @@
               0,
               0,
               21,
-              3
+              4
             ],
             "actores_60d": {
-              "Claude": 23,
+              "Claude": 24,
               "Emi": 1
             }
           }
@@ -2189,9 +2189,9 @@
           0,
           9,
           128,
-          30
+          31
         ],
-        "esta_semana": 30,
+        "esta_semana": 31,
         "semana_pasada": 128,
         "dias_sin_movimiento": -1,
         "pendientes_abiertos": 0,
@@ -2294,11 +2294,11 @@
       154,
       196,
       255,
-      45
+      46
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 322,
+      "Claude": 323,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 19
     },
