@@ -53,7 +53,7 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 
 | Cerebro | Repos | Commits esta semana | Semana pasada | Días sin movimiento | Pendientes | Vencidos |
 |---|---|---|---|---|---|---|
-| Castorena | 4 | 7 | 29 | 0 | 0 | 0 |
+| Castorena | 4 | 8 | 29 | -1 | 0 | 0 |
 | MILLA ABOGADOS | 5 | 0 | 0 | 13 | 0 | 0 |
 | Acción Tlalnepantla | 1 | 0 | 0 | 13 | 0 | 0 |
 | Contenido y video | 7 | 10 | 128 | 0 | 0 | 0 |
@@ -62,7 +62,7 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 | Herramientas | 5 | 5 | 33 | 0 | 0 | 0 |
 | Sitios web | 3 | 0 | 65 | 5 | 0 | 0 |
 
-Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 305, ChatGPT · Codex 39, GitHub Actions 14.
+Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 306, ChatGPT · Codex 39, GitHub Actions 14.
 
 Vencimientos: Renovación de la conexión Claude–box el 7 dic 2026; Token de GitHub «MATRIZ lectura» el 9 feb 2027; Token de GitHub «MATRIZ escritura» (edición desde el panel) el 12 nov 2027; Llave de GitHub «Matriz administración (Claude)» el 12 nov 2027; Llave de Cloudflare «Matriz administración (Claude)» el 12 nov 2027.
 
@@ -72,10 +72,10 @@ Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP,
 
 ### Repositorios
 
-- **Cerebro-Castorena-** (público) · https://github.com/lianfixx/Cerebro-Castorena- · último cambio 17 nov 2026 · skills: matriz-castorena
+- **Cerebro-Castorena-** (público) · https://github.com/lianfixx/Cerebro-Castorena- · último cambio 18 nov 2026 · skills: matriz-castorena
   - Matriz documental de Emi para Castorena Abogados. Aquí están las cinco tablas de referencia, las versiones recuperadas, las reglas de trabajo y los pendientes.
-  - Último: 17 nov 2026 · Concentrado: auditoría por sede (ID 9, 11, 12 y 33) · Claude Code (sesión de claude.ai con Emi, Fable 5.2)
-  - Pendiente: Escritorio e iCloud (Mac no enlazada); dudas de Emi en el cierre (ID 8, 11, 12, 15, 18, 33 y 34); INDEP v23 en Drive, Escritorio e iCloud.
+  - Último: 17 nov 2026 · Cierre diario programado: maestro INDEP v24 copiado · Claude Code (ejecución programada)
+  - Pendiente: subir INDEP v24 a Drive, Escritorio e iCloud (siguen con v21).
 - **INDEP** (privado) · https://github.com/lianfixx/INDEP · último cambio 17 nov 2026
 - **Escritos-juridicos-CASTORENA** (público) · https://github.com/lianfixx/Escritos-juridicos-CASTORENA · último cambio 4 nov 2026 · skills: escritos-juridicos-castorena
   - Último: 4 nov 2026 · corrección: puentes de skill con YAML válido · Claude Code (sesión en la nube)
