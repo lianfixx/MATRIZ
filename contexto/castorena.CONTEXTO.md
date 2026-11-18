@@ -32,7 +32,7 @@ Pendiente: subir 19013131d8dd a Drive (sigue fe4026421a68), Escritorio e iCloud 
 
 ### INDEP (privado)
 
-https://github.com/lianfixx/INDEP · último cambio: 17 nov 2026
+https://github.com/lianfixx/INDEP · último cambio: 18 nov 2026
 
 Privado: pide acceso a Emi o usa un conector de GitHub con su sesión.
 
