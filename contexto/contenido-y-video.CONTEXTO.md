@@ -38,8 +38,8 @@ Skill para planear, redactar, revisar, publicar con aprobación (API oficial de 
 
 Skills: `x-viral`
 
-Último registro: 18 nov 2026 · Post sobre la portada 2027 de The Economist (dos opciones) · Agente: Claude Code (sesión en la nube)
-Pendiente: que Emi reescriba y apruebe una y cancele la otra antes de las 9:00.
+Último registro: 18 nov 2026 · The Economist, segunda ronda: Emi rechazó las primeras opciones · Agente: Claude Code (sesión en la nube)
+Pendiente: que Emi elija, reescriba y apruebe una, y cancele las otras.
 
 ### HISTORIAS- (público)
 
