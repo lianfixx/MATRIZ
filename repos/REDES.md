@@ -4,9 +4,9 @@ cerebro: "Contenido y video"
 visibilidad: "público"
 ultimo_cambio: 2026-11-18
 skills: 1
-commits_8_semanas: 62
+commits_8_semanas: 63
 ultimo_agente: "Claude Code (sesión en la nube)"
-pendiente: "aprobación de la descripción del DOF; cuenta de Instagram."
+pendiente: "nada."
 github: "https://github.com/lianfixx/REDES"
 tags:
   - "repo"
@@ -28,12 +28,12 @@ La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, 
 
 ## Últimos registros
 
+- 18 nov 2026 · Claude puede retirar sus propios borradores sin aprobar · Agente: Claude Code (sesión en la nube)
 - 18 nov 2026 · TikTok: cuenta @emiliano_milla_ activa · Agente: Claude Code (sesión en la nube)
 - 18 nov 2026 · X Premium: posts largos en el panel · Agente: Claude Code (sesión en la nube)
 - 18 nov 2026 · LinkedIn: The Economist vuelve al jueves 19 (decisión de Emi) · Agente: Claude Code (sesión en la nube)
 - 18 nov 2026 · LinkedIn: The Economist pasa al lunes 23; post del mapa el miércoles 18 · Agente: Claude Code (sesión en la nube)
-- 18 nov 2026 · Idea de coyuntura: portada «The World Ahead 2027» de The Economist · Agente: Claude Code (sesión en la nube)
 
 ## Pendiente más reciente
 
-aprobación de la descripción del DOF; cuenta de Instagram.
+nada.

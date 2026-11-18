@@ -949,6 +949,12 @@
           "registro": [
             {
               "fecha": "2026-11-18",
+              "titulo": "Claude puede retirar sus propios borradores sin aprobar",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "nada."
+            },
+            {
+              "fecha": "2026-11-18",
               "titulo": "TikTok: cuenta @emiliano_milla_ activa",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "aprobación de la descripción del DOF; cuenta de Instagram."
@@ -988,12 +994,6 @@
               "titulo": "Semana de X en el calendario y pendientes de Emi",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "material y aprobaciones de Emi."
-            },
-            {
-              "fecha": "2026-11-16",
-              "titulo": "Calendario: DOF en X y documento en LinkedIn, publicados; lanzamiento con imagen",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "lanzamiento el martes 17 a las 9:00."
             }
           ],
           "actividad": {
@@ -1015,11 +1015,11 @@
               0,
               0,
               46,
-              16
+              17
             ],
             "actores_60d": {
+              "Claude": 43,
               "GitHub Actions": 19,
-              "Claude": 42,
               "Emi": 1
             }
           }
@@ -2189,9 +2189,9 @@
           0,
           9,
           128,
-          29
+          30
         ],
-        "esta_semana": 29,
+        "esta_semana": 30,
         "semana_pasada": 128,
         "dias_sin_movimiento": -1,
         "pendientes_abiertos": 0,
@@ -2294,11 +2294,11 @@
       154,
       196,
       255,
-      44
+      45
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 321,
+      "Claude": 322,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 19
     },
