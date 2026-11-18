@@ -1096,6 +1096,12 @@
           "registro": [
             {
               "fecha": "2026-11-18",
+              "titulo": "Ficha manual de TikTok en el panel",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "que Emi apruebe la pieza y la portada propuesta en el panel; el panel no manda avisos al teléfono."
+            },
+            {
+              "fecha": "2026-11-18",
               "titulo": "Vox Studio aplicó el puente; regla de voz de IA aclarada",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "fusionar la rama de Vox Studio a `main` (lo decide su sesión con Emi)."
@@ -1135,12 +1141,6 @@
               "titulo": "Respuestas de Emi: cuenta, bio, pilares y descripción del DOF",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "que Emi apruebe la descripción ajustada, ponga la bio y el nombre en la app y decida qué hace con el video de 2020; auditoría independiente."
-            },
-            {
-              "fecha": "2026-11-17",
-              "titulo": "tiktok-studio 1.0.0",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "auditoría independiente; que Emi abra la cuenta y elija usuario, biografía y descripción del DOF; confirmar pilares, videos propios de gym y frecuencia de la revisión de fuentes; que Vox Studio aplique `puente/PETICION-vox.md`."
             }
           ],
           "actividad": {
@@ -1162,10 +1162,10 @@
               0,
               0,
               1,
-              8
+              9
             ],
             "actores_60d": {
-              "Claude": 8,
+              "Claude": 9,
               "Emi": 1
             }
           }
@@ -2225,9 +2225,9 @@
           0,
           9,
           128,
-          39
+          40
         ],
-        "esta_semana": 39,
+        "esta_semana": 40,
         "semana_pasada": 128,
         "dias_sin_movimiento": -1,
         "pendientes_abiertos": 0,
@@ -2330,11 +2330,11 @@
       154,
       196,
       255,
-      54
+      55
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 331,
+      "Claude": 332,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 19
     },

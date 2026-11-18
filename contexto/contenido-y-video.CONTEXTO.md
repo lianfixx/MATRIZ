@@ -81,8 +81,8 @@ Skill de la cuenta personal de Emi en TikTok: decide qué video hacer, para qui�
 
 Skills: `tiktok-studio`
 
-Último registro: 18 nov 2026 · Vox Studio aplicó el puente; regla de voz de IA aclarada · Agente: Claude Code (sesión en la nube)
-Pendiente: fusionar la rama de Vox Studio a `main` (lo decide su sesión con Emi).
+Último registro: 18 nov 2026 · Ficha manual de TikTok en el panel · Agente: Claude Code (sesión en la nube)
+Pendiente: que Emi apruebe la pieza y la portada propuesta en el panel; el panel no manda avisos al teléfono.
 
 ### LinkedIn (público)
 
