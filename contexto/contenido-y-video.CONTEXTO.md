@@ -38,8 +38,8 @@ Skill para planear, redactar, revisar, publicar con aprobación (API oficial de 
 
 Skills: `x-viral`
 
-Último registro: 18 nov 2026 · Premium en prueba y texto largo sobre The Economist · Agente: Claude Code (sesión en la nube)
-Pendiente: que Emi reescriba y apruebe, y cancele las tres opciones cortas; revisar hacia el 25/11 si conserva Premium y, si no, volver a `false`.
+Último registro: 18 nov 2026 · Seguimiento del miércoles: métricas del DOF a las 48 horas · Agente: Claude Code (sesión en la nube)
+Pendiente: aprobaciones de Emi; material de estilo de vida; métricas del lanzamiento a las 48 horas.
 
 ### HISTORIAS- (público)
 

@@ -787,6 +787,12 @@
           "registro": [
             {
               "fecha": "2026-11-18",
+              "titulo": "Seguimiento del miércoles: métricas del DOF a las 48 horas",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "aprobaciones de Emi; material de estilo de vida; métricas del lanzamiento a las 48 horas."
+            },
+            {
+              "fecha": "2026-11-18",
               "titulo": "Premium en prueba y texto largo sobre The Economist",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "que Emi reescriba y apruebe, y cancele las tres opciones cortas; revisar hacia el 25/11 si conserva Premium y, si no, volver a `false`."
@@ -826,12 +832,6 @@
               "titulo": "Emi: «que siempre pida mi aprobación»",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": ""
-            },
-            {
-              "fecha": "2026-11-15",
-              "titulo": "Primer post por la API: DOF con video, y auditoría del camino de video",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "métricas a las 48 horas (el panel las lee solo); lanzamiento A el martes 17/11 a las 9:00; que Emi responda a quien comente."
             }
           ],
           "actividad": {
@@ -853,10 +853,10 @@
               0,
               0,
               16,
-              7
+              8
             ],
             "actores_60d": {
-              "Claude": 23
+              "Claude": 24
             }
           }
         },
@@ -2225,9 +2225,9 @@
           0,
           9,
           128,
-          40
+          41
         ],
-        "esta_semana": 40,
+        "esta_semana": 41,
         "semana_pasada": 128,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2330,11 +2330,11 @@
       154,
       196,
       255,
-      57
+      58
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 334,
+      "Claude": 335,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 19
     },
