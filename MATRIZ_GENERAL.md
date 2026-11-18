@@ -56,13 +56,13 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 | Castorena | 4 | 9 | 29 | -1 | 0 | 0 |
 | MILLA ABOGADOS | 5 | 0 | 0 | 13 | 0 | 0 |
 | Acción Tlalnepantla | 1 | 0 | 0 | 13 | 0 | 0 |
-| Contenido y video | 7 | 37 | 128 | -1 | 0 | 0 |
+| Contenido y video | 7 | 39 | 128 | -1 | 0 | 0 |
 | Estudio | 2 | 1 | 0 | 0 | 0 | 0 |
 | Productos | 2 | 0 | 0 | 13 | 0 | 0 |
 | Herramientas | 5 | 5 | 33 | 0 | 0 | 0 |
 | Sitios web | 3 | 0 | 65 | 5 | 0 | 0 |
 
-Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 329, ChatGPT · Codex 39, GitHub Actions 19.
+Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 331, ChatGPT · Codex 39, GitHub Actions 19.
 
 Vencimientos: Renovación de la conexión Claude–box el 7 dic 2026; Token de GitHub «MATRIZ lectura» el 9 feb 2027; Token de GitHub «MATRIZ escritura» (edición desde el panel) el 12 nov 2027; Llave de GitHub «Matriz administración (Claude)» el 12 nov 2027; Llave de Cloudflare «Matriz administración (Claude)» el 12 nov 2027.
 
@@ -141,10 +141,10 @@ Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio,
 
 ### Repositorios
 
-- **VIDEOS-IA-SKILL-MILLA** (público) · https://github.com/lianfixx/VIDEOS-IA-SKILL-MILLA · último cambio 13 nov 2026 · skills: editor-studio, milla-video-studio, pizarra-studio, vox-studio
+- **VIDEOS-IA-SKILL-MILLA** (público) · https://github.com/lianfixx/VIDEOS-IA-SKILL-MILLA · último cambio 18 nov 2026 · skills: editor-studio, milla-video-studio, pizarra-studio, vox-studio
   - Un método portable para producir videos de MILLA ABOGADOS: investigación, guion, conexiones, voz, imágenes, música, montaje y revisión. Incluye una skill, instrucciones para otras IAs, utilidades y un compositor nuevo.
-  - Último: 13 nov 2026 · Vox Studio 0.13.1: ideas de temas desde la skill de LinkedIn · Claude Code (sesión en la nube)
-  - Pendiente: avisar a `linkedin-pro` con fecha y commit; fusionar a `main`.
+  - Último: 18 nov 2026 · Vox Studio 0.13.2: ideas de temas desde la skill de TikTok y usuario de TikTok guardado · Claude Code (sesión en la nube)
+  - Pendiente: avisar a la Matriz de Redes y a `tiktok-studio` con fecha y commit. Para Emi: el puente de TikTok pide «sin voces realistas hechas con IA»; la voz de Vox (ElevenLabs) lo es, y eso lo decide él con la sesión de TikTok.
 - **X** (público) · https://github.com/lianfixx/X · último cambio 18 nov 2026 · skills: x-viral
   - Skill para planear, redactar, revisar, publicar con aprobación (API oficial de X) y medir las publicaciones de @emilianomilla en X, apoyada en el código público del algoritmo de X (xai-org/x-algorithm).
   - Último: 18 nov 2026 · Premium en prueba y texto largo sobre The Economist · Claude Code (sesión en la nube)
@@ -154,8 +154,8 @@ Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio,
   - Último: 16 nov 2026 · 0.3.1 · candidato · agente no consta
 - **REDES** (público) · https://github.com/lianfixx/REDES · último cambio 18 nov 2026 · skills: matriz-redes
   - La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, Instagram) y de video (Vox Studio, Pizarra Studio, Editor Studio, MILLA Video Studio, Historias Studio). Registra las ideas, decide en qué red y formato sale cada una, arma el calendario de todas…
-  - Último: 18 nov 2026 · Claude puede retirar sus propios borradores sin aprobar · Claude Code (sesión en la nube)
-  - Pendiente: nada.
+  - Último: 18 nov 2026 · Ficha para subir a mano (TikTok e Instagram) · Claude Code (sesión en la nube)
+  - Pendiente: que tiktok-studio mande `app.ajustes` en sus piezas.
 - **Instagram** (público) · https://github.com/lianfixx/Instagram · último cambio 13 nov 2026 · skills: instagram-studio
   - Skill para planear, redactar, revisar, entregar para publicar y medir los Reels, publicaciones del feed y carruseles de la cuenta personal de Emi en Instagram. Pilares: IA + Derecho en México, estilo de vida y gym y opinión política. Sirve en cualquier IA.
   - Último: 13 nov 2026 · instagram-studio 1.0.1: correcciones de la auditoría independiente · Claude Code (sesión en la nube)
