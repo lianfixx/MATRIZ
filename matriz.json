@@ -1095,6 +1095,12 @@
           "protocolo": "1.1.0",
           "registro": [
             {
+              "fecha": "2026-11-18",
+              "titulo": "Vox Studio aplicó el puente; regla de voz de IA aclarada",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "fusionar la rama de Vox Studio a `main` (lo decide su sesión con Emi)."
+            },
+            {
               "fecha": "2026-11-17",
               "titulo": "Encargo al panel: modo manual de TikTok",
               "agente": "Claude Code (sesión en la nube)",
@@ -1156,10 +1162,10 @@
               0,
               0,
               1,
-              7
+              8
             ],
             "actores_60d": {
-              "Claude": 7,
+              "Claude": 8,
               "Emi": 1
             }
           }
@@ -2219,9 +2225,9 @@
           0,
           9,
           128,
-          36
+          37
         ],
-        "esta_semana": 36,
+        "esta_semana": 37,
         "semana_pasada": 128,
         "dias_sin_movimiento": -1,
         "pendientes_abiertos": 0,
@@ -2324,11 +2330,11 @@
       154,
       196,
       255,
-      51
+      52
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 328,
+      "Claude": 329,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 19
     },
