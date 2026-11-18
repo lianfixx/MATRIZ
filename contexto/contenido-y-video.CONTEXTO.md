@@ -59,8 +59,8 @@ La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, 
 
 Skills: `matriz-redes`
 
-Último registro: 18 nov 2026 · LinkedIn: The Economist vuelve al jueves 19 (decisión de Emi) · Agente: Claude Code (sesión en la nube)
-Pendiente: que Emi elija la opción A o B en la sesión de LinkedIn.
+Último registro: 18 nov 2026 · X Premium: posts largos en el panel · Agente: Claude Code (sesión en la nube)
+Pendiente: si Emi conserva Premium, cambiar la fecha de `X_PREMIUM_HASTA`.
 
 ### Instagram (público)
 

@@ -949,6 +949,12 @@
           "registro": [
             {
               "fecha": "2026-11-18",
+              "titulo": "X Premium: posts largos en el panel",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "si Emi conserva Premium, cambiar la fecha de `X_PREMIUM_HASTA`."
+            },
+            {
+              "fecha": "2026-11-18",
               "titulo": "LinkedIn: The Economist vuelve al jueves 19 (decisión de Emi)",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "que Emi elija la opción A o B en la sesión de LinkedIn."
@@ -988,12 +994,6 @@
               "titulo": "Archivos siempre con aprobación de Emi; propuesta de la Matriz",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "Emi acepta o descarta la imagen del lanzamiento antes del martes 17 a las 9:00."
-            },
-            {
-              "fecha": "2026-11-15",
-              "titulo": "Auditoría 3: arreglos del camino de archivos y de X",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "candado de subida con dueño; decisión de Emi sobre `adjuntar`."
             }
           ],
           "actividad": {
@@ -1015,11 +1015,11 @@
               0,
               0,
               46,
-              13
+              14
             ],
             "actores_60d": {
+              "Claude": 41,
               "GitHub Actions": 18,
-              "Claude": 40,
               "Emi": 1
             }
           }
@@ -2183,9 +2183,9 @@
           0,
           9,
           128,
-          24
+          25
         ],
-        "esta_semana": 24,
+        "esta_semana": 25,
         "semana_pasada": 128,
         "dias_sin_movimiento": -1,
         "pendientes_abiertos": 0,
@@ -2288,11 +2288,11 @@
       154,
       196,
       255,
-      39
+      40
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 317,
+      "Claude": 318,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 18
     },
