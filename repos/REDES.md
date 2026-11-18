@@ -4,9 +4,9 @@ cerebro: "Contenido y video"
 visibilidad: "público"
 ultimo_cambio: 2026-11-18
 skills: 1
-commits_8_semanas: 66
+commits_8_semanas: 68
 ultimo_agente: "Claude Code (sesión en la nube)"
-pendiente: "que la sesión de videos suba los MP4 al panel y cada red deje su pieza; aprobación de Emi."
+pendiente: "decisiones de Emi (sello final y su regla de mandar primero al WhatsApp de la firma)."
 github: "https://github.com/lianfixx/REDES"
 tags:
   - "repo"
@@ -28,12 +28,12 @@ La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, 
 
 ## Últimos registros
 
+- 19 nov 2026 · TikTok: DOF 2 (perdón de multas) el martes 24 · Agente: Claude Code (sesión en la nube)
 - 18 nov 2026 · Videos de The Economist: sábado 21 y domingo 22 · Agente: Claude Code (sesión en la nube)
 - 18 nov 2026 · Ficha para subir a mano (TikTok e Instagram) · Agente: Claude Code (sesión en la nube)
 - 18 nov 2026 · Claude puede retirar sus propios borradores sin aprobar · Agente: Claude Code (sesión en la nube)
 - 18 nov 2026 · TikTok: cuenta @emiliano_milla_ activa · Agente: Claude Code (sesión en la nube)
-- 18 nov 2026 · X Premium: posts largos en el panel · Agente: Claude Code (sesión en la nube)
 
 ## Pendiente más reciente
 
-que la sesión de videos suba los MP4 al panel y cada red deje su pieza; aprobación de Emi.
+decisiones de Emi (sello final y su regla de mandar primero al WhatsApp de la firma).

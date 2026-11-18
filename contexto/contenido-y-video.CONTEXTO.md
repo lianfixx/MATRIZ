@@ -38,8 +38,8 @@ Skill para planear, redactar, revisar, publicar con aprobación (API oficial de 
 
 Skills: `x-viral`
 
-Último registro: 18 nov 2026 · Textos para los dos videos de The Economist · Agente: Claude Code (sesión en la nube)
-Pendiente: ids de los videos, propuesta de archivos y aprobación de Emi.
+Último registro: 18 nov 2026 · Hilos en los mejores posts y guía descargable · Agente: Claude Code (sesión en la nube)
+Pendiente: que Emi revise la guía, la comparta con «Cualquier persona con el enlace» y apruebe las respuestas; soporte de hilos en el panel.
 
 ### HISTORIAS- (público)
 
@@ -59,8 +59,8 @@ La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, 
 
 Skills: `matriz-redes`
 
-Último registro: 18 nov 2026 · Videos de The Economist: sábado 21 y domingo 22 · Agente: Claude Code (sesión en la nube)
-Pendiente: que la sesión de videos suba los MP4 al panel y cada red deje su pieza; aprobación de Emi.
+Último registro: 19 nov 2026 · TikTok: DOF 2 (perdón de multas) el martes 24 · Agente: Claude Code (sesión en la nube)
+Pendiente: decisiones de Emi (sello final y su regla de mandar primero al WhatsApp de la firma).
 
 ### Instagram (público)
 
