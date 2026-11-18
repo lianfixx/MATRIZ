@@ -81,7 +81,8 @@ Skill de la cuenta personal de Emi en TikTok: decide qué video hacer, para qui�
 
 Skills: `tiktok-studio`
 
-Último registro: 17 nov 2026 · Revisión mensual probada en GitHub · Agente: Claude Code (sesión en la nube)
+Último registro: 17 nov 2026 · DOF aprobado, pieza en el panel y revisión mensual con sello · Agente: Claude Code (sesión en la nube)
+Pendiente: que Emi apruebe la pieza en el panel y la suba el jueves 19 a las 19:30; que mande el enlace para anotarla; su decisión sobre intentar la API.
 
 ### LinkedIn (público)
 

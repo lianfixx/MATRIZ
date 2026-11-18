@@ -4,8 +4,9 @@ cerebro: "Contenido y video"
 visibilidad: "público"
 ultimo_cambio: 2026-11-18
 skills: 1
-commits_8_semanas: 5
+commits_8_semanas: 6
 ultimo_agente: "Claude Code (sesión en la nube)"
+pendiente: "que Emi apruebe la pieza en el panel y la suba el jueves 19 a las 19:30; que mande el enlace para anotarla; su decisión sobre intentar la API."
 github: "https://github.com/lianfixx/TikTok"
 tags:
   - "repo"
@@ -27,7 +28,12 @@ Skill de la cuenta personal de Emi en TikTok: decide qué video hacer, para qui�
 
 ## Últimos registros
 
+- 17 nov 2026 · DOF aprobado, pieza en el panel y revisión mensual con sello · Agente: Claude Code (sesión en la nube)
 - 17 nov 2026 · Revisión mensual probada en GitHub · Agente: Claude Code (sesión en la nube)
 - 17 nov 2026 · Auditoría independiente y correcciones (1.2.0) · Agente: Claude Code (sesión en la nube); revisor: otro agente de Claude Code, independiente y de solo lectura.
 - 17 nov 2026 · Respuestas de Emi: cuenta, bio, pilares y descripción del DOF · Agente: Claude Code (sesión en la nube)
 - 17 nov 2026 · tiktok-studio 1.0.0 · Agente: Claude Code (sesión en la nube)
+
+## Pendiente más reciente
+
+que Emi apruebe la pieza en el panel y la suba el jueves 19 a las 19:30; que mande el enlace para anotarla; su decisión sobre intentar la API.
