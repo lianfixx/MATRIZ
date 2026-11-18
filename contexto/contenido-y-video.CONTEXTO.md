@@ -92,8 +92,8 @@ Skill para planear, redactar, revisar, entregar para publicar y medir lo que Emi
 
 Skills: `linkedin-pro`
 
-Último registro: 17 nov 2026 · Post del mapa aprobado; Emi lo publica él · Agente: Claude Code (sesión en la nube)
-Pendiente: el enlace del post cuando salga; la pieza de The Economist (lunes 23) espera que Emi elija A o B.
+Último registro: 18 nov 2026 · Post de The Economist aprobado para el jueves 19 · Agente: Claude Code (sesión en la nube)
+Pendiente: confirmar que la imagen del post de The Economist es la portada; publicarlo el 19 a las 8:30.
 
 ## Tareas programadas
 

@@ -4,9 +4,9 @@ cerebro: "Contenido y video"
 visibilidad: "público"
 ultimo_cambio: 2026-11-18
 skills: 1
-commits_8_semanas: 23
+commits_8_semanas: 24
 ultimo_agente: "Claude Code (sesión en la nube)"
-pendiente: "el enlace del post cuando salga; la pieza de The Economist (lunes 23) espera que Emi elija A o B."
+pendiente: "confirmar que la imagen del post de The Economist es la portada; publicarlo el 19 a las 8:30."
 github: "https://github.com/lianfixx/LinkedIn"
 tags:
   - "repo"
@@ -28,12 +28,12 @@ Skill para planear, redactar, revisar, entregar para publicar y medir lo que Emi
 
 ## Últimos registros
 
+- 18 nov 2026 · Post de The Economist aprobado para el jueves 19 · Agente: Claude Code (sesión en la nube)
 - 17 nov 2026 · Post del mapa aprobado; Emi lo publica él · Agente: Claude Code (sesión en la nube)
 - 16 nov 2026 · Documento de pagos digitales publicado · Agente: Claude Code (sesión en la nube)
 - 15 nov 2026 · Registro en el panel de redes · Agente: Claude Code (sesión en la nube)
 - 15 nov 2026 · «programados» en red/estado.json · Agente: Claude Code (sesión en la nube)
-- 14 nov 2026 · Documento de pagos digitales programado · Agente: Claude Code (sesión en la nube)
 
 ## Pendiente más reciente
 
-el enlace del post cuando salga; la pieza de The Economist (lunes 23) espera que Emi elija A o B.
+confirmar que la imagen del post de The Economist es la portada; publicarlo el 19 a las 8:30.

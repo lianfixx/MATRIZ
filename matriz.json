@@ -1144,6 +1144,12 @@
           "protocolo": "1.1.0",
           "registro": [
             {
+              "fecha": "2026-11-18",
+              "titulo": "Post de The Economist aprobado para el jueves 19",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "confirmar que la imagen del post de The Economist es la portada; publicarlo el 19 a las 8:30."
+            },
+            {
               "fecha": "2026-11-17",
               "titulo": "Post del mapa aprobado; Emi lo publica él",
               "agente": "Claude Code (sesión en la nube)",
@@ -1184,12 +1190,6 @@
               "titulo": "Estilo de láminas y tono aprobados por Emi",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "texto del post de las láminas, aprobación de Emi y fecha (semana 47)."
-            },
-            {
-              "fecha": "2026-11-13",
-              "titulo": "Primer post publicado: video del DOF (pagos digitales); Panel leído",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "métricas del post el 20/11/2026; enlaces del SJF sin verificar desde aquí (Incapsula), conviene que Emi los abra."
             }
           ],
           "actividad": {
@@ -1211,10 +1211,10 @@
               0,
               0,
               21,
-              2
+              3
             ],
             "actores_60d": {
-              "Claude": 22,
+              "Claude": 23,
               "Emi": 1
             }
           }
@@ -2183,9 +2183,9 @@
           0,
           9,
           128,
-          22
+          23
         ],
-        "esta_semana": 22,
+        "esta_semana": 23,
         "semana_pasada": 128,
         "dias_sin_movimiento": -1,
         "pendientes_abiertos": 0,
@@ -2288,11 +2288,11 @@
       154,
       196,
       255,
-      37
+      38
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 315,
+      "Claude": 316,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 18
     },
