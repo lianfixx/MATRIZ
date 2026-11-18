@@ -789,7 +789,7 @@
               "fecha": "2026-11-18",
               "titulo": "Premium en prueba y texto largo sobre The Economist",
               "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "respuesta de la Matriz; que Emi reescriba y apruebe; revisar hacia el 25/11 si conserva Premium y, si no, volver a `false`."
+              "pendiente": "que Emi reescriba y apruebe, y cancele las tres opciones cortas; revisar hacia el 25/11 si conserva Premium y, si no, volver a `false`."
             },
             {
               "fecha": "2026-11-18",
@@ -853,10 +853,10 @@
               0,
               0,
               16,
-              6
+              7
             ],
             "actores_60d": {
-              "Claude": 22
+              "Claude": 23
             }
           }
         },
@@ -2189,9 +2189,9 @@
           0,
           9,
           128,
-          28
+          29
         ],
-        "esta_semana": 28,
+        "esta_semana": 29,
         "semana_pasada": 128,
         "dias_sin_movimiento": -1,
         "pendientes_abiertos": 0,
@@ -2294,11 +2294,11 @@
       154,
       196,
       255,
-      43
+      44
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 320,
+      "Claude": 321,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 19
     },

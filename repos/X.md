@@ -4,9 +4,9 @@ cerebro: "Contenido y video"
 visibilidad: "público"
 ultimo_cambio: 2026-11-18
 skills: 1
-commits_8_semanas: 22
+commits_8_semanas: 23
 ultimo_agente: "Claude Code (sesión en la nube)"
-pendiente: "respuesta de la Matriz; que Emi reescriba y apruebe; revisar hacia el 25/11 si conserva Premium y, si no, volver a `false`."
+pendiente: "que Emi reescriba y apruebe, y cancele las tres opciones cortas; revisar hacia el 25/11 si conserva Premium y, si no, volver a `false`."
 github: "https://github.com/lianfixx/X"
 tags:
   - "repo"
@@ -36,4 +36,4 @@ Skill para planear, redactar, revisar, publicar con aprobación (API oficial de 
 
 ## Pendiente más reciente
 
-respuesta de la Matriz; que Emi reescriba y apruebe; revisar hacia el 25/11 si conserva Premium y, si no, volver a `false`.
+que Emi reescriba y apruebe, y cancele las tres opciones cortas; revisar hacia el 25/11 si conserva Premium y, si no, volver a `false`.
