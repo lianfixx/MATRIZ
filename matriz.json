@@ -937,7 +937,7 @@
           "url": "https://github.com/lianfixx/REDES",
           "visibilidad": "público",
           "leido": true,
-          "ultimo_cambio": "2026-11-17",
+          "ultimo_cambio": "2026-11-18",
           "resumen": "La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, Instagram) y de video (Vox Studio, Pizarra Studio, Editor Studio, MILLA Video Studio, Historias Studio). Registra las ideas, decide en qué red y formato sale cada una, arma el calendario de todas…",
           "skills": [
             {
@@ -947,6 +947,12 @@
           ],
           "protocolo": "1.1.0",
           "registro": [
+            {
+              "fecha": "2026-11-18",
+              "titulo": "TikTok responde: reglas de crecimiento, cadencia y calendario recorrido; lanzamiento publicado",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "respuestas de Emi sobre TikTok; que TikTok publique su `red/estado.json`."
+            },
             {
               "fecha": "2026-11-16",
               "titulo": "Semana de X en el calendario y pendientes de Emi",
@@ -988,12 +994,6 @@
               "titulo": "Auditoría: calendario al día con la realidad y video del DOF ya subido a X",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "hallazgos del revisor independiente del código."
-            },
-            {
-              "fecha": "2026-11-15",
-              "titulo": "El panel se sincroniza con lo que hacen las skills de cada red",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "que la skill de LinkedIn agregue a su `red/estado.json` lo que programa (hoy solo trae lo publicado)."
             }
           ],
           "actividad": {
@@ -1015,11 +1015,11 @@
               0,
               0,
               46,
-              5
+              7
             ],
             "actores_60d": {
-              "GitHub Actions": 14,
-              "Claude": 36,
+              "GitHub Actions": 15,
+              "Claude": 37,
               "Emi": 1
             }
           }
@@ -2170,11 +2170,11 @@
           0,
           9,
           128,
-          10
+          12
         ],
-        "esta_semana": 10,
+        "esta_semana": 12,
         "semana_pasada": 128,
-        "dias_sin_movimiento": 0,
+        "dias_sin_movimiento": -1,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
         "pendientes_de_repos": 5,
@@ -2275,13 +2275,13 @@
       154,
       196,
       255,
-      25
+      27
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 307,
+      "Claude": 308,
       "ChatGPT · Codex": 39,
-      "GitHub Actions": 14
+      "GitHub Actions": 15
     },
     "vencimientos": [
       {

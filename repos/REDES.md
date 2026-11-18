@@ -2,11 +2,11 @@
 tipo: "repo"
 cerebro: "Contenido y video"
 visibilidad: "público"
-ultimo_cambio: 2026-11-17
+ultimo_cambio: 2026-11-18
 skills: 1
-commits_8_semanas: 51
+commits_8_semanas: 53
 ultimo_agente: "Claude Code (sesión en la nube)"
-pendiente: "material y aprobaciones de Emi."
+pendiente: "respuestas de Emi sobre TikTok; que TikTok publique su `red/estado.json`."
 github: "https://github.com/lianfixx/REDES"
 tags:
   - "repo"
@@ -16,7 +16,7 @@ generado: "tools/generar.py · no editar a mano: se reescribe cada día"
 
 # REDES
 
-Cerebro: [[Contenido y video]] · público · último cambio: 17 nov 2026
+Cerebro: [[Contenido y video]] · público · último cambio: 18 nov 2026
 
 [Abrir en GitHub](https://github.com/lianfixx/REDES)
 
@@ -28,12 +28,12 @@ La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, 
 
 ## Últimos registros
 
+- 18 nov 2026 · TikTok responde: reglas de crecimiento, cadencia y calendario recorrido; lanzamiento publicado · Agente: Claude Code (sesión en la nube)
 - 16 nov 2026 · Semana de X en el calendario y pendientes de Emi · Agente: Claude Code (sesión en la nube)
 - 16 nov 2026 · Calendario: DOF en X y documento en LinkedIn, publicados; lanzamiento con imagen · Agente: Claude Code (sesión en la nube)
 - 15 nov 2026 · Archivos siempre con aprobación de Emi; propuesta de la Matriz · Agente: Claude Code (sesión en la nube)
 - 15 nov 2026 · Auditoría 3: arreglos del camino de archivos y de X · Agente: Claude Code (sesión en la nube)
-- 15 nov 2026 · Documento de 8 láminas: tentativo · Agente: Claude Code (sesión en la nube)
 
 ## Pendiente más reciente
 
-material y aprobaciones de Emi.
+respuestas de Emi sobre TikTok; que TikTok publique su `red/estado.json`.
