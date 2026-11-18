@@ -1096,6 +1096,12 @@
           "registro": [
             {
               "fecha": "2026-11-17",
+              "titulo": "Encargo al panel: modo manual de TikTok",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "que la sesión del panel lo construya; probarlo con la pieza del DOF; que Emi acepte la portada propuesta."
+            },
+            {
+              "fecha": "2026-11-17",
               "titulo": "Automatizar la subida a TikTok: qué se puede",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "decisión de Emi entre programar en TikTok Studio o probar un programador de terceros."
@@ -1150,10 +1156,10 @@
               0,
               0,
               1,
-              6
+              7
             ],
             "actores_60d": {
-              "Claude": 6,
+              "Claude": 7,
               "Emi": 1
             }
           }
@@ -2213,9 +2219,9 @@
           0,
           9,
           128,
-          35
+          36
         ],
-        "esta_semana": 35,
+        "esta_semana": 36,
         "semana_pasada": 128,
         "dias_sin_movimiento": -1,
         "pendientes_abiertos": 0,
@@ -2318,11 +2324,11 @@
       154,
       196,
       255,
-      50
+      51
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 327,
+      "Claude": 328,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 19
     },

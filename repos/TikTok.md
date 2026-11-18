@@ -4,9 +4,9 @@ cerebro: "Contenido y video"
 visibilidad: "público"
 ultimo_cambio: 2026-11-18
 skills: 1
-commits_8_semanas: 7
+commits_8_semanas: 8
 ultimo_agente: "Claude Code (sesión en la nube)"
-pendiente: "decisión de Emi entre programar en TikTok Studio o probar un programador de terceros."
+pendiente: "que la sesión del panel lo construya; probarlo con la pieza del DOF; que Emi acepte la portada propuesta."
 github: "https://github.com/lianfixx/TikTok"
 tags:
   - "repo"
@@ -28,12 +28,12 @@ Skill de la cuenta personal de Emi en TikTok: decide qué video hacer, para qui�
 
 ## Últimos registros
 
+- 17 nov 2026 · Encargo al panel: modo manual de TikTok · Agente: Claude Code (sesión en la nube)
 - 17 nov 2026 · Automatizar la subida a TikTok: qué se puede · Agente: Claude Code (sesión en la nube)
 - 17 nov 2026 · DOF aprobado, pieza en el panel y revisión mensual con sello · Agente: Claude Code (sesión en la nube)
 - 17 nov 2026 · Revisión mensual probada en GitHub · Agente: Claude Code (sesión en la nube)
 - 17 nov 2026 · Auditoría independiente y correcciones (1.2.0) · Agente: Claude Code (sesión en la nube); revisor: otro agente de Claude Code, independiente y de solo lectura.
-- 17 nov 2026 · Respuestas de Emi: cuenta, bio, pilares y descripción del DOF · Agente: Claude Code (sesión en la nube)
 
 ## Pendiente más reciente
 
-decisión de Emi entre programar en TikTok Studio o probar un programador de terceros.
+que la sesión del panel lo construya; probarlo con la pieza del DOF; que Emi acepte la portada propuesta.

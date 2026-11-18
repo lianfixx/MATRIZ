@@ -81,8 +81,8 @@ Skill de la cuenta personal de Emi en TikTok: decide qué video hacer, para qui�
 
 Skills: `tiktok-studio`
 
-Último registro: 17 nov 2026 · Automatizar la subida a TikTok: qué se puede · Agente: Claude Code (sesión en la nube)
-Pendiente: decisión de Emi entre programar en TikTok Studio o probar un programador de terceros.
+Último registro: 17 nov 2026 · Encargo al panel: modo manual de TikTok · Agente: Claude Code (sesión en la nube)
+Pendiente: que la sesión del panel lo construya; probarlo con la pieza del DOF; que Emi acepte la portada propuesta.
 
 ### LinkedIn (público)
 
