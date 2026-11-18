@@ -1096,6 +1096,12 @@
           "registro": [
             {
               "fecha": "2026-11-17",
+              "titulo": "Respuestas de Emi: cuenta, bio, pilares y descripción del DOF",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "que Emi apruebe la descripción ajustada, ponga la bio y el nombre en la app y decida qué hace con el video de 2020; auditoría independiente."
+            },
+            {
+              "fecha": "2026-11-17",
               "titulo": "tiktok-studio 1.0.0",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "auditoría independiente; que Emi abra la cuenta y elija usuario, biografía y descripción del DOF; confirmar pilares, videos propios de gym y frecuencia de la revisión de fuentes; que Vox Studio aplique `puente/PETICION-vox.md`."
@@ -1120,10 +1126,10 @@
               0,
               0,
               1,
-              1
+              2
             ],
             "actores_60d": {
-              "Claude": 1,
+              "Claude": 2,
               "Emi": 1
             }
           }
@@ -2183,9 +2189,9 @@
           0,
           9,
           128,
-          25
+          26
         ],
-        "esta_semana": 25,
+        "esta_semana": 26,
         "semana_pasada": 128,
         "dias_sin_movimiento": -1,
         "pendientes_abiertos": 0,
@@ -2288,11 +2294,11 @@
       154,
       196,
       255,
-      40
+      41
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 318,
+      "Claude": 319,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 18
     },

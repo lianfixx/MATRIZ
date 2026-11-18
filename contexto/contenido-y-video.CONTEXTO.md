@@ -81,8 +81,8 @@ Skill de la cuenta personal de Emi en TikTok: decide qué video hacer, para qui�
 
 Skills: `tiktok-studio`
 
-Último registro: 17 nov 2026 · tiktok-studio 1.0.0 · Agente: Claude Code (sesión en la nube)
-Pendiente: auditoría independiente; que Emi abra la cuenta y elija usuario, biografía y descripción del DOF; confirmar pilares, videos propios de gym y frecuencia de la revisión de fuentes; que Vox Studio aplique `puente/PETICION-vox.md`.
+Último registro: 17 nov 2026 · Respuestas de Emi: cuenta, bio, pilares y descripción del DOF · Agente: Claude Code (sesión en la nube)
+Pendiente: que Emi apruebe la descripción ajustada, ponga la bio y el nombre en la app y decida qué hace con el video de 2020; auditoría independiente.
 
 ### LinkedIn (público)
 

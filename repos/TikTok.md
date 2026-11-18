@@ -4,9 +4,9 @@ cerebro: "Contenido y video"
 visibilidad: "público"
 ultimo_cambio: 2026-11-18
 skills: 1
-commits_8_semanas: 2
+commits_8_semanas: 3
 ultimo_agente: "Claude Code (sesión en la nube)"
-pendiente: "auditoría independiente; que Emi abra la cuenta y elija usuario, biografía y descripción del DOF; confirmar pilares, videos propios de gym y frecuencia de la revisión de fuentes; que Vox Studio aplique `puente/PETICION-vox.md`."
+pendiente: "que Emi apruebe la descripción ajustada, ponga la bio y el nombre en la app y decida qué hace con el video de 2020; auditoría independiente."
 github: "https://github.com/lianfixx/TikTok"
 tags:
   - "repo"
@@ -28,8 +28,9 @@ Skill de la cuenta personal de Emi en TikTok: decide qué video hacer, para qui�
 
 ## Últimos registros
 
+- 17 nov 2026 · Respuestas de Emi: cuenta, bio, pilares y descripción del DOF · Agente: Claude Code (sesión en la nube)
 - 17 nov 2026 · tiktok-studio 1.0.0 · Agente: Claude Code (sesión en la nube)
 
 ## Pendiente más reciente
 
-auditoría independiente; que Emi abra la cuenta y elija usuario, biografía y descripción del DOF; confirmar pilares, videos propios de gym y frecuencia de la revisión de fuentes; que Vox Studio aplique `puente/PETICION-vox.md`.
+que Emi apruebe la descripción ajustada, ponga la bio y el nombre en la app y decida qué hace con el video de 2020; auditoría independiente.
