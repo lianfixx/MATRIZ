@@ -949,6 +949,12 @@
           "registro": [
             {
               "fecha": "2026-11-18",
+              "titulo": "LinkedIn: The Economist vuelve al jueves 19 (decisión de Emi)",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "que Emi elija la opción A o B en la sesión de LinkedIn."
+            },
+            {
+              "fecha": "2026-11-18",
               "titulo": "LinkedIn: The Economist pasa al lunes 23; post del mapa el miércoles 18",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "que Emi elija la opción A o B en la sesión de LinkedIn."
@@ -988,12 +994,6 @@
               "titulo": "Auditoría 3: arreglos del camino de archivos y de X",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "candado de subida con dueño; decisión de Emi sobre `adjuntar`."
-            },
-            {
-              "fecha": "2026-11-15",
-              "titulo": "Documento de 8 láminas: tentativo",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "material de Emi."
             }
           ],
           "actividad": {
@@ -1015,11 +1015,11 @@
               0,
               0,
               46,
-              11
+              13
             ],
             "actores_60d": {
-              "GitHub Actions": 17,
-              "Claude": 39,
+              "GitHub Actions": 18,
+              "Claude": 40,
               "Emi": 1
             }
           }
@@ -2170,9 +2170,9 @@
           0,
           9,
           128,
-          17
+          19
         ],
-        "esta_semana": 17,
+        "esta_semana": 19,
         "semana_pasada": 128,
         "dias_sin_movimiento": -1,
         "pendientes_abiertos": 0,
@@ -2275,13 +2275,13 @@
       154,
       196,
       255,
-      32
+      34
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 311,
+      "Claude": 312,
       "ChatGPT · Codex": 39,
-      "GitHub Actions": 17
+      "GitHub Actions": 18
     },
     "vencimientos": [
       {
