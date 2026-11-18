@@ -81,8 +81,8 @@ Skill de la cuenta personal de Emi en TikTok: decide qué video hacer, para qui�
 
 Skills: `tiktok-studio`
 
-Último registro: 17 nov 2026 · Respuestas de Emi: cuenta, bio, pilares y descripción del DOF · Agente: Claude Code (sesión en la nube)
-Pendiente: que Emi apruebe la descripción ajustada, ponga la bio y el nombre en la app y decida qué hace con el video de 2020; auditoría independiente.
+Último registro: 17 nov 2026 · Auditoría independiente y correcciones (1.2.0) · Agente: Claude Code (sesión en la nube); revisor: otro agente de Claude Code, independiente y de solo lectura.
+Pendiente: que Emi decida si la revisión mensual puede sellar la fecha y hacer commits sola; aprobación de la descripción del DOF; `archivo_sha256` del MP4 antes de entregarlo.
 
 ### LinkedIn (público)
 

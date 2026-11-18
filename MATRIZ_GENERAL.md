@@ -56,13 +56,13 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 | Castorena | 4 | 9 | 29 | -1 | 0 | 0 |
 | MILLA ABOGADOS | 5 | 0 | 0 | 13 | 0 | 0 |
 | Acción Tlalnepantla | 1 | 0 | 0 | 13 | 0 | 0 |
-| Contenido y video | 7 | 31 | 128 | -1 | 0 | 0 |
+| Contenido y video | 7 | 32 | 128 | -1 | 0 | 0 |
 | Estudio | 2 | 1 | 0 | 0 | 0 | 0 |
 | Productos | 2 | 0 | 0 | 13 | 0 | 0 |
 | Herramientas | 5 | 5 | 33 | 0 | 0 | 0 |
 | Sitios web | 3 | 0 | 65 | 5 | 0 | 0 |
 
-Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 323, ChatGPT · Codex 39, GitHub Actions 19.
+Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 324, ChatGPT · Codex 39, GitHub Actions 19.
 
 Vencimientos: Renovación de la conexión Claude–box el 7 dic 2026; Token de GitHub «MATRIZ lectura» el 9 feb 2027; Token de GitHub «MATRIZ escritura» (edición desde el panel) el 12 nov 2027; Llave de GitHub «Matriz administración (Claude)» el 12 nov 2027; Llave de Cloudflare «Matriz administración (Claude)» el 12 nov 2027.
 
@@ -162,8 +162,8 @@ Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio,
   - Pendiente: - Avisar a Emi y a Matriz de Redes que el Reel de Vox necesita la voz de Emi o la etiqueta.
 - **TikTok** (público) · https://github.com/lianfixx/TikTok · último cambio 18 nov 2026 · skills: tiktok-studio
   - Skill de la cuenta personal de Emi en TikTok: decide qué video hacer, para quién y cómo engancha en los primeros segundos; prepara la descripción, los hashtags, la portada y el calendario; entrega el paquete aprobado para que Emi lo publique, y mide.
-  - Último: 17 nov 2026 · Respuestas de Emi: cuenta, bio, pilares y descripción del DOF · Claude Code (sesión en la nube)
-  - Pendiente: que Emi apruebe la descripción ajustada, ponga la bio y el nombre en la app y decida qué hace con el video de 2020; auditoría independiente.
+  - Último: 17 nov 2026 · Auditoría independiente y correcciones (1.2.0) · Claude Code (sesión en la nube); revisor: otro agente de Claude Code, independiente y de solo lectura.
+  - Pendiente: que Emi decida si la revisión mensual puede sellar la fecha y hacer commits sola; aprobación de la descripción del DOF; `archivo_sha256` del MP4 antes de entregarlo.
 - **LinkedIn** (público) · https://github.com/lianfixx/LinkedIn · último cambio 18 nov 2026 · skills: linkedin-pro
   - Skill para planear, redactar, revisar, entregar para publicar y medir lo que Emi publica en su perfil personal de LinkedIn (linkedin.com/in/emiliano-milla). Sirve en cualquier IA.
   - Último: 18 nov 2026 · Post de The Economist aprobado para el jueves 19 · Claude Code (sesión en la nube)
