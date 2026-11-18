@@ -787,6 +787,12 @@
           "registro": [
             {
               "fecha": "2026-11-18",
+              "titulo": "Premium en prueba y texto largo sobre The Economist",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "respuesta de la Matriz; que Emi reescriba y apruebe; revisar hacia el 25/11 si conserva Premium y, si no, volver a `false`."
+            },
+            {
+              "fecha": "2026-11-18",
               "titulo": "The Economist, segunda ronda: Emi rechazó las primeras opciones",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "que Emi elija, reescriba y apruebe una, y cancele las otras."
@@ -826,12 +832,6 @@
               "titulo": "Primer post por la API: DOF con video, y auditoría del camino de video",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "métricas a las 48 horas (el panel las lee solo); lanzamiento A el martes 17/11 a las 9:00; que Emi responda a quien comente."
-            },
-            {
-              "fecha": "2026-11-13",
-              "titulo": "API de X conectada al panel",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "créditos y tope de gasto en la consola; aprobar el lanzamiento en el panel y hacer la primera publicación con Emi mirando."
             }
           ],
           "actividad": {
@@ -853,10 +853,10 @@
               0,
               0,
               16,
-              5
+              6
             ],
             "actores_60d": {
-              "Claude": 21
+              "Claude": 22
             }
           }
         },
@@ -2183,9 +2183,9 @@
           0,
           9,
           128,
-          23
+          24
         ],
-        "esta_semana": 23,
+        "esta_semana": 24,
         "semana_pasada": 128,
         "dias_sin_movimiento": -1,
         "pendientes_abiertos": 0,
@@ -2288,11 +2288,11 @@
       154,
       196,
       255,
-      38
+      39
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 316,
+      "Claude": 317,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 18
     },

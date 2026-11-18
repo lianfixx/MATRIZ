@@ -38,8 +38,8 @@ Skill para planear, redactar, revisar, publicar con aprobación (API oficial de 
 
 Skills: `x-viral`
 
-Último registro: 18 nov 2026 · The Economist, segunda ronda: Emi rechazó las primeras opciones · Agente: Claude Code (sesión en la nube)
-Pendiente: que Emi elija, reescriba y apruebe una, y cancele las otras.
+Último registro: 18 nov 2026 · Premium en prueba y texto largo sobre The Economist · Agente: Claude Code (sesión en la nube)
+Pendiente: respuesta de la Matriz; que Emi reescriba y apruebe; revisar hacia el 25/11 si conserva Premium y, si no, volver a `false`.
 
 ### HISTORIAS- (público)
 
