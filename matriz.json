@@ -775,7 +775,7 @@
           "url": "https://github.com/lianfixx/X",
           "visibilidad": "público",
           "leido": true,
-          "ultimo_cambio": "2026-11-17",
+          "ultimo_cambio": "2026-11-18",
           "resumen": "Skill para planear, redactar, revisar, publicar con aprobación (API oficial de X) y medir las publicaciones de @emilianomilla en X, apoyada en el código público del algoritmo de X (xai-org/x-algorithm).",
           "skills": [
             {
@@ -785,6 +785,12 @@
           ],
           "protocolo": "1.1.0",
           "registro": [
+            {
+              "fecha": "2026-11-18",
+              "titulo": "Post sobre la portada 2027 de The Economist (dos opciones)",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "que Emi reescriba y apruebe una y cancele la otra antes de las 9:00."
+            },
             {
               "fecha": "2026-11-17",
               "titulo": "Lanzamiento publicado por la API",
@@ -826,12 +832,6 @@
               "titulo": "Cuenta de X abierta",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "nombre con acento y sitio web en el perfil; aprobación del lanzamiento en el panel."
-            },
-            {
-              "fecha": "2026-11-13",
-              "titulo": "Perfil de X revisado: bio y categoría puestas, candado aún visible",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "que Emi confirme el ajuste «Proteger tus posts» en su teléfono; nombre con acento y sitio web."
             }
           ],
           "actividad": {
@@ -853,10 +853,10 @@
               0,
               0,
               16,
-              3
+              4
             ],
             "actores_60d": {
-              "Claude": 19
+              "Claude": 20
             }
           }
         },
@@ -2183,9 +2183,9 @@
           0,
           9,
           128,
-          20
+          21
         ],
-        "esta_semana": 20,
+        "esta_semana": 21,
         "semana_pasada": 128,
         "dias_sin_movimiento": -1,
         "pendientes_abiertos": 0,
@@ -2288,11 +2288,11 @@
       154,
       196,
       255,
-      35
+      36
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 313,
+      "Claude": 314,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 18
     },
