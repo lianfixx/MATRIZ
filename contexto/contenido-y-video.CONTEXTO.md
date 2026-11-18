@@ -81,8 +81,8 @@ Skill de la cuenta personal de Emi en TikTok: decide qué video hacer, para qui�
 
 Skills: `tiktok-studio`
 
-Último registro: 18 nov 2026 · Fuente oficial de la Queja [expediente] verificada · Agente: Claude Code (sesión en la nube)
-Pendiente: ninguno de esta fuente.
+Último registro: 18 nov 2026 · Pieza de TikTok del DOF 2 (perdón de multas del SAT) · Agente: Claude Code (sesión en la nube)
+Pendiente: decisiones de Emi sobre el sello final que queda un poco bajo la descripción y sobre su regla de mandar primero al WhatsApp de la firma; aprobación en el panel.
 
 ### LinkedIn (público)
 
