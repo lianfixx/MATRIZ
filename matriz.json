@@ -1096,6 +1096,12 @@
           "registro": [
             {
               "fecha": "2026-11-18",
+              "titulo": "Fuente oficial de la Queja [expediente] verificada",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "ninguno de esta fuente."
+            },
+            {
+              "fecha": "2026-11-18",
               "titulo": "Dos piezas de TikTok sobre The Economist 2027 en el panel",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "que Emi apruebe las dos piezas en el panel y las publique el 21 y el 22 a las 19:30; fuente oficial de la Queja [expediente]."
@@ -1135,12 +1141,6 @@
               "titulo": "DOF aprobado, pieza en el panel y revisión mensual con sello",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "que Emi apruebe la pieza en el panel y la suba el jueves 19 a las 19:30; que mande el enlace para anotarla; su decisión sobre intentar la API."
-            },
-            {
-              "fecha": "2026-11-17",
-              "titulo": "Revisión mensual probada en GitHub",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": ""
             }
           ],
           "actividad": {
@@ -1162,10 +1162,10 @@
               0,
               0,
               1,
-              11
+              12
             ],
             "actores_60d": {
-              "Claude": 11,
+              "Claude": 12,
               "Emi": 1
             }
           }
@@ -2225,9 +2225,9 @@
           0,
           9,
           128,
-          46
+          47
         ],
-        "esta_semana": 46,
+        "esta_semana": 47,
         "semana_pasada": 128,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2330,11 +2330,11 @@
       154,
       196,
       255,
-      63
+      64
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 339,
+      "Claude": 340,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 20
     },

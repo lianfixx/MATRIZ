@@ -81,8 +81,8 @@ Skill de la cuenta personal de Emi en TikTok: decide qué video hacer, para qui�
 
 Skills: `tiktok-studio`
 
-Último registro: 18 nov 2026 · Dos piezas de TikTok sobre The Economist 2027 en el panel · Agente: Claude Code (sesión en la nube)
-Pendiente: que Emi apruebe las dos piezas en el panel y las publique el 21 y el 22 a las 19:30; fuente oficial de la Queja [expediente].
+Último registro: 18 nov 2026 · Fuente oficial de la Queja [expediente] verificada · Agente: Claude Code (sesión en la nube)
+Pendiente: ninguno de esta fuente.
 
 ### LinkedIn (público)
 
