@@ -1084,11 +1084,23 @@
           "url": "https://github.com/lianfixx/TikTok",
           "visibilidad": "público",
           "leido": true,
-          "ultimo_cambio": "2026-11-12",
-          "resumen": "Skill de TikTok de Emi: estrategia, publicación y medición",
-          "skills": [],
-          "protocolo": "",
-          "registro": [],
+          "ultimo_cambio": "2026-11-18",
+          "resumen": "Skill de la cuenta personal de Emi en TikTok: decide qué video hacer, para quién y cómo engancha en los primeros segundos; prepara la descripción, los hashtags, la portada y el calendario; entrega el paquete aprobado para que Emi lo publique, y mide.",
+          "skills": [
+            {
+              "nombre": "tiktok-studio",
+              "ruta": "skills/tiktok-studio/SKILL.md"
+            }
+          ],
+          "protocolo": "1.1.0",
+          "registro": [
+            {
+              "fecha": "2026-11-17",
+              "titulo": "tiktok-studio 1.0.0",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "auditoría independiente; que Emi abra la cuenta y elija usuario, biografía y descripción del DOF; confirmar pilares, videos propios de gym y frecuencia de la revisión de fuentes; que Vox Studio aplique `puente/PETICION-vox.md`."
+            }
+          ],
           "actividad": {
             "semanas": [
               "2026-09-28",
@@ -1108,9 +1120,10 @@
               0,
               0,
               1,
-              0
+              1
             ],
             "actores_60d": {
+              "Claude": 1,
               "Emi": 1
             }
           }
@@ -2170,14 +2183,14 @@
           0,
           9,
           128,
-          19
+          20
         ],
-        "esta_semana": 19,
+        "esta_semana": 20,
         "semana_pasada": 128,
         "dias_sin_movimiento": -1,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
-        "pendientes_de_repos": 5,
+        "pendientes_de_repos": 6,
         "tareas_falladas": 0
       },
       "estudio": {
@@ -2275,11 +2288,11 @@
       154,
       196,
       255,
-      34
+      35
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 312,
+      "Claude": 313,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 18
     },

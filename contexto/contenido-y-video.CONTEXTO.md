@@ -75,9 +75,14 @@ Pendiente: - Avisar a Emi y a Matriz de Redes que el Reel de Vox necesita la voz
 
 ### TikTok (público)
 
-https://github.com/lianfixx/TikTok · último cambio: 12 nov 2026
+https://github.com/lianfixx/TikTok · último cambio: 18 nov 2026
 
-Skill de TikTok de Emi: estrategia, publicación y medición
+Skill de la cuenta personal de Emi en TikTok: decide qué video hacer, para quién y cómo engancha en los primeros segundos; prepara la descripción, los hashtags, la portada y el calendario; entrega el paquete aprobado para que Emi lo publique, y mide.
+
+Skills: `tiktok-studio`
+
+Último registro: 17 nov 2026 · tiktok-studio 1.0.0 · Agente: Claude Code (sesión en la nube)
+Pendiente: auditoría independiente; que Emi abra la cuenta y elija usuario, biografía y descripción del DOF; confirmar pilares, videos propios de gym y frecuencia de la revisión de fuentes; que Vox Studio aplique `puente/PETICION-vox.md`.
 
 ### LinkedIn (público)
 
