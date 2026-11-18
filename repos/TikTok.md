@@ -4,9 +4,9 @@ cerebro: "Contenido y video"
 visibilidad: "público"
 ultimo_cambio: 2026-11-18
 skills: 1
-commits_8_semanas: 10
+commits_8_semanas: 11
 ultimo_agente: "Claude Code (sesión en la nube)"
-pendiente: "que Emi apruebe la pieza y la portada propuesta en el panel; el panel no manda avisos al teléfono."
+pendiente: "revisar los MP4 (imágenes, voz «Emilio» y C2PA) cuando lleguen al panel y dejar las dos piezas con su ficha."
 github: "https://github.com/lianfixx/TikTok"
 tags:
   - "repo"
@@ -28,12 +28,12 @@ Skill de la cuenta personal de Emi en TikTok: decide qué video hacer, para qui�
 
 ## Últimos registros
 
+- 18 nov 2026 · Excepciones de cadencia decididas por Emi · Agente: Claude Code (sesión en la nube)
 - 18 nov 2026 · Ficha manual de TikTok en el panel · Agente: Claude Code (sesión en la nube)
 - 18 nov 2026 · Vox Studio aplicó el puente; regla de voz de IA aclarada · Agente: Claude Code (sesión en la nube)
 - 17 nov 2026 · Encargo al panel: modo manual de TikTok · Agente: Claude Code (sesión en la nube)
 - 17 nov 2026 · Automatizar la subida a TikTok: qué se puede · Agente: Claude Code (sesión en la nube)
-- 17 nov 2026 · DOF aprobado, pieza en el panel y revisión mensual con sello · Agente: Claude Code (sesión en la nube)
 
 ## Pendiente más reciente
 
-que Emi apruebe la pieza y la portada propuesta en el panel; el panel no manda avisos al teléfono.
+revisar los MP4 (imágenes, voz «Emilio» y C2PA) cuando lleguen al panel y dejar las dos piezas con su ficha.

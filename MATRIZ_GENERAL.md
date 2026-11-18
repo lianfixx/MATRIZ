@@ -56,13 +56,13 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 | Castorena | 4 | 11 | 29 | 0 | 0 | 0 |
 | MILLA ABOGADOS | 5 | 0 | 0 | 14 | 0 | 0 |
 | Acción Tlalnepantla | 1 | 0 | 0 | 14 | 0 | 0 |
-| Contenido y video | 7 | 44 | 128 | 0 | 0 | 0 |
+| Contenido y video | 7 | 45 | 128 | 0 | 0 | 0 |
 | Estudio | 2 | 1 | 0 | 1 | 0 | 0 |
 | Productos | 2 | 0 | 0 | 14 | 0 | 0 |
 | Herramientas | 5 | 5 | 33 | 1 | 0 | 0 |
 | Sitios web | 3 | 0 | 65 | 6 | 0 | 0 |
 
-Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 337, ChatGPT · Codex 39, GitHub Actions 20.
+Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 338, ChatGPT · Codex 39, GitHub Actions 20.
 
 Vencimientos: Renovación de la conexión Claude–box el 7 dic 2026; Token de GitHub «MATRIZ lectura» el 9 feb 2027; Token de GitHub «MATRIZ escritura» (edición desde el panel) el 12 nov 2027; Llave de GitHub «Matriz administración (Claude)» el 12 nov 2027; Llave de Cloudflare «Matriz administración (Claude)» el 12 nov 2027.
 
@@ -162,8 +162,8 @@ Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio,
   - Pendiente: - Avisar a Emi y a Matriz de Redes que el Reel de Vox necesita la voz de Emi o la etiqueta.
 - **TikTok** (público) · https://github.com/lianfixx/TikTok · último cambio 18 nov 2026 · skills: tiktok-studio
   - Skill de la cuenta personal de Emi en TikTok: decide qué video hacer, para quién y cómo engancha en los primeros segundos; prepara la descripción, los hashtags, la portada y el calendario; entrega el paquete aprobado para que Emi lo publique, y mide.
-  - Último: 18 nov 2026 · Ficha manual de TikTok en el panel · Claude Code (sesión en la nube)
-  - Pendiente: que Emi apruebe la pieza y la portada propuesta en el panel; el panel no manda avisos al teléfono.
+  - Último: 18 nov 2026 · Excepciones de cadencia decididas por Emi · Claude Code (sesión en la nube)
+  - Pendiente: revisar los MP4 (imágenes, voz «Emilio» y C2PA) cuando lleguen al panel y dejar las dos piezas con su ficha.
 - **LinkedIn** (público) · https://github.com/lianfixx/LinkedIn · último cambio 18 nov 2026 · skills: linkedin-pro
   - Skill para planear, redactar, revisar, entregar para publicar y medir lo que Emi publica en su perfil personal de LinkedIn (linkedin.com/in/emiliano-milla). Sirve en cualquier IA.
   - Último: 18 nov 2026 · Post de The Economist aprobado para el jueves 19 · Claude Code (sesión en la nube)

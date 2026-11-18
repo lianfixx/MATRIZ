@@ -1096,6 +1096,12 @@
           "registro": [
             {
               "fecha": "2026-11-18",
+              "titulo": "Excepciones de cadencia decididas por Emi",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "revisar los MP4 (imágenes, voz «Emilio» y C2PA) cuando lleguen al panel y dejar las dos piezas con su ficha."
+            },
+            {
+              "fecha": "2026-11-18",
               "titulo": "Ficha manual de TikTok en el panel",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "que Emi apruebe la pieza y la portada propuesta en el panel; el panel no manda avisos al teléfono."
@@ -1135,12 +1141,6 @@
               "titulo": "Auditoría independiente y correcciones (1.2.0)",
               "agente": "Claude Code (sesión en la nube); revisor: otro agente de Claude Code, independiente y de solo lectura.",
               "pendiente": "que Emi decida si la revisión mensual puede sellar la fecha y hacer commits sola; aprobación de la descripción del DOF; `archivo_sha256` del MP4 antes de entregarlo."
-            },
-            {
-              "fecha": "2026-11-17",
-              "titulo": "Respuestas de Emi: cuenta, bio, pilares y descripción del DOF",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "que Emi apruebe la descripción ajustada, ponga la bio y el nombre en la app y decida qué hace con el video de 2020; auditoría independiente."
             }
           ],
           "actividad": {
@@ -1162,10 +1162,10 @@
               0,
               0,
               1,
-              9
+              10
             ],
             "actores_60d": {
-              "Claude": 9,
+              "Claude": 10,
               "Emi": 1
             }
           }
@@ -2225,9 +2225,9 @@
           0,
           9,
           128,
-          44
+          45
         ],
-        "esta_semana": 44,
+        "esta_semana": 45,
         "semana_pasada": 128,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2330,11 +2330,11 @@
       154,
       196,
       255,
-      61
+      62
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 337,
+      "Claude": 338,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 20
     },

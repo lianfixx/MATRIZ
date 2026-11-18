@@ -81,8 +81,8 @@ Skill de la cuenta personal de Emi en TikTok: decide qué video hacer, para qui�
 
 Skills: `tiktok-studio`
 
-Último registro: 18 nov 2026 · Ficha manual de TikTok en el panel · Agente: Claude Code (sesión en la nube)
-Pendiente: que Emi apruebe la pieza y la portada propuesta en el panel; el panel no manda avisos al teléfono.
+Último registro: 18 nov 2026 · Excepciones de cadencia decididas por Emi · Agente: Claude Code (sesión en la nube)
+Pendiente: revisar los MP4 (imágenes, voz «Emilio» y C2PA) cuando lleguen al panel y dejar las dos piezas con su ficha.
 
 ### LinkedIn (público)
 
