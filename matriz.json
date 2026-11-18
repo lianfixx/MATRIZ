@@ -949,6 +949,12 @@
           "registro": [
             {
               "fecha": "2026-11-18",
+              "titulo": "Idea de coyuntura: portada «The World Ahead 2027» de The Economist",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "borradores de las skills en el panel y aprobación de Emi; opinión de Emi para el guion del video."
+            },
+            {
+              "fecha": "2026-11-18",
               "titulo": "TikTok responde: reglas de crecimiento, cadencia y calendario recorrido; lanzamiento publicado",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "respuestas de Emi sobre TikTok; que TikTok publique su `red/estado.json`."
@@ -988,12 +994,6 @@
               "titulo": "Registro externo: corregir la clave sin duplicar",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "aplicar la clave correcta en el panel tras el despliegue."
-            },
-            {
-              "fecha": "2026-11-15",
-              "titulo": "Auditoría: calendario al día con la realidad y video del DOF ya subido a X",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "hallazgos del revisor independiente del código."
             }
           ],
           "actividad": {
@@ -1015,11 +1015,11 @@
               0,
               0,
               46,
-              7
+              9
             ],
             "actores_60d": {
-              "GitHub Actions": 15,
-              "Claude": 37,
+              "GitHub Actions": 16,
+              "Claude": 38,
               "Emi": 1
             }
           }
@@ -2170,9 +2170,9 @@
           0,
           9,
           128,
-          12
+          14
         ],
-        "esta_semana": 12,
+        "esta_semana": 14,
         "semana_pasada": 128,
         "dias_sin_movimiento": -1,
         "pendientes_abiertos": 0,
@@ -2275,13 +2275,13 @@
       154,
       196,
       255,
-      27
+      29
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 308,
+      "Claude": 309,
       "ChatGPT · Codex": 39,
-      "GitHub Actions": 15
+      "GitHub Actions": 16
     },
     "vencimientos": [
       {

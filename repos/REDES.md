@@ -4,9 +4,9 @@ cerebro: "Contenido y video"
 visibilidad: "público"
 ultimo_cambio: 2026-11-18
 skills: 1
-commits_8_semanas: 53
+commits_8_semanas: 55
 ultimo_agente: "Claude Code (sesión en la nube)"
-pendiente: "respuestas de Emi sobre TikTok; que TikTok publique su `red/estado.json`."
+pendiente: "borradores de las skills en el panel y aprobación de Emi; opinión de Emi para el guion del video."
 github: "https://github.com/lianfixx/REDES"
 tags:
   - "repo"
@@ -28,12 +28,12 @@ La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, 
 
 ## Últimos registros
 
+- 18 nov 2026 · Idea de coyuntura: portada «The World Ahead 2027» de The Economist · Agente: Claude Code (sesión en la nube)
 - 18 nov 2026 · TikTok responde: reglas de crecimiento, cadencia y calendario recorrido; lanzamiento publicado · Agente: Claude Code (sesión en la nube)
 - 16 nov 2026 · Semana de X en el calendario y pendientes de Emi · Agente: Claude Code (sesión en la nube)
 - 16 nov 2026 · Calendario: DOF en X y documento en LinkedIn, publicados; lanzamiento con imagen · Agente: Claude Code (sesión en la nube)
 - 15 nov 2026 · Archivos siempre con aprobación de Emi; propuesta de la Matriz · Agente: Claude Code (sesión en la nube)
-- 15 nov 2026 · Auditoría 3: arreglos del camino de archivos y de X · Agente: Claude Code (sesión en la nube)
 
 ## Pendiente más reciente
 
-respuestas de Emi sobre TikTok; que TikTok publique su `red/estado.json`.
+borradores de las skills en el panel y aprobación de Emi; opinión de Emi para el guion del video.

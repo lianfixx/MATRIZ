@@ -59,8 +59,8 @@ La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, 
 
 Skills: `matriz-redes`
 
-Último registro: 18 nov 2026 · TikTok responde: reglas de crecimiento, cadencia y calendario recorrido; lanzamiento publicado · Agente: Claude Code (sesión en la nube)
-Pendiente: respuestas de Emi sobre TikTok; que TikTok publique su `red/estado.json`.
+Último registro: 18 nov 2026 · Idea de coyuntura: portada «The World Ahead 2027» de The Economist · Agente: Claude Code (sesión en la nube)
+Pendiente: borradores de las skills en el panel y aprobación de Emi; opinión de Emi para el guion del video.
 
 ### Instagram (público)
 
