@@ -949,6 +949,12 @@
           "registro": [
             {
               "fecha": "2026-11-18",
+              "titulo": "TikTok: cuenta @emiliano_milla_ activa",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "aprobación de la descripción del DOF; cuenta de Instagram."
+            },
+            {
+              "fecha": "2026-11-18",
               "titulo": "X Premium: posts largos en el panel",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "si Emi conserva Premium, cambiar la fecha de `X_PREMIUM_HASTA`."
@@ -988,12 +994,6 @@
               "titulo": "Calendario: DOF en X y documento en LinkedIn, publicados; lanzamiento con imagen",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "lanzamiento el martes 17 a las 9:00."
-            },
-            {
-              "fecha": "2026-11-15",
-              "titulo": "Archivos siempre con aprobación de Emi; propuesta de la Matriz",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "Emi acepta o descarta la imagen del lanzamiento antes del martes 17 a las 9:00."
             }
           ],
           "actividad": {
@@ -1015,11 +1015,11 @@
               0,
               0,
               46,
-              14
+              16
             ],
             "actores_60d": {
-              "Claude": 41,
-              "GitHub Actions": 18,
+              "GitHub Actions": 19,
+              "Claude": 42,
               "Emi": 1
             }
           }
@@ -2189,9 +2189,9 @@
           0,
           9,
           128,
-          26
+          28
         ],
-        "esta_semana": 26,
+        "esta_semana": 28,
         "semana_pasada": 128,
         "dias_sin_movimiento": -1,
         "pendientes_abiertos": 0,
@@ -2294,13 +2294,13 @@
       154,
       196,
       255,
-      41
+      43
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 319,
+      "Claude": 320,
       "ChatGPT · Codex": 39,
-      "GitHub Actions": 18
+      "GitHub Actions": 19
     },
     "vencimientos": [
       {
