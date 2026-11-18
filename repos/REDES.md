@@ -4,9 +4,9 @@ cerebro: "Contenido y video"
 visibilidad: "público"
 ultimo_cambio: 2026-11-18
 skills: 1
-commits_8_semanas: 64
+commits_8_semanas: 66
 ultimo_agente: "Claude Code (sesión en la nube)"
-pendiente: "que tiktok-studio mande `app.ajustes` en sus piezas."
+pendiente: "que la sesión de videos suba los MP4 al panel y cada red deje su pieza; aprobación de Emi."
 github: "https://github.com/lianfixx/REDES"
 tags:
   - "repo"
@@ -28,12 +28,12 @@ La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, 
 
 ## Últimos registros
 
+- 18 nov 2026 · Videos de The Economist: sábado 21 y domingo 22 · Agente: Claude Code (sesión en la nube)
 - 18 nov 2026 · Ficha para subir a mano (TikTok e Instagram) · Agente: Claude Code (sesión en la nube)
 - 18 nov 2026 · Claude puede retirar sus propios borradores sin aprobar · Agente: Claude Code (sesión en la nube)
 - 18 nov 2026 · TikTok: cuenta @emiliano_milla_ activa · Agente: Claude Code (sesión en la nube)
 - 18 nov 2026 · X Premium: posts largos en el panel · Agente: Claude Code (sesión en la nube)
-- 18 nov 2026 · LinkedIn: The Economist vuelve al jueves 19 (decisión de Emi) · Agente: Claude Code (sesión en la nube)
 
 ## Pendiente más reciente
 
-que tiktok-studio mande `app.ajustes` en sus piezas.
+que la sesión de videos suba los MP4 al panel y cada red deje su pieza; aprobación de Emi.

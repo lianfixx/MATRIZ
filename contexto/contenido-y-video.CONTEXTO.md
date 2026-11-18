@@ -59,8 +59,8 @@ La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, 
 
 Skills: `matriz-redes`
 
-Último registro: 18 nov 2026 · Ficha para subir a mano (TikTok e Instagram) · Agente: Claude Code (sesión en la nube)
-Pendiente: que tiktok-studio mande `app.ajustes` en sus piezas.
+Último registro: 18 nov 2026 · Videos de The Economist: sábado 21 y domingo 22 · Agente: Claude Code (sesión en la nube)
+Pendiente: que la sesión de videos suba los MP4 al panel y cada red deje su pieza; aprobación de Emi.
 
 ### Instagram (público)
 
