@@ -56,13 +56,13 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 | Castorena | 4 | 12 | 29 | -1 | 0 | 0 |
 | MILLA ABOGADOS | 5 | 0 | 0 | 14 | 0 | 0 |
 | Acción Tlalnepantla | 1 | 0 | 0 | 14 | 0 | 0 |
-| Contenido y video | 7 | 56 | 128 | -1 | 0 | 0 |
+| Contenido y video | 7 | 58 | 128 | -1 | 0 | 0 |
 | Estudio | 2 | 1 | 0 | 1 | 0 | 0 |
 | Productos | 2 | 0 | 0 | 14 | 0 | 0 |
 | Herramientas | 5 | 5 | 33 | 1 | 0 | 0 |
 | Sitios web | 3 | 0 | 65 | 6 | 0 | 0 |
 
-Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 349, ChatGPT · Codex 39, GitHub Actions 21.
+Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 351, ChatGPT · Codex 39, GitHub Actions 21.
 
 Vencimientos: Renovación de la conexión Claude–box el 7 dic 2026; Token de GitHub «MATRIZ lectura» el 9 feb 2027; Token de GitHub «MATRIZ escritura» (edición desde el panel) el 12 nov 2027; Llave de GitHub «Matriz administración (Claude)» el 12 nov 2027; Llave de Cloudflare «Matriz administración (Claude)» el 12 nov 2027.
 
@@ -160,10 +160,10 @@ Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio,
   - Skill para planear, redactar, revisar, entregar para publicar y medir los Reels, publicaciones del feed y carruseles de la cuenta personal de Emi en Instagram. Pilares: IA + Derecho en México, estilo de vida y gym y opinión política. Sirve en cualquier IA.
   - Último: 13 nov 2026 · instagram-studio 1.0.1: correcciones de la auditoría independiente · Claude Code (sesión en la nube)
   - Pendiente: - Avisar a Emi y a Matriz de Redes que el Reel de Vox necesita la voz de Emi o la etiqueta.
-- **TikTok** (público) · https://github.com/lianfixx/TikTok · último cambio 18 nov 2026 · skills: tiktok-studio
+- **TikTok** (público) · https://github.com/lianfixx/TikTok · último cambio 19 nov 2026 · skills: tiktok-studio
   - Skill de la cuenta personal de Emi en TikTok: decide qué video hacer, para quién y cómo engancha en los primeros segundos; prepara la descripción, los hashtags, la portada y el calendario; entrega el paquete aprobado para que Emi lo publique, y mide.
-  - Último: 18 nov 2026 · DOF 2: decisiones de Emi · Claude Code (sesión en la nube)
-  - Pendiente: que Emi apruebe la pieza en el panel y la publique o la programe.
+  - Último: 19 nov 2026 · Video de 2020 retirado y medición desde el próximo video · Claude Code (sesión en la nube)
+  - Pendiente: el enlace de cada video que se publique a partir de ahora.
 - **LinkedIn** (público) · https://github.com/lianfixx/LinkedIn · último cambio 18 nov 2026 · skills: linkedin-pro
   - Skill para planear, redactar, revisar, entregar para publicar y medir lo que Emi publica en su perfil personal de LinkedIn (linkedin.com/in/emiliano-milla). Sirve en cualquier IA.
   - Último: 18 nov 2026 · Post de The Economist aprobado para el jueves 19 · Claude Code (sesión en la nube)

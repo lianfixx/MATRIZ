@@ -1084,7 +1084,7 @@
           "url": "https://github.com/lianfixx/TikTok",
           "visibilidad": "público",
           "leido": true,
-          "ultimo_cambio": "2026-11-18",
+          "ultimo_cambio": "2026-11-19",
           "resumen": "Skill de la cuenta personal de Emi en TikTok: decide qué video hacer, para quién y cómo engancha en los primeros segundos; prepara la descripción, los hashtags, la portada y el calendario; entrega el paquete aprobado para que Emi lo publique, y mide.",
           "skills": [
             {
@@ -1094,6 +1094,18 @@
           ],
           "protocolo": "1.1.0",
           "registro": [
+            {
+              "fecha": "2026-11-19",
+              "titulo": "Video de 2020 retirado y medición desde el próximo video",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "el enlace de cada video que se publique a partir de ahora."
+            },
+            {
+              "fecha": "2026-11-19",
+              "titulo": "Perfil de TikTok al día",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "que Emi mande el enlace del video publicado para anotarlo con `tts publicado` y medirlo a los 7 días."
+            },
             {
               "fecha": "2026-11-18",
               "titulo": "DOF 2: decisiones de Emi",
@@ -1129,18 +1141,6 @@
               "titulo": "Ficha manual de TikTok en el panel",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "que Emi apruebe la pieza y la portada propuesta en el panel; el panel no manda avisos al teléfono."
-            },
-            {
-              "fecha": "2026-11-18",
-              "titulo": "Vox Studio aplicó el puente; regla de voz de IA aclarada",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "fusionar la rama de Vox Studio a `main` (lo decide su sesión con Emi)."
-            },
-            {
-              "fecha": "2026-11-17",
-              "titulo": "Encargo al panel: modo manual de TikTok",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "que la sesión del panel lo construya; probarlo con la pieza del DOF; que Emi acepte la portada propuesta."
             }
           ],
           "actividad": {
@@ -1162,10 +1162,10 @@
               0,
               0,
               1,
-              14
+              16
             ],
             "actores_60d": {
-              "Claude": 14,
+              "Claude": 16,
               "Emi": 1
             }
           }
@@ -2225,9 +2225,9 @@
           0,
           9,
           128,
-          56
+          58
         ],
-        "esta_semana": 56,
+        "esta_semana": 58,
         "semana_pasada": 128,
         "dias_sin_movimiento": -1,
         "pendientes_abiertos": 0,
@@ -2330,11 +2330,11 @@
       154,
       196,
       255,
-      74
+      76
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 349,
+      "Claude": 351,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 21
     },

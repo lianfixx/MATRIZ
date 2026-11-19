@@ -75,14 +75,14 @@ Pendiente: - Avisar a Emi y a Matriz de Redes que el Reel de Vox necesita la voz
 
 ### TikTok (público)
 
-https://github.com/lianfixx/TikTok · último cambio: 18 nov 2026
+https://github.com/lianfixx/TikTok · último cambio: 19 nov 2026
 
 Skill de la cuenta personal de Emi en TikTok: decide qué video hacer, para quién y cómo engancha en los primeros segundos; prepara la descripción, los hashtags, la portada y el calendario; entrega el paquete aprobado para que Emi lo publique, y mide.
 
 Skills: `tiktok-studio`
 
-Último registro: 18 nov 2026 · DOF 2: decisiones de Emi · Agente: Claude Code (sesión en la nube)
-Pendiente: que Emi apruebe la pieza en el panel y la publique o la programe.
+Último registro: 19 nov 2026 · Video de 2020 retirado y medición desde el próximo video · Agente: Claude Code (sesión en la nube)
+Pendiente: el enlace de cada video que se publique a partir de ahora.
 
 ### LinkedIn (público)
 
