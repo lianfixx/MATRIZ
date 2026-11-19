@@ -775,7 +775,7 @@
           "url": "https://github.com/lianfixx/X",
           "visibilidad": "público",
           "leido": true,
-          "ultimo_cambio": "2026-11-18",
+          "ultimo_cambio": "2026-11-19",
           "resumen": "Skill para planear, redactar, revisar, publicar con aprobación (API oficial de X) y medir las publicaciones de @emilianomilla en X, apoyada en el código público del algoritmo de X (xai-org/x-algorithm).",
           "skills": [
             {
@@ -785,6 +785,12 @@
           ],
           "protocolo": "1.1.0",
           "registro": [
+            {
+              "fecha": "2026-11-19",
+              "titulo": "Texto largo publicado y semana aprobada",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "compartir el PDF; hilo del domingo; métricas a 48 horas."
+            },
             {
               "fecha": "2026-11-18",
               "titulo": "Hilos en los mejores posts y guía descargable",
@@ -826,12 +832,6 @@
               "titulo": "Lanzamiento publicado por la API",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "que Emi responda a quien comente en las dos primeras horas; métricas a las 48 horas; aprobar los borradores del jueves y del viernes; material para estilo de vida."
-            },
-            {
-              "fecha": "2026-11-16",
-              "titulo": "Borradores sin dos puntos (preferencia de Emi)",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "los de la entrada de abajo."
             }
           ],
           "actividad": {
@@ -853,10 +853,10 @@
               0,
               0,
               16,
-              10
+              11
             ],
             "actores_60d": {
-              "Claude": 26
+              "Claude": 27
             }
           }
         },
@@ -937,7 +937,7 @@
           "url": "https://github.com/lianfixx/REDES",
           "visibilidad": "público",
           "leido": true,
-          "ultimo_cambio": "2026-11-18",
+          "ultimo_cambio": "2026-11-19",
           "resumen": "La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, Instagram) y de video (Vox Studio, Pizarra Studio, Editor Studio, MILLA Video Studio, Historias Studio). Registra las ideas, decide en qué red y formato sale cada una, arma el calendario de todas…",
           "skills": [
             {
@@ -947,6 +947,12 @@
           ],
           "protocolo": "1.1.0",
           "registro": [
+            {
+              "fecha": "2026-11-19",
+              "titulo": "X: responder a un post ya publicado",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "la sesión de X arma la pieza del hilo del mapa; Emi la aprueba; el PDF debe ser público."
+            },
             {
               "fecha": "2026-11-19",
               "titulo": "Hilo de X: respuestas propias bajo la misma aprobación",
@@ -988,12 +994,6 @@
               "titulo": "X Premium: posts largos en el panel",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "si Emi conserva Premium, cambiar la fecha de `X_PREMIUM_HASTA`."
-            },
-            {
-              "fecha": "2026-11-18",
-              "titulo": "LinkedIn: The Economist vuelve al jueves 19 (decisión de Emi)",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "que Emi elija la opción A o B en la sesión de LinkedIn."
             }
           ],
           "actividad": {
@@ -1015,10 +1015,10 @@
               0,
               0,
               46,
-              23
+              24
             ],
             "actores_60d": {
-              "Claude": 47,
+              "Claude": 48,
               "GitHub Actions": 21,
               "Emi": 1
             }
@@ -2225,11 +2225,11 @@
           0,
           9,
           128,
-          53
+          55
         ],
-        "esta_semana": 53,
+        "esta_semana": 55,
         "semana_pasada": 128,
-        "dias_sin_movimiento": 0,
+        "dias_sin_movimiento": -1,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
         "pendientes_de_repos": 6,
@@ -2330,11 +2330,11 @@
       154,
       196,
       255,
-      71
+      73
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 346,
+      "Claude": 348,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 21
     },

@@ -32,14 +32,14 @@ Pendiente: avisar a la Matriz de Redes y a `tiktok-studio` con fecha y commit. P
 
 ### X (público)
 
-https://github.com/lianfixx/X · último cambio: 18 nov 2026
+https://github.com/lianfixx/X · último cambio: 19 nov 2026
 
 Skill para planear, redactar, revisar, publicar con aprobación (API oficial de X) y medir las publicaciones de @emilianomilla en X, apoyada en el código público del algoritmo de X (xai-org/x-algorithm).
 
 Skills: `x-viral`
 
-Último registro: 18 nov 2026 · Hilos en los mejores posts y guía descargable · Agente: Claude Code (sesión en la nube)
-Pendiente: que Emi revise la guía, la comparta con «Cualquier persona con el enlace» y apruebe las respuestas; soporte de hilos en el panel.
+Último registro: 19 nov 2026 · Texto largo publicado y semana aprobada · Agente: Claude Code (sesión en la nube)
+Pendiente: compartir el PDF; hilo del domingo; métricas a 48 horas.
 
 ### HISTORIAS- (público)
 
@@ -53,14 +53,14 @@ Skills: `historias-studio`
 
 ### REDES (público)
 
-https://github.com/lianfixx/REDES · último cambio: 18 nov 2026
+https://github.com/lianfixx/REDES · último cambio: 19 nov 2026
 
 La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, Instagram) y de video (Vox Studio, Pizarra Studio, Editor Studio, MILLA Video Studio, Historias Studio). Registra las ideas, decide en qué red y formato sale cada una, arma el calendario de todas…
 
 Skills: `matriz-redes`
 
-Último registro: 19 nov 2026 · Hilo de X: respuestas propias bajo la misma aprobación · Agente: Claude Code (sesión en la nube)
-Pendiente: que Emi ponga el PDF como «cualquier persona con el enlace».
+Último registro: 19 nov 2026 · X: responder a un post ya publicado · Agente: Claude Code (sesión en la nube)
+Pendiente: la sesión de X arma la pieza del hilo del mapa; Emi la aprueba; el PDF debe ser público.
 
 ### Instagram (público)
 

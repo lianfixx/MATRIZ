@@ -1,7 +1,7 @@
 ---
 tipo: "cerebro"
 repos: 7
-ultimo_cambio: 2026-11-18
+ultimo_cambio: 2026-11-19
 tags:
   - "cerebro"
 generado: "tools/generar.py · no editar a mano: se reescribe cada día"
@@ -16,9 +16,9 @@ Parte de la [[MATRIZ]].
 ## Repositorios
 
 - [[VIDEOS-IA-SKILL-MILLA|VIDEOS-IA-SKILL-MILLA]] · público · 18 nov 2026 · 4 skill(s)
-- [[X|X]] · público · 18 nov 2026 · 1 skill(s)
+- [[X|X]] · público · 19 nov 2026 · 1 skill(s)
 - [[HISTORIAS|HISTORIAS-]] · público · 16 nov 2026 · 1 skill(s)
-- [[REDES|REDES]] · público · 18 nov 2026 · 1 skill(s)
+- [[REDES|REDES]] · público · 19 nov 2026 · 1 skill(s)
 - [[Instagram|Instagram]] · público · 13 nov 2026 · 1 skill(s)
 - [[TikTok|TikTok]] · público · 18 nov 2026 · 1 skill(s)
 - [[LinkedIn|LinkedIn]] · público · 18 nov 2026 · 1 skill(s)

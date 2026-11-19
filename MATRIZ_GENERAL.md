@@ -56,13 +56,13 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 | Castorena | 4 | 12 | 29 | -1 | 0 | 0 |
 | MILLA ABOGADOS | 5 | 0 | 0 | 14 | 0 | 0 |
 | Acción Tlalnepantla | 1 | 0 | 0 | 14 | 0 | 0 |
-| Contenido y video | 7 | 53 | 128 | 0 | 0 | 0 |
+| Contenido y video | 7 | 55 | 128 | -1 | 0 | 0 |
 | Estudio | 2 | 1 | 0 | 1 | 0 | 0 |
 | Productos | 2 | 0 | 0 | 14 | 0 | 0 |
 | Herramientas | 5 | 5 | 33 | 1 | 0 | 0 |
 | Sitios web | 3 | 0 | 65 | 6 | 0 | 0 |
 
-Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 346, ChatGPT · Codex 39, GitHub Actions 21.
+Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 348, ChatGPT · Codex 39, GitHub Actions 21.
 
 Vencimientos: Renovación de la conexión Claude–box el 7 dic 2026; Token de GitHub «MATRIZ lectura» el 9 feb 2027; Token de GitHub «MATRIZ escritura» (edición desde el panel) el 12 nov 2027; Llave de GitHub «Matriz administración (Claude)» el 12 nov 2027; Llave de Cloudflare «Matriz administración (Claude)» el 12 nov 2027.
 
@@ -145,17 +145,17 @@ Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio,
   - Un método portable para producir videos de MILLA ABOGADOS: investigación, guion, conexiones, voz, imágenes, música, montaje y revisión. Incluye una skill, instrucciones para otras IAs, utilidades y un compositor nuevo.
   - Último: 18 nov 2026 · Vox Studio 0.13.2: ideas de temas desde la skill de TikTok y usuario de TikTok guardado · Claude Code (sesión en la nube)
   - Pendiente: avisar a la Matriz de Redes y a `tiktok-studio` con fecha y commit. Para Emi: el puente de TikTok pide «sin voces realistas hechas con IA»; la voz de Vox (ElevenLabs) lo es, y eso lo decide él con la sesión de TikTok.
-- **X** (público) · https://github.com/lianfixx/X · último cambio 18 nov 2026 · skills: x-viral
+- **X** (público) · https://github.com/lianfixx/X · último cambio 19 nov 2026 · skills: x-viral
   - Skill para planear, redactar, revisar, publicar con aprobación (API oficial de X) y medir las publicaciones de @emilianomilla en X, apoyada en el código público del algoritmo de X (xai-org/x-algorithm).
-  - Último: 18 nov 2026 · Hilos en los mejores posts y guía descargable · Claude Code (sesión en la nube)
-  - Pendiente: que Emi revise la guía, la comparta con «Cualquier persona con el enlace» y apruebe las respuestas; soporte de hilos en el panel.
+  - Último: 19 nov 2026 · Texto largo publicado y semana aprobada · Claude Code (sesión en la nube)
+  - Pendiente: compartir el PDF; hilo del domingo; métricas a 48 horas.
 - **HISTORIAS-** (público) · https://github.com/lianfixx/HISTORIAS- · último cambio 16 nov 2026 · skills: historias-studio
   - Método, motor y memoria para hacer las historias de Instagram de Emi con cualquier IA: la IA pregunta, propone y dibuja; Emi decide.
   - Último: 16 nov 2026 · 0.3.1 · candidato · agente no consta
-- **REDES** (público) · https://github.com/lianfixx/REDES · último cambio 18 nov 2026 · skills: matriz-redes
+- **REDES** (público) · https://github.com/lianfixx/REDES · último cambio 19 nov 2026 · skills: matriz-redes
   - La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, Instagram) y de video (Vox Studio, Pizarra Studio, Editor Studio, MILLA Video Studio, Historias Studio). Registra las ideas, decide en qué red y formato sale cada una, arma el calendario de todas…
-  - Último: 19 nov 2026 · Hilo de X: respuestas propias bajo la misma aprobación · Claude Code (sesión en la nube)
-  - Pendiente: que Emi ponga el PDF como «cualquier persona con el enlace».
+  - Último: 19 nov 2026 · X: responder a un post ya publicado · Claude Code (sesión en la nube)
+  - Pendiente: la sesión de X arma la pieza del hilo del mapa; Emi la aprueba; el PDF debe ser público.
 - **Instagram** (público) · https://github.com/lianfixx/Instagram · último cambio 13 nov 2026 · skills: instagram-studio
   - Skill para planear, redactar, revisar, entregar para publicar y medir los Reels, publicaciones del feed y carruseles de la cuenta personal de Emi en Instagram. Pilares: IA + Derecho en México, estilo de vida y gym y opinión política. Sirve en cualquier IA.
   - Último: 13 nov 2026 · instagram-studio 1.0.1: correcciones de la auditoría independiente · Claude Code (sesión en la nube)
