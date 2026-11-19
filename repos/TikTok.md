@@ -4,9 +4,9 @@ cerebro: "Contenido y video"
 visibilidad: "público"
 ultimo_cambio: 2026-11-19
 skills: 1
-commits_8_semanas: 17
+commits_8_semanas: 18
 ultimo_agente: "Claude Code (sesión en la nube)"
-pendiente: "el enlace de cada video que se publique a partir de ahora."
+pendiente: "capturas de TikTok Studio a los 7 días (26/11/2026); marcar la pieza `beeb55f32c9c` como publicada en el panel."
 github: "https://github.com/lianfixx/TikTok"
 tags:
   - "repo"
@@ -28,12 +28,12 @@ Skill de la cuenta personal de Emi en TikTok: decide qué video hacer, para qui�
 
 ## Últimos registros
 
+- 19 nov 2026 · Publicado en TikTok el video del SAT · Agente: Claude Code (sesión en la nube)
 - 19 nov 2026 · Video de 2020 retirado y medición desde el próximo video · Agente: Claude Code (sesión en la nube)
 - 19 nov 2026 · Perfil de TikTok al día · Agente: Claude Code (sesión en la nube)
 - 18 nov 2026 · DOF 2: decisiones de Emi · Agente: Claude Code (sesión en la nube)
 - 18 nov 2026 · Pieza de TikTok del DOF 2 (perdón de multas del SAT) · Agente: Claude Code (sesión en la nube)
-- 18 nov 2026 · Fuente oficial de la Queja [expediente] verificada · Agente: Claude Code (sesión en la nube)
 
 ## Pendiente más reciente
 
-el enlace de cada video que se publique a partir de ahora.
+capturas de TikTok Studio a los 7 días (26/11/2026); marcar la pieza `beeb55f32c9c` como publicada en el panel.

@@ -1096,6 +1096,12 @@
           "registro": [
             {
               "fecha": "2026-11-19",
+              "titulo": "Publicado en TikTok el video del SAT",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "capturas de TikTok Studio a los 7 días (26/11/2026); marcar la pieza `beeb55f32c9c` como publicada en el panel."
+            },
+            {
+              "fecha": "2026-11-19",
               "titulo": "Video de 2020 retirado y medición desde el próximo video",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "el enlace de cada video que se publique a partir de ahora."
@@ -1135,12 +1141,6 @@
               "titulo": "Excepciones de cadencia decididas por Emi",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "revisar los MP4 (imágenes, voz «Emilio» y C2PA) cuando lleguen al panel y dejar las dos piezas con su ficha."
-            },
-            {
-              "fecha": "2026-11-18",
-              "titulo": "Ficha manual de TikTok en el panel",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "que Emi apruebe la pieza y la portada propuesta en el panel; el panel no manda avisos al teléfono."
             }
           ],
           "actividad": {
@@ -1162,10 +1162,10 @@
               0,
               0,
               1,
-              16
+              17
             ],
             "actores_60d": {
-              "Claude": 16,
+              "Claude": 17,
               "Emi": 1
             }
           }
@@ -2225,9 +2225,9 @@
           0,
           9,
           128,
-          59
+          60
         ],
-        "esta_semana": 59,
+        "esta_semana": 60,
         "semana_pasada": 128,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2330,11 +2330,11 @@
       154,
       196,
       255,
-      79
+      80
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 353,
+      "Claude": 354,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 22
     },

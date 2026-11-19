@@ -81,8 +81,8 @@ Skill de la cuenta personal de Emi en TikTok: decide qué video hacer, para qui�
 
 Skills: `tiktok-studio`
 
-Último registro: 19 nov 2026 · Video de 2020 retirado y medición desde el próximo video · Agente: Claude Code (sesión en la nube)
-Pendiente: el enlace de cada video que se publique a partir de ahora.
+Último registro: 19 nov 2026 · Publicado en TikTok el video del SAT · Agente: Claude Code (sesión en la nube)
+Pendiente: capturas de TikTok Studio a los 7 días (26/11/2026); marcar la pieza `beeb55f32c9c` como publicada en el panel.
 
 ### LinkedIn (público)
 
