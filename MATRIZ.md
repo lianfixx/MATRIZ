@@ -16,7 +16,7 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 
 | Cerebro | Repos | Esta semana | Sin movimiento | Pendientes | Qué es |
 |---|---|---|---|---|---|
-| [[Castorena]] | 4 | 11 commits | 0 días | 0 | Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP, escritos y monitor del DOF. |
+| [[Castorena]] | 4 | 12 commits | -1 días | 0 | Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP, escritos y monitor del DOF. |
 | [[MILLA ABOGADOS]] | 5 | 0 commits | 14 días | 0 | El despacho de Emi: sitio, asesorías, monitoreo de expedientes, captación e Impulso Libre. |
 | [[Acción Tlalnepantla]] | 1 | 0 commits | 14 días | 0 | Acción Política Juvenil Tlalnepantla (PAN): sitio, formatos, eventos y materiales. |
 | [[Contenido y video]] | 7 | 53 commits | 0 días | 0 | Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio, X, Instagram, TikTok, LinkedIn, la matriz de redes (REDES) e historias de Instagram. |
@@ -29,6 +29,7 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 
 - 19 nov 2026 · **REDES** · Hilo de X: respuestas propias bajo la misma aprobación · Agente: Claude Code (sesión en la nube)
 - 19 nov 2026 · **REDES** · TikTok: DOF 2 (perdón de multas) el martes 24 · Agente: Claude Code (sesión en la nube)
+- 18 nov 2026 · **Cerebro-Castorena-** · Cierre diario programado: sin cambios · Agente: Claude Code (ejecución programada)
 - 18 nov 2026 · **VIDEOS-IA-SKILL-MILLA** · Vox Studio 0.13.2: ideas de temas desde la skill de TikTok y usuario de TikTok guardado · Agente: Claude Code (sesión en la nube)
 - 18 nov 2026 · **X** · Hilos en los mejores posts y guía descargable · Agente: Claude Code (sesión en la nube)
 - 18 nov 2026 · **X** · Textos para los dos videos de The Economist · Agente: Claude Code (sesión en la nube)
@@ -36,7 +37,6 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 - 18 nov 2026 · **REDES** · Videos de The Economist: sábado 21 y domingo 22 · Agente: Claude Code (sesión en la nube)
 - 18 nov 2026 · **TikTok** · DOF 2: decisiones de Emi · Agente: Claude Code (sesión en la nube)
 - 18 nov 2026 · **TikTok** · Pieza de TikTok del DOF 2 (perdón de multas del SAT) · Agente: Claude Code (sesión en la nube)
-- 18 nov 2026 · **TikTok** · Fuente oficial de la Queja [expediente] verificada · Agente: Claude Code (sesión en la nube)
 
 ## Vencimientos
 
