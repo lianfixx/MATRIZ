@@ -59,8 +59,8 @@ La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, 
 
 Skills: `matriz-redes`
 
-Último registro: 19 nov 2026 · TikTok: DOF 2 (perdón de multas) el martes 24 · Agente: Claude Code (sesión en la nube)
-Pendiente: decisiones de Emi (sello final y su regla de mandar primero al WhatsApp de la firma).
+Último registro: 19 nov 2026 · Hilo de X: respuestas propias bajo la misma aprobación · Agente: Claude Code (sesión en la nube)
+Pendiente: que Emi ponga el PDF como «cualquier persona con el enlace».
 
 ### Instagram (público)
 
@@ -81,8 +81,8 @@ Skill de la cuenta personal de Emi en TikTok: decide qué video hacer, para qui�
 
 Skills: `tiktok-studio`
 
-Último registro: 18 nov 2026 · Pieza de TikTok del DOF 2 (perdón de multas del SAT) · Agente: Claude Code (sesión en la nube)
-Pendiente: decisiones de Emi sobre el sello final que queda un poco bajo la descripción y sobre su regla de mandar primero al WhatsApp de la firma; aprobación en el panel.
+Último registro: 18 nov 2026 · DOF 2: decisiones de Emi · Agente: Claude Code (sesión en la nube)
+Pendiente: que Emi apruebe la pieza en el panel y la publique o la programe.
 
 ### LinkedIn (público)
 

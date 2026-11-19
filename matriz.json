@@ -949,6 +949,12 @@
           "registro": [
             {
               "fecha": "2026-11-19",
+              "titulo": "Hilo de X: respuestas propias bajo la misma aprobación",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "que Emi ponga el PDF como «cualquier persona con el enlace»."
+            },
+            {
+              "fecha": "2026-11-19",
               "titulo": "TikTok: DOF 2 (perdón de multas) el martes 24",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "decisiones de Emi (sello final y su regla de mandar primero al WhatsApp de la firma)."
@@ -988,12 +994,6 @@
               "titulo": "LinkedIn: The Economist vuelve al jueves 19 (decisión de Emi)",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "que Emi elija la opción A o B en la sesión de LinkedIn."
-            },
-            {
-              "fecha": "2026-11-18",
-              "titulo": "LinkedIn: The Economist pasa al lunes 23; post del mapa el miércoles 18",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "que Emi elija la opción A o B en la sesión de LinkedIn."
             }
           ],
           "actividad": {
@@ -1015,11 +1015,11 @@
               0,
               0,
               46,
-              22
+              23
             ],
             "actores_60d": {
+              "Claude": 47,
               "GitHub Actions": 21,
-              "Claude": 46,
               "Emi": 1
             }
           }
@@ -1096,6 +1096,12 @@
           "registro": [
             {
               "fecha": "2026-11-18",
+              "titulo": "DOF 2: decisiones de Emi",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "que Emi apruebe la pieza en el panel y la publique o la programe."
+            },
+            {
+              "fecha": "2026-11-18",
               "titulo": "Pieza de TikTok del DOF 2 (perdón de multas del SAT)",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "decisiones de Emi sobre el sello final que queda un poco bajo la descripción y sobre su regla de mandar primero al WhatsApp de la firma; aprobación en el panel."
@@ -1135,12 +1141,6 @@
               "titulo": "Encargo al panel: modo manual de TikTok",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "que la sesión del panel lo construya; probarlo con la pieza del DOF; que Emi acepte la portada propuesta."
-            },
-            {
-              "fecha": "2026-11-17",
-              "titulo": "Automatizar la subida a TikTok: qué se puede",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "decisión de Emi entre programar en TikTok Studio o probar un programador de terceros."
             }
           ],
           "actividad": {
@@ -1162,10 +1162,10 @@
               0,
               0,
               1,
-              13
+              14
             ],
             "actores_60d": {
-              "Claude": 13,
+              "Claude": 14,
               "Emi": 1
             }
           }
@@ -2225,9 +2225,9 @@
           0,
           9,
           128,
-          51
+          53
         ],
-        "esta_semana": 51,
+        "esta_semana": 53,
         "semana_pasada": 128,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2330,11 +2330,11 @@
       154,
       196,
       255,
-      68
+      70
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 343,
+      "Claude": 345,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 21
     },
