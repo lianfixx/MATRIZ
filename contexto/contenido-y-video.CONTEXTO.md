@@ -38,8 +38,8 @@ Skill para planear, redactar, revisar, publicar con aprobación (API oficial de 
 
 Skills: `x-viral`
 
-Último registro: 19 nov 2026 · Texto largo publicado y semana aprobada · Agente: Claude Code (sesión en la nube)
-Pendiente: compartir el PDF; hilo del domingo; métricas a 48 horas.
+Último registro: 19 nov 2026 · Hilo de la guía en el post del mapa · Agente: Claude Code (sesión en la nube)
+Pendiente: que Emi comparta el PDF y apruebe la pieza.
 
 ### HISTORIAS- (público)
 

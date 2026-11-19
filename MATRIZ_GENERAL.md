@@ -56,13 +56,13 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 | Castorena | 4 | 12 | 29 | -1 | 0 | 0 |
 | MILLA ABOGADOS | 5 | 0 | 0 | 14 | 0 | 0 |
 | Acción Tlalnepantla | 1 | 0 | 0 | 14 | 0 | 0 |
-| Contenido y video | 7 | 55 | 128 | -1 | 0 | 0 |
+| Contenido y video | 7 | 56 | 128 | -1 | 0 | 0 |
 | Estudio | 2 | 1 | 0 | 1 | 0 | 0 |
 | Productos | 2 | 0 | 0 | 14 | 0 | 0 |
 | Herramientas | 5 | 5 | 33 | 1 | 0 | 0 |
 | Sitios web | 3 | 0 | 65 | 6 | 0 | 0 |
 
-Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 348, ChatGPT · Codex 39, GitHub Actions 21.
+Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 349, ChatGPT · Codex 39, GitHub Actions 21.
 
 Vencimientos: Renovación de la conexión Claude–box el 7 dic 2026; Token de GitHub «MATRIZ lectura» el 9 feb 2027; Token de GitHub «MATRIZ escritura» (edición desde el panel) el 12 nov 2027; Llave de GitHub «Matriz administración (Claude)» el 12 nov 2027; Llave de Cloudflare «Matriz administración (Claude)» el 12 nov 2027.
 
@@ -147,8 +147,8 @@ Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio,
   - Pendiente: avisar a la Matriz de Redes y a `tiktok-studio` con fecha y commit. Para Emi: el puente de TikTok pide «sin voces realistas hechas con IA»; la voz de Vox (ElevenLabs) lo es, y eso lo decide él con la sesión de TikTok.
 - **X** (público) · https://github.com/lianfixx/X · último cambio 19 nov 2026 · skills: x-viral
   - Skill para planear, redactar, revisar, publicar con aprobación (API oficial de X) y medir las publicaciones de @emilianomilla en X, apoyada en el código público del algoritmo de X (xai-org/x-algorithm).
-  - Último: 19 nov 2026 · Texto largo publicado y semana aprobada · Claude Code (sesión en la nube)
-  - Pendiente: compartir el PDF; hilo del domingo; métricas a 48 horas.
+  - Último: 19 nov 2026 · Hilo de la guía en el post del mapa · Claude Code (sesión en la nube)
+  - Pendiente: que Emi comparta el PDF y apruebe la pieza.
 - **HISTORIAS-** (público) · https://github.com/lianfixx/HISTORIAS- · último cambio 16 nov 2026 · skills: historias-studio
   - Método, motor y memoria para hacer las historias de Instagram de Emi con cualquier IA: la IA pregunta, propone y dibuja; Emi decide.
   - Último: 16 nov 2026 · 0.3.1 · candidato · agente no consta

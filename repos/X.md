@@ -4,9 +4,9 @@ cerebro: "Contenido y video"
 visibilidad: "público"
 ultimo_cambio: 2026-11-19
 skills: 1
-commits_8_semanas: 27
+commits_8_semanas: 28
 ultimo_agente: "Claude Code (sesión en la nube)"
-pendiente: "compartir el PDF; hilo del domingo; métricas a 48 horas."
+pendiente: "que Emi comparta el PDF y apruebe la pieza."
 github: "https://github.com/lianfixx/X"
 tags:
   - "repo"
@@ -28,12 +28,12 @@ Skill para planear, redactar, revisar, publicar con aprobación (API oficial de 
 
 ## Últimos registros
 
+- 19 nov 2026 · Hilo de la guía en el post del mapa · Agente: Claude Code (sesión en la nube)
 - 19 nov 2026 · Texto largo publicado y semana aprobada · Agente: Claude Code (sesión en la nube)
 - 18 nov 2026 · Hilos en los mejores posts y guía descargable · Agente: Claude Code (sesión en la nube)
 - 18 nov 2026 · Textos para los dos videos de The Economist · Agente: Claude Code (sesión en la nube)
 - 18 nov 2026 · Seguimiento del miércoles: métricas del DOF a las 48 horas · Agente: Claude Code (sesión en la nube)
-- 18 nov 2026 · Premium en prueba y texto largo sobre The Economist · Agente: Claude Code (sesión en la nube)
 
 ## Pendiente más reciente
 
-compartir el PDF; hilo del domingo; métricas a 48 horas.
+que Emi comparta el PDF y apruebe la pieza.
