@@ -1,5 +1,5 @@
 {
-  "actualizada": "2026-11-19",
+  "actualizada": "2026-11-20",
   "propietario": "lianfixx",
   "panel": "https://matriz.milla-abogados.workers.dev",
   "cerebros": [
@@ -2172,7 +2172,7 @@
         ],
         "esta_semana": 15,
         "semana_pasada": 29,
-        "dias_sin_movimiento": -1,
+        "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
         "pendientes_de_repos": 2,
@@ -2191,7 +2191,7 @@
         ],
         "esta_semana": 0,
         "semana_pasada": 0,
-        "dias_sin_movimiento": 15,
+        "dias_sin_movimiento": 16,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
         "pendientes_de_repos": 0,
@@ -2210,7 +2210,7 @@
         ],
         "esta_semana": 0,
         "semana_pasada": 0,
-        "dias_sin_movimiento": 15,
+        "dias_sin_movimiento": 16,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
         "pendientes_de_repos": 0,
@@ -2229,7 +2229,7 @@
         ],
         "esta_semana": 61,
         "semana_pasada": 128,
-        "dias_sin_movimiento": -1,
+        "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
         "pendientes_de_repos": 6,
@@ -2248,7 +2248,7 @@
         ],
         "esta_semana": 1,
         "semana_pasada": 0,
-        "dias_sin_movimiento": 2,
+        "dias_sin_movimiento": 3,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
         "pendientes_de_repos": 0,
@@ -2267,7 +2267,7 @@
         ],
         "esta_semana": 0,
         "semana_pasada": 0,
-        "dias_sin_movimiento": 15,
+        "dias_sin_movimiento": 16,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
         "pendientes_de_repos": 0,
@@ -2286,7 +2286,7 @@
         ],
         "esta_semana": 5,
         "semana_pasada": 33,
-        "dias_sin_movimiento": 2,
+        "dias_sin_movimiento": 3,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
         "pendientes_de_repos": 0,
@@ -2305,7 +2305,7 @@
         ],
         "esta_semana": 0,
         "semana_pasada": 65,
-        "dias_sin_movimiento": 7,
+        "dias_sin_movimiento": 8,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
         "pendientes_de_repos": 3,
@@ -2343,31 +2343,31 @@
         "nombre": "Renovación de la conexión Claude–box",
         "fecha": "2026-12-07",
         "nota": "Intento automático mensual; si Google pide verificación, Emi la aprueba en el iPhone.",
-        "dias": 18
+        "dias": 17
       },
       {
         "nombre": "Token de GitHub «MATRIZ lectura»",
         "fecha": "2027-02-09",
         "nota": "Regenerarlo y guardarlo en el secreto MATRIZ_TOKEN.",
-        "dias": 82
+        "dias": 81
       },
       {
         "nombre": "Token de GitHub «MATRIZ escritura» (edición desde el panel)",
         "fecha": "2027-11-12",
         "nota": "Solo lianfixx/MATRIZ, Contents lectura y escritura. Regenerarlo y guardarlo en el secreto MATRIZ_ESCRITURA; si vence, el panel se ve pero no edita.",
-        "dias": 358
+        "dias": 357
       },
       {
         "nombre": "Llave de GitHub «Matriz administración (Claude)»",
         "fecha": "2027-11-12",
         "nota": "En la computadora virtual (~/.config/matriz/github-admin). Secretos, variables y workflows de los repositorios de Emi; no lee código. Regenerarla en GitHub con los mismos permisos.",
-        "dias": 358
+        "dias": 357
       },
       {
         "nombre": "Llave de Cloudflare «Matriz administración (Claude)»",
         "fecha": "2027-11-12",
         "nota": "En la computadora virtual (~/.config/matriz/cloudflare-admin). Solo «Tokens de API: Editar». Regenerarla con la plantilla «Crear tokens adicionales».",
-        "dias": 358
+        "dias": 357
       }
     ]
   }
