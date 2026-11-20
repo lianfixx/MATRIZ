@@ -18,7 +18,7 @@ Parte de la [[MATRIZ]].
 - [[VIDEOS-IA-SKILL-MILLA|VIDEOS-IA-SKILL-MILLA]] · público · 18 nov 2026 · 4 skill(s)
 - [[X|X]] · público · 19 nov 2026 · 1 skill(s)
 - [[HISTORIAS|HISTORIAS-]] · público · 16 nov 2026 · 1 skill(s)
-- [[REDES|REDES]] · público · 19 nov 2026 · 1 skill(s)
+- [[REDES|REDES]] · público · 20 nov 2026 · 1 skill(s)
 - [[Instagram|Instagram]] · público · 13 nov 2026 · 1 skill(s)
 - [[TikTok|TikTok]] · público · 19 nov 2026 · 1 skill(s)
 - [[LinkedIn|LinkedIn]] · público · 20 nov 2026 · 1 skill(s)
