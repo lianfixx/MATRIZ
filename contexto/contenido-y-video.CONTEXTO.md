@@ -86,14 +86,14 @@ Pendiente: capturas de TikTok Studio a los 7 días (26/11/2026); marcar la pieza
 
 ### LinkedIn (público)
 
-https://github.com/lianfixx/LinkedIn · último cambio: 18 nov 2026
+https://github.com/lianfixx/LinkedIn · último cambio: 20 nov 2026
 
 Skill para planear, redactar, revisar, entregar para publicar y medir lo que Emi publica en su perfil personal de LinkedIn (linkedin.com/in/emiliano-milla). Sirve en cualquier IA.
 
 Skills: `linkedin-pro`
 
-Último registro: 18 nov 2026 · Post de The Economist aprobado para el jueves 19 · Agente: Claude Code (sesión en la nube)
-Pendiente: el enlace cuando salga el 19 a las 8:30.
+Último registro: 19 nov 2026 · Posts del mapa y de The Economist salieron; métricas del video · Agente: Claude Code (sesión en la nube)
+Pendiente: enlaces de los dos posts; anotarlos con el texto tal como salió.
 
 ## Tareas programadas
 

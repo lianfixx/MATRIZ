@@ -1175,7 +1175,7 @@
           "url": "https://github.com/lianfixx/LinkedIn",
           "visibilidad": "público",
           "leido": true,
-          "ultimo_cambio": "2026-11-18",
+          "ultimo_cambio": "2026-11-20",
           "resumen": "Skill para planear, redactar, revisar, entregar para publicar y medir lo que Emi publica en su perfil personal de LinkedIn (linkedin.com/in/emiliano-milla). Sirve en cualquier IA.",
           "skills": [
             {
@@ -1185,6 +1185,12 @@
           ],
           "protocolo": "1.1.0",
           "registro": [
+            {
+              "fecha": "2026-11-19",
+              "titulo": "Posts del mapa y de The Economist salieron; métricas del video",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "enlaces de los dos posts; anotarlos con el texto tal como salió."
+            },
             {
               "fecha": "2026-11-18",
               "titulo": "Post de The Economist aprobado para el jueves 19",
@@ -1226,12 +1232,6 @@
               "titulo": "Límite del título de documento (58 caracteres)",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "que Emi apruebe el título corto antes de programar la pieza."
-            },
-            {
-              "fecha": "2026-11-13",
-              "titulo": "Estilo de láminas y tono aprobados por Emi",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "texto del post de las láminas, aprobación de Emi y fecha (semana 47)."
             }
           ],
           "actividad": {
@@ -1253,10 +1253,10 @@
               0,
               0,
               21,
-              4
+              5
             ],
             "actores_60d": {
-              "Claude": 24,
+              "Claude": 25,
               "Emi": 1
             }
           }
@@ -2225,11 +2225,11 @@
           0,
           9,
           128,
-          60
+          61
         ],
-        "esta_semana": 60,
+        "esta_semana": 61,
         "semana_pasada": 128,
-        "dias_sin_movimiento": 0,
+        "dias_sin_movimiento": -1,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
         "pendientes_de_repos": 6,
@@ -2330,11 +2330,11 @@
       154,
       196,
       255,
-      81
+      82
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 355,
+      "Claude": 356,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 22
     },

@@ -1,7 +1,7 @@
 ---
 tipo: "cerebro"
 repos: 7
-ultimo_cambio: 2026-11-19
+ultimo_cambio: 2026-11-20
 tags:
   - "cerebro"
 generado: "tools/generar.py · no editar a mano: se reescribe cada día"
@@ -21,7 +21,7 @@ Parte de la [[MATRIZ]].
 - [[REDES|REDES]] · público · 19 nov 2026 · 1 skill(s)
 - [[Instagram|Instagram]] · público · 13 nov 2026 · 1 skill(s)
 - [[TikTok|TikTok]] · público · 19 nov 2026 · 1 skill(s)
-- [[LinkedIn|LinkedIn]] · público · 18 nov 2026 · 1 skill(s)
+- [[LinkedIn|LinkedIn]] · público · 20 nov 2026 · 1 skill(s)
 
 ## Tareas programadas
 
