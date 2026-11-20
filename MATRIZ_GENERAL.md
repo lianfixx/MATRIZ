@@ -53,7 +53,7 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 
 | Cerebro | Repos | Commits esta semana | Semana pasada | Días sin movimiento | Pendientes | Vencidos |
 |---|---|---|---|---|---|---|
-| Castorena | 4 | 15 | 29 | 0 | 0 | 0 |
+| Castorena | 4 | 16 | 29 | 0 | 0 | 0 |
 | MILLA ABOGADOS | 5 | 0 | 0 | 16 | 0 | 0 |
 | Acción Tlalnepantla | 1 | 0 | 0 | 16 | 0 | 0 |
 | Contenido y video | 7 | 61 | 128 | 0 | 0 | 0 |
@@ -62,7 +62,7 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 | Herramientas | 5 | 5 | 33 | 3 | 0 | 0 |
 | Sitios web | 3 | 0 | 65 | 8 | 0 | 0 |
 
-Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 356, ChatGPT · Codex 39, GitHub Actions 22.
+Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 357, ChatGPT · Codex 39, GitHub Actions 22.
 
 Vencimientos: Renovación de la conexión Claude–box el 7 dic 2026; Token de GitHub «MATRIZ lectura» el 9 feb 2027; Token de GitHub «MATRIZ escritura» (edición desde el panel) el 12 nov 2027; Llave de GitHub «Matriz administración (Claude)» el 12 nov 2027; Llave de Cloudflare «Matriz administración (Claude)» el 12 nov 2027.
 
@@ -76,7 +76,7 @@ Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP,
   - Matriz documental de Emi para Castorena Abogados. Aquí están las cinco tablas de referencia, las versiones recuperadas, las reglas de trabajo y los pendientes.
   - Último: 19 nov 2026 · Cierre diario programado: sin cambios · Claude Code (ejecución programada)
   - Pendiente: subir INDEP v24 y Concentrado 19013131d8dd a Drive, Escritorio e iCloud.
-- **INDEP** (privado) · https://github.com/lianfixx/INDEP · último cambio 19 nov 2026
+- **INDEP** (privado) · https://github.com/lianfixx/INDEP · último cambio 20 nov 2026
 - **Escritos-juridicos-CASTORENA** (público) · https://github.com/lianfixx/Escritos-juridicos-CASTORENA · último cambio 4 nov 2026 · skills: escritos-juridicos-castorena
   - Último: 4 nov 2026 · corrección: puentes de skill con YAML válido · Claude Code (sesión en la nube)
 - **dof-juridico-monitor** (público) · https://github.com/lianfixx/dof-juridico-monitor · último cambio 9 nov 2026 · skills: dof-castorena
