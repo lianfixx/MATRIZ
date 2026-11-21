@@ -16,7 +16,7 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 
 | Cerebro | Repos | Esta semana | Sin movimiento | Pendientes | Qué es |
 |---|---|---|---|---|---|
-| [[Castorena]] | 4 | 17 commits | 0 días | 0 | Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP, escritos y monitor del DOF. |
+| [[Castorena]] | 4 | 18 commits | -1 días | 0 | Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP, escritos y monitor del DOF. |
 | [[MILLA ABOGADOS]] | 5 | 0 commits | 16 días | 0 | El despacho de Emi: sitio, asesorías, monitoreo de expedientes, captación e Impulso Libre. |
 | [[Acción Tlalnepantla]] | 1 | 0 commits | 16 días | 0 | Acción Política Juvenil Tlalnepantla (PAN): sitio, formatos, eventos y materiales. |
 | [[Contenido y video]] | 7 | 62 commits | 0 días | 0 | Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio, X, Instagram, TikTok, LinkedIn, la matriz de redes (REDES) e historias de Instagram. |
@@ -27,6 +27,7 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 
 ## Lo último que se hizo
 
+- 20 nov 2026 · **Cerebro-Castorena-** · Cierre diario programado: sin cambios · Agente: Claude Code (ejecución programada)
 - 19 nov 2026 · **Cerebro-Castorena-** · Cierre diario programado: sin cambios · Agente: Claude Code (ejecución programada)
 - 19 nov 2026 · **X** · Hilo de la guía en el post del mapa · Agente: Claude Code (sesión en la nube)
 - 19 nov 2026 · **X** · Texto largo publicado y semana aprobada · Agente: Claude Code (sesión en la nube)
@@ -36,7 +37,6 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 - 19 nov 2026 · **TikTok** · Publicado en TikTok el video del SAT · Agente: Claude Code (sesión en la nube)
 - 19 nov 2026 · **TikTok** · Video de 2020 retirado y medición desde el próximo video · Agente: Claude Code (sesión en la nube)
 - 19 nov 2026 · **TikTok** · Perfil de TikTok al día · Agente: Claude Code (sesión en la nube)
-- 19 nov 2026 · **LinkedIn** · Posts del mapa y de The Economist salieron; métricas del video · Agente: Claude Code (sesión en la nube)
 
 ## Vencimientos
 
