@@ -53,7 +53,7 @@ Skills: `historias-studio`
 
 ### REDES (público)
 
-https://github.com/lianfixx/REDES · último cambio: 20 nov 2026
+https://github.com/lianfixx/REDES · último cambio: 21 nov 2026
 
 La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, Instagram) y de video (Vox Studio, Pizarra Studio, Editor Studio, MILLA Video Studio, Historias Studio). Registra las ideas, decide en qué red y formato sale cada una, arma el calendario de todas…
 
