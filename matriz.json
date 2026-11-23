@@ -1084,7 +1084,7 @@
           "url": "https://github.com/lianfixx/TikTok",
           "visibilidad": "público",
           "leido": true,
-          "ultimo_cambio": "2026-11-19",
+          "ultimo_cambio": "2026-11-23",
           "resumen": "Skill de la cuenta personal de Emi en TikTok: decide qué video hacer, para quién y cómo engancha en los primeros segundos; prepara la descripción, los hashtags, la portada y el calendario; entrega el paquete aprobado para que Emi lo publique, y mide.",
           "skills": [
             {
@@ -1094,6 +1094,12 @@
           ],
           "protocolo": "1.1.0",
           "registro": [
+            {
+              "fecha": "2026-11-23",
+              "titulo": "Meme de la Consulta de Datos de Expedientes, listo para aprobar",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "la aprobación de Emi. La pieza del SAT `beeb55f32c9c` solo la puede marcar Emi con «Ya la publiqué»: el panel no deja que Claude marque una pieza que se subió desde la app."
+            },
             {
               "fecha": "2026-11-19",
               "titulo": "Publicado en TikTok el video del SAT",
@@ -1135,12 +1141,6 @@
               "titulo": "Dos piezas de TikTok sobre The Economist 2027 en el panel",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "que Emi apruebe las dos piezas en el panel y las publique el 21 y el 22 a las 19:30; fuente oficial de la Queja [expediente]."
-            },
-            {
-              "fecha": "2026-11-18",
-              "titulo": "Excepciones de cadencia decididas por Emi",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "revisar los MP4 (imágenes, voz «Emilio» y C2PA) cuando lleguen al panel y dejar las dos piezas con su ficha."
             }
           ],
           "actividad": {
@@ -1162,10 +1162,10 @@
               0,
               1,
               17,
-              0
+              1
             ],
             "actores_60d": {
-              "Claude": 17,
+              "Claude": 18,
               "Emi": 1
             }
           }
@@ -2231,9 +2231,9 @@
           9,
           128,
           64,
-          1
+          2
         ],
-        "esta_semana": 1,
+        "esta_semana": 2,
         "semana_pasada": 64,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2336,11 +2336,11 @@
       196,
       255,
       90,
-      16
+      17
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 377,
+      "Claude": 378,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 25
     },
