@@ -52,8 +52,8 @@ Sistema autónomo, auditable y agnóstico de proveedor para revisar el Diario Of
 
 Skills: `dof-castorena`
 
-Último registro: 23 nov 2026 · Skill 1.3.1 · lector por API, versión 2 (lo que enseñó la primera corrida real) · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
-Pendiente: corrida real de la versión 2; cuatro entregas en sombra; guardar la skill 1.3.1 en Claude.
+Último registro: 23 nov 2026 · lector por API: síntesis por grupos y nota mínima para edictos (tras la corrida real de la versión 2) · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
+Pendiente: corrida real para confirmar la síntesis completa; cuatro entregas en sombra.
 
 ## Tareas programadas
 

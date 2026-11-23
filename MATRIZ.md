@@ -16,7 +16,7 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 
 | Cerebro | Repos | Esta semana | Sin movimiento | Pendientes | Qué es |
 |---|---|---|---|---|---|
-| [[Castorena]] | 4 | 12 commits | 0 días | 0 | Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP, escritos y monitor del DOF. |
+| [[Castorena]] | 4 | 13 commits | 0 días | 0 | Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP, escritos y monitor del DOF. |
 | [[MILLA ABOGADOS]] | 5 | 0 commits | 19 días | 0 | El despacho de Emi: sitio, asesorías, monitoreo de expedientes, captación e Impulso Libre. |
 | [[Acción Tlalnepantla]] | 1 | 0 commits | 19 días | 0 | Acción Política Juvenil Tlalnepantla (PAN): sitio, formatos, eventos y materiales. |
 | [[Contenido y video]] | 7 | 1 commits | 0 días | 0 | Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio, X, Instagram, TikTok, LinkedIn, la matriz de redes (REDES) e historias de Instagram. |
@@ -29,9 +29,9 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 
 - 23 nov 2026 · **Cerebro-Castorena-** · Auditoría de la auditoría: disparo tras el cierre diario, pruebas y simulacro · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
 - 23 nov 2026 · **Cerebro-Castorena-** · Auditoría de fondo de hashes y workflow automático · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
+- 23 nov 2026 · **dof-juridico-monitor** · lector por API: síntesis por grupos y nota mínima para edictos (tras la corrida real de la versión 2) · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
 - 23 nov 2026 · **dof-juridico-monitor** · Skill 1.3.1 · lector por API, versión 2 (lo que enseñó la primera corrida real) · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
 - 23 nov 2026 · **dof-juridico-monitor** · Skill 1.3.0 · lector previo por la API de Claude (en sombra) · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
-- 23 nov 2026 · **dof-juridico-monitor** · sjf_fuentes.mjs: el proxy del box pasa a ser configurable · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
 - 23 nov 2026 · **X** · Meme de la consulta de expedientes · Agente: Claude Code (sesión en la nube)
 - 22 nov 2026 · **Cerebro-Castorena-** · Cierre diario programado: sin cambios · Agente: Claude Code (ejecución programada)
 - 19 nov 2026 · **X** · Hilo de la guía en el post del mapa · Agente: Claude Code (sesión en la nube)

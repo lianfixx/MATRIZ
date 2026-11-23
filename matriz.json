@@ -241,6 +241,12 @@
           "registro": [
             {
               "fecha": "2026-11-23",
+              "titulo": "lector por API: síntesis por grupos y nota mínima para edictos (tras la corrida real de la versión 2)",
+              "agente": "claude.ai (sesión en la nube, claude-fable-5-2)",
+              "pendiente": "corrida real para confirmar la síntesis completa; cuatro entregas en sombra."
+            },
+            {
+              "fecha": "2026-11-23",
               "titulo": "Skill 1.3.1 · lector por API, versión 2 (lo que enseñó la primera corrida real)",
               "agente": "claude.ai (sesión en la nube, claude-fable-5-2)",
               "pendiente": "corrida real de la versión 2; cuatro entregas en sombra; guardar la skill 1.3.1 en Claude."
@@ -280,12 +286,6 @@
               "titulo": "ediciones no entregadas ([expediente] al paquete del martes 10/11)",
               "agente": "Claude Code (sesión en la nube, claude-opus-5-5), a petición de Muse con instrucción de Emi (11:06): no consta la entrega del cierre del jueves 5/11 (ni en el box ni en Gmail); darlo por no entregado e incluir la matutina [expediente] en el paquete del martes 10/11; no enviar nada.",
               "pendiente": "resuelto en la entrada siguiente (301 y 302 incluidas)."
-            },
-            {
-              "fecha": "2026-11-09",
-              "titulo": "Skill 1.2.1 · auditoría del sistema automático (box, tareas, vigía)",
-              "agente": "Claude Code (sesión en la nube, modelo claude-opus-5-5), a petición de Muse (asistente de Emi) con instrucción de Emi: «audita, mejora y deja todo perfecto»; condición: no actualizar la imagen del box a v14 antes del SJF del viernes.",
-              "pendiente": "(1) subir el ZIP 1.2.1 a claude.ai (`sh scripts/empaquetar_skill.sh`) para que la skill instalada coincida; las tareas programadas ya leen el repositorio; (2) actualizar la imagen del box a v14 después del SJF del viernes 13/11 y correr `bash bin/arranque.sh`; (3) confirmar con Emi si el cierre del jueves 05/11 se entregó: no está en el box ni en Gmail; el martes 10/11 toma su matutina ([expediente]) como ya reportada; (4) primera semana en modo vigilado."
             }
           ],
           "actividad": {
@@ -307,10 +307,10 @@
               10,
               3,
               0,
-              5
+              6
             ],
             "actores_60d": {
-              "Claude": 17,
+              "Claude": 18,
               "ChatGPT · Codex": 1,
               "Emi": 82
             }
@@ -2174,9 +2174,9 @@
           113,
           29,
           19,
-          12
+          13
         ],
-        "esta_semana": 12,
+        "esta_semana": 13,
         "semana_pasada": 19,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2336,11 +2336,11 @@
       196,
       255,
       90,
-      14
+      15
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 375,
+      "Claude": 376,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 25
     },
