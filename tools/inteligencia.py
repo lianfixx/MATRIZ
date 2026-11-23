@@ -95,12 +95,14 @@ def llamar(modelo: str, sistema: str, usuario: str, herramienta: dict, max_token
         with urllib.request.urlopen(pedido, timeout=120) as r:
             doc = json.loads(r.read().decode())
     except urllib.error.HTTPError as e:
-        tipo = ""
+        tipo = mensaje = ""
         try:
-            tipo = json.loads(e.read().decode()).get("error", {}).get("type", "")
+            error = json.loads(e.read().decode()).get("error", {})
+            tipo, mensaje = error.get("type", ""), str(error.get("message", ""))[:240]
         except Exception:
             pass
-        raise ErrorAPI(f"HTTP {e.code} {tipo}".strip())
+        # El mensaje de error lo escribe la API (no el modelo) y no contiene datos de la Matriz.
+        raise ErrorAPI(f"HTTP {e.code} {tipo} {mensaje}".strip())
     except (urllib.error.URLError, TimeoutError, ValueError) as e:
         raise ErrorAPI(type(e).__name__)
     if doc.get("stop_reason") == "max_tokens":
