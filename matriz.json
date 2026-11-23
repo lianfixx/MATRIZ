@@ -241,6 +241,12 @@
           "registro": [
             {
               "fecha": "2026-11-23",
+              "titulo": "Skill 1.3.1 · lector por API, versión 2 (lo que enseñó la primera corrida real)",
+              "agente": "claude.ai (sesión en la nube, claude-fable-5-2)",
+              "pendiente": "corrida real de la versión 2; cuatro entregas en sombra; guardar la skill 1.3.1 en Claude."
+            },
+            {
+              "fecha": "2026-11-23",
               "titulo": "Skill 1.3.0 · lector previo por la API de Claude (en sombra)",
               "agente": "claude.ai (sesión en la nube, claude-fable-5-2)",
               "pendiente": "cuatro entregas en sombra y decisión de Emi sobre el relevo; guardar la skill 1.3.0 en Claude."
@@ -280,12 +286,6 @@
               "titulo": "Skill 1.2.1 · auditoría del sistema automático (box, tareas, vigía)",
               "agente": "Claude Code (sesión en la nube, modelo claude-opus-5-5), a petición de Muse (asistente de Emi) con instrucción de Emi: «audita, mejora y deja todo perfecto»; condición: no actualizar la imagen del box a v14 antes del SJF del viernes.",
               "pendiente": "(1) subir el ZIP 1.2.1 a claude.ai (`sh scripts/empaquetar_skill.sh`) para que la skill instalada coincida; las tareas programadas ya leen el repositorio; (2) actualizar la imagen del box a v14 después del SJF del viernes 13/11 y correr `bash bin/arranque.sh`; (3) confirmar con Emi si el cierre del jueves 05/11 se entregó: no está en el box ni en Gmail; el martes 10/11 toma su matutina ([expediente]) como ya reportada; (4) primera semana en modo vigilado."
-            },
-            {
-              "fecha": "2026-11-09",
-              "titulo": "instalación de la skill 1.2.0 en claude.ai",
-              "agente": "Muse (asistente de Emi). Registro preparado por Claude (chat) como «registro pendiente para el repositorio» y aplicado en este commit.",
-              "pendiente": "actualizar la imagen del box a v14 después del SJF del viernes."
             }
           ],
           "actividad": {
@@ -307,10 +307,10 @@
               10,
               3,
               0,
-              4
+              5
             ],
             "actores_60d": {
-              "Claude": 16,
+              "Claude": 17,
               "ChatGPT · Codex": 1,
               "Emi": 82
             }
@@ -2174,9 +2174,9 @@
           113,
           29,
           19,
-          11
+          12
         ],
-        "esta_semana": 11,
+        "esta_semana": 12,
         "semana_pasada": 19,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2336,11 +2336,11 @@
       196,
       255,
       90,
-      13
+      14
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 374,
+      "Claude": 375,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 25
     },

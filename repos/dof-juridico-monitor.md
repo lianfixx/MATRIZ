@@ -4,9 +4,9 @@ cerebro: "Castorena"
 visibilidad: "público"
 ultimo_cambio: 2026-11-23
 skills: 1
-commits_8_semanas: 70
+commits_8_semanas: 71
 ultimo_agente: "claude.ai (sesión en la nube, claude-fable-5-2)"
-pendiente: "cuatro entregas en sombra y decisión de Emi sobre el relevo; guardar la skill 1.3.0 en Claude."
+pendiente: "corrida real de la versión 2; cuatro entregas en sombra; guardar la skill 1.3.1 en Claude."
 github: "https://github.com/lianfixx/dof-juridico-monitor"
 tags:
   - "repo"
@@ -28,12 +28,12 @@ Sistema autónomo, auditable y agnóstico de proveedor para revisar el Diario Of
 
 ## Últimos registros
 
+- 23 nov 2026 · Skill 1.3.1 · lector por API, versión 2 (lo que enseñó la primera corrida real) · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
 - 23 nov 2026 · Skill 1.3.0 · lector previo por la API de Claude (en sombra) · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
 - 23 nov 2026 · sjf_fuentes.mjs: el proxy del box pasa a ser configurable · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
 - 23 nov 2026 · prueba de fuentes desde GitHub: el DOF coincide byte por byte; se agrega el Semanario · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
 - 23 nov 2026 · prueba de fuentes desde un servidor de GitHub · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
-- 9 nov 2026 · [expediente] y [expediente] también al paquete del martes 10/11 · Agente: Claude Code (sesión en la nube, claude-opus-5-5), a petición de Muse con instrucción de Emi (11:16): tampoco consta la entrega de la matutina [expediente] y la vespertina [expediente] del miércoles 4/11; darlas por no entregadas e incluirlas con la [expediente]; una sola nota en el correo al Licenciado para las tres; no enviar nada.
 
 ## Pendiente más reciente
 
-cuatro entregas en sombra y decisión de Emi sobre el relevo; guardar la skill 1.3.0 en Claude.
+corrida real de la versión 2; cuatro entregas en sombra; guardar la skill 1.3.1 en Claude.
