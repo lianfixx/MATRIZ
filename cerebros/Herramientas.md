@@ -1,7 +1,7 @@
 ---
 tipo: "cerebro"
 repos: 5
-ultimo_cambio: 2026-11-22
+ultimo_cambio: 2026-11-23
 tags:
   - "cerebro"
 generado: "tools/generar.py · no editar a mano: se reescribe cada día"
@@ -17,7 +17,7 @@ Parte de la [[MATRIZ]].
 
 - [[estilo-emi|estilo-emi]] · privado · 12 nov 2026
 - [[selector-modelos|selector-modelos]] · privado · 22 nov 2026
-- [[cloudfare|cloudfare]] · público · 17 nov 2026
+- [[cloudfare|cloudfare]] · público · 23 nov 2026
 - [[box-simular|box-simular]] · privado · 11 nov 2026
 - [[rea-ingenieria-inversa|rea-ingenieria-inversa]] · privado · 11 nov 2026
 

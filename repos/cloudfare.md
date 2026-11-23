@@ -2,9 +2,9 @@
 tipo: "repo"
 cerebro: "Herramientas"
 visibilidad: "público"
-ultimo_cambio: 2026-11-17
+ultimo_cambio: 2026-11-23
 skills: 0
-commits_8_semanas: 22
+commits_8_semanas: 23
 github: "https://github.com/lianfixx/cloudfare"
 tags:
   - "repo"
@@ -14,7 +14,7 @@ generado: "tools/generar.py · no editar a mano: se reescribe cada día"
 
 # cloudfare
 
-Cerebro: [[Herramientas]] · público · último cambio: 17 nov 2026
+Cerebro: [[Herramientas]] · público · último cambio: 23 nov 2026
 
 [Abrir en GitHub](https://github.com/lianfixx/cloudfare)
 
