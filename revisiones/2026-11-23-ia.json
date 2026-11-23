@@ -7,39 +7,34 @@
    "tarea": "retroalimentacion",
    "modelo": "claude-sonnet-5-5",
    "entrada": 4938,
-   "salida": 3143,
-   "costo_usd": 0.041306
+   "salida": 3043,
+   "costo_usd": 0.040306
   }
  ],
- "costo_usd": 0.041306,
- "descartados_por_verificacion": 0,
+ "costo_usd": 0.040306,
+ "descartados_por_verificacion": 2,
  "sha256_entrada": "e684cc65ea40d8c371fafc713b80dff5b87c7ea1ed45d529768bbdc73abc96fa",
- "sha256_salida": "b8ed6efcc13e11d8145aa2ff7d82affae164a736a9aef8ffbd921495db068071",
- "run_id": "45247765523",
- "commit_base": "9f9a5a5457557dba6b8a44f63203ea480ff40586",
+ "sha256_salida": "0e8242e3e5c928dd0a93368126377a1ea20f2d81a2f8ff4f94ac0a3748137c86",
+ "run_id": "45248631738",
+ "commit_base": "636d1fc4207ed493d844e6c8f4dc4f8c1baf94d2",
  "pulso": [
-  "La actividad se concentró del 17 al 19 de noviembre en redes: TikTok, X, LinkedIn y REDES, con posts publicados y piezas aprobadas.",
-  "Del 20 al 22 solo hubo cierres diarios de Cerebro-Castorena- sin cambios; el 23 hubo dos auditorías (hashes y workflow automático).",
-  "Cerebro-Castorena- bajó de 19 commits a 7 y contenido-y-video pasó de 64 a 0, con 1 día sin movimiento.",
-  "Herramientas tuvo 1 commit (6 la semana pasada); no hay tareas falladas en la tabla.",
-  "Sin movimiento: milla-abogados, accion-tlalnepantla y productos (19 días), sitios-web (11) y estudio (6)."
+  "El trabajo se concentró del 17 al 19 de noviembre en redes: TikTok, X, LinkedIn y REDES. Del 20 al 22 solo hubo cierres diarios sin cambios.",
+  "TikTok arrancó: tiktok-studio 1.0.0 (17), cuenta activa (18) y video del SAT publicado (19). En X se publicó el lanzamiento por la API.",
+  "Castorena bajó de 19 a 7 commits. El 17 hubo auditoría y conciliación del concentrado; el 23, auditoría de hashes y de workflow automático.",
+  "contenido-y-video pasó de 64 commits a 0 y estudio quedó en 0; herramientas hizo 1. Ninguna tarea falló."
  ],
  "repetido": [
   {
-   "texto": "El cierre diario programado corrió todos los días; del 18 al 22 terminó «sin cambios» cinco veces seguidas.",
+   "texto": "Auditorías en varios frentes: TikTok (independiente), concentrado por sede, auditoría de hashes y «auditoría de la auditoría».",
    "repos": [
-    "Cerebro-Castorena-"
+    "TikTok"
    ],
    "dias": [
-    "2026-11-18",
-    "2026-11-19",
-    "2026-11-20",
-    "2026-11-21",
-    "2026-11-22"
+    "2026-11-17"
    ]
   },
   {
-   "texto": "El tema The Economist 2027 se trabajó por separado en REDES, X, TikTok y LinkedIn: ideas, textos, videos y posts.",
+   "texto": "La portada de The Economist se trabajó en varios repos a la vez: post en LinkedIn, textos en X, piezas de TikTok y videos programados en REDES.",
    "repos": [
     "LinkedIn",
     "REDES",
@@ -50,32 +45,13 @@
     "2026-11-18",
     "2026-11-19"
    ]
-  },
-  {
-   "texto": "Se hicieron auditorías en distintos repositorios: por sede, independiente en TikTok y dos de fondo el 23.",
-   "repos": [
-    "Cerebro-Castorena-",
-    "TikTok"
-   ],
-   "dias": [
-    "2026-11-17",
-    "2026-11-23"
-   ]
   }
  ],
  "fallos": [
   {
-   "texto": "La auditoría independiente de TikTok llevó a correcciones (versión 1.2.0).",
+   "texto": "La fecha del post de The Economist en LinkedIn cambió tres veces el 18: jueves 19, lunes 23 y de nuevo jueves 19 por decisión de Emi.",
    "repos": [
-    "TikTok"
-   ],
-   "dias": [
-    "2026-11-17"
-   ]
-  },
-  {
-   "texto": "La fecha del post de The Economist en LinkedIn cambió: pasó al lunes 23 y volvió al jueves 19 por decisión de Emi.",
-   "repos": [
+    "LinkedIn",
     "REDES"
    ],
    "dias": [
@@ -83,7 +59,7 @@
    ]
   },
   {
-   "texto": "Emi rechazó las primeras opciones de The Economist en X y hubo que hacer una segunda ronda.",
+   "texto": "Emi rechazó las primeras opciones de X sobre The Economist y hubo segunda ronda.",
    "repos": [
     "X"
    ],
@@ -92,27 +68,19 @@
    ]
   },
   {
-   "texto": "Hubo que retirar un video de 2020 de TikTok.",
+   "texto": "TikTok necesitó una auditoría independiente con correcciones (1.2.0), y después se retiró un video de 2020.",
    "repos": [
     "TikTok"
    ],
    "dias": [
+    "2026-11-17",
     "2026-11-19"
    ]
   }
  ],
  "hecho_a_mano": [
   {
-   "texto": "Emi publicó él el post del mapa en LinkedIn tras aprobarlo.",
-   "repos": [
-    "LinkedIn"
-   ],
-   "dias": [
-    "2026-11-17"
-   ]
-  },
-  {
-   "texto": "La subida a TikTok e Instagram quedó manual: se creó una ficha para subir a mano y un modo manual en el panel.",
+   "texto": "TikTok e Instagram se suben a mano: hubo ficha para subir a mano, modo manual y ficha manual en el panel. Se evaluó qué parte de la subida a TikTok se puede automatizar.",
    "repos": [
     "REDES",
     "TikTok"
@@ -123,57 +91,32 @@
    ]
   },
   {
-   "texto": "Emi dio a mano indicaciones del concentrado (ID 2 a 20) y decidió las excepciones de cadencia de TikTok.",
+   "texto": "El post del mapa en LinkedIn lo publica Emi él mismo tras la aprobación.",
    "repos": [
-    "Cerebro-Castorena-",
-    "TikTok"
+    "LinkedIn"
    ],
    "dias": [
-    "2026-11-17",
-    "2026-11-18"
+    "2026-11-17"
    ]
   }
  ],
  "propuestas": [
   {
-   "texto": "Seguir con la automatización de la subida a TikTok y definir qué parte puede dejar de ser manual.",
+   "texto": "Fijar una sola fecha por pieza en el calendario antes de moverla, para evitar vaivenes como el de The Economist en LinkedIn.",
+   "repos": [
+    "REDES"
+   ],
+   "dias": [
+    "2026-11-18"
+   ]
+  },
+  {
+   "texto": "Documentar qué parte de la subida a TikTok sí se automatiza y dejar el resto en la ficha manual, para reducir el trabajo a mano.",
    "repos": [
     "TikTok"
    ],
    "dias": [
     "2026-11-17",
-    "2026-11-18"
-   ]
-  },
-  {
-   "texto": "Revisar si el post de LinkedIn ya aprobado puede salir sin que Emi lo publique a mano.",
-   "repos": [
-    "LinkedIn"
-   ],
-   "dias": [
-    "2026-11-17",
-    "2026-11-19"
-   ]
-  },
-  {
-   "texto": "Que el cierre diario avise solo cuando haya cambios, o resuma los días sin cambios en una sola línea.",
-   "repos": [
-    "Cerebro-Castorena-"
-   ],
-   "dias": [
-    "2026-11-18",
-    "2026-11-19",
-    "2026-11-20",
-    "2026-11-21",
-    "2026-11-22"
-   ]
-  },
-  {
-   "texto": "Tener un solo calendario de publicaciones para que un cambio de fecha no se registre dos veces.",
-   "repos": [
-    "REDES"
-   ],
-   "dias": [
     "2026-11-18"
    ]
   }
