@@ -2155,7 +2155,13 @@
       }
     ]
   },
-  "por_clasificar": [],
+  "por_clasificar": [
+    {
+      "nombre": "1 repositorio privado (nombre reservado)",
+      "visibilidad": "privado",
+      "creado": ""
+    }
+  ],
   "proyectos": [],
   "metricas": {
     "cerebros": {

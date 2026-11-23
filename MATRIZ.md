@@ -38,6 +38,12 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 - 19 nov 2026 · **REDES** · X: responder a un post ya publicado · Agente: Claude Code (sesión en la nube)
 - 19 nov 2026 · **REDES** · Hilo de X: respuestas propias bajo la misma aprobación · Agente: Claude Code (sesión en la nube)
 
+## Repositorios nuevos por clasificar
+
+- `1 repositorio privado (nombre reservado)` · privado
+
+La revisión semanal los asigna a su cerebro; si alguno es dudoso, le pregunta a Emi.
+
 ## Vencimientos
 
 - Renovación de la conexión Claude–box · 7 dic 2026 (en 14 días)

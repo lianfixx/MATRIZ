@@ -66,6 +66,8 @@ Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 372, ChatGPT
 
 Vencimientos: Renovación de la conexión Claude–box el 7 dic 2026; Token de GitHub «MATRIZ lectura» el 9 feb 2027; Token de GitHub «MATRIZ escritura» (edición desde el panel) el 12 nov 2027; Llave de GitHub «Matriz administración (Claude)» el 12 nov 2027; Llave de Cloudflare «Matriz administración (Claude)» el 12 nov 2027.
 
+Avisos: repositorio nuevo sin cerebro: 1 repositorio privado (nombre reservado).
+
 ## Cerebro: Castorena
 
 Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP, escritos y monitor del DOF.
