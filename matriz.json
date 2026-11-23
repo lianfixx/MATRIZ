@@ -229,7 +229,7 @@
           "url": "https://github.com/lianfixx/dof-juridico-monitor",
           "visibilidad": "público",
           "leido": true,
-          "ultimo_cambio": "2026-11-09",
+          "ultimo_cambio": "2026-11-23",
           "resumen": "Sistema autónomo, auditable y agnóstico de proveedor para revisar el Diario Oficial de la Federación (DOF), verificar cobertura, detectar novedades jurídicas relevantes y producir entregables ejecutivos y de estudio.",
           "skills": [
             {
@@ -239,6 +239,12 @@
           ],
           "protocolo": "1.1.0",
           "registro": [
+            {
+              "fecha": "2026-11-23",
+              "titulo": "prueba de fuentes desde un servidor de GitHub",
+              "agente": "claude.ai (sesión en la nube, claude-fable-5-2)",
+              "pendiente": "según el resultado, decidir si las fuentes del lector por API salen de GitHub."
+            },
             {
               "fecha": "2026-11-09",
               "titulo": "[expediente] y [expediente] también al paquete del martes 10/11",
@@ -280,12 +286,6 @@
               "titulo": "corrección: puentes de skill con YAML válido",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": ""
-            },
-            {
-              "fecha": "2026-11-04",
-              "titulo": "corrección: flag de push mal formado",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": ""
             }
           ],
           "actividad": {
@@ -307,10 +307,10 @@
               10,
               3,
               0,
-              0
+              1
             ],
             "actores_60d": {
-              "Claude": 12,
+              "Claude": 13,
               "ChatGPT · Codex": 1,
               "Emi": 82
             }
@@ -2168,9 +2168,9 @@
           113,
           29,
           19,
-          7
+          8
         ],
-        "esta_semana": 7,
+        "esta_semana": 8,
         "semana_pasada": 19,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2330,11 +2330,11 @@
       196,
       255,
       90,
-      8
+      9
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 369,
+      "Claude": 370,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 25
     },
