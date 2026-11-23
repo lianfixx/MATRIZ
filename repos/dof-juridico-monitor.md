@@ -4,7 +4,7 @@ cerebro: "Castorena"
 visibilidad: "público"
 ultimo_cambio: 2026-11-09
 skills: 1
-commits_8_semanas: 95
+commits_8_semanas: 66
 ultimo_agente: "Claude Code (sesión en la nube, claude-opus-5-5), a petición de Muse con instrucción de Emi (11:16): tampoco consta la entrega de la matutina [expediente] y la vespertina [expediente] del miércoles 4/11; darlas por no entregadas e incluirlas con la [expediente]; una sola nota en el correo al Licenciado para las tres; no enviar nada."
 pendiente: "ninguno para este punto."
 github: "https://github.com/lianfixx/dof-juridico-monitor"

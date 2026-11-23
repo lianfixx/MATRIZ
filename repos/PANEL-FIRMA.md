@@ -3,7 +3,7 @@ tipo: "repo"
 cerebro: "Productos"
 visibilidad: "privado"
 ultimo_cambio: 2026-11-04
-commits_8_semanas: 10
+commits_8_semanas: 8
 github: "https://github.com/lianfixx/PANEL-FIRMA-"
 tags:
   - "repo"

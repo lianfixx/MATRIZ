@@ -4,7 +4,7 @@ cerebro: "Castorena"
 visibilidad: "público"
 ultimo_cambio: 2026-11-23
 skills: 1
-commits_8_semanas: 39
+commits_8_semanas: 40
 ultimo_agente: "Claude Code (ejecución programada)"
 pendiente: "subir INDEP v24 y Concentrado 19013131d8dd a Drive, Escritorio e iCloud."
 github: "https://github.com/lianfixx/Cerebro-Castorena-"

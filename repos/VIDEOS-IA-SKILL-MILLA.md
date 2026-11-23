@@ -4,7 +4,7 @@ cerebro: "Contenido y video"
 visibilidad: "público"
 ultimo_cambio: 2026-11-18
 skills: 4
-commits_8_semanas: 46
+commits_8_semanas: 43
 ultimo_agente: "Claude Code (sesión en la nube)"
 pendiente: "avisar a la Matriz de Redes y a `tiktok-studio` con fecha y commit. Para Emi: el puente de TikTok pide «sin voces realistas hechas con IA»; la voz de Vox (ElevenLabs) lo es, y eso lo decide él con la sesión de TikTok."
 github: "https://github.com/lianfixx/VIDEOS-IA-SKILL-MILLA"
