@@ -80,14 +80,17 @@ def tokens_aprox(texto: str) -> int:
 
 
 def llamar(modelo: str, sistema: str, usuario: str, herramienta: dict, max_tokens: int) -> tuple[dict, dict]:
-    """Una llamada a la Messages API que obliga a contestar con la herramienta (JSON con esquema)."""
+    """Una llamada a la Messages API con salida estructurada (output_config.format, JSON con esquema).
+
+    Sonnet 5.5 rechaza forzar una herramienta con tool_choice (HTTP 400, comprobado el 23/11/2026);
+    la salida estructurada es la vía documentada y vale igual en Haiku 5.5."""
     llave = os.environ.get("ANTHROPIC_API_KEY", "").strip()
     if not llave:
         raise ErrorAPI("falta ANTHROPIC_API_KEY")
     cuerpo = json.dumps({
         "model": modelo, "max_tokens": max_tokens, "system": sistema,
         "messages": [{"role": "user", "content": usuario}],
-        "tools": [herramienta], "tool_choice": {"type": "tool", "name": herramienta["name"]},
+        "output_config": {"format": {"type": "json_schema", "schema": herramienta["input_schema"]}},
     }).encode()
     pedido = urllib.request.Request(API, data=cuerpo, method="POST", headers={
         "x-api-key": llave, "anthropic-version": "2023-06-01", "content-type": "application/json"})
@@ -107,13 +110,19 @@ def llamar(modelo: str, sistema: str, usuario: str, herramienta: dict, max_token
         raise ErrorAPI(type(e).__name__)
     if doc.get("stop_reason") == "max_tokens":
         raise ErrorAPI("respuesta cortada por max_tokens")
-    for bloque in doc.get("content", []):
-        if bloque.get("type") == "tool_use" and bloque.get("name") == herramienta["name"]:
-            uso = doc.get("usage", {})
-            entrada, salida = int(uso.get("input_tokens", 0)), int(uso.get("output_tokens", 0))
-            return bloque.get("input") or {}, {"modelo": doc.get("model", modelo), "entrada": entrada,
-                                               "salida": salida, "costo_usd": costo(modelo, entrada, salida)}
-    raise ErrorAPI("la respuesta no trae la herramienta pedida")
+    if doc.get("stop_reason") == "refusal":
+        raise ErrorAPI("el modelo declinó responder")
+    textos = [b.get("text", "") for b in doc.get("content", []) if b.get("type") == "text"]
+    try:
+        datos = json.loads(textos[-1])  # el último bloque de texto es la respuesta; antes puede haber razonamiento
+    except (IndexError, ValueError):
+        raise ErrorAPI("la respuesta no trae JSON válido")
+    if not isinstance(datos, dict):
+        raise ErrorAPI("la respuesta no es un objeto JSON")
+    uso = doc.get("usage", {})
+    entrada, salida = int(uso.get("input_tokens", 0)), int(uso.get("output_tokens", 0))
+    return datos, {"modelo": doc.get("model", modelo), "entrada": entrada, "salida": salida,
+                   "costo_usd": costo(modelo, entrada, salida)}
 
 
 def sha(texto: str) -> str:
@@ -202,11 +211,11 @@ def modo_red(raiz: Path, seco: bool, informe: Path | None) -> int:
         if seco:
             resumen["llamadas"] += 1
             resumen["entrada"] += tokens_aprox(S_RED + usuario)
-            resumen["costo_usd"] += costo(HAIKU, tokens_aprox(S_RED + usuario), 1500)
+            resumen["costo_usd"] += costo(HAIKU, tokens_aprox(S_RED + usuario), 4000)
             resumen["estado"] = "seco"
         else:
             try:
-                datos, uso = llamar(HAIKU, S_RED, usuario, H_RED, 1500)
+                datos, uso = llamar(HAIKU, S_RED, usuario, H_RED, 4000)
             except ErrorAPI as e:
                 resumen["estado"] = f"api_no_disponible: {e}"
                 break
@@ -349,8 +358,8 @@ def modo_semanal(raiz: Path, seco: bool, hoy: dt.date) -> int:
         for n in nuevos]}, ensure_ascii=False)
 
     if seco:
-        est = costo(SONNET, tokens_aprox(S_SEMANAL + usuario), 3000)
-        est_cl = costo(HAIKU, tokens_aprox(S_CLASIFICAR + usuario_cl), 800) if nuevos else 0.0
+        est = costo(SONNET, tokens_aprox(S_SEMANAL + usuario), 8000)
+        est_cl = costo(HAIKU, tokens_aprox(S_CLASIFICAR + usuario_cl), 3000) if nuevos else 0.0
         print(json.dumps({"modo": "semanal", "estado": "seco", "dias_con_actividad": len(por_dia),
                           "lineas": sum(len(v) for v in por_dia.values()), "caracteres": len(usuario),
                           "repos_por_clasificar": len(nuevos), "costo_maximo_usd": round(est + est_cl, 4)}))
@@ -361,7 +370,7 @@ def modo_semanal(raiz: Path, seco: bool, hoy: dt.date) -> int:
 
     usos, estado = [], "ok"
     try:
-        datos, uso = llamar(SONNET, S_SEMANAL, usuario, H_SEMANAL, 3000)
+        datos, uso = llamar(SONNET, S_SEMANAL, usuario, H_SEMANAL, 8000)
         usos.append({"tarea": "retroalimentacion", **uso})
     except ErrorAPI as e:
         print(json.dumps({"modo": "semanal", "estado": f"api_no_disponible: {e}"}))
@@ -375,7 +384,7 @@ def modo_semanal(raiz: Path, seco: bool, hoy: dt.date) -> int:
     clasificacion, preguntar = [], []
     if nuevos:
         try:
-            datos_cl, uso_cl = llamar(HAIKU, S_CLASIFICAR, usuario_cl, H_CLASIFICAR, 800)
+            datos_cl, uso_cl = llamar(HAIKU, S_CLASIFICAR, usuario_cl, H_CLASIFICAR, 3000)
             usos.append({"tarea": "clasificacion", **uso_cl})
             validos, nombres = {c["id"] for c in cerebros}, {n["nombre"] for n in nuevos}
             for p in datos_cl.get("propuestas", []):
