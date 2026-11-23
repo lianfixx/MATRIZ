@@ -24,6 +24,12 @@
           "protocolo": "1.1.0",
           "registro": [
             {
+              "fecha": "2026-11-23",
+              "titulo": "Auditoría de fondo de hashes y workflow automático",
+              "agente": "claude.ai (sesión en la nube, claude-fable-5-2)",
+              "pendiente": "Emi o Muse, guardar la skill 1.6.0 en Claude; subir INDEP v24 y Concentrado 19013131d8dd a Drive, Escritorio e iCloud."
+            },
+            {
               "fecha": "2026-11-22",
               "titulo": "Cierre diario programado: sin cambios",
               "agente": "Claude Code (ejecución programada)",
@@ -64,12 +70,6 @@
               "titulo": "Cierre diario programado: maestro INDEP v24 copiado",
               "agente": "Claude Code (ejecución programada)",
               "pendiente": "subir INDEP v24 a Drive, Escritorio e iCloud (siguen con v21)."
-            },
-            {
-              "fecha": "2026-11-17",
-              "titulo": "Concentrado: auditoría por sede (ID 9, 11, 12 y 33)",
-              "agente": "Claude Code (sesión de claude.ai con Emi, Fable 5.2)",
-              "pendiente": "Escritorio e iCloud (Mac no enlazada); dudas de Emi en el cierre (ID 8, 11, 12, 15, 18, 33 y 34); INDEP v23 en Drive, Escritorio e iCloud."
             }
           ],
           "actividad": {
@@ -91,10 +91,10 @@
               15,
               14,
               10,
-              1
+              2
             ],
             "actores_60d": {
-              "Claude": 33,
+              "Claude": 34,
               "Emi": 6,
               "ChatGPT · Codex": 1
             }
@@ -2168,9 +2168,9 @@
           113,
           29,
           19,
-          3
+          4
         ],
-        "esta_semana": 3,
+        "esta_semana": 4,
         "semana_pasada": 19,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2330,11 +2330,11 @@
       196,
       255,
       90,
-      4
+      5
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 365,
+      "Claude": 366,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 25
     },

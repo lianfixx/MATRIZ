@@ -27,8 +27,8 @@ Matriz documental de Emi para Castorena Abogados. Aquí están las cinco tablas 
 
 Skills: `matriz-castorena`
 
-Último registro: 22 nov 2026 · Cierre diario programado: sin cambios · Agente: Claude Code (ejecución programada)
-Pendiente: subir INDEP v24 y Concentrado 19013131d8dd a Drive, Escritorio e iCloud.
+Último registro: 23 nov 2026 · Auditoría de fondo de hashes y workflow automático · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
+Pendiente: Emi o Muse, guardar la skill 1.6.0 en Claude; subir INDEP v24 y Concentrado 19013131d8dd a Drive, Escritorio e iCloud.
 
 ### INDEP (privado)
 
