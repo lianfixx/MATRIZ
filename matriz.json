@@ -241,6 +241,12 @@
           "registro": [
             {
               "fecha": "2026-11-23",
+              "titulo": "Skill 1.3.2 · horario 19:17 con reintento, aviso por issue, guardia y comprobación real de las tablas",
+              "agente": "claude.ai (sesión en la nube, claude-fable-5-2)",
+              "pendiente": "cuatro comparaciones en sombra; guardar la skill 1.3.2 en Claude (tarjeta enviada a Emi)."
+            },
+            {
+              "fecha": "2026-11-23",
               "titulo": "lector por API: ` · releer-tablas N` para comprobar el modelo barato sin tocar notas a mano",
               "agente": "claude.ai (sesión en la nube, claude-fable-5-2)",
               "pendiente": "corrida de comprobación con dos bloques en el repositorio privado."
@@ -280,12 +286,6 @@
               "titulo": "sjf_fuentes.mjs: el proxy del box pasa a ser configurable",
               "agente": "claude.ai (sesión en la nube, claude-fable-5-2)",
               "pendiente": "el box toma la copia nueva del script en su siguiente arranque (el del repositorio manda)."
-            },
-            {
-              "fecha": "2026-11-23",
-              "titulo": "prueba de fuentes desde GitHub: el DOF coincide byte por byte; se agrega el Semanario",
-              "agente": "claude.ai (sesión en la nube, claude-fable-5-2)",
-              "pendiente": "repositorio privado para las notas del lector por API (lo crea Emi)."
             }
           ],
           "actividad": {
@@ -307,10 +307,10 @@
               10,
               3,
               0,
-              9
+              10
             ],
             "actores_60d": {
-              "Claude": 21,
+              "Claude": 22,
               "ChatGPT · Codex": 1,
               "Emi": 82
             }
@@ -2174,9 +2174,9 @@
           113,
           29,
           19,
-          16
+          17
         ],
-        "esta_semana": 16,
+        "esta_semana": 17,
         "semana_pasada": 19,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2336,11 +2336,11 @@
       196,
       255,
       90,
-      19
+      20
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 380,
+      "Claude": 381,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 25
     },
