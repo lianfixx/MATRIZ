@@ -4,9 +4,9 @@ cerebro: "Castorena"
 visibilidad: "público"
 ultimo_cambio: 2026-11-23
 skills: 1
-commits_8_semanas: 41
+commits_8_semanas: 42
 ultimo_agente: "claude.ai (sesión en la nube, claude-fable-5-2)"
-pendiente: "Emi o Muse, guardar la skill 1.6.0 en Claude; subir INDEP v24 y Concentrado 19013131d8dd a Drive, Escritorio e iCloud."
+pendiente: "sin cambios respecto de la entrada anterior."
 github: "https://github.com/lianfixx/Cerebro-Castorena-"
 tags:
   - "repo"
@@ -28,12 +28,12 @@ Matriz documental de Emi para Castorena Abogados. Aquí están las cinco tablas 
 
 ## Últimos registros
 
+- 23 nov 2026 · Auditoría de la auditoría: disparo tras el cierre diario, pruebas y simulacro · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
 - 23 nov 2026 · Auditoría de fondo de hashes y workflow automático · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
 - 22 nov 2026 · Cierre diario programado: sin cambios · Agente: Claude Code (ejecución programada)
 - 21 nov 2026 · Cierre diario programado: sin cambios · Agente: Claude Code (ejecución programada)
 - 20 nov 2026 · Cierre diario programado: sin cambios · Agente: Claude Code (ejecución programada)
-- 19 nov 2026 · Cierre diario programado: sin cambios · Agente: Claude Code (ejecución programada)
 
 ## Pendiente más reciente
 
-Emi o Muse, guardar la skill 1.6.0 en Claude; subir INDEP v24 y Concentrado 19013131d8dd a Drive, Escritorio e iCloud.
+sin cambios respecto de la entrada anterior.
