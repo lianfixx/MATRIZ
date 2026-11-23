@@ -4,9 +4,9 @@ cerebro: "Castorena"
 visibilidad: "público"
 ultimo_cambio: 2026-11-23
 skills: 1
-commits_8_semanas: 73
+commits_8_semanas: 74
 ultimo_agente: "claude.ai (sesión en la nube, claude-fable-5-2)"
-pendiente: "cuatro entregas en sombra (24 y 26 de noviembre, 1 y 3 de diciembre) comparadas con la lectura de la suscripción; después, decisión de Emi sobre el relevo. La tarea «lector nocturno» no cambió."
+pendiente: "comprobación real con dos bloques de tabla en el repositorio privado."
 github: "https://github.com/lianfixx/dof-juridico-monitor"
 tags:
   - "repo"
@@ -28,12 +28,12 @@ Sistema autónomo, auditable y agnóstico de proveedor para revisar el Diario Of
 
 ## Últimos registros
 
+- 23 nov 2026 · lector por API: las tablas de pura cifra las lee el modelo barato · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
 - 23 nov 2026 · lector por API: corrida real completa, en sombra desde hoy · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
 - 23 nov 2026 · lector por API: síntesis por grupos y nota mínima para edictos (tras la corrida real de la versión 2) · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
 - 23 nov 2026 · Skill 1.3.1 · lector por API, versión 2 (lo que enseñó la primera corrida real) · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
 - 23 nov 2026 · Skill 1.3.0 · lector previo por la API de Claude (en sombra) · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
-- 23 nov 2026 · sjf_fuentes.mjs: el proxy del box pasa a ser configurable · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
 
 ## Pendiente más reciente
 
-cuatro entregas en sombra (24 y 26 de noviembre, 1 y 3 de diciembre) comparadas con la lectura de la suscripción; después, decisión de Emi sobre el relevo. La tarea «lector nocturno» no cambió.
+comprobación real con dos bloques de tabla en el repositorio privado.
