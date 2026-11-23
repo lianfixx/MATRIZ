@@ -474,6 +474,11 @@ def modo_semanal(raiz: Path, seco: bool, hoy: dt.date) -> int:
                f"{descartados} descartados. Costo: USD {total:.4f}.\n"
                "- Pendiente: la revisión semanal de Claude decide qué aplicar.\n\n")
     t = g.leer(cambios)
+    titulo = f"## {fecha} · Revisión semanal de la IA (API)\n"
+    if titulo in t:  # segunda corrida el mismo día: se sustituye la entrada, no se duplica
+        a = t.index(titulo)
+        b = t.find("\n## ", a + 1)
+        t = t[:a] + (t[b + 1:] if b >= 0 else "")
     i = t.find("\n## ")
     cambios.write_text((t[:i + 1] + entrada + t[i + 1:]) if i >= 0 else t + "\n" + entrada, encoding="utf-8")
 

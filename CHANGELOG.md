@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-11-23 · Inteligencia: una sola entrada por día en la revisión semanal
+
+- Agente: claude.ai (sesión en la nube, claude-fable-5-2)
+- Solicitud: Emi, 23/11/2026: auditar y corregir cada paso.
+- Cambios: si la revisión semanal corre dos veces el mismo día, sustituye su entrada de este registro en lugar de duplicarla. Se retiró la entrada duplicada que dejó la segunda corrida de prueba de hoy (misma fecha y mismo archivo; la vigente es la de arriba).
+- Archivos: `tools/inteligencia.py`, `tools/test_inteligencia.py` y este registro.
+- Verificación: 33 pruebas aprobadas.
+- Pendiente: ninguno.
+
 ## 2026-11-23 · Revisión semanal de la IA (API)
 
 - Agente: GitHub Actions · API de Claude (claude-sonnet-5-5)
@@ -16,14 +25,6 @@
 - Archivos: `tools/inteligencia.py`, `.github/workflows/inteligencia-semanal.yml`, `docs/INTELIGENCIA.md` y este registro.
 - Verificación: pruebas aprobadas; corrida real en Actions después de fusionar.
 - Pendiente: ninguno para este punto.
-
-## 2026-11-23 · Revisión semanal de la IA (API)
-
-- Agente: GitHub Actions · API de Claude (claude-sonnet-5-5)
-- Solicitud: Emi, 23/11/2026: retroalimentación semanal y propuesta de clasificación con la API.
-- Cambios: `revisiones/2026-11-23-ia.md` y `.json`. Solo propone; no cambia la configuración.
-- Verificación: 14 puntos comprobados contra la bitácora, 0 descartados. Costo: USD 0.0413.
-- Pendiente: la revisión semanal de Claude decide qué aplicar.
 
 ## 2026-11-23 · Inteligencia: salida estructurada en vez de herramienta forzada
 

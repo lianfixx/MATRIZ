@@ -152,6 +152,15 @@ class Semanal(unittest.TestCase):
         self.assertLess(cambios.index("2026-11-22 · Revisión semanal de la IA"), cambios.index("2026-11-13 · Anterior"))
         self.assertIn("- Agente: GitHub Actions · API de Claude", cambios)
 
+    def test_dos_corridas_el_mismo_dia_no_duplican(self):
+        respuesta = {"pulso": ["x"], "repetido": [], "fallos": [], "hecho_a_mano": [], "propuestas": []}
+        with mock.patch.object(ia, "llamar", return_value=(respuesta, USO)):
+            ia.modo_semanal(self.raiz, False, HOY)
+            ia.modo_semanal(self.raiz, False, HOY)
+        cambios = (self.raiz / "CHANGELOG.md").read_text()
+        self.assertEqual(cambios.count("2026-11-22 · Revisión semanal de la IA"), 1)
+        self.assertIn("2026-11-13 · Anterior", cambios)
+
     def test_clasificacion_baja_confianza_pregunta(self):
         self.tmp.cleanup()
         self.tmp = tempfile.TemporaryDirectory()
