@@ -52,8 +52,8 @@ Sistema autónomo, auditable y agnóstico de proveedor para revisar el Diario Of
 
 Skills: `dof-castorena`
 
-Último registro: 23 nov 2026 · lector por API: síntesis por grupos y nota mínima para edictos (tras la corrida real de la versión 2) · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
-Pendiente: corrida real para confirmar la síntesis completa; cuatro entregas en sombra.
+Último registro: 23 nov 2026 · lector por API: corrida real completa, en sombra desde hoy · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
+Pendiente: cuatro entregas en sombra (24 y 26 de noviembre, 1 y 3 de diciembre) comparadas con la lectura de la suscripción; después, decisión de Emi sobre el relevo. La tarea «lector nocturno» no cambió.
 
 ## Tareas programadas
 

@@ -241,6 +241,12 @@
           "registro": [
             {
               "fecha": "2026-11-23",
+              "titulo": "lector por API: corrida real completa, en sombra desde hoy",
+              "agente": "claude.ai (sesión en la nube, claude-fable-5-2)",
+              "pendiente": "cuatro entregas en sombra (24 y 26 de noviembre, 1 y 3 de diciembre) comparadas con la lectura de la suscripción; después, decisión de Emi sobre el relevo. La tarea «lector nocturno» no cambió."
+            },
+            {
+              "fecha": "2026-11-23",
               "titulo": "lector por API: síntesis por grupos y nota mínima para edictos (tras la corrida real de la versión 2)",
               "agente": "claude.ai (sesión en la nube, claude-fable-5-2)",
               "pendiente": "corrida real para confirmar la síntesis completa; cuatro entregas en sombra."
@@ -280,12 +286,6 @@
               "titulo": "[expediente] y [expediente] también al paquete del martes 10/11",
               "agente": "Claude Code (sesión en la nube, claude-opus-5-5), a petición de Muse con instrucción de Emi (11:16): tampoco consta la entrega de la matutina [expediente] y la vespertina [expediente] del miércoles 4/11; darlas por no entregadas e incluirlas con la [expediente]; una sola nota en el correo al Licenciado para las tres; no enviar nada.",
               "pendiente": "ninguno para este punto."
-            },
-            {
-              "fecha": "2026-11-09",
-              "titulo": "ediciones no entregadas ([expediente] al paquete del martes 10/11)",
-              "agente": "Claude Code (sesión en la nube, claude-opus-5-5), a petición de Muse con instrucción de Emi (11:06): no consta la entrega del cierre del jueves 5/11 (ni en el box ni en Gmail); darlo por no entregado e incluir la matutina [expediente] en el paquete del martes 10/11; no enviar nada.",
-              "pendiente": "resuelto en la entrada siguiente (301 y 302 incluidas)."
             }
           ],
           "actividad": {
@@ -307,10 +307,10 @@
               10,
               3,
               0,
-              6
+              7
             ],
             "actores_60d": {
-              "Claude": 18,
+              "Claude": 19,
               "ChatGPT · Codex": 1,
               "Emi": 82
             }
@@ -2174,9 +2174,9 @@
           113,
           29,
           19,
-          13
+          14
         ],
-        "esta_semana": 13,
+        "esta_semana": 14,
         "semana_pasada": 19,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2336,11 +2336,11 @@
       196,
       255,
       90,
-      15
+      16
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 376,
+      "Claude": 377,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 25
     },
