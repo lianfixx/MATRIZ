@@ -19,7 +19,7 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 | [[Castorena]] | 4 | 10 commits | 0 días | 0 | Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP, escritos y monitor del DOF. |
 | [[MILLA ABOGADOS]] | 5 | 0 commits | 19 días | 0 | El despacho de Emi: sitio, asesorías, monitoreo de expedientes, captación e Impulso Libre. |
 | [[Acción Tlalnepantla]] | 1 | 0 commits | 19 días | 0 | Acción Política Juvenil Tlalnepantla (PAN): sitio, formatos, eventos y materiales. |
-| [[Contenido y video]] | 7 | 0 commits | 1 días | 0 | Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio, X, Instagram, TikTok, LinkedIn, la matriz de redes (REDES) e historias de Instagram. |
+| [[Contenido y video]] | 7 | 1 commits | 0 días | 0 | Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio, X, Instagram, TikTok, LinkedIn, la matriz de redes (REDES) e historias de Instagram. |
 | [[Estudio]] | 2 | 0 commits | 6 días | 0 | Maestría en Alta Dirección y pizarras de estudio. |
 | [[Productos]] | 2 | 0 commits | 19 días | 0 | Productos propios de Emi: PANEL FIRMA (gestión jurídica) y Mes (finanzas personales). |
 | [[Herramientas]] | 5 | 1 commits | 0 días | 0 | Piezas que sirven a todos los cerebros: estilo de Emi, selector de modelo, entorno de Cloudflare, computadora virtual (Simular Box) e ingeniería inversa. |
@@ -32,11 +32,11 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 - 23 nov 2026 · **dof-juridico-monitor** · sjf_fuentes.mjs: el proxy del box pasa a ser configurable · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
 - 23 nov 2026 · **dof-juridico-monitor** · prueba de fuentes desde GitHub: el DOF coincide byte por byte; se agrega el Semanario · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
 - 23 nov 2026 · **dof-juridico-monitor** · prueba de fuentes desde un servidor de GitHub · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
+- 23 nov 2026 · **X** · Meme de la consulta de expedientes · Agente: Claude Code (sesión en la nube)
 - 22 nov 2026 · **Cerebro-Castorena-** · Cierre diario programado: sin cambios · Agente: Claude Code (ejecución programada)
 - 19 nov 2026 · **X** · Hilo de la guía en el post del mapa · Agente: Claude Code (sesión en la nube)
 - 19 nov 2026 · **X** · Texto largo publicado y semana aprobada · Agente: Claude Code (sesión en la nube)
 - 19 nov 2026 · **REDES** · X: responder a un post ya publicado · Agente: Claude Code (sesión en la nube)
-- 19 nov 2026 · **REDES** · Hilo de X: respuestas propias bajo la misma aprobación · Agente: Claude Code (sesión en la nube)
 
 ## Repositorios nuevos por clasificar
 

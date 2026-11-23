@@ -2,11 +2,11 @@
 tipo: "repo"
 cerebro: "Contenido y video"
 visibilidad: "público"
-ultimo_cambio: 2026-11-19
+ultimo_cambio: 2026-11-23
 skills: 1
-commits_8_semanas: 28
+commits_8_semanas: 29
 ultimo_agente: "Claude Code (sesión en la nube)"
-pendiente: "que Emi comparta el PDF y apruebe la pieza."
+pendiente: "«Agregar y aprobar» de Emi."
 github: "https://github.com/lianfixx/X"
 tags:
   - "repo"
@@ -16,7 +16,7 @@ generado: "tools/generar.py · no editar a mano: se reescribe cada día"
 
 # X
 
-Cerebro: [[Contenido y video]] · público · último cambio: 19 nov 2026
+Cerebro: [[Contenido y video]] · público · último cambio: 23 nov 2026
 
 [Abrir en GitHub](https://github.com/lianfixx/X)
 
@@ -28,12 +28,12 @@ Skill para planear, redactar, revisar, publicar con aprobación (API oficial de 
 
 ## Últimos registros
 
+- 23 nov 2026 · Meme de la consulta de expedientes · Agente: Claude Code (sesión en la nube)
 - 19 nov 2026 · Hilo de la guía en el post del mapa · Agente: Claude Code (sesión en la nube)
 - 19 nov 2026 · Texto largo publicado y semana aprobada · Agente: Claude Code (sesión en la nube)
 - 18 nov 2026 · Hilos en los mejores posts y guía descargable · Agente: Claude Code (sesión en la nube)
 - 18 nov 2026 · Textos para los dos videos de The Economist · Agente: Claude Code (sesión en la nube)
-- 18 nov 2026 · Seguimiento del miércoles: métricas del DOF a las 48 horas · Agente: Claude Code (sesión en la nube)
 
 ## Pendiente más reciente
 
-que Emi comparta el PDF y apruebe la pieza.
+«Agregar y aprobar» de Emi.

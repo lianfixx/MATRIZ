@@ -32,14 +32,14 @@ Pendiente: avisar a la Matriz de Redes y a `tiktok-studio` con fecha y commit. P
 
 ### X (público)
 
-https://github.com/lianfixx/X · último cambio: 19 nov 2026
+https://github.com/lianfixx/X · último cambio: 23 nov 2026
 
 Skill para planear, redactar, revisar, publicar con aprobación (API oficial de X) y medir las publicaciones de @emilianomilla en X, apoyada en el código público del algoritmo de X (xai-org/x-algorithm).
 
 Skills: `x-viral`
 
-Último registro: 19 nov 2026 · Hilo de la guía en el post del mapa · Agente: Claude Code (sesión en la nube)
-Pendiente: que Emi comparta el PDF y apruebe la pieza.
+Último registro: 23 nov 2026 · Meme de la consulta de expedientes · Agente: Claude Code (sesión en la nube)
+Pendiente: «Agregar y aprobar» de Emi.
 
 ### HISTORIAS- (público)
 

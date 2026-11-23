@@ -775,7 +775,7 @@
           "url": "https://github.com/lianfixx/X",
           "visibilidad": "público",
           "leido": true,
-          "ultimo_cambio": "2026-11-19",
+          "ultimo_cambio": "2026-11-23",
           "resumen": "Skill para planear, redactar, revisar, publicar con aprobación (API oficial de X) y medir las publicaciones de @emilianomilla en X, apoyada en el código público del algoritmo de X (xai-org/x-algorithm).",
           "skills": [
             {
@@ -785,6 +785,12 @@
           ],
           "protocolo": "1.1.0",
           "registro": [
+            {
+              "fecha": "2026-11-23",
+              "titulo": "Meme de la consulta de expedientes",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "«Agregar y aprobar» de Emi."
+            },
             {
               "fecha": "2026-11-19",
               "titulo": "Hilo de la guía en el post del mapa",
@@ -826,12 +832,6 @@
               "titulo": "The Economist, segunda ronda: Emi rechazó las primeras opciones",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "que Emi elija, reescriba y apruebe una, y cancele las otras."
-            },
-            {
-              "fecha": "2026-11-18",
-              "titulo": "Post sobre la portada 2027 de The Economist (dos opciones)",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "que Emi reescriba y apruebe una y cancele la otra antes de las 9:00."
             }
           ],
           "actividad": {
@@ -853,10 +853,10 @@
               0,
               16,
               12,
-              0
+              1
             ],
             "actores_60d": {
-              "Claude": 28
+              "Claude": 29
             }
           }
         },
@@ -2231,11 +2231,11 @@
           9,
           128,
           64,
-          0
+          1
         ],
-        "esta_semana": 0,
+        "esta_semana": 1,
         "semana_pasada": 64,
-        "dias_sin_movimiento": 1,
+        "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
         "pendientes_de_repos": 6,
@@ -2336,11 +2336,11 @@
       196,
       255,
       90,
-      11
+      12
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 372,
+      "Claude": 373,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 25
     },
