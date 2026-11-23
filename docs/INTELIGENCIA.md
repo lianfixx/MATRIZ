@@ -25,9 +25,13 @@ Desde el 23/11/2026 la Matriz usa la API de Claude para tres cosas. Todo lo hace
 ## Costo y topes
 
 - Precios usados (USD por millón de tokens, 20/11/2026): Haiku 5.5, 0.10 de entrada y 0.50 de salida; Sonnet 5.5, 2 y 10.
-- Revisión semanal: unos 0.03 a 0.05 USD por corrida. Segunda red: milésimas de dólar por actualización. Estimado total: menos de 2 USD al mes.
+- Revisión semanal: hasta unos 0.10 USD por corrida (tope de 8 000 tokens de salida, que incluye el razonamiento del modelo). Segunda red: milésimas de dólar por actualización. Estimado total: menos de 2 USD al mes.
 - Topes del script: 400 líneas por llamada y 2 llamadas por actualización en la segunda red; 60 000 caracteres de bitácora en la semanal.
 - Tope duro: el espacio de trabajo `matriz` de Claude Console tiene límite de 10 USD al mes y aviso a los 5. La llave vive en el secreto `ANTHROPIC_API_KEY` de este repositorio. No hay recarga automática.
+
+## Detalle técnico
+
+Las respuestas se piden con salida estructurada (`output_config.format`, JSON con esquema) de la Messages API. Forzar una herramienta con `tool_choice` no sirve: Sonnet 5.5 lo rechaza con HTTP 400 (comprobado el 23/11/2026).
 
 ## Probar sin gastar
 

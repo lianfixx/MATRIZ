@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-11-23 · Inteligencia: salida estructurada en vez de herramienta forzada
+
+- Agente: claude.ai (sesión en la nube, claude-fable-5-2)
+- Solicitud: Emi, 23/11/2026: auditar y corregir cada paso.
+- Cambios: la API contestó «tool_choice: type "tool" and "any" are not supported for this model» con Sonnet 5.5. `tools/inteligencia.py` pide ahora el JSON con `output_config.format` (salida estructurada), toma el último bloque de texto y deja margen de tokens para el razonamiento del modelo. Documentado en `docs/INTELIGENCIA.md`.
+- Archivos: `tools/inteligencia.py`, `docs/INTELIGENCIA.md` y este registro.
+- Verificación: 32 pruebas aprobadas; corrida real en Actions después de fusionar.
+- Pendiente: ninguno para este punto.
+
 ## 2026-11-23 · Inteligencia: mostrar el motivo cuando la API rechaza una llamada
 
 - Agente: claude.ai (sesión en la nube, claude-fable-5-2)
