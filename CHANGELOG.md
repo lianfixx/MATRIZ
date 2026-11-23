@@ -1,5 +1,13 @@
 # Cambios
 
+## 2026-11-23 · Revisión semanal de la IA (API)
+
+- Agente: GitHub Actions · API de Claude (claude-sonnet-5-5)
+- Solicitud: Emi, 23/11/2026: retroalimentación semanal y propuesta de clasificación con la API.
+- Cambios: `revisiones/2026-11-23-ia.md` y `.json`. Solo propone; no cambia la configuración.
+- Verificación: 14 puntos comprobados contra la bitácora, 0 descartados. Costo: USD 0.0413.
+- Pendiente: la revisión semanal de Claude decide qué aplicar.
+
 ## 2026-11-23 · Inteligencia: salida estructurada en vez de herramienta forzada
 
 - Agente: claude.ai (sesión en la nube, claude-fable-5-2)
