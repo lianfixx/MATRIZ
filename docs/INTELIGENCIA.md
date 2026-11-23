@@ -1,0 +1,49 @@
+# Inteligencia de la Matriz (API de Claude)
+
+Desde el 23/11/2026 la Matriz usa la API de Claude para tres cosas. Todo lo hace `tools/inteligencia.py`, paga con los **créditos de API** del plan Max de Emi (nunca con la suscripción) y **solo propone o avisa**: ninguna decisión se toma sola.
+
+| Función | Cuándo | Modelo | Qué deja |
+|---|---|---|---|
+| Segunda red de privacidad | En cada actualización que trae líneas nuevas | Haiku 5.5 | Un aviso en Issues si queda un posible dato de cliente o personal |
+| Retroalimentación semanal | Domingo 19:07 | Sonnet 5.5 | `revisiones/AAAA-MM-DD-ia.md` y `.json` |
+| Propuesta de clasificación | Domingo 19:07, mismo archivo | Haiku 5.5 | A qué cerebro va cada repositorio nuevo, con su confianza |
+
+## Cómo encaja
+
+- **Segunda red.** Es un paso de «Actualizar la Matriz», entre «Generar» y «Guardar». Lee solo las líneas nuevas de los archivos generados, ya pasadas por `reservar()`. Si marca algo con confianza de 0.85 o más, abre o actualiza el aviso «Segunda red de privacidad». El aviso dice archivo, línea y categoría; **nunca copia el texto**. No detiene la publicación: es un aviso, no un freno.
+- **Revisión semanal de la IA.** Workflow «Inteligencia semanal (API)». Lee la bitácora pública de los últimos siete días y la tabla de actividad. Cada punto debe citar repositorios y días; el script comprueba que existan juntos en la bitácora y descarta lo que no pueda comprobar. La revisión semanal de Claude (domingo 20:13, [REVISION_SEMANAL.md](REVISION_SEMANAL.md)) empieza leyendo ese archivo y decide qué aplicar.
+- **Clasificación.** Solo para repositorios nuevos públicos. Con confianza menor a 0.80, o con un cerebro que no existe, queda como «preguntar a Emi». Los privados sin cerebro no se nombran ni se envían: los clasifica la revisión de Claude.
+
+## Reglas
+
+1. **Nada nuevo se expone.** A la API solo se envía lo que ya es público o está por publicarse. Nunca contenido de repositorios privados.
+2. **Registros mudos.** Este repositorio es público y sus registros de Actions también: el script solo imprime conteos, tokens y costo.
+3. **Si falla, no pasa nada.** Sin llave, sin crédito o con la API caída, el paso termina sin error y la Matriz se actualiza igual.
+4. **No decide.** No edita `matriz.config.json`, no crea cerebros y no toca otros repositorios.
+5. **Todo queda registrado.** La corrida semanal agrega su entrada a `CHANGELOG.md` (línea `Agente: GitHub Actions · API de Claude`), y el `.json` guarda modelo, tokens, costo, SHA-256 de la entrada y de la salida y el número de corrida.
+
+## Costo y topes
+
+- Precios usados (USD por millón de tokens, 20/11/2026): Haiku 5.5, 0.10 de entrada y 0.50 de salida; Sonnet 5.5, 2 y 10.
+- Revisión semanal: unos 0.03 a 0.05 USD por corrida. Segunda red: milésimas de dólar por actualización. Estimado total: menos de 2 USD al mes.
+- Topes del script: 400 líneas por llamada y 2 llamadas por actualización en la segunda red; 60 000 caracteres de bitácora en la semanal.
+- Tope duro: el espacio de trabajo `matriz` de Claude Console tiene límite de 10 USD al mes y aviso a los 5. La llave vive en el secreto `ANTHROPIC_API_KEY` de este repositorio. No hay recarga automática.
+
+## Probar sin gastar
+
+```
+python3 tools/inteligencia.py semanal --seco
+python3 tools/inteligencia.py red --seco
+python3 -m unittest discover -s tools -p 'test_*.py'
+```
+
+En GitHub: Actions → «Inteligencia semanal (API)» → Run workflow, con «seco» activado.
+
+## Apagar
+
+- Semanal: Actions → «Inteligencia semanal (API)» → menú «…» → Disable workflow.
+- Segunda red: borrar el secreto `ANTHROPIC_API_KEY` (el paso se salta solo) o quitar el paso del workflow.
+
+## Pendiente de decidir
+
+La segunda red hoy solo avisa. Convertirla en freno (retener la línea antes de publicar) exige guardar qué se retuvo sin publicarlo; se decide después de observar dos semanas cuántas falsas alarmas da.

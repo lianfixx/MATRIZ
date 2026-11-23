@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-11-23 · Matriz 1.5.0: inteligencia con la API de Claude
+
+- Agente: claude.ai (sesión en la nube, claude-fable-5-2)
+- Solicitud: Emi, 23/11/2026, en chat: «Respecto la matriz realiza las 3 funciones: segunda red de privacidad, retroalimentación semanal, propuesta de clasificación»; autorizó crear workflows y fusionar. Topes y llave del espacio `matriz` creados ese día en Claude Console.
+- Cambios: nuevo `tools/inteligencia.py` (solo biblioteca estándar). Modo `red`: paso nuevo en «Actualizar la Matriz», entre generar y guardar; Haiku 5.5 revisa las líneas nuevas y abre un aviso sin copiar el texto; no detiene la publicación. Modo `semanal`: workflow nuevo «Inteligencia semanal (API)», domingo 19:07; Sonnet 5.5 escribe la retroalimentación y Haiku 5.5 propone el cerebro de los repositorios nuevos públicos; cada punto se comprueba contra la bitácora y lo no comprobable se descarta. La revisión semanal de Claude ahora parte de ese archivo (pasos 1b, 2, 6 y 6b). `tools/generar.py` no cambió.
+- Archivos: `tools/inteligencia.py`, `tools/test_inteligencia.py`, `.github/workflows/inteligencia-semanal.yml`, `.github/workflows/actualizar-matriz.yml`, `docs/INTELIGENCIA.md`, `docs/REVISION_SEMANAL.md`, `AGENTS.md` y este registro.
+- Verificación: `python3 -m unittest discover -s tools -p 'test_*.py'` → 32 pruebas aprobadas (12 nuevas, sin llamadas reales); modo seco sobre la semana real: 53 líneas, costo máximo estimado 0.035 USD.
+- Pendiente: primera corrida real desde Actions; decidir en dos semanas si la segunda red pasa de aviso a freno.
+
 ## 2026-11-13 · Matriz 1.4.1: el DOF ya no aparece como falla
 
 - Agente: Claude Code (sesión en la nube)

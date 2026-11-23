@@ -27,6 +27,7 @@ on:
 
 permissions:
   contents: write
+  issues: write # solo para el aviso de la segunda red de privacidad
 
 concurrency:
   group: actualizar-matriz
@@ -52,6 +53,37 @@ jobs:
           MATRIZ_RESERVADOS: ${{ secrets.MATRIZ_RESERVADOS }}
           TZ: America/Mexico_City
         run: python3 tools/generar.py --clonar
+      # Segunda red de privacidad (docs/INTELIGENCIA.md): Haiku 5.5 revisa por la API las líneas nuevas
+      # que están por publicarse. Solo avisa: nunca cambia ni detiene la publicación, y si la API falla
+      # o no hay llave la Matriz se actualiza igual. El aviso no contiene el texto señalado.
+      - name: Segunda red de privacidad (API, solo avisa)
+        continue-on-error: true
+        timeout-minutes: 4
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          MATRIZ_RESERVADOS: ${{ secrets.MATRIZ_RESERVADOS }}
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          python3 tools/inteligencia.py red --informe "$RUNNER_TEMP/red.json"
+          [ -f "$RUNNER_TEMP/red.json" ] || exit 0
+          n=$(python3 -c "import json,sys;print(len(json.load(open(sys.argv[1]))['hallazgos']))" "$RUNNER_TEMP/red.json")
+          [ "$n" -gt 0 ] || exit 0
+          titulo="Segunda red de privacidad: revisar posibles datos publicados"
+          cuerpo=$(python3 - "$RUNNER_TEMP/red.json" <<'PY'
+          import json, os, sys
+          r = json.load(open(sys.argv[1]))
+          print("La segunda red (Haiku 5.5) marcó", len(r["hallazgos"]), "línea(s) de la actualización", os.environ["RUN_URL"])
+          print("\nNo se detuvo la publicación. Aquí no se copia el texto: solo dónde mirar.\n")
+          for h in r["hallazgos"]:
+              print(f"- `{h['archivo']}`, línea {h['linea']}: posible {h['categoria']} (confianza {h['confianza']})")
+          print("\nQué hacer: si es un dato de cliente, agrega el nombre al secreto MATRIZ_RESERVADOS o corrige el CHANGELOG del repositorio de origen; la siguiente actualización lo tapa. Si es falsa alarma, cierra este aviso.")
+          PY
+          )
+          num=$(gh issue list --repo "$GITHUB_REPOSITORY" --state open --search "$titulo in:title" --json number --jq '.[0].number // empty')
+          if [ -n "$num" ]; then gh issue comment "$num" --repo "$GITHUB_REPOSITORY" --body "$cuerpo"
+          else gh issue create --repo "$GITHUB_REPOSITORY" --title "$titulo" --body "$cuerpo"; fi
       - name: Guardar si hubo cambios
         run: |
           set -euo pipefail
