@@ -241,6 +241,12 @@
           "registro": [
             {
               "fecha": "2026-11-23",
+              "titulo": "sjf_fuentes.mjs: el proxy del box pasa a ser configurable",
+              "agente": "claude.ai (sesión en la nube, claude-fable-5-2)",
+              "pendiente": "el box toma la copia nueva del script en su siguiente arranque (el del repositorio manda)."
+            },
+            {
+              "fecha": "2026-11-23",
               "titulo": "prueba de fuentes desde GitHub: el DOF coincide byte por byte; se agrega el Semanario",
               "agente": "claude.ai (sesión en la nube, claude-fable-5-2)",
               "pendiente": "repositorio privado para las notas del lector por API (lo crea Emi)."
@@ -280,12 +286,6 @@
               "titulo": "paquete de entrega reutilizable",
               "agente": "Claude (sesión en la nube, claude-fable-5-1).",
               "pendiente": ""
-            },
-            {
-              "fecha": "2026-11-08",
-              "titulo": "Skill 1.2.0 · fuentes con el box y ejecución automática",
-              "agente": "Claude (sesión en la nube, modelo claude-fable-5-1) — ejecución programada no; solicitud directa de Emi.",
-              "pendiente": "crear las cuatro tareas programadas y el monitor; primera semana en modo vigilado; medir créditos del box por corrida."
             }
           ],
           "actividad": {
@@ -307,10 +307,10 @@
               10,
               3,
               0,
-              2
+              3
             ],
             "actores_60d": {
-              "Claude": 14,
+              "Claude": 15,
               "ChatGPT · Codex": 1,
               "Emi": 82
             }
@@ -2168,9 +2168,9 @@
           113,
           29,
           19,
-          9
+          10
         ],
-        "esta_semana": 9,
+        "esta_semana": 10,
         "semana_pasada": 19,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2330,11 +2330,11 @@
       196,
       255,
       90,
-      10
+      11
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 371,
+      "Claude": 372,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 25
     },

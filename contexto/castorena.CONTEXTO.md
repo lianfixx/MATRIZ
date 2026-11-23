@@ -52,8 +52,8 @@ Sistema autónomo, auditable y agnóstico de proveedor para revisar el Diario Of
 
 Skills: `dof-castorena`
 
-Último registro: 23 nov 2026 · prueba de fuentes desde GitHub: el DOF coincide byte por byte; se agrega el Semanario · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
-Pendiente: repositorio privado para las notas del lector por API (lo crea Emi).
+Último registro: 23 nov 2026 · sjf_fuentes.mjs: el proxy del box pasa a ser configurable · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
+Pendiente: el box toma la copia nueva del script en su siguiente arranque (el del repositorio manda).
 
 ## Tareas programadas
 

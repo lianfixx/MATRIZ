@@ -53,7 +53,7 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 
 | Cerebro | Repos | Commits esta semana | Semana pasada | Días sin movimiento | Pendientes | Vencidos |
 |---|---|---|---|---|---|---|
-| Castorena | 4 | 9 | 19 | 0 | 0 | 0 |
+| Castorena | 4 | 10 | 19 | 0 | 0 | 0 |
 | MILLA ABOGADOS | 5 | 0 | 0 | 19 | 0 | 0 |
 | Acción Tlalnepantla | 1 | 0 | 0 | 19 | 0 | 0 |
 | Contenido y video | 7 | 0 | 64 | 1 | 0 | 0 |
@@ -62,7 +62,7 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 | Herramientas | 5 | 1 | 6 | 0 | 0 | 0 |
 | Sitios web | 3 | 0 | 0 | 11 | 0 | 0 |
 
-Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 371, ChatGPT · Codex 39, GitHub Actions 25.
+Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 372, ChatGPT · Codex 39, GitHub Actions 25.
 
 Vencimientos: Renovación de la conexión Claude–box el 7 dic 2026; Token de GitHub «MATRIZ lectura» el 9 feb 2027; Token de GitHub «MATRIZ escritura» (edición desde el panel) el 12 nov 2027; Llave de GitHub «Matriz administración (Claude)» el 12 nov 2027; Llave de Cloudflare «Matriz administración (Claude)» el 12 nov 2027.
 
@@ -81,8 +81,8 @@ Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP,
   - Último: 4 nov 2026 · corrección: puentes de skill con YAML válido · Claude Code (sesión en la nube)
 - **dof-juridico-monitor** (público) · https://github.com/lianfixx/dof-juridico-monitor · último cambio 23 nov 2026 · skills: dof-castorena
   - Sistema autónomo, auditable y agnóstico de proveedor para revisar el Diario Oficial de la Federación (DOF), verificar cobertura, detectar novedades jurídicas relevantes y producir entregables ejecutivos y de estudio.
-  - Último: 23 nov 2026 · prueba de fuentes desde GitHub: el DOF coincide byte por byte; se agrega el Semanario · claude.ai (sesión en la nube, claude-fable-5-2)
-  - Pendiente: repositorio privado para las notas del lector por API (lo crea Emi).
+  - Último: 23 nov 2026 · sjf_fuentes.mjs: el proxy del box pasa a ser configurable · claude.ai (sesión en la nube, claude-fable-5-2)
+  - Pendiente: el box toma la copia nueva del script en su siguiente arranque (el del repositorio manda).
 
 ### Tareas programadas
 
