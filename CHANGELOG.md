@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-11-23 · Inteligencia: prueba real semanal de la segunda red
+
+- Agente: claude.ai (sesión en la nube, claude-fable-5-2)
+- Solicitud: Emi, 23/11/2026: auditar y corregir cada paso.
+- Cambios: `tools/inteligencia.py red --prueba` hace una llamada real a Haiku 5.5 con dos líneas ficticias y comprueba que marca la que trae datos inventados y no la limpia. El workflow semanal la corre cada domingo; si falla, la corrida queda en rojo. Motivo: la red solo llama cuando hay líneas nuevas y hacía falta comprobarla de punta a punta sin esperar.
+- Archivos: `tools/inteligencia.py`, `.github/workflows/inteligencia-semanal.yml`, `docs/INTELIGENCIA.md` y este registro.
+- Verificación: pruebas aprobadas; corrida real en Actions después de fusionar.
+- Pendiente: ninguno para este punto.
+
 ## 2026-11-23 · Revisión semanal de la IA (API)
 
 - Agente: GitHub Actions · API de Claude (claude-sonnet-5-5)

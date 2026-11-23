@@ -17,6 +17,7 @@ Tres funciones, en dos modos:
 
 Uso:
   python3 tools/inteligencia.py red     [--seco] [--informe ruta.json]
+  python3 tools/inteligencia.py red --prueba      # llamada real con dos líneas ficticias
   python3 tools/inteligencia.py semanal [--seco] [--hoy AAAA-MM-DD]
 
   --seco   no llama a la API: muestra qué enviaría y cuánto costaría como máximo.
@@ -240,6 +241,33 @@ def modo_red(raiz: Path, seco: bool, informe: Path | None) -> int:
     publico["hallazgos"] = len(resumen["hallazgos"])
     print(json.dumps(publico))
     return 0
+
+
+def prueba_red() -> int:
+    """Prueba real de la segunda red con líneas FICTICIAS: una con datos inventados y una limpia.
+
+    Comprueba de punta a punta (llave, modelo, esquema) que la red marca la primera y no la segunda.
+    Devuelve 1 si no lo hace, para que el workflow semanal quede en rojo y Emi se entere."""
+    lineas = [("prueba.md", "- [[Demo|Demo]] · Demanda de Fulano Ficticio Inventado contra Comercializadora Imaginaria, "
+                            "juicio 123/2099, teléfono 55 0000 0000 · Agente: prueba"),
+              ("prueba.md", "- [[Demo|Demo]] · Cierre diario programado: sin cambios · Agente: Claude Code")]
+    usuario = "\n".join(f"{i + 1}|{a}|{t}" for i, (a, t) in enumerate(lineas))
+    try:
+        datos, uso = llamar(HAIKU, S_RED, usuario, H_RED, 4000)
+    except ErrorAPI as e:
+        print(json.dumps({"modo": "red-prueba", "estado": f"api_no_disponible: {e}"}))
+        return 1
+    marcadas = set()
+    for h in datos.get("hallazgos", []):
+        try:
+            if float(h["confianza"]) >= CONFIANZA_AVISO:
+                marcadas.add(int(h["n"]))
+        except (KeyError, TypeError, ValueError):
+            pass
+    bien = 1 in marcadas and 2 not in marcadas
+    print(json.dumps({"modo": "red-prueba", "estado": "ok" if bien else "fallo", "marcadas": sorted(marcadas),
+                      "modelo": uso["modelo"], "entrada": uso["entrada"], "salida": uso["salida"], "costo_usd": uso["costo_usd"]}))
+    return 0 if bien else 1
 
 
 # ---------------------------------------------------------------- revisión semanal
@@ -466,6 +494,8 @@ def main(argv: list[str]) -> int:
         cfg = {}
     g.configurar_reservas(cfg.get("terminos_reservados", []) + g.terminos_del_entorno())
     seco = "--seco" in argv
+    if argv[1] == "red" and "--prueba" in argv:
+        return prueba_red()
     if argv[1] == "red":
         informe = Path(argv[argv.index("--informe") + 1]) if "--informe" in argv else None
         return modo_red(RAIZ, seco, informe)
