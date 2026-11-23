@@ -44,7 +44,15 @@ jobs:
           TZ: America/Mexico_City
           SECO: ${{ inputs.seco && '--seco' || '' }}
         run: python3 tools/inteligencia.py semanal $SECO | tee -a "$GITHUB_STEP_SUMMARY"
+      # Una vez por semana se comprueba de verdad que la segunda red sigue viendo: dos líneas ficticias,
+      # una con datos inventados. Si no la marca, esta corrida queda en rojo.
+      - name: Prueba real de la segunda red (líneas ficticias)
+        if: ${{ !inputs.seco }}
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python3 tools/inteligencia.py red --prueba | tee -a "$GITHUB_STEP_SUMMARY"
       - name: Guardar si hubo revisión
+        if: always()
         run: |
           set -euo pipefail
           git add revisiones CHANGELOG.md
