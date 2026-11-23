@@ -52,8 +52,8 @@ Sistema autónomo, auditable y agnóstico de proveedor para revisar el Diario Of
 
 Skills: `dof-castorena`
 
-Último registro: 23 nov 2026 · lector por API: las tablas de pura cifra las lee el modelo barato · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
-Pendiente: comprobación real con dos bloques de tabla en el repositorio privado.
+Último registro: 23 nov 2026 · lector por API: ` · releer-tablas N` para comprobar el modelo barato sin tocar notas a mano · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
+Pendiente: corrida de comprobación con dos bloques en el repositorio privado.
 
 ## Tareas programadas
 
