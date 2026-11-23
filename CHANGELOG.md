@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-11-23 · Inteligencia: mostrar el motivo cuando la API rechaza una llamada
+
+- Agente: claude.ai (sesión en la nube, claude-fable-5-2)
+- Solicitud: Emi, 23/11/2026: auditar y corregir cada paso.
+- Cambios: la primera corrida real devolvió HTTP 400 sin motivo visible; `tools/inteligencia.py` ahora registra el mensaje de error de la API (no es texto del modelo).
+- Archivos: `tools/inteligencia.py` y este registro.
+- Verificación: pruebas aprobadas.
+- Pendiente: repetir la corrida real y corregir la causa.
+
 ## 2026-11-23 · Matriz 1.5.0: inteligencia con la API de Claude
 
 - Agente: claude.ai (sesión en la nube, claude-fable-5-2)
