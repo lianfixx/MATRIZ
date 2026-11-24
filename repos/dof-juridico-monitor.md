@@ -4,7 +4,7 @@ cerebro: "Castorena"
 visibilidad: "público"
 ultimo_cambio: 2026-11-24
 skills: 1
-commits_8_semanas: 84
+commits_8_semanas: 85
 ultimo_agente: "claude.ai (sesión en la nube, claude-fable-5-2)"
 pendiente: "primera noche con relevo real, miércoles 25/11."
 github: "https://github.com/lianfixx/dof-juridico-monitor"
@@ -29,10 +29,10 @@ Sistema autónomo, auditable y agnóstico de proveedor para revisar el Diario Of
 ## Últimos registros
 
 - 24 nov 2026 · causa real del relevo NINGUNO: el acceso viene de los repositorios de cada tarea · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
+- 24 nov 2026 · la síntesis del lector por API ya no afirma ausencias que solo valen para un grupo · Agente: Claude Code (ejecución programada)
 - 23 nov 2026 · las tareas cargan add_repo antes de usarlo · Agente: claude.ai (sesión en la nube, claude-opus-5-5)
 - 23 nov 2026 · actas históricas del Semanario incorporadas; PR 7 y 8 cerrados · Agente: claude.ai (sesión en la nube, claude-opus-5-5)
 - 23 nov 2026 · Skill 1.4.1 · causa real del reloj de GitHub y tarea lanzadora · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
-- 23 nov 2026 · corrección: la tarea lanzadora no existe todavía · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
 
 ## Pendiente más reciente
 
