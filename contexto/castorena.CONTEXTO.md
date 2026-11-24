@@ -52,8 +52,8 @@ Sistema autónomo, auditable y agnóstico de proveedor para revisar el Diario Of
 
 Skills: `dof-castorena`
 
-Último registro: 23 nov 2026 · corrección: la tarea lanzadora no existe todavía · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
-Pendiente: decisión de Emi sobre la lanzadora o la edición del `cron` desde su cuenta.
+Último registro: 23 nov 2026 · Skill 1.4.1 · causa real del reloj de GitHub y tarea lanzadora · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
+Pendiente: primera corrida real de la tarea lanzadora, el miércoles 25/11/2026 a las 19:17.
 
 ## Tareas programadas
 
