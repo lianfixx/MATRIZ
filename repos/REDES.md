@@ -4,7 +4,7 @@ cerebro: "Contenido y video"
 visibilidad: "público"
 ultimo_cambio: 2026-11-24
 skills: 1
-commits_8_semanas: 75
+commits_8_semanas: 76
 ultimo_agente: "Claude Code (sesión en la nube)"
 pendiente: "la sesión de X arma la pieza del hilo del mapa; Emi la aprueba; el PDF debe ser público."
 github: "https://github.com/lianfixx/REDES"
