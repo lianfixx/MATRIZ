@@ -25,6 +25,12 @@
           "registro": [
             {
               "fecha": "2026-11-23",
+              "titulo": "La tarea diaria saca la fecha del cierre con la hora de México",
+              "agente": "claude.ai (sesión en la nube, claude-opus-5-5)",
+              "pendiente": ""
+            },
+            {
+              "fecha": "2026-11-23",
               "titulo": "Fecha real del cierre de hoy, auditoría contra fechas futuras y reloj de GitHub (skill 1.6.2)",
               "agente": "claude.ai (sesión en la nube, claude-fable-5-2)",
               "pendiente": "guardar la skill 1.6.2 en Claude (tarjeta en el chat)."
@@ -64,12 +70,6 @@
               "titulo": "Cierre diario programado: sin cambios",
               "agente": "Claude Code (ejecución programada)",
               "pendiente": "subir INDEP v24 y Concentrado 19013131d8dd a Drive, Escritorio e iCloud."
-            },
-            {
-              "fecha": "2026-11-19",
-              "titulo": "Cierre diario programado: sin cambios",
-              "agente": "Claude Code (ejecución programada)",
-              "pendiente": "subir INDEP v24 y Concentrado 19013131d8dd a Drive, Escritorio e iCloud."
             }
           ],
           "actividad": {
@@ -91,10 +91,10 @@
               15,
               14,
               10,
-              6
+              7
             ],
             "actores_60d": {
-              "Claude": 38,
+              "Claude": 39,
               "Emi": 6,
               "ChatGPT · Codex": 1
             }
@@ -2174,14 +2174,14 @@
           113,
           29,
           19,
-          28
+          29
         ],
-        "esta_semana": 28,
+        "esta_semana": 29,
         "semana_pasada": 19,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
-        "pendientes_de_repos": 2,
+        "pendientes_de_repos": 1,
         "tareas_falladas": 0
       },
       "milla-abogados": {
@@ -2336,11 +2336,11 @@
       196,
       255,
       90,
-      33
+      34
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 393,
+      "Claude": 394,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 26
     },
