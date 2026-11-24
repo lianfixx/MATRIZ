@@ -1096,6 +1096,12 @@
           "registro": [
             {
               "fecha": "2026-11-24",
+              "titulo": "Propuesta de TikTok sobre X y la experiencia laboral en el perfil",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "el formato que elija Emi y su video."
+            },
+            {
+              "fecha": "2026-11-24",
               "titulo": "Liga del OAJ en el meme de la Consulta de Expedientes",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "la aprobación de Emi antes de las 19:30."
@@ -1135,12 +1141,6 @@
               "titulo": "Pieza de TikTok del DOF 2 (perdón de multas del SAT)",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "decisiones de Emi sobre el sello final que queda un poco bajo la descripción y sobre su regla de mandar primero al WhatsApp de la firma; aprobación en el panel."
-            },
-            {
-              "fecha": "2026-11-18",
-              "titulo": "Fuente oficial de la Queja [expediente] verificada",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "ninguno de esta fuente."
             }
           ],
           "actividad": {
@@ -1162,10 +1162,10 @@
               0,
               1,
               17,
-              2
+              3
             ],
             "actores_60d": {
-              "Claude": 19,
+              "Claude": 20,
               "Emi": 1
             }
           }
@@ -2231,9 +2231,9 @@
           9,
           128,
           64,
-          4
+          5
         ],
-        "esta_semana": 4,
+        "esta_semana": 5,
         "semana_pasada": 64,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2336,11 +2336,11 @@
       196,
       255,
       90,
-      42
+      43
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 402,
+      "Claude": 403,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 26
     },

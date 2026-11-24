@@ -81,8 +81,8 @@ Skill de la cuenta personal de Emi en TikTok: decide qué video hacer, para qui�
 
 Skills: `tiktok-studio`
 
-Último registro: 24 nov 2026 · Liga del OAJ en el meme de la Consulta de Expedientes · Agente: Claude Code (sesión en la nube)
-Pendiente: la aprobación de Emi antes de las 19:30.
+Último registro: 24 nov 2026 · Propuesta de TikTok sobre X y la experiencia laboral en el perfil · Agente: Claude Code (sesión en la nube)
+Pendiente: el formato que elija Emi y su video.
 
 ### LinkedIn (público)
 
