@@ -52,8 +52,8 @@ Sistema autónomo, auditable y agnóstico de proveedor para revisar el Diario Of
 
 Skills: `dof-castorena`
 
-Último registro: 23 nov 2026 · Skill 1.3.2 · horario 19:17 con reintento, aviso por issue, guardia y comprobación real de las tablas · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
-Pendiente: cuatro comparaciones en sombra; guardar la skill 1.3.2 en Claude (tarjeta enviada a Emi).
+Último registro: 23 nov 2026 · relevo entre el lector por API y la suscripción (fin de la sombra) · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
+Pendiente: actualizar el texto de las tres tareas programadas en Claude con estos archivos; primera noche con relevo y primer cierre con notas de la API.
 
 ## Tareas programadas
 

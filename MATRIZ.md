@@ -16,7 +16,7 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 
 | Cerebro | Repos | Esta semana | Sin movimiento | Pendientes | Qué es |
 |---|---|---|---|---|---|
-| [[Castorena]] | 4 | 18 commits | -1 días | 0 | Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP, escritos y monitor del DOF. |
+| [[Castorena]] | 4 | 19 commits | -1 días | 0 | Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP, escritos y monitor del DOF. |
 | [[MILLA ABOGADOS]] | 5 | 0 commits | 19 días | 0 | El despacho de Emi: sitio, asesorías, monitoreo de expedientes, captación e Impulso Libre. |
 | [[Acción Tlalnepantla]] | 1 | 0 commits | 19 días | 0 | Acción Política Juvenil Tlalnepantla (PAN): sitio, formatos, eventos y materiales. |
 | [[Contenido y video]] | 7 | 3 commits | -1 días | 0 | Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio, X, Instagram, TikTok, LinkedIn, la matriz de redes (REDES) e historias de Instagram. |
@@ -30,9 +30,9 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 - 24 nov 2026 · **Cerebro-Castorena-** · Cierre diario programado: sin cambios · Agente: Claude Code (ejecución programada)
 - 23 nov 2026 · **Cerebro-Castorena-** · Auditoría de la auditoría: disparo tras el cierre diario, pruebas y simulacro · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
 - 23 nov 2026 · **Cerebro-Castorena-** · Auditoría de fondo de hashes y workflow automático · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
+- 23 nov 2026 · **dof-juridico-monitor** · relevo entre el lector por API y la suscripción (fin de la sombra) · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
 - 23 nov 2026 · **dof-juridico-monitor** · Skill 1.3.2 · horario 19:17 con reintento, aviso por issue, guardia y comprobación real de las tablas · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
 - 23 nov 2026 · **dof-juridico-monitor** · lector por API: ` · releer-tablas N` para comprobar el modelo barato sin tocar notas a mano · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
-- 23 nov 2026 · **dof-juridico-monitor** · lector por API: las tablas de pura cifra las lee el modelo barato · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
 - 23 nov 2026 · **X** · Meme de la consulta de expedientes · Agente: Claude Code (sesión en la nube)
 - 23 nov 2026 · **TikTok** · Meme de la Consulta de Datos de Expedientes, listo para aprobar · Agente: Claude Code (sesión en la nube)
 - 19 nov 2026 · **X** · Hilo de la guía en el post del mapa · Agente: Claude Code (sesión en la nube)
