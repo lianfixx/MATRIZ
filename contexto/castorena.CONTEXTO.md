@@ -52,7 +52,8 @@ Sistema autónomo, auditable y agnóstico de proveedor para revisar el Diario Of
 
 Skills: `dof-castorena`
 
-Último registro: 23 nov 2026 · actas históricas del Semanario incorporadas; PR 7 y 8 cerrados · Agente: claude.ai (sesión en la nube, claude-opus-5-5)
+Último registro: 23 nov 2026 · las tareas cargan add_repo antes de usarlo · Agente: claude.ai (sesión en la nube, claude-opus-5-5)
+Pendiente: si aun cargándola la herramienta no existe en esas sesiones, el plan B es que el box lea `dof-trabajo` con un token de solo lectura, que tendría que crear Emi.
 
 ## Tareas programadas
 
