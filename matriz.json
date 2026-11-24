@@ -13,7 +13,7 @@
           "url": "https://github.com/lianfixx/Cerebro-Castorena-",
           "visibilidad": "público",
           "leido": true,
-          "ultimo_cambio": "2026-11-23",
+          "ultimo_cambio": "2026-11-24",
           "resumen": "Matriz documental de Emi para Castorena Abogados. Aquí están las cinco tablas de referencia, las versiones recuperadas, las reglas de trabajo y los pendientes.",
           "skills": [
             {
@@ -23,6 +23,12 @@
           ],
           "protocolo": "1.1.0",
           "registro": [
+            {
+              "fecha": "2026-11-24",
+              "titulo": "Cierre diario programado: sin cambios",
+              "agente": "Claude Code (ejecución programada)",
+              "pendiente": "Emi sube INDEP v24 y Concentrado 19013131d8dd a Drive, Escritorio e iCloud."
+            },
             {
               "fecha": "2026-11-23",
               "titulo": "Auditoría de la auditoría: disparo tras el cierre diario, pruebas y simulacro",
@@ -64,12 +70,6 @@
               "titulo": "Cierre diario programado: sin cambios",
               "agente": "Claude Code (ejecución programada)",
               "pendiente": "subir INDEP v24 y Concentrado 19013131d8dd a Drive, Escritorio e iCloud."
-            },
-            {
-              "fecha": "2026-11-17",
-              "titulo": "Concentrado ID 12 conciliado y fuente TFJA inequívoca",
-              "agente": "Claude Code (sesión de claude.ai con Emi, Opus 5.5)",
-              "pendiente": "subir 19013131d8dd a Drive (sigue fe4026421a68), Escritorio e iCloud (siguen 7cbaad8795b9, Mac no enlazada); INDEP v24 en Drive, Escritorio e iCloud; engrose del A.R. [expediente]."
             }
           ],
           "actividad": {
@@ -91,10 +91,10 @@
               15,
               14,
               10,
-              3
+              4
             ],
             "actores_60d": {
-              "Claude": 35,
+              "Claude": 36,
               "Emi": 6,
               "ChatGPT · Codex": 1
             }
@@ -2174,11 +2174,11 @@
           113,
           29,
           19,
-          17
+          18
         ],
-        "esta_semana": 17,
+        "esta_semana": 18,
         "semana_pasada": 19,
-        "dias_sin_movimiento": 0,
+        "dias_sin_movimiento": -1,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
         "pendientes_de_repos": 2,
@@ -2336,11 +2336,11 @@
       196,
       255,
       90,
-      22
+      23
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 382,
+      "Claude": 383,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 26
     },
