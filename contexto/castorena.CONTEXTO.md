@@ -51,8 +51,8 @@ Sistema autónomo, auditable y agnóstico de proveedor para revisar el Diario Of
 
 Skills: `dof-castorena`
 
-Último registro: 24 nov 2026 · Skill 1.5.0 · una sola tabla y correo BLUF, con la versión final de Emi · Agente: claude.ai (sesión en la nube, claude-opus-5-5)
-Pendiente: que Emi confirme el criterio de selección; primera entrega con la regla nueva, jueves 26/11/2026.
+Último registro: 24 nov 2026 · Skill 1.5.1 · respuestas de Emi sobre la versión final · Agente: claude.ai (sesión en la nube, claude-opus-5-5)
+Pendiente: primera entrega con estas reglas, jueves 26/11/2026.
 
 ## Tareas programadas
 

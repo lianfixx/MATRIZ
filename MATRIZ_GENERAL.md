@@ -53,7 +53,7 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 
 | Cerebro | Repos | Commits esta semana | Semana pasada | Días sin movimiento | Pendientes | Vencidos |
 |---|---|---|---|---|---|---|
-| Castorena | 4 | 35 | 19 | 0 | 0 | 0 |
+| Castorena | 4 | 36 | 19 | 0 | 0 | 0 |
 | MILLA ABOGADOS | 5 | 0 | 0 | 20 | 0 | 0 |
 | Acción Tlalnepantla | 1 | 0 | 0 | 20 | 0 | 0 |
 | Contenido y video | 7 | 4 | 64 | 0 | 0 | 0 |
@@ -62,7 +62,7 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 | Herramientas | 5 | 2 | 6 | 1 | 0 | 0 |
 | Sitios web | 3 | 0 | 0 | 12 | 0 | 0 |
 
-Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 401, ChatGPT · Codex 39, GitHub Actions 26.
+Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 402, ChatGPT · Codex 39, GitHub Actions 26.
 
 Vencimientos: Renovación de la conexión Claude–box el 7 dic 2026; Token de GitHub «MATRIZ lectura» el 9 feb 2027; Token de GitHub «MATRIZ escritura» (edición desde el panel) el 12 nov 2027; Llave de GitHub «Matriz administración (Claude)» el 12 nov 2027; Llave de Cloudflare «Matriz administración (Claude)» el 12 nov 2027.
 
@@ -82,8 +82,8 @@ Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP,
   - Último: 4 nov 2026 · corrección: puentes de skill con YAML válido · Claude Code (sesión en la nube)
 - **dof-juridico-monitor** (público) · https://github.com/lianfixx/dof-juridico-monitor · último cambio 24 nov 2026 · skills: dof-castorena
   - Sistema autónomo, auditable y agnóstico de proveedor para revisar el Diario Oficial de la Federación (DOF), verificar cobertura, detectar novedades jurídicas relevantes y producir entregables ejecutivos y de estudio.
-  - Último: 24 nov 2026 · Skill 1.5.0 · una sola tabla y correo BLUF, con la versión final de Emi · claude.ai (sesión en la nube, claude-opus-5-5)
-  - Pendiente: que Emi confirme el criterio de selección; primera entrega con la regla nueva, jueves 26/11/2026.
+  - Último: 24 nov 2026 · Skill 1.5.1 · respuestas de Emi sobre la versión final · claude.ai (sesión en la nube, claude-opus-5-5)
+  - Pendiente: primera entrega con estas reglas, jueves 26/11/2026.
 
 ### Tareas programadas
 
