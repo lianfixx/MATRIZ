@@ -20,7 +20,7 @@ Parte de la [[MATRIZ]].
 - [[HISTORIAS|HISTORIAS-]] · público · 16 nov 2026 · 1 skill(s)
 - [[REDES|REDES]] · público · 24 nov 2026 · 1 skill(s)
 - [[Instagram|Instagram]] · público · 13 nov 2026 · 1 skill(s)
-- [[TikTok|TikTok]] · público · 23 nov 2026 · 1 skill(s)
+- [[TikTok|TikTok]] · público · 24 nov 2026 · 1 skill(s)
 - [[LinkedIn|LinkedIn]] · público · 20 nov 2026 · 1 skill(s)
 
 ## Tareas programadas

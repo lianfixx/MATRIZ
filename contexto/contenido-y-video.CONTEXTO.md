@@ -75,14 +75,14 @@ Pendiente: - Avisar a Emi y a Matriz de Redes que el Reel de Vox necesita la voz
 
 ### TikTok (público)
 
-https://github.com/lianfixx/TikTok · último cambio: 23 nov 2026
+https://github.com/lianfixx/TikTok · último cambio: 24 nov 2026
 
 Skill de la cuenta personal de Emi en TikTok: decide qué video hacer, para quién y cómo engancha en los primeros segundos; prepara la descripción, los hashtags, la portada y el calendario; entrega el paquete aprobado para que Emi lo publique, y mide.
 
 Skills: `tiktok-studio`
 
-Último registro: 23 nov 2026 · Meme de la Consulta de Datos de Expedientes, listo para aprobar · Agente: Claude Code (sesión en la nube)
-Pendiente: la aprobación de Emi. La pieza del SAT `beeb55f32c9c` solo la puede marcar Emi con «Ya la publiqué»: el panel no deja que Claude marque una pieza que se subió desde la app.
+Último registro: 24 nov 2026 · Liga del OAJ en el meme de la Consulta de Expedientes · Agente: Claude Code (sesión en la nube)
+Pendiente: la aprobación de Emi antes de las 19:30.
 
 ### LinkedIn (público)
 
