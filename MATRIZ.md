@@ -16,7 +16,7 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 
 | Cerebro | Repos | Esta semana | Sin movimiento | Pendientes | Qué es |
 |---|---|---|---|---|---|
-| [[Castorena]] | 4 | 26 commits | 0 días | 0 | Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP, escritos y monitor del DOF. |
+| [[Castorena]] | 4 | 27 commits | 0 días | 0 | Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP, escritos y monitor del DOF. |
 | [[MILLA ABOGADOS]] | 5 | 0 commits | 19 días | 0 | El despacho de Emi: sitio, asesorías, monitoreo de expedientes, captación e Impulso Libre. |
 | [[Acción Tlalnepantla]] | 1 | 0 commits | 19 días | 0 | Acción Política Juvenil Tlalnepantla (PAN): sitio, formatos, eventos y materiales. |
 | [[Contenido y video]] | 7 | 3 commits | -1 días | 0 | Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio, X, Instagram, TikTok, LinkedIn, la matriz de redes (REDES) e historias de Instagram. |
@@ -30,9 +30,9 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 - 23 nov 2026 · **Cerebro-Castorena-** · Fecha real del cierre de hoy, auditoría contra fechas futuras y reloj de GitHub (skill 1.6.2) · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
 - 23 nov 2026 · **Cerebro-Castorena-** · Cierre diario programado: sin cambios · Agente: Claude Code (ejecución programada)
 - 23 nov 2026 · **Cerebro-Castorena-** · Auditoría de la auditoría: disparo tras el cierre diario, pruebas y simulacro · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
+- 23 nov 2026 · **dof-juridico-monitor** · actas históricas del Semanario incorporadas; PR 7 y 8 cerrados · Agente: claude.ai (sesión en la nube, claude-opus-5-5)
 - 23 nov 2026 · **dof-juridico-monitor** · Skill 1.4.1 · causa real del reloj de GitHub y tarea lanzadora · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
 - 23 nov 2026 · **dof-juridico-monitor** · corrección: la tarea lanzadora no existe todavía · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
-- 23 nov 2026 · **dof-juridico-monitor** · auditoría del relevo y de la redacción: cinco correcciones · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
 - 23 nov 2026 · **X** · Meme de la consulta de expedientes · Agente: Claude Code (sesión en la nube)
 - 23 nov 2026 · **TikTok** · Meme de la Consulta de Datos de Expedientes, listo para aprobar · Agente: Claude Code (sesión en la nube)
 - 19 nov 2026 · **X** · Hilo de la guía en el post del mapa · Agente: Claude Code (sesión en la nube)
