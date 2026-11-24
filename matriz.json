@@ -241,6 +241,12 @@
           "registro": [
             {
               "fecha": "2026-11-24",
+              "titulo": "Skill 1.5.0 · una sola tabla y correo BLUF, con la versión final de Emi",
+              "agente": "claude.ai (sesión en la nube, claude-opus-5-5)",
+              "pendiente": "que Emi confirme el criterio de selección; primera entrega con la regla nueva, jueves 26/11/2026."
+            },
+            {
+              "fecha": "2026-11-24",
               "titulo": "causa real del relevo NINGUNO: el acceso viene de los repositorios de cada tarea",
               "agente": "claude.ai (sesión en la nube, claude-fable-5-2)",
               "pendiente": "primera noche con relevo real, miércoles 25/11."
@@ -280,12 +286,6 @@
               "titulo": "auditoría del relevo y de la redacción: cinco correcciones",
               "agente": "claude.ai (sesión en la nube, claude-fable-5-2)",
               "pendiente": "que Emi confirme la causa de la programación (editar una línea `cron` desde su cuenta) y decida si la lanzadora se queda."
-            },
-            {
-              "fecha": "2026-11-23",
-              "titulo": "Skill 1.4.0 · redacción del reporte y de la guía, relevo en operación y regla de sincronía",
-              "agente": "claude.ai (sesión en la nube, claude-fable-5-2)",
-              "pendiente": "actualizar el texto de las tareas de cierre en Claude; primer paquete con la redacción nueva (martes 24); que Emi lo lea y marque lo que aún no suene a él."
             }
           ],
           "actividad": {
@@ -307,10 +307,10 @@
               10,
               3,
               0,
-              19
+              20
             ],
             "actores_60d": {
-              "Claude": 31,
+              "Claude": 32,
               "ChatGPT · Codex": 1,
               "Emi": 82
             }
@@ -2174,9 +2174,9 @@
           113,
           29,
           19,
-          34
+          35
         ],
-        "esta_semana": 34,
+        "esta_semana": 35,
         "semana_pasada": 19,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2336,11 +2336,11 @@
       196,
       255,
       90,
-      40
+      41
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 400,
+      "Claude": 401,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 26
     },
