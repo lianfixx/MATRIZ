@@ -2,7 +2,9 @@ name: Actualizar la Matriz
 
 # Regenera el índice (MATRIZ_GENERAL.md, MATRIZ.md, matriz.json, cerebros/, repos/, contexto/,
 # bitacora/) leyendo cada repositorio. Corre en cuanto un repositorio de Emi cambia (aviso de GitHub),
-# cada 15 minutos por si un aviso se pierde, a mano y después de cada edición desde el panel.
+# cada 10 minutos con el reloj de Cloudflare del panel por si un aviso se pierde, a mano y después de
+# cada edición desde el panel. El reloj de GitHub es el último respaldo: medido el 23/11/2026, de sus
+# 96 turnos diarios dispara 3 o 4.
 # Solo guarda (y el panel solo se publica) si algo cambió. No escribe en ningún otro repositorio.
 # MATRIZ_RESERVADOS (opcional): nombres de clientes que nunca se publican, separados por coma.
 # Para leer los privados necesita el secreto MATRIZ_TOKEN: un token de GitHub de grano fino,
@@ -10,7 +12,7 @@ name: Actualizar la Matriz
 # se genera igual y marca los privados como «sin lectura».
 on:
   schedule:
-    - cron: "7,22,37,52 * * * *" # cada 15 minutos (GitHub puede retrasarlo unos minutos)
+    - cron: "7,22,37,52 * * * *" # último respaldo: GitHub dispara 3 o 4 de estos 96 turnos diarios
   workflow_dispatch:
   push:
     branches: [main]

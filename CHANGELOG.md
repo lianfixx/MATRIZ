@@ -1,5 +1,15 @@
 # Cambios
 
+## 2026-11-23 · El reloj de GitHub no es confiable: la revisión semanal lanza la inteligencia
+
+- Agente: claude.ai (sesión en la nube, claude-fable-5-2)
+- Solicitud: Emi, 23/11/2026, 21:11, en chat: «Busca y deja todo de manera perfecta sí o sí, soluciona, tienes expreso mi sí de todo».
+- Hallazgo: de la programación de cada 15 minutos de «Actualizar la Matriz», GitHub disparó 39 corridas en 12 días (de unas 1,100), con huecos de 5 a 9 horas; las corridas salen a nombre de `lianfixx`, así que no es un problema de quién subió el `cron`. La Matriz no lo resintió porque la mueven los avisos y el reloj de Cloudflare del panel. Pero «Inteligencia semanal (API)» dependía solo de ese reloj (domingo 19:07) para estar lista antes de la revisión de las 20:13.
+- Cambios: (1) `docs/REVISION_SEMANAL.md`, paso 1b: si la revisión de la IA de hoy no existe, la revisión semanal de Claude lanza el workflow, lo espera hasta cinco minutos y lo relanza una vez si quedó cancelado. (2) `inteligencia-semanal.yml`: trabajo previo «reloj»; una corrida programada que llegue cuando ya no es domingo, o cuando la revisión de hoy ya existe, termina sin llamar a la API. (3) Comentarios y documentos (`actualizar-matriz.yml`, `docs/INTELIGENCIA.md`, `docs/PANEL.md`) dicen lo que el reloj de GitHub hace de verdad.
+- Archivos: `.github/workflows/inteligencia-semanal.yml`, `.github/workflows/actualizar-matriz.yml` (solo comentarios), `docs/REVISION_SEMANAL.md`, `docs/INTELIGENCIA.md`, `docs/PANEL.md` y este registro.
+- Verificación: pruebas de `tools/` aprobadas; los dos workflows cargan como YAML; corrida en seco de «Inteligencia semanal (API)» con el trabajo «reloj» después de fusionar.
+- Pendiente: primera revisión semanal con el paso nuevo, el domingo 29/11/2026.
+
 ## 2026-11-23 · Inteligencia: una sola entrada por día en la revisión semanal
 
 - Agente: claude.ai (sesión en la nube, claude-fable-5-2)
