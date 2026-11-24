@@ -21,14 +21,14 @@ Soy Emi (Yohualli Emiliano García Milla). Este es el cerebro «Contenido y vide
 
 ### VIDEOS-IA-SKILL-MILLA (público)
 
-https://github.com/lianfixx/VIDEOS-IA-SKILL-MILLA · último cambio: 18 nov 2026
+https://github.com/lianfixx/VIDEOS-IA-SKILL-MILLA · último cambio: 24 nov 2026
 
 Un método portable para producir videos de MILLA ABOGADOS: investigación, guion, conexiones, voz, imágenes, música, montaje y revisión. Incluye una skill, instrucciones para otras IAs, utilidades y un compositor nuevo.
 
 Skills: `editor-studio`, `milla-video-studio`, `pizarra-studio`, `vox-studio`
 
-Último registro: 18 nov 2026 · Vox Studio 0.13.2: ideas de temas desde la skill de TikTok y usuario de TikTok guardado · Agente: Claude Code (sesión en la nube)
-Pendiente: avisar a la Matriz de Redes y a `tiktok-studio` con fecha y commit. Para Emi: el puente de TikTok pide «sin voces realistas hechas con IA»; la voz de Vox (ElevenLabs) lo es, y eso lo decide él con la sesión de TikTok.
+Último registro: 24 nov 2026 · Vox Studio 0.14.0: previa antes del render, tipografía en movimiento y foto viva · Agente: Claude Code (sesión en la nube)
+Pendiente: que Emi vea la prueba y elija; fusionar a `main`; subir el paquete nuevo a la app.
 
 ### X (público)
 

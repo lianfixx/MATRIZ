@@ -672,7 +672,7 @@
           "url": "https://github.com/lianfixx/VIDEOS-IA-SKILL-MILLA",
           "visibilidad": "público",
           "leido": true,
-          "ultimo_cambio": "2026-11-18",
+          "ultimo_cambio": "2026-11-24",
           "resumen": "Un método portable para producir videos de MILLA ABOGADOS: investigación, guion, conexiones, voz, imágenes, música, montaje y revisión. Incluye una skill, instrucciones para otras IAs, utilidades y un compositor nuevo.",
           "skills": [
             {
@@ -694,6 +694,12 @@
           ],
           "protocolo": "1.1.0",
           "registro": [
+            {
+              "fecha": "2026-11-24",
+              "titulo": "Vox Studio 0.14.0: previa antes del render, tipografía en movimiento y foto viva",
+              "agente": "Claude Code (sesión en la nube)",
+              "pendiente": "que Emi vea la prueba y elija; fusionar a `main`; subir el paquete nuevo a la app."
+            },
             {
               "fecha": "2026-11-18",
               "titulo": "Vox Studio 0.13.2: ideas de temas desde la skill de TikTok y usuario de TikTok guardado",
@@ -735,12 +741,6 @@
               "titulo": "AssemblyAI: llave guardada, subida de audio rechazada",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "que Emi ajuste el secreto de red para que la cabecera `Authorization` lleve solo la llave, sin «Bearer» (causa probable, sin confirmar), y repetir la comparación con `comparar-motores`."
-            },
-            {
-              "fecha": "2026-11-11",
-              "titulo": "Entorno, box y tarea programada de Editor Studio",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "llave de AssemblyAI de Emi; fusionar esta rama a `main` antes del domingo para que el radar encuentre su código."
             }
           ],
           "actividad": {
@@ -762,10 +762,10 @@
               9,
               33,
               1,
-              0
+              1
             ],
             "actores_60d": {
-              "Claude": 41,
+              "Claude": 42,
               "Emi": 5
             }
           }
@@ -2231,9 +2231,9 @@
           9,
           128,
           64,
-          6
+          7
         ],
-        "esta_semana": 6,
+        "esta_semana": 7,
         "semana_pasada": 64,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2336,11 +2336,11 @@
       196,
       255,
       90,
-      44
+      45
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 404,
+      "Claude": 405,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 26
     },

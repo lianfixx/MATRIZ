@@ -56,13 +56,13 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 | Castorena | 4 | 36 | 19 | 0 | 0 | 0 |
 | MILLA ABOGADOS | 5 | 0 | 0 | 20 | 0 | 0 |
 | Acción Tlalnepantla | 1 | 0 | 0 | 20 | 0 | 0 |
-| Contenido y video | 7 | 6 | 64 | 0 | 0 | 0 |
+| Contenido y video | 7 | 7 | 64 | 0 | 0 | 0 |
 | Estudio | 2 | 0 | 1 | 7 | 0 | 0 |
 | Productos | 2 | 0 | 0 | 20 | 0 | 0 |
 | Herramientas | 5 | 2 | 6 | 1 | 0 | 0 |
 | Sitios web | 3 | 0 | 0 | 12 | 0 | 0 |
 
-Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 404, ChatGPT · Codex 39, GitHub Actions 26.
+Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 405, ChatGPT · Codex 39, GitHub Actions 26.
 
 Vencimientos: Renovación de la conexión Claude–box el 7 dic 2026; Token de GitHub «MATRIZ lectura» el 9 feb 2027; Token de GitHub «MATRIZ escritura» (edición desde el panel) el 12 nov 2027; Llave de GitHub «Matriz administración (Claude)» el 12 nov 2027; Llave de Cloudflare «Matriz administración (Claude)» el 12 nov 2027.
 
@@ -142,10 +142,10 @@ Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio,
 
 ### Repositorios
 
-- **VIDEOS-IA-SKILL-MILLA** (público) · https://github.com/lianfixx/VIDEOS-IA-SKILL-MILLA · último cambio 18 nov 2026 · skills: editor-studio, milla-video-studio, pizarra-studio, vox-studio
+- **VIDEOS-IA-SKILL-MILLA** (público) · https://github.com/lianfixx/VIDEOS-IA-SKILL-MILLA · último cambio 24 nov 2026 · skills: editor-studio, milla-video-studio, pizarra-studio, vox-studio
   - Un método portable para producir videos de MILLA ABOGADOS: investigación, guion, conexiones, voz, imágenes, música, montaje y revisión. Incluye una skill, instrucciones para otras IAs, utilidades y un compositor nuevo.
-  - Último: 18 nov 2026 · Vox Studio 0.13.2: ideas de temas desde la skill de TikTok y usuario de TikTok guardado · Claude Code (sesión en la nube)
-  - Pendiente: avisar a la Matriz de Redes y a `tiktok-studio` con fecha y commit. Para Emi: el puente de TikTok pide «sin voces realistas hechas con IA»; la voz de Vox (ElevenLabs) lo es, y eso lo decide él con la sesión de TikTok.
+  - Último: 24 nov 2026 · Vox Studio 0.14.0: previa antes del render, tipografía en movimiento y foto viva · Claude Code (sesión en la nube)
+  - Pendiente: que Emi vea la prueba y elija; fusionar a `main`; subir el paquete nuevo a la app.
 - **X** (público) · https://github.com/lianfixx/X · último cambio 23 nov 2026 · skills: x-viral
   - Skill para planear, redactar, revisar, publicar con aprobación (API oficial de X) y medir las publicaciones de @emilianomilla en X, apoyada en el código público del algoritmo de X (xai-org/x-algorithm).
   - Último: 23 nov 2026 · Meme de la consulta de expedientes · Claude Code (sesión en la nube)
