@@ -53,7 +53,7 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 
 | Cerebro | Repos | Commits esta semana | Semana pasada | Días sin movimiento | Pendientes | Vencidos |
 |---|---|---|---|---|---|---|
-| Castorena | 4 | 19 | 19 | -1 | 0 | 0 |
+| Castorena | 4 | 20 | 19 | -1 | 0 | 0 |
 | MILLA ABOGADOS | 5 | 0 | 0 | 19 | 0 | 0 |
 | Acción Tlalnepantla | 1 | 0 | 0 | 19 | 0 | 0 |
 | Contenido y video | 7 | 3 | 64 | -1 | 0 | 0 |
@@ -62,7 +62,7 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 | Herramientas | 5 | 2 | 6 | 0 | 0 | 0 |
 | Sitios web | 3 | 0 | 0 | 11 | 0 | 0 |
 
-Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 384, ChatGPT · Codex 39, GitHub Actions 26.
+Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 385, ChatGPT · Codex 39, GitHub Actions 26.
 
 Vencimientos: Renovación de la conexión Claude–box el 7 dic 2026; Token de GitHub «MATRIZ lectura» el 9 feb 2027; Token de GitHub «MATRIZ escritura» (edición desde el panel) el 12 nov 2027; Llave de GitHub «Matriz administración (Claude)» el 12 nov 2027; Llave de Cloudflare «Matriz administración (Claude)» el 12 nov 2027.
 
@@ -83,8 +83,8 @@ Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP,
   - Último: 4 nov 2026 · corrección: puentes de skill con YAML válido · Claude Code (sesión en la nube)
 - **dof-juridico-monitor** (público) · https://github.com/lianfixx/dof-juridico-monitor · último cambio 23 nov 2026 · skills: dof-castorena
   - Sistema autónomo, auditable y agnóstico de proveedor para revisar el Diario Oficial de la Federación (DOF), verificar cobertura, detectar novedades jurídicas relevantes y producir entregables ejecutivos y de estudio.
-  - Último: 23 nov 2026 · relevo entre el lector por API y la suscripción (fin de la sombra) · claude.ai (sesión en la nube, claude-fable-5-2)
-  - Pendiente: actualizar el texto de las tres tareas programadas en Claude con estos archivos; primera noche con relevo y primer cierre con notas de la API.
+  - Último: 23 nov 2026 · Skill 1.4.0 · redacción del reporte y de la guía, relevo en operación y regla de sincronía · claude.ai (sesión en la nube, claude-fable-5-2)
+  - Pendiente: actualizar el texto de las tareas de cierre en Claude; primer paquete con la redacción nueva (martes 24); que Emi lo lea y marque lo que aún no suene a él.
 
 ### Tareas programadas
 
