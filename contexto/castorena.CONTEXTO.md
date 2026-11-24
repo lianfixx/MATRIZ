@@ -52,8 +52,8 @@ Sistema autónomo, auditable y agnóstico de proveedor para revisar el Diario Of
 
 Skills: `dof-castorena`
 
-Último registro: 23 nov 2026 · auditoría del relevo y de la redacción: cinco correcciones · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
-Pendiente: que Emi confirme la causa de la programación (editar una línea `cron` desde su cuenta) y decida si la lanzadora se queda.
+Último registro: 23 nov 2026 · corrección: la tarea lanzadora no existe todavía · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
+Pendiente: decisión de Emi sobre la lanzadora o la edición del `cron` desde su cuenta.
 
 ## Tareas programadas
 
