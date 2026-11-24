@@ -229,7 +229,7 @@
           "url": "https://github.com/lianfixx/dof-juridico-monitor",
           "visibilidad": "público",
           "leido": true,
-          "ultimo_cambio": "2026-11-23",
+          "ultimo_cambio": "2026-11-24",
           "resumen": "Sistema autónomo, auditable y agnóstico de proveedor para revisar el Diario Oficial de la Federación (DOF), verificar cobertura, detectar novedades jurídicas relevantes y producir entregables ejecutivos y de estudio.",
           "skills": [
             {
@@ -239,6 +239,12 @@
           ],
           "protocolo": "1.1.0",
           "registro": [
+            {
+              "fecha": "2026-11-24",
+              "titulo": "causa real del relevo NINGUNO: el acceso viene de los repositorios de cada tarea",
+              "agente": "claude.ai (sesión en la nube, claude-fable-5-2)",
+              "pendiente": "primera noche con relevo real, miércoles 25/11."
+            },
             {
               "fecha": "2026-11-23",
               "titulo": "las tareas cargan add_repo antes de usarlo",
@@ -280,12 +286,6 @@
               "titulo": "relevo entre el lector por API y la suscripción (fin de la sombra)",
               "agente": "claude.ai (sesión en la nube, claude-fable-5-2)",
               "pendiente": "actualizar el texto de las tres tareas programadas en Claude con estos archivos; primera noche con relevo y primer cierre con notas de la API."
-            },
-            {
-              "fecha": "2026-11-23",
-              "titulo": "Skill 1.3.2 · horario 19:17 con reintento, aviso por issue, guardia y comprobación real de las tablas",
-              "agente": "claude.ai (sesión en la nube, claude-fable-5-2)",
-              "pendiente": "cuatro comparaciones en sombra; guardar la skill 1.3.2 en Claude (tarjeta enviada a Emi)."
             }
           ],
           "actividad": {
@@ -307,10 +307,10 @@
               10,
               3,
               0,
-              17
+              18
             ],
             "actores_60d": {
-              "Claude": 29,
+              "Claude": 30,
               "ChatGPT · Codex": 1,
               "Emi": 82
             }
@@ -2174,9 +2174,9 @@
           113,
           29,
           19,
-          32
+          33
         ],
-        "esta_semana": 32,
+        "esta_semana": 33,
         "semana_pasada": 19,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2336,11 +2336,11 @@
       196,
       255,
       90,
-      37
+      38
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 397,
+      "Claude": 398,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 26
     },
