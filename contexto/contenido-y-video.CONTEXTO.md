@@ -81,8 +81,8 @@ Skill de la cuenta personal de Emi en TikTok: decide qué video hacer, para qui�
 
 Skills: `tiktok-studio`
 
-Último registro: 24 nov 2026 · Propuesta de TikTok sobre X y la experiencia laboral en el perfil · Agente: Claude Code (sesión en la nube)
-Pendiente: el formato que elija Emi y su video.
+Último registro: 24 nov 2026 · Video de X y LinkedIn armado como meme fijo · Agente: Claude Code (sesión en la nube)
+Pendiente: la aprobación de Emi.
 
 ### LinkedIn (público)
 

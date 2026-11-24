@@ -4,9 +4,9 @@ cerebro: "Contenido y video"
 visibilidad: "público"
 ultimo_cambio: 2026-11-24
 skills: 1
-commits_8_semanas: 21
+commits_8_semanas: 22
 ultimo_agente: "Claude Code (sesión en la nube)"
-pendiente: "el formato que elija Emi y su video."
+pendiente: "la aprobación de Emi."
 github: "https://github.com/lianfixx/TikTok"
 tags:
   - "repo"
@@ -28,12 +28,12 @@ Skill de la cuenta personal de Emi en TikTok: decide qué video hacer, para qui�
 
 ## Últimos registros
 
+- 24 nov 2026 · Video de X y LinkedIn armado como meme fijo · Agente: Claude Code (sesión en la nube)
 - 24 nov 2026 · Propuesta de TikTok sobre X y la experiencia laboral en el perfil · Agente: Claude Code (sesión en la nube)
 - 24 nov 2026 · Liga del OAJ en el meme de la Consulta de Expedientes · Agente: Claude Code (sesión en la nube)
 - 23 nov 2026 · Meme de la Consulta de Datos de Expedientes, listo para aprobar · Agente: Claude Code (sesión en la nube)
 - 19 nov 2026 · Publicado en TikTok el video del SAT · Agente: Claude Code (sesión en la nube)
-- 19 nov 2026 · Video de 2020 retirado y medición desde el próximo video · Agente: Claude Code (sesión en la nube)
 
 ## Pendiente más reciente
 
-el formato que elija Emi y su video.
+la aprobación de Emi.
