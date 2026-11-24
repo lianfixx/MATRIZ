@@ -53,7 +53,7 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 
 | Cerebro | Repos | Commits esta semana | Semana pasada | Días sin movimiento | Pendientes | Vencidos |
 |---|---|---|---|---|---|---|
-| Castorena | 4 | 23 | 19 | -1 | 0 | 0 |
+| Castorena | 4 | 25 | 19 | 0 | 0 | 0 |
 | MILLA ABOGADOS | 5 | 0 | 0 | 19 | 0 | 0 |
 | Acción Tlalnepantla | 1 | 0 | 0 | 19 | 0 | 0 |
 | Contenido y video | 7 | 3 | 64 | -1 | 0 | 0 |
@@ -62,7 +62,7 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 | Herramientas | 5 | 2 | 6 | 0 | 0 | 0 |
 | Sitios web | 3 | 0 | 0 | 11 | 0 | 0 |
 
-Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 388, ChatGPT · Codex 39, GitHub Actions 26.
+Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 390, ChatGPT · Codex 39, GitHub Actions 26.
 
 Vencimientos: Renovación de la conexión Claude–box el 7 dic 2026; Token de GitHub «MATRIZ lectura» el 9 feb 2027; Token de GitHub «MATRIZ escritura» (edición desde el panel) el 12 nov 2027; Llave de GitHub «Matriz administración (Claude)» el 12 nov 2027; Llave de Cloudflare «Matriz administración (Claude)» el 12 nov 2027.
 
@@ -74,10 +74,10 @@ Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP,
 
 ### Repositorios
 
-- **Cerebro-Castorena-** (público) · https://github.com/lianfixx/Cerebro-Castorena- · último cambio 24 nov 2026 · skills: matriz-castorena
+- **Cerebro-Castorena-** (público) · https://github.com/lianfixx/Cerebro-Castorena- · último cambio 23 nov 2026 · skills: matriz-castorena
   - Matriz documental de Emi para Castorena Abogados. Aquí están las cinco tablas de referencia, las versiones recuperadas, las reglas de trabajo y los pendientes.
-  - Último: 24 nov 2026 · Cierre diario programado: sin cambios · Claude Code (ejecución programada)
-  - Pendiente: Emi sube INDEP v24 y Concentrado 19013131d8dd a Drive, Escritorio e iCloud.
+  - Último: 23 nov 2026 · Fecha real del cierre de hoy, auditoría contra fechas futuras y reloj de GitHub (skill 1.6.2) · claude.ai (sesión en la nube, claude-fable-5-2)
+  - Pendiente: guardar la skill 1.6.2 en Claude (tarjeta en el chat).
 - **INDEP** (privado) · https://github.com/lianfixx/INDEP · último cambio 23 nov 2026
 - **Escritos-juridicos-CASTORENA** (público) · https://github.com/lianfixx/Escritos-juridicos-CASTORENA · último cambio 4 nov 2026 · skills: escritos-juridicos-castorena
   - Último: 4 nov 2026 · corrección: puentes de skill con YAML válido · Claude Code (sesión en la nube)
