@@ -5,13 +5,13 @@ Desde el 23/11/2026 la Matriz usa la API de Claude para tres cosas. Todo lo hace
 | Función | Cuándo | Modelo | Qué deja |
 |---|---|---|---|
 | Segunda red de privacidad | En cada actualización que trae líneas nuevas | Haiku 5.5 | Un aviso en Issues si queda un posible dato de cliente o personal |
-| Retroalimentación semanal | Domingo 19:07 | Sonnet 5.5 | `revisiones/AAAA-MM-DD-ia.md` y `.json` |
-| Propuesta de clasificación | Domingo 19:07, mismo archivo | Haiku 5.5 | A qué cerebro va cada repositorio nuevo, con su confianza |
+| Retroalimentación semanal | Domingo, antes de la revisión de las 20:13 | Sonnet 5.5 | `revisiones/AAAA-MM-DD-ia.md` y `.json` |
+| Propuesta de clasificación | Domingo, mismo archivo | Haiku 5.5 | A qué cerebro va cada repositorio nuevo, con su confianza |
 
 ## Cómo encaja
 
 - **Segunda red.** Es un paso de «Actualizar la Matriz», entre «Generar» y «Guardar». Lee solo las líneas nuevas de los archivos generados, ya pasadas por `reservar()`. Si marca algo con confianza de 0.85 o más, abre o actualiza el aviso «Segunda red de privacidad». El aviso dice archivo, línea y categoría; **nunca copia el texto**. No detiene la publicación: es un aviso, no un freno.
-- **Revisión semanal de la IA.** Workflow «Inteligencia semanal (API)». Lee la bitácora pública de los últimos siete días y la tabla de actividad. Cada punto debe citar repositorios y días; el script comprueba que existan juntos en la bitácora y descarta lo que no pueda comprobar. La revisión semanal de Claude (domingo 20:13, [REVISION_SEMANAL.md](REVISION_SEMANAL.md)) empieza leyendo ese archivo y decide qué aplicar.
+- **Revisión semanal de la IA.** Workflow «Inteligencia semanal (API)». Lee la bitácora pública de los últimos siete días y la tabla de actividad. Cada punto debe citar repositorios y días; el script comprueba que existan juntos en la bitácora y descarta lo que no pueda comprobar. La revisión semanal de Claude (domingo 20:13, [REVISION_SEMANAL.md](REVISION_SEMANAL.md)) empieza leyendo ese archivo y decide qué aplicar; si todavía no existe, ella misma lanza el workflow y lo espera. El reloj de GitHub (domingo 19:07) es solo un respaldo, porque dispara con horas de retraso o no dispara: una corrida suya que llegue tarde no repite la revisión ni gasta.
 - **Clasificación.** Solo para repositorios nuevos públicos. Con confianza menor a 0.80, o con un cerebro que no existe, queda como «preguntar a Emi». Los privados sin cerebro no se nombran ni se envían: los clasifica la revisión de Claude.
 
 - **Prueba semanal de la red.** Cada domingo el mismo workflow manda a Haiku dos líneas ficticias, una con datos inventados. Si no la marca, la corrida queda en rojo y GitHub avisa por correo. Así se sabe que la red sigue viendo, aunque en la semana no haya marcado nada.

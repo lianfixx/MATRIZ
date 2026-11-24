@@ -1,7 +1,11 @@
 name: Inteligencia semanal (API)
 
-# Cada domingo a las 19:07 (hora del centro de México), una hora antes de la revisión semanal de
-# Claude: Sonnet 5.5 lee la bitácora pública de la semana y escribe la retroalimentación; Haiku 5.5
+# Cada domingo, antes de la revisión semanal de Claude (20:13, hora del centro de México). La lanza
+# la propia revisión si todavía no existe la de hoy (docs/REVISION_SEMANAL.md, paso 1b). El reloj de
+# GitHub (línea `cron`) queda solo como respaldo: medido el 23/11/2026, dispara con horas de retraso
+# o no dispara. Si su corrida llega cuando ya no es domingo, o cuando la revisión de hoy ya existe,
+# el trabajo «reloj» la termina sin llamar a la API.
+# Qué hace: Sonnet 5.5 lee la bitácora pública de la semana y escribe la retroalimentación; Haiku 5.5
 # propone el cerebro de los repositorios nuevos. Resultado: revisiones/AAAA-MM-DD-ia.md y .json,
 # con su entrada en CHANGELOG.md. Solo propone: no toca matriz.config.json ni ningún otro
 # repositorio. Paga con los créditos de API (secreto ANTHROPIC_API_KEY, espacio «matriz»), nunca
@@ -9,7 +13,7 @@ name: Inteligencia semanal (API)
 # Los registros solo muestran conteos y costo. Ver docs/INTELIGENCIA.md.
 on:
   schedule:
-    - cron: "7 1 * * 1" # domingo 19:07 CDMX = lunes 01:07 UTC (GitHub puede retrasarlo unos minutos)
+    - cron: "7 1 * * 1" # respaldo: domingo 19:07 CDMX = lunes 01:07 UTC (GitHub puede tardar horas o no dispararla)
   workflow_dispatch:
     inputs:
       seco:
@@ -25,7 +29,30 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  reloj:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    outputs:
+      seguir: ${{ steps.r.outputs.seguir }}
+    steps:
+      - id: r
+        env:
+          EVENTO: ${{ github.event_name }}
+          GH_TOKEN: ${{ github.token }}
+          TZ: America/Mexico_City
+        run: |
+          seguir=true
+          if [ "$EVENTO" = "schedule" ]; then
+            if [ "$(date +%u)" != "7" ]; then
+              seguir=false; echo "GitHub disparó la corrida programada cuando ya no es domingo ($(date '+%F %H:%M'), hora de México): no se hace nada." | tee -a "$GITHUB_STEP_SUMMARY"
+            elif gh api "repos/$GITHUB_REPOSITORY/contents/revisiones/$(date +%F)-ia.md" --silent 2> /dev/null; then
+              seguir=false; echo "La revisión de hoy ya existe: no se repite." | tee -a "$GITHUB_STEP_SUMMARY"
+            fi
+          fi
+          echo "seguir=$seguir" >> "$GITHUB_OUTPUT"
   semanal:
+    needs: reloj
+    if: needs.reloj.outputs.seguir == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:

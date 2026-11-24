@@ -21,7 +21,7 @@
 La página se actualiza sola: cada minuto (y al volver a la pestaña) revisa si hay datos nuevos y los pinta sin recargar; el punto verde junto a la fecha late cuando llegan. Si estás escribiendo, espera a que termines. La Matriz se regenera:
 
 - **En cuanto cambia cualquiera de tus repositorios**: GitHub avisa al panel (`/gancho`, aviso firmado con `GANCHO_SECRETO`) y el panel pide la actualización. De un cambio a verlo en la página pasan unos 2 a 4 minutos.
-- **Cada 10 minutos**, con un reloj de Cloudflare, por si un aviso se pierde (más puntual que el horario de GitHub, que también sigue cada 15 minutos).
+- **Cada 10 minutos**, con un reloj de Cloudflare, por si un aviso se pierde (el horario de GitHub sigue como último respaldo, pero de sus 96 turnos diarios dispara 3 o 4, medido el 23/11/2026).
 - **Después de cada edición desde el panel.**
 
 Solo se guarda y se publica si algo cambió.
