@@ -2,9 +2,9 @@
 tipo: "repo"
 cerebro: "Contenido y video"
 visibilidad: "público"
-ultimo_cambio: 2026-11-22
+ultimo_cambio: 2026-11-24
 skills: 1
-commits_8_semanas: 74
+commits_8_semanas: 75
 ultimo_agente: "Claude Code (sesión en la nube)"
 pendiente: "la sesión de X arma la pieza del hilo del mapa; Emi la aprueba; el PDF debe ser público."
 github: "https://github.com/lianfixx/REDES"
@@ -16,7 +16,7 @@ generado: "tools/generar.py · no editar a mano: se reescribe cada día"
 
 # REDES
 
-Cerebro: [[Contenido y video]] · público · último cambio: 22 nov 2026
+Cerebro: [[Contenido y video]] · público · último cambio: 24 nov 2026
 
 [Abrir en GitHub](https://github.com/lianfixx/REDES)
 
