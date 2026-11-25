@@ -40,7 +40,7 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 
 ## Repositorios nuevos por clasificar
 
-- `1 repositorio privado (nombre reservado)` · privado
+- `2 repositorios privados (nombre reservado)` · privado
 
 La revisión semanal los asigna a su cerebro; si alguno es dudoso, le pregunta a Emi.
 
