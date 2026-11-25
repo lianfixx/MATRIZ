@@ -27,13 +27,13 @@ Privado: pide acceso a Emi o usa un conector de GitHub con su sesión.
 
 ### ESTUDIO-TEMAS (público)
 
-https://github.com/lianfixx/ESTUDIO-TEMAS · último cambio: 17 nov 2026
+https://github.com/lianfixx/ESTUDIO-TEMAS · último cambio: 25 nov 2026
 
 Apuntes de estudio claros, fundamentados y fáciles de continuar con otra IA.
 
 Skills: `pizarras-de-estudio`
 
-Último registro: 4 nov 2026 · corrección: puentes de skill con YAML válido · Agente: Claude Code (sesión en la nube)
+Último registro: 25 nov 2026 · .gitignore excluye archivos .env · Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
 
 ## Skills instaladas en Claude
 

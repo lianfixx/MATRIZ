@@ -2,11 +2,10 @@
 tipo: "repo"
 cerebro: "Castorena"
 visibilidad: "público"
-ultimo_cambio: 2026-11-24
+ultimo_cambio: 2026-11-25
 skills: 1
-commits_8_semanas: 87
-ultimo_agente: "claude.ai (sesión en la nube, claude-opus-5-5)"
-pendiente: "primera entrega con estas reglas, jueves 26/11/2026."
+commits_8_semanas: 88
+ultimo_agente: "claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)"
 github: "https://github.com/lianfixx/dof-juridico-monitor"
 tags:
   - "repo"
@@ -16,7 +15,7 @@ generado: "tools/generar.py · no editar a mano: se reescribe cada día"
 
 # dof-juridico-monitor
 
-Cerebro: [[Castorena]] · público · último cambio: 24 nov 2026
+Cerebro: [[Castorena]] · público · último cambio: 25 nov 2026
 
 [Abrir en GitHub](https://github.com/lianfixx/dof-juridico-monitor)
 
@@ -28,12 +27,8 @@ Sistema autónomo, auditable y agnóstico de proveedor para revisar el Diario Of
 
 ## Últimos registros
 
+- 25 nov 2026 · Seguridad · acciones de GitHub fijadas a su versión exacta · Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
 - 24 nov 2026 · Skill 1.5.1 · respuestas de Emi sobre la versión final · Agente: claude.ai (sesión en la nube, claude-opus-5-5)
 - 24 nov 2026 · Skill 1.5.0 · una sola tabla y correo BLUF, con la versión final de Emi · Agente: claude.ai (sesión en la nube, claude-opus-5-5)
 - 24 nov 2026 · causa real del relevo NINGUNO: el acceso viene de los repositorios de cada tarea · Agente: claude.ai (sesión en la nube, claude-fable-5-2)
 - 24 nov 2026 · la síntesis del lector por API ya no afirma ausencias que solo valen para un grupo · Agente: Claude Code (ejecución programada)
-- 23 nov 2026 · las tareas cargan add_repo antes de usarlo · Agente: claude.ai (sesión en la nube, claude-opus-5-5)
-
-## Pendiente más reciente
-
-primera entrega con estas reglas, jueves 26/11/2026.

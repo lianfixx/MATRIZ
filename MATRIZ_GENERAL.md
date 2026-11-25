@@ -53,20 +53,20 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 
 | Cerebro | Repos | Commits esta semana | Semana pasada | Días sin movimiento | Pendientes | Vencidos |
 |---|---|---|---|---|---|---|
-| Castorena | 4 | 39 | 19 | 0 | 0 | 0 |
+| Castorena | 4 | 41 | 19 | 0 | 0 | 0 |
 | MILLA ABOGADOS | 5 | 0 | 0 | 21 | 0 | 0 |
 | Acción Tlalnepantla | 1 | 0 | 0 | 21 | 0 | 0 |
-| Contenido y video | 7 | 12 | 64 | 0 | 0 | 0 |
-| Estudio | 2 | 0 | 1 | 8 | 0 | 0 |
+| Contenido y video | 7 | 13 | 64 | 0 | 0 | 0 |
+| Estudio | 2 | 1 | 1 | 0 | 0 | 0 |
 | Productos | 2 | 1 | 0 | 0 | 0 | 0 |
 | Herramientas | 5 | 3 | 6 | 0 | 0 | 0 |
 | Sitios web | 3 | 3 | 0 | 0 | 0 | 0 |
 
-Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 416, ChatGPT · Codex 39, GitHub Actions 28.
+Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 420, ChatGPT · Codex 39, GitHub Actions 28.
 
 Vencimientos: Renovación de la conexión Claude–box el 7 dic 2026; Token de GitHub «MATRIZ lectura» el 9 feb 2027; Token de GitHub «MATRIZ escritura» (edición desde el panel) el 12 nov 2027; Llave de GitHub «Matriz administración (Claude)» el 12 nov 2027; Llave de Cloudflare «Matriz administración (Claude)» el 12 nov 2027.
 
-Avisos: repositorio nuevo sin cerebro: 3 repositorios privados (nombre reservado).
+Avisos: repositorio nuevo sin cerebro: video-vox; repositorio nuevo sin cerebro: 3 repositorios privados (nombre reservado).
 
 ## Guardián (seguridad y privacidad)
 
@@ -88,15 +88,13 @@ Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP,
 
 - **Cerebro-Castorena-** (público) · https://github.com/lianfixx/Cerebro-Castorena- · último cambio 25 nov 2026 · skills: matriz-castorena
   - Matriz documental de Emi para Castorena Abogados. Aquí están las cinco tablas de referencia, las versiones recuperadas, las reglas de trabajo y los pendientes.
-  - Último: 24 nov 2026 · Cierre diario programado: sin cambios · Claude Code (ejecución programada)
-  - Pendiente: Emi sube INDEP v24 y Concentrado 19013131d8dd a Drive, Escritorio e iCloud.
+  - Último: 25 nov 2026 · .gitignore excluye archivos .env · claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
 - **INDEP** (privado) · https://github.com/lianfixx/INDEP · último cambio 25 nov 2026
 - **Escritos-juridicos-CASTORENA** (público) · https://github.com/lianfixx/Escritos-juridicos-CASTORENA · último cambio 4 nov 2026 · skills: escritos-juridicos-castorena
   - Último: 4 nov 2026 · corrección: puentes de skill con YAML válido · Claude Code (sesión en la nube)
-- **dof-juridico-monitor** (público) · https://github.com/lianfixx/dof-juridico-monitor · último cambio 24 nov 2026 · skills: dof-castorena
+- **dof-juridico-monitor** (público) · https://github.com/lianfixx/dof-juridico-monitor · último cambio 25 nov 2026 · skills: dof-castorena
   - Sistema autónomo, auditable y agnóstico de proveedor para revisar el Diario Oficial de la Federación (DOF), verificar cobertura, detectar novedades jurídicas relevantes y producir entregables ejecutivos y de estudio.
-  - Último: 24 nov 2026 · Skill 1.5.1 · respuestas de Emi sobre la versión final · claude.ai (sesión en la nube, claude-opus-5-5)
-  - Pendiente: primera entrega con estas reglas, jueves 26/11/2026.
+  - Último: 25 nov 2026 · Seguridad · acciones de GitHub fijadas a su versión exacta · claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
 
 ### Tareas programadas
 
@@ -168,8 +166,7 @@ Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio,
   - Último: 25 nov 2026 · Control automático entre IA (registro y secretos) · claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
 - **REDES** (público) · https://github.com/lianfixx/REDES · último cambio 25 nov 2026 · skills: matriz-redes
   - La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, Instagram) y de video (Vox Studio, Pizarra Studio, Editor Studio, MILLA Video Studio, Historias Studio). Registra las ideas, decide en qué red y formato sale cada una, arma el calendario de todas…
-  - Último: 19 nov 2026 · X: responder a un post ya publicado · Claude Code (sesión en la nube)
-  - Pendiente: la sesión de X arma la pieza del hilo del mapa; Emi la aprueba; el PDF debe ser público.
+  - Último: 25 nov 2026 · .gitignore excluye archivos .env · claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
 - **Instagram** (público) · https://github.com/lianfixx/Instagram · último cambio 13 nov 2026 · skills: instagram-studio
   - Skill para planear, redactar, revisar, entregar para publicar y medir los Reels, publicaciones del feed y carruseles de la cuenta personal de Emi en Instagram. Pilares: IA + Derecho en México, estilo de vida y gym y opinión política. Sirve en cualquier IA.
   - Último: 13 nov 2026 · instagram-studio 1.0.1: correcciones de la auditoría independiente · Claude Code (sesión en la nube)
@@ -204,9 +201,9 @@ Maestría en Alta Dirección y pizarras de estudio.
 ### Repositorios
 
 - **maestria-alta-direccion** (privado) · https://github.com/lianfixx/maestria-alta-direccion · último cambio 7 nov 2026
-- **ESTUDIO-TEMAS** (público) · https://github.com/lianfixx/ESTUDIO-TEMAS · último cambio 17 nov 2026 · skills: pizarras-de-estudio
+- **ESTUDIO-TEMAS** (público) · https://github.com/lianfixx/ESTUDIO-TEMAS · último cambio 25 nov 2026 · skills: pizarras-de-estudio
   - Apuntes de estudio claros, fundamentados y fáciles de continuar con otra IA.
-  - Último: 4 nov 2026 · corrección: puentes de skill con YAML válido · Claude Code (sesión en la nube)
+  - Último: 25 nov 2026 · .gitignore excluye archivos .env · claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
 
 ### Skills instaladas en Claude
 

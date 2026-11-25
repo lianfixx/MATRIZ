@@ -16,30 +16,31 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 
 | Cerebro | Repos | Esta semana | Sin movimiento | Pendientes | Qué es |
 |---|---|---|---|---|---|
-| [[Castorena]] | 4 | 39 commits | 0 días | 0 | Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP, escritos y monitor del DOF. |
+| [[Castorena]] | 4 | 41 commits | 0 días | 0 | Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP, escritos y monitor del DOF. |
 | [[MILLA ABOGADOS]] | 5 | 0 commits | 21 días | 0 | El despacho de Emi: sitio, asesorías, monitoreo de expedientes, captación e Impulso Libre. |
 | [[Acción Tlalnepantla]] | 1 | 0 commits | 21 días | 0 | Acción Política Juvenil Tlalnepantla (PAN): sitio, formatos, eventos y materiales. |
-| [[Contenido y video]] | 7 | 12 commits | 0 días | 0 | Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio, X, Instagram, TikTok, LinkedIn, la matriz de redes (REDES) e historias de Instagram. |
-| [[Estudio]] | 2 | 0 commits | 8 días | 0 | Maestría en Alta Dirección y pizarras de estudio. |
+| [[Contenido y video]] | 7 | 13 commits | 0 días | 0 | Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio, X, Instagram, TikTok, LinkedIn, la matriz de redes (REDES) e historias de Instagram. |
+| [[Estudio]] | 2 | 1 commits | 0 días | 0 | Maestría en Alta Dirección y pizarras de estudio. |
 | [[Productos]] | 2 | 1 commits | 0 días | 0 | Productos propios de Emi: PANEL FIRMA (gestión jurídica) y Mes (finanzas personales). |
 | [[Herramientas]] | 5 | 3 commits | 0 días | 0 | Piezas que sirven a todos los cerebros: estilo de Emi, selector de modelo, entorno de Cloudflare, computadora virtual (Simular Box) e ingeniería inversa. |
 | [[Sitios web]] | 3 | 3 commits | 0 días | 0 | Sitios web de Emi ya publicados que se recuperan y mantienen: su página personal (emilianomilla.site), Sistemas Digitales y Vicente Diablo (música en vivo). |
 
 ## Lo último que se hizo
 
+- 25 nov 2026 · **Cerebro-Castorena-** · .gitignore excluye archivos .env · Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
+- 25 nov 2026 · **dof-juridico-monitor** · Seguridad · acciones de GitHub fijadas a su versión exacta · Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
 - 25 nov 2026 · **VIDEOS-IA-SKILL-MILLA** · Decisiones de Emi sobre el lenguaje de cámara y paquetes en la app · Agente: Claude (claude.ai, panel de Claude in Chrome; modelo Claude Opus 5.5)
 - 25 nov 2026 · **VIDEOS-IA-SKILL-MILLA** · Lenguaje de cámara para prompts de imagen y de video generado (Editor Studio 0.2.2, Vox Studio 0.14.1, MILLA Video Studio 1.1.2) · Agente: Claude (claude.ai, panel de Claude in Chrome; modelo Claude Opus 5.5)
 - 25 nov 2026 · **HISTORIAS-** · Control automático entre IA (registro y secretos) · Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
+- 25 nov 2026 · **REDES** · .gitignore excluye archivos .env · Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
+- 25 nov 2026 · **ESTUDIO-TEMAS** · .gitignore excluye archivos .env · Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
 - 25 nov 2026 · **mes.** · Control automático entre IA (registro y secretos) · Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
 - 25 nov 2026 · **cloudfare** · Control automático entre IA (registro y secretos) · Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
 - 25 nov 2026 · **emilianomilla-site** · Control automático entre IA (registro y secretos) · Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
-- 25 nov 2026 · **sistemas-digitales** · Control automático entre IA (registro y secretos) · Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
-- 25 nov 2026 · **vicente-diablo** · Control automático entre IA (registro y secretos) · Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
-- 24 nov 2026 · **Cerebro-Castorena-** · Cierre diario programado: sin cambios · Agente: Claude Code (ejecución programada)
-- 24 nov 2026 · **dof-juridico-monitor** · Skill 1.5.1 · respuestas de Emi sobre la versión final · Agente: claude.ai (sesión en la nube, claude-opus-5-5)
 
 ## Repositorios nuevos por clasificar
 
+- `video-vox` · público · creado el 25 nov 2026
 - `3 repositorios privados (nombre reservado)` · privado
 
 La revisión semanal los asigna a su cerebro; si alguno es dudoso, le pregunta a Emi.

@@ -24,6 +24,12 @@
           "protocolo": "1.1.0",
           "registro": [
             {
+              "fecha": "2026-11-25",
+              "titulo": ".gitignore excluye archivos .env",
+              "agente": "claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)",
+              "pendiente": ""
+            },
+            {
               "fecha": "2026-11-24",
               "titulo": "Cierre diario programado: sin cambios",
               "agente": "Claude Code (ejecución programada)",
@@ -64,12 +70,6 @@
               "titulo": "Cierre diario programado: sin cambios",
               "agente": "Claude Code (ejecución programada)",
               "pendiente": "subir INDEP v24 y Concentrado 19013131d8dd a Drive, Escritorio e iCloud."
-            },
-            {
-              "fecha": "2026-11-21",
-              "titulo": "Cierre diario programado: sin cambios",
-              "agente": "Claude Code (ejecución programada)",
-              "pendiente": "subir INDEP v24 y Concentrado 19013131d8dd a Drive, Escritorio e iCloud."
             }
           ],
           "actividad": {
@@ -91,10 +91,10 @@
               15,
               14,
               10,
-              9
+              10
             ],
             "actores_60d": {
-              "Claude": 41,
+              "Claude": 42,
               "Emi": 6,
               "ChatGPT · Codex": 1
             }
@@ -229,7 +229,7 @@
           "url": "https://github.com/lianfixx/dof-juridico-monitor",
           "visibilidad": "público",
           "leido": true,
-          "ultimo_cambio": "2026-11-24",
+          "ultimo_cambio": "2026-11-25",
           "resumen": "Sistema autónomo, auditable y agnóstico de proveedor para revisar el Diario Oficial de la Federación (DOF), verificar cobertura, detectar novedades jurídicas relevantes y producir entregables ejecutivos y de estudio.",
           "skills": [
             {
@@ -239,6 +239,12 @@
           ],
           "protocolo": "1.1.0",
           "registro": [
+            {
+              "fecha": "2026-11-25",
+              "titulo": "Seguridad · acciones de GitHub fijadas a su versión exacta",
+              "agente": "claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)",
+              "pendiente": ""
+            },
             {
               "fecha": "2026-11-24",
               "titulo": "Skill 1.5.1 · respuestas de Emi sobre la versión final",
@@ -280,12 +286,6 @@
               "titulo": "Skill 1.4.1 · causa real del reloj de GitHub y tarea lanzadora",
               "agente": "claude.ai (sesión en la nube, claude-fable-5-2)",
               "pendiente": "primera corrida real de la tarea lanzadora, el miércoles 25/11/2026 a las 19:17."
-            },
-            {
-              "fecha": "2026-11-23",
-              "titulo": "corrección: la tarea lanzadora no existe todavía",
-              "agente": "claude.ai (sesión en la nube, claude-fable-5-2)",
-              "pendiente": "decisión de Emi sobre la lanzadora o la edición del `cron` desde su cuenta."
             }
           ],
           "actividad": {
@@ -307,10 +307,10 @@
               10,
               3,
               0,
-              21
+              22
             ],
             "actores_60d": {
-              "Claude": 33,
+              "Claude": 34,
               "ChatGPT · Codex": 1,
               "Emi": 82
             }
@@ -954,6 +954,12 @@
           "protocolo": "1.1.0",
           "registro": [
             {
+              "fecha": "2026-11-25",
+              "titulo": ".gitignore excluye archivos .env",
+              "agente": "claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)",
+              "pendiente": ""
+            },
+            {
               "fecha": "2026-11-19",
               "titulo": "X: responder a un post ya publicado",
               "agente": "Claude Code (sesión en la nube)",
@@ -994,12 +1000,6 @@
               "titulo": "TikTok: cuenta @emiliano_milla_ activa",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "aprobación de la descripción del DOF; cuenta de Instagram."
-            },
-            {
-              "fecha": "2026-11-18",
-              "titulo": "X Premium: posts largos en el panel",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "si Emi conserva Premium, cambiar la fecha de `X_PREMIUM_HASTA`."
             }
           ],
           "actividad": {
@@ -1021,11 +1021,11 @@
               0,
               46,
               28,
-              3
+              4
             ],
             "actores_60d": {
+              "Claude": 49,
               "GitHub Actions": 28,
-              "Claude": 48,
               "Emi": 1
             }
           }
@@ -1321,7 +1321,7 @@
           "url": "https://github.com/lianfixx/ESTUDIO-TEMAS",
           "visibilidad": "público",
           "leido": true,
-          "ultimo_cambio": "2026-11-17",
+          "ultimo_cambio": "2026-11-25",
           "resumen": "Apuntes de estudio claros, fundamentados y fáciles de continuar con otra IA.",
           "skills": [
             {
@@ -1331,6 +1331,12 @@
           ],
           "protocolo": "1.1.0",
           "registro": [
+            {
+              "fecha": "2026-11-25",
+              "titulo": ".gitignore excluye archivos .env",
+              "agente": "claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)",
+              "pendiente": ""
+            },
             {
               "fecha": "2026-11-04",
               "titulo": "corrección: puentes de skill con YAML válido",
@@ -1381,10 +1387,10 @@
               8,
               0,
               1,
-              0
+              1
             ],
             "actores_60d": {
-              "Claude": 8,
+              "Claude": 9,
               "Emi": 6
             }
           }
@@ -2186,6 +2192,11 @@
   },
   "por_clasificar": [
     {
+      "nombre": "video-vox",
+      "visibilidad": "público",
+      "creado": "2026-11-25"
+    },
+    {
       "nombre": "3 repositorios privados (nombre reservado)",
       "visibilidad": "privado",
       "creado": ""
@@ -2203,14 +2214,14 @@
           113,
           29,
           19,
-          39
+          41
         ],
-        "esta_semana": 39,
+        "esta_semana": 41,
         "semana_pasada": 19,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
-        "pendientes_de_repos": 2,
+        "pendientes_de_repos": 0,
         "tareas_falladas": 0
       },
       "milla-abogados": {
@@ -2260,14 +2271,14 @@
           9,
           128,
           64,
-          12
+          13
         ],
-        "esta_semana": 12,
+        "esta_semana": 13,
         "semana_pasada": 64,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
-        "pendientes_de_repos": 6,
+        "pendientes_de_repos": 5,
         "tareas_falladas": 0
       },
       "estudio": {
@@ -2279,11 +2290,11 @@
           24,
           0,
           1,
-          0
+          1
         ],
-        "esta_semana": 0,
+        "esta_semana": 1,
         "semana_pasada": 1,
-        "dias_sin_movimiento": 8,
+        "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
         "pendientes_de_repos": 0,
@@ -2365,11 +2376,11 @@
       196,
       255,
       90,
-      58
+      62
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 416,
+      "Claude": 420,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 28
     },

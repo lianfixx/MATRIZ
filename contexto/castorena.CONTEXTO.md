@@ -27,8 +27,7 @@ Matriz documental de Emi para Castorena Abogados. Aquí están las cinco tablas 
 
 Skills: `matriz-castorena`
 
-Último registro: 24 nov 2026 · Cierre diario programado: sin cambios · Agente: Claude Code (ejecución programada)
-Pendiente: Emi sube INDEP v24 y Concentrado 19013131d8dd a Drive, Escritorio e iCloud.
+Último registro: 25 nov 2026 · .gitignore excluye archivos .env · Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
 
 ### INDEP (privado)
 
@@ -46,14 +45,13 @@ Skills: `escritos-juridicos-castorena`
 
 ### dof-juridico-monitor (público)
 
-https://github.com/lianfixx/dof-juridico-monitor · último cambio: 24 nov 2026
+https://github.com/lianfixx/dof-juridico-monitor · último cambio: 25 nov 2026
 
 Sistema autónomo, auditable y agnóstico de proveedor para revisar el Diario Oficial de la Federación (DOF), verificar cobertura, detectar novedades jurídicas relevantes y producir entregables ejecutivos y de estudio.
 
 Skills: `dof-castorena`
 
-Último registro: 24 nov 2026 · Skill 1.5.1 · respuestas de Emi sobre la versión final · Agente: claude.ai (sesión en la nube, claude-opus-5-5)
-Pendiente: primera entrega con estas reglas, jueves 26/11/2026.
+Último registro: 25 nov 2026 · Seguridad · acciones de GitHub fijadas a su versión exacta · Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
 
 ## Tareas programadas
 

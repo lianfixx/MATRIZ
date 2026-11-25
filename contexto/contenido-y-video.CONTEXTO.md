@@ -59,8 +59,7 @@ La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, 
 
 Skills: `matriz-redes`
 
-Último registro: 19 nov 2026 · X: responder a un post ya publicado · Agente: Claude Code (sesión en la nube)
-Pendiente: la sesión de X arma la pieza del hilo del mapa; Emi la aprueba; el PDF debe ser público.
+Último registro: 25 nov 2026 · .gitignore excluye archivos .env · Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
 
 ### Instagram (público)
 
