@@ -2453,7 +2453,7 @@
   },
   "guardian": {
     "fecha": "2026-11-25",
-    "puntaje": 13,
+    "puntaje": 32,
     "veredicto": "En riesgo",
     "chequeos": {
       "llaves": {
@@ -2483,7 +2483,7 @@
         "conteo": {
           "alto": 1,
           "medio": 1,
-          "bajo": 7
+          "bajo": 4
         },
         "por_que": "Archivos como .env, .pem o credentials.json guardan accesos completos; si se suben, se filtran todos juntos. Y una llave que vence sin aviso detiene tus automatizaciones.",
         "como": "Saca el archivo del repositorio, agrégalo a .gitignore y revoca lo que traía. Renueva antes del vencimiento: la Matriz te muestra la fecha en «Vencimientos»."
@@ -2493,7 +2493,7 @@
         "nombre": "Quién tiene acceso a qué",
         "estado": "Revisar",
         "conteo": {
-          "medio": 11,
+          "medio": 1,
           "bajo": 5
         },
         "por_que": "Cada colaborador o llave de despliegue es una puerta. Y un repositorio sin los frenos de ia/ acepta commits sin registro y sin la revisión de secretos.",
@@ -2504,7 +2504,6 @@
         "nombre": "Qué sale de tu cuenta",
         "estado": "Bien",
         "conteo": {
-          "bajo": 2,
           "info": 2
         },
         "por_que": "Todo lo de un repositorio público lo puede leer cualquiera, también lo que tus workflows publican. Una acción de GitHub de terceros sin versión fija puede cambiar y ejecutar código ajeno con tus secretos.",
@@ -2522,13 +2521,19 @@
         "por_que": "Expedientes, CURP, RFC, teléfonos o nombres de clientes en un repositorio público violan el secreto profesional y la protección de datos personales, aunque sea en un archivo viejo.",
         "como": "Saca el dato del archivo (o vuelve privado el repositorio) y agrega el nombre del cliente al secreto MATRIZ_RESERVADOS. Si estuvo en el historial de un repositorio público, considéralo visto."
       },
+      "memoria": {
+        "icono": "🧠",
+        "nombre": "Memoria para tus IA",
+        "estado": "Bien",
+        "conteo": {},
+        "por_que": "Si un AGENTS.md, CLAUDE.md o SKILL.md es demasiado largo, apunta a archivos que ya no existen o rompe el formato de la skill, la IA arranca con instrucciones a medias y nadie te avisa: el fallo es silencioso.",
+        "como": "Recorta o divide el archivo (lo detallado va a referencias que se leen cuando hacen falta), corrige o quita los enlaces rotos y valida la skill con `python3 ia/check_skill.py <carpeta>`."
+      },
       "skills": {
         "icono": "📦",
         "nombre": "Origen de tus skills",
-        "estado": "Revisar",
-        "conteo": {
-          "medio": 1
-        },
+        "estado": "Bien",
+        "conteo": {},
         "por_que": "Una skill son instrucciones (y a veces scripts) que tu IA sigue con tus permisos. Una de terceros puede cambiar sin que lo sepas.",
         "como": "Usa skills de tus repositorios. Si una es de terceros, revisa su contenido, fija la versión (una copia en tu cuenta) y vuelve a revisarla cuando la actualices."
       }
@@ -2536,7 +2541,7 @@
     "historial": [
       {
         "fecha": "2026-11-25",
-        "puntaje": 13
+        "puntaje": 32
       }
     ]
   }
