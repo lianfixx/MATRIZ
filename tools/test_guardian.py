@@ -136,8 +136,9 @@ class Publicacion(unittest.TestCase):
         self.assertEqual(r.returncode, 2)
         self.assertFalse((gu.RAIZ / "detalle.json").exists())
 
-    def test_enviar_detalle_sin_token_no_hace_nada(self):
-        self.assertIn("no se guardó", gu.enviar_detalle({"fecha": "2026-11-25"}, "lianfixx/privado", ""))
+    def test_primera_corrida_sin_aviso(self):
+        mal = gu.salida_publica(gu.puntuar([gu.hallazgo("llaves", "critico", "x", "y")]), {}, "2026-11-25")
+        self.assertEqual(gu.comparar({}, mal), "")
 
 
 if __name__ == "__main__":

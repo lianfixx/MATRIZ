@@ -18,3 +18,8 @@ notas/*
 dist/
 .wrangler/
 node_modules/
+
+# Credenciales locales: nunca en este repositorio público.
+.env
+.env.*
+!.env.example

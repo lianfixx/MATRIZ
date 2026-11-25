@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-11-25 · Guardián: detalle privado con llave de despliegue y decisiones de Emi
+
+- Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
+- Solicitud: Emi, 25/11/2026, en chat: mantener la visibilidad actual de sus repositorios («no lo quiero privado, hazlo todo como está»; el Guardián lo sigue contando), que Claude cree el resguardo privado del detalle («hazlo tú»), instalar los frenos de `ia/` donde faltan, copiar a su cuenta la skill de terceros y revisar todo lo demás.
+- Cambios: (1) El detalle ya no usa un token: el paso del Guardián lo sube al repositorio privado `lianfixx/guardian-detalle` (`detalle/AAAA-MM-DD.json` y `detalle/ULTIMO.json`) con la llave de despliegue del secreto `GUARDIAN_DEPLOY_KEY`, que solo escribe en ese repositorio, y antes comprueba que no sea público. La llave se generó en la computadora virtual de Emi y no pasó por la conversación. (2) La primera corrida no abre aviso (no hay contra qué comparar). (3) `.gitignore` excluye `.env` (hallazgo del Guardián).
+- Archivos: `tools/guardian.py`, `tools/test_guardian.py`, `.github/workflows/actualizar-matriz.yml`, `docs/GUARDIAN.md`, `.gitignore` y este registro.
+- Verificación: pruebas de `tools/` y `ia/test_guard.py` aprobadas; workflow carga como YAML.
+- Pendiente: que Emi confirme su identidad en GitHub (modo sudo) para registrar la llave de despliegue en `guardian-detalle`; permiso «Administration: read» del token de lectura para revisar colaboradores y llaves de despliegue.
+
 ## 2026-11-25 · Guardián: auditoría diaria de seguridad y privacidad de todos los repositorios
 
 - Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)

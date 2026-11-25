@@ -51,16 +51,17 @@ jobs:
         run: python3 -m unittest discover -s tools -p 'test_*.py'
       # Guardián (docs/GUARDIAN.md): una vez al día, antes de «Generar», para que su puntaje salga en matriz.json,
       # la Matriz General, el panel y el conector. Solo lee: clona cada repositorio (sin archivos de más de 2 MB)
-      # y no cambia ninguno. Aquí solo se guardan conteos; el detalle va a un repositorio privado si existen
-      # la variable GUARDIAN_REPO y el secreto GUARDIAN_TOKEN. Si falla, la Matriz se actualiza igual.
+      # y no cambia ninguno. Aquí solo se guardan conteos. El detalle va al repositorio privado
+      # lianfixx/guardian-detalle con la llave de despliegue GUARDIAN_DEPLOY_KEY, que solo puede escribir ahí;
+      # antes se comprueba que ese repositorio no sea público. Si falla, la Matriz se actualiza igual.
       - name: Guardián (una vez al día, solo lee)
         continue-on-error: true
         timeout-minutes: 10
         env:
           MATRIZ_TOKEN: ${{ secrets.MATRIZ_TOKEN }}
           MATRIZ_RESERVADOS: ${{ secrets.MATRIZ_RESERVADOS }}
-          GUARDIAN_TOKEN: ${{ secrets.GUARDIAN_TOKEN }}
-          GUARDIAN_REPO: ${{ vars.GUARDIAN_REPO }}
+          GUARDIAN_DEPLOY_KEY: ${{ secrets.GUARDIAN_DEPLOY_KEY }}
+          GUARDIAN_REPO: lianfixx/guardian-detalle
           GH_TOKEN: ${{ github.token }}
           TZ: America/Mexico_City
         run: |
@@ -70,8 +71,30 @@ jobs:
             echo "El Guardián ya revisó hoy."; exit 0
           fi
           cp guardian/estado.json "$RUNNER_TEMP/previo.json" 2> /dev/null || echo "{}" > "$RUNNER_TEMP/previo.json"
-          python3 tools/guardian.py --clonar --detalle "$RUNNER_TEMP/detalle.json" ${GUARDIAN_REPO:+--enviar-detalle "$GUARDIAN_REPO"} | tee -a "$GITHUB_STEP_SUMMARY"
-          rm -f "$RUNNER_TEMP/detalle.json"
+          python3 tools/guardian.py --clonar --detalle "$RUNNER_TEMP/detalle.json" | tee -a "$GITHUB_STEP_SUMMARY"
+          # Detalle privado: solo si hay llave y si GitHub confirma que el destino NO es público (sin sesión, un
+          # repositorio privado responde 404). La llave vive en un archivo temporal y se borra al terminar.
+          if [ -n "${GUARDIAN_DEPLOY_KEY:-}" ]; then
+            if [ "$(curl -s -o /dev/null -w '%{http_code}' "https://api.github.com/repos/$GUARDIAN_REPO")" = "200" ]; then
+              echo "::warning::$GUARDIAN_REPO es público: el detalle no se guarda."
+            else
+              llave="$RUNNER_TEMP/guardian_llave"; umask 077; printf '%s\n' "$GUARDIAN_DEPLOY_KEY" > "$llave"
+              export GIT_SSH_COMMAND="ssh -i $llave -o IdentitiesOnly=yes -o StrictHostKeyChecking=accept-new"
+              if git clone --quiet --depth 1 "git@github.com:$GUARDIAN_REPO.git" "$RUNNER_TEMP/detalle-repo"; then
+                mkdir -p "$RUNNER_TEMP/detalle-repo/detalle"
+                cp "$RUNNER_TEMP/detalle.json" "$RUNNER_TEMP/detalle-repo/detalle/$hoy.json"
+                cp "$RUNNER_TEMP/detalle.json" "$RUNNER_TEMP/detalle-repo/detalle/ULTIMO.json"
+                git -C "$RUNNER_TEMP/detalle-repo" add detalle
+                git -C "$RUNNER_TEMP/detalle-repo" -c user.name="matriz-bot" -c user.email="matriz-bot@users.noreply.github.com" \
+                  commit --quiet -m "Guardián: detalle del $hoy" -m "IA-Actor: GitHub Actions (tools/guardian.py)" || true
+                git -C "$RUNNER_TEMP/detalle-repo" push --quiet origin HEAD && echo "Detalle guardado en el repositorio privado."
+              else
+                echo "::warning::No se pudo abrir el repositorio privado del detalle."
+              fi
+              rm -f "$llave"; unset GIT_SSH_COMMAND
+            fi
+          fi
+          rm -rf "$RUNNER_TEMP/detalle.json" "$RUNNER_TEMP/detalle-repo"
           cuerpo=$(python3 tools/guardian.py --comparar "$RUNNER_TEMP/previo.json")
           [ -n "$cuerpo" ] || exit 0
           titulo="Guardián: bajó el puntaje de seguridad"

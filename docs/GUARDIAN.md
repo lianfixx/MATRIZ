@@ -40,7 +40,8 @@ En los registros de Actions solo se imprimen conteos.
 
 ### Dónde está el detalle
 
-- En Actions, el detalle se escribe en la carpeta temporal del runner y se borra al terminar. Si existen la variable `GUARDIAN_REPO` (por ejemplo `lianfixx/guardian-detalle`) y el secreto `GUARDIAN_TOKEN` (token de grano fino con «Contents: Read and write» **solo** sobre ese repositorio), se guarda en `detalle/AAAA-MM-DD.json` de ese repositorio. El script comprueba antes que el destino sea privado y se niega si no lo es.
+- En el repositorio **privado** `lianfixx/guardian-detalle`: `detalle/AAAA-MM-DD.json` (uno por día) y `detalle/ULTIMO.json` (el más reciente). Lo escribe el paso del Guardián con la llave de despliegue del secreto `GUARDIAN_DEPLOY_KEY`, que solo puede escribir en ese repositorio (no lee ni cambia ningún otro). Antes de escribir, el paso comprueba que ese repositorio no sea público y, si lo es, no guarda nada. La llave se creó en la computadora virtual de Emi y no pasó por ninguna conversación; para revocarla: `guardian-detalle` → Settings → Deploy keys.
+- Si falta la llave, el detalle solo existe durante la corrida y se borra al terminar.
 - Con terminal, cualquier IA puede generarlo: `python3 tools/guardian.py --clonar --detalle /tmp/detalle.json` (con `MATRIZ_TOKEN` para los privados). El script se niega a escribir el detalle dentro de este repositorio.
 
 ## Cuándo corre y cómo avisa

@@ -487,6 +487,8 @@ def comparar(previo: dict, actual: dict) -> str:
     """Texto del aviso si el estado empeoró (más críticos o 5 puntos menos). Solo conteos: va a un Issue público."""
     def criticos(e: dict) -> int:
         return sum((c.get("conteo") or {}).get("critico", 0) for c in (e.get("chequeos") or {}).values())
+    if not isinstance(previo.get("puntaje"), int):
+        return ""  # primera corrida: no hay contra qué comparar
     antes, ahora = criticos(previo), criticos(actual)
     p0, p1 = previo.get("puntaje"), actual.get("puntaje")
     if not (ahora > antes or (isinstance(p0, int) and isinstance(p1, int) and p1 <= p0 - 5)):
@@ -500,29 +502,6 @@ def comparar(previo: dict, actual: dict) -> str:
     L += ["", "Qué hacer: abre el detalle privado (docs/GUARDIAN.md, «Dónde está el detalle») o pide a Claude "
           "«revisa el Guardián». Cierra este aviso cuando quede atendido."]
     return "\n".join(L)
-
-
-def enviar_detalle(detalle: dict, destino: str, token: str) -> str:
-    """Guarda el detalle en un repositorio PRIVADO (detalle/AAAA-MM-DD.json). Se niega si el destino es público."""
-    import base64
-    if not token or not re.fullmatch(r"[\w.-]+/[\w.-]+", destino or ""):
-        return "sin destino o sin GUARDIAN_TOKEN: el detalle no se guardó"
-    info = api_github(f"/repos/{destino}", token)
-    if not info or info.get("private") is not True:
-        return "el destino no se pudo confirmar como privado: el detalle no se guardó"
-    ruta = f"/repos/{destino}/contents/detalle/{detalle['fecha']}.json"
-    previo = api_github(ruta, token)
-    cuerpo = {"message": f"Guardián: detalle del {detalle['fecha']}\n\nIA-Actor: GitHub Actions (tools/guardian.py)",
-              "content": base64.b64encode((json.dumps(detalle, ensure_ascii=False, indent=1) + "\n").encode()).decode()}
-    if isinstance(previo, dict) and previo.get("sha"):
-        cuerpo["sha"] = previo["sha"]
-    req = urllib.request.Request(f"https://api.github.com{ruta}", data=json.dumps(cuerpo).encode(), method="PUT", headers={
-        "Accept": "application/vnd.github+json", "User-Agent": "matriz-guardian", "Authorization": f"Bearer {token}"})
-    try:
-        with urllib.request.urlopen(req, timeout=30):
-            return "detalle guardado en el repositorio privado"
-    except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError) as e:
-        return f"el detalle no se guardó ({type(e).__name__})"
 
 
 def demo() -> tuple[list[dict], dict]:
@@ -541,8 +520,6 @@ def main() -> int:
     ap.add_argument("--salida", type=Path, default=SALIDA)
     ap.add_argument("--hoy", default="")
     ap.add_argument("--demo", action="store_true", help="datos ficticios, sin red ni repositorios")
-    ap.add_argument("--enviar-detalle", metavar="DUEÑO/REPO", default="",
-                    help="guarda el detalle en ese repositorio privado (secreto GUARDIAN_TOKEN)")
     ap.add_argument("--comparar", type=Path, metavar="PREVIO.json",
                     help="no audita: imprime el aviso si guardian/estado.json empeoró respecto de PREVIO.json")
     a = ap.parse_args()
@@ -607,8 +584,6 @@ def main() -> int:
                "hallazgos": sorted(H, key=lambda h: (orden[h["gravedad"]], h["chequeo"], h["repo"], h["ruta"]))}
     if a.detalle:
         a.detalle.write_text(json.dumps(detalle, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-    if a.enviar_detalle and not a.demo:
-        print("Detalle:", enviar_detalle(detalle, a.enviar_detalle, os.environ.get("GUARDIAN_TOKEN", "").strip()))
     # Solo conteos en consola.
     print(f"Guardián {VERSION}: {res['puntaje']}/100 · {res['veredicto']} · {len(H)} hallazgos · "
           + " · ".join(f"{cid} {sum(c['conteo'].values())}" for cid, c in res["chequeos"].items()))
