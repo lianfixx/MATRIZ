@@ -15,7 +15,7 @@ import guardian as gu  # noqa: E402
 
 TOKEN_FICTICIO = "gh" + "p_" + "Q7w9Zr2Lk4Tn8Vb1Xc6Md3Pf5Hs0Jy" + "Ae4Ru7"   # 40 caracteres, no existe
 CURP_FICTICIA = "GAMA" + "900101" + "HDF" + "RRN" + "09"
-EXPEDIENTE_FICTICIO = "12345/" + "21-17-01-3"
+EXPEDIENTE_FICTICIO = "98765/" + "20-11-03-7"
 
 
 def repo_de_prueba(carpeta: Path, archivos: dict[str, str], borrar: list[str] = ()) -> Path:
@@ -56,6 +56,10 @@ class Filtros(unittest.TestCase):
         tipos = {d[2] for d in gu.buscar_datos(f"CURP {CURP_FICTICIA}, Exp. {EXPEDIENTE_FICTICIO}", "nota.md", set())}
         self.assertIn("CURP", tipos)
         self.assertIn("número de expediente", tipos)
+
+    def test_ejemplos_ficticios_del_filtro_no_cuentan(self):
+        tipos = {d[2] for d in gu.buscar_datos("Ejemplos: «Exp. No. 45/2023» y «12345/21-17-01-3»", "x.md", set())}
+        self.assertNotIn("número de expediente", tipos)
 
     def test_nombre_reservado(self):
         datos = list(gu.buscar_datos("Reunión con Constructora Ficticia del Valle", "x.py", {"constructora ficticia"}))

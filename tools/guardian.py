@@ -153,6 +153,9 @@ EXPEDIENTE = [re.compile(x["re"], re.I if x.get("i") else 0) for x in
               json.loads((RAIZ / "tools" / "privacidad.json").read_text(encoding="utf-8"))["patrones"]
               if x["por"] == "[expediente]"][::2]  # el de sufijo (12345/21-17-01-3) y el rotulado («Exp. No. 45/2023»)
 RFC_FISICA = re.compile(r"\b[A-ZÑ&]{4}(\d{2})(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])[A-Z\d]{2}[A\d]\b")
+# Ejemplos inventados que la Matriz usa a propósito para describir y probar sus filtros (tools/privacidad.json):
+# no son expedientes reales y no cuentan.
+EJEMPLOS_FICTICIOS = ("45/2023", "1234/2023", "12345/21", "456/24")
 ACCION = re.compile(r"^\s*-?\s*uses:\s*([\w.-]+/[\w./-]+)@([\w.-]+)", re.M)
 
 
@@ -272,7 +275,8 @@ def buscar_datos(texto: str, ruta: str, reservados: set[str]):
         if not libre:
             continue  # en código, los números y correos casi siempre son otra cosa
         for patron in EXPEDIENTE:
-            if m := patron.search(linea):
+            m = patron.search(linea)
+            if m and not any(e in m.group(0) for e in EJEMPLOS_FICTICIOS):
                 yield n, "alto", "número de expediente", m.group(0)
                 break
         if m := TELEFONO.search(linea):

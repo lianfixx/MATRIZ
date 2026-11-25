@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-11-25 · Auditoría final del día: el Guardián ignora los ejemplos inventados del filtro
+
+- Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
+- Solicitud: Emi, 25/11/2026, 17:02, en chat: «audita si es necesario».
+- Cambios: auditoría de todo lo hecho hoy. Los 12 repositorios tocados tienen sus corridas recientes en verde; el Guardián corrió con su versión final (34 repositorios, 44/100) y guardó el detalle privado; lo público no nombra repositorios ni rutas; el árbol actual de la Matriz ya no contiene el nombre del cliente ni el expediente real. Los únicos hallazgos que quedaban en los archivos actuales de la Matriz eran los ejemplos inventados del filtro de privacidad («Exp. No. 45/2023», «12345/21-17-01-3»): ahora no cuentan. La prueba usa otro número inventado.
+- Archivos: `tools/guardian.py`, `tools/test_guardian.py` y este registro.
+- Verificación: pruebas de `tools/` aprobadas.
+- Pendiente: lo que sigue en el historial de git (decisión de Emi del 25/11/2026: no reescribirlo).
+
 ## 2026-11-25 · Guardián: `.npmrc` solo cuenta si guarda una credencial
 
 - Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
