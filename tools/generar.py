@@ -862,8 +862,8 @@ def bloque_guardian(gd: dict) -> list[str]:
     nombres = {"critico": "crítico", "alto": "alto", "medio": "medio", "bajo": "bajo", "info": "aviso"}
     L = [f"## Guardián (seguridad y privacidad)\n",
          f"**{gd['puntaje']}/100 · {gd['veredicto']}** · revisión del {fecha_corta(gd['fecha'])}. "
-         "Audita todos los repositorios: llaves, historial de Git, credenciales, accesos, qué sale, datos de clientes "
-         "y origen de las skills. Aquí solo hay conteos; el detalle es privado (ver `docs/GUARDIAN.md`).\n"]
+         "Audita todos los repositorios: llaves, historial de Git, credenciales, accesos, qué sale, datos de clientes, "
+         "memoria para IA y origen de las skills. Aquí solo hay conteos; el detalle es privado (ver `docs/GUARDIAN.md`).\n"]
     for c in gd["chequeos"].values():
         cuenta = ", ".join(f"{n} {nombres.get(k, k)}" for k, n in (c.get("conteo") or {}).items()) or "sin hallazgos"
         L.append(f"- {c.get('icono', '')} {c.get('nombre', '')}: {c.get('estado', '')} ({cuenta})")

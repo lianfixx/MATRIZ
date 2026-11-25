@@ -14,6 +14,8 @@ Los siete chequeos (adaptados a un despacho jurídico que trabaja con IA):
   salida       Qué sale de la cuenta: repositorios públicos del despacho, workflows de riesgo y acciones sin fijar.
   datos        Datos de clientes o personales (expedientes, CURP, RFC, tarjetas, teléfonos, correos,
                nombres reservados) en repositorios PÚBLICOS, en los archivos actuales o en el historial.
+  memoria      Instrucciones para IA (AGENTS.md, CLAUDE.md, GEMINI.md, SKILL.md) demasiado largas, con enlaces a
+               archivos que ya no existen o con una skill mal formada (idea de «Salud de Memoria Real», A. Álvarez).
   skills       De dónde salieron las skills instaladas (propias o de terceros).
 
 Dos salidas, nunca mezcladas:
@@ -109,6 +111,13 @@ CHEQUEOS = {
                    "secreto profesional y la protección de datos personales, aunque sea en un archivo viejo.",
         "como": "Saca el dato del archivo (o vuelve privado el repositorio) y agrega el nombre del cliente al "
                 "secreto MATRIZ_RESERVADOS. Si estuvo en el historial de un repositorio público, considéralo visto.",
+    },
+    "memoria": {
+        "icono": "🧠", "nombre": "Memoria para tus IA",
+        "por_que": "Si un AGENTS.md, CLAUDE.md o SKILL.md es demasiado largo, apunta a archivos que ya no existen o rompe "
+                   "el formato de la skill, la IA arranca con instrucciones a medias y nadie te avisa: el fallo es silencioso.",
+        "como": "Recorta o divide el archivo (lo detallado va a referencias que se leen cuando hacen falta), corrige o quita "
+                "los enlaces rotos y valida la skill con `python3 ia/check_skill.py <carpeta>`.",
     },
     "skills": {
         "icono": "📦", "nombre": "Origen de tus skills",
@@ -325,6 +334,7 @@ def auditar_repo(nombre: str, carpeta: Path, publico: bool, reservados: set[str]
     ignorar = git(["show", "HEAD:.gitignore"], carpeta).decode(errors="replace")
     if hay_codigo and not re.search(r"^\s*/?\.env\b|^\s*\*\.env|^\s*\.env\*", ignorar, re.M):
         H.append(hallazgo("credenciales", "bajo", nombre, ".gitignore no excluye .env", ".gitignore"))
+    H += auditar_memoria(nombre, carpeta, rutas_actuales)
     # frenos del protocolo común: la versión completa (ia/guard.py + registro-ia.yml) o la ligera
     # (un workflow que corre `ia/verificar.py ci`, que revisa registro y secretos en cada push)
     completa = {"ia/guard.py", ".github/workflows/registro-ia.yml"} <= set(rutas_actuales)
@@ -347,6 +357,48 @@ def auditar_repo(nombre: str, carpeta: Path, publico: bool, reservados: set[str]
                 continue
             if not re.fullmatch(r"[0-9a-f]{40}", ref):
                 H.append(hallazgo("salida", "bajo", nombre, f"acción sin fijar a SHA ({accion.split('/')[0]})", r))
+    return H
+
+
+MEMORIA = re.compile(r"(^|/)(AGENTS|CLAUDE|GEMINI)\.md$|(^|/)SKILL\.md$")
+ENLACE = re.compile(r"\[[^\]]*\]\(([^)\s]+)\)")
+MAX_INSTRUCCIONES = 40_000     # caracteres: Claude Code advierte que un CLAUDE.md más grande afecta su desempeño
+MAX_LINEAS_SKILL = 500         # recomendación de Anthropic para el cuerpo de un SKILL.md
+
+
+def auditar_memoria(nombre: str, carpeta: Path, rutas: list[str]) -> list[dict]:
+    H, existentes = [], set(rutas)
+    carpetas = {str(Path(r).parent) for r in rutas}
+    for r in rutas:
+        if not MEMORIA.search(r):
+            continue
+        texto = git(["show", f"HEAD:{r}"], carpeta).decode("utf-8", errors="replace")
+        if len(texto) > MAX_INSTRUCCIONES:
+            H.append(hallazgo("memoria", "medio", nombre, f"instrucciones de {len(texto) // 1000} mil caracteres (se cargan a medias)", r))
+        if r.endswith("SKILL.md"):
+            m = re.match(r"^---\n(.*?)\n---\n", texto, re.S)
+            campos = dict(re.findall(r"^(\w[\w-]*):\s*(.*)$", m.group(1), re.M)) if m else {}
+            desc = campos.get("description", "").strip().strip("'\"")
+            if not m or not campos.get("name") or not desc:
+                H.append(hallazgo("memoria", "medio", nombre, "skill sin name o description en su encabezado", r))
+            elif len(desc) > 1024 and not desc.startswith((">", "|")):
+                H.append(hallazgo("memoria", "medio", nombre, "description de la skill de más de 1024 caracteres", r))
+            if texto.count("\n") > MAX_LINEAS_SKILL + 40:
+                H.append(hallazgo("memoria", "bajo", nombre, f"SKILL.md de {texto.count(chr(10))} líneas (conviene pasar detalle a referencias)", r))
+        rotos = 0
+        for destino in ENLACE.findall(re.sub(r"```.*?```", "", texto, flags=re.S)):
+            if re.match(r"^(https?:|mailto:|#|<|\{)", destino):
+                continue
+            destino = destino.split("#")[0].split("?")[0]
+            if not destino:
+                continue
+            ruta = os.path.normpath(os.path.join(os.path.dirname(r), destino)).replace("\\", "/")
+            if ruta.startswith("..") or ruta.startswith("/"):
+                continue  # fuera del repositorio: no se puede comprobar aquí
+            if ruta not in existentes and ruta not in carpetas and not any(x.startswith(ruta + "/") for x in carpetas):
+                rotos += 1
+        if rotos:
+            H.append(hallazgo("memoria", "bajo", nombre, f"{rotos} enlace(s) a archivos que no existen", r))
     return H
 
 

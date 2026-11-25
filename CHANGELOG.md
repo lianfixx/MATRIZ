@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-11-25 · Guardián: octavo chequeo, memoria para tus IA
+
+- Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
+- Solicitud: Emi, 25/11/2026, en chat: «revisa todo lo demás» del curso Motor Agéntico (Imperio Agéntico) e implementar lo que sirva a la Matriz.
+- Cambios: de las 20 piezas y las lecciones del Motor v3, la que aporta algo nuevo y verificable es «Salud de Memoria Real» (Alejandro Álvarez): el fallo silencioso de las instrucciones que se cargan a medias. Nuevo chequeo «🧠 Memoria para tus IA» en todos los repositorios: `AGENTS.md`, `CLAUDE.md` o `GEMINI.md` de más de 40 000 caracteres, enlaces locales a archivos que no existen, skills sin `name`/`description`, con description de más de 1024 caracteres o de más de 500 líneas. No se usó código del curso.
+- Archivos: `tools/guardian.py`, `tools/test_guardian.py`, `tools/generar.py`, `docs/GUARDIAN.md`, `AGENTS.md` y este registro.
+- Verificación: pruebas de `tools/` aprobadas; corrida sobre los 20 repositorios públicos sin hallazgos de memoria (los frenos ya validan las skills).
+- Pendiente: ninguno.
+
 ## 2026-11-25 · inventario.json vuelve a su formato
 
 - Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)

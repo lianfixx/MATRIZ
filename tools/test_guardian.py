@@ -109,6 +109,23 @@ class Frenos(unittest.TestCase):
             self.assertTrue([h for h in gu.auditar_repo("demo", r, True, set()) if h["chequeo"] == "acceso"])
 
 
+class Memoria(unittest.TestCase):
+    def test_enlace_roto_skill_sin_description_y_archivo_largo(self):
+        with tempfile.TemporaryDirectory() as t:
+            r = repo_de_prueba(Path(t), {"AGENTS.md": "Lee [reglas](ia/REGLAS.md) y [web](https://x.mx) y [doc](docs/ok.md)\n" + "x" * 41000,
+                                         "docs/ok.md": "ok", "skills/s/SKILL.md": "---\nname: s\n---\nhola\n"})
+            tipos = {h["tipo"] for h in gu.auditar_repo("demo", r, False, set()) if h["chequeo"] == "memoria"}
+            self.assertIn("1 enlace(s) a archivos que no existen", tipos)
+            self.assertIn("skill sin name o description en su encabezado", tipos)
+            self.assertTrue(any(x.startswith("instrucciones de 41") for x in tipos))
+
+    def test_memoria_sana(self):
+        with tempfile.TemporaryDirectory() as t:
+            r = repo_de_prueba(Path(t), {"AGENTS.md": "Lee [esto](docs/a.md#parte)\n", "docs/a.md": "a",
+                                         "skills/s/SKILL.md": "---\nname: s\ndescription: Hace algo.\n---\nhola\n"})
+            self.assertFalse([h for h in gu.auditar_repo("demo", r, False, set()) if h["chequeo"] == "memoria"])
+
+
 class Puntaje(unittest.TestCase):
     def test_sin_hallazgos_es_fortaleza(self):
         r = gu.puntuar([])

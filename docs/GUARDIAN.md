@@ -2,9 +2,9 @@
 
 Desde el 25/11/2026 la Matriz revisa una vez al día la seguridad y la privacidad de **todos** los repositorios de Emi y da un puntaje de 0 a 100 con un veredicto. Lo hace `tools/guardian.py`. **Solo lee y aconseja**: no cambia, borra ni publica nada en los repositorios que revisa, no usa la API de Claude y no cuesta nada.
 
-La idea viene del «Guardián Imperial» (Leyvi Cauich, Motor Agéntico de la comunidad Imperio Agéntico, junio de 2026): una página que audita el entorno de IA con siete chequeos, explica cada hallazgo en lenguaje simple y muestra cómo evoluciona el puntaje. Aquí no se usó su código (es de otra plataforma); se adaptó la idea a la Matriz y a un despacho jurídico, donde el riesgo mayor es el secreto profesional.
+La idea viene del «Guardián Imperial» (Leyvi Cauich, Motor Agéntico de la comunidad Imperio Agéntico, junio de 2026): una página que audita el entorno de IA con siete chequeos (aquí son ocho: se sumó la salud de la memoria para IA), explica cada hallazgo en lenguaje simple y muestra cómo evoluciona el puntaje. Aquí no se usó su código (es de otra plataforma); se adaptó la idea a la Matriz y a un despacho jurídico, donde el riesgo mayor es el secreto profesional.
 
-## Los siete chequeos
+## Los ocho chequeos
 
 | Chequeo | Qué revisa | Gravedad típica |
 |---|---|---|
@@ -14,6 +14,7 @@ La idea viene del «Guardián Imperial» (Leyvi Cauich, Motor Agéntico de la co
 | 👥 Acceso | Colaboradores y llaves de despliegue (requiere permiso de administración de lectura en el token; sin él dice «sin permiso para revisar» y no resta); repositorios sin los frenos de `ia/`. | Medio |
 | 📡 Qué sale | Workflows con `pull_request_target` o `write-all`, acciones de terceros sin fijar a SHA y cuántos repositorios de los despachos son públicos. | Alto a aviso |
 | 🧾 Datos de clientes | Solo en repositorios **públicos**: CURP, RFC de persona, tarjetas (Luhn), nombres del secreto `MATRIZ_RESERVADOS`, números de expediente, teléfonos y correos; y documentos de trabajo descargables (Excel, Word, PDF) en los cerebros Castorena y MILLA ABOGADOS. En archivos actuales y en el historial. | Crítico a bajo |
+| 🧠 Memoria para tus IA | Que las instrucciones que leen tus IA se carguen completas: `AGENTS.md`, `CLAUDE.md` o `GEMINI.md` de más de 40 000 caracteres, enlaces a archivos que ya no existen y skills sin `name` o `description` (o con más de 1024 caracteres, o de más de 500 líneas). En todos los repositorios, públicos y privados. Idea de «Salud de Memoria Real» (Alejandro Álvarez, Motor Agéntico). | Medio a bajo |
 | 📦 Origen de skills | Skills instaladas que vienen de repositorios de terceros o que no tienen repositorio localizable. | Medio a bajo |
 
 Los archivos de prueba (`test_*`, `prueba*`, `tests/`, `.example`, `.ejemplo`) y los valores de plantilla (`xxxx`, `REPLACE_ME`, `<tu-llave>`) cuentan como «aviso» y no restan. Una asignación del tipo `token = …` solo cuenta si el valor parece una llave real (letras y números mezclados, alta entropía, sin código).
