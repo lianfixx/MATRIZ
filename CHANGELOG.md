@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-11-25 · inventario.json vuelve a su formato
+
+- Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
+- Solicitud: autocorrección de la entrada anterior.
+- Cambios: al apuntar `video-vox`, `inventario.json` se guardó con otra sangría; vuelve a la de siempre (dos espacios). Contenido sin cambios.
+- Archivos: `inventario.json` y este registro.
+- Verificación: `git diff HEAD~2 -- inventario.json` solo muestra la línea de `video-vox`.
+- Pendiente: ninguno.
+
 ## 2026-11-25 · video-vox ya vive en la cuenta de Emi (bifurcación)
 
 - Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
