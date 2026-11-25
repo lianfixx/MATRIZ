@@ -32,7 +32,7 @@ Pendiente: Emi sube INDEP v24 y Concentrado 19013131d8dd a Drive, Escritorio e i
 
 ### INDEP (privado)
 
-https://github.com/lianfixx/INDEP · último cambio: 24 nov 2026
+https://github.com/lianfixx/INDEP · último cambio: 25 nov 2026
 
 Privado: pide acceso a Emi o usa un conector de GitHub con su sesión.
 
