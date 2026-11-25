@@ -1,7 +1,7 @@
 ---
 tipo: "cerebro"
 repos: 2
-ultimo_cambio: 2026-11-04
+ultimo_cambio: 2026-11-25
 tags:
   - "cerebro"
 generado: "tools/generar.py · no editar a mano: se reescribe cada día"
@@ -16,7 +16,7 @@ Parte de la [[MATRIZ]].
 ## Repositorios
 
 - [[PANEL-FIRMA|PANEL-FIRMA-]] · privado · 4 nov 2026
-- [[mes|mes.]] · público · 24 oct 2026
+- [[mes|mes.]] · público · 25 nov 2026
 
 ## Skills instaladas en Claude
 

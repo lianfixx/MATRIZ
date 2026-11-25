@@ -43,13 +43,13 @@ Pendiente: «Agregar y aprobar» de Emi.
 
 ### HISTORIAS- (público)
 
-https://github.com/lianfixx/HISTORIAS- · último cambio: 16 nov 2026
+https://github.com/lianfixx/HISTORIAS- · último cambio: 25 nov 2026
 
 Método, motor y memoria para hacer las historias de Instagram de Emi con cualquier IA: la IA pregunta, propone y dibuja; Emi decide.
 
 Skills: `historias-studio`
 
-Último registro: 16 nov 2026 · 0.3.1 · candidato · Agente: no consta
+Último registro: 25 nov 2026 · Control automático entre IA (registro y secretos) · Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
 
 ### REDES (público)
 

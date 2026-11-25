@@ -33,9 +33,11 @@ Privado: pide acceso a Emi o usa un conector de GitHub con su sesión.
 
 ### cloudfare (público)
 
-https://github.com/lianfixx/cloudfare · último cambio: 23 nov 2026
+https://github.com/lianfixx/cloudfare · último cambio: 25 nov 2026
 
 Entorno para que Claude Code, Codex y Muse trabajen con Cloudflare a través del CLI oficial cf. Solo la conexión, las reglas y el registro; no incluye proyectos.
+
+Último registro: 25 nov 2026 · Control automático entre IA (registro y secretos) · Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
 
 ### box-simular (privado)
 

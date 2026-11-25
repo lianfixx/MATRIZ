@@ -865,7 +865,7 @@
           "url": "https://github.com/lianfixx/HISTORIAS-",
           "visibilidad": "público",
           "leido": true,
-          "ultimo_cambio": "2026-11-16",
+          "ultimo_cambio": "2026-11-25",
           "resumen": "Método, motor y memoria para hacer las historias de Instagram de Emi con cualquier IA: la IA pregunta, propone y dibuja; Emi decide.",
           "skills": [
             {
@@ -873,8 +873,14 @@
               "ruta": "skills/historias-studio/SKILL.md"
             }
           ],
-          "protocolo": "",
+          "protocolo": "1.1.0",
           "registro": [
+            {
+              "fecha": "2026-11-25",
+              "titulo": "Control automático entre IA (registro y secretos)",
+              "agente": "claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)",
+              "pendiente": ""
+            },
             {
               "fecha": "2026-11-16",
               "titulo": "0.3.1 · candidato",
@@ -925,10 +931,10 @@
               0,
               7,
               1,
-              0
+              1
             ],
             "actores_60d": {
-              "Claude": 8
+              "Claude": 9
             }
           }
         },
@@ -1437,11 +1443,18 @@
           "url": "https://github.com/lianfixx/mes.",
           "visibilidad": "público",
           "leido": true,
-          "ultimo_cambio": "2026-10-24",
+          "ultimo_cambio": "2026-11-25",
           "resumen": "Alfa de una aplicación de Sistemas Digitales. Mes es un nombre provisional. Interfaz original en blanco, negro y grises para próximos pagos, gastos cotidianos y metas. Código universal Expo / React Native / TypeScript, sin llamadas a modelos ni dependencia funcional de ChatGPT.",
           "skills": [],
-          "protocolo": "",
-          "registro": [],
+          "protocolo": "1.1.0",
+          "registro": [
+            {
+              "fecha": "2026-11-25",
+              "titulo": "Control automático entre IA (registro y secretos)",
+              "agente": "claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)",
+              "pendiente": ""
+            }
+          ],
           "actividad": {
             "semanas": [
               "2026-10-05",
@@ -1461,10 +1474,10 @@
               0,
               0,
               0,
-              0
+              1
             ],
             "actores_60d": {
-              "Claude": 10
+              "Claude": 11
             }
           }
         }
@@ -1559,11 +1572,18 @@
           "url": "https://github.com/lianfixx/cloudfare",
           "visibilidad": "público",
           "leido": true,
-          "ultimo_cambio": "2026-11-23",
+          "ultimo_cambio": "2026-11-25",
           "resumen": "Entorno para que Claude Code, Codex y Muse trabajen con Cloudflare a través del CLI oficial cf. Solo la conexión, las reglas y el registro; no incluye proyectos.",
           "skills": [],
-          "protocolo": "",
-          "registro": [],
+          "protocolo": "1.1.0",
+          "registro": [
+            {
+              "fecha": "2026-11-25",
+              "titulo": "Control automático entre IA (registro y secretos)",
+              "agente": "claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)",
+              "pendiente": ""
+            }
+          ],
           "actividad": {
             "semanas": [
               "2026-10-05",
@@ -1583,10 +1603,10 @@
               0,
               20,
               2,
-              1
+              2
             ],
             "actores_60d": {
-              "Claude": 20,
+              "Claude": 21,
               "Emi": 3
             }
           }
@@ -1679,11 +1699,17 @@
           "url": "https://github.com/lianfixx/emilianomilla-site",
           "visibilidad": "público",
           "leido": true,
-          "ultimo_cambio": "2026-11-12",
+          "ultimo_cambio": "2026-11-25",
           "resumen": "Sitio público: https://emilianomilla.site",
           "skills": [],
           "protocolo": "1.1.0",
           "registro": [
+            {
+              "fecha": "2026-11-25",
+              "titulo": "Control automático entre IA (registro y secretos)",
+              "agente": "claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)",
+              "pendiente": ""
+            },
             {
               "fecha": "2026-11-12",
               "titulo": "Inicialización documental del repositorio",
@@ -1734,9 +1760,10 @@
               0,
               14,
               0,
-              0
+              1
             ],
             "actores_60d": {
+              "Claude": 1,
               "Emi": 14
             }
           }
@@ -1746,11 +1773,17 @@
           "url": "https://github.com/lianfixx/sistemas-digitales",
           "visibilidad": "público",
           "leido": true,
-          "ultimo_cambio": "2026-11-12",
+          "ultimo_cambio": "2026-11-25",
           "resumen": "Sitio público: https://emiliano-milla.emilianomilla.chatgpt.site",
           "skills": [],
           "protocolo": "1.1.0",
           "registro": [
+            {
+              "fecha": "2026-11-25",
+              "titulo": "Control automático entre IA (registro y secretos)",
+              "agente": "claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)",
+              "pendiente": ""
+            },
             {
               "fecha": "2026-11-12",
               "titulo": "Inicialización documental del repositorio",
@@ -1792,12 +1825,6 @@
               "titulo": "Protección de archivos privados",
               "agente": "ChatGPT (GPT-6)",
               "pendiente": "ejecutar escáner de secretos y configurar variables protegidas si se incorporan integraciones reales."
-            },
-            {
-              "fecha": "2026-11-12",
-              "titulo": "README actualizado",
-              "agente": "ChatGPT (GPT-6)",
-              "pendiente": "validar en navegador y completar recuperación de activos originales."
             }
           ],
           "actividad": {
@@ -1819,9 +1846,10 @@
               0,
               24,
               0,
-              0
+              1
             ],
             "actores_60d": {
+              "Claude": 1,
               "Emi": 24
             }
           }
@@ -1831,11 +1859,17 @@
           "url": "https://github.com/lianfixx/vicente-diablo",
           "visibilidad": "público",
           "leido": true,
-          "ultimo_cambio": "2026-11-12",
+          "ultimo_cambio": "2026-11-25",
           "resumen": "Sitio público: https://vicente-diablo.emilianomilla.chatgpt.site",
           "skills": [],
           "protocolo": "1.1.0",
           "registro": [
+            {
+              "fecha": "2026-11-25",
+              "titulo": "Control automático entre IA (registro y secretos)",
+              "agente": "claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)",
+              "pendiente": ""
+            },
             {
               "fecha": "2026-11-12",
               "titulo": "Inicialización documental del repositorio",
@@ -1877,12 +1911,6 @@
               "titulo": "Documentos legales públicos y navegación local",
               "agente": "ChatGPT (GPT-6)",
               "pendiente": "confirmar identidad/domicilio/contacto del prestador antes de habilitar solicitudes o cobros; mantener pagos deshabilitados."
-            },
-            {
-              "fecha": "2026-11-12",
-              "titulo": "README actualizado",
-              "agente": "ChatGPT (GPT-6)",
-              "pendiente": "validar en navegador y completar recuperación de activos originales."
             }
           ],
           "actividad": {
@@ -1904,9 +1932,10 @@
               0,
               27,
               0,
-              0
+              1
             ],
             "actores_60d": {
+              "Claude": 1,
               "Emi": 27
             }
           }
@@ -2231,9 +2260,9 @@
           9,
           128,
           64,
-          11
+          12
         ],
-        "esta_semana": 11,
+        "esta_semana": 12,
         "semana_pasada": 64,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2269,11 +2298,11 @@
           5,
           0,
           0,
-          0
+          1
         ],
-        "esta_semana": 0,
+        "esta_semana": 1,
         "semana_pasada": 0,
-        "dias_sin_movimiento": 21,
+        "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
         "pendientes_de_repos": 0,
@@ -2288,11 +2317,11 @@
           5,
           33,
           6,
-          2
+          3
         ],
-        "esta_semana": 2,
+        "esta_semana": 3,
         "semana_pasada": 6,
-        "dias_sin_movimiento": 2,
+        "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
         "pendientes_de_repos": 0,
@@ -2307,14 +2336,14 @@
           0,
           65,
           0,
-          0
+          3
         ],
-        "esta_semana": 0,
+        "esta_semana": 3,
         "semana_pasada": 0,
-        "dias_sin_movimiento": 13,
+        "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
-        "pendientes_de_repos": 3,
+        "pendientes_de_repos": 0,
         "tareas_falladas": 0
       }
     },
@@ -2336,11 +2365,11 @@
       196,
       255,
       90,
-      52
+      58
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 410,
+      "Claude": 416,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 28
     },

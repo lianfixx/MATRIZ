@@ -21,27 +21,24 @@ Soy Emi (Yohualli Emiliano García Milla). Este es el cerebro «Sitios web» de 
 
 ### emilianomilla-site (público)
 
-https://github.com/lianfixx/emilianomilla-site · último cambio: 12 nov 2026
+https://github.com/lianfixx/emilianomilla-site · último cambio: 25 nov 2026
 
 Sitio público: https://emilianomilla.site
 
-Último registro: 12 nov 2026 · Inicialización documental del repositorio · Agente: ChatGPT (GPT-6)
-Pendiente: inventariar fuentes y recursos originales; recuperar o reconstruir implementación con evidencia; añadir pruebas.
+Último registro: 25 nov 2026 · Control automático entre IA (registro y secretos) · Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
 
 ### sistemas-digitales (público)
 
-https://github.com/lianfixx/sistemas-digitales · último cambio: 12 nov 2026
+https://github.com/lianfixx/sistemas-digitales · último cambio: 25 nov 2026
 
 Sitio público: https://emiliano-milla.emilianomilla.chatgpt.site
 
-Último registro: 12 nov 2026 · Inicialización documental del repositorio · Agente: ChatGPT (GPT-6)
-Pendiente: inventariar fuentes y recursos originales; recuperar o reconstruir implementación con evidencia; añadir pruebas.
+Último registro: 25 nov 2026 · Control automático entre IA (registro y secretos) · Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
 
 ### vicente-diablo (público)
 
-https://github.com/lianfixx/vicente-diablo · último cambio: 12 nov 2026
+https://github.com/lianfixx/vicente-diablo · último cambio: 25 nov 2026
 
 Sitio público: https://vicente-diablo.emilianomilla.chatgpt.site
 
-Último registro: 12 nov 2026 · Inicialización documental del repositorio · Agente: ChatGPT (GPT-6)
-Pendiente: inventariar fuentes y recursos originales; recuperar o reconstruir implementación con evidencia; añadir pruebas.
+Último registro: 25 nov 2026 · Control automático entre IA (registro y secretos) · Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)

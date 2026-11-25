@@ -56,13 +56,13 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 | Castorena | 4 | 39 | 19 | 0 | 0 | 0 |
 | MILLA ABOGADOS | 5 | 0 | 0 | 21 | 0 | 0 |
 | Acción Tlalnepantla | 1 | 0 | 0 | 21 | 0 | 0 |
-| Contenido y video | 7 | 11 | 64 | 0 | 0 | 0 |
+| Contenido y video | 7 | 12 | 64 | 0 | 0 | 0 |
 | Estudio | 2 | 0 | 1 | 8 | 0 | 0 |
-| Productos | 2 | 0 | 0 | 21 | 0 | 0 |
-| Herramientas | 5 | 2 | 6 | 2 | 0 | 0 |
-| Sitios web | 3 | 0 | 0 | 13 | 0 | 0 |
+| Productos | 2 | 1 | 0 | 0 | 0 | 0 |
+| Herramientas | 5 | 3 | 6 | 0 | 0 | 0 |
+| Sitios web | 3 | 3 | 0 | 0 | 0 | 0 |
 
-Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 410, ChatGPT · Codex 39, GitHub Actions 28.
+Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 416, ChatGPT · Codex 39, GitHub Actions 28.
 
 Vencimientos: Renovación de la conexión Claude–box el 7 dic 2026; Token de GitHub «MATRIZ lectura» el 9 feb 2027; Token de GitHub «MATRIZ escritura» (edición desde el panel) el 12 nov 2027; Llave de GitHub «Matriz administración (Claude)» el 12 nov 2027; Llave de Cloudflare «Matriz administración (Claude)» el 12 nov 2027.
 
@@ -163,9 +163,9 @@ Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio,
   - Skill para planear, redactar, revisar, publicar con aprobación (API oficial de X) y medir las publicaciones de @emilianomilla en X, apoyada en el código público del algoritmo de X (xai-org/x-algorithm).
   - Último: 23 nov 2026 · Meme de la consulta de expedientes · Claude Code (sesión en la nube)
   - Pendiente: «Agregar y aprobar» de Emi.
-- **HISTORIAS-** (público) · https://github.com/lianfixx/HISTORIAS- · último cambio 16 nov 2026 · skills: historias-studio
+- **HISTORIAS-** (público) · https://github.com/lianfixx/HISTORIAS- · último cambio 25 nov 2026 · skills: historias-studio
   - Método, motor y memoria para hacer las historias de Instagram de Emi con cualquier IA: la IA pregunta, propone y dibuja; Emi decide.
-  - Último: 16 nov 2026 · 0.3.1 · candidato · agente no consta
+  - Último: 25 nov 2026 · Control automático entre IA (registro y secretos) · claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
 - **REDES** (público) · https://github.com/lianfixx/REDES · último cambio 25 nov 2026 · skills: matriz-redes
   - La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, Instagram) y de video (Vox Studio, Pizarra Studio, Editor Studio, MILLA Video Studio, Historias Studio). Registra las ideas, decide en qué red y formato sale cada una, arma el calendario de todas…
   - Último: 19 nov 2026 · X: responder a un post ya publicado · Claude Code (sesión en la nube)
@@ -220,8 +220,9 @@ Productos propios de Emi: PANEL FIRMA (gestión jurídica) y Mes (finanzas perso
 ### Repositorios
 
 - **PANEL-FIRMA-** (privado) · https://github.com/lianfixx/PANEL-FIRMA- · último cambio 4 nov 2026
-- **mes.** (público) · https://github.com/lianfixx/mes. · último cambio 24 oct 2026
+- **mes.** (público) · https://github.com/lianfixx/mes. · último cambio 25 nov 2026
   - Alfa de una aplicación de Sistemas Digitales. Mes es un nombre provisional. Interfaz original en blanco, negro y grises para próximos pagos, gastos cotidianos y metas. Código universal Expo / React Native / TypeScript, sin llamadas a modelos ni dependencia funcional de ChatGPT.
+  - Último: 25 nov 2026 · Control automático entre IA (registro y secretos) · claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
 
 ### Skills instaladas en Claude
 
@@ -235,8 +236,9 @@ Piezas que sirven a todos los cerebros: estilo de Emi, selector de modelo, entor
 
 - **estilo-emi** (privado) · https://github.com/lianfixx/estilo-emi · último cambio 12 nov 2026
 - **selector-modelos** (privado) · https://github.com/lianfixx/selector-modelos · último cambio 23 nov 2026
-- **cloudfare** (público) · https://github.com/lianfixx/cloudfare · último cambio 23 nov 2026
+- **cloudfare** (público) · https://github.com/lianfixx/cloudfare · último cambio 25 nov 2026
   - Entorno para que Claude Code, Codex y Muse trabajen con Cloudflare a través del CLI oficial cf. Solo la conexión, las reglas y el registro; no incluye proyectos.
+  - Último: 25 nov 2026 · Control automático entre IA (registro y secretos) · claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
 - **box-simular** (privado) · https://github.com/lianfixx/box-simular · último cambio 11 nov 2026
 - **rea-ingenieria-inversa** (privado) · https://github.com/lianfixx/rea-ingenieria-inversa · último cambio 11 nov 2026
 
@@ -257,18 +259,15 @@ Sitios web de Emi ya publicados que se recuperan y mantienen: su página persona
 
 ### Repositorios
 
-- **emilianomilla-site** (público) · https://github.com/lianfixx/emilianomilla-site · último cambio 12 nov 2026
+- **emilianomilla-site** (público) · https://github.com/lianfixx/emilianomilla-site · último cambio 25 nov 2026
   - Sitio público: https://emilianomilla.site
-  - Último: 12 nov 2026 · Inicialización documental del repositorio · ChatGPT (GPT-6)
-  - Pendiente: inventariar fuentes y recursos originales; recuperar o reconstruir implementación con evidencia; añadir pruebas.
-- **sistemas-digitales** (público) · https://github.com/lianfixx/sistemas-digitales · último cambio 12 nov 2026
+  - Último: 25 nov 2026 · Control automático entre IA (registro y secretos) · claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
+- **sistemas-digitales** (público) · https://github.com/lianfixx/sistemas-digitales · último cambio 25 nov 2026
   - Sitio público: https://emiliano-milla.emilianomilla.chatgpt.site
-  - Último: 12 nov 2026 · Inicialización documental del repositorio · ChatGPT (GPT-6)
-  - Pendiente: inventariar fuentes y recursos originales; recuperar o reconstruir implementación con evidencia; añadir pruebas.
-- **vicente-diablo** (público) · https://github.com/lianfixx/vicente-diablo · último cambio 12 nov 2026
+  - Último: 25 nov 2026 · Control automático entre IA (registro y secretos) · claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
+- **vicente-diablo** (público) · https://github.com/lianfixx/vicente-diablo · último cambio 25 nov 2026
   - Sitio público: https://vicente-diablo.emilianomilla.chatgpt.site
-  - Último: 12 nov 2026 · Inicialización documental del repositorio · ChatGPT (GPT-6)
-  - Pendiente: inventariar fuentes y recursos originales; recuperar o reconstruir implementación con evidencia; añadir pruebas.
+  - Último: 25 nov 2026 · Control automático entre IA (registro y secretos) · claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
 
 ## Cómo se mantiene sola
 
