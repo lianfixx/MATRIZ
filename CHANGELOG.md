@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-11-25 · Guardián: reconoce la versión ligera de los frenos; frenos instalados donde faltaban
+
+- Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
+- Solicitud: Emi, 25/11/2026, en chat: instalar los frenos donde faltan y «revisa todo lo demás».
+- Cambios: (1) El chequeo de acceso contaba como «sin frenos» a X, TikTok, LinkedIn, Instagram y REDES, que sí los tienen en su versión ligera (`ia/verificar.py ci` en un workflow): ahora reconoce las dos versiones. (2) Fuera de este repositorio, con su registro en cada uno: control ligero (`ia/verificar.py` + `control-ia.yml`: registro con «Agente:» y secretos en lo agregado) en HISTORIAS-, cloudfare, mes., emilianomilla-site, sistemas-digitales y vicente-diablo; acciones fijadas a SHA en `dof-juridico-monitor/tests.yml`; `.gitignore` con `.env` en REDES, ESTUDIO-TEMAS y Cerebro-Castorena-.
+- Archivos: `tools/guardian.py`, `tools/test_guardian.py` y este registro.
+- Verificación: pruebas de `tools/` aprobadas; nueva prueba sobre los repositorios públicos: los 6 sin frenos quedaron identificados antes de instalarlos.
+- Pendiente: ninguno en este repositorio.
+
 ## 2026-11-25 · Guardián: detalle privado con llave de despliegue y decisiones de Emi
 
 - Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)

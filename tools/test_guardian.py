@@ -97,6 +97,18 @@ class Repositorio(unittest.TestCase):
             self.assertIn(("salida", "acción sin fijar a SHA (actions)"), tipos)
 
 
+class Frenos(unittest.TestCase):
+    def test_version_ligera_cuenta(self):
+        with tempfile.TemporaryDirectory() as t:
+            r = repo_de_prueba(Path(t), {"ia/verificar.py": "#", ".github/workflows/control.yml": "jobs:\n  c:\n    steps:\n      - run: python3 ia/verificar.py ci\n"})
+            self.assertFalse([h for h in gu.auditar_repo("demo", r, True, set()) if h["chequeo"] == "acceso"])
+
+    def test_sin_frenos(self):
+        with tempfile.TemporaryDirectory() as t:
+            r = repo_de_prueba(Path(t), {"README.md": "hola"})
+            self.assertTrue([h for h in gu.auditar_repo("demo", r, True, set()) if h["chequeo"] == "acceso"])
+
+
 class Puntaje(unittest.TestCase):
     def test_sin_hallazgos_es_fortaleza(self):
         r = gu.puntuar([])

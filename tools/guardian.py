@@ -325,8 +325,13 @@ def auditar_repo(nombre: str, carpeta: Path, publico: bool, reservados: set[str]
     ignorar = git(["show", "HEAD:.gitignore"], carpeta).decode(errors="replace")
     if hay_codigo and not re.search(r"^\s*/?\.env\b|^\s*\*\.env|^\s*\.env\*", ignorar, re.M):
         H.append(hallazgo("credenciales", "bajo", nombre, ".gitignore no excluye .env", ".gitignore"))
-    # frenos del protocolo común
-    if not ({"ia/guard.py", ".github/workflows/registro-ia.yml"} <= set(rutas_actuales)):
+    # frenos del protocolo común: la versión completa (ia/guard.py + registro-ia.yml) o la ligera
+    # (un workflow que corre `ia/verificar.py ci`, que revisa registro y secretos en cada push)
+    completa = {"ia/guard.py", ".github/workflows/registro-ia.yml"} <= set(rutas_actuales)
+    ligera = "ia/verificar.py" in rutas_actuales and any(
+        re.match(r"\.github/workflows/[^/]+\.ya?ml$", r) and "ia/verificar.py ci" in git(["show", f"HEAD:{r}"], carpeta).decode(errors="replace")
+        for r in rutas_actuales)
+    if not (completa or ligera):
         H.append(hallazgo("acceso", "medio" if publico else "bajo", nombre, "sin los frenos de ia/ (registro y secretos)"))
     # workflows
     for r in rutas_actuales:
