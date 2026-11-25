@@ -1,7 +1,7 @@
 ---
 tipo: "cerebro"
 repos: 4
-ultimo_cambio: 2026-11-24
+ultimo_cambio: 2026-11-25
 tags:
   - "cerebro"
 generado: "tools/generar.py · no editar a mano: se reescribe cada día"
@@ -15,7 +15,7 @@ Parte de la [[MATRIZ]].
 
 ## Repositorios
 
-- [[Cerebro-Castorena|Cerebro-Castorena-]] · público · 23 nov 2026 · 1 skill(s)
+- [[Cerebro-Castorena|Cerebro-Castorena-]] · público · 25 nov 2026 · 1 skill(s)
 - [[INDEP|INDEP]] · privado · 24 nov 2026
 - [[Escritos-juridicos-CASTORENA|Escritos-juridicos-CASTORENA]] · público · 4 nov 2026 · 1 skill(s)
 - [[dof-juridico-monitor|dof-juridico-monitor]] · público · 24 nov 2026 · 1 skill(s)
