@@ -696,6 +696,12 @@
           "registro": [
             {
               "fecha": "2026-11-25",
+              "titulo": "Decisiones de Emi sobre el lenguaje de cámara y paquetes en la app",
+              "agente": "Claude (claude.ai, panel de Claude in Chrome; modelo Claude Opus 5.5)",
+              "pendiente": "nada de esta referencia. La prueba de personaje con referencia queda para cuando Emi la pida."
+            },
+            {
+              "fecha": "2026-11-25",
               "titulo": "Lenguaje de cámara para prompts de imagen y de video generado (Editor Studio 0.2.2, Vox Studio 0.14.1, MILLA Video Studio 1.1.2)",
               "agente": "Claude (claude.ai, panel de Claude in Chrome; modelo Claude Opus 5.5)",
               "pendiente": "que Emi decida las tres dudas de `docs/REFERENCIAS-EXTERNAS.md` (Flow/Veo como B-roll, movimiento suave en Kling, personaje con referencia); publicar en GitHub desde una sesión con escritura; subir los paquetes nuevos a la app."
@@ -735,12 +741,6 @@
               "titulo": "Editor Studio 0.2.0: segunda auditoría de fondo, con tres revisores independientes",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "un video real de Emi (nada sustituye eso). Sin comprobar: Dolby Vision real de iPhone, macOS, sticker en video a cámara, video generado con Kling. Añadir las pruebas nuevas al flujo de GitHub (`registro-ia.yml`) requiere confirmación expresa de Emi. `ia/test_guard.py` no tiene casos propios para los tres frenos de commit nuevos (su formato prueba llamadas de herramienta, no frenos de commit)."
-            },
-            {
-              "fecha": "2026-11-11",
-              "titulo": "AssemblyAI conectado y comparado con ElevenLabs",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "repetir la comparación con el primer crudo de Emi y fijar el motor por defecto con lo que se oiga en los cortes."
             }
           ],
           "actividad": {
@@ -762,10 +762,10 @@
               9,
               33,
               1,
-              2
+              3
             ],
             "actores_60d": {
-              "Claude": 43,
+              "Claude": 44,
               "Emi": 5
             }
           }
@@ -2231,9 +2231,9 @@
           9,
           128,
           64,
-          10
+          11
         ],
-        "esta_semana": 10,
+        "esta_semana": 11,
         "semana_pasada": 64,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2336,11 +2336,11 @@
       196,
       255,
       90,
-      51
+      52
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 409,
+      "Claude": 410,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 28
     },

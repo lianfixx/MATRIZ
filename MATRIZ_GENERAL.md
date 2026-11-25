@@ -56,13 +56,13 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 | Castorena | 4 | 39 | 19 | 0 | 0 | 0 |
 | MILLA ABOGADOS | 5 | 0 | 0 | 21 | 0 | 0 |
 | Acción Tlalnepantla | 1 | 0 | 0 | 21 | 0 | 0 |
-| Contenido y video | 7 | 10 | 64 | 0 | 0 | 0 |
+| Contenido y video | 7 | 11 | 64 | 0 | 0 | 0 |
 | Estudio | 2 | 0 | 1 | 8 | 0 | 0 |
 | Productos | 2 | 0 | 0 | 21 | 0 | 0 |
 | Herramientas | 5 | 2 | 6 | 2 | 0 | 0 |
 | Sitios web | 3 | 0 | 0 | 13 | 0 | 0 |
 
-Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 409, ChatGPT · Codex 39, GitHub Actions 28.
+Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 410, ChatGPT · Codex 39, GitHub Actions 28.
 
 Vencimientos: Renovación de la conexión Claude–box el 7 dic 2026; Token de GitHub «MATRIZ lectura» el 9 feb 2027; Token de GitHub «MATRIZ escritura» (edición desde el panel) el 12 nov 2027; Llave de GitHub «Matriz administración (Claude)» el 12 nov 2027; Llave de Cloudflare «Matriz administración (Claude)» el 12 nov 2027.
 
@@ -157,8 +157,8 @@ Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio,
 
 - **VIDEOS-IA-SKILL-MILLA** (público) · https://github.com/lianfixx/VIDEOS-IA-SKILL-MILLA · último cambio 25 nov 2026 · skills: editor-studio, milla-video-studio, pizarra-studio, vox-studio
   - Un método portable para producir videos de MILLA ABOGADOS: investigación, guion, conexiones, voz, imágenes, música, montaje y revisión. Incluye una skill, instrucciones para otras IAs, utilidades y un compositor nuevo.
-  - Último: 25 nov 2026 · Lenguaje de cámara para prompts de imagen y de video generado (Editor Studio 0.2.2, Vox Studio 0.14.1, MILLA Video Studio 1.1.2) · Claude (claude.ai, panel de Claude in Chrome; modelo Claude Opus 5.5)
-  - Pendiente: que Emi decida las tres dudas de `docs/REFERENCIAS-EXTERNAS.md` (Flow/Veo como B-roll, movimiento suave en Kling, personaje con referencia); publicar en GitHub desde una sesión con escritura; subir los paquetes nuevos a la app.
+  - Último: 25 nov 2026 · Decisiones de Emi sobre el lenguaje de cámara y paquetes en la app · Claude (claude.ai, panel de Claude in Chrome; modelo Claude Opus 5.5)
+  - Pendiente: nada de esta referencia. La prueba de personaje con referencia queda para cuando Emi la pida.
 - **X** (público) · https://github.com/lianfixx/X · último cambio 23 nov 2026 · skills: x-viral
   - Skill para planear, redactar, revisar, publicar con aprobación (API oficial de X) y medir las publicaciones de @emilianomilla en X, apoyada en el código público del algoritmo de X (xai-org/x-algorithm).
   - Último: 23 nov 2026 · Meme de la consulta de expedientes · Claude Code (sesión en la nube)

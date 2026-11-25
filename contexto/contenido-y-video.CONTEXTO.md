@@ -27,8 +27,8 @@ Un método portable para producir videos de MILLA ABOGADOS: investigación, guio
 
 Skills: `editor-studio`, `milla-video-studio`, `pizarra-studio`, `vox-studio`
 
-Último registro: 25 nov 2026 · Lenguaje de cámara para prompts de imagen y de video generado (Editor Studio 0.2.2, Vox Studio 0.14.1, MILLA Video Studio 1.1.2) · Agente: Claude (claude.ai, panel de Claude in Chrome; modelo Claude Opus 5.5)
-Pendiente: que Emi decida las tres dudas de `docs/REFERENCIAS-EXTERNAS.md` (Flow/Veo como B-roll, movimiento suave en Kling, personaje con referencia); publicar en GitHub desde una sesión con escritura; subir los paquetes nuevos a la app.
+Último registro: 25 nov 2026 · Decisiones de Emi sobre el lenguaje de cámara y paquetes en la app · Agente: Claude (claude.ai, panel de Claude in Chrome; modelo Claude Opus 5.5)
+Pendiente: nada de esta referencia. La prueba de personaje con referencia queda para cuando Emi la pida.
 
 ### X (público)
 
