@@ -8,7 +8,7 @@ generado: "tools/generar.py · no editar a mano: se reescribe cada día"
 
 # Matriz General
 
-29 repositorios en 8 cerebros · actualizada el 25 nov 2026.
+30 repositorios en 8 cerebros · actualizada el 25 nov 2026.
 
 Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel: https://matriz.milla-abogados.workers.dev
 
@@ -19,7 +19,7 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 | [[Castorena]] | 4 | 41 commits | 0 días | 0 | Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP, escritos y monitor del DOF. |
 | [[MILLA ABOGADOS]] | 5 | 0 commits | 21 días | 0 | El despacho de Emi: sitio, asesorías, monitoreo de expedientes, captación e Impulso Libre. |
 | [[Acción Tlalnepantla]] | 1 | 0 commits | 21 días | 0 | Acción Política Juvenil Tlalnepantla (PAN): sitio, formatos, eventos y materiales. |
-| [[Contenido y video]] | 7 | 13 commits | 0 días | 0 | Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio, X, Instagram, TikTok, LinkedIn, la matriz de redes (REDES) e historias de Instagram. |
+| [[Contenido y video]] | 8 | 13 commits | 0 días | 0 | Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio, X, Instagram, TikTok, LinkedIn, la matriz de redes (REDES) e historias de Instagram. |
 | [[Estudio]] | 2 | 1 commits | 0 días | 0 | Maestría en Alta Dirección y pizarras de estudio. |
 | [[Productos]] | 2 | 1 commits | 0 días | 0 | Productos propios de Emi: PANEL FIRMA (gestión jurídica) y Mes (finanzas personales). |
 | [[Herramientas]] | 5 | 3 commits | 0 días | 0 | Piezas que sirven a todos los cerebros: estilo de Emi, selector de modelo, entorno de Cloudflare, computadora virtual (Simular Box) e ingeniería inversa. |
@@ -40,7 +40,6 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 
 ## Repositorios nuevos por clasificar
 
-- `video-vox` · público · creado el 25 nov 2026
 - `3 repositorios privados (nombre reservado)` · privado
 
 La revisión semanal los asigna a su cerebro; si alguno es dudoso, le pregunta a Emi.
@@ -62,4 +61,4 @@ Skills en un repositorio pero no instaladas en Claude: `editor-studio`, `histori
 
 ## Visibilidad
 
-19 públicos y 10 privados. Cualquier persona puede leer los públicos.
+20 públicos y 10 privados. Cualquier persona puede leer los públicos.

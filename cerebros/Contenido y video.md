@@ -1,6 +1,6 @@
 ---
 tipo: "cerebro"
-repos: 7
+repos: 8
 ultimo_cambio: 2026-11-25
 tags:
   - "cerebro"
@@ -22,6 +22,7 @@ Parte de la [[MATRIZ]].
 - [[Instagram|Instagram]] · público · 13 nov 2026 · 1 skill(s)
 - [[TikTok|TikTok]] · público · 24 nov 2026 · 1 skill(s)
 - [[LinkedIn|LinkedIn]] · público · 20 nov 2026 · 1 skill(s)
+- [[video-vox|video-vox]] · público · 14 jul 2026 · 1 skill(s)
 
 ## Tareas programadas
 
@@ -35,6 +36,6 @@ Parte de la [[MATRIZ]].
 - `vox-studio` · [[VIDEOS-IA-SKILL-MILLA|VIDEOS-IA-SKILL-MILLA]]
 - `milla-video-studio` · [[VIDEOS-IA-SKILL-MILLA|VIDEOS-IA-SKILL-MILLA]]
 - `x-viral` · [[X|X]]
-- `video-vox` · `santmun/video-vox`
+- `video-vox` · [[video-vox|video-vox]]
 
 Tablero editable: `tablero/contenido-y-video.md` (o desde el panel). Para otra IA: [[contenido-y-video.CONTEXTO|archivo de contexto]].

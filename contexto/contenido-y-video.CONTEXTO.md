@@ -94,6 +94,14 @@ Skills: `linkedin-pro`
 Último registro: 19 nov 2026 · Posts del mapa y de The Economist salieron; métricas del video · Agente: Claude Code (sesión en la nube)
 Pendiente: enlaces de los dos posts; anotarlos con el texto tal como salió.
 
+### video-vox (público)
+
+https://github.com/lianfixx/video-vox · último cambio: 14 jul 2026
+
+Crea shorts verticales animados estilo Vox / documental educativo sobre cualquier tema, de punta a punta, con Claude Code + Remotion.
+
+Skills: `video-vox`
+
 ## Tareas programadas
 
 - Revisión semanal del algoritmo de X (x-viral) · Lunes 12:47 · repo `X`
@@ -106,4 +114,4 @@ Pendiente: enlaces de los dos posts; anotarlos con el texto tal como salió.
 - `vox-studio` · `VIDEOS-IA-SKILL-MILLA`
 - `milla-video-studio` · `VIDEOS-IA-SKILL-MILLA`
 - `x-viral` · `X`
-- `video-vox` · `santmun/video-vox`
+- `video-vox` · `video-vox`

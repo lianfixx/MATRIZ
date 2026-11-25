@@ -4,7 +4,7 @@ Este es el archivo único de la Matriz General: el mapa de todo el trabajo de Em
 
 - Fuente de verdad: https://github.com/lianfixx/MATRIZ (se regenera solo cada día).
 - Panel: https://matriz.milla-abogados.workers.dev · Conector MCP de solo lectura: https://matriz.milla-abogados.workers.dev/mcp
-- 29 repositorios en 8 cerebros, 15 tareas programadas, 17 skills instaladas.
+- 30 repositorios en 8 cerebros, 15 tareas programadas, 17 skills instaladas.
 
 ## Cómo trabajar con Emi (cualquier IA)
 
@@ -56,7 +56,7 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 | Castorena | 4 | 41 | 19 | 0 | 0 | 0 |
 | MILLA ABOGADOS | 5 | 0 | 0 | 21 | 0 | 0 |
 | Acción Tlalnepantla | 1 | 0 | 0 | 21 | 0 | 0 |
-| Contenido y video | 7 | 13 | 64 | 0 | 0 | 0 |
+| Contenido y video | 8 | 13 | 64 | 0 | 0 | 0 |
 | Estudio | 2 | 1 | 1 | 0 | 0 | 0 |
 | Productos | 2 | 1 | 0 | 0 | 0 | 0 |
 | Herramientas | 5 | 3 | 6 | 0 | 0 | 0 |
@@ -66,7 +66,7 @@ Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 420, ChatGPT
 
 Vencimientos: Renovación de la conexión Claude–box el 7 dic 2026; Token de GitHub «MATRIZ lectura» el 9 feb 2027; Token de GitHub «MATRIZ escritura» (edición desde el panel) el 12 nov 2027; Llave de GitHub «Matriz administración (Claude)» el 12 nov 2027; Llave de Cloudflare «Matriz administración (Claude)» el 12 nov 2027.
 
-Avisos: repositorio nuevo sin cerebro: video-vox; repositorio nuevo sin cerebro: 3 repositorios privados (nombre reservado).
+Avisos: repositorio nuevo sin cerebro: 3 repositorios privados (nombre reservado).
 
 ## Guardián (seguridad y privacidad)
 
@@ -179,6 +179,8 @@ Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio,
   - Skill para planear, redactar, revisar, entregar para publicar y medir lo que Emi publica en su perfil personal de LinkedIn (linkedin.com/in/emiliano-milla). Sirve en cualquier IA.
   - Último: 19 nov 2026 · Posts del mapa y de The Economist salieron; métricas del video · Claude Code (sesión en la nube)
   - Pendiente: enlaces de los dos posts; anotarlos con el texto tal como salió.
+- **video-vox** (público) · https://github.com/lianfixx/video-vox · último cambio 14 jul 2026 · skills: video-vox
+  - Crea shorts verticales animados estilo Vox / documental educativo sobre cualquier tema, de punta a punta, con Claude Code + Remotion.
 
 ### Tareas programadas
 
@@ -192,7 +194,7 @@ Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio,
 - `vox-studio` · `VIDEOS-IA-SKILL-MILLA`
 - `milla-video-studio` · `VIDEOS-IA-SKILL-MILLA`
 - `x-viral` · `X`
-- `video-vox` · `santmun/video-vox`
+- `video-vox` · `video-vox`
 
 ## Cerebro: Estudio
 

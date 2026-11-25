@@ -1266,6 +1266,45 @@
               "Emi": 1
             }
           }
+        },
+        {
+          "nombre": "video-vox",
+          "url": "https://github.com/lianfixx/video-vox",
+          "visibilidad": "público",
+          "leido": true,
+          "ultimo_cambio": "2026-07-14",
+          "resumen": "Crea shorts verticales animados estilo Vox / documental educativo sobre cualquier tema, de punta a punta, con Claude Code + Remotion.",
+          "skills": [
+            {
+              "nombre": "video-vox",
+              "ruta": "SKILL.md"
+            }
+          ],
+          "protocolo": "",
+          "registro": [],
+          "actividad": {
+            "semanas": [
+              "2026-10-05",
+              "2026-10-12",
+              "2026-10-19",
+              "2026-10-26",
+              "2026-11-02",
+              "2026-11-09",
+              "2026-11-16",
+              "2026-11-23"
+            ],
+            "commits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "actores_60d": {}
+          }
         }
       ],
       "tablero": {
@@ -2124,7 +2163,7 @@
       {
         "nombre": "video-vox",
         "cerebro": "contenido-y-video",
-        "repo": "santmun/video-vox"
+        "repo": "video-vox"
       },
       {
         "nombre": "pizarras-de-estudio",
@@ -2191,11 +2230,6 @@
     ]
   },
   "por_clasificar": [
-    {
-      "nombre": "video-vox",
-      "visibilidad": "público",
-      "creado": "2026-11-25"
-    },
     {
       "nombre": "3 repositorios privados (nombre reservado)",
       "visibilidad": "privado",
