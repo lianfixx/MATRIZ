@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-11-25 · video-vox ya vive en la cuenta de Emi (bifurcación)
+
+- Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
+- Solicitud: Emi, 25/11/2026, en chat: copiar a su cuenta la skill de terceros que marcó el Guardián («sí»).
+- Cambios: se bifurcó `santmun/video-vox` en `lianfixx/video-vox` (el original no tiene licencia, así que la bifurcación de GitHub es la vía que sus términos permiten; queda pública como el original y conserva su autoría). Revisión previa del contenido: solo llama a las API de ElevenLabs, Kie y Apify, sin scripts de instalación. `inventario.json` apunta la skill a `video-vox` y `matriz.config.json` agrega el repositorio al cerebro Contenido y video.
+- Archivos: `inventario.json`, `matriz.config.json` y este registro.
+- Verificación: `git ls-remote https://github.com/lianfixx/video-vox` responde; pruebas de `tools/` aprobadas.
+- Pendiente: la skill instalada en Claude se subió desde el original; cuando cambie, reinstalarla desde `lianfixx/video-vox`.
+
 ## 2026-11-25 · Guardián: repetir la revisión el mismo día
 
 - Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
