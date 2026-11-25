@@ -680,7 +680,7 @@ def portada(cerebros: list[dict], por_cerebro: dict, hoy: str, inv: dict, nuevos
 
 
 def matriz_general(cfg: dict, por_cerebro: dict, hoy: str, inv: dict, nuevos: list[dict], met: dict,
-                   tableros: dict, proyectos: list[dict], emi: str) -> str:
+                   tableros: dict, proyectos: list[dict], emi: str, guardian: dict | None = None) -> str:
     """El archivo único. Adjuntarlo a cualquier IA basta para que entienda todo y sepa por dónde seguir."""
     cerebros, prop = cfg["cerebros"], cfg["propietario"]
     todos = [r for c in cerebros for r in por_cerebro[c["id"]]]
@@ -713,6 +713,7 @@ def matriz_general(cfg: dict, por_cerebro: dict, hoy: str, inv: dict, nuevos: li
         L.append("\nAvisos: " + "; ".join([f"falló «{t['nombre']}» ({t['resultado']})" for t in fallas]
                                          + [f"repositorio nuevo sin cerebro: {n['nombre']}" for n in nuevos]) + ".")
     L.append("")
+    L += bloque_guardian(guardian or {})
     for c in cerebros:
         rs = por_cerebro[c["id"]]
         L += [f"## Cerebro: {c['nombre']}\n", c["descripcion"] + "\n"]
@@ -840,6 +841,35 @@ def inventario_publico(inv: dict) -> dict:
     return copia
 
 
+def leer_guardian(base: Path) -> dict:
+    """Puntaje público del Guardián (tools/guardian.py): solo conteos, nunca repositorios ni rutas."""
+    try:
+        e = json.loads((base / "guardian" / "estado.json").read_text(encoding="utf-8"))
+        h = json.loads((base / "guardian" / "historial.json").read_text(encoding="utf-8"))
+    except (FileNotFoundError, ValueError):
+        return {}
+    if not isinstance(e, dict) or not isinstance(e.get("puntaje"), int):
+        return {}
+    chequeos = {k: {c: v.get(c) for c in ("icono", "nombre", "estado", "conteo", "por_que", "como")}
+                for k, v in (e.get("chequeos") or {}).items() if isinstance(v, dict)}
+    return {"fecha": e.get("fecha", ""), "puntaje": e["puntaje"], "veredicto": e.get("veredicto", ""),
+            "chequeos": chequeos, "historial": [x for x in h if isinstance(x, dict)][-30:]}
+
+
+def bloque_guardian(gd: dict) -> list[str]:
+    if not gd:
+        return []
+    nombres = {"critico": "crítico", "alto": "alto", "medio": "medio", "bajo": "bajo", "info": "aviso"}
+    L = [f"## Guardián (seguridad y privacidad)\n",
+         f"**{gd['puntaje']}/100 · {gd['veredicto']}** · revisión del {fecha_corta(gd['fecha'])}. "
+         "Audita todos los repositorios: llaves, historial de Git, credenciales, accesos, qué sale, datos de clientes "
+         "y origen de las skills. Aquí solo hay conteos; el detalle es privado (ver `docs/GUARDIAN.md`).\n"]
+    for c in gd["chequeos"].values():
+        cuenta = ", ".join(f"{n} {nombres.get(k, k)}" for k, n in (c.get("conteo") or {}).items()) or "sin hallazgos"
+        L.append(f"- {c.get('icono', '')} {c.get('nombre', '')}: {c.get('estado', '')} ({cuenta})")
+    return L + [""]
+
+
 def generar(cfg: dict, salida: Path, repos_dir: Path | None, clonar: bool, hoy: str, inv: dict | None = None,
             api: dict | None = None, previo: dict | None = None, base: Path | None = None) -> dict:
     """Genera todo. `api`: repositorios según GitHub (None si no respondió). `previo`: matriz.json anterior."""
@@ -908,11 +938,14 @@ def generar(cfg: dict, salida: Path, repos_dir: Path | None, clonar: bool, hoy: 
         escribir(salida / "bitacora" / f"{mes}.md", texto)
     escribir(salida / "MATRIZ.md", portada(cfg["cerebros"], por_cerebro, hoy, inv, nuevos, met))
     emi = leer(base / "EMI.md")
-    escribir(salida / "MATRIZ_GENERAL.md", matriz_general(cfg, por_cerebro, hoy, inv, nuevos, met, tableros, proyectos, emi))
+    guardian = leer_guardian(base)
+    escribir(salida / "MATRIZ_GENERAL.md", matriz_general(cfg, por_cerebro, hoy, inv, nuevos, met, tableros, proyectos, emi, guardian))
     datos = {"actualizada": hoy, "propietario": prop, "panel": PANEL,
              "cerebros": [{"id": c["id"], "nombre": c["nombre"], "descripcion": c["descripcion"],
                            "repos": por_cerebro[c["id"]], "tablero": tableros[c["id"]]} for c in cfg["cerebros"]],
              "inventario": inv, "por_clasificar": nuevos, "proyectos": proyectos, "metricas": met}
+    if guardian:
+        datos["guardian"] = guardian
     escribir(salida / "matriz.json", json.dumps(datos, ensure_ascii=False, indent=2) + "\n")
     return datos
 

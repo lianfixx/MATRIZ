@@ -17,7 +17,8 @@
       "^bitacora/",
       "^MATRIZ_GENERAL\\.md$",
       "^tablero/",
-      "^proyectos/"
+      "^proyectos/",
+      "^guardian/"
     ]
   },
   "rules": [

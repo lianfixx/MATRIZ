@@ -41,8 +41,8 @@ async function api(ruta, cuerpo) {
   if (!r.ok) throw Object.assign(new Error(j.error || "No se pudo completar."), { status: r.status });
   return j;
 }
-function chispa(valores, alto = 44) {
-  const n = valores.length, max = Math.max(1, ...valores), w = 300;
+function chispa(valores, alto = 44, tope = 0) {
+  const n = valores.length, max = Math.max(1, tope, ...valores), w = 300;
   const x = (i) => (n === 1 ? w : (i / (n - 1)) * (w - 6) + 3);
   const y = (v) => alto - 4 - (v / max) * (alto - 10);
   const pts = valores.map((v, i) => `${x(i).toFixed(1)},${y(v).toFixed(1)}`);
@@ -53,6 +53,44 @@ function chispa(valores, alto = 44) {
 }
 const miniBarras = (v) => { const m = Math.max(1, ...v); return `<span class="mini-barras" aria-hidden="true">${v.map((x) => `<i style="height:${Math.max(2, Math.round((x / m) * 16))}px"></i>`).join("")}</span>`; };
 const COLORES = { "Claude": "#ece9e4", "ChatGPT · Codex": "#9fb7a6", "Gemini": "#8fa3c4", "Muse": "#c7a6d9", "Emi": "#ff5a1f", "GitHub Actions": "#5d5b56", "Otra": "#3d3c39" };
+
+// ---------------------------------------------------------------- Guardián (seguridad y privacidad)
+// Datos: matriz.json → guardian (lo escribe tools/guardian.py). Solo conteos: el detalle es privado.
+
+const GRAV = { critico: "crítico", alto: "alto", medio: "medio", bajo: "bajo", info: "aviso" };
+const TONO_VEREDICTO = { "Fortaleza": "bien", "Vigilante": "bien", "Expuesto": "acento", "En riesgo": "alerta" };
+const TONO_ESTADO = { "Bien": "bien", "Revisar": "", "Atender": "acento", "En riesgo": "alerta" };
+
+function escudo(puntaje, veredicto) {
+  const r = 34, largo = 2 * Math.PI * r, lleno = (Math.max(0, Math.min(100, puntaje)) / 100) * largo;
+  const color = { bien: "var(--bien)", acento: "var(--acento)", alerta: "var(--alerta)" }[TONO_VEREDICTO[veredicto]] || "var(--tinta)";
+  return `<svg class="escudo ${reducido ? "" : "late"}" viewBox="0 0 84 84" role="img" aria-label="${puntaje} de 100, ${esc(veredicto)}">
+    <circle cx="42" cy="42" r="${r}" fill="none" stroke="var(--linea-2)" stroke-width="6"/>
+    <circle class="anillo" cx="42" cy="42" r="${r}" fill="none" stroke="${color}" stroke-width="6" stroke-linecap="round"
+      stroke-dasharray="${lleno.toFixed(1)} ${largo.toFixed(1)}" transform="rotate(-90 42 42)" style="--largo:${largo.toFixed(1)}"/>
+    <text x="42" y="47" text-anchor="middle" class="escudo-cifra">${puntaje}</text></svg>`;
+}
+
+function tarjetaGuardian(G, retraso) {
+  if (!G || typeof G.puntaje !== "number") return "";
+  const hist = (G.historial || []).map((h) => h.puntaje).filter((v) => typeof v === "number");
+  const filas = Object.values(G.chequeos || {}).map((c) => {
+    const cuenta = Object.entries(c.conteo || {}).map(([k, n]) => `${n} ${GRAV[k] || esc(k)}`).join(" · ") || "sin hallazgos";
+    return `<details class="chequeo"><summary><span class="nombre">${esc(c.icono)} ${esc(c.nombre)}</span>
+      <span class="pastilla ${TONO_ESTADO[c.estado] || ""}">${esc(c.estado)}</span><span class="sub">${cuenta}</span></summary>
+      <p><b>Por qué importa.</b> ${esc(c.por_que)}</p><p><b>Cómo lo arreglas.</b> ${esc(c.como)}</p></details>`;
+  }).join("");
+  return `<section class="tarjeta guardian" style="animation-delay:${retraso}s">
+    <h2>Guardián · seguridad y privacidad</h2>
+    <div class="guardian-cabeza">${escudo(G.puntaje, G.veredicto)}
+      <div><div class="cifra">${G.puntaje}<small>/100</small></div>
+      <span class="pastilla ${TONO_VEREDICTO[G.veredicto] || ""}">${esc(G.veredicto)}</span>
+      <div class="tenue" style="font-size:12.5px;margin-top:6px">Revisión del ${f(G.fecha)} · todos tus repositorios</div></div></div>
+    ${hist.length > 1 ? chispa(hist, 44, 100) : ""}
+    <div class="filas">${filas}</div>
+    <p class="tenue" style="margin:10px 0 0;font-size:12px">Aquí solo hay conteos. Qué repositorio y qué archivo está en el detalle privado. Toca cada chequeo para ver por qué importa y cómo se arregla.</p>
+  </section>`;
+}
 
 // ---------------------------------------------------------------- vista «Hoy»
 
@@ -68,6 +106,7 @@ function vistaHoy() {
   for (const { c } of cerebros) for (const p of (c.tablero?.pendientes || [])) if (!p.hecho && p.vence && p.vence < hoyISO()) atencion.push({ t: `Vencido: ${esc(p.texto)}`, sub: `${esc(c.nombre)} · venció el ${f(p.vence)}`, ir: c.id, nivel: "alerta" });
   for (const t of (inv.tareas || [])) if (String(t.resultado || "").startsWith("falló")) atencion.push({ t: `Falló «${esc(t.nombre)}»`, sub: `${f(t.ultima_corrida)} · ${esc(t.resultado.replace(/^falló:?\s*/, ""))}`, ir: t.cerebro !== "matriz" ? t.cerebro : "", nivel: "alerta" });
   for (const v of (M.vencimientos || [])) if (v.dias <= 30) atencion.push({ t: esc(v.nombre), sub: v.dias < 0 ? "vencido" : `vence en ${v.dias} días · ${f(v.fecha)}`, nivel: v.dias <= 7 ? "alerta" : "" });
+  if (D.guardian && ["Expuesto", "En riesgo"].includes(D.guardian.veredicto)) atencion.unshift({ t: `Guardián: ${D.guardian.puntaje}/100 · ${esc(D.guardian.veredicto)}`, sub: "seguridad y privacidad de tus repositorios · mira la tarjeta del Guardián", nivel: "alerta" });
   for (const r of (D.por_clasificar || [])) atencion.push({ t: `Repositorio nuevo: ${esc(r.nombre)}`, sub: "se acomodará en su cerebro", nivel: "" });
   for (const { c, m } of cerebros) if ((m.dias_sin_movimiento ?? 0) > 21) atencion.push({ t: `${esc(c.nombre)} lleva ${m.dias_sin_movimiento} días quieto`, sub: "ningún cambio en sus proyectos", ir: c.id, nivel: "" });
 
@@ -103,6 +142,8 @@ function vistaHoy() {
     <div class="filas">${atencion.slice(0, 7).map((a) => `${a.ir ? `<button class="fila" data-ir="${esc(a.ir)}">` : `<div class="fila">`}
       <span class="nombre">${a.t}</span>${a.nivel ? `<span class="pastilla alerta">revisar</span>` : `<span></span>`}<span class="sub">${a.sub}</span>${a.ir ? "</button>" : "</div>"}`).join("")}</div>
   </section>` : `<section class="tarjeta" style="animation-delay:.05s"><h2>Necesita tu atención</h2><p class="vacio">Nada. Todo en orden.</p></section>`}
+
+  ${tarjetaGuardian(D.guardian, .08)}
 
   <section class="tarjeta" style="animation-delay:.1s">
     <h2>Tus pendientes${S.editor ? "" : " · toca Entrar para marcarlos"}</h2>

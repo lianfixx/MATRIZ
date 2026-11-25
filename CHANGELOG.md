@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-11-25 · Guardián: auditoría diaria de seguridad y privacidad de todos los repositorios
+
+- Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
+- Solicitud: Emi, 25/11/2026, en chat, sobre la lección «Guardián Imperial — la neurona de seguridad» (Motor Agéntico, comunidad Imperio Agéntico): «revisa qué nos sirve de aquí e impleméntalo a la Matriz General de manera perfecta».
+- Cambios: (1) `tools/guardian.py` 1.0.0: siete chequeos adaptados a la Matriz y a un despacho jurídico (llaves, historial de Git, credenciales y vencimientos, acceso y frenos de `ia/`, qué sale, datos de clientes en repositorios públicos incluidos documentos descargables, origen de skills), puntaje 0-100, veredicto (Fortaleza, Vigilante, Expuesto, En riesgo) e historial. Solo lee; reutiliza los patrones de `ia/guard.py` y `tools/privacidad.json`. Salida pública solo con conteos; detalle privado fuera del repositorio. No se usó el código del original (otra plataforma). (2) `actualizar-matriz.yml`: paso «Guardián», una vez al día antes de «Generar»; aviso en Issues (solo conteos) si el puntaje baja 5 o más o suben los críticos; detalle opcional a un repositorio privado (`GUARDIAN_REPO` + `GUARDIAN_TOKEN`). (3) `tools/generar.py`: el puntaje entra a `matriz.json` (`guardian`) y a la Matriz General (sección «Guardián»), y de ahí al conector MCP. (4) Panel: tarjeta con escudo, veredicto, evolución y los siete chequeos con «Por qué importa» y «Cómo lo arreglas»; aviso en «Necesita tu atención» si queda Expuesto o En riesgo. (5) `ia/politica.json`: `guardian/` exento del registro por ser generado (como `bitacora/`). (6) `docs/GUARDIAN.md`, `AGENTS.md` y el paso 6c de la revisión semanal.
+- Archivos: `tools/guardian.py`, `tools/test_guardian.py`, `tools/generar.py`, `.github/workflows/actualizar-matriz.yml`, `panel/app.js`, `panel/estilo.css`, `ia/politica.json`, `docs/GUARDIAN.md`, `docs/REVISION_SEMANAL.md`, `AGENTS.md` y este registro.
+- Verificación: `python3 -m unittest discover -s tools -p 'test_*.py'` → aprobado (49, de ellas 16 del Guardián); `python3 ia/test_guard.py` → aprobado (33); `ia/REGLAS.md` al día; workflow carga como YAML; panel armado con `tools/panel.py` y tarjeta revisada en navegador sin errores; prueba real sobre los 20 repositorios públicos (sin token) → 27/100, En riesgo. El hallazgo principal se informó a Emi en privado; aquí no se detalla.
+- Pendiente: primera corrida real con `MATRIZ_TOKEN` (incluye privados); decisiones de Emi sobre el hallazgo principal, el repositorio privado del detalle y el permiso de lectura de administración del token.
+
 ## 2026-11-23 · El reloj de GitHub no es confiable: la revisión semanal lanza la inteligencia
 
 - Agente: claude.ai (sesión en la nube, claude-fable-5-2)

@@ -29,7 +29,7 @@ on:
 
 permissions:
   contents: write
-  issues: write # solo para el aviso de la segunda red de privacidad
+  issues: write # solo para los avisos de la segunda red de privacidad y del Guardián (solo conteos)
 
 concurrency:
   group: actualizar-matriz
@@ -49,6 +49,35 @@ jobs:
           python-version: "3.12"
       - name: Pruebas del generador
         run: python3 -m unittest discover -s tools -p 'test_*.py'
+      # Guardián (docs/GUARDIAN.md): una vez al día, antes de «Generar», para que su puntaje salga en matriz.json,
+      # la Matriz General, el panel y el conector. Solo lee: clona cada repositorio (sin archivos de más de 2 MB)
+      # y no cambia ninguno. Aquí solo se guardan conteos; el detalle va a un repositorio privado si existen
+      # la variable GUARDIAN_REPO y el secreto GUARDIAN_TOKEN. Si falla, la Matriz se actualiza igual.
+      - name: Guardián (una vez al día, solo lee)
+        continue-on-error: true
+        timeout-minutes: 10
+        env:
+          MATRIZ_TOKEN: ${{ secrets.MATRIZ_TOKEN }}
+          MATRIZ_RESERVADOS: ${{ secrets.MATRIZ_RESERVADOS }}
+          GUARDIAN_TOKEN: ${{ secrets.GUARDIAN_TOKEN }}
+          GUARDIAN_REPO: ${{ vars.GUARDIAN_REPO }}
+          GH_TOKEN: ${{ github.token }}
+          TZ: America/Mexico_City
+        run: |
+          set -euo pipefail
+          hoy=$(date +%F)
+          if [ -f guardian/estado.json ] && python3 -c "import json,sys;sys.exit(json.load(open('guardian/estado.json')).get('fecha')!=sys.argv[1])" "$hoy"; then
+            echo "El Guardián ya revisó hoy."; exit 0
+          fi
+          cp guardian/estado.json "$RUNNER_TEMP/previo.json" 2> /dev/null || echo "{}" > "$RUNNER_TEMP/previo.json"
+          python3 tools/guardian.py --clonar --detalle "$RUNNER_TEMP/detalle.json" ${GUARDIAN_REPO:+--enviar-detalle "$GUARDIAN_REPO"} | tee -a "$GITHUB_STEP_SUMMARY"
+          rm -f "$RUNNER_TEMP/detalle.json"
+          cuerpo=$(python3 tools/guardian.py --comparar "$RUNNER_TEMP/previo.json")
+          [ -n "$cuerpo" ] || exit 0
+          titulo="Guardián: bajó el puntaje de seguridad"
+          num=$(gh issue list --repo "$GITHUB_REPOSITORY" --state open --search "$titulo in:title" --json number --jq '.[0].number // empty')
+          if [ -n "$num" ]; then gh issue comment "$num" --repo "$GITHUB_REPOSITORY" --body "$cuerpo"
+          else gh issue create --repo "$GITHUB_REPOSITORY" --title "$titulo" --body "$cuerpo"; fi
       - name: Generar
         env:
           MATRIZ_TOKEN: ${{ secrets.MATRIZ_TOKEN }}
@@ -89,7 +118,7 @@ jobs:
       - name: Guardar si hubo cambios
         run: |
           set -euo pipefail
-          git add MATRIZ_GENERAL.md MATRIZ.md matriz.json cerebros repos contexto bitacora
+          git add MATRIZ_GENERAL.md MATRIZ.md matriz.json cerebros repos contexto bitacora guardian
           if git diff --cached --quiet; then echo "Sin cambios."; exit 0; fi
           git -c user.name="matriz-bot" -c user.email="matriz-bot@users.noreply.github.com" \
             commit -m "Matriz: actualización automática" -m "IA-Actor: GitHub Actions (tools/generar.py)"
