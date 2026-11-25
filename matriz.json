@@ -672,7 +672,7 @@
           "url": "https://github.com/lianfixx/VIDEOS-IA-SKILL-MILLA",
           "visibilidad": "público",
           "leido": true,
-          "ultimo_cambio": "2026-11-24",
+          "ultimo_cambio": "2026-11-25",
           "resumen": "Un método portable para producir videos de MILLA ABOGADOS: investigación, guion, conexiones, voz, imágenes, música, montaje y revisión. Incluye una skill, instrucciones para otras IAs, utilidades y un compositor nuevo.",
           "skills": [
             {
@@ -694,6 +694,12 @@
           ],
           "protocolo": "1.1.0",
           "registro": [
+            {
+              "fecha": "2026-11-25",
+              "titulo": "Lenguaje de cámara para prompts de imagen y de video generado (Editor Studio 0.2.2, Vox Studio 0.14.1, MILLA Video Studio 1.1.2)",
+              "agente": "Claude (claude.ai, panel de Claude in Chrome; modelo Claude Opus 5.5)",
+              "pendiente": "que Emi decida las tres dudas de `docs/REFERENCIAS-EXTERNAS.md` (Flow/Veo como B-roll, movimiento suave en Kling, personaje con referencia); publicar en GitHub desde una sesión con escritura; subir los paquetes nuevos a la app."
+            },
             {
               "fecha": "2026-11-24",
               "titulo": "Vox Studio 0.14.0: previa antes del render, tipografía en movimiento y foto viva",
@@ -735,12 +741,6 @@
               "titulo": "AssemblyAI conectado y comparado con ElevenLabs",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "repetir la comparación con el primer crudo de Emi y fijar el motor por defecto con lo que se oiga en los cortes."
-            },
-            {
-              "fecha": "2026-11-11",
-              "titulo": "AssemblyAI: llave guardada, subida de audio rechazada",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "que Emi ajuste el secreto de red para que la cabecera `Authorization` lleve solo la llave, sin «Bearer» (causa probable, sin confirmar), y repetir la comparación con `comparar-motores`."
             }
           ],
           "actividad": {
@@ -762,10 +762,10 @@
               9,
               33,
               1,
-              1
+              2
             ],
             "actores_60d": {
-              "Claude": 42,
+              "Claude": 43,
               "Emi": 5
             }
           }
@@ -2157,7 +2157,7 @@
   },
   "por_clasificar": [
     {
-      "nombre": "2 repositorios privados (nombre reservado)",
+      "nombre": "3 repositorios privados (nombre reservado)",
       "visibilidad": "privado",
       "creado": ""
     }
@@ -2231,9 +2231,9 @@
           9,
           128,
           64,
-          9
+          10
         ],
-        "esta_semana": 9,
+        "esta_semana": 10,
         "semana_pasada": 64,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2336,11 +2336,11 @@
       196,
       255,
       90,
-      50
+      51
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 408,
+      "Claude": 409,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 28
     },
