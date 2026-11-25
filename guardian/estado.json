@@ -2,7 +2,7 @@
  "_doc": "Lo escribe tools/guardian.py. Público: solo puntaje, veredicto y conteos; nunca repositorios, rutas ni textos. El detalle es privado (ver docs/GUARDIAN.md).",
  "version": "1.0.0",
  "fecha": "2026-11-25",
- "puntaje": 32,
+ "puntaje": 44,
  "veredicto": "En riesgo",
  "cobertura": {
   "repos": 34,
@@ -37,10 +37,9 @@
   "credenciales": {
    "icono": "🪪",
    "nombre": "Credenciales expuestas y vencimientos",
-   "estado": "Atender",
-   "resta": 20,
+   "estado": "Revisar",
+   "resta": 8,
    "conteo": {
-    "alto": 1,
     "medio": 1,
     "bajo": 4
    },
@@ -76,9 +75,9 @@
    "estado": "En riesgo",
    "resta": 40,
    "conteo": {
-    "critico": 43,
-    "alto": 68,
-    "bajo": 26
+    "critico": 42,
+    "alto": 69,
+    "bajo": 27
    },
    "por_que": "Expedientes, CURP, RFC, teléfonos o nombres de clientes en un repositorio público violan el secreto profesional y la protección de datos personales, aunque sea en un archivo viejo.",
    "como": "Saca el dato del archivo (o vuelve privado el repositorio) y agrega el nombre del cliente al secreto MATRIZ_RESERVADOS. Si estuvo en el historial de un repositorio público, considéralo visto."

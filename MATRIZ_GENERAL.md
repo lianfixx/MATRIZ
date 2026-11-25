@@ -70,14 +70,14 @@ Avisos: repositorio nuevo sin cerebro: 3 repositorios privados (nombre reservado
 
 ## Guardián (seguridad y privacidad)
 
-**32/100 · En riesgo** · revisión del 25 nov 2026. Audita todos los repositorios: llaves, historial de Git, credenciales, accesos, qué sale, datos de clientes, memoria para IA y origen de las skills. Aquí solo hay conteos; el detalle es privado (ver `docs/GUARDIAN.md`).
+**44/100 · En riesgo** · revisión del 25 nov 2026. Audita todos los repositorios: llaves, historial de Git, credenciales, accesos, qué sale, datos de clientes, memoria para IA y origen de las skills. Aquí solo hay conteos; el detalle es privado (ver `docs/GUARDIAN.md`).
 
 - 🔑 Llaves a la vista: Bien (2 aviso)
 - 🕵️ Secretos en el historial de Git: Bien (2 aviso)
-- 🪪 Credenciales expuestas y vencimientos: Atender (1 alto, 1 medio, 4 bajo)
+- 🪪 Credenciales expuestas y vencimientos: Revisar (1 medio, 4 bajo)
 - 👥 Quién tiene acceso a qué: Revisar (1 medio, 5 bajo)
 - 📡 Qué sale de tu cuenta: Bien (2 aviso)
-- 🧾 Datos de clientes y personales expuestos: En riesgo (43 crítico, 68 alto, 26 bajo)
+- 🧾 Datos de clientes y personales expuestos: En riesgo (42 crítico, 69 alto, 27 bajo)
 - 🧠 Memoria para tus IA: Bien (sin hallazgos)
 - 📦 Origen de tus skills: Bien (sin hallazgos)
 

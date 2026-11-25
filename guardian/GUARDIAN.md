@@ -1,6 +1,6 @@
 # Guardián de la Matriz · 2026-11-25
 
-**32/100 · En riesgo**
+**44/100 · En riesgo**
 
 Auditoría de seguridad y privacidad de todos los repositorios de Emi. Solo lee y aconseja. Aquí solo hay conteos: el detalle (qué repositorio, qué archivo) es privado. Cómo funciona: [docs/GUARDIAN.md](../docs/GUARDIAN.md).
 
@@ -20,9 +20,9 @@ Hallazgos: 2 aviso.
 - **Por qué importa:** Aunque ya borraste la llave, sigue en los commits anteriores y cualquiera puede verla en el historial. Lo borrado en Git no desaparece.
 - **Cómo lo arreglas:** Lo único seguro es revocar la llave y crear otra. Reescribir el historial no es necesario después de revocarla (y está prohibido el force-push sin tu confirmación).
 
-## 🪪 Credenciales expuestas y vencimientos · Atender
+## 🪪 Credenciales expuestas y vencimientos · Revisar
 
-Hallazgos: 1 alto, 1 medio, 4 bajo.
+Hallazgos: 1 medio, 4 bajo.
 
 - **Por qué importa:** Archivos como .env, .pem o credentials.json guardan accesos completos; si se suben, se filtran todos juntos. Y una llave que vence sin aviso detiene tus automatizaciones.
 - **Cómo lo arreglas:** Saca el archivo del repositorio, agrégalo a .gitignore y revoca lo que traía. Renueva antes del vencimiento: la Matriz te muestra la fecha en «Vencimientos».
@@ -43,7 +43,7 @@ Hallazgos: 2 aviso.
 
 ## 🧾 Datos de clientes y personales expuestos · En riesgo
 
-Hallazgos: 43 crítico, 68 alto, 26 bajo.
+Hallazgos: 42 crítico, 69 alto, 27 bajo.
 
 - **Por qué importa:** Expedientes, CURP, RFC, teléfonos o nombres de clientes en un repositorio público violan el secreto profesional y la protección de datos personales, aunque sea en un archivo viejo.
 - **Cómo lo arreglas:** Saca el dato del archivo (o vuelve privado el repositorio) y agrega el nombre del cliente al secreto MATRIZ_RESERVADOS. Si estuvo en el historial de un repositorio público, considéralo visto.
