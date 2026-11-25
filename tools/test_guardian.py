@@ -15,7 +15,7 @@ import guardian as gu  # noqa: E402
 
 TOKEN_FICTICIO = "gh" + "p_" + "Q7w9Zr2Lk4Tn8Vb1Xc6Md3Pf5Hs0Jy" + "Ae4Ru7"   # 40 caracteres, no existe
 CURP_FICTICIA = "GAMA" + "900101" + "HDF" + "RRN" + "09"
-EXPEDIENTE_FICTICIO = "27969/" + "22-17-02-5"
+EXPEDIENTE_FICTICIO = "12345/" + "21-17-01-3"
 
 
 def repo_de_prueba(carpeta: Path, archivos: dict[str, str], borrar: list[str] = ()) -> Path:

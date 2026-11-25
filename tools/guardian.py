@@ -151,7 +151,7 @@ CORREO_INOCUO = re.compile(r"(noreply|no-reply|users\.noreply\.github\.com|examp
 TELEFONO = re.compile(r"(?<![\w/.:#-])(?:\+?52[\s.-]?)?(?:\(\d{2,3}\)\s?|\d{2,3}[\s.-])\d{4}[\s.-]?\d{4}(?![\w/])")
 EXPEDIENTE = [re.compile(x["re"], re.I if x.get("i") else 0) for x in
               json.loads((RAIZ / "tools" / "privacidad.json").read_text(encoding="utf-8"))["patrones"]
-              if x["por"] == "[expediente]"][::2]  # el de sufijo (27969/22-17-02-5) y el rotulado («Exp. No. 45/2023»)
+              if x["por"] == "[expediente]"][::2]  # el de sufijo (12345/21-17-01-3) y el rotulado («Exp. No. 45/2023»)
 RFC_FISICA = re.compile(r"\b[A-ZÑ&]{4}(\d{2})(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])[A-Z\d]{2}[A\d]\b")
 ACCION = re.compile(r"^\s*-?\s*uses:\s*([\w.-]+/[\w./-]+)@([\w.-]+)", re.M)
 

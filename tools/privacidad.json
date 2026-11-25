@@ -5,13 +5,13 @@
       "re": "(?<![\\d/])\\d{2,6}/\\d{2,4}(?:-[0-9A-Z]{1,6}){1,6}\\b",
       "i": false,
       "por": "[expediente]",
-      "ej": "27969/22-17-02-5"
+      "ej": "12345/21-17-01-3"
     },
     {
       "re": "(?<![\\d/])(?:\\d{3,6}/(?:19|20)?\\d{2}|\\d{1,2}/(?:19|20)\\d{2})(?![\\d/])",
       "i": false,
       "por": "[expediente]",
-      "ej": "45/2023, 1234/2023, 27969/22, 456/24 (no tapa 09/11 ni 50/51)"
+      "ej": "45/2023, 1234/2023, 12345/21, 456/24 (no tapa 09/11 ni 50/51)"
     },
     {
       "re": "\\b(?:exp(?:ediente)?s?|juicio|amparo(?:\\s+(?:directo|indirecto|en\\s+revisi[oó]n))?|toca|folio|causa(?:\\s+penal)?|carpeta(?:\\s+de\\s+investigaci[oó]n)?|averiguaci[oó]n(?:\\s+previa)?|proceso)\\.?\\s{0,3}(?:n[oú]m(?:ero)?\\.?|no\\.?)?\\s{0,3}[:#]?\\s{0,3}\\d[\\d/.,-]{0,30}",
@@ -59,7 +59,7 @@
       "re": "(?<![\\w./-])\\d{5,}(?![\\w./-])",
       "i": false,
       "por": "[número]",
-      "ej": "27969 suelto"
+      "ej": "12345 suelto"
     },
     {
       "re": "\\b[A-Z][AEIOUX][A-Z]{2}\\d{6}[HM][A-Z]{5}[A-Z\\d]\\d\\b",

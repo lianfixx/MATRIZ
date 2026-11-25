@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-11-25 · Privacidad: se retiran de la Matriz un nombre de cliente y un número de expediente
+
+- Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
+- Solicitud: hallazgo crítico del Guardián (detalle privado del 25/11/2026), dentro del encargo de Emi del mismo día («revisa todo lo demás»).
+- Cambios: una entrada anterior de este registro (la de la auditoría que creó `tools/privacidad.json`) y los ejemplos de ese archivo citaban un nombre de cliente reservado y un número de expediente que parece real. Se sustituyen por la mención genérica (marcada como retirada) y por ejemplos inventados; el mismo número que se había copiado esta tarde en `tools/test_guardian.py` y en un comentario de `tools/guardian.py` también se cambia. Es una corrección de privacidad, no de contenido: ninguna regla cambia.
+- Archivos: `CHANGELOG.md` (entrada anterior corregida y esta entrada), `tools/privacidad.json`, `tools/guardian.py`, `tools/test_guardian.py`.
+- Verificación: pruebas de `tools/` aprobadas; búsqueda en el árbol actual sin el nombre ni el número.
+- Pendiente: siguen en el historial de git de este repositorio público y en `bitacora/` anterior; borrar historial exige reescribirlo con force-push, que está prohibido sin decisión expresa de Emi. Mientras tanto, se consideran vistos.
+
 ## 2026-11-25 · Guardián: octavo chequeo, memoria para tus IA
 
 - Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
@@ -265,9 +274,9 @@
 
 - Agente: Claude Code (sesión en la nube)
 - Solicitud: Emi, 12/11/2026: «AUDITA A PROFUNDIDAD Y MEJORA, ARREGLA Y DAME VERSIÓN FINAL».
-- Cambios: la auditoría encontró que la Matriz copiaba de los `CHANGELOG.md` de repositorios públicos un número de expediente y el nombre de un cliente, y que así llegaban al panel y al conector. `tools/generar.py` ahora pasa todo texto de un repositorio (resumen, títulos, agente y pendientes) por un filtro que tapa números de expediente, números de folio sueltos, correos, teléfonos, CURP, RFC y montos, y sustituye por «[cliente]» los nombres de `terminos_reservados` en `matriz.config.json` (hoy: Liverpool). `matriz.json` deja de publicar el campo «cambios». README explica la privacidad y el acceso del token; la guía de Obsidian ya no fija el número de repositorios. El historial de git conserva las versiones anteriores; esos datos ya eran públicos en `Cerebro-Castorena-`.
+- Cambios: la auditoría encontró que la Matriz copiaba de los `CHANGELOG.md` de repositorios públicos un número de expediente y el nombre de un cliente, y que así llegaban al panel y al conector. `tools/generar.py` ahora pasa todo texto de un repositorio (resumen, títulos, agente y pendientes) por un filtro que tapa números de expediente, números de folio sueltos, correos, teléfonos, CURP, RFC y montos, y sustituye por «[cliente]» los nombres de `terminos_reservados` en `matriz.config.json` (hoy: [cliente; dato retirado el 25/11/2026 por privacidad]). `matriz.json` deja de publicar el campo «cambios». README explica la privacidad y el acceso del token; la guía de Obsidian ya no fija el número de repositorios. El historial de git conserva las versiones anteriores; esos datos ya eran públicos en `Cerebro-Castorena-`.
 - Archivos: `tools/generar.py`, `tools/test_generar.py`, `matriz.config.json`, `README.md`, `docs/OBSIDIAN.md` y este registro.
-- Verificación: `python3 -m unittest discover -s tools -p 'test_*.py'` → aprobado (incluye una prueba de reservas); generación local con los 22 repositorios → sin «Liverpool» ni «27969» en MATRIZ.md, matriz.json, cerebros/, repos/, contexto/ ni bitacora/.
+- Verificación: `python3 -m unittest discover -s tools -p 'test_*.py'` → aprobado (incluye una prueba de reservas); generación local con los 22 repositorios → sin el nombre del cliente ni el número de expediente [dato retirado el 25/11/2026 por privacidad] en MATRIZ.md, matriz.json, cerebros/, repos/, contexto/ ni bitacora/.
 - Pendiente: integrar los hallazgos de la revisión independiente del código (en curso).
 
 ## 2026-11-12 · Matriz 0.6.0: panel publicado y conector MCP para cualquier IA
