@@ -86,6 +86,14 @@ class Repositorio(unittest.TestCase):
             docs = [h for h in H if h["tipo"].startswith("documento")]
             self.assertEqual([(h["gravedad"], h["ruta"]) for h in docs], [("critico", "fuentes/Control_de_expedientes.xlsx")])
 
+    def test_npmrc_sin_credencial_no_cuenta(self):
+        with tempfile.TemporaryDirectory() as t:
+            r = repo_de_prueba(Path(t), {".npmrc": "audit=false\nfund=false\n"})
+            self.assertFalse([h for h in gu.auditar_repo("demo", r, False, set()) if h["chequeo"] == "credenciales" and "versionado" in h["tipo"]])
+        with tempfile.TemporaryDirectory() as t:
+            r = repo_de_prueba(Path(t), {".npmrc": "//registry.npmjs.org/:_auth" + "Token=abc\n"})
+            self.assertTrue([h for h in gu.auditar_repo("demo", r, False, set()) if h["chequeo"] == "credenciales" and "versionado" in h["tipo"]])
+
     def test_credencial_versionada_y_workflow(self):
         with tempfile.TemporaryDirectory() as t:
             r = repo_de_prueba(Path(t), {".env": "A=1\n", ".env.example": "A=\n", "package.json": "{}",

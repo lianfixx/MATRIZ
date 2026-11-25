@@ -319,6 +319,11 @@ def auditar_repo(nombre: str, carpeta: Path, publico: bool, reservados: set[str]
     # credenciales versionadas y .gitignore
     rutas_actuales = [l.decode(errors="replace") for l in git(["ls-tree", "-r", "--name-only", "HEAD"], carpeta).splitlines()]
     for r in rutas_actuales:
+        if re.search(r"(^|/)\.(npmrc|pypirc|netrc)$", r):
+            # Estos archivos suelen traer solo ajustes; cuentan si guardan una credencial.
+            if not re.search(r"(?im)(_authtoken|_auth|password|token)\s*[=:]|^\s*machine\s+\S+.*\bpassword\b",
+                             git(["show", f"HEAD:{r}"], carpeta).decode(errors="replace")):
+                continue
         if ARCHIVO_CREDENCIAL.search(r) and not ENV_PLANTILLA.search(r):
             H.append(hallazgo("credenciales", "critico" if publico else "alto", nombre, "archivo de credenciales versionado", r))
     # Documentos de trabajo (Excel, Word, PDF) en repositorios públicos: el escáner de texto no los lee,

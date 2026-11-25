@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-11-25 · Guardián: `.npmrc` solo cuenta si guarda una credencial
+
+- Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
+- Solicitud: revisión del detalle privado del 25/11/2026 dentro del encargo de Emi («revisa todo lo demás»).
+- Cambios: el único hallazgo alto en un repositorio privado era un `.npmrc` con tres ajustes y ninguna llave (falsa alarma comprobada). `.npmrc`, `.pypirc` y `.netrc` ahora solo cuentan si contienen un token, `_auth` o una contraseña.
+- Archivos: `tools/guardian.py`, `tools/test_guardian.py` y este registro.
+- Verificación: pruebas de `tools/` aprobadas (con un caso con y otro sin credencial).
+- Pendiente: ninguno.
+
 ## 2026-11-25 · Privacidad: se retiran de la Matriz un nombre de cliente y un número de expediente
 
 - Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
