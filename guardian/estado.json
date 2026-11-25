@@ -1,0 +1,99 @@
+{
+ "_doc": "Lo escribe tools/guardian.py. Público: solo puntaje, veredicto y conteos; nunca repositorios, rutas ni textos. El detalle es privado (ver docs/GUARDIAN.md).",
+ "version": "1.0.0",
+ "fecha": "2026-11-25",
+ "puntaje": 13,
+ "veredicto": "En riesgo",
+ "cobertura": {
+  "repos": 33,
+  "publicos": 20,
+  "sin_lectura": 0,
+  "revisados": 33,
+  "sin_permiso": 0
+ },
+ "chequeos": {
+  "llaves": {
+   "icono": "🔑",
+   "nombre": "Llaves a la vista",
+   "estado": "Bien",
+   "resta": 0,
+   "conteo": {
+    "info": 2
+   },
+   "por_que": "Una llave de API o un token en un archivo deja usar tus cuentas (Claude, GitHub, Google, Cloudflare) a quien lo vea. En un repositorio público, los robots las encuentran en minutos.",
+   "como": "Revoca la llave en su servicio y crea otra; guárdala como secreto (GitHub → Settings → Secrets, o ~/.config de tu box) y bórrala del archivo. Borrarla sin revocarla no basta."
+  },
+  "historial": {
+   "icono": "🕵️",
+   "nombre": "Secretos en el historial de Git",
+   "estado": "Bien",
+   "resta": 0,
+   "conteo": {
+    "info": 2
+   },
+   "por_que": "Aunque ya borraste la llave, sigue en los commits anteriores y cualquiera puede verla en el historial. Lo borrado en Git no desaparece.",
+   "como": "Lo único seguro es revocar la llave y crear otra. Reescribir el historial no es necesario después de revocarla (y está prohibido el force-push sin tu confirmación)."
+  },
+  "credenciales": {
+   "icono": "🪪",
+   "nombre": "Credenciales expuestas y vencimientos",
+   "estado": "Atender",
+   "resta": 20,
+   "conteo": {
+    "alto": 1,
+    "medio": 1,
+    "bajo": 7
+   },
+   "por_que": "Archivos como .env, .pem o credentials.json guardan accesos completos; si se suben, se filtran todos juntos. Y una llave que vence sin aviso detiene tus automatizaciones.",
+   "como": "Saca el archivo del repositorio, agrégalo a .gitignore y revoca lo que traía. Renueva antes del vencimiento: la Matriz te muestra la fecha en «Vencimientos»."
+  },
+  "acceso": {
+   "icono": "👥",
+   "nombre": "Quién tiene acceso a qué",
+   "estado": "Revisar",
+   "resta": 20,
+   "conteo": {
+    "medio": 11,
+    "bajo": 5
+   },
+   "por_que": "Cada colaborador o llave de despliegue es una puerta. Y un repositorio sin los frenos de ia/ acepta commits sin registro y sin la revisión de secretos.",
+   "como": "Quita colaboradores y llaves de despliegue que ya no uses (Settings → Collaborators / Deploy keys). Instala los frenos con el protocolo común (ia/ y registro-ia.yml)."
+  },
+  "salida": {
+   "icono": "📡",
+   "nombre": "Qué sale de tu cuenta",
+   "estado": "Bien",
+   "resta": 2,
+   "conteo": {
+    "bajo": 2,
+    "info": 2
+   },
+   "por_que": "Todo lo de un repositorio público lo puede leer cualquiera, también lo que tus workflows publican. Una acción de GitHub de terceros sin versión fija puede cambiar y ejecutar código ajeno con tus secretos.",
+   "como": "Vuelve privado lo que no necesita ser público. En los workflows, fija cada acción a su SHA (como ya hace la Matriz) y declara «permissions» con lo mínimo."
+  },
+  "datos": {
+   "icono": "🧾",
+   "nombre": "Datos de clientes y personales expuestos",
+   "estado": "En riesgo",
+   "resta": 40,
+   "conteo": {
+    "critico": 43,
+    "alto": 68,
+    "bajo": 26
+   },
+   "por_que": "Expedientes, CURP, RFC, teléfonos o nombres de clientes en un repositorio público violan el secreto profesional y la protección de datos personales, aunque sea en un archivo viejo.",
+   "como": "Saca el dato del archivo (o vuelve privado el repositorio) y agrega el nombre del cliente al secreto MATRIZ_RESERVADOS. Si estuvo en el historial de un repositorio público, considéralo visto."
+  },
+  "skills": {
+   "icono": "📦",
+   "nombre": "Origen de tus skills",
+   "estado": "Revisar",
+   "resta": 5,
+   "conteo": {
+    "medio": 1
+   },
+   "por_que": "Una skill son instrucciones (y a veces scripts) que tu IA sigue con tus permisos. Una de terceros puede cambiar sin que lo sepas.",
+   "como": "Usa skills de tus repositorios. Si una es de terceros, revisa su contenido, fija la versión (una copia en tu cuenta) y vuelve a revisarla cuando la actualices."
+  }
+ }
+}

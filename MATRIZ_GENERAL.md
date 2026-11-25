@@ -68,6 +68,18 @@ Vencimientos: Renovación de la conexión Claude–box el 7 dic 2026; Token de G
 
 Avisos: repositorio nuevo sin cerebro: 3 repositorios privados (nombre reservado).
 
+## Guardián (seguridad y privacidad)
+
+**13/100 · En riesgo** · revisión del 25 nov 2026. Audita todos los repositorios: llaves, historial de Git, credenciales, accesos, qué sale, datos de clientes y origen de las skills. Aquí solo hay conteos; el detalle es privado (ver `docs/GUARDIAN.md`).
+
+- 🔑 Llaves a la vista: Bien (2 aviso)
+- 🕵️ Secretos en el historial de Git: Bien (2 aviso)
+- 🪪 Credenciales expuestas y vencimientos: Atender (1 alto, 1 medio, 7 bajo)
+- 👥 Quién tiene acceso a qué: Revisar (11 medio, 5 bajo)
+- 📡 Qué sale de tu cuenta: Bien (2 bajo, 2 aviso)
+- 🧾 Datos de clientes y personales expuestos: En riesgo (43 crítico, 68 alto, 26 bajo)
+- 📦 Origen de tus skills: Revisar (1 medio)
+
 ## Cerebro: Castorena
 
 Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP, escritos y monitor del DOF.
