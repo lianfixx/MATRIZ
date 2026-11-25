@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-11-25 · Guardián: repetir la revisión el mismo día
+
+- Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
+- Solicitud: Emi, 25/11/2026: dejar el resguardo del detalle funcionando («hazlo tú»). La primera corrida real (33 repositorios, 13/100) salió antes de registrar la llave de despliegue y su detalle no se guardó.
+- Cambios: «Actualizar la Matriz» acepta, a mano, la opción «Repetir hoy la revisión del Guardián»; sin ella, el Guardián sigue corriendo una vez al día.
+- Archivos: `.github/workflows/actualizar-matriz.yml`, `docs/GUARDIAN.md` y este registro.
+- Verificación: workflow carga como YAML.
+- Pendiente: repetir la revisión cuando Emi confirme su identidad en GitHub y la llave quede registrada.
+
 ## 2026-11-25 · Guardián: reconoce la versión ligera de los frenos; frenos instalados donde faltaban
 
 - Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)

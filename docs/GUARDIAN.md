@@ -46,7 +46,7 @@ En los registros de Actions solo se imprimen conteos.
 
 ## Cuándo corre y cómo avisa
 
-Es un paso de «Actualizar la Matriz», antes de «Generar», y corre la primera vez de cada día (hora del centro de México); las demás actualizaciones del día lo saltan. Así no depende del reloj de GitHub. Si falla, la Matriz se actualiza igual.
+Es un paso de «Actualizar la Matriz», antes de «Generar», y corre la primera vez de cada día (hora del centro de México); las demás actualizaciones del día lo saltan. Para repetirlo el mismo día: Actions → «Actualizar la Matriz» → Run workflow con «Repetir hoy la revisión del Guardián» activado (o, desde la computadora virtual, `~/bin/matriz-gh repos/lianfixx/MATRIZ/actions/workflows/actualizar-matriz.yml/dispatches POST '{"ref":"main","inputs":{"guardian":"true"}}'`). Así no depende del reloj de GitHub. Si falla, la Matriz se actualiza igual.
 
 Si el puntaje baja 5 puntos o más, o aumentan los hallazgos críticos, abre o comenta el aviso «Guardián: bajó el puntaje de seguridad» en Issues (solo conteos; GitHub le avisa a Emi por correo).
 
