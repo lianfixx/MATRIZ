@@ -56,13 +56,13 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 | Castorena | 4 | 39 | 19 | 0 | 0 | 0 |
 | MILLA ABOGADOS | 5 | 0 | 0 | 21 | 0 | 0 |
 | Acción Tlalnepantla | 1 | 0 | 0 | 21 | 0 | 0 |
-| Contenido y video | 7 | 8 | 64 | 1 | 0 | 0 |
+| Contenido y video | 7 | 9 | 64 | 0 | 0 | 0 |
 | Estudio | 2 | 0 | 1 | 8 | 0 | 0 |
 | Productos | 2 | 0 | 0 | 21 | 0 | 0 |
 | Herramientas | 5 | 2 | 6 | 2 | 0 | 0 |
 | Sitios web | 3 | 0 | 0 | 13 | 0 | 0 |
 
-Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 408, ChatGPT · Codex 39, GitHub Actions 27.
+Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 408, ChatGPT · Codex 39, GitHub Actions 28.
 
 Vencimientos: Renovación de la conexión Claude–box el 7 dic 2026; Token de GitHub «MATRIZ lectura» el 9 feb 2027; Token de GitHub «MATRIZ escritura» (edición desde el panel) el 12 nov 2027; Llave de GitHub «Matriz administración (Claude)» el 12 nov 2027; Llave de Cloudflare «Matriz administración (Claude)» el 12 nov 2027.
 
@@ -154,7 +154,7 @@ Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio,
 - **HISTORIAS-** (público) · https://github.com/lianfixx/HISTORIAS- · último cambio 16 nov 2026 · skills: historias-studio
   - Método, motor y memoria para hacer las historias de Instagram de Emi con cualquier IA: la IA pregunta, propone y dibuja; Emi decide.
   - Último: 16 nov 2026 · 0.3.1 · candidato · agente no consta
-- **REDES** (público) · https://github.com/lianfixx/REDES · último cambio 24 nov 2026 · skills: matriz-redes
+- **REDES** (público) · https://github.com/lianfixx/REDES · último cambio 25 nov 2026 · skills: matriz-redes
   - La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, Instagram) y de video (Vox Studio, Pizarra Studio, Editor Studio, MILLA Video Studio, Historias Studio). Registra las ideas, decide en qué red y formato sale cada una, arma el calendario de todas…
   - Último: 19 nov 2026 · X: responder a un post ya publicado · Claude Code (sesión en la nube)
   - Pendiente: la sesión de X arma la pieza del hilo del mapa; Emi la aprueba; el PDF debe ser público.
