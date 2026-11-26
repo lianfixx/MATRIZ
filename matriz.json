@@ -1,5 +1,5 @@
 {
-  "actualizada": "2026-11-25",
+  "actualizada": "2026-11-26",
   "propietario": "lianfixx",
   "panel": "https://matriz.milla-abogados.workers.dev",
   "cerebros": [
@@ -2252,7 +2252,7 @@
         ],
         "esta_semana": 47,
         "semana_pasada": 19,
-        "dias_sin_movimiento": -1,
+        "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
         "pendientes_de_repos": 1,
@@ -2271,7 +2271,7 @@
         ],
         "esta_semana": 0,
         "semana_pasada": 0,
-        "dias_sin_movimiento": 21,
+        "dias_sin_movimiento": 22,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
         "pendientes_de_repos": 0,
@@ -2290,7 +2290,7 @@
         ],
         "esta_semana": 0,
         "semana_pasada": 0,
-        "dias_sin_movimiento": 21,
+        "dias_sin_movimiento": 22,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
         "pendientes_de_repos": 0,
@@ -2309,7 +2309,7 @@
         ],
         "esta_semana": 13,
         "semana_pasada": 64,
-        "dias_sin_movimiento": 0,
+        "dias_sin_movimiento": 1,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
         "pendientes_de_repos": 5,
@@ -2328,7 +2328,7 @@
         ],
         "esta_semana": 1,
         "semana_pasada": 1,
-        "dias_sin_movimiento": 0,
+        "dias_sin_movimiento": 1,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
         "pendientes_de_repos": 0,
@@ -2347,7 +2347,7 @@
         ],
         "esta_semana": 1,
         "semana_pasada": 0,
-        "dias_sin_movimiento": 0,
+        "dias_sin_movimiento": 1,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
         "pendientes_de_repos": 0,
@@ -2366,7 +2366,7 @@
         ],
         "esta_semana": 3,
         "semana_pasada": 6,
-        "dias_sin_movimiento": 0,
+        "dias_sin_movimiento": 1,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
         "pendientes_de_repos": 0,
@@ -2385,7 +2385,7 @@
         ],
         "esta_semana": 3,
         "semana_pasada": 0,
-        "dias_sin_movimiento": 0,
+        "dias_sin_movimiento": 1,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
         "pendientes_de_repos": 0,
@@ -2423,36 +2423,36 @@
         "nombre": "Renovación de la conexión Claude–box",
         "fecha": "2026-12-07",
         "nota": "Intento automático mensual; si Google pide verificación, Emi la aprueba en el iPhone.",
-        "dias": 12
+        "dias": 11
       },
       {
         "nombre": "Token de GitHub «MATRIZ lectura»",
         "fecha": "2027-02-09",
         "nota": "Regenerarlo y guardarlo en el secreto MATRIZ_TOKEN.",
-        "dias": 76
+        "dias": 75
       },
       {
         "nombre": "Token de GitHub «MATRIZ escritura» (edición desde el panel)",
         "fecha": "2027-11-12",
         "nota": "Solo lianfixx/MATRIZ, Contents lectura y escritura. Regenerarlo y guardarlo en el secreto MATRIZ_ESCRITURA; si vence, el panel se ve pero no edita.",
-        "dias": 352
+        "dias": 351
       },
       {
         "nombre": "Llave de GitHub «Matriz administración (Claude)»",
         "fecha": "2027-11-12",
         "nota": "En la computadora virtual (~/.config/matriz/github-admin). Secretos, variables y workflows de los repositorios de Emi; no lee código. Regenerarla en GitHub con los mismos permisos.",
-        "dias": 352
+        "dias": 351
       },
       {
         "nombre": "Llave de Cloudflare «Matriz administración (Claude)»",
         "fecha": "2027-11-12",
         "nota": "En la computadora virtual (~/.config/matriz/cloudflare-admin). Solo «Tokens de API: Editar». Regenerarla con la plantilla «Crear tokens adicionales».",
-        "dias": 352
+        "dias": 351
       }
     ]
   },
   "guardian": {
-    "fecha": "2026-11-25",
+    "fecha": "2026-11-26",
     "puntaje": 44,
     "veredicto": "En riesgo",
     "chequeos": {
@@ -2482,7 +2482,7 @@
         "estado": "Revisar",
         "conteo": {
           "medio": 1,
-          "bajo": 4
+          "bajo": 3
         },
         "por_que": "Archivos como .env, .pem o credentials.json guardan accesos completos; si se suben, se filtran todos juntos. Y una llave que vence sin aviso detiene tus automatizaciones.",
         "como": "Saca el archivo del repositorio, agrégalo a .gitignore y revoca lo que traía. Renueva antes del vencimiento: la Matriz te muestra la fecha en «Vencimientos»."
@@ -2513,8 +2513,8 @@
         "nombre": "Datos de clientes y personales expuestos",
         "estado": "En riesgo",
         "conteo": {
-          "critico": 42,
-          "alto": 64,
+          "critico": 43,
+          "alto": 65,
           "bajo": 29
         },
         "por_que": "Expedientes, CURP, RFC, teléfonos o nombres de clientes en un repositorio público violan el secreto profesional y la protección de datos personales, aunque sea en un archivo viejo.",
@@ -2540,6 +2540,10 @@
     "historial": [
       {
         "fecha": "2026-11-25",
+        "puntaje": 44
+      },
+      {
+        "fecha": "2026-11-26",
         "puntaje": 44
       }
     ]

@@ -1,8 +1,10 @@
-# Guardián de la Matriz · 2026-11-25
+# Guardián de la Matriz · 2026-11-26
 
 **44/100 · En riesgo**
 
 Auditoría de seguridad y privacidad de todos los repositorios de Emi. Solo lee y aconseja. Aquí solo hay conteos: el detalle (qué repositorio, qué archivo) es privado. Cómo funciona: [docs/GUARDIAN.md](../docs/GUARDIAN.md).
+
+Evolución: 44 → 44
 
 Revisados: 34 repositorios (21 públicos). Acceso por API: 34 revisados, 0 sin permiso para revisar.
 
@@ -22,7 +24,7 @@ Hallazgos: 2 aviso.
 
 ## 🪪 Credenciales expuestas y vencimientos · Revisar
 
-Hallazgos: 1 medio, 4 bajo.
+Hallazgos: 1 medio, 3 bajo.
 
 - **Por qué importa:** Archivos como .env, .pem o credentials.json guardan accesos completos; si se suben, se filtran todos juntos. Y una llave que vence sin aviso detiene tus automatizaciones.
 - **Cómo lo arreglas:** Saca el archivo del repositorio, agrégalo a .gitignore y revoca lo que traía. Renueva antes del vencimiento: la Matriz te muestra la fecha en «Vencimientos».
@@ -43,7 +45,7 @@ Hallazgos: 2 aviso.
 
 ## 🧾 Datos de clientes y personales expuestos · En riesgo
 
-Hallazgos: 42 crítico, 64 alto, 29 bajo.
+Hallazgos: 43 crítico, 65 alto, 29 bajo.
 
 - **Por qué importa:** Expedientes, CURP, RFC, teléfonos o nombres de clientes en un repositorio público violan el secreto profesional y la protección de datos personales, aunque sea en un archivo viejo.
 - **Cómo lo arreglas:** Saca el dato del archivo (o vuelve privado el repositorio) y agrega el nombre del cliente al secreto MATRIZ_RESERVADOS. Si estuvo en el historial de un repositorio público, considéralo visto.
