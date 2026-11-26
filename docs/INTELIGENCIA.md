@@ -8,6 +8,7 @@ Desde el 23/11/2026 la Matriz usa la API de Claude para tres cosas. Todo lo hace
 | Retroalimentación semanal | Domingo, antes de la revisión de las 20:13 | Sonnet 5.5 | `revisiones/AAAA-MM-DD-ia.md` y `.json` |
 | Propuesta de clasificación | Domingo, mismo archivo | Haiku 5.5 | A qué cerebro va cada repositorio nuevo, con su confianza |
 | Redes · inspiración y notas | En cada actualización, solo si hay pendientes | Sonnet 5.5 (con la miniatura) y Haiku 5.5 | En el panel de Redes: análisis de cada inspiración y espacio de cada nota (`tools/redes_api.py`) |
+| INDEP · seguimiento diario | En `lianfixx/INDEP` (privado), cuando hay boletín nuevo | Opus 5.5 y Sonnet 5.5 | Allá, no aquí: entrega diaria y correo preparado para la responsable (skill INDEP 1.5.0, `references/api.md`) |
 | Triaje del Guardián | Diario, con el Guardián, solo si hay hallazgos nuevos | Haiku 5.5 | En el repositorio privado `guardian-detalle`: veredicto por hallazgo para la reparación automática ([GUARDIAN.md](GUARDIAN.md)) |
 
 ## Cómo encaja
@@ -20,7 +21,7 @@ Desde el 23/11/2026 la Matriz usa la API de Claude para tres cosas. Todo lo hace
 
 ## Reglas
 
-1. **Nada nuevo se expone.** A la API solo se envía lo que ya es público o está por publicarse. Nunca contenido de repositorios privados. Excepción acotada (triaje del Guardián, 25/11/2026): de los hallazgos de repositorios privados se envían chequeo, tipo, gravedad, nombre del repositorio y extensión del archivo; nunca su ruta, su contenido ni el dato. Redes (25/11/2026, autorización de Emi): las inspiraciones (publicaciones públicas que Emi guardó, con su nota) y las notas de contenido del panel van a la API para analizarlas; nada de eso se guarda en este repositorio.
+1. **Nada nuevo se expone.** A la API solo se envía lo que ya es público o está por publicarse. Nunca contenido de repositorios privados. Excepción acotada (triaje del Guardián, 25/11/2026): de los hallazgos de repositorios privados se envían chequeo, tipo, gravedad, nombre del repositorio y extensión del archivo; nunca su ruta, su contenido ni el dato. Redes (25/11/2026, autorización de Emi): las inspiraciones (publicaciones públicas que Emi guardó, con su nota) y las notas de contenido del panel van a la API para analizarlas; nada de eso se guarda en este repositorio. INDEP (25/11/2026, autorización expresa de Emi: «no me importa si la API ve los datos, solo hazlo como funciona hoy en día»): el boletín oficial y los 29 asuntos del control van a la API desde el repositorio privado `INDEP`; nada de INDEP entra a la Matriz.
 2. **Registros mudos.** Este repositorio es público y sus registros de Actions también: el script solo imprime conteos, tokens y costo.
 3. **Si falla, no pasa nada.** Sin llave, sin crédito o con la API caída, el paso termina sin error y la Matriz se actualiza igual.
 4. **No decide.** No edita `matriz.config.json`, no crea cerebros y no toca otros repositorios.

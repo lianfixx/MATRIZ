@@ -9,7 +9,8 @@ Medido el 25/11/2026 por Claude (sesión en la nube), a pedido de Emi. Fuentes: 
 | Lector del DOF por API (lunes y miércoles) | Actions de `dof-trabajo`, espacio `castorena-dof` | Sonnet 5.5 lee por lote; Opus 5.5 sintetiza; Haiku 5.5 tablas | 1.95 USD la corrida normal (552 páginas, 25/11/2026). Puesta en marcha del 23/11: unos 12.10 USD (9.07 de una corrida que cayó y 3.04 de pruebas) | 15 a 25 USD, según las páginas del DOF | 8 USD por corrida; 60 USD al mes (aviso a los 30) |
 | Segunda red de privacidad de la Matriz | Actions de `MATRIZ`, espacio `matriz` | Haiku 5.5 | 0.018 USD en 4 días (58 llamadas; solo llama cuando hay líneas nuevas) | 0.15 USD | 10 USD al mes para todo el espacio `matriz` (aviso a los 5) |
 | Revisión semanal de la Matriz | Actions de `MATRIZ` | Sonnet 5.5 | 0.040 USD (23/11/2026) | 0.17 USD | el mismo |
-| Redes · inspiración y notas (desde el 25/11/2026) | Actions de `MATRIZ` | Sonnet 5.5 con imagen; Haiku 5.5 | aún sin corridas | centavos por inspiración | el mismo |
+| Redes · inspiración y notas (desde el 25/11/2026) | Actions de `MATRIZ` | Sonnet 5.5 con imagen; Haiku 5.5 | 0 USD (25/11: llave guardada, panel sin pendientes) | centavos por inspiración | el mismo |
+| INDEP · seguimiento diario (preparado el 25/11/2026) | Actions de `INDEP` (privado) | Opus 5.5 y Sonnet 5.5 leen el PDF completo por separado; Opus redacta, Sonnet revisa | aún sin corridas: falta la llave en `INDEP` | 11 a 18 USD (0.5 a 0.8 por boletín de unas 16 páginas, 22 días hábiles) | 3 USD por corrida; 25 USD al mes |
 | Triaje del Guardián | Actions de `MATRIZ` | Haiku 5.5 | 0.0001 USD (primera corrida, 26/11/2026) | menos de 0.01 USD | el mismo |
 
 **Total medido en noviembre:** unos 14.2 USD, de los que 12.1 fueron la puesta en marcha del lector del DOF. **Gasto mensual esperado en adelante:** de 16 a 26 USD, casi todo del DOF.

@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-11-25 · INDEP por la API y llave de Redes guardada
+
+- Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
+- Solicitud: Emi, 25/11/2026, 22:53, en chat: «pasa eso de INDEP a la API por favor de manera perfecta»; «Sí, haz la llave de redes»; «De INDEP no me importa si la API ve los datos, solo hazlo como funciona hoy en día»; «audita a fondo absolutamente TODO».
+- Cambios: (1) Secreto `REDES_CLAUDE_LLAVE` guardado en este repositorio desde la computadora virtual con la autorización expresa de Emi; la primera corrida dejó `automatizaciones/redes-api.json` en `sin_novedades` (0 USD). (2) INDEP pasó a la API en su propio repositorio privado (skill INDEP 1.5.0); aquí se documenta: ficha en `skills/api-relevo/references/analisis.md`, caso en `skills/api-relevo/SKILL.md`, fila en `docs/COSTOS_API.md` y en `docs/INTELIGENCIA.md` (qué datos van a la API, con la autorización de Emi).
+- Archivos: `skills/api-relevo/SKILL.md`, `skills/api-relevo/references/analisis.md`, `docs/COSTOS_API.md`, `docs/INTELIGENCIA.md` y este registro.
+- Verificación: corrida de «Actualizar la Matriz» con el paso de Redes en verde; en INDEP, pruebas sin costo 11/11 y descarga del boletín desde Actions con el mismo SHA-256 del acta.
+- Pendiente: llave de la API en `INDEP` (necesita la autorización expresa de Emi para copiarla desde `dof-trabajo`, o que él cree una nueva).
+
 ## 2026-11-25 · Skill api-relevo y Redes por la API
 
 - Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)

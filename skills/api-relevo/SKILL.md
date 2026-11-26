@@ -60,4 +60,5 @@ No cambiar visibilidad de repositorios, no reescribir historial, no force-push n
 - **Guardián de la Matriz**: escaneo D diario, triaje A con Haiku (centavos), tarea de relevo S que solo entra si la API falló.
 - **Segunda red de privacidad y revisión semanal de la Matriz**: A con Haiku y Sonnet; menos de 1 USD al mes.
 - **Inspiración de Redes** (25/11/2026): sincronía D + análisis A con Sonnet y visión; relevo S.
+- **INDEP · seguimiento diario** (25/11/2026, `lianfixx/INDEP`): la API como «colaborador automático» del protocolo de INDEP (dos lecturas independientes del PDF completo conciliadas por código, edición quirúrgica del Excel, entrega y correo preparado); la suscripción queda como responsable que comprueba, envía el correo y releva. Patrón para tareas con un único remitente.
 - **Cierre diario Castorena**: analizado el 25/11/2026 y **no** movible a la API (depende de Drive, iCloud y la Mac, y de juicio sobre Excel de clientes); se queda en S. Ver la ficha en [references/analisis.md](references/analisis.md).
