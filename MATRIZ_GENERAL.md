@@ -53,7 +53,7 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 
 | Cerebro | Repos | Commits esta semana | Semana pasada | Días sin movimiento | Pendientes | Vencidos |
 |---|---|---|---|---|---|---|
-| Castorena | 4 | 43 | 19 | -1 | 0 | 0 |
+| Castorena | 4 | 44 | 19 | -1 | 0 | 0 |
 | MILLA ABOGADOS | 5 | 0 | 0 | 21 | 0 | 0 |
 | Acción Tlalnepantla | 1 | 0 | 0 | 21 | 0 | 0 |
 | Contenido y video | 8 | 13 | 64 | 0 | 0 | 0 |
@@ -62,7 +62,7 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 | Herramientas | 5 | 3 | 6 | 0 | 0 | 0 |
 | Sitios web | 3 | 3 | 0 | 0 | 0 | 0 |
 
-Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 422, ChatGPT · Codex 39, GitHub Actions 28.
+Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 423, ChatGPT · Codex 39, GitHub Actions 28.
 
 Vencimientos: Renovación de la conexión Claude–box el 7 dic 2026; Token de GitHub «MATRIZ lectura» el 9 feb 2027; Token de GitHub «MATRIZ escritura» (edición desde el panel) el 12 nov 2027; Llave de GitHub «Matriz administración (Claude)» el 12 nov 2027; Llave de Cloudflare «Matriz administración (Claude)» el 12 nov 2027.
 
