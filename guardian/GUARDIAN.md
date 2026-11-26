@@ -43,7 +43,7 @@ Hallazgos: 2 aviso.
 
 ## 🧾 Datos de clientes y personales expuestos · En riesgo
 
-Hallazgos: 42 crítico, 69 alto, 27 bajo.
+Hallazgos: 42 crítico, 64 alto, 29 bajo.
 
 - **Por qué importa:** Expedientes, CURP, RFC, teléfonos o nombres de clientes en un repositorio público violan el secreto profesional y la protección de datos personales, aunque sea en un archivo viejo.
 - **Cómo lo arreglas:** Saca el dato del archivo (o vuelve privado el repositorio) y agrega el nombre del cliente al secreto MATRIZ_RESERVADOS. Si estuvo en el historial de un repositorio público, considéralo visto.

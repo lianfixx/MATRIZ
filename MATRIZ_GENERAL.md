@@ -77,7 +77,7 @@ Avisos: repositorio nuevo sin cerebro: 3 repositorios privados (nombre reservado
 - 🪪 Credenciales expuestas y vencimientos: Revisar (1 medio, 4 bajo)
 - 👥 Quién tiene acceso a qué: Revisar (1 medio, 5 bajo)
 - 📡 Qué sale de tu cuenta: Bien (2 aviso)
-- 🧾 Datos de clientes y personales expuestos: En riesgo (42 crítico, 69 alto, 27 bajo)
+- 🧾 Datos de clientes y personales expuestos: En riesgo (42 crítico, 64 alto, 29 bajo)
 - 🧠 Memoria para tus IA: Bien (sin hallazgos)
 - 📦 Origen de tus skills: Bien (sin hallazgos)
 

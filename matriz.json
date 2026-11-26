@@ -2514,8 +2514,8 @@
         "estado": "En riesgo",
         "conteo": {
           "critico": 42,
-          "alto": 69,
-          "bajo": 27
+          "alto": 64,
+          "bajo": 29
         },
         "por_que": "Expedientes, CURP, RFC, teléfonos o nombres de clientes en un repositorio público violan el secreto profesional y la protección de datos personales, aunque sea en un archivo viejo.",
         "como": "Saca el dato del archivo (o vuelve privado el repositorio) y agrega el nombre del cliente al secreto MATRIZ_RESERVADOS. Si estuvo en el historial de un repositorio público, considéralo visto."
