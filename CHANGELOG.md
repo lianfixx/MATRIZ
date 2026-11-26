@@ -1,11 +1,20 @@
 # Cambios
 
+## 2026-11-25 · Guardián: el paso «Aplicar» parte del triaje
+
+- Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
+- Solicitud: corrección de la entrada anterior (mismo encargo de Emi, 25/11/2026, 19:41).
+- Cambios: `docs/GUARDIAN.md` ya no remite a `verificaciones/` (la suscripción ahora solo entra como relevo): al pedir «aplica los arreglos del Guardián», la sesión toma el triaje del día y verifica cada hallazgo con el archivo real.
+- Archivos: `docs/GUARDIAN.md` y este registro.
+- Verificación: documento revisado.
+- Pendiente: ninguno.
+
 ## 2026-11-25 · Medición de costos de la API y relevo del Guardián
 
 - Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
 - Solicitud: Emi, 25/11/2026, 19:41: «Lo que busco es ahorrar mi suscripción y usar la api (y que la suscripción solo entre si la api falló arregle el porqué de fondo y lo haga y deje listo para que la próxima lo haga de nuevo la api)» y «debes medir ya los costos y cómo uso la api en algunas tareas ya implementadas».
 - Cambios: (1) `docs/COSTOS_API.md` con la medición de cada tarea que usa la API (registros de 600 corridas de Actions, revisiones semanales y bitácora del lector del DOF). (2) La tarea programada de la suscripción del Guardián pasa a ser «Guardián · relevo si falla la API»: si el triaje de la API del día está bien, termina en una línea; si falló, repara la causa de fondo, comprueba que la API vuelva a funcionar y, si no se puede desde el código, hace el trabajo del día y dice a Emi qué hacer. `docs/GUARDIAN.md` lo explica.
-- Archivos: `docs/COSTOS_API.md`, `docs/GUARDIAN.md` y este registro.
+- Archivos: `docs/COSTOS_API.md`, `docs/GUARDIAN.md` (también el paso «Aplicar», que ahora parte del triaje) y este registro.
 - Verificación: cifras tomadas de los registros de cada corrida; tarea programada actualizada.
 - Pendiente: cruzar con Claude Console (no hay llave de administración en la computadora virtual).
 
