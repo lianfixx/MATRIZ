@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-11-25 · Skill api-relevo y Redes por la API
+
+- Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
+- Solicitud: Emi, 25/11/2026, 22:35, en chat: «desarrolla una skill para que entienda cualquier proyecto ya hecho, corriendo y creado y mediante API se puedan correr algunas cosas, quitándole carga a la suscripción… que si falla, la suscripción entre… que sepa qué modelos usar con API, mida costos, proponga mejoras… que funcione también con otras IA, como ChatGPT, X y hasta Kimi»; «2.- Hazlo» (Redes) y «3.- Hazlo» (cierre de Castorena); «tienes mi sí expreso de TODO».
+- Cambios: (1) `skills/api-relevo/`: SKILL.md (procedimiento: entender, clasificar D/A/S/R, modelo, patrón, privacidad, medir, proponer), referencias (análisis con fichas, modelos y costos verificados el 25/11/2026, patrón común, otras IA), plantillas (paso de workflow y tarea de relevo) y `scripts/costos.py`. Vive aquí porque crear un repositorio nuevo desde la sesión no fue posible. (2) `tools/redes_api.py` + paso «Redes · inspiración por API» en «Actualizar la Matriz»: revisa el panel sin IA, analiza inspiraciones (Sonnet con miniatura) y notas (Haiku) solo si hay pendientes y detecta sin IA si hay sincronía pendiente; estado en `automatizaciones/redes-api.json` (exento del registro). Sin el secreto `REDES_CLAUDE_LLAVE` queda `no_configurado` y la suscripción hace la tarea completa como antes. (3) Cierre de Castorena: analizado y no movible a la API (Drive, iCloud, Mac y juicio sobre Excel de clientes); ficha en la skill. (4) `docs/INTELIGENCIA.md`, `docs/COSTOS_API.md` y `AGENTS.md`.
+- Archivos: `skills/api-relevo/**`, `tools/redes_api.py`, `tools/test_redes_api.py`, `.github/workflows/actualizar-matriz.yml`, `ia/politica.json`, `docs/INTELIGENCIA.md`, `docs/COSTOS_API.md`, `AGENTS.md` y este registro.
+- Verificación: pruebas de `tools/` aprobadas; `costos.py` probado con los estados reales; workflow carga como YAML.
+- Pendiente: guardar el secreto `REDES_CLAUDE_LLAVE` (copiarlo desde la computadora virtual lo frenó la plataforma: necesita confirmación expresa de Emi para esa acción).
+
 ## 2026-11-25 · Guardián: el paso «Aplicar» parte del triaje
 
 - Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)

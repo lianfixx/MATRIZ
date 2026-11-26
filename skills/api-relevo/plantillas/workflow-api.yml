@@ -1,0 +1,7 @@
+# Plantilla: paso de la vía API dentro de un workflow que ya corre seguido (no depender del reloj de GitHub).
+      - name: <Tarea> por API
+        continue-on-error: true          # si falla, lo demás sigue y entra el relevo
+        timeout-minutes: 6
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python3 tools/<tarea>_api.py   # escribe su estado (estado, motivo, modelo, tokens, costo_usd); imprime solo conteos y costo

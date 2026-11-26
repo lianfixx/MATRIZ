@@ -18,7 +18,8 @@
       "^MATRIZ_GENERAL\\.md$",
       "^tablero/",
       "^proyectos/",
-      "^guardian/"
+      "^guardian/",
+      "^automatizaciones/"
     ]
   },
   "rules": [

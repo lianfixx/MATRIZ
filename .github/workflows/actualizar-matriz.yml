@@ -117,6 +117,16 @@ jobs:
           num=$(gh issue list --repo "$GITHUB_REPOSITORY" --state open --search "$titulo in:title" --json number --jq '.[0].number // empty')
           if [ -n "$num" ]; then gh issue comment "$num" --repo "$GITHUB_REPOSITORY" --body "$cuerpo"
           else gh issue create --repo "$GITHUB_REPOSITORY" --title "$titulo" --body "$cuerpo"; fi
+      # Redes · inspiración y notas por la API (skill api-relevo; tools/redes_api.py). Sin IA si no hay nada
+      # nuevo; Sonnet/Haiku solo para lo pendiente. Si falla, la tarea «Redes: analizar inspiración del panel»
+      # (suscripción) entra de relevo. Nunca aprueba ni publica.
+      - name: Redes · inspiración por API
+        continue-on-error: true
+        timeout-minutes: 6
+        env:
+          REDES_CLAUDE_LLAVE: ${{ secrets.REDES_CLAUDE_LLAVE }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python3 tools/redes_api.py
       - name: Generar
         env:
           MATRIZ_TOKEN: ${{ secrets.MATRIZ_TOKEN }}
@@ -157,7 +167,7 @@ jobs:
       - name: Guardar si hubo cambios
         run: |
           set -euo pipefail
-          git add MATRIZ_GENERAL.md MATRIZ.md matriz.json cerebros repos contexto bitacora guardian
+          git add MATRIZ_GENERAL.md MATRIZ.md matriz.json cerebros repos contexto bitacora guardian automatizaciones
           if git diff --cached --quiet; then echo "Sin cambios."; exit 0; fi
           git -c user.name="matriz-bot" -c user.email="matriz-bot@users.noreply.github.com" \
             commit -m "Matriz: actualización automática" -m "IA-Actor: GitHub Actions (tools/generar.py)"
