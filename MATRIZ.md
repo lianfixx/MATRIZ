@@ -8,7 +8,7 @@ generado: "tools/generar.py · no editar a mano: se reescribe cada día"
 
 # Matriz General
 
-30 repositorios en 8 cerebros · actualizada el 26 nov 2026.
+31 repositorios en 8 cerebros · actualizada el 26 nov 2026.
 
 Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel: https://matriz.milla-abogados.workers.dev
 
@@ -22,7 +22,7 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 | [[Contenido y video]] | 8 | 13 commits | 1 días | 0 | Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio, X, Instagram, TikTok, LinkedIn, la matriz de redes (REDES) e historias de Instagram. |
 | [[Estudio]] | 2 | 1 commits | 1 días | 0 | Maestría en Alta Dirección y pizarras de estudio. |
 | [[Productos]] | 2 | 1 commits | 1 días | 0 | Productos propios de Emi: PANEL FIRMA (gestión jurídica) y Mes (finanzas personales). |
-| [[Herramientas]] | 5 | 3 commits | 1 días | 0 | Piezas que sirven a todos los cerebros: estilo de Emi, selector de modelo, entorno de Cloudflare, computadora virtual (Simular Box) e ingeniería inversa. |
+| [[Herramientas]] | 6 | 9 commits | 0 días | 0 | Piezas que sirven a todos los cerebros: estilo de Emi, selector de modelo, entorno de Cloudflare, computadora virtual (Simular Box), ingeniería inversa y biblioteca de templates web de Imperio (PRIVADO-IMPERIO). |
 | [[Sitios web]] | 3 | 3 commits | 1 días | 0 | Sitios web de Emi ya publicados que se recuperan y mantienen: su página personal (emilianomilla.site), Sistemas Digitales y Vicente Diablo (música en vivo). |
 
 ## Lo último que se hizo
@@ -40,7 +40,7 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 
 ## Repositorios nuevos por clasificar
 
-- `3 repositorios privados (nombre reservado)` · privado
+- `2 repositorios privados (nombre reservado)` · privado
 
 La revisión semanal los asigna a su cerebro; si alguno es dudoso, le pregunta a Emi.
 
@@ -61,4 +61,4 @@ Skills en un repositorio pero no instaladas en Claude: `editor-studio`, `histori
 
 ## Visibilidad
 
-20 públicos y 10 privados. Cualquier persona puede leer los públicos.
+20 públicos y 11 privados. Cualquier persona puede leer los públicos.

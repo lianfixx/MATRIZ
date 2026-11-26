@@ -1535,7 +1535,7 @@
     {
       "id": "herramientas",
       "nombre": "Herramientas",
-      "descripcion": "Piezas que sirven a todos los cerebros: estilo de Emi, selector de modelo, entorno de Cloudflare, computadora virtual (Simular Box) e ingeniería inversa.",
+      "descripcion": "Piezas que sirven a todos los cerebros: estilo de Emi, selector de modelo, entorno de Cloudflare, computadora virtual (Simular Box), ingeniería inversa y biblioteca de templates web de Imperio (PRIVADO-IMPERIO).",
       "repos": [
         {
           "nombre": "estilo-emi",
@@ -1725,6 +1725,42 @@
             ],
             "actores_60d": {
               "Claude": 1
+            }
+          }
+        },
+        {
+          "nombre": "PRIVADO-IMPERIO",
+          "url": "https://github.com/lianfixx/PRIVADO-IMPERIO",
+          "visibilidad": "privado",
+          "leido": true,
+          "ultimo_cambio": "2026-11-26",
+          "resumen": "",
+          "skills": [],
+          "protocolo": "",
+          "registro": [],
+          "actividad": {
+            "semanas": [
+              "2026-10-05",
+              "2026-10-12",
+              "2026-10-19",
+              "2026-10-26",
+              "2026-11-02",
+              "2026-11-09",
+              "2026-11-16",
+              "2026-11-23"
+            ],
+            "commits": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              6
+            ],
+            "actores_60d": {
+              "Claude": 6
             }
           }
         }
@@ -2231,7 +2267,7 @@
   },
   "por_clasificar": [
     {
-      "nombre": "3 repositorios privados (nombre reservado)",
+      "nombre": "2 repositorios privados (nombre reservado)",
       "visibilidad": "privado",
       "creado": ""
     }
@@ -2362,11 +2398,11 @@
           5,
           33,
           6,
-          3
+          9
         ],
-        "esta_semana": 3,
+        "esta_semana": 9,
         "semana_pasada": 6,
-        "dias_sin_movimiento": 1,
+        "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
         "pendientes_de_repos": 0,
@@ -2410,11 +2446,11 @@
       196,
       255,
       90,
-      73
+      79
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 431,
+      "Claude": 437,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 28
     },

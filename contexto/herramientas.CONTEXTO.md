@@ -6,7 +6,7 @@ generado: "tools/generar.py · no editar a mano: se reescribe cada día"
 
 # Contexto para cualquier IA · Herramientas
 
-Soy Emi (Yohualli Emiliano García Milla). Este es el cerebro «Herramientas» de mi Matriz General (https://github.com/lianfixx/MATRIZ · https://matriz.milla-abogados.workers.dev). Piezas que sirven a todos los cerebros: estilo de Emi, selector de modelo, entorno de Cloudflare, computadora virtual (Simular Box) e ingeniería inversa.
+Soy Emi (Yohualli Emiliano García Milla). Este es el cerebro «Herramientas» de mi Matriz General (https://github.com/lianfixx/MATRIZ · https://matriz.milla-abogados.workers.dev). Piezas que sirven a todos los cerebros: estilo de Emi, selector de modelo, entorno de Cloudflare, computadora virtual (Simular Box), ingeniería inversa y biblioteca de templates web de Imperio (PRIVADO-IMPERIO).
 
 ## Cómo trabajar
 
@@ -48,6 +48,12 @@ Privado: pide acceso a Emi o usa un conector de GitHub con su sesión.
 ### rea-ingenieria-inversa (privado)
 
 https://github.com/lianfixx/rea-ingenieria-inversa · último cambio: 11 nov 2026
+
+Privado: pide acceso a Emi o usa un conector de GitHub con su sesión.
+
+### PRIVADO-IMPERIO (privado)
+
+https://github.com/lianfixx/PRIVADO-IMPERIO · último cambio: 26 nov 2026
 
 Privado: pide acceso a Emi o usa un conector de GitHub con su sesión.
 

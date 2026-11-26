@@ -1,7 +1,7 @@
 ---
 tipo: "cerebro"
-repos: 5
-ultimo_cambio: 2026-11-25
+repos: 6
+ultimo_cambio: 2026-11-26
 tags:
   - "cerebro"
 generado: "tools/generar.py · no editar a mano: se reescribe cada día"
@@ -9,7 +9,7 @@ generado: "tools/generar.py · no editar a mano: se reescribe cada día"
 
 # Herramientas
 
-Piezas que sirven a todos los cerebros: estilo de Emi, selector de modelo, entorno de Cloudflare, computadora virtual (Simular Box) e ingeniería inversa.
+Piezas que sirven a todos los cerebros: estilo de Emi, selector de modelo, entorno de Cloudflare, computadora virtual (Simular Box), ingeniería inversa y biblioteca de templates web de Imperio (PRIVADO-IMPERIO).
 
 Parte de la [[MATRIZ]].
 
@@ -20,6 +20,7 @@ Parte de la [[MATRIZ]].
 - [[cloudfare|cloudfare]] · público · 25 nov 2026
 - [[box-simular|box-simular]] · privado · 11 nov 2026
 - [[rea-ingenieria-inversa|rea-ingenieria-inversa]] · privado · 11 nov 2026
+- [[PRIVADO-IMPERIO|PRIVADO-IMPERIO]] · privado · 26 nov 2026
 
 ## Tareas programadas
 

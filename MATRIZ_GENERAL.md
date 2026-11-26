@@ -4,7 +4,7 @@ Este es el archivo único de la Matriz General: el mapa de todo el trabajo de Em
 
 - Fuente de verdad: https://github.com/lianfixx/MATRIZ (se regenera solo cada día).
 - Panel: https://matriz.milla-abogados.workers.dev · Conector MCP de solo lectura: https://matriz.milla-abogados.workers.dev/mcp
-- 30 repositorios en 8 cerebros, 15 tareas programadas, 17 skills instaladas.
+- 31 repositorios en 8 cerebros, 15 tareas programadas, 17 skills instaladas.
 
 ## Cómo trabajar con Emi (cualquier IA)
 
@@ -59,14 +59,14 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 | Contenido y video | 8 | 13 | 64 | 1 | 0 | 0 |
 | Estudio | 2 | 1 | 1 | 1 | 0 | 0 |
 | Productos | 2 | 1 | 0 | 1 | 0 | 0 |
-| Herramientas | 5 | 3 | 6 | 1 | 0 | 0 |
+| Herramientas | 6 | 9 | 6 | 0 | 0 | 0 |
 | Sitios web | 3 | 3 | 0 | 1 | 0 | 0 |
 
-Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 431, ChatGPT · Codex 39, GitHub Actions 28.
+Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 437, ChatGPT · Codex 39, GitHub Actions 28.
 
 Vencimientos: Renovación de la conexión Claude–box el 7 dic 2026; Token de GitHub «MATRIZ lectura» el 9 feb 2027; Token de GitHub «MATRIZ escritura» (edición desde el panel) el 12 nov 2027; Llave de GitHub «Matriz administración (Claude)» el 12 nov 2027; Llave de Cloudflare «Matriz administración (Claude)» el 12 nov 2027.
 
-Avisos: repositorio nuevo sin cerebro: 3 repositorios privados (nombre reservado).
+Avisos: repositorio nuevo sin cerebro: 2 repositorios privados (nombre reservado).
 
 ## Guardián (seguridad y privacidad)
 
@@ -232,7 +232,7 @@ Productos propios de Emi: PANEL FIRMA (gestión jurídica) y Mes (finanzas perso
 
 ## Cerebro: Herramientas
 
-Piezas que sirven a todos los cerebros: estilo de Emi, selector de modelo, entorno de Cloudflare, computadora virtual (Simular Box) e ingeniería inversa.
+Piezas que sirven a todos los cerebros: estilo de Emi, selector de modelo, entorno de Cloudflare, computadora virtual (Simular Box), ingeniería inversa y biblioteca de templates web de Imperio (PRIVADO-IMPERIO).
 
 ### Repositorios
 
@@ -243,6 +243,7 @@ Piezas que sirven a todos los cerebros: estilo de Emi, selector de modelo, entor
   - Último: 25 nov 2026 · Control automático entre IA (registro y secretos) · claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
 - **box-simular** (privado) · https://github.com/lianfixx/box-simular · último cambio 11 nov 2026
 - **rea-ingenieria-inversa** (privado) · https://github.com/lianfixx/rea-ingenieria-inversa · último cambio 11 nov 2026
+- **PRIVADO-IMPERIO** (privado) · https://github.com/lianfixx/PRIVADO-IMPERIO · último cambio 26 nov 2026
 
 ### Tareas programadas
 
