@@ -46,13 +46,14 @@ Skills: `escritos-juridicos-castorena`
 
 ### dof-juridico-monitor (público)
 
-https://github.com/lianfixx/dof-juridico-monitor · último cambio: 25 nov 2026
+https://github.com/lianfixx/dof-juridico-monitor · último cambio: 26 nov 2026
 
 Sistema autónomo, auditable y agnóstico de proveedor para revisar el Diario Oficial de la Federación (DOF), verificar cobertura, detectar novedades jurídicas relevantes y producir entregables ejecutivos y de estudio.
 
 Skills: `dof-castorena`
 
-Último registro: 25 nov 2026 · Seguridad · acciones de GitHub fijadas a su versión exacta · Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
+Último registro: 26 nov 2026 · Skill 1.6.0 · escala de relevancia común, con lo político, social y de Presidencia · Agente: Claude Code (sesión de la guardia del lector por API, claude-opus-5-5)
+Pendiente: primera entrega con la escala, cierre del martes 1/12/2026 (lector por API y nocturno del lunes 30/11).
 
 ## Tareas programadas
 
