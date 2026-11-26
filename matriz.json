@@ -672,7 +672,7 @@
           "url": "https://github.com/lianfixx/VIDEOS-IA-SKILL-MILLA",
           "visibilidad": "público",
           "leido": true,
-          "ultimo_cambio": "2026-11-25",
+          "ultimo_cambio": "2026-11-26",
           "resumen": "Un método portable para producir videos de MILLA ABOGADOS: investigación, guion, conexiones, voz, imágenes, música, montaje y revisión. Incluye una skill, instrucciones para otras IAs, utilidades y un compositor nuevo.",
           "skills": [
             {
@@ -694,6 +694,12 @@
           ],
           "protocolo": "1.1.0",
           "registro": [
+            {
+              "fecha": "2026-11-25",
+              "titulo": "Versión para página web e informe de entrega (Vox Studio 0.15.0, Editor Studio 0.3.0, MILLA Video Studio 1.2.0)",
+              "agente": "Claude Code (sesión en la nube; modelo Claude Opus 5.5)",
+              "pendiente": "instalar en la app los paquetes nuevos de Vox Studio y Editor Studio (en la cuenta, Vox y MILLA ya tienen la sección por tarjeta, con una ruta del script que estos paquetes corrigen)."
+            },
             {
               "fecha": "2026-11-25",
               "titulo": "Decisiones de Emi sobre el lenguaje de cámara y paquetes en la app",
@@ -735,12 +741,6 @@
               "titulo": "GitHub corre las pruebas de todas las skills en cada push",
               "agente": "Claude Code (sesión en la nube)",
               "pendiente": "mirar que el trabajo `pruebas` salga en verde en el pull request."
-            },
-            {
-              "fecha": "2026-11-11",
-              "titulo": "Editor Studio 0.2.0: segunda auditoría de fondo, con tres revisores independientes",
-              "agente": "Claude Code (sesión en la nube)",
-              "pendiente": "un video real de Emi (nada sustituye eso). Sin comprobar: Dolby Vision real de iPhone, macOS, sticker en video a cámara, video generado con Kling. Añadir las pruebas nuevas al flujo de GitHub (`registro-ia.yml`) requiere confirmación expresa de Emi. `ia/test_guard.py` no tiene casos propios para los tres frenos de commit nuevos (su formato prueba llamadas de herramienta, no frenos de commit)."
             }
           ],
           "actividad": {
@@ -762,10 +762,10 @@
               9,
               33,
               1,
-              3
+              4
             ],
             "actores_60d": {
-              "Claude": 44,
+              "Claude": 45,
               "Emi": 5
             }
           }
@@ -2341,11 +2341,11 @@
           9,
           128,
           64,
-          13
+          14
         ],
-        "esta_semana": 13,
+        "esta_semana": 14,
         "semana_pasada": 64,
-        "dias_sin_movimiento": 1,
+        "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
         "pendientes_vencidos": 0,
         "pendientes_de_repos": 5,
@@ -2446,11 +2446,11 @@
       196,
       255,
       90,
-      79
+      80
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 437,
+      "Claude": 438,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 28
     },

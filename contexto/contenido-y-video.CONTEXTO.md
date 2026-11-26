@@ -21,14 +21,14 @@ Soy Emi (Yohualli Emiliano García Milla). Este es el cerebro «Contenido y vide
 
 ### VIDEOS-IA-SKILL-MILLA (público)
 
-https://github.com/lianfixx/VIDEOS-IA-SKILL-MILLA · último cambio: 25 nov 2026
+https://github.com/lianfixx/VIDEOS-IA-SKILL-MILLA · último cambio: 26 nov 2026
 
 Un método portable para producir videos de MILLA ABOGADOS: investigación, guion, conexiones, voz, imágenes, música, montaje y revisión. Incluye una skill, instrucciones para otras IAs, utilidades y un compositor nuevo.
 
 Skills: `editor-studio`, `milla-video-studio`, `pizarra-studio`, `vox-studio`
 
-Último registro: 25 nov 2026 · Decisiones de Emi sobre el lenguaje de cámara y paquetes en la app · Agente: Claude (claude.ai, panel de Claude in Chrome; modelo Claude Opus 5.5)
-Pendiente: nada de esta referencia. La prueba de personaje con referencia queda para cuando Emi la pida.
+Último registro: 25 nov 2026 · Versión para página web e informe de entrega (Vox Studio 0.15.0, Editor Studio 0.3.0, MILLA Video Studio 1.2.0) · Agente: Claude Code (sesión en la nube; modelo Claude Opus 5.5)
+Pendiente: instalar en la app los paquetes nuevos de Vox Studio y Editor Studio (en la cuenta, Vox y MILLA ya tienen la sección por tarjeta, con una ruta del script que estos paquetes corrigen).
 
 ### X (público)
 
