@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-11-25 · Guardián: la suscripción verifica y propone; aplicar queda a una orden de Emi
+
+- Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
+- Solicitud: la misma de la entrada anterior (Emi, 25/11/2026, 18:09).
+- Cambios: la plataforma no permitió crear una tarea programada que, sin nadie mirando, haga commits en varios repositorios ni que envíe correos (dos intentos, frenados por seguridad). Quedó la tarea «Guardián · segunda verificación (suscripción)», diaria a las 12:53: verifica con los archivos reales, evalúa a la API y deja los arreglos exactos en `verificaciones/` del repositorio privado; su resumen le llega a Emi por aviso y por correo. Los arreglos se aplican cuando Emi diga «aplica los arreglos del Guardián». `docs/GUARDIAN.md` lo explica.
+- Archivos: `docs/GUARDIAN.md` y este registro.
+- Verificación: tarea programada creada con aprobación automática; documento revisado.
+- Pendiente: su primera corrida, el 26/11/2026.
+
 ## 2026-11-25 · Guardián: reparación automática con API y segunda verificación de la suscripción
 
 - Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
