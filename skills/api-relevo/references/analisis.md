@@ -19,7 +19,7 @@ Ahorro esperado de suscripción (corridas al mes que dejan de usarla)
 **Redes · análisis de inspiración del panel** (tarea «Redes: analizar inspiración del panel», 13:17 y 21:17, Sonnet, suscripción).
 - Pasos: leer estado del panel (D); sincronizar con el panel lo publicado o programado por cada skill (S: empatar piezas pide criterio, pero *detectar* que hay algo nuevo es D); analizar inspiraciones con miniatura (A, Sonnet con imagen); proponer espacio de notas (A, Haiku).
 - Medido: el 25/11/2026 había 0 inspiraciones y 0 notas pendientes: casi todas las corridas de la suscripción no tenían trabajo.
-- Construido: `tools/redes_api.py` en cada «Actualizar la Matriz»; estado público `automatizaciones/redes-api.json` (solo conteos, costo y la firma de lo publicado). La suscripción entra solo si la API falló o si la firma de lo publicado cambió desde su última sincronía (`red/sync-panel.json` de `lianfixx/redes`).
+- Construido: `tools/redes_api.py` en cada «Actualizar la Matriz»; estado público `automatizaciones/redes-api.json` (solo conteos, costo y los ids públicos que faltan por sincronizar). La suscripción entra solo si la API falló o si alguna publicación o programación de las skills todavía no consta en el panel (la API lo compara sin IA con la clave `externa.clave` y el enlace de cada pieza; no hace falta registrar la sincronía en otro repositorio).
 - Costo esperado: centavos por inspiración (Sonnet con una imagen); notas, milésimas.
 - Requisito: el secreto `REDES_CLAUDE_LLAVE` en `lianfixx/MATRIZ`. Sin él, el estado es `no_configurado` y la suscripción hace la tarea completa, como antes.
 

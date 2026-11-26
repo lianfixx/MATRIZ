@@ -7,12 +7,15 @@ suscripción). Corre dentro de «Actualizar la Matriz»:
   1. Sin IA: lee el estado del panel de Redes (https://redes.milla-abogados.workers.dev, API /api/claude/*).
   2. API, solo si hay algo nuevo: Sonnet 5.5 analiza cada inspiración sin análisis (miniatura + texto + lo que
      a Emi le llamó la atención) y Haiku 5.5 propone el espacio de cada nota sin espacio. Lo escribe en el panel.
-  3. Sin IA: calcula la firma de lo que las skills de cada red publicaron o programaron (red/estado.json de
-     lianfixx/linkedin, instagram, tiktok y x). Si cambió respecto de la última sincronía registrada por la
-     suscripción (lianfixx/redes, red/sync-panel.json), marca «sync_pendiente»: esa sincronía necesita criterio
-     (empatar piezas) y la hace la tarea de relevo de la suscripción.
+  3. Sin IA: compara lo que las skills de cada red declaran publicado o programado (red/estado.json de
+     lianfixx/linkedin, instagram, tiktok y x, públicos) con las piezas del panel: cada pieza que vino de una
+     skill guarda su clave (externa.clave) y cada publicada su enlace. Lo que falte queda en «sync_pendientes»
+     (solo red e id) y marca «sync_pendiente»: empatar piezas necesita criterio y lo hace la tarea de relevo
+     de la suscripción. No hace falta registrar la sincronía en otro repositorio: la siguiente corrida la
+     vuelve a comprobar contra el panel (cambio del 25/11/2026; antes se usaba red/sync-panel.json).
 
-Escribe automatizaciones/redes-api.json (público: solo conteos, costos y la firma; nunca textos del panel).
+Escribe automatizaciones/redes-api.json (público: solo conteos, costos y los ids públicos que faltan; nunca
+textos del panel).
 Si el estado es «ok» o «sin_novedades» y no hay sincronía pendiente, la tarea de la suscripción termina en una
 línea. Reglas del panel que se respetan: nunca aprueba ni publica, no cambia piezas, nada dice que lo hizo una IA.
 
@@ -122,27 +125,46 @@ def llamar_con_imagen(modelo: str, sistema: str, texto: str, imagen: bytes | Non
     return datos, {"modelo": modelo, "entrada": e_, "salida": s_, "costo_usd": ia.costo(modelo, e_, s_)}
 
 
-def firma_redes() -> tuple[str, dict]:
-    """Firma de lo publicado o programado por cada skill (solo ids y fechas, que son públicos)."""
-    vistos = {}
+def publicado_por_skills() -> dict:
+    """Lo que cada skill declara publicado o programado (red/estado.json, públicos). Una red ilegible se omite."""
+    skills = {}
     for red in REDES:
         try:
             with urllib.request.urlopen(f"{RAW}/{red}/main/red/estado.json", timeout=30) as r:
                 d = json.loads(r.read().decode())
         except Exception:
-            vistos[red] = "ilegible"
             continue
-        vistos[red] = sorted(f"{k}:{x.get('id')}:{x.get('fecha')}" for k in ("publicados", "programados")
-                             for x in (d.get(k) or []) if isinstance(x, dict))
-    return hashlib.sha256(json.dumps(vistos, sort_keys=True).encode()).hexdigest()[:16], vistos
+        skills[red] = [{"tipo": k, "id": str(x.get("id")), "url": x.get("url") or ""}
+                       for k in ("publicados", "programados") for x in (d.get(k) or []) if isinstance(x, dict) and x.get("id")]
+    return skills
 
 
-def firma_sincronizada() -> str:
-    try:
-        with urllib.request.urlopen(f"{RAW}/redes/main/red/sync-panel.json", timeout=30) as r:
-            return json.loads(r.read().decode()).get("firma", "")
-    except Exception:
-        return ""
+def _url(u: str) -> str:
+    return str(u or "").split("?")[0].rstrip("/")
+
+
+def pendientes_de_sincronizar(estado_panel: dict, skills: dict) -> list:
+    """Publicaciones o programaciones de las skills que todavía no constan en el panel."""
+    claves, urls = {}, set()
+    for p in estado_panel.get("piezas") or []:
+        if not isinstance(p, dict):
+            continue
+        ext, pub = p.get("externa") or {}, p.get("publicada") or {}
+        if isinstance(ext, dict) and ext.get("clave"):
+            claves[(p.get("red"), str(ext["clave"]))] = p.get("estado")
+        if isinstance(pub, dict) and pub.get("url"):
+            urls.add(_url(pub["url"]))
+    faltan = []
+    for red, items in skills.items():
+        for it in items:
+            estado = claves.get((red, it["id"]))
+            if it["tipo"] == "publicados":
+                if estado == "publicada" or (it["url"] and _url(it["url"]) in urls):
+                    continue
+                faltan.append({"red": red, "id": it["id"], "falta": "publicada"})
+            elif estado is None:
+                faltan.append({"red": red, "id": it["id"], "falta": "programada"})
+    return faltan
 
 
 def correr(seco: bool) -> dict:
@@ -190,9 +212,8 @@ def correr(seco: bool) -> dict:
             except (ErrorPanel, ia.ErrorAPI) as e:
                 fallas.append(f"notas: {e}")
     res["costo_usd"] = round(sum(u["costo_usd"] for u in res["usos"]), 6)
-    actual, _ = firma_redes()
-    res["sync_firma_actual"] = actual
-    res["sync_pendiente"] = actual != firma_sincronizada()
+    res["sync_pendientes"] = pendientes_de_sincronizar(estado, publicado_por_skills())
+    res["sync_pendiente"] = bool(res["sync_pendientes"])
     if fallas:
         res["estado"], res["motivo"] = ("parcial" if res["inspiraciones"] or res["notas"] else "fallo"), "; ".join(fallas)[:400]
     elif res["inspiraciones"] or res["notas"]:

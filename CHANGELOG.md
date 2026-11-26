@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-11-25 · Redes: la sincronía se comprueba contra el panel, sin registro aparte
+
+- Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
+- Solicitud: Emi, 25/11/2026, 22:53, en chat: «audita a fondo absolutamente TODO».
+- Cambios: hallazgo de la auditoría: la tarea de relevo de Redes debía registrar cada sincronía con un commit en `lianfixx/redes` (`red/sync-panel.json`), y no está comprobado que una tarea programada pueda adjuntar ese repositorio; si no podía, la API marcaría sincronía pendiente para siempre y la suscripción rehacería la sincronía dos veces al día. Ahora `tools/redes_api.py` compara sin IA lo que cada skill declara publicado o programado con las piezas del panel (cada pieza venida de una skill guarda `externa.clave`; cada publicada, su enlace) y deja en `sync_pendientes` solo red e id de lo que falte. Comprobado con el panel real: nada pendiente.
+- Archivos: `tools/redes_api.py`, `tools/test_redes_api.py`, `skills/api-relevo/references/analisis.md` y este registro.
+- Verificación: `python3 -m unittest discover -s tools -p 'test_*.py'` aprobado (prueba nueva de la comparación con piezas, claves y enlaces); cálculo con el panel real desde la computadora virtual: 5 publicaciones y programaciones de las skills, 0 faltantes.
+- Pendiente: ninguno; la tarea de relevo de Redes se actualiza para no escribir en `lianfixx/redes`.
+
 ## 2026-11-25 · INDEP por la API y llave de Redes guardada
 
 - Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)

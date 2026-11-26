@@ -18,8 +18,7 @@ class Redes(unittest.TestCase):
 
     def test_sin_pendientes_no_llama_a_la_api(self):
         with mock.patch.dict(os.environ, {"REDES_CLAUDE_LLAVE": "x"}), mock.patch.object(ra, "panel", return_value={"inspiracion": [], "notas": []}), \
-             mock.patch.object(ra, "firma_redes", return_value=("abc", {})), \
-             mock.patch.object(ra, "firma_sincronizada", return_value="abc"), \
+             mock.patch.object(ra, "publicado_por_skills", return_value={}), \
              mock.patch.object(ra, "llamar_con_imagen", side_effect=AssertionError("no debía llamar")):
             r = ra.correr(seco=False)
         self.assertEqual((r["estado"], r["sync_pendiente"], r["costo_usd"]), ("sin_novedades", False, 0.0))
@@ -34,12 +33,27 @@ class Redes(unittest.TestCase):
             return estado
         datos = {**{c: "x" for c in ra.CAMPOS}, "espacio_propuesto": "personal"}
         with mock.patch.dict(os.environ, {"REDES_CLAUDE_LLAVE": "x"}), mock.patch.object(ra, "panel", side_effect=panel), \
-             mock.patch.object(ra, "firma_redes", return_value=("nueva", {})), \
-             mock.patch.object(ra, "firma_sincronizada", return_value="vieja"), \
+             mock.patch.object(ra, "publicado_por_skills", return_value={"linkedin": [{"tipo": "programados", "id": "2026-W48-x", "url": ""}]}), \
              mock.patch.object(ra, "llamar_con_imagen", return_value=(datos, {"modelo": "m", "entrada": 1, "salida": 1, "costo_usd": 0.01})):
             r = ra.correr(seco=False)
         self.assertEqual((r["estado"], r["inspiraciones"], r["sync_pendiente"]), ("ok", 1, True))
         self.assertEqual(posts[0][0], "/api/claude/inspiracion/i1")
+
+
+    def test_sincronia_contra_el_panel(self):
+        panel = {"piezas": [
+            {"red": "tiktok", "estado": "publicada", "externa": {"clave": "tt-1"}},
+            {"red": "linkedin", "estado": "programada en la red", "externa": {"clave": "li-prog"}},
+            {"red": "linkedin", "estado": "publicada", "publicada": {"url": "https://www.linkedin.com/feed/update/urn:li:activity:1?x=1"}},
+        ]}
+        skills = {"tiktok": [{"tipo": "publicados", "id": "tt-1", "url": ""}],
+                  "linkedin": [{"tipo": "publicados", "id": "li-viejo", "url": "https://www.linkedin.com/feed/update/urn:li:activity:1"},
+                               {"tipo": "publicados", "id": "li-prog", "url": ""},
+                               {"tipo": "programados", "id": "li-prog", "url": ""},
+                               {"tipo": "programados", "id": "li-nuevo", "url": ""}]}
+        faltan = ra.pendientes_de_sincronizar(panel, skills)
+        self.assertEqual(faltan, [{"red": "linkedin", "id": "li-prog", "falta": "publicada"},
+                                  {"red": "linkedin", "id": "li-nuevo", "falta": "programada"}])
 
 
 if __name__ == "__main__":
