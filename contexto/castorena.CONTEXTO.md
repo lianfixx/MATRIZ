@@ -52,8 +52,8 @@ Sistema autónomo, auditable y agnóstico de proveedor para revisar el Diario Of
 
 Skills: `dof-castorena`
 
-Último registro: 26 nov 2026 · Skill 1.6.0 · escala de relevancia común, con lo político, social y de Presidencia · Agente: Claude Code (sesión de la guardia del lector por API, claude-opus-5-5)
-Pendiente: primera entrega con la escala, cierre del martes 1/12/2026 (lector por API y nocturno del lunes 30/11).
+Último registro: 26 nov 2026 · Skill 1.6.1 · auditoría de la escala de relevancia · Agente: Claude Code (sesión de la guardia del lector por API, claude-fable-5-2)
+Pendiente: la skill instalada en la cuenta de Claude de Emi sigue en la 1.2.1 (solo afecta al uso en chat; las tareas programadas leen este repositorio): se le entrega el ZIP de `scripts/empaquetar_skill.sh` para que la guarde.
 
 ## Tareas programadas
 

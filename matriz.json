@@ -241,6 +241,12 @@
           "registro": [
             {
               "fecha": "2026-11-26",
+              "titulo": "Skill 1.6.1 · auditoría de la escala de relevancia",
+              "agente": "Claude Code (sesión de la guardia del lector por API, claude-fable-5-2)",
+              "pendiente": "la skill instalada en la cuenta de Claude de Emi sigue en la 1.2.1 (solo afecta al uso en chat; las tareas programadas leen este repositorio): se le entrega el ZIP de `scripts/empaquetar_skill.sh` para que la guarde."
+            },
+            {
+              "fecha": "2026-11-26",
               "titulo": "Skill 1.6.0 · escala de relevancia común, con lo político, social y de Presidencia",
               "agente": "Claude Code (sesión de la guardia del lector por API, claude-opus-5-5)",
               "pendiente": "primera entrega con la escala, cierre del martes 1/12/2026 (lector por API y nocturno del lunes 30/11)."
@@ -280,12 +286,6 @@
               "titulo": "las tareas cargan add_repo antes de usarlo",
               "agente": "claude.ai (sesión en la nube, claude-opus-5-5)",
               "pendiente": "si aun cargándola la herramienta no existe en esas sesiones, el plan B es que el box lea `dof-trabajo` con un token de solo lectura, que tendría que crear Emi."
-            },
-            {
-              "fecha": "2026-11-23",
-              "titulo": "actas históricas del Semanario incorporadas; PR 7 y 8 cerrados",
-              "agente": "claude.ai (sesión en la nube, claude-opus-5-5)",
-              "pendiente": ""
             }
           ],
           "actividad": {
@@ -307,10 +307,10 @@
               10,
               3,
               0,
-              23
+              24
             ],
             "actores_60d": {
-              "Claude": 35,
+              "Claude": 36,
               "ChatGPT · Codex": 1,
               "Emi": 82
             }
@@ -2248,9 +2248,9 @@
           113,
           29,
           19,
-          51
+          52
         ],
-        "esta_semana": 51,
+        "esta_semana": 52,
         "semana_pasada": 19,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2410,11 +2410,11 @@
       196,
       255,
       90,
-      72
+      73
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 430,
+      "Claude": 431,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 28
     },
