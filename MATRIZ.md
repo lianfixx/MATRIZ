@@ -16,7 +16,7 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 
 | Cerebro | Repos | Esta semana | Sin movimiento | Pendientes | Qué es |
 |---|---|---|---|---|---|
-| [[Castorena]] | 4 | 41 commits | 0 días | 0 | Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP, escritos y monitor del DOF. |
+| [[Castorena]] | 4 | 42 commits | -1 días | 0 | Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP, escritos y monitor del DOF. |
 | [[MILLA ABOGADOS]] | 5 | 0 commits | 21 días | 0 | El despacho de Emi: sitio, asesorías, monitoreo de expedientes, captación e Impulso Libre. |
 | [[Acción Tlalnepantla]] | 1 | 0 commits | 21 días | 0 | Acción Política Juvenil Tlalnepantla (PAN): sitio, formatos, eventos y materiales. |
 | [[Contenido y video]] | 8 | 13 commits | 0 días | 0 | Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio, X, Instagram, TikTok, LinkedIn, la matriz de redes (REDES) e historias de Instagram. |
@@ -27,6 +27,7 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 
 ## Lo último que se hizo
 
+- 25 nov 2026 · **Cerebro-Castorena-** · Cierre diario programado: maestro INDEP v25 copiado · Agente: Claude Code (ejecución programada)
 - 25 nov 2026 · **Cerebro-Castorena-** · .gitignore excluye archivos .env · Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
 - 25 nov 2026 · **dof-juridico-monitor** · Seguridad · acciones de GitHub fijadas a su versión exacta · Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
 - 25 nov 2026 · **VIDEOS-IA-SKILL-MILLA** · Decisiones de Emi sobre el lenguaje de cámara y paquetes en la app · Agente: Claude (claude.ai, panel de Claude in Chrome; modelo Claude Opus 5.5)
@@ -36,7 +37,6 @@ Para una IA: el archivo único es [MATRIZ_GENERAL.md](MATRIZ_GENERAL.md). Panel:
 - 25 nov 2026 · **ESTUDIO-TEMAS** · .gitignore excluye archivos .env · Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
 - 25 nov 2026 · **mes.** · Control automático entre IA (registro y secretos) · Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
 - 25 nov 2026 · **cloudfare** · Control automático entre IA (registro y secretos) · Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
-- 25 nov 2026 · **emilianomilla-site** · Control automático entre IA (registro y secretos) · Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
 
 ## Repositorios nuevos por clasificar
 
