@@ -70,13 +70,14 @@
     {
       "id": "herramientas",
       "nombre": "Herramientas",
-      "descripcion": "Piezas que sirven a todos los cerebros: estilo de Emi, selector de modelo, entorno de Cloudflare, computadora virtual (Simular Box) e ingeniería inversa.",
+      "descripcion": "Piezas que sirven a todos los cerebros: estilo de Emi, selector de modelo, entorno de Cloudflare, computadora virtual (Simular Box), ingeniería inversa y biblioteca de templates web de Imperio (PRIVADO-IMPERIO).",
       "repos": [
         "estilo-emi",
         "selector-modelos",
         "cloudfare",
         "box-simular",
-        "rea-ingenieria-inversa"
+        "rea-ingenieria-inversa",
+        "PRIVADO-IMPERIO"
       ]
     },
     {
@@ -100,7 +101,8 @@
     "PANEL-FIRMA-",
     "meta-ads-client-onboarding",
     "box-simular",
-    "rea-ingenieria-inversa"
+    "rea-ingenieria-inversa",
+    "PRIVADO-IMPERIO"
   ],
   "terminos_reservados": [],
   "_doc_reservas": "Nombres de clientes que nunca se publican: van solo en el secreto MATRIZ_RESERVADOS de GitHub (separados por coma), que usan la actualización diaria y el panel. Nunca los escribas en este archivo, ni en claro ni como huella: es público. Sin ese secreto, la actualización diaria se detiene en vez de publicar."

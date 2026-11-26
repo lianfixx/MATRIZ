@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-11-26 · PRIVADO-IMPERIO en el cerebro Herramientas
+
+- Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
+- Solicitud: Emi, 25/11/2026, en chat: guardar los prompts del catálogo Imperio en GitHub como skill «que se unan a la matriz y que cualquier IA pueda leerlos»; 26/11/2026, 14:32: «No importa que sea pública la matriz, solo hazlo».
+- Cambios: el repositorio privado `PRIVADO-IMPERIO` (biblioteca de templates web y prompts del catálogo Imperio, con skill `imperio-templates`, fichas, recomendaciones por proyecto y auditoría) se agrega al cerebro Herramientas y a la lista de privados. Aquí solo se publica lo que el generador publica de cualquier privado (nombre, cerebro, fecha y conteos). Los prompts no se copian a este repositorio: el material indica que se pueden usar en proyectos propios y de clientes, pero no redistribuir.
+- Archivos: `matriz.config.json` y este registro.
+- Verificación: `python3 -m unittest discover -s tools -p 'test_*.py'`; `python3 ia/test_guard.py`.
+- Pendiente: que el secreto `MATRIZ_TOKEN` tenga acceso a `PRIVADO-IMPERIO` para leer su actividad; si no, el generador lo marcará como no leído.
+
 ## 2026-11-25 · Redes: la sincronía se comprueba contra el panel, sin registro aparte
 
 - Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
