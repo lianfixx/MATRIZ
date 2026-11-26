@@ -943,7 +943,7 @@
           "url": "https://github.com/lianfixx/REDES",
           "visibilidad": "público",
           "leido": true,
-          "ultimo_cambio": "2026-11-25",
+          "ultimo_cambio": "2026-11-26",
           "resumen": "La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, Instagram) y de video (Vox Studio, Pizarra Studio, Editor Studio, MILLA Video Studio, Historias Studio). Registra las ideas, decide en qué red y formato sale cada una, arma el calendario de todas…",
           "skills": [
             {
@@ -1021,11 +1021,11 @@
               0,
               46,
               28,
-              4
+              5
             ],
             "actores_60d": {
+              "GitHub Actions": 29,
               "Claude": 49,
-              "GitHub Actions": 28,
               "Emi": 1
             }
           }
@@ -2341,9 +2341,9 @@
           9,
           128,
           64,
-          14
+          15
         ],
-        "esta_semana": 14,
+        "esta_semana": 15,
         "semana_pasada": 64,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2446,13 +2446,13 @@
       196,
       255,
       90,
-      81
+      82
     ],
     "actores_60d": {
       "Emi": 590,
       "Claude": 439,
       "ChatGPT · Codex": 39,
-      "GitHub Actions": 28
+      "GitHub Actions": 29
     },
     "vencimientos": [
       {

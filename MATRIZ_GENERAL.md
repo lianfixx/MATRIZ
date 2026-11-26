@@ -56,13 +56,13 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 | Castorena | 4 | 52 | 19 | 0 | 0 | 0 |
 | MILLA ABOGADOS | 5 | 0 | 0 | 22 | 0 | 0 |
 | Acción Tlalnepantla | 1 | 0 | 0 | 22 | 0 | 0 |
-| Contenido y video | 8 | 14 | 64 | 0 | 0 | 0 |
+| Contenido y video | 8 | 15 | 64 | 0 | 0 | 0 |
 | Estudio | 2 | 1 | 1 | 1 | 0 | 0 |
 | Productos | 2 | 1 | 0 | 1 | 0 | 0 |
 | Herramientas | 6 | 10 | 6 | 0 | 0 | 0 |
 | Sitios web | 3 | 3 | 0 | 1 | 0 | 0 |
 
-Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 439, ChatGPT · Codex 39, GitHub Actions 28.
+Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 439, ChatGPT · Codex 39, GitHub Actions 29.
 
 Vencimientos: Renovación de la conexión Claude–box el 7 dic 2026; Token de GitHub «MATRIZ lectura» el 9 feb 2027; Token de GitHub «MATRIZ escritura» (edición desde el panel) el 12 nov 2027; Llave de GitHub «Matriz administración (Claude)» el 12 nov 2027; Llave de Cloudflare «Matriz administración (Claude)» el 12 nov 2027.
 
@@ -167,7 +167,7 @@ Creación de videos y contenido: Vox Studio, Pizarra Studio, MILLA Video Studio,
 - **HISTORIAS-** (público) · https://github.com/lianfixx/HISTORIAS- · último cambio 25 nov 2026 · skills: historias-studio
   - Método, motor y memoria para hacer las historias de Instagram de Emi con cualquier IA: la IA pregunta, propone y dibuja; Emi decide.
   - Último: 25 nov 2026 · Control automático entre IA (registro y secretos) · claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
-- **REDES** (público) · https://github.com/lianfixx/REDES · último cambio 25 nov 2026 · skills: matriz-redes
+- **REDES** (público) · https://github.com/lianfixx/REDES · último cambio 26 nov 2026 · skills: matriz-redes
   - La capa de decisión por encima de las skills de cada red (X, LinkedIn, TikTok, Instagram) y de video (Vox Studio, Pizarra Studio, Editor Studio, MILLA Video Studio, Historias Studio). Registra las ideas, decide en qué red y formato sale cada una, arma el calendario de todas…
   - Último: 25 nov 2026 · .gitignore excluye archivos .env · claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
 - **Instagram** (público) · https://github.com/lianfixx/Instagram · último cambio 13 nov 2026 · skills: instagram-studio
