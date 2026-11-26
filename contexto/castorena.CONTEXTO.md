@@ -32,7 +32,7 @@ Pendiente: subir INDEP v25 a Drive, Escritorio e iCloud.
 
 ### INDEP (privado)
 
-https://github.com/lianfixx/INDEP · último cambio: 25 nov 2026
+https://github.com/lianfixx/INDEP · último cambio: 26 nov 2026
 
 Privado: pide acceso a Emi o usa un conector de GitHub con su sesión.
 
