@@ -1,0 +1,11 @@
+{
+ "formato": "redes-api-v1",
+ "fecha": "2026-11-25",
+ "estado": "no_configurado",
+ "motivo": "falta el secreto REDES_CLAUDE_LLAVE en lianfixx/MATRIZ",
+ "inspiraciones": 0,
+ "notas": 0,
+ "usos": [],
+ "costo_usd": 0.0,
+ "run_id": "45756830795"
+}
