@@ -66,6 +66,7 @@ jobs:
           MATRIZ_TOKEN: ${{ secrets.MATRIZ_TOKEN }}
           MATRIZ_RESERVADOS: ${{ secrets.MATRIZ_RESERVADOS }}
           GUARDIAN_DEPLOY_KEY: ${{ secrets.GUARDIAN_DEPLOY_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GUARDIAN_REPO: lianfixx/guardian-detalle
           FORZAR: ${{ inputs.guardian || false }}
           GH_TOKEN: ${{ github.token }}
@@ -88,6 +89,15 @@ jobs:
               export GIT_SSH_COMMAND="ssh -i $llave -o IdentitiesOnly=yes -o StrictHostKeyChecking=accept-new"
               if git clone --quiet --depth 1 "git@github.com:$GUARDIAN_REPO.git" "$RUNNER_TEMP/detalle-repo"; then
                 mkdir -p "$RUNNER_TEMP/detalle-repo/detalle"
+                # Vía API del arreglo automático (docs/GUARDIAN.md): Haiku 5.5 clasifica solo lo nuevo frente al
+                # último detalle. Si falla, la tarea de suscripción «Guardián · reparación» hace todo sola.
+                if python3 tools/guardian_triaje.py --detalle "$RUNNER_TEMP/detalle.json" \
+                     --previo "$RUNNER_TEMP/detalle-repo/detalle/ULTIMO.json" --salida "$RUNNER_TEMP/triaje.json" | tee -a "$GITHUB_STEP_SUMMARY"; then
+                  cp "$RUNNER_TEMP/triaje.json" "$RUNNER_TEMP/detalle-repo/detalle/$hoy.triaje.json"
+                  cp "$RUNNER_TEMP/triaje.json" "$RUNNER_TEMP/detalle-repo/detalle/TRIAJE_ULTIMO.json"
+                else
+                  echo "::warning::El triaje por API falló; la tarea de suscripción lo hace."
+                fi
                 cp "$RUNNER_TEMP/detalle.json" "$RUNNER_TEMP/detalle-repo/detalle/$hoy.json"
                 cp "$RUNNER_TEMP/detalle.json" "$RUNNER_TEMP/detalle-repo/detalle/ULTIMO.json"
                 git -C "$RUNNER_TEMP/detalle-repo" add detalle
@@ -100,7 +110,7 @@ jobs:
               rm -f "$llave"; unset GIT_SSH_COMMAND
             fi
           fi
-          rm -rf "$RUNNER_TEMP/detalle.json" "$RUNNER_TEMP/detalle-repo"
+          rm -rf "$RUNNER_TEMP/detalle.json" "$RUNNER_TEMP/triaje.json" "$RUNNER_TEMP/detalle-repo"
           cuerpo=$(python3 tools/guardian.py --comparar "$RUNNER_TEMP/previo.json")
           [ -n "$cuerpo" ] || exit 0
           titulo="Guardián: bajó el puntaje de seguridad"

@@ -51,6 +51,25 @@ Es un paso de «Actualizar la Matriz», antes de «Generar», y corre la primera
 
 Si el puntaje baja 5 puntos o más, o aumentan los hallazgos críticos, abre o comenta el aviso «Guardián: bajó el puntaje de seguridad» en Issues (solo conteos; GitHub le avisa a Emi por correo).
 
+## Reparación automática (API + suscripción)
+
+Emi lo autorizó el 25/11/2026 («SÍ A TODO… que funcione a la API y con una segunda verificación para que entre mi suscripción, todo de forma automática»). Sigue su regla de que toda mejora quede en las dos vías y sincronizada.
+
+1. **Vía API (GitHub Actions, diaria).** Después del Guardián, `tools/guardian_triaje.py` toma solo los hallazgos **nuevos** frente al último detalle y escribe en el repositorio privado `detalle/AAAA-MM-DD.triaje.json` y `detalle/TRIAJE_ULTIMO.json`. Cada hallazgo lleva dos opiniones: el arreglo que le toca por regla fija y el veredicto de Haiku 5.5 (parece real, falsa alarma o dudoso). A la API solo van chequeo, gravedad, tipo y repositorio, y la ruta de los públicos; de los privados, solo la extensión. Nunca contenidos, huellas ni valores. Costo: centavos de dólar al mes, dentro del tope del espacio «matriz».
+2. **Vía suscripción (tarea programada «Guardián · reparación y segunda verificación», diaria).** Abre el triaje y el detalle, verifica cada hallazgo con el archivo real (la segunda verificación de la API), aplica los arreglos seguros, registra todo en `acciones/AAAA-MM-DD.json` del repositorio privado y solo escribe a Emi si algo lo necesita. Si la vía API falló o no corrió, la suscripción hace el triaje completa.
+
+| Arreglo | Qué hace la suscripción |
+|---|---|
+| `auto_gitignore_env` | Agrega `.env` a `.gitignore`, con su registro y respetando las reglas propias del repositorio. |
+| `auto_fijar_accion` | Fija la acción de GitHub al SHA de su versión, consultado en GitHub. |
+| `auto_quitar_credencial_y_avisar` | Si el archivo trae de verdad una credencial, lo saca del repositorio (sin borrarlo del equipo de nadie), lo excluye en `.gitignore` y avisa a Emi para que la revoque. Si no trae, lo anota como falsa alarma. |
+| `revisar_frenos` | Instala el control ligero solo si el repositorio registra cada cambio en su `CHANGELOG.md` y no recibe commits automáticos sin registro; si no, lo deja anotado. Nunca en bifurcaciones de terceros ni en `guardian-detalle`. |
+| `revisar_memoria` | Corrige un enlace roto cuando el archivo solo cambió de lugar; si no, lo anota. |
+| `avisar_emi_revocar`, `avisar_emi_datos`, `avisar_emi` | Solo Emi puede resolverlos: un correo a su Gmail, sin copiar valores ni datos. |
+| `ninguna` | Detalles menores o ya cubiertos (por ejemplo, el vencimiento del box tiene su propia tarea). |
+
+Límites que no cambian: no vuelve privado ni público ningún repositorio, no reescribe historial, no hace force-push ni salta frenos, no revoca llaves, no toca el contenido de `Cerebro-Castorena-` ni los datos que Emi decidió mantener, no crea ni cambia tareas programadas y solo escribe a emilianogarciamilla@gmail.com.
+
 ## Probar
 
 ```

@@ -1,5 +1,14 @@
 # Cambios
 
+## 2026-11-25 · Guardián: reparación automática con API y segunda verificación de la suscripción
+
+- Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
+- Solicitud: Emi, 25/11/2026, 18:09, en chat: «Si algo puedes moverlo tú solo con mi autorización ya expresa (SI A TODO) bien razonado, que funcione a la API y con una segunda verificación para que entre mi suscripción, hazlo!! Todo de forma automática».
+- Cambios: (1) `tools/guardian_triaje.py`: vía API; Haiku 5.5 clasifica solo los hallazgos nuevos y una regla fija les asigna su arreglo; el resultado va al repositorio privado `guardian-detalle`. Respeta las decisiones de Emi (Cerebro-Castorena- público y el historial de la Matriz no se reescribe) y no avisa por detalles menores. (2) `actualizar-matriz.yml`: el paso del Guardián corre el triaje antes de guardar el detalle; si falla, sigue igual. (3) Tarea programada nueva «Guardián · reparación y segunda verificación» (suscripción, diaria): verifica con los archivos reales, aplica los arreglos seguros y solo escribe a Emi si algo lo necesita; si la API falló, hace todo sola. (4) `docs/GUARDIAN.md` (sección «Reparación automática») y `docs/INTELIGENCIA.md` (nueva función y su excepción acotada a la regla 1).
+- Archivos: `tools/guardian_triaje.py`, `tools/test_guardian_triaje.py`, `.github/workflows/actualizar-matriz.yml`, `docs/GUARDIAN.md`, `docs/INTELIGENCIA.md` y este registro.
+- Verificación: pruebas de `tools/` aprobadas; corrida en seco sobre el detalle real de hoy (34 nuevos frente a vacío, 115 omitidos por decisiones de Emi, 13 con arreglo o aviso); workflow carga como YAML.
+- Pendiente: primera corrida real con la API y primera corrida de la tarea de suscripción.
+
 ## 2026-11-25 · Auditoría final del día: el Guardián ignora los ejemplos inventados del filtro
 
 - Agente: claude.ai (sesión en la nube desde Claude in Chrome, claude-opus-5-5)
