@@ -129,10 +129,10 @@
               72,
               12,
               9,
-              20
+              21
             ],
             "actores_60d": {
-              "Claude": 63,
+              "Claude": 64,
               "Emi": 376,
               "ChatGPT · Codex": 30
             }
@@ -2284,9 +2284,9 @@
           113,
           29,
           19,
-          56
+          57
         ],
-        "esta_semana": 56,
+        "esta_semana": 57,
         "semana_pasada": 19,
         "dias_sin_movimiento": 0,
         "pendientes_abiertos": 0,
@@ -2446,11 +2446,11 @@
       196,
       255,
       90,
-      86
+      87
     ],
     "actores_60d": {
       "Emi": 590,
-      "Claude": 443,
+      "Claude": 444,
       "ChatGPT · Codex": 39,
       "GitHub Actions": 29
     },
