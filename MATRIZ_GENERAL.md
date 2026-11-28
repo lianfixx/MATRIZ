@@ -53,7 +53,7 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 
 | Cerebro | Repos | Commits esta semana | Semana pasada | Días sin movimiento | Pendientes | Vencidos |
 |---|---|---|---|---|---|---|
-| Castorena | 4 | 58 | 19 | 0 | 0 | 0 |
+| Castorena | 4 | 59 | 19 | -1 | 0 | 0 |
 | MILLA ABOGADOS | 5 | 0 | 0 | 23 | 0 | 0 |
 | Acción Tlalnepantla | 1 | 0 | 0 | 23 | 0 | 0 |
 | Contenido y video | 8 | 16 | 64 | 0 | 0 | 0 |
@@ -62,7 +62,7 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 | Herramientas | 6 | 10 | 6 | 1 | 0 | 0 |
 | Sitios web | 3 | 3 | 0 | 2 | 0 | 0 |
 
-Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 445, ChatGPT · Codex 39, GitHub Actions 30.
+Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 446, ChatGPT · Codex 39, GitHub Actions 30.
 
 Vencimientos: Renovación de la conexión Claude–box el 7 dic 2026; Token de GitHub «MATRIZ lectura» el 9 feb 2027; Token de GitHub «MATRIZ escritura» (edición desde el panel) el 12 nov 2027; Llave de GitHub «Matriz administración (Claude)» el 12 nov 2027; Llave de Cloudflare «Matriz administración (Claude)» el 12 nov 2027.
 
@@ -87,9 +87,9 @@ Castorena Abogados, el despacho donde trabaja Emi: matriz de expedientes, INDEP,
 
 ### Repositorios
 
-- **Cerebro-Castorena-** (público) · https://github.com/lianfixx/Cerebro-Castorena- · último cambio 27 nov 2026 · skills: matriz-castorena
+- **Cerebro-Castorena-** (público) · https://github.com/lianfixx/Cerebro-Castorena- · último cambio 28 nov 2026 · skills: matriz-castorena
   - Matriz documental de Emi para Castorena Abogados. Aquí están las cinco tablas de referencia, las versiones recuperadas, las reglas de trabajo y los pendientes.
-  - Último: 26 nov 2026 · Cierre diario programado: sin cambios · Claude Code (ejecución programada)
+  - Último: 27 nov 2026 · Cierre diario programado: sin cambios · Claude Code (ejecución programada)
   - Pendiente: Emi sube INDEP v25 y Concentrado 19013131d8dd a Drive, Escritorio e iCloud.
 - **INDEP** (privado) · https://github.com/lianfixx/INDEP · último cambio 27 nov 2026
 - **Escritos-juridicos-CASTORENA** (público) · https://github.com/lianfixx/Escritos-juridicos-CASTORENA · último cambio 4 nov 2026 · skills: escritos-juridicos-castorena

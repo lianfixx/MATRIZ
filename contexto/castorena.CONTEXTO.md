@@ -21,13 +21,13 @@ Soy Emi (Yohualli Emiliano García Milla). Este es el cerebro «Castorena» de m
 
 ### Cerebro-Castorena- (público)
 
-https://github.com/lianfixx/Cerebro-Castorena- · último cambio: 27 nov 2026
+https://github.com/lianfixx/Cerebro-Castorena- · último cambio: 28 nov 2026
 
 Matriz documental de Emi para Castorena Abogados. Aquí están las cinco tablas de referencia, las versiones recuperadas, las reglas de trabajo y los pendientes.
 
 Skills: `matriz-castorena`
 
-Último registro: 26 nov 2026 · Cierre diario programado: sin cambios · Agente: Claude Code (ejecución programada)
+Último registro: 27 nov 2026 · Cierre diario programado: sin cambios · Agente: Claude Code (ejecución programada)
 Pendiente: Emi sube INDEP v25 y Concentrado 19013131d8dd a Drive, Escritorio e iCloud.
 
 ### INDEP (privado)
