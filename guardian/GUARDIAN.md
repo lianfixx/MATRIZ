@@ -1,10 +1,10 @@
-# Guardián de la Matriz · 2026-11-27
+# Guardián de la Matriz · 2026-11-28
 
 **41/100 · En riesgo**
 
 Auditoría de seguridad y privacidad de todos los repositorios de Emi. Solo lee y aconseja. Aquí solo hay conteos: el detalle (qué repositorio, qué archivo) es privado. Cómo funciona: [docs/GUARDIAN.md](../docs/GUARDIAN.md).
 
-Evolución: 44 → 44 → 41
+Evolución: 44 → 44 → 41 → 41
 
 Revisados: 34 repositorios (21 públicos). Acceso por API: 34 revisados, 0 sin permiso para revisar.
 

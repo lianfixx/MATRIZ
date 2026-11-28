@@ -1,4 +1,4 @@
-# Matriz General de Emi · 27 nov 2026
+# Matriz General de Emi · 28 nov 2026
 
 Este es el archivo único de la Matriz General: el mapa de todo el trabajo de Emi. Si te lo adjuntaron, con esto basta para entender quién es, dónde trabaja, qué hay en cada cerebro, qué se hizo último, qué está pendiente y cómo continuar. Todo nace y se registra desde aquí.
 
@@ -53,14 +53,14 @@ Yohualli Emiliano García Milla («Emi»). Abogado en México, no programador: q
 
 | Cerebro | Repos | Commits esta semana | Semana pasada | Días sin movimiento | Pendientes | Vencidos |
 |---|---|---|---|---|---|---|
-| Castorena | 4 | 59 | 19 | -1 | 0 | 0 |
-| MILLA ABOGADOS | 5 | 0 | 0 | 23 | 0 | 0 |
-| Acción Tlalnepantla | 1 | 0 | 0 | 23 | 0 | 0 |
-| Contenido y video | 8 | 16 | 64 | 0 | 0 | 0 |
-| Estudio | 2 | 1 | 1 | 2 | 0 | 0 |
-| Productos | 2 | 1 | 0 | 2 | 0 | 0 |
-| Herramientas | 6 | 10 | 6 | 1 | 0 | 0 |
-| Sitios web | 3 | 3 | 0 | 2 | 0 | 0 |
+| Castorena | 4 | 59 | 19 | 0 | 0 | 0 |
+| MILLA ABOGADOS | 5 | 0 | 0 | 24 | 0 | 0 |
+| Acción Tlalnepantla | 1 | 0 | 0 | 24 | 0 | 0 |
+| Contenido y video | 8 | 16 | 64 | 1 | 0 | 0 |
+| Estudio | 2 | 1 | 1 | 3 | 0 | 0 |
+| Productos | 2 | 1 | 0 | 3 | 0 | 0 |
+| Herramientas | 6 | 10 | 6 | 2 | 0 | 0 |
+| Sitios web | 3 | 3 | 0 | 3 | 0 | 0 |
 
 Quién trabajó en los últimos 60 días (commits): Emi 590, Claude 446, ChatGPT · Codex 39, GitHub Actions 30.
 
@@ -70,7 +70,7 @@ Avisos: repositorio nuevo sin cerebro: 2 repositorios privados (nombre reservado
 
 ## Guardián (seguridad y privacidad)
 
-**41/100 · En riesgo** · revisión del 27 nov 2026. Audita todos los repositorios: llaves, historial de Git, credenciales, accesos, qué sale, datos de clientes, memoria para IA y origen de las skills. Aquí solo hay conteos; el detalle es privado (ver `docs/GUARDIAN.md`).
+**41/100 · En riesgo** · revisión del 28 nov 2026. Audita todos los repositorios: llaves, historial de Git, credenciales, accesos, qué sale, datos de clientes, memoria para IA y origen de las skills. Aquí solo hay conteos; el detalle es privado (ver `docs/GUARDIAN.md`).
 
 - 🔑 Llaves a la vista: Bien (3 bajo, 2 aviso)
 - 🕵️ Secretos en el historial de Git: Bien (2 aviso)

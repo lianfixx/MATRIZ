@@ -1,7 +1,7 @@
 {
  "_doc": "Lo escribe tools/guardian.py. Público: solo puntaje, veredicto y conteos; nunca repositorios, rutas ni textos. El detalle es privado (ver docs/GUARDIAN.md).",
  "version": "1.0.0",
- "fecha": "2026-11-27",
+ "fecha": "2026-11-28",
  "puntaje": 41,
  "veredicto": "En riesgo",
  "cobertura": {
